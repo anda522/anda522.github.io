@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>C++ STL超全总结</title>
+      <link href="/2022/06/22/c-stl-chao-quan-zong-jie/"/>
+      <url>/2022/06/22/c-stl-chao-quan-zong-jie/</url>
+      
+        <content type="html"><![CDATA[<h1 id="C-STL常用内容总结"><a href="#C-STL常用内容总结" class="headerlink" title="C++ STL常用内容总结:"></a>C++ STL常用内容总结:</h1><p>注：我是以打算法竞赛的角度整理的STL知识点，<strong>强调使用方法</strong>，并不强调原理。</p><p>下面会介绍很多C++ STL库里面的模板，在编程中STL犹如神器，实用简洁好用。<br>STL绝对让你受益无穷!</p><h2 id="👉1-vector动态数组👈"><a href="#👉1-vector动态数组👈" class="headerlink" title="👉1.vector动态数组👈"></a>👉<a href="https://blog.csdn.net/qq_50285142/article/details/122303529" target="_blank" rel="noopener">1.vector动态数组</a>👈</h2><h2 id="👉2-stack栈👈"><a href="#👉2-stack栈👈" class="headerlink" title="👉2.stack栈👈"></a>👉<a href="https://blog.csdn.net/qq_50285142/article/details/122303786" target="_blank" rel="noopener">2.stack栈</a>👈</h2><h2 id="👉3-queue队列👈"><a href="#👉3-queue队列👈" class="headerlink" title="👉3.queue队列👈"></a>👉<a href="https://blog.csdn.net/qq_50285142/article/details/122304056" target="_blank" rel="noopener">3.queue队列</a>👈</h2><h2 id="👉4-deque双端队列👈"><a href="#👉4-deque双端队列👈" class="headerlink" title="👉4.deque双端队列👈"></a>👉<a href="https://blog.csdn.net/qq_50285142/article/details/114079022" target="_blank" rel="noopener">4.deque双端队列</a>👈</h2><h2 id="👉5-priority-queue优先队列👈"><a href="#👉5-priority-queue优先队列👈" class="headerlink" title="👉5.priority_queue优先队列👈"></a>👉<a href="https://blog.csdn.net/qq_50285142/article/details/114078695" target="_blank" rel="noopener">5.priority_queue优先队列</a>👈</h2><h2 id="👉6-map映射👈"><a href="#👉6-map映射👈" class="headerlink" title="👉6.map映射👈"></a>👉<a href="https://blog.csdn.net/qq_50285142/article/details/120368977" target="_blank" rel="noopener">6.map映射</a>👈</h2><h2 id="👉7-set集合👈"><a href="#👉7-set集合👈" class="headerlink" title="👉7.set集合👈"></a>👉<a href="https://blog.csdn.net/qq_50285142/article/details/122304728" target="_blank" rel="noopener">7.set集合</a>👈</h2><h2 id="👉8-pair二元组👈"><a href="#👉8-pair二元组👈" class="headerlink" title="👉8.pair二元组👈"></a>👉<a href="https://blog.csdn.net/qq_50285142/article/details/122304842" target="_blank" rel="noopener">8.pair二元组</a>👈</h2><h2 id="👉9-string字符串👈"><a href="#👉9-string字符串👈" class="headerlink" title="👉9.string字符串👈"></a>👉<a href="https://blog.csdn.net/qq_50285142/article/details/114156051" target="_blank" rel="noopener">9.string字符串</a>👈</h2><h2 id="👉10-bitset👈"><a href="#👉10-bitset👈" class="headerlink" title="👉10.bitset👈"></a>👉<a href="https://blog.csdn.net/qq_50285142/article/details/114186789" target="_blank" rel="noopener">10.bitset</a>👈</h2><h2 id="👉11-array数组👈"><a href="#👉11-array数组👈" class="headerlink" title="👉11.array数组👈"></a>👉<a href="https://blog.csdn.net/qq_50285142/article/details/122932215" target="_blank" rel="noopener">11.array数组</a>👈</h2><h2 id="👉12-tuple元组👈"><a href="#👉12-tuple元组👈" class="headerlink" title="👉12.tuple元组👈"></a>👉<a href="https://blog.csdn.net/qq_50285142/article/details/123000835" target="_blank" rel="noopener">12.tuple元组</a>👈</h2><h1 id="STL相关内容"><a href="#STL相关内容" class="headerlink" title="STL相关内容"></a>STL相关内容</h1><h2 id="C-STL函数总结"><a href="#C-STL函数总结" class="headerlink" title="C++ STL函数总结"></a><a href="https://wyq666.blog.csdn.net/article/details/120632337" target="_blank" rel="noopener">C++ STL函数总结</a></h2><hr><p>由于作者水平有限，内容纯手敲，整理可能有误。<br>如果有哪些不足或者错误的地方，也希望大家督促我尽快改正哦，我会及时回复的。</p><p>如有疑问，请加QQ交流群</p><p>点击链接加入群聊： <a href="https://jq.qq.com/?_wv=1027&k=tcepNzVd" target="_blank" rel="noopener">https://jq.qq.com/?_wv=1027&amp;k=tcepNzVd</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> STL </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>关于写博客的反思</title>
+      <link href="/2022/06/21/xingmaqi/"/>
+      <url>/2022/06/21/xingmaqi/</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>关注公众号【行码棋】，每日算法干货马上就来！</p></blockquote><p><img src="/medias/gzh.jpg" alt></p><h2 id="Why？为什么会想起来写博客？"><a href="#Why？为什么会想起来写博客？" class="headerlink" title="Why？为什么会想起来写博客？"></a>Why？为什么会想起来写博客？</h2><p>其实刚开始写博客，主要还是为了记录自己平时学到的一些东西，以后可能还能翻出来复习复习。但是现在看来，基本不会再去翻以前写的东西了。</p><p>另一个目的，也是我写博客最主要的目的，还是想分享我知道的一些东西，能够让更多的人因此受益。因为写博客，其实还是认识了不少天南地北的朋友的，有各个高校甚至初高中的学生，也有工作了很多年想学习学习编程的，也有国外一些名校的学生。不管是谁，我觉得都可以扩展我的人脉，现在微信好友人数上限扩展到了 5000 人了，而我才用了十分之一多一点，什么时候能达到上限也算是圆满了。</p><p>最后，有句话叫做：“不以盈利为目的的博客最后都死亡了”。因为如果不能因此获得任何的收入的话，极少有人有这个毅力坚持更新博客。虽然我也想因此获利，但是暂时我并不想因此改变了初衷，去写一些刻意迎合大众的水文，从而获得粉丝。</p><h2 id="What？都写一些什么主题的博客？"><a href="#What？都写一些什么主题的博客？" class="headerlink" title="What？都写一些什么主题的博客？"></a>What？都写一些什么主题的博客？</h2><p>主要都是与我相关的一些计算机相关知识。最主要的就是深度学习和自然语言处理了，但是因为我是做句法分析的，这个方向受众比较小，如果纯粹写这个方向的内容的话，看的人可能会很少。而如果写深度学习和自然语言处理的入门普及或者综合一点热门一点的方向的话，看得人应该会很多。但是这样又有一个弊端，非常的浪费我时间，因为过于基础的知识对我的提升微乎其微，只适合以后我面试前看看补补基础。而主要我现在重心还在发论文，继续搞学术，所以只能写一些结合我最近所学知识的文章。</p><p>还会写一些算法题解，现在主要在做 LeetCode 上面的中等和困难题目，然后每日一更。尽管网上各种 LeetCode 的题解已经太多了，但是我觉得，大多数的题解都非常的模糊，讲解的很不清楚，抄来抄去的有什么意思？而他们的代码风格，更是让我看不下去，最基本的美观都做不到，代码的简洁精炼就更不用谈了。所以我的目的还是尽量用美观精炼的代码来让更多人的算法思想和代码能力得到提升。</p><p>偶尔，我还会分享一些计算机基础知识，比如怎么搭博客（这是我阅读量最高的一篇博客了）、好用的软件、常用的一些软件的安装配置等等。其实讲道理，我是不愿意写这一类文章的，因为非常的费时费力，需要自己动手模拟一遍，确保能够正确完成才能写进文章。不然就会像很多网上的教程那样，抄来抄去一堆错误，根本没有自己动手实践过。但是这种文章其实对很多人帮助还挺大的，大家也乐意去看，如果你在知乎发的话，你会发现这类文章收藏量都挺高的。如果我以后用空了，我还是会经常把我平时的一些经验分享给大家的，比如 LaTeX 常用写作技巧之类的。</p><p>那么其他火的博客都写些什么呢？我觉得当代人闲暇时候、上厕所刷手机的时候，那些碎片时间是没办法好好学习一些知识的，最爱看的还是有趣的故事，例如 99 行代码做出冰雪奇缘特效、程序员脱发、程序员单身狗啦之类的。这些故事背后的技术可能是很深奥的，但是大多数人并不会去关心，只是会看完惊叹一句“卧槽”而已。其他的吸引人的内容还有资料下载、课程学习（当然基本都是广告）等等。不过我个人目前并不想写这些东西，首先这些新闻类的文章很多地方都有了，写来写去就那么些东西，同质化严重。而资料下载确实是个不错的主意，可以分享好东西给大家，但是我个人最近也没有太多值得珍藏的好资料，况且大多数网上都有现成的，我不赞同为了增加粉丝而不放出链接，把资料放在公众号后台的行为。</p><p>总之，不忘初心，粉丝什么的随缘吧。我非常佛系，即使没人看我也会日常更新，就当记日记不是吗？</p><h2 id="Who？写出来的博客都是给谁看的？"><a href="#Who？写出来的博客都是给谁看的？" class="headerlink" title="Who？写出来的博客都是给谁看的？"></a>Who？写出来的博客都是给谁看的？</h2><p>大多数看我博客的都是自然语言处理相关的学生。就拿我在知乎专栏的粉丝来看，大多数人是来看我的论文赏析的，而少部分人是看到了那篇博客搭建教程来的。至于算法题解，貌似并没有很多人看，可能这一类文章网上实在是太多了，没有什么独特的吸引力。而公众号粉丝，目前为止还很少，绝大多数还都是好友粉丝。主要原因还是公众号太封闭了，很难让好友之外的人知道并且关注你。一个方法可以在知乎等平台引流，但是现在这属于违规操作，最好还是不要干了。</p><p>其实我目标的受众群体还是包括但不仅限于计算机系的学生，像一些计算机基础知识，就算你是个小白，也可以从这里学到很多东西。甚至还有很多考研的学生来咨询我问题，虽然我是保研的，但是很多导师选取、学习方面的问题我还是愿意给出我自己的建议的。我这个人向来喜欢分享，也喜欢倾听，如果别人来问我问题，我基本是会耐心回答的。曾经有啥都不会的小白来问我怎么搭建博客，我得从最基本的命令行教他，讲道理这其实很烦，我都不想教，但我还是会尽量把关键点都告诉他。有人会觉得，我这样最后会得到什么呢？是的，也不赚钱，最多偶尔有些朋友会打赏个红包，我还浪费了大把时间（其实还好，白天工作的时候我都简单回复，晚上一般会详细点），但是认识的人多了，许多人还是多少知道我这个名字的，虽然没啥用，但是也算是种隐形财富吧，以后有什么用再说。</p><h2 id="Where？都在什么平台写博客呢？"><a href="#Where？都在什么平台写博客呢？" class="headerlink" title="Where？都在什么平台写博客呢？"></a>Where？都在什么平台写博客呢？</h2><p>这个其实上面都说过了，我现在文章主要更新在个人博客、知乎专栏、微信公众号和 CSDN 上面，我简要说一些这些平台的优缺点吧。</p><p>个人博客可以个性化定制主题，想怎么好看就怎么好看，还不用发文章审核，想发什么就发什么。但是缺点就是发文章麻烦一点的，步骤略多，并且搜索引擎收录很慢的。</p><p>知乎专栏是我比较喜欢的一个平台，主要是它支持markdown，还可以把公式变成矢量图片，还是挺不错的。但是发知乎文章要注意千万别带着营销、引流等内容，不然容易被人举报被删除甚至禁言。</p><p>微信公众号是我最近才开始运营的，相对而言，它的编辑界面是最不友好的一个，只支持富文本编辑，连markdown都没有。但是也有解决方法，比如我现在用<a href="https://mdnice.com/" target="_blank" rel="noopener">mdnice.com</a>这个网站，把markdown转换成微信公众号的富文本格式，还是非常好用的。公众号还有个缺点，太封闭了，很难宣传出去，刚开始只能亲朋好友关注关注，但是如果你真的做大了知名度，还是可以借助微信的优势，赚得不少广告钱的。</p><p>CSDN因为几年前被永久封过号，然后现在不知道为什么又被解封了，所以用的不是特别多，主要都是通过知乎专栏自动同步文章过去的。CSDN 好处就是流量大，很多人都在上面搜东西，百度搜出来也基本都是 CSDN ，但是排版是真的真的烂，不过现在好多了，也支持 markdown 了。但是还是谈不上喜欢，广告什么的都太多了，除非迫不得已，我一般不去 CSDN 看技术文章，我一般都是个人博客或者知乎看论文解读之类的。</p><h2 id="How？按照什么流程来写博客？"><a href="#How？按照什么流程来写博客？" class="headerlink" title="How？按照什么流程来写博客？"></a>How？按照什么流程来写博客？</h2><p>其实同时维护好几个平台还是挺累的，你得找到一个最佳的顺序来发布文章，这样才能事半功倍。我一般都是先在个人博客上写好 markdown 文章，然后发布完之后，打开<a href="https://mdnice.com/" target="_blank" rel="noopener">mdnice.com</a>在线编辑网站，把 markdown 粘贴进去，转成微信公众号和知乎专栏的格式，最后分别发布在两个地方就行了。 CSDN 就不用管了，它会每天自动同步知乎专栏的文章的，倒是为我省了不少事。markdown 写作也挺轻松的，完全不用管排版之类的问题，安安心心写内容就行了。</p><p>微信公众号现在设置的是每天早上 8:05 推送，其实稍微晚一点比较好，这样别人的都推送完了，你的就会置顶在最上面。而知乎专栏和个人博客我就随性发布了，想什么时候发就什么时候发，经常会前一天就写好内容，早早的发布出去了。</p><p>我个人现在来看，写一篇博客最累的是敲公式和找图片，当然像我这篇就一个公式和图都没有，是最最轻松的了。我这个人有强迫症，公式一定要手打 LaTeX 公式，然后转成矢量图才行，这样看着又清楚又舒服。遇到复杂的矩阵公式，能把我敲的头晕。这也是我为什么不喜欢 CSDN 的一个原因，上面很多文章公式全是截图，看的我头都大了。</p><h2 id="How-much？要花多少时间和金钱来运营维护？"><a href="#How-much？要花多少时间和金钱来运营维护？" class="headerlink" title="How much？要花多少时间和金钱来运营维护？"></a>How much？要花多少时间和金钱来运营维护？</h2><p>写博客挺花时间的，特别是现在还在为发论文而忙活的时候，可能论文截稿前那段时间甚至我会停更好久哈哈。不过现在放假了，还算比较闲，有功夫搞搞这些。我个人是倾向于白天还是老老实实学习吧，晚上把部分的游戏时间抽出来写会儿文章，更新一波。这样也不算太浪费时间，毕竟就算不写，时间也都用来打游戏了，游戏输了还坏了心情（我的亚索怎么会输？）。</p><p>那什么时候做 LeetCode 呢？我一般都是白天吃饭时，或者走在路上时，手机 app 上随机选一道题，然后吃个饭的时间就能想出个解法，回到实验室后敲一顿代码通过了就行了。这样看来也节约了不少时间嘛，还能和室友一起讨论讨论，帮他提高一波算法能力。</p><p>金钱的话就基本没有花销了，除了开了个素材设计网站的会员（我是真的睿智，用 PS 不就行了嘛，脑子瓦特了充钱了）以外，其他不需要啥了，偶尔还能吃点打赏钱，粉丝太少了，没有广告。</p><p>因为写文章这上面花时间比较多，写出好的文章、不水文章的话花的时间更多，所以很容易坚持不下去。而又要迎合大众的口味，众口难调嘛，又要坚持自己的初心，尽量写对自己提升大的内容，还是比较难以平衡的。特别是粉丝特别少，没有什么人看的时候，你会很想放弃。</p><p>但是，总会有人在你坚持不下去的时候，给你鼓励的目光，支持你继续走下去的。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随笔 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
