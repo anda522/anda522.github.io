@@ -1916,3 +1916,18 @@ footer .copy-right {
     /* bg color = bg color under block */
     background: white;
 }
+
+/* 滚动条：自己修改颜色样式 */
+::-webkit-scrollbar-thumb {
+    background-color: #66FFFF;
+    background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
+    border-radius: 0em;
+}
+::-webkit-scrollbar-track {
+    background-color: #CCDDFF;
+    border-radius: 0em;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}

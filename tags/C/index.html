@@ -314,15 +314,6 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                     </span>
                 </a>
                 
-                
-                <a href="/tags/博客/" title="博客: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="博客" style="background-color: #D5F5E3;">博客
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
             </div>
         </div>
     </div>
@@ -340,7 +331,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/28.jpg" class="responsive-img" alt="C++ STL超全总结">
+                            <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="C++ STL超全总结">
                             
                             <span class="card-title">C++ STL超全总结</span>
                         </div>
@@ -373,11 +364,11 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
     <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
-            &copy; 2017-2020 行码棋 版权所有
+            &copy; 2021-2022 行码棋 版权所有
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">3.5k</span>
+            <span class="white-color">221</span>
             
 
             <br>
@@ -436,8 +427,8 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
     $(document).ready(function () {
 
         var int = setInterval(fixCount, 50);
-        var pvcountOffset = 80000;
-        var uvcountOffset = 20000;
+        var pvcountOffset = 0;
+        var uvcountOffset = 0;
 
         function fixCount() {
             if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
@@ -520,6 +511,8 @@ $(function () {
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
+    <script src="/js/click_show_text.js"></script>
+
 
     <script type="text/javascript"> var OriginTitile = document.title, st; document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) })
     </script>
@@ -540,8 +533,6 @@ $(function () {
 
 
     
-    <script src="/libs/others/clicklove.js"></script>
-    
 
     
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
@@ -549,6 +540,9 @@ $(function () {
 
     <!-- 雪花特效 -->
     
+    <script type="text/javascript" src="/libs/others/snow.js"></script>
+    
+
 
 </body>
 
