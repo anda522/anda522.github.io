@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wangyaqii.top/"/>
-  <updated>2022-06-25T09:37:50.549Z</updated>
+  <updated>2022-06-25T11:34:55.479Z</updated>
   <id>http://wangyaqii.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>阶乘逆元和线性逆元</title>
+    <link href="http://wangyaqii.top/2022/06/25/jie-cheng-ni-yuan-he-xian-xing-ni-yuan/"/>
+    <id>http://wangyaqii.top/2022/06/25/jie-cheng-ni-yuan-he-xian-xing-ni-yuan/</id>
+    <published>2022-06-25T11:27:26.000Z</published>
+    <updated>2022-06-25T11:34:55.479Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;逆元简介&quot;&gt;&lt;a href=&quot;#逆元简介&quot; class=&quot;headerlink&quot; title=&quot;逆元简介&quot;&gt;&lt;/a&gt;逆元简介&lt;/h1&gt;&lt;p&gt;$a \times b \equiv  1 (
+        
+      
+    
+    </summary>
+    
+      <category term="数论" scheme="http://wangyaqii.top/categories/%E6%95%B0%E8%AE%BA/"/>
+    
+    
+      <category term="逆元" scheme="http://wangyaqii.top/tags/%E9%80%86%E5%85%83/"/>
+    
+      <category term="组合数学" scheme="http://wangyaqii.top/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>容斥定理</title>
