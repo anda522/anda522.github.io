@@ -5,9 +5,9 @@
   <subtitle>行码棋</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://wangyaqii.top/"/>
-  <updated>2022-06-25T04:01:48.851Z</updated>
-  <id>http://wangyaqii.top/</id>
+  <link href="http://blogs.wangyaqii.top/"/>
+  <updated>2022-06-25T09:37:50.549Z</updated>
+  <id>http://blogs.wangyaqii.top/</id>
   
   <author>
     <name>行码棋</name>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>容斥定理详解</title>
-    <link href="http://wangyaqii.top/2022/06/25/rong-chi-ding-li-xiang-jie/"/>
-    <id>http://wangyaqii.top/2022/06/25/rong-chi-ding-li-xiang-jie/</id>
-    <published>2022-06-25T00:16:01.000Z</published>
-    <updated>2022-06-25T04:01:48.851Z</updated>
+    <title>容斥定理</title>
+    <link href="http://blogs.wangyaqii.top/2022/06/25/rong-chi-ding-li/"/>
+    <id>http://blogs.wangyaqii.top/2022/06/25/rong-chi-ding-li/</id>
+    <published>2022-06-25T09:36:11.000Z</published>
+    <updated>2022-06-25T09:37:50.549Z</updated>
     
     <summary type="html">
     
@@ -29,26 +29,26 @@
       
         
         
-          &lt;p&gt;﻿# 容斥定理&lt;/p&gt;
+          &lt;p&gt;﻿﻿# 容斥定理&lt;/p&gt;
 &lt;h2 id=&quot;简单版本：&quot;&gt;&lt;a href=&quot;#简单版本：&quot; class=&quot;headerlink&quot; title=&quot;简单版本：&quot;&gt;&lt;/a&gt;简单版本：&lt;/h2&gt;&lt;p&gt;&lt;img
         
       
     
     </summary>
     
-      <category term="数论" scheme="http://wangyaqii.top/categories/%E6%95%B0%E8%AE%BA/"/>
+      <category term="数论" scheme="http://blogs.wangyaqii.top/categories/%E6%95%B0%E8%AE%BA/"/>
     
     
-      <category term="数论" scheme="http://wangyaqii.top/tags/%E6%95%B0%E8%AE%BA/"/>
+      <category term="数论" scheme="http://blogs.wangyaqii.top/tags/%E6%95%B0%E8%AE%BA/"/>
     
   </entry>
   
   <entry>
     <title>C++ STL超全总结</title>
-    <link href="http://wangyaqii.top/2022/06/22/c-stl-chao-quan-zong-jie/"/>
-    <id>http://wangyaqii.top/2022/06/22/c-stl-chao-quan-zong-jie/</id>
+    <link href="http://blogs.wangyaqii.top/2022/06/22/c-stl-chao-quan-zong-jie/"/>
+    <id>http://blogs.wangyaqii.top/2022/06/22/c-stl-chao-quan-zong-jie/</id>
     <published>2022-06-22T07:54:47.000Z</published>
-    <updated>2022-06-22T07:59:51.720Z</updated>
+    <updated>2022-06-25T09:29:42.628Z</updated>
     
     <summary type="html">
     
@@ -62,12 +62,12 @@
     
     </summary>
     
-      <category term="STL" scheme="http://wangyaqii.top/categories/STL/"/>
+      <category term="STL" scheme="http://blogs.wangyaqii.top/categories/STL/"/>
     
     
-      <category term="C++" scheme="http://wangyaqii.top/tags/C/"/>
+      <category term="C++" scheme="http://blogs.wangyaqii.top/tags/C/"/>
     
-      <category term="算法" scheme="http://wangyaqii.top/tags/%E7%AE%97%E6%B3%95/"/>
+      <category term="算法" scheme="http://blogs.wangyaqii.top/tags/%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   

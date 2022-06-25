@@ -4,13 +4,13 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="容斥定理详解, ZZU 行码棋">
+    <meta name="keywords" content="容斥定理, ZZU 行码棋">
     <meta name="baidu-site-verification" content="fmlEuI34ir">
     <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48">
     <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7">
-    <meta name="description" content="﻿# 容斥定理
+    <meta name="description" content="﻿﻿# 容斥定理
 简单版本：对于上述图片，求$|A\cup B \cup C|$结果为$|A\cup B\cup C|=|A|+|B|+|C|-|A\cap B|-|B\cap C|-|C\cap A|+|A\cap B\cap C|$
-一般">
+一">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +18,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>容斥定理详解 | 行码棋的博客</title>
+    <title>容斥定理 | 行码棋的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -29,12 +29,7 @@
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
     <style type="text/css">
-        code[class*="language-"],
-            pre[class*="language-"] {
-                white-space: pre !important;
-            }
-
-            
+        
     </style>
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
@@ -273,13 +268,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        容斥定理详解
+                        容斥定理
                     </div>
                 </div>
             </div>
@@ -451,8 +446,8 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>﻿# 容斥定理</p>
-<h2 id="简单版本："><a href="#简单版本：" class="headerlink" title="简单版本："></a>简单版本：</h2><p><img src="a188f738744e4afb8c5f7e745640cdd9.png" alt="容斥定理简化图"><br>对于上述图片，求$|A\cup B \cup C|$<br>结果为$|A\cup B\cup C|=|A|+|B|+|C|-|A\cap B|-|B\cap C|-|C\cap A|+|A\cap B\cap C|$</p>
+                <p>﻿﻿# 容斥定理</p>
+<h2 id="简单版本："><a href="#简单版本：" class="headerlink" title="简单版本："></a>简单版本：</h2><p><img src="a188f738744e4afb8c5f7e745640cdd9.png" alt="简单版本"><br>对于上述图片，求$|A\cup B \cup C|$<br>结果为$|A\cup B\cup C|=|A|+|B|+|C|-|A\cap B|-|B\cap C|-|C\cap A|+|A\cap B\cap C|$</p>
 <h2 id="一般情况"><a href="#一般情况" class="headerlink" title="一般情况"></a>一般情况</h2><p>公式：$\left|\bigcup_{i=1}^{n}S_i\right|=\sum_{m=1}^n(-1)^{m-1}\sum_{a_i&lt;a_{i+1} }\left|\bigcap_{i=1}^mS_{a_i}\right|$</p>
 <p>大家应该是看不懂吧，反正我是看不懂</p>
 <p>我理解的通俗的意思就是：</p>
@@ -460,10 +455,10 @@
 <p>稍微用公式表示一下：<br>$|A_1\cup…\cup A_n| = \<br>|A_1|+|A_2|+…+|A_n|\<br>-(|A_1 \cap A_2|+…+|A_i \cap A_j|)\<br>+(|A_1 \cap A_2 \cap A_3|+…+|A_i \cap A_j \cap A_k|)\<br>-(四个之间的交)\<br>+(五个之间的交)\<br>……$</p>
 <p>大概就是这个意思。</p>
 <ul>
-<li>选择的个数为偶数次，前面符号为负</li>
-</ul>
-<ul>
+<li>选择的个数为偶数次，前面符号为负<ul>
 <li>选择的个数为奇数次，前面符号为正</li>
+</ul>
+</li>
 </ul>
 <p>参考链接：<br><a href="https://oi-wiki.org/math/combinatorics/inclusion-exclusion-principle/" target="_blank" rel="noopener">https://oi-wiki.org/math/combinatorics/inclusion-exclusion-principle/</a></p>
 <h2 id="例题1-能被整除的数"><a href="#例题1-能被整除的数" class="headerlink" title="例题1 能被整除的数"></a>例题1 能被整除的数</h2><p>题目链接：<a href="https://www.acwing.com/problem/content/892/" target="_blank" rel="noopener">https://www.acwing.com/problem/content/892/</a></p>
@@ -548,7 +543,7 @@
 <li>题目的补集：$|s_1\bigcup s_2\bigcup s_3……\bigcup s_n|$</li>
 <li>结果为：$C_{m+n-1}^{n-1}-|s_1\bigcup s_2\bigcup s_3……\bigcup s_n|$</li>
 </ul>
-<p>考虑求满足$s_1$的情况数<br>即第一个必须取至少$A_i+1$支花，那么接下来就化为从<code>n</code>组里面选花，$x_1&gt;=A_1+1,x_2&gt;=0,x_3&gt;=0,…,x_n&gt;=0$的情况，可以直接取出$A_i+1$支花放在第一组，那么总数就变成$m-(A_1+1)$支花，就化为<strong>理想情况</strong> （ 见上文 ） 下的问题了，总数为$C_{m+n-1-(A_1+1)}^{n-1}$</p>
+<p>考虑求满足$s_1$的情况数<br>即第一个必须取至少$A_i+1$支花，那么接下来就化为从<code>n</code>组里面选花，$x_1&gt;=A_1+1,x_2&gt;=0,x_3&gt;=0,…,x_n&gt;=0$的情况，可以直接取出$A_i+1$支花放在第一组，那么总数就变成$m-(A_1+1)$支花，就化为<strong>理想情况</strong>(见上文)下的问题了，总数为$C_{m+n-1-(A_1+1)}^{n-1}$</p>
 <p>$s_1\cap s_2$同理<br>答案为$C_{m+n-1-(A_1+1)-(A_2+1)}^{n-1}$</p>
 <p>最后枚举所有的情况数，使用二进制方法进行枚举，枚举$[0,2^n-1]$,统计二进制位<code>1</code>的个数</p>
 <p>奇数个<code>1</code>符号为负<br>偶数个<code>1</code>符号位正</p>
@@ -767,9 +762,9 @@ ll <span class="token function">C</span><span class="token punctuation">(</span>
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《容斥定理详解》
+                    《容斥定理》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2022/06/25/rong-chi-ding-li-xiang-jie/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2022/06/25/rong-chi-ding-li/" property="cc:attributionName"
                rel="cc:attributionURL">
                 行码棋
             </a> 采用
@@ -806,11 +801,11 @@ ll <span class="token function">C</span><span class="token punctuation">(</span>
 <script>
     let gitalk = new Gitalk({
         clientID: '132746b84c5638134a72',
-        clientSecret: 'e06f43c8a082216c9cf4ad349455eec279e51e01',
+        clientSecret: '9026078c86f550ac2f804f817046f2f02aa1bf46',
         repo: 'anda522.github.io',
         owner: 'anda522',
         admin: "anda522",
-        id: '2022/06/25/rong-chi-ding-li-xiang-jie/',
+        id: '2022/06/25/rong-chi-ding-li/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1098,21 +1093,19 @@ ll <span class="token function">C</span><span class="token punctuation">(</span>
                 <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2022/06/25/rong-chi-ding-li-xiang-jie/">
+                <a href="/2022/06/25/rong-chi-ding-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="容斥定理详解">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="容斥定理">
                         
-                        <span class="card-title">容斥定理详解</span>
+                        <span class="card-title">容斥定理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ﻿# 容斥定理
-简单版本：对于上述图片，求$|A\cup B \cup C|$结果为$|A\cup B\cup C|=|A|+|B|+|C|-|A\cap B|-|B\cap C|-|C\cap A|+|A\cap B\cap C|$
-一般
+                            容斥定理详解
                         
                     </div>
                     <div class="publish-info">
@@ -1361,7 +1354,7 @@ ll <span class="token function">C</span><span class="token punctuation">(</span>
     <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
-            &copy; 2021-2022 行码棋 版权所有
+            &copy; 2020-2022 行码棋 版权所有
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
@@ -1509,8 +1502,7 @@ $(function () {
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
     <script src="/js/click_show_text.js"></script>
-
-
+    
     <script type="text/javascript"> var OriginTitile = document.title, st; document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) })
     </script>
 
@@ -1537,9 +1529,6 @@ $(function () {
 
     <!-- 雪花特效 -->
     
-    <script type="text/javascript" src="/libs/others/snow.js"></script>
-    
-
 
 </body>
 
