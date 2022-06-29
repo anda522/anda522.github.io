@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>行码棋的博客</title>
   
-  <subtitle>行码棋</subtitle>
+  <subtitle>行稳才能致远</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wangyaqii.top/"/>
-  <updated>2022-06-25T11:41:29.282Z</updated>
+  <updated>2022-06-29T08:39:41.587Z</updated>
   <id>http://wangyaqii.top/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CF1181C Flag-子矩阵数量统计</title>
+    <link href="http://wangyaqii.top/2022/06/29/cf1181c-flag-zi-ju-zhen-shu-liang-tong-ji/"/>
+    <id>http://wangyaqii.top/2022/06/29/cf1181c-flag-zi-ju-zhen-shu-liang-tong-ji/</id>
+    <published>2022-06-29T08:03:02.000Z</published>
+    <updated>2022-06-29T08:39:41.587Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;CF1181C-Flag子矩阵数量统计&quot;&gt;&lt;a href=&quot;#CF1181C-Flag子矩阵数量统计&quot; class=&quot;headerlink&quot; title=&quot;CF1181C Flag子矩阵数量统计&quot;&gt;&lt;/a&gt;CF1181C Flag子矩阵数量统计&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="DP" scheme="http://wangyaqii.top/categories/DP/"/>
+    
+    
+      <category term="CF" scheme="http://wangyaqii.top/tags/CF/"/>
+    
+      <category term="DP" scheme="http://wangyaqii.top/tags/DP/"/>
+    
+  </entry>
+  
+  <entry>
     <title>阶乘逆元和线性逆元</title>
     <link href="http://wangyaqii.top/2022/06/25/jie-cheng-ni-yuan-he-xian-xing-ni-yuan/"/>
     <id>http://wangyaqii.top/2022/06/25/jie-cheng-ni-yuan-he-xian-xing-ni-yuan/</id>
     <published>2022-06-25T11:27:26.000Z</published>
-    <updated>2022-06-25T11:41:29.282Z</updated>
+    <updated>2022-06-27T07:51:19.722Z</updated>
     
     <summary type="html">
     
