@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wangyaqii.top/"/>
-  <updated>2022-06-29T08:46:55.085Z</updated>
+  <updated>2022-06-29T11:19:32.824Z</updated>
   <id>http://wangyaqii.top/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2021大二上期末知识点总结</title>
+    <link href="http://wangyaqii.top/2022/06/29/2021-da-er-shang-qi-mo-lian-xi-ti/"/>
+    <id>http://wangyaqii.top/2022/06/29/2021-da-er-shang-qi-mo-lian-xi-ti/</id>
+    <published>2022-06-29T11:04:00.000Z</published>
+    <updated>2022-06-29T11:19:32.824Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;本文知识点均为从网络或其他地方搜集整理而来，提到的习题均无答案，完全不具备权威性质，作者不对看本文造成的后果负责，请合理参考。&lt;/p&gt;
+&lt;h1 id=&quot;Linux&quot;&gt;&lt;a href=&quot;#Linux&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="思考总结" scheme="http://wangyaqii.top/categories/%E6%80%9D%E8%80%83%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="学习总结" scheme="http://wangyaqii.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2021年度总结</title>
+    <link href="http://wangyaqii.top/2022/06/29/2021-nian-du-zong-jie/"/>
+    <id>http://wangyaqii.top/2022/06/29/2021-nian-du-zong-jie/</id>
+    <published>2022-06-29T10:52:55.000Z</published>
+    <updated>2022-06-29T10:54:55.202Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;2021年度总结&quot;&gt;&lt;a href=&quot;#2021年度总结&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="思考总结" scheme="http://wangyaqii.top/categories/%E6%80%9D%E8%80%83%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="学习总结" scheme="http://wangyaqii.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>CF1181C Flag-子矩阵数量统计</title>
@@ -104,7 +157,7 @@
     <link href="http://wangyaqii.top/2022/06/22/c-stl-chao-quan-zong-jie/"/>
     <id>http://wangyaqii.top/2022/06/22/c-stl-chao-quan-zong-jie/</id>
     <published>2022-06-22T07:54:47.000Z</published>
-    <updated>2022-06-25T09:29:42.628Z</updated>
+    <updated>2022-06-29T10:58:36.305Z</updated>
     
     <summary type="html">
     
@@ -120,6 +173,8 @@
     
       <category term="STL" scheme="http://wangyaqii.top/categories/STL/"/>
     
+    
+      <category term="学习总结" scheme="http://wangyaqii.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
     
       <category term="C++" scheme="http://wangyaqii.top/tags/C/"/>
     

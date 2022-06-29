@@ -4,15 +4,12 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="CF1181C Flag-子矩阵数量统计, ZZU 行码棋">
+    <meta name="keywords" content="2021大二上期末知识点总结, ZZU 行码棋">
     <meta name="baidu-site-verification" content="code-EZed9PhGF6">
     <!-- <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48" /> -->
     <!-- <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" /> -->
-    <meta name="description" content="CF1181C Flag子矩阵数量统计题目介绍题目链接：
-https://codeforces.com/problemset/problem/1181/C
-
-思路维护变量统计子矩阵一般都需要维护一些数组，大部分都是纵向维护或者横向维护。
-本">
+    <meta name="description" content="本文知识点均为从网络或其他地方搜集整理而来，提到的习题均无答案，完全不具备权威性质，作者不对看本文造成的后果负责，请合理参考。
+Linux指令基本都是基本指令，输入输出流，统计行数，复制，文件权限修改等等大题会考swap分区构建的具体步骤考">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +17,7 @@ https://codeforces.com/problemset/problem/1181/C
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>CF1181C Flag-子矩阵数量统计 | 行码棋的博客</title>
+    <title>2021大二上期末知识点总结 | 行码棋的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -271,13 +268,13 @@ https://codeforces.com/problemset/problem/1181/C
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/27.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        CF1181C Flag-子矩阵数量统计
+                        2021大二上期末知识点总结
                     </div>
                 </div>
             </div>
@@ -388,12 +385,8 @@ https://codeforces.com/problemset/problem/1181/C
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/CF/" target="_blank">
-                            <span class="chip bg-color">CF</span>
-                        </a>
-                        
-                        <a href="/tags/DP/" target="_blank">
-                            <span class="chip bg-color">DP</span>
+                        <a href="/tags/学习总结/" target="_blank">
+                            <span class="chip bg-color">学习总结</span>
                         </a>
                         
                     </div>
@@ -404,8 +397,8 @@ https://codeforces.com/problemset/problem/1181/C
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/DP/" class="post-category" target="_blank">
-                            DP
+                        <a href="/categories/思考总结/" class="post-category" target="_blank">
+                            思考总结
                         </a>
                         
                     </div>
@@ -430,14 +423,14 @@ https://codeforces.com/problemset/problem/1181/C
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    977
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    3 分
                 </div>
                 
                 
@@ -453,136 +446,89 @@ https://codeforces.com/problemset/problem/1181/C
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="CF1181C-Flag子矩阵数量统计"><a href="#CF1181C-Flag子矩阵数量统计" class="headerlink" title="CF1181C Flag子矩阵数量统计"></a>CF1181C Flag子矩阵数量统计</h1><h2 id="题目介绍"><a href="#题目介绍" class="headerlink" title="题目介绍"></a>题目介绍</h2><p>题目链接：</p>
-<p><a href="https://codeforces.com/problemset/problem/1181/C" target="_blank" rel="noopener">https://codeforces.com/problemset/problem/1181/C</a></p>
-<p><img src="image-20220629160509729.png" alt="题目描述"></p>
-<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><h3 id="维护变量"><a href="#维护变量" class="headerlink" title="维护变量"></a>维护变量</h3><p>统计子矩阵一般都需要维护一些数组，大部分都是纵向维护或者横向维护。</p>
-<p>本题维护两个数组：</p>
-<p>$d[i][j]$ : $(i, j)$位置向下最多延伸相同颜色的块数</p>
-<p>$r[i][j]$：$(i, j)$位置向右最多延伸相同颜色的块数</p>
-<p>我们先考虑宽度为$1$的情况，统计该列的贡献时再考虑该列横向向右能达到的最大贡献。</p>
-<p>同时需要再维护两个横向延伸的最小值数组：</p>
-<p>$r[i][j]$ ：<strong>前缀</strong>（横向数组）最小值，$(x, j)$到$(i, j),x &lt; i$横向向右的延伸长度的最小值，保证$(x, j)$到$(i, j)$的颜色相同，只有在颜色相同时才会更新最小值</p>
-<blockquote>
-<p>$r[i][j]$和声明的一样，但是此$r[i][j]$是利用上述数组更新来的（具体见代码）</p>
-</blockquote>
-<p>$lmn[i][j]$ : <strong>后缀</strong>（横向数组）最小值，$(x, j)$到$(i, j), x &gt; i$横向向右的延伸长度的最小值，保证$(x, j)$到$(i, j)$的颜色相同，只有在颜色相同时才会更新最小值</p>
-<hr>
-<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>先考虑宽度为1时，在纵向方向上能否构成国旗</p>
-<p>即下面的条件（满足的旗子共三行，如题要求）</p>
+                <p>本文知识点均为从网络或其他地方搜集整理而来，提到的习题均无答案，完全不具备权威性质，作者不对看本文造成的后果负责，请合理参考。</p>
+<h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><p>指令基本都是基本指令，输入输出流，统计行数，复制，文件权限修改等等<br>大题会考swap分区构建的具体步骤<br>考软硬链接文件复制文件和源文件的区别<br>脚本题是对两个文件判存在不存在，不存在询问建文件不建，只有当两个文件时都存在合并并排序</p>
+<h1 id="组原"><a href="#组原" class="headerlink" title="组原"></a>组原</h1><p><strong>选择填空</strong><br>微指令内容感觉有点多<br>填空</p>
 <ul>
-<li><p>$i + 3 * d[i][j] - 1 &lt;= n$  第三行的旗子不越界</p>
+<li>带宽计算，速度计算</li>
+</ul>
+<p>计算</p>
+<ul>
+<li><p>补码加减法以及判溢出</p>
 </li>
-<li><p>$d[i][j] == d[i + d[i][j]][j]$ 第二行和第一行的长度相同</p>
+<li><p>时钟周期机器周期计算带宽</p>
 </li>
-<li><p>$d[i + 2 * d[i][j]][j] &gt;= d[i][j]$ 第三行的长度<strong>大于等于</strong>上面的行长度（大于等于请思考为什么，只要大于等于就能统计上）</p>
+<li><p>命中率，效率，平均访存时间</p>
+</li>
+<li><p>计算cache映射主存地址位数计算，四路组相连计算</p>
+</li>
+<li><p>一地址指令格式设计，操作方式种类数给了，寻址特征几种有了，设计地址，计算直接寻址范围和间接寻址范围</p>
 </li>
 </ul>
-<p>纵向能够形成旗子，那么考虑改纵向旗子的贡献。</p>
-<blockquote>
-<p>求贡献：</p>
-<p>因为每一个满足条件的纵向旗子都会求贡献，所以每个纵向旗子求贡献只用向右求就行。</p>
-<p>以下为举例：</p>
-<p>AAA</p>
-<p>BBB</p>
-<p>CCC</p>
-<p>最左边一列，可形成3种情况</p>
-<p>中间一列，可形成2种情况</p>
-<p>最右边一列，可形成1种情况</p>
-<p>包含了所有的情况，总贡献就是 3 + 2 + 1</p>
-<p>其实就是$n(n + 1) / 2$，亦或是递推式$f[i] = f[i - 1] + i$，思想基本一样</p>
-</blockquote>
-<p>那么就要求贡献了</p>
-<p>我们肯定需要找<strong>最小</strong>的向右扩展的长度才能算当前整体的贡献，最小向右扩展长度需要是<strong>上中下</strong>三部分的最小值。</p>
-<p>故需要用到上述最小值（前缀和后缀）数组。</p>
-<blockquote>
-<p> 为什么要用到后缀数组?</p>
-<p>以下为举例：满足情况的列用粗体标明</p>
-<p>A （无关紧要行）</p>
-<p><strong>A</strong></p>
-<p><strong>A</strong></p>
-<p><strong>B</strong></p>
-<p><strong>B</strong></p>
-<p><strong>C</strong></p>
-<p><strong>C</strong></p>
-<p>C（无关紧要行）</p>
-<p>但是上下各多出一个字母，如果统计最小值时，上面部分用到前缀最小值数组，就会把第一行向右扩展的长度统计上去，造成统计错误。下面部分同理。</p>
-<p>故上面部分需要用到后缀数组，下面部分需要用到前缀数组，中间部分无所谓</p>
-</blockquote>
-<p>则当前列能够造成的贡献为 $min(lmn[i][j], r[i + 2 * d[i][j] - 1][j], r[i + 3 * d[i][j] - 1][j])$</p>
-<p>具体整体实现见代码。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h></span></span>
-<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
-<span class="token keyword">using</span> ll <span class="token operator">=</span> <span class="token keyword">long</span> <span class="token keyword">long</span><span class="token punctuation">;</span>
-<span class="token keyword">using</span> pii <span class="token operator">=</span> pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">></span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> <span class="token keyword">int</span> N <span class="token operator">=</span> <span class="token number">1005</span><span class="token punctuation">,</span> mod <span class="token operator">=</span> <span class="token number">1e9</span> <span class="token operator">+</span> <span class="token number">7</span><span class="token punctuation">;</span>
-
-<span class="token keyword">int</span> d<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span> r<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span> lmn<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">char</span> s<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-<span class="token keyword">void</span> <span class="token function">solve</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<p>综合</p>
+<ul>
+<li>屏蔽字设计，画多级中断图</li>
+<li>CPU和存储器连接画图</li>
+</ul>
+<h1 id="毛概"><a href="#毛概" class="headerlink" title="毛概"></a>毛概</h1><ul>
+<li>新民主主义革命和社会主义革命</li>
+<li>对毛泽东思想活的灵魂的理解</li>
+<li>对建党精神的理解</li>
+<li>新民主主义革命和社会主义革命时期党是如何建设发展的</li>
+</ul>
+<h1 id="近代史"><a href="#近代史" class="headerlink" title="近代史"></a>近代史</h1><ul>
+<li>事件是什么：辛亥革命，本事件的性质是什么</li>
+<li>意义</li>
+<li>失败原因及教训</li>
+<li>为什么中国共产党是孙中山革命事业的继承者</li>
+</ul>
+<p>论述</p>
+<ul>
+<li>1.为什么中国共产党应运而生</li>
+<li>2.以毛泽东为代表的中国共产党如何探索开辟中国革命道路</li>
+<li>3.建党百年的取得成就</li>
+</ul>
+<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><p>有一个联通分量计算（填空）<br>涉及了二叉树节点个数性质<br>一些基础知识涉及的比较多<br>涉及了一个地址计算（二维数组相关）<br><strong>大题：</strong></p>
+<h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>第一个给了一个程序，进行复杂度分析</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">cal</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
-    <span class="token keyword">int</span> n<span class="token punctuation">,</span> m<span class="token punctuation">;</span>
-    cin <span class="token operator">>></span> n <span class="token operator">>></span> m<span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-        cin <span class="token operator">>></span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> n<span class="token punctuation">;</span> i<span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span>
+    <span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>x <span class="token operator">&lt;</span> n <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span>
     <span class="token punctuation">{</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> m<span class="token punctuation">;</span> j<span class="token punctuation">;</span> j<span class="token operator">--</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            d<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> d<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> r<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> r<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-
-            <span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> s<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
-                d<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">++</span><span class="token punctuation">;</span>
-            <span class="token keyword">else</span> d<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-
-            <span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-                r<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">++</span><span class="token punctuation">;</span>
-            <span class="token keyword">else</span> r<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
+        x <span class="token operator">*</span><span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+        count <span class="token operator">++</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> n<span class="token punctuation">;</span> i<span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;=</span> m<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            lmn<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> r<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>i <span class="token operator">&lt;</span> n <span class="token operator">&amp;&amp;</span> s<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
-                lmn<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">min</span><span class="token punctuation">(</span>lmn<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> lmn<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;=</span> m<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> s<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
-                r<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">min</span><span class="token punctuation">(</span>r<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> r<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-
-
-    ll ans <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> j <span class="token operator">&lt;=</span> m<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">3</span> <span class="token operator">*</span> d<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">&lt;=</span> n <span class="token operator">&amp;&amp;</span> d<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> d<span class="token punctuation">[</span>i <span class="token operator">+</span> d<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&amp;&amp;</span> d<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">2</span> <span class="token operator">*</span> d<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">>=</span> d<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
-                ans <span class="token operator">+</span><span class="token operator">=</span> <span class="token function">min</span><span class="token punctuation">(</span><span class="token punctuation">{</span>lmn<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> r<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">2</span> <span class="token operator">*</span> d<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> r<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">3</span> <span class="token operator">*</span> d<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-
-    cout <span class="token operator">&lt;&lt;</span> ans <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    ios<span class="token operator">::</span><span class="token function">sync_with_stdio</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    cin<span class="token punctuation">.</span><span class="token function">tie</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">int</span> t<span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">// cin >> t;</span>
-    t <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span><span class="token punctuation">(</span>t<span class="token operator">--</span><span class="token punctuation">)</span>
-        <span class="token function">solve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><img src="/medias/gzh.jpg" alt></p>
+    <span class="token keyword">return</span> count<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>求count的值（用n表示）<br>求时间复杂度和空间复杂度</p>
+<p>下一个给出一个队列的描述，让你画队列的图，指出队首队尾，队列如何判满和判空</p>
+<p>最后一题是程序设计，关于链表操作的题目</p>
+<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>一个队列，给了在其中的元素个数及内容和头指针的位置，让画出队列图，又进行出队和入队操作，再让画一次队列图（哪个位置存的什么元素）</p>
+<h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><p>第三个一个图，画出临接矩阵，然后dfs序列，最小生成树</p>
+<h2 id="4"><a href="#4" class="headerlink" title="4"></a>4</h2><p>一个序列，建立哈夫曼树，求WPL和叶子节点编码</p>
+<h2 id="5"><a href="#5" class="headerlink" title="5"></a>5</h2><p>哈希查找画哈希表，求asl</p>
+<h2 id="6"><a href="#6" class="headerlink" title="6"></a>6</h2><p>一个序列，快排第一趟之后是啥，堆排初始化建立的大根堆是啥</p>
+<h2 id="编程"><a href="#编程" class="headerlink" title="编程"></a>编程</h2><p>编程是第一问编写初始化带头节点的单链表，第二问编写在单链表查找x的程序</p>
+<h1 id="数电"><a href="#数电" class="headerlink" title="数电"></a>数电</h1><p>选择触发器涉及的不多，都是些逻辑表达式分析之类的，最小项分析，触发器涉及的都是基础知识，什么存在约束项，什么可以避免空翻，什么抗干扰不抗之类的<br><strong>计算分析</strong></p>
+<ul>
+<li><p>补码加减法</p>
+</li>
+<li><p>写TTL电路逻辑表达式</p>
+</li>
+<li><p>写cmos电路逻辑表达式</p>
+<p>上面写表达式的课本出现过原题</p>
+</li>
+<li><p>用卡诺图化简最简式子</p>
+</li>
+<li><p>用74l138实现某个逻辑表达式</p>
+</li>
+<li><p>画主从rs触发器波形图<br><strong>综合</strong></p>
+</li>
+<li><p>数码管设计，真值表</p>
+</li>
+<li><p>8421bcd码，实现相关功能，画真值表，设计电路</p>
+</li>
+</ul>
 
             </div>
             <hr />
@@ -741,9 +687,9 @@ https://codeforces.com/problemset/problem/1181/C
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《CF1181C Flag-子矩阵数量统计》
+                    《2021大二上期末知识点总结》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2022/06/29/cf1181c-flag-zi-ju-zhen-shu-liang-tong-ji/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2022/06/29/2021-da-er-shang-qi-mo-lian-xi-ti/" property="cc:attributionName"
                rel="cc:attributionURL">
                 行码棋
             </a> 采用
@@ -784,7 +730,7 @@ https://codeforces.com/problemset/problem/1181/C
         repo: 'anda522.github.io',
         owner: 'anda522',
         admin: "anda522",
-        id: '2022/06/29/cf1181c-flag-zi-ju-zhen-shu-liang-tong-ji/',
+        id: '2022/06/29/2021-da-er-shang-qi-mo-lian-xi-ti/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1067,29 +1013,30 @@ https://codeforces.com/problemset/problem/1181/C
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/06/29/2021-nian-du-zong-jie/">
+                <a href="/2022/06/29/2021-da-er-shang-qi-mo-lian-xi-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="2021年度总结">
+                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="2021大二上期末知识点总结">
                         
-                        <span class="card-title">2021年度总结</span>
+                        <span class="card-title">2021大二上期末知识点总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            2021年的学习总结
+                            2021大二上期末知识点总结
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1102,6 +1049,7 @@ https://codeforces.com/problemset/problem/1181/C
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -1120,31 +1068,31 @@ https://codeforces.com/problemset/problem/1181/C
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/06/25/jie-cheng-ni-yuan-he-xian-xing-ni-yuan/">
+                <a href="/2022/06/29/2021-nian-du-zong-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="阶乘逆元和线性逆元">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="2021年度总结">
                         
-                        <span class="card-title">阶乘逆元和线性逆元</span>
+                        <span class="card-title">2021年度总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            阶乘逆元和线性逆元求解，组合数计算
+                            2021年的学习总结
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-25
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-29
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/数论/" class="post-category" target="_blank">
-                                    数论
+                            <a href="/categories/思考总结/" class="post-category" target="_blank">
+                                    思考总结
                                 </a>
                             
                             
@@ -1154,12 +1102,8 @@ https://codeforces.com/problemset/problem/1181/C
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/逆元/" target="_blank">
-                        <span class="chip bg-color">逆元</span>
-                    </a>
-                    
-                    <a href="/tags/组合数学/" target="_blank">
-                        <span class="chip bg-color">组合数学</span>
+                    <a href="/tags/学习总结/" target="_blank">
+                        <span class="chip bg-color">学习总结</span>
                     </a>
                     
                 </div>

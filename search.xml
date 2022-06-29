@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>2021大二上期末知识点总结</title>
+      <link href="/2022/06/29/2021-da-er-shang-qi-mo-lian-xi-ti/"/>
+      <url>/2022/06/29/2021-da-er-shang-qi-mo-lian-xi-ti/</url>
+      
+        <content type="html"><![CDATA[<p>本文知识点均为从网络或其他地方搜集整理而来，提到的习题均无答案，完全不具备权威性质，作者不对看本文造成的后果负责，请合理参考。</p><h1 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h1><p>指令基本都是基本指令，输入输出流，统计行数，复制，文件权限修改等等<br>大题会考swap分区构建的具体步骤<br>考软硬链接文件复制文件和源文件的区别<br>脚本题是对两个文件判存在不存在，不存在询问建文件不建，只有当两个文件时都存在合并并排序</p><h1 id="组原"><a href="#组原" class="headerlink" title="组原"></a>组原</h1><p><strong>选择填空</strong><br>微指令内容感觉有点多<br>填空</p><ul><li>带宽计算，速度计算</li></ul><p>计算</p><ul><li><p>补码加减法以及判溢出</p></li><li><p>时钟周期机器周期计算带宽</p></li><li><p>命中率，效率，平均访存时间</p></li><li><p>计算cache映射主存地址位数计算，四路组相连计算</p></li><li><p>一地址指令格式设计，操作方式种类数给了，寻址特征几种有了，设计地址，计算直接寻址范围和间接寻址范围</p></li></ul><p>综合</p><ul><li>屏蔽字设计，画多级中断图</li><li>CPU和存储器连接画图</li></ul><h1 id="毛概"><a href="#毛概" class="headerlink" title="毛概"></a>毛概</h1><ul><li>新民主主义革命和社会主义革命</li><li>对毛泽东思想活的灵魂的理解</li><li>对建党精神的理解</li><li>新民主主义革命和社会主义革命时期党是如何建设发展的</li></ul><h1 id="近代史"><a href="#近代史" class="headerlink" title="近代史"></a>近代史</h1><ul><li>事件是什么：辛亥革命，本事件的性质是什么</li><li>意义</li><li>失败原因及教训</li><li>为什么中国共产党是孙中山革命事业的继承者</li></ul><p>论述</p><ul><li>1.为什么中国共产党应运而生</li><li>2.以毛泽东为代表的中国共产党如何探索开辟中国革命道路</li><li>3.建党百年的取得成就</li></ul><h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><p>有一个联通分量计算（填空）<br>涉及了二叉树节点个数性质<br>一些基础知识涉及的比较多<br>涉及了一个地址计算（二维数组相关）<br><strong>大题：</strong></p><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>第一个给了一个程序，进行复杂度分析</p><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">cal</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>    <span class="token keyword">while</span><span class="token punctuation">(</span>x <span class="token operator">&lt;</span> n <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span>    <span class="token punctuation">{</span>        x <span class="token operator">*</span><span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>        count <span class="token operator">++</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span>    <span class="token keyword">return</span> count<span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>求count的值（用n表示）<br>求时间复杂度和空间复杂度</p><p>下一个给出一个队列的描述，让你画队列的图，指出队首队尾，队列如何判满和判空</p><p>最后一题是程序设计，关于链表操作的题目</p><h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><p>一个队列，给了在其中的元素个数及内容和头指针的位置，让画出队列图，又进行出队和入队操作，再让画一次队列图（哪个位置存的什么元素）</p><h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><p>第三个一个图，画出临接矩阵，然后dfs序列，最小生成树</p><h2 id="4"><a href="#4" class="headerlink" title="4"></a>4</h2><p>一个序列，建立哈夫曼树，求WPL和叶子节点编码</p><h2 id="5"><a href="#5" class="headerlink" title="5"></a>5</h2><p>哈希查找画哈希表，求asl</p><h2 id="6"><a href="#6" class="headerlink" title="6"></a>6</h2><p>一个序列，快排第一趟之后是啥，堆排初始化建立的大根堆是啥</p><h2 id="编程"><a href="#编程" class="headerlink" title="编程"></a>编程</h2><p>编程是第一问编写初始化带头节点的单链表，第二问编写在单链表查找x的程序</p><h1 id="数电"><a href="#数电" class="headerlink" title="数电"></a>数电</h1><p>选择触发器涉及的不多，都是些逻辑表达式分析之类的，最小项分析，触发器涉及的都是基础知识，什么存在约束项，什么可以避免空翻，什么抗干扰不抗之类的<br><strong>计算分析</strong></p><ul><li><p>补码加减法</p></li><li><p>写TTL电路逻辑表达式</p></li><li><p>写cmos电路逻辑表达式</p><p>上面写表达式的课本出现过原题</p></li><li><p>用卡诺图化简最简式子</p></li><li><p>用74l138实现某个逻辑表达式</p></li><li><p>画主从rs触发器波形图<br><strong>综合</strong></p></li><li><p>数码管设计，真值表</p></li><li><p>8421bcd码，实现相关功能，画真值表，设计电路</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 思考总结 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习总结 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>2021年度总结</title>
+      <link href="/2022/06/29/2021-nian-du-zong-jie/"/>
+      <url>/2022/06/29/2021-nian-du-zong-jie/</url>
+      
+        <content type="html"><![CDATA[<h1 id="2021年度总结"><a href="#2021年度总结" class="headerlink" title="2021年度总结"></a>2021年度总结</h1><p>许多应用都有他们自己的年度总结，那我是不是也要搞一份总结。</p><p>今年真的是有很多不顺，也有很多收获。</p><p>今年从考试周开始，到考试周结束。</p><p>接下来回顾一下我普普通通的2021年，只希望之后看回来能够吸取之前的相关教训和经验。</p><blockquote><p>很像流水账，但是我喜欢这样的时间记录，之后回看会很容易看到自己所走的历程。</p></blockquote><h2 id="大一上"><a href="#大一上" class="headerlink" title="大一上"></a>大一上</h2><ul><li>2021年的开始是大一上学期的考试周，当时几乎什么都不懂，很多都不会。性格内敛，心理上懵懵懂懂。之前比较幸运擦边进了acm实验室，也比较幸运地进了一个北三的团队。（之后发现在这里能够收获很多东西）</li><li>记得考试周晚上在看《西部世界》，离谱了，考试周有幸度过。</li><li>寒假开始了艰难的acm学习。一个寒假跟着校acm实验室就学了一点，之后发现太难都不会就自己学去了。记得刚开始dfs就给我整吐了，一个寒假，绝望了多少次，啥都不会，看啥看不懂，还得硬看别人的代码，不然还是啥都不会。我真是一个菜鸡（垃圾）。</li><li>寒假应该是中后期我开始了在CSDN的创作，当时是写C++STL总结，那时几乎没有代码水平的，现在想想，要是没有这篇总结，我都不会写博客了。</li><li>大一的寒假延长了，我是没想到的，没想到大学的寒假竟然有两个多月之多，离大谱了。3月13号差不多才返校。</li></ul><h2 id="大一下"><a href="#大一下" class="headerlink" title="大一下"></a>大一下</h2><ul><li><p>也许是上学期考试考的自我感觉良好了，下学期明显有点飘，干啥啥不中。</p></li><li><p>开学我就继续进行了acm的训练，当然以我当时非常菜的水平，刷题是几乎不会有很大的提高的，刷的几乎都是水题，也没有很大的效率。</p></li><li><p>3月底，参加天梯选拔赛，结果只能说是很不行，wa穿了，肯定是很菜的，自己算什么东西，当然是没有选上了，记得排名很靠后。</p></li><li><p>四月初志愿者监考acm招新赛，看着一大批大佬乱杀，真的很厉害。源佬和熊佬杀的真的很猛，自愧不如。</p></li><li><p>之后几天参加蓝桥杯，不出所料，只能用两个字形容，“垃圾”，会的几乎没有，铁是必然的。</p></li><li><p>期间经历了很多次无助，自己看什么都看不懂，学什么都学不会。看着nb的人，他们真的难以被超越，完虐。acm什么都没教会我，倒是教会我了如何完美地被虐。</p></li><li><p>五月初有幸傍上一个大佬，过了ICPC省赛选拔赛，大概接近五月底参加了ICPC省赛。这次比赛或许是我唯一一次线下的比赛，去农大免费游玩了两天，吃着免费的饭，这转转，那转转，还是很爽的。但是到做题的时候，就很难受了，几乎什么都不会，还是一个垃圾。不过有幸在大佬的带领下拿了银，记得当时因为时间冲突还鸽了学校的一个循迹小车比赛（这个比赛的小车还是一百块钱买的，呜呜呜）。</p></li><li><p>接近期末参加了社团的换届竞选，选上计算机学术交流协会的会长我是没想到的。</p></li><li><p>接下来就是我的期末了，考的比较差，概率论有大题原题也一点没有写出来，而且自己还做过，现在想来真的是非常伤啊，期末多科都考的不行，应该是自己没有认真复习，考前还在看美剧吧。</p></li><li><p>考试后的小学期实习还碰上了有史以来的720大暴雨，当时我断水断电我记得还出去转了一圈呢，水是直接漫到大腿处，断水断电断网了几天，终于是挺过去了。</p></li><li><p>暑假在家刷了很多题，进度缓慢的进行，前前后后刷了两三百道吧（当时暑假又延期了，延期了大概一个月10月10号左右才上学），题数上去了，但是感觉实力没有多大的提高。呜呜呜，好菜啊。</p></li><li><p>接近8月底我带队参加物联网设计大赛（华为杯），又是因为疫情，比赛线上，本来能去西安线下比赛的，呜呜呜。可能因为线上才让我们获得了不错的成绩吧，西北赛区一等奖，可以晋级总决赛了。8月底，我们又线上参加了总决赛（本来线下是要在湖南大学比的），最后我想只要拿个奖都不错了。当时念获奖队伍的时候想一直不念我们的队，难道是寄了吗。最后真的出乎意料，得了一等奖。我的第一个国一。</p></li><li><p>高考出分之后几乎都开始干社团宣传的活了，当个会长确实挺累的。</p></li></ul><h2 id="大二上"><a href="#大二上" class="headerlink" title="大二上"></a>大二上</h2><ul><li>这学期真的是忙，开学开的晚，社团会长还得干活。办新生赛，扫楼，迎新，开见面会，交各种材料，答辩等等……</li><li>10月底和队友打了省CCPC，在队友的努力带领下，最后拿了银，还是很菜。</li><li>11月初在老社长的怂恿下，租了个三年的服务器，现在想来真的有用。上Linux课直接拿平板远程操控了，在服务器上搭网站，各种玩。</li><li>11月21，ICPC沈阳站，这一天是绝望的一天。事实证明自己就是一菜比，五百多队，四百多名，题目狠磕，但是还是做不出来。铁又来了。比较难受，但确实证明了自己真的是非常的菜。</li><li>快11月底国励到账，爽了。</li><li>11月底学了不到一天，在服务器上成功运行了QQ机器人，现在功能慢慢变得已经比较完善了。</li><li>12月底还是考试周，临时通知考试周提前，本来就来得晚，现在考的变早了两三个星期，课程很赶，啥都学不会，考试复习根本没时间，结课后下一天就考试。不过考试还是结束了，希望结果是是好的吧。</li></ul><p>2021过的有很多不顺利，出现了很多苦难和挫折，有些解决了，有些短时间无法解决或者无法解决（比如说菜这个事情），但是还是出现了一点成就的。今年许多不顺，希望之后遇到能够尽量解决吧。希望之后越来越好！</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 思考总结 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 学习总结 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CF1181C Flag-子矩阵数量统计</title>
       <link href="/2022/06/29/cf1181c-flag-zi-ju-zhen-shu-liang-tong-ji/"/>
       <url>/2022/06/29/cf1181c-flag-zi-ju-zhen-shu-liang-tong-ji/</url>
@@ -98,6 +148,8 @@
       
       
         <tags>
+            
+            <tag> 学习总结 </tag>
             
             <tag> C++ </tag>
             
