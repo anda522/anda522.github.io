@@ -475,7 +475,7 @@ https://codeforces.com/problemset/problem/1181/C
 </li>
 <li><p>$d[i][j] == d[i + d[i][j]][j]$ 第二行和第一行的长度相同</p>
 </li>
-<li><p>$d[i + 2 <em> d[i][j]][j] &gt;= d[i][j]$ 第三行的长度<em>*大于等于</em></em>上面的行长度（大于等于请思考为什么，只要大于等于就能统计上）</p>
+<li><p>$d[i + 2 * d[i][j]][j] &gt;= d[i][j]$ 第三行的长度<strong>大于等于</strong>上面的行长度（大于等于请思考为什么，只要大于等于就能统计上）</p>
 </li>
 </ul>
 <p>纵向能够形成旗子，那么考虑改纵向旗子的贡献。</p>
@@ -498,7 +498,7 @@ https://codeforces.com/problemset/problem/1181/C
 <blockquote>
 <p> 为什么要用到后缀数组?</p>
 <p>以下为举例：满足情况的列用粗体标明</p>
-<p>A (无关紧要行)</p>
+<p>A （无关紧要行）</p>
 <p><strong>A</strong></p>
 <p><strong>A</strong></p>
 <p><strong>B</strong></p>
@@ -509,7 +509,7 @@ https://codeforces.com/problemset/problem/1181/C
 <p>但是上下各多出一个字母，如果统计最小值时，上面部分用到前缀最小值数组，就会把第一行向右扩展的长度统计上去，造成统计错误。下面部分同理。</p>
 <p>故上面部分需要用到后缀数组，下面部分需要用到前缀数组，中间部分无所谓</p>
 </blockquote>
-<p>则当前列能够造成的贡献为 $min({lmn[i][j], r[i + 2 <em> d[i][j] - 1][j], r[i + 3 </em> d[i][j] - 1][j]})$</p>
+<p>则当前列能够造成的贡献为 $min(lmn[i][j], r[i + 2 * d[i][j] - 1][j], r[i + 3 * d[i][j] - 1][j])$</p>
 <p>具体整体实现见代码。</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h></span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
