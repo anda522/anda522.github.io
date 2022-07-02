@@ -1,12 +1,10 @@
 var a_idx = 0;
-jQuery(document).ready(function($) {
+$(document).ready(function() {
     $("body").click(function(e) {
-        var a = new Array
-        ("Java", "JavaScript", "Python", "C", "C++", "Css", "Html", "Mysql", "Hexo", "Json", "C#", "Go", "lua");
+        var a = new Array("Java", "JavaScript", "Python", "C", "C++", "Css", "Html", "Mysql", "Json", "C#", "Go", "lua");
         var $i = $("<span/>").text(a[a_idx]);
         a_idx = (a_idx + 1) % a.length;
-        var x = e.pageX,
-        y = e.pageY;
+        var x = e.pageX, y = e.pageY;
         $i.css({
             "z-index": 5,
             "top": y - 20,
@@ -25,6 +23,7 @@ jQuery(document).ready(function($) {
                 $i.remove();
             });
     });
+
     setTimeout('delay()', 2000);
 });
 

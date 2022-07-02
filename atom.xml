@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wangyaqii.top/"/>
-  <updated>2022-06-30T02:17:56.298Z</updated>
+  <updated>2022-07-02T03:36:18.945Z</updated>
   <id>http://wangyaqii.top/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>docker|常用命令</title>
+    <link href="http://wangyaqii.top/2022/07/02/docker1/"/>
+    <id>http://wangyaqii.top/2022/07/02/docker1/</id>
+    <published>2022-07-02T03:27:31.000Z</published>
+    <updated>2022-07-02T03:36:18.945Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;将当前用户添加到docker用户组&lt;/p&gt;
+&lt;p&gt;为了避免每次使用docker命令都需要加上sudo权限，可以将当前用户加入安装中自动创建的docker用户组(可以参考官方文档)：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;sudo usermod -aG
+        
+      
+    
+    </summary>
+    
+      <category term="知识总结" scheme="http://wangyaqii.top/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="docker" scheme="http://wangyaqii.top/tags/docker/"/>
+    
+      <category term="linux" scheme="http://wangyaqii.top/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Git|详解|命令</title>
     <link href="http://wangyaqii.top/2022/06/30/git/"/>
     <id>http://wangyaqii.top/2022/06/30/git/</id>
     <published>2022-06-30T02:14:41.000Z</published>
-    <updated>2022-06-30T02:17:56.298Z</updated>
+    <updated>2022-07-02T03:26:04.896Z</updated>
     
     <summary type="html">
     
@@ -47,7 +78,7 @@
     <link href="http://wangyaqii.top/2022/06/29/2021-da-er-shang-qi-mo-lian-xi-ti/"/>
     <id>http://wangyaqii.top/2022/06/29/2021-da-er-shang-qi-mo-lian-xi-ti/</id>
     <published>2022-06-29T11:04:00.000Z</published>
-    <updated>2022-06-30T02:18:27.562Z</updated>
+    <updated>2022-07-02T03:37:07.993Z</updated>
     
     <summary type="html">
     
@@ -74,7 +105,7 @@
     <link href="http://wangyaqii.top/2022/06/29/2021-nian-du-zong-jie/"/>
     <id>http://wangyaqii.top/2022/06/29/2021-nian-du-zong-jie/</id>
     <published>2022-06-29T10:52:55.000Z</published>
-    <updated>2022-06-29T10:54:55.202Z</updated>
+    <updated>2022-07-02T03:37:36.264Z</updated>
     
     <summary type="html">
     
@@ -100,7 +131,7 @@
     <link href="http://wangyaqii.top/2022/06/29/cf1181c-flag-zi-ju-zhen-shu-liang-tong-ji/"/>
     <id>http://wangyaqii.top/2022/06/29/cf1181c-flag-zi-ju-zhen-shu-liang-tong-ji/</id>
     <published>2022-06-29T08:03:02.000Z</published>
-    <updated>2022-06-29T08:46:55.085Z</updated>
+    <updated>2022-07-02T03:37:29.089Z</updated>
     
     <summary type="html">
     
@@ -128,7 +159,7 @@
     <link href="http://wangyaqii.top/2022/06/25/jie-cheng-ni-yuan-he-xian-xing-ni-yuan/"/>
     <id>http://wangyaqii.top/2022/06/25/jie-cheng-ni-yuan-he-xian-xing-ni-yuan/</id>
     <published>2022-06-25T11:27:26.000Z</published>
-    <updated>2022-06-27T07:51:19.722Z</updated>
+    <updated>2022-07-02T03:37:22.739Z</updated>
     
     <summary type="html">
     
@@ -156,7 +187,7 @@
     <link href="http://wangyaqii.top/2022/06/25/rong-chi-ding-li/"/>
     <id>http://wangyaqii.top/2022/06/25/rong-chi-ding-li/</id>
     <published>2022-06-25T09:36:11.000Z</published>
-    <updated>2022-06-25T09:37:50.549Z</updated>
+    <updated>2022-07-02T03:37:18.236Z</updated>
     
     <summary type="html">
     
@@ -183,7 +214,7 @@
     <link href="http://wangyaqii.top/2022/06/22/c-stl-chao-quan-zong-jie/"/>
     <id>http://wangyaqii.top/2022/06/22/c-stl-chao-quan-zong-jie/</id>
     <published>2022-06-22T07:54:47.000Z</published>
-    <updated>2022-06-29T10:58:36.305Z</updated>
+    <updated>2022-07-02T03:37:15.416Z</updated>
     
     <summary type="html">
     
