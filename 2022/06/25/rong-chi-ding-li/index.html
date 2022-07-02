@@ -68,6 +68,13 @@
         document.write('<script src="' + src + '" id="sozz"><\/script>');
         })();
     </script>
+    
+    <!-- 添加鼠标特效 -->
+    <style type="text/css">
+        body{
+            cursor: url(https://cdn.yzyyz.top/img/Arrow.cur),auto;
+        }
+    </style>
 
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
@@ -85,7 +92,8 @@
                     <span class="logo-span">行码棋的博客</span>
                 </a>
             </div>
-            
+            <!-- menu栏文字显示 -->
+
 
 <a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
 <ul class="right">
@@ -122,7 +130,7 @@
             
             <i class="fa fa-archive"></i>
             
-            <span>归档</span>
+            <span>历程</span>
         </a>
     </li>
     
@@ -131,7 +139,7 @@
             
             <i class="fa fa-user-circle-o"></i>
             
-            <span>关于</span>
+            <span>知我</span>
         </a>
     </li>
     
@@ -140,7 +148,7 @@
             
             <i class="fa fa-address-book"></i>
             
-            <span>友情链接</span>
+            <span>友链</span>
         </a>
     </li>
     
@@ -149,7 +157,7 @@
             
             <i class="fa fa-comments"></i>
             
-            <span>留言板</span>
+            <span>留言</span>
         </a>
     </li>
     
@@ -210,7 +218,7 @@
                 
                 <i class="fa fa-fw fa-archive"></i>
                 
-                归档
+                历程
             </a>
         </li>
         
@@ -219,7 +227,7 @@
                 
                 <i class="fa fa-fw fa-user-circle-o"></i>
                 
-                关于
+                知我
             </a>
         </li>
         
@@ -228,7 +236,7 @@
                 
                 <i class="fa fa-fw fa-address-book"></i>
                 
-                友情链接
+                友链
             </a>
         </li>
         
@@ -269,7 +277,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -1097,7 +1105,7 @@ ll <span class="token function">C</span><span class="token punctuation">(</span>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="阶乘逆元和线性逆元">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="阶乘逆元和线性逆元">
                         
                         <span class="card-title">阶乘逆元和线性逆元</span>
                     </div>
@@ -1150,7 +1158,7 @@ ll <span class="token function">C</span><span class="token punctuation">(</span>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="C++ STL超全总结">
+                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="C++ STL超全总结">
                         
                         <span class="card-title">C++ STL超全总结</span>
                     </div>
@@ -1472,7 +1480,7 @@ ll <span class="token function">C</span><span class="token punctuation">(</span>
         var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
         var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
         document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+    }
     siteTime();
 </script>
 

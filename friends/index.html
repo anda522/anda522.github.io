@@ -4,11 +4,11 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="友情链接, ZZU 行码棋">
+    <meta name="keywords" content="友链, ZZU 行码棋">
     <meta name="baidu-site-verification" content="code-EZed9PhGF6">
     <!-- <meta name="google-site-verification" content="yCy2azpds5XSuGZvis6OuA-XIGF5GuGpYRAaGfD6o48" /> -->
     <!-- <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" /> -->
-    <meta name="description" content="友情链接 | 行码棋的博客">
+    <meta name="description" content="友链 | 行码棋的博客">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -16,7 +16,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>友情链接 | 行码棋的博客</title>
+    <title>友链 | 行码棋的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -66,6 +66,13 @@
         document.write('<script src="' + src + '" id="sozz"><\/script>');
         })();
     </script>
+    
+    <!-- 添加鼠标特效 -->
+    <style type="text/css">
+        body{
+            cursor: url(https://cdn.yzyyz.top/img/Arrow.cur),auto;
+        }
+    </style>
 
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
@@ -83,7 +90,8 @@
                     <span class="logo-span">行码棋的博客</span>
                 </a>
             </div>
-            
+            <!-- menu栏文字显示 -->
+
 
 <a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
 <ul class="right">
@@ -120,7 +128,7 @@
             
             <i class="fa fa-archive"></i>
             
-            <span>归档</span>
+            <span>历程</span>
         </a>
     </li>
     
@@ -129,7 +137,7 @@
             
             <i class="fa fa-user-circle-o"></i>
             
-            <span>关于</span>
+            <span>知我</span>
         </a>
     </li>
     
@@ -138,7 +146,7 @@
             
             <i class="fa fa-address-book"></i>
             
-            <span>友情链接</span>
+            <span>友链</span>
         </a>
     </li>
     
@@ -147,7 +155,7 @@
             
             <i class="fa fa-comments"></i>
             
-            <span>留言板</span>
+            <span>留言</span>
         </a>
     </li>
     
@@ -208,7 +216,7 @@
                 
                 <i class="fa fa-fw fa-archive"></i>
                 
-                归档
+                历程
             </a>
         </li>
         
@@ -217,7 +225,7 @@
                 
                 <i class="fa fa-fw fa-user-circle-o"></i>
                 
-                关于
+                知我
             </a>
         </li>
         
@@ -226,7 +234,7 @@
                 
                 <i class="fa fa-fw fa-address-book"></i>
                 
-                友情链接
+                友链
             </a>
         </li>
         
@@ -257,10 +265,10 @@
         <div class="brand">
             <div class="title center-align">
                 <!-- 
-                    行稳才能致远
+                    行稳致远
                  -->
                 
-                    友情链接
+                    友链
                 
             </div>
 
@@ -693,7 +701,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
         var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
         var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
         document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+    }
     siteTime();
 </script>
 
