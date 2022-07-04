@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wangyaqii.top/"/>
-  <updated>2022-07-02T03:36:18.945Z</updated>
+  <updated>2022-07-02T03:41:46.954Z</updated>
   <id>http://wangyaqii.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://wangyaqii.top/2022/07/02/docker1/"/>
     <id>http://wangyaqii.top/2022/07/02/docker1/</id>
     <published>2022-07-02T03:27:31.000Z</published>
-    <updated>2022-07-02T03:36:18.945Z</updated>
+    <updated>2022-07-02T03:41:46.954Z</updated>
     
     <summary type="html">
     
@@ -31,7 +31,7 @@
         
           &lt;blockquote&gt;
 &lt;p&gt;将当前用户添加到docker用户组&lt;/p&gt;
-&lt;p&gt;为了避免每次使用docker命令都需要加上sudo权限，可以将当前用户加入安装中自动创建的docker用户组(可以参考官方文档)：&lt;/p&gt;
+&lt;p&gt;为了避免每次使用docker命令都需要加上sudo权限，可以将当前用户加入安装中自动创建的docker用户组（可以参考官方文档）：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;sudo usermod -aG
         
       

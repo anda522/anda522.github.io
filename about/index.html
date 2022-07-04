@@ -525,7 +525,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"知识总结","value":3},{"name":"思考总结","value":1},{"name":"STL","value":1},{"name":"DP","value":1},{"name":"数论","value":2}],
+                data: [{"name":"知识总结","value":3},{"name":"STL","value":1},{"name":"DP","value":1},{"name":"数论","value":2},{"name":"思考总结","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -549,7 +549,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
         xAxis: [
             {
                 type: 'category',
-                data: ["学习总结","C++","算法","CF","DP","docker","linux","git","逆元","组合数学"]
+                data: ["学习总结","C++","算法","CF","DP","数论","git","docker","linux","逆元"]
             }
         ],
         yAxis: [
@@ -727,6 +727,18 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
             
             
             
+            <a href="/tags/数论/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">数论</span>
+            </a>
+            
+            
+            
+            <a href="/tags/git/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">git</span>
+            </a>
+            
+            
+            
             <a href="/tags/docker/" target="_blank">
                 <span class="chip center-align waves-effect waves-light chip-default">docker</span>
             </a>
@@ -739,12 +751,6 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
             
             
             
-            <a href="/tags/git/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">git</span>
-            </a>
-            
-            
-            
             <a href="/tags/逆元/" target="_blank">
                 <span class="chip center-align waves-effect waves-light chip-default">逆元</span>
             </a>
@@ -753,12 +759,6 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
             
             <a href="/tags/组合数学/" target="_blank">
                 <span class="chip center-align waves-effect waves-light chip-default">组合数学</span>
-            </a>
-            
-            
-            
-            <a href="/tags/数论/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">数论</span>
             </a>
             
             
@@ -960,7 +960,13 @@ $(function () {
     
     <script type="text/javascript"> var OriginTitile = document.title, st; document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) })
     </script>
-
+    
+    <!-- 动态线条背景 -->
+    <script type="text/javascript" color="56,152,252" opacity="0.9" zindex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>
+    <canvas id="c_n4" width="602" height="852" style="position: fixed; top: 0px; left: 0px; z-index: -2; opacity: 0.9;"></canvas>
+    
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=查教程获取"></script>
