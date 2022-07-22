@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wangyaqii.top/"/>
-  <updated>2022-07-08T12:22:24.533Z</updated>
+  <updated>2022-07-22T10:32:43.368Z</updated>
   <id>http://wangyaqii.top/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>C++STL超全总结</title>
-    <link href="http://wangyaqii.top/2022/07/08/stl/"/>
-    <id>http://wangyaqii.top/2022/07/08/stl/</id>
-    <published>2022-07-08T11:56:00.000Z</published>
-    <updated>2022-07-08T12:22:24.533Z</updated>
+    <title>树链剖分|模板题</title>
+    <link href="http://wangyaqii.top/2022/07/22/shupou1000/"/>
+    <id>http://wangyaqii.top/2022/07/22/shupou1000/</id>
+    <published>2022-07-22T10:27:24.000Z</published>
+    <updated>2022-07-22T10:32:43.368Z</updated>
     
     <summary type="html">
     
@@ -29,16 +29,19 @@
       
         
         
-          &lt;h1 id=&quot;C-STL-超全总结&quot;&gt;&lt;a href=&quot;#C-STL-超全总结&quot; class=&quot;headerlink&quot; title=&quot;C++ STL 超全总结&quot;&gt;&lt;/a&gt;C++ STL 超全总结&lt;/h1&gt;&lt;h2 id=&quot;1-vector&quot;&gt;&lt;a
+          &lt;h1 id=&quot;树链剖分模板题&quot;&gt;&lt;a href=&quot;#树链剖分模板题&quot; class=&quot;headerlink&quot; title=&quot;树链剖分模板题&quot;&gt;&lt;/a&gt;树链剖分模板题&lt;/h1&gt;&lt;p&gt;题目链接：&lt;/p&gt;
+&lt;p&gt;&lt;a
         
       
     
     </summary>
     
-      <category term="STL" scheme="http://wangyaqii.top/categories/STL/"/>
+      <category term="图论" scheme="http://wangyaqii.top/categories/%E5%9B%BE%E8%AE%BA/"/>
     
     
-      <category term="STL" scheme="http://wangyaqii.top/tags/STL/"/>
+      <category term="树链剖分" scheme="http://wangyaqii.top/tags/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/"/>
+    
+      <category term="DFS" scheme="http://wangyaqii.top/tags/DFS/"/>
     
   </entry>
   
