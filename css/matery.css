@@ -32,7 +32,7 @@ body {
     margin: 0;
     color: #34495e;
     /* 背景图 */
-    background: url('http://cdn.wangyaqii.top/img/background.png');
+    background: url('/medias/img/background.png');
     /* 图床 */
     /* background: url('https://static01.imgkr.com/temp/c16a43b9c339431d93bed18c4b4668a2.png'); */
     background-attachment: fixed;
