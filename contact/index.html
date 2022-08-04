@@ -327,6 +327,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
     <div id="gitalk-container" class="card-content"></div>
 </div>
 
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/gangdong/gangdong.github.io@dev/assets/js/md5.min.js"></script> -->
 <script src="/libs/gitalk/gitalk.min.js"></script>
 <script>
     let gitalk = new Gitalk({
@@ -336,6 +337,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
         owner: 'anda522',
         admin: "anda522",
         id: 'contact/index.html',
+        // id: md5(location.pathname), // 使用MD5生成gitalk id
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 

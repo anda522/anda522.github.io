@@ -4,16 +4,17 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="2021年度总结, ZZU 行码棋">
+    <meta name="keywords" content="CF1076E.Vasya and a Tree|树上差分, ZZU 行码棋">
     <meta name="baidu-site-verification" content="code-EZed9PhGF6">
     <meta name="google-site-verification" content="0HHS8p6WO48TOze_g5mKXx7KklUiOc4amSV6M7R6ivA">
     <!-- <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" /> -->
-    <meta name="description" content="2021年度总结许多应用都有他们自己的年度总结，那我是不是也要搞一份总结。
-今年真的是有很多不顺，也有很多收获。
-今年从考试周开始，到考试周结束。
-接下来回顾一下我普普通通的2021年，只希望之后看回来能够吸取之前的相关教训和经验。
+    <meta name="description" content="CF 1076E. Vasya and a Tree|树上差分题意
+一棵树，它有n个节点，1号节点为根节点，初始所有点的权值为0。
+定义以下两个东西：
 
-很像">
+函数$d(i,j)$ : 指节点$i$到$j$所经过边的数量。
+
+$x$节点的$k$级">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +22,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>2021年度总结 | 前后端技术学习</title>
+    <title>CF1076E.Vasya and a Tree|树上差分 | 前后端技术学习</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -280,13 +281,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        2021年度总结
+                        CF1076E.Vasya and a Tree|树上差分
                     </div>
                 </div>
             </div>
@@ -397,8 +398,16 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/学习总结/" target="_blank">
-                            <span class="chip bg-color">学习总结</span>
+                        <a href="/tags/DFS/" target="_blank">
+                            <span class="chip bg-color">DFS</span>
+                        </a>
+                        
+                        <a href="/tags/树/" target="_blank">
+                            <span class="chip bg-color">树</span>
+                        </a>
+                        
+                        <a href="/tags/CF/" target="_blank">
+                            <span class="chip bg-color">CF</span>
                         </a>
                         
                     </div>
@@ -409,8 +418,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/思考总结/" class="post-category" target="_blank">
-                            思考总结
+                        <a href="/categories/树/" class="post-category" target="_blank">
+                            树
                         </a>
                         
                     </div>
@@ -421,7 +430,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-06-29
+                    2022-08-03
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -435,14 +444,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.7k
+                    788
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    3 分
                 </div>
                 
                 
@@ -458,58 +467,115 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="2021年度总结"><a href="#2021年度总结" class="headerlink" title="2021年度总结"></a>2021年度总结</h1><p>许多应用都有他们自己的年度总结，那我是不是也要搞一份总结。</p>
-<p>今年真的是有很多不顺，也有很多收获。</p>
-<p>今年从考试周开始，到考试周结束。</p>
-<p>接下来回顾一下我普普通通的2021年，只希望之后看回来能够吸取之前的相关教训和经验。</p>
-<blockquote>
-<p>很像流水账，但是我喜欢这样的时间记录，之后回看会很容易看到自己所走的历程。</p>
+                <h1 id="CF-1076E-Vasya-and-a-Tree-树上差分"><a href="#CF-1076E-Vasya-and-a-Tree-树上差分" class="headerlink" title="CF 1076E. Vasya and a Tree|树上差分"></a>CF 1076E. Vasya and a Tree|树上差分</h1><h2 id="题意"><a href="#题意" class="headerlink" title="题意"></a>题意</h2><blockquote>
+<p>一棵树，它有n个节点，1号节点为根节点，初始所有点的权值为0。</p>
+<p>定义以下两个东西：</p>
+<ul>
+<li><p>函数$d(i,j)$ : 指节点$i$到$j$所经过边的数量。</p>
+</li>
+<li><p>$x$节点的$k$级子树，指满足以下条件点的集合：</p>
+<p>① x为该点的祖先，规定自己也是自己的祖先。</p>
+<p>②$d(i,j) \leq k$。</p>
+</li>
+</ul>
+<p>$m$条要求要你来解决：</p>
+<p>给出$v,d,x$，将以$v$节点的$d$级子树的权值加上$x$。</p>
+<p>当处理完所有的要求时，输出所有点的权值。</p>
 </blockquote>
-<h2 id="大一上"><a href="#大一上" class="headerlink" title="大一上"></a>大一上</h2><ul>
-<li>2021年的开始是大一上学期的考试周，当时几乎什么都不懂，很多都不会。性格内敛，心理上懵懵懂懂。之前比较幸运擦边进了acm实验室，也比较幸运地进了一个北三的团队。（之后发现在这里能够收获很多东西）</li>
-<li>记得考试周晚上在看《西部世界》，离谱了，考试周有幸度过。</li>
-<li>寒假开始了艰难的acm学习。一个寒假跟着校acm实验室就学了一点，之后发现太难都不会就自己学去了。记得刚开始dfs就给我整吐了，一个寒假，绝望了多少次，啥都不会，看啥看不懂，还得硬看别人的代码，不然还是啥都不会。我真是一个菜鸡（垃圾）。</li>
-<li>寒假应该是中后期我开始了在CSDN的创作，当时是写C++STL总结，那时几乎没有代码水平的，现在想想，要是没有这篇总结，我都不会写博客了。</li>
-<li>大一的寒假延长了，我是没想到的，没想到大学的寒假竟然有两个多月之多，离大谱了。3月13号差不多才返校。</li>
-</ul>
-<h2 id="大一下"><a href="#大一下" class="headerlink" title="大一下"></a>大一下</h2><ul>
-<li><p>也许是上学期考试考的自我感觉良好了，下学期明显有点飘，干啥啥不中。</p>
-</li>
-<li><p>开学我就继续进行了acm的训练，当然以我当时非常菜的水平，刷题是几乎不会有很大的提高的，刷的几乎都是水题，也没有很大的效率。</p>
-</li>
-<li><p>3月底，参加天梯选拔赛，结果只能说是很不行，wa穿了，肯定是很菜的，自己算什么东西，当然是没有选上了，记得排名很靠后。</p>
-</li>
-<li><p>四月初志愿者监考acm招新赛，看着一大批大佬乱杀，真的很厉害。源佬和熊佬杀的真的很猛，自愧不如。</p>
-</li>
-<li><p>之后几天参加蓝桥杯，不出所料，只能用两个字形容，“垃圾”，会的几乎没有，铁是必然的。</p>
-</li>
-<li><p>期间经历了很多次无助，自己看什么都看不懂，学什么都学不会。看着nb的人，他们真的难以被超越，完虐。acm什么都没教会我，倒是教会我了如何完美地被虐。</p>
-</li>
-<li><p>五月初有幸傍上一个大佬，过了ICPC省赛选拔赛，大概接近五月底参加了ICPC省赛。这次比赛或许是我唯一一次线下的比赛，去农大免费游玩了两天，吃着免费的饭，这转转，那转转，还是很爽的。但是到做题的时候，就很难受了，几乎什么都不会，还是一个垃圾。不过有幸在大佬的带领下拿了银，记得当时因为时间冲突还鸽了学校的一个循迹小车比赛（这个比赛的小车还是一百块钱买的，呜呜呜）。</p>
-</li>
-<li><p>接近期末参加了社团的换届竞选，选上计算机学术交流协会的会长我是没想到的。</p>
-</li>
-<li><p>接下来就是我的期末了，考的比较差，概率论有大题原题也一点没有写出来，而且自己还做过，现在想来真的是非常伤啊，期末多科都考的不行，应该是自己没有认真复习，考前还在看美剧吧。</p>
-</li>
-<li><p>考试后的小学期实习还碰上了有史以来的720大暴雨，当时我断水断电我记得还出去转了一圈呢，水是直接漫到大腿处，断水断电断网了几天，终于是挺过去了。</p>
-</li>
-<li><p>暑假在家刷了很多题，进度缓慢的进行，前前后后刷了两三百道吧（当时暑假又延期了，延期了大概一个月10月10号左右才上学），题数上去了，但是感觉实力没有多大的提高。呜呜呜，好菜啊。</p>
-</li>
-<li><p>接近8月底我带队参加物联网设计大赛（华为杯），又是因为疫情，比赛线上，本来能去西安线下比赛的，呜呜呜。可能因为线上才让我们获得了不错的成绩吧，西北赛区一等奖，可以晋级总决赛了。8月底，我们又线上参加了总决赛（本来线下是要在湖南大学比的），最后我想只要拿个奖都不错了。当时念获奖队伍的时候想一直不念我们的队，难道是寄了吗。最后真的出乎意料，得了一等奖。我的第一个国一。</p>
-</li>
-<li><p>高考出分之后几乎都开始干社团宣传的活了，当个会长确实挺累的。</p>
-</li>
-</ul>
-<h2 id="大二上"><a href="#大二上" class="headerlink" title="大二上"></a>大二上</h2><ul>
-<li>这学期真的是忙，开学开的晚，社团会长还得干活。办新生赛，扫楼，迎新，开见面会，交各种材料，答辩等等……</li>
-<li>10月底和队友打了省CCPC，在队友的努力带领下，最后拿了银，还是很菜。</li>
-<li>11月初在老社长的怂恿下，租了个三年的服务器，现在想来真的有用。上Linux课直接拿平板远程操控了，在服务器上搭网站，各种玩。</li>
-<li>11月21，ICPC沈阳站，这一天是绝望的一天。事实证明自己就是一菜比，五百多队，四百多名，题目狠磕，但是还是做不出来。铁又来了。比较难受，但确实证明了自己真的是非常的菜。</li>
-<li>快11月底国励到账，爽了。</li>
-<li>11月底学了不到一天，在服务器上成功运行了QQ机器人，现在功能慢慢变得已经比较完善了。</li>
-<li>12月底还是考试周，临时通知考试周提前，本来就来得晚，现在考的变早了两三个星期，课程很赶，啥都学不会，考试复习根本没时间，结课后下一天就考试。不过考试还是结束了，希望结果是是好的吧。</li>
-</ul>
-<p>2021过的有很多不顺利，出现了很多苦难和挫折，有些解决了，有些短时间无法解决或者无法解决（比如说菜这个事情），但是还是出现了一点成就的。今年许多不顺，希望之后遇到能够尽量解决吧。希望之后越来越好！</p>
+<h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>题目要求对一段深度的某节点的子树进行加和操作，这种操作类似单纯的一维前缀和差分操作，所以可以在树上进行差分操作。</p>
+<p>首先就是将所有的操作离线下来，将所有操作挂在节点上。对应下面的代码</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp">vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span>pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">>></span><span class="token operator">></span> <span class="token function">q</span><span class="token punctuation">(</span>n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> m<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> u<span class="token punctuation">,</span> d<span class="token punctuation">,</span> v<span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> u <span class="token operator">>></span> d <span class="token operator">>></span> v<span class="token punctuation">;</span>
+    q<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token punctuation">{</span>d<span class="token punctuation">,</span> v<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<hr>
+<p>接下来的关键点就是如何在树上进行差分操作（对应一维差分 区间左端点的加 和 区间右端点的减）。</p>
+<p>因为树中的遍历是基于DFS序的，<strong>访问一个子树过后才会访问到另一棵子树</strong>。</p>
+<p>我们在DFS过程中维护差分数组（$b[i]$），DFS时携带一个前缀和（$sum$）变量，每访问到一个节点时，先遍历该节点的所有操作，将前缀和（其实就是该路径上差分数组的前缀和，等于当前节点的值）加上操作的值，然后标记差分数组结束的位置（就是在该位置减去操作的那个值）。</p>
+<p>当回溯的时候，删除之前打的标记。树遍历是DFS序的，删除之后才会访问到另一棵树相同的深度节点，不会影响$b[i]$的值。</p>
+<blockquote>
+<p>$b[i]$ : 代表深度为$i$的节点的标记值</p>
+</blockquote>
+<p>标记：</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">if</span><span class="token punctuation">(</span>dep<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> d <span class="token operator">&lt;</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    b<span class="token punctuation">[</span>dep<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> d <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span><span class="token operator">=</span> v<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//mark</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>删除标记：</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">auto</span> <span class="token punctuation">[</span>d<span class="token punctuation">,</span> v<span class="token punctuation">]</span> <span class="token operator">:</span> q<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>dep<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> d <span class="token operator">&lt;</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+        b<span class="token punctuation">[</span>dep<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> d <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span><span class="token operator">=</span> v<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h></span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">using</span> ll <span class="token operator">=</span> <span class="token keyword">long</span> <span class="token keyword">long</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    ios<span class="token operator">::</span><span class="token function">sync_with_stdio</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cin<span class="token punctuation">.</span><span class="token function">tie</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">int</span> n<span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> n<span class="token punctuation">;</span>
+
+    vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> <span class="token function">g</span><span class="token punctuation">(</span>n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">dep</span><span class="token punctuation">(</span>n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> u<span class="token punctuation">,</span> v<span class="token punctuation">;</span>
+        cin <span class="token operator">>></span> u <span class="token operator">>></span> v<span class="token punctuation">;</span>
+        g<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        g<span class="token punctuation">[</span>v<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>u<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">int</span> m<span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> m<span class="token punctuation">;</span>
+
+    vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span>pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">>></span><span class="token operator">></span> <span class="token function">q</span><span class="token punctuation">(</span>n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> m<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">int</span> u<span class="token punctuation">,</span> d<span class="token punctuation">,</span> v<span class="token punctuation">;</span>
+        cin <span class="token operator">>></span> u <span class="token operator">>></span> d <span class="token operator">>></span> v<span class="token punctuation">;</span>
+        q<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token punctuation">{</span>d<span class="token punctuation">,</span> v<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    vector<span class="token operator">&lt;</span>ll<span class="token operator">></span> <span class="token function">b</span><span class="token punctuation">(</span><span class="token number">3e5</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    vector<span class="token operator">&lt;</span>ll<span class="token operator">></span> <span class="token function">ans</span><span class="token punctuation">(</span>n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    function<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">,</span> ll<span class="token punctuation">)</span><span class="token operator">></span> dfs <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">&amp;</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">int</span> u<span class="token punctuation">,</span> <span class="token keyword">int</span> fa<span class="token punctuation">,</span> ll sum<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment" spellcheck="true">// 加上标记值</span>
+        sum <span class="token operator">+</span><span class="token operator">=</span> b<span class="token punctuation">[</span>dep<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// minus</span>
+        <span class="token comment" spellcheck="true">// 枚举节点操作</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">auto</span> <span class="token punctuation">[</span>d<span class="token punctuation">,</span> v<span class="token punctuation">]</span> <span class="token operator">:</span> q<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            sum <span class="token operator">+</span><span class="token operator">=</span> v<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//累加</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>dep<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> d <span class="token operator">&lt;</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+                b<span class="token punctuation">[</span>dep<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> d <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span><span class="token operator">=</span> v<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//mark</span>
+        <span class="token punctuation">}</span>
+        ans<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">=</span> sum<span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">auto</span> v <span class="token operator">:</span> g<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>v <span class="token operator">==</span> fa<span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
+            dep<span class="token punctuation">[</span>v<span class="token punctuation">]</span> <span class="token operator">=</span> dep<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
+            <span class="token function">dfs</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span> u<span class="token punctuation">,</span> sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token comment" spellcheck="true">// 删除标记</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">auto</span> <span class="token punctuation">[</span>d<span class="token punctuation">,</span> v<span class="token punctuation">]</span> <span class="token operator">:</span> q<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span>dep<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> d <span class="token operator">&lt;</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+                b<span class="token punctuation">[</span>dep<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> d <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span><span class="token operator">=</span> v<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        cout <span class="token operator">&lt;&lt;</span> ans<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> <span class="token string">" \n"</span><span class="token punctuation">[</span>i <span class="token operator">==</span> n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -668,9 +734,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《2021年度总结》
+                    《CF1076E.Vasya and a Tree|树上差分》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2022/06/29/2021-nian-du-zong-jie/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/p/3632168690.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 行码棋
             </a> 采用
@@ -703,6 +769,7 @@
     <div id="gitalk-container" class="card-content"></div>
 </div>
 
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/gangdong/gangdong.github.io@dev/assets/js/md5.min.js"></script> -->
 <script src="/libs/gitalk/gitalk.min.js"></script>
 <script>
     let gitalk = new Gitalk({
@@ -711,7 +778,8 @@
         repo: 'anda522.github.io',
         owner: 'anda522',
         admin: "anda522",
-        id: '2022/06/29/2021-nian-du-zong-jie/',
+        id: 'p/3632168690.html',
+        // id: md5(location.pathname), // 使用MD5生成gitalk id
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -996,47 +1064,62 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2022/06/29/2021-da-er-shang-qi-mo-lian-xi-ti/">
+                <a href="/p/3632168690.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="2021大二上期末知识点总结">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="CF1076E.Vasya and a Tree|树上差分">
                         
-                        <span class="card-title">2021大二上期末知识点总结</span>
+                        <span class="card-title">CF1076E.Vasya and a Tree|树上差分</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本文知识点均为从网络或其他地方搜集整理而来，提到的习题均无答案，完全不具备权威性质，作者不对看本文造成的后果负责，请合理参考。
-Linux指令基本都是基本指令，输入输出流，统计行数，复制，文件权限修改等等大题会考swap分区构建的具体步骤考
+                            CF 1076E. Vasya and a Tree|树上差分题意
+一棵树，它有n个节点，1号节点为根节点，初始所有点的权值为0。
+定义以下两个东西：
+
+函数$d(i,j)$ : 指节点$i$到$j$所经过边的数量。
+
+$x$节点的$k$级
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-29
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-08-03
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/知识总结/" class="post-category" target="_blank">
-                                    知识总结
+                            <a href="/categories/树/" class="post-category" target="_blank">
+                                    树
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/学习总结/" target="_blank">
-                        <span class="chip bg-color">学习总结</span>
+                    <a href="/tags/DFS/" target="_blank">
+                        <span class="chip bg-color">DFS</span>
+                    </a>
+                    
+                    <a href="/tags/树/" target="_blank">
+                        <span class="chip bg-color">树</span>
+                    </a>
+                    
+                    <a href="/tags/CF/" target="_blank">
+                        <span class="chip bg-color">CF</span>
                     </a>
                     
                 </div>
@@ -1050,35 +1133,37 @@ Linux指令基本都是基本指令，输入输出流，统计行数，复制，
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/06/29/cf1181c-flag-zi-ju-zhen-shu-liang-tong-ji/">
+                <a href="/p/3388199031.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="CF1181C Flag-子矩阵数量统计">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="2022杭电多校2 Static Query on Tree|树链剖分">
                         
-                        <span class="card-title">CF1181C Flag-子矩阵数量统计</span>
+                        <span class="card-title">2022杭电多校2 Static Query on Tree|树链剖分</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            CF1181C Flag子矩阵数量统计题目介绍题目链接：
-https://codeforces.com/problemset/problem/1181/C
+                            Static Query on Tree下面介绍树链剖分做法（即题解的第二种做法）
 
-思路维护变量统计子矩阵一般都需要维护一些数组，大部分都是纵向维护或者横向维护。
-本
+
+题目大意：
+一棵内向树，三个集合A，B，C，每个集合里面有一些点，求特定点的个数，满足从A集合和B集合可以到达该特定点，且可以从该特定点到达C集合。
+
+
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-29
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-07-22
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/DP/" class="post-category" target="_blank">
-                                    DP
+                            <a href="/categories/图论/" class="post-category" target="_blank">
+                                    图论
                                 </a>
                             
                             
@@ -1088,12 +1173,8 @@ https://codeforces.com/problemset/problem/1181/C
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/CF/" target="_blank">
-                        <span class="chip bg-color">CF</span>
-                    </a>
-                    
-                    <a href="/tags/DP/" target="_blank">
-                        <span class="chip bg-color">DP</span>
+                    <a href="/tags/树链剖分/" target="_blank">
+                        <span class="chip bg-color">树链剖分</span>
                     </a>
                     
                 </div>
