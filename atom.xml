@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wangyaqii.top/"/>
-  <updated>2022-08-04T06:47:14.627Z</updated>
+  <updated>2022-08-06T08:20:39.464Z</updated>
   <id>http://wangyaqii.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>nginx命令汇总</title>
+    <link href="http://wangyaqii.top/p/386249329.html"/>
+    <id>http://wangyaqii.top/p/386249329.html</id>
+    <published>2022-08-06T07:55:55.000Z</published>
+    <updated>2022-08-06T08:20:39.464Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;开关nginx&quot;&gt;&lt;a href=&quot;#开关nginx&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="nginx" scheme="http://wangyaqii.top/categories/nginx/"/>
+    
+    
+      <category term="nginx" scheme="http://wangyaqii.top/tags/nginx/"/>
+    
+  </entry>
   
   <entry>
     <title>CF1076E.Vasya and a Tree|树上差分</title>
@@ -106,7 +132,7 @@
     <link href="http://wangyaqii.top/p/1146830909.html"/>
     <id>http://wangyaqii.top/p/1146830909.html</id>
     <published>2022-07-02T03:27:31.000Z</published>
-    <updated>2022-08-04T06:48:02.948Z</updated>
+    <updated>2022-08-06T07:10:18.145Z</updated>
     
     <summary type="html">
     
