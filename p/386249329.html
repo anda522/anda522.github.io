@@ -4,16 +4,16 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="nginx命令汇总, ZZU 行码棋">
+    <meta name="keywords" content="nginx知识总结, ZZU 行码棋">
     <meta name="baidu-site-verification" content="code-EZed9PhGF6">
     <meta name="google-site-verification" content="0HHS8p6WO48TOze_g5mKXx7KklUiOc4amSV6M7R6ivA">
     <!-- <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" /> -->
     <meta name="description" content="开关nginxUbuntu下：
 打开nginx服务，需要在root权限下（docker容器下也可以用）
 /etc/init.d/nginx start
-nginx配置http块server区进行端口监听，转发流量
-
-访问80端口，即浏览器直">
+重启nginx
+/sbin/nginx -s reload
+nginx配置http块se">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +21,7 @@ nginx配置http块server区进行端口监听，转发流量
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>nginx命令汇总 | 行码棋</title>
+    <title>nginx知识总结 | 行码棋</title>
     <link rel="icon" type="image/png" href="/medias/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -343,13 +343,13 @@ nginx配置http块server区进行端口监听，转发流量
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        nginx命令汇总
+                        nginx知识总结
                     </div>
                 </div>
             </div>
@@ -498,7 +498,7 @@ nginx配置http块server区进行端口监听，转发流量
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    297
+                    444
                 </div>
                 
 
@@ -524,6 +524,8 @@ nginx配置http块server区进行端口监听，转发流量
                 <h1 id="开关nginx"><a href="#开关nginx" class="headerlink" title="开关nginx"></a>开关nginx</h1><p><code>Ubuntu</code>下：</p>
 <p>打开<code>nginx</code>服务，需要在root权限下（docker容器下也可以用）</p>
 <pre class="line-numbers language-bash"><code class="language-bash">/etc/init.d/nginx start<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>重启nginx</p>
+<pre class="line-numbers language-bash"><code class="language-bash">/sbin/nginx -s reload<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h1 id="nginx配置"><a href="#nginx配置" class="headerlink" title="nginx配置"></a>nginx配置</h1><h2 id="http块"><a href="#http块" class="headerlink" title="http块"></a>http块</h2><h3 id="server区"><a href="#server区" class="headerlink" title="server区"></a>server区</h3><p>进行端口监听，转发流量</p>
 <ul>
 <li>访问80端口，即浏览器直接输入地址，访问网页，内容位于<code>/home/hexo/blog</code>处</li>
@@ -569,6 +571,29 @@ nginx配置http块server区进行端口监听，转发流量
         <span class="token punctuation">}</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>https配置</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash">server <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true"># 服务器端口使用443，开启ssl, 这里ssl就是上面安装的ssl模块</span>
+    listen       443 ssl<span class="token punctuation">;</span>
+    root /home/hexo/blog<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true"># 域名，多个以空格分开</span>
+    server_name  wyqz.top www.wyqz.top<span class="token punctuation">;</span>
+
+    <span class="token comment" spellcheck="true"># ssl证书地址</span>
+    ssl_certificate     /etc/nginx/ssl.pem<span class="token punctuation">;</span>  <span class="token comment" spellcheck="true"># pem文件的路径</span>
+    ssl_certificate_key  /etc/nginx/ssl.key<span class="token punctuation">;</span> <span class="token comment" spellcheck="true"># key文件的路径</span>
+
+    <span class="token comment" spellcheck="true"># ssl验证相关配置</span>
+    ssl_session_timeout  5m<span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">#缓存有效期</span>
+    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:<span class="token operator">!</span>NULL:<span class="token operator">!</span>aNULL:<span class="token operator">!</span>MD5:<span class="token operator">!</span>ADH:<span class="token operator">!</span>RC4<span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">#加密算法</span>
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2<span class="token punctuation">;</span>    <span class="token comment" spellcheck="true">#安全链接可选的加密协议</span>
+    ssl_prefer_server_ciphers on<span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">#使用服务器端的首选算法</span>
+
+    location / <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -727,7 +752,7 @@ nginx配置http块server区进行端口监听，转发流量
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《nginx命令汇总》
+                    《nginx知识总结》
                 </span> 由
             <a xmlns:cc="http://creativecommons.org/ns#" href="/p/386249329.html" property="cc:attributionName"
                rel="cc:attributionURL">
@@ -1057,53 +1082,51 @@ nginx配置http块server区进行端口监听，转发流量
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/p/386249329.html">
+                <a href="/p/4188452413.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="nginx命令汇总">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="CF1055C Lucky Days|裴蜀定理">
                         
-                        <span class="card-title">nginx命令汇总</span>
+                        <span class="card-title">CF1055C Lucky Days|裴蜀定理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            开关nginxUbuntu下：
-打开nginx服务，需要在root权限下（docker容器下也可以用）
-/etc/init.d/nginx start
-nginx配置http块server区进行端口监听，转发流量
-
-访问80端口，即浏览器直
+                            Lucky Days
+给定 $l_a,r_a,t_a,l_b,r_b,t_b$，对于所有的非负整数 $k$，将区间 $[l_a+kt_a,r_a+kt_a]$ 打上标记 $1$，将区间 $[l_b+kt_b,r_b+kt_b]$ 打上标记 
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-08-06
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-08-08
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/nginx/" class="post-category" target="_blank">
-                                    nginx
+                            <a href="/categories/数论/" class="post-category" target="_blank">
+                                    数论
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/nginx/" target="_blank">
-                        <span class="chip bg-color">nginx</span>
+                    <a href="/tags/数论/" target="_blank">
+                        <span class="chip bg-color">数论</span>
+                    </a>
+                    
+                    <a href="/tags/裴蜀定理/" target="_blank">
+                        <span class="chip bg-color">裴蜀定理</span>
                     </a>
                     
                 </div>
@@ -1121,7 +1144,7 @@ nginx配置http块server区进行端口监听，转发流量
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="CF1076E.Vasya and a Tree|树上差分">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="CF1076E.Vasya and a Tree|树上差分">
                         
                         <span class="card-title">CF1076E.Vasya and a Tree|树上差分</span>
                     </div>
@@ -1342,7 +1365,7 @@ $x$节点的$k$级
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">12.8k</span>
+            <span class="white-color">13.9k</span>
             
 
             <br>
@@ -1406,8 +1429,8 @@ $x$节点的$k$级
     $(document).ready(function () {
 
         var int = setInterval(fixCount, 50);
-        var pvcountOffset = 0;
-        var uvcountOffset = 0;
+        var pvcountOffset = 80000;
+        var uvcountOffset = 80000;
 
         function fixCount() {
             if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {

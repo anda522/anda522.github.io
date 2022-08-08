@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wangyaqii.top/"/>
-  <updated>2022-08-06T08:20:39.464Z</updated>
+  <updated>2022-08-08T12:26:35.270Z</updated>
   <id>http://wangyaqii.top/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>nginx命令汇总</title>
+    <title>CF1055C Lucky Days|裴蜀定理</title>
+    <link href="http://wangyaqii.top/p/4188452413.html"/>
+    <id>http://wangyaqii.top/p/4188452413.html</id>
+    <published>2022-08-08T11:45:25.000Z</published>
+    <updated>2022-08-08T12:26:35.270Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Lucky-Days&quot;&gt;&lt;a href=&quot;#Lucky-Days&quot; class=&quot;headerlink&quot; title=&quot;Lucky Days&quot;&gt;&lt;/a&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="数论" scheme="http://wangyaqii.top/categories/%E6%95%B0%E8%AE%BA/"/>
+    
+    
+      <category term="数论" scheme="http://wangyaqii.top/tags/%E6%95%B0%E8%AE%BA/"/>
+    
+      <category term="裴蜀定理" scheme="http://wangyaqii.top/tags/%E8%A3%B4%E8%9C%80%E5%AE%9A%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>nginx知识总结</title>
     <link href="http://wangyaqii.top/p/386249329.html"/>
     <id>http://wangyaqii.top/p/386249329.html</id>
     <published>2022-08-06T07:55:55.000Z</published>
-    <updated>2022-08-06T08:20:39.464Z</updated>
+    <updated>2022-08-06T10:00:54.703Z</updated>
     
     <summary type="html">
     
