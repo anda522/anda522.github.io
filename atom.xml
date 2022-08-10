@@ -5,9 +5,9 @@
   <subtitle>行稳致远</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://wangyaqii.top/"/>
+  <link href="http://wyqz.top/"/>
   <updated>2022-08-10T00:45:37.297Z</updated>
-  <id>http://wangyaqii.top/</id>
+  <id>http://wyqz.top/</id>
   
   <author>
     <name>行码棋</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>C++ STL超全总结-基于算法竞赛（悠享版）</title>
-    <link href="http://wangyaqii.top/p/870124582.html"/>
-    <id>http://wangyaqii.top/p/870124582.html</id>
+    <link href="http://wyqz.top/p/870124582.html"/>
+    <id>http://wyqz.top/p/870124582.html</id>
     <published>2022-08-09T13:34:49.000Z</published>
     <updated>2022-08-10T00:45:37.297Z</updated>
     
@@ -35,21 +35,21 @@
     
     </summary>
     
-      <category term="STL" scheme="http://wangyaqii.top/categories/STL/"/>
+      <category term="STL" scheme="http://wyqz.top/categories/STL/"/>
     
     
-      <category term="学习总结" scheme="http://wangyaqii.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+      <category term="C++" scheme="http://wyqz.top/tags/C/"/>
     
-      <category term="C++" scheme="http://wangyaqii.top/tags/C/"/>
+      <category term="STL" scheme="http://wyqz.top/tags/STL/"/>
     
-      <category term="STL" scheme="http://wangyaqii.top/tags/STL/"/>
+      <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
   <entry>
     <title>CF1055C Lucky Days|裴蜀定理</title>
-    <link href="http://wangyaqii.top/p/4188452413.html"/>
-    <id>http://wangyaqii.top/p/4188452413.html</id>
+    <link href="http://wyqz.top/p/4188452413.html"/>
+    <id>http://wyqz.top/p/4188452413.html</id>
     <published>2022-08-08T11:45:25.000Z</published>
     <updated>2022-08-09T13:29:47.188Z</updated>
     
@@ -65,19 +65,19 @@
     
     </summary>
     
-      <category term="数论" scheme="http://wangyaqii.top/categories/%E6%95%B0%E8%AE%BA/"/>
+      <category term="数论" scheme="http://wyqz.top/categories/%E6%95%B0%E8%AE%BA/"/>
     
     
-      <category term="数论" scheme="http://wangyaqii.top/tags/%E6%95%B0%E8%AE%BA/"/>
+      <category term="数论" scheme="http://wyqz.top/tags/%E6%95%B0%E8%AE%BA/"/>
     
-      <category term="裴蜀定理" scheme="http://wangyaqii.top/tags/%E8%A3%B4%E8%9C%80%E5%AE%9A%E7%90%86/"/>
+      <category term="裴蜀定理" scheme="http://wyqz.top/tags/%E8%A3%B4%E8%9C%80%E5%AE%9A%E7%90%86/"/>
     
   </entry>
   
   <entry>
     <title>nginx知识总结</title>
-    <link href="http://wangyaqii.top/p/386249329.html"/>
-    <id>http://wangyaqii.top/p/386249329.html</id>
+    <link href="http://wyqz.top/p/386249329.html"/>
+    <id>http://wyqz.top/p/386249329.html</id>
     <published>2022-08-06T07:55:55.000Z</published>
     <updated>2022-08-06T10:00:54.703Z</updated>
     
@@ -93,17 +93,17 @@
     
     </summary>
     
-      <category term="nginx" scheme="http://wangyaqii.top/categories/nginx/"/>
+      <category term="nginx" scheme="http://wyqz.top/categories/nginx/"/>
     
     
-      <category term="nginx" scheme="http://wangyaqii.top/tags/nginx/"/>
+      <category term="nginx" scheme="http://wyqz.top/tags/nginx/"/>
     
   </entry>
   
   <entry>
     <title>CF1076E.Vasya and a Tree|树上差分</title>
-    <link href="http://wangyaqii.top/p/3632168690.html"/>
-    <id>http://wangyaqii.top/p/3632168690.html</id>
+    <link href="http://wyqz.top/p/3632168690.html"/>
+    <id>http://wyqz.top/p/3632168690.html</id>
     <published>2022-08-03T11:26:20.000Z</published>
     <updated>2022-08-04T06:47:14.627Z</updated>
     
@@ -119,21 +119,21 @@
     
     </summary>
     
-      <category term="树" scheme="http://wangyaqii.top/categories/%E6%A0%91/"/>
+      <category term="树" scheme="http://wyqz.top/categories/%E6%A0%91/"/>
     
     
-      <category term="DFS" scheme="http://wangyaqii.top/tags/DFS/"/>
+      <category term="DFS" scheme="http://wyqz.top/tags/DFS/"/>
     
-      <category term="树" scheme="http://wangyaqii.top/tags/%E6%A0%91/"/>
+      <category term="树" scheme="http://wyqz.top/tags/%E6%A0%91/"/>
     
-      <category term="CF" scheme="http://wangyaqii.top/tags/CF/"/>
+      <category term="CF" scheme="http://wyqz.top/tags/CF/"/>
     
   </entry>
   
   <entry>
     <title>2022杭电多校2 Static Query on Tree|树链剖分</title>
-    <link href="http://wangyaqii.top/p/3388199031.html"/>
-    <id>http://wangyaqii.top/p/3388199031.html</id>
+    <link href="http://wyqz.top/p/3388199031.html"/>
+    <id>http://wyqz.top/p/3388199031.html</id>
     <published>2022-07-22T14:28:33.000Z</published>
     <updated>2022-08-04T07:16:58.134Z</updated>
     
@@ -149,17 +149,17 @@
     
     </summary>
     
-      <category term="图论" scheme="http://wangyaqii.top/categories/%E5%9B%BE%E8%AE%BA/"/>
+      <category term="图论" scheme="http://wyqz.top/categories/%E5%9B%BE%E8%AE%BA/"/>
     
     
-      <category term="树链剖分" scheme="http://wangyaqii.top/tags/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/"/>
+      <category term="树链剖分" scheme="http://wyqz.top/tags/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/"/>
     
   </entry>
   
   <entry>
     <title>树链剖分|模板题</title>
-    <link href="http://wangyaqii.top/p/1046407529.html"/>
-    <id>http://wangyaqii.top/p/1046407529.html</id>
+    <link href="http://wyqz.top/p/1046407529.html"/>
+    <id>http://wyqz.top/p/1046407529.html</id>
     <published>2022-07-22T10:27:24.000Z</published>
     <updated>2022-08-04T07:03:44.667Z</updated>
     
@@ -176,19 +176,19 @@
     
     </summary>
     
-      <category term="图论" scheme="http://wangyaqii.top/categories/%E5%9B%BE%E8%AE%BA/"/>
+      <category term="图论" scheme="http://wyqz.top/categories/%E5%9B%BE%E8%AE%BA/"/>
     
     
-      <category term="树链剖分" scheme="http://wangyaqii.top/tags/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/"/>
+      <category term="树链剖分" scheme="http://wyqz.top/tags/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/"/>
     
-      <category term="DFS" scheme="http://wangyaqii.top/tags/DFS/"/>
+      <category term="DFS" scheme="http://wyqz.top/tags/DFS/"/>
     
   </entry>
   
   <entry>
     <title>docker|常用命令</title>
-    <link href="http://wangyaqii.top/p/1146830909.html"/>
-    <id>http://wangyaqii.top/p/1146830909.html</id>
+    <link href="http://wyqz.top/p/1146830909.html"/>
+    <id>http://wyqz.top/p/1146830909.html</id>
     <published>2022-07-02T03:27:31.000Z</published>
     <updated>2022-08-06T07:10:18.145Z</updated>
     
@@ -207,19 +207,19 @@
     
     </summary>
     
-      <category term="知识总结" scheme="http://wangyaqii.top/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+      <category term="知识总结" scheme="http://wyqz.top/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
     
     
-      <category term="docker" scheme="http://wangyaqii.top/tags/docker/"/>
+      <category term="docker" scheme="http://wyqz.top/tags/docker/"/>
     
-      <category term="linux" scheme="http://wangyaqii.top/tags/linux/"/>
+      <category term="linux" scheme="http://wyqz.top/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>Git|详解|命令</title>
-    <link href="http://wangyaqii.top/p/1843856130.html"/>
-    <id>http://wangyaqii.top/p/1843856130.html</id>
+    <link href="http://wyqz.top/p/1843856130.html"/>
+    <id>http://wyqz.top/p/1843856130.html</id>
     <published>2022-06-30T02:14:41.000Z</published>
     <updated>2022-08-04T07:09:16.215Z</updated>
     
@@ -235,17 +235,17 @@
     
     </summary>
     
-      <category term="知识总结" scheme="http://wangyaqii.top/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+      <category term="知识总结" scheme="http://wyqz.top/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
     
     
-      <category term="git" scheme="http://wangyaqii.top/tags/git/"/>
+      <category term="git" scheme="http://wyqz.top/tags/git/"/>
     
   </entry>
   
   <entry>
     <title>2021大二上期末知识点总结</title>
-    <link href="http://wangyaqii.top/p/454636061.html"/>
-    <id>http://wangyaqii.top/p/454636061.html</id>
+    <link href="http://wyqz.top/p/454636061.html"/>
+    <id>http://wyqz.top/p/454636061.html</id>
     <published>2022-06-29T11:04:00.000Z</published>
     <updated>2022-08-04T06:48:02.945Z</updated>
     
@@ -262,17 +262,17 @@
     
     </summary>
     
-      <category term="知识总结" scheme="http://wangyaqii.top/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+      <category term="知识总结" scheme="http://wyqz.top/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
     
     
-      <category term="学习总结" scheme="http://wangyaqii.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+      <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
   <entry>
     <title>2021年度总结</title>
-    <link href="http://wangyaqii.top/p/3756014507.html"/>
-    <id>http://wangyaqii.top/p/3756014507.html</id>
+    <link href="http://wyqz.top/p/3756014507.html"/>
+    <id>http://wyqz.top/p/3756014507.html</id>
     <published>2022-06-29T10:52:55.000Z</published>
     <updated>2022-08-04T06:48:02.949Z</updated>
     
@@ -288,17 +288,17 @@
     
     </summary>
     
-      <category term="思考总结" scheme="http://wangyaqii.top/categories/%E6%80%9D%E8%80%83%E6%80%BB%E7%BB%93/"/>
+      <category term="思考总结" scheme="http://wyqz.top/categories/%E6%80%9D%E8%80%83%E6%80%BB%E7%BB%93/"/>
     
     
-      <category term="学习总结" scheme="http://wangyaqii.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+      <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
   <entry>
     <title>CF1181C Flag-子矩阵数量统计</title>
-    <link href="http://wangyaqii.top/p/2396599521.html"/>
-    <id>http://wangyaqii.top/p/2396599521.html</id>
+    <link href="http://wyqz.top/p/2396599521.html"/>
+    <id>http://wyqz.top/p/2396599521.html</id>
     <published>2022-06-29T08:03:02.000Z</published>
     <updated>2022-08-04T07:15:56.732Z</updated>
     
@@ -314,19 +314,19 @@
     
     </summary>
     
-      <category term="DP" scheme="http://wangyaqii.top/categories/DP/"/>
+      <category term="DP" scheme="http://wyqz.top/categories/DP/"/>
     
     
-      <category term="CF" scheme="http://wangyaqii.top/tags/CF/"/>
+      <category term="CF" scheme="http://wyqz.top/tags/CF/"/>
     
-      <category term="DP" scheme="http://wangyaqii.top/tags/DP/"/>
+      <category term="DP" scheme="http://wyqz.top/tags/DP/"/>
     
   </entry>
   
   <entry>
     <title>阶乘逆元和线性逆元</title>
-    <link href="http://wangyaqii.top/p/652576208.html"/>
-    <id>http://wangyaqii.top/p/652576208.html</id>
+    <link href="http://wyqz.top/p/652576208.html"/>
+    <id>http://wyqz.top/p/652576208.html</id>
     <published>2022-06-25T11:27:26.000Z</published>
     <updated>2022-08-04T07:14:42.382Z</updated>
     
@@ -342,19 +342,19 @@
     
     </summary>
     
-      <category term="数论" scheme="http://wangyaqii.top/categories/%E6%95%B0%E8%AE%BA/"/>
+      <category term="数论" scheme="http://wyqz.top/categories/%E6%95%B0%E8%AE%BA/"/>
     
     
-      <category term="逆元" scheme="http://wangyaqii.top/tags/%E9%80%86%E5%85%83/"/>
+      <category term="逆元" scheme="http://wyqz.top/tags/%E9%80%86%E5%85%83/"/>
     
-      <category term="组合数学" scheme="http://wangyaqii.top/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
+      <category term="组合数学" scheme="http://wyqz.top/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>容斥定理</title>
-    <link href="http://wangyaqii.top/p/1292892888.html"/>
-    <id>http://wangyaqii.top/p/1292892888.html</id>
+    <link href="http://wyqz.top/p/1292892888.html"/>
+    <id>http://wyqz.top/p/1292892888.html</id>
     <published>2022-06-25T09:36:11.000Z</published>
     <updated>2022-08-04T07:14:07.542Z</updated>
     
@@ -371,17 +371,17 @@
     
     </summary>
     
-      <category term="数论" scheme="http://wangyaqii.top/categories/%E6%95%B0%E8%AE%BA/"/>
+      <category term="数论" scheme="http://wyqz.top/categories/%E6%95%B0%E8%AE%BA/"/>
     
     
-      <category term="数论" scheme="http://wangyaqii.top/tags/%E6%95%B0%E8%AE%BA/"/>
+      <category term="数论" scheme="http://wyqz.top/tags/%E6%95%B0%E8%AE%BA/"/>
     
   </entry>
   
   <entry>
     <title>C++ STL超全总结</title>
-    <link href="http://wangyaqii.top/p/16970766.html"/>
-    <id>http://wangyaqii.top/p/16970766.html</id>
+    <link href="http://wyqz.top/p/16970766.html"/>
+    <id>http://wyqz.top/p/16970766.html</id>
     <published>2022-06-22T07:54:47.000Z</published>
     <updated>2022-08-10T00:45:00.621Z</updated>
     
@@ -397,14 +397,14 @@
     
     </summary>
     
-      <category term="STL" scheme="http://wangyaqii.top/categories/STL/"/>
+      <category term="STL" scheme="http://wyqz.top/categories/STL/"/>
     
     
-      <category term="学习总结" scheme="http://wangyaqii.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+      <category term="C++" scheme="http://wyqz.top/tags/C/"/>
     
-      <category term="C++" scheme="http://wangyaqii.top/tags/C/"/>
+      <category term="STL" scheme="http://wyqz.top/tags/STL/"/>
     
-      <category term="STL" scheme="http://wangyaqii.top/tags/STL/"/>
+      <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
