@@ -40,7 +40,8 @@
 
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-    <script>
+    <!-- wangyaqii.top -->
+    <!-- <script>
         var _hmt = _hmt || [];
         (function() {
           var hm = document.createElement("script");
@@ -48,8 +49,18 @@
           var s = document.getElementsByTagName("script")[0]; 
           s.parentNode.insertBefore(hm, s);
         })();
+    </script> -->
+    <!-- wyqz.top -->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?7e24aec910e98687980f650c88fc0424";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
     </script>
-        
+            
 
     
         <script>
@@ -341,7 +352,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -458,16 +469,16 @@
                     
                     <div class="article-tag">
                         
+                        <a href="/tags/学习总结/" target="_blank">
+                            <span class="chip bg-color">学习总结</span>
+                        </a>
+                        
                         <a href="/tags/C/" target="_blank">
                             <span class="chip bg-color">C++</span>
                         </a>
                         
                         <a href="/tags/STL/" target="_blank">
                             <span class="chip bg-color">STL</span>
-                        </a>
-                        
-                        <a href="/tags/学习总结/" target="_blank">
-                            <span class="chip bg-color">学习总结</span>
                         </a>
                         
                     </div>
@@ -504,14 +515,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    12.1k
+                    12.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    51 分
+                    53 分
                 </div>
                 
                 
@@ -1101,7 +1112,7 @@ map<span class="token operator">&lt;</span><span class="token keyword">int</span
 </tr>
 <tr>
 <td><code>mp.rend()</code></td>
-<td>返回指向map第一个元素的迭代器（地址）</td>
+<td>返回指向map第一个元素前面(上一个）的逆向迭代器（地址）</td>
 </tr>
 <tr>
 <td><code>mp.count(key)</code></td>
@@ -1205,8 +1216,40 @@ cout <span class="token operator">&lt;&lt;</span> it <span class="token operator
 <pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">auto</span> <span class="token punctuation">[</span>x<span class="token punctuation">,</span> y<span class="token punctuation">]</span> <span class="token operator">:</span> mp<span class="token punctuation">)</span>
     cout <span class="token operator">&lt;&lt;</span> x <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span> <span class="token operator">&lt;&lt;</span> y <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
 <span class="token comment" spellcheck="true">//x,y对应键和值</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>还有两种映射：</p>
-<p><a href>multimap</a><br>键可以重复，即一个键对应多个值，如要了解，可以自行搜索。<br><a href>unordered_map</a><br> 不排序，只映射，速度更快，方法基本一样</p>
+<h3 id="6-5-与unordered-map的比较"><a href="#6-5-与unordered-map的比较" class="headerlink" title="6.5 与unordered_map的比较"></a>6.5 与unordered_map的比较</h3><p>这里就不单开一个大目录讲unordered_map了，直接在map里面讲了。</p>
+<h4 id="6-5-1-内部实现原理"><a href="#6-5-1-内部实现原理" class="headerlink" title="6.5.1 内部实现原理"></a>6.5.1 内部实现原理</h4><p><strong>map</strong>：内部用<strong>红黑树</strong>实现，具有<strong>自动排序</strong>（按键从小到大）功能。</p>
+<p><strong>unordered_map</strong>：内部用<strong>哈希表</strong>实现，内部元素无序杂乱。</p>
+<h4 id="6-5-2-效率比较"><a href="#6-5-2-效率比较" class="headerlink" title="6.5.2 效率比较"></a>6.5.2 效率比较</h4><p><strong>map</strong>：</p>
+<ul>
+<li><p>优点：内部用红黑树实现，内部元素具有有序性，查询删除等操作复杂度为$O(logN)$</p>
+</li>
+<li><p>缺点：占用空间，红黑树里每个节点需要保存父子节点和红黑性质等信息，空间占用较大。</p>
+</li>
+</ul>
+<p><strong>unordered_map</strong>：</p>
+<ul>
+<li>优点：内部用哈希表实现，查找速度非常快（适用于大量的查询操作）。</li>
+<li>缺点：建立哈希表比较耗时。</li>
+</ul>
+<blockquote>
+<p>两者方法函数基本一样，差别不大。</p>
+<p>注意：</p>
+<ul>
+<li><p>随着内部元素越来越多，两种容器的插入删除查询操作的时间都会逐渐变大，效率逐渐变低。</p>
+</li>
+<li><p>使用<code>[]</code>查找元素时，如果元素不存在，两种容器<strong>都是</strong>创建一个空的元素；如果存在，会正常索引对应的值。所以如果查询过多的不存在的元素值，容器内部会创建大量的空的键值对，后续查询创建删除效率会<strong>大大降低</strong>。</p>
+</li>
+<li><p>查询容器内部元素的最优方法是：先判断存在与否，再索引对应值（适用于这两种容器）</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">// 以 map 为例</span>
+map<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">></span> mp<span class="token punctuation">;</span>
+<span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">999999999</span><span class="token punctuation">;</span>
+<span class="token keyword">if</span><span class="token punctuation">(</span>mp<span class="token punctuation">.</span><span class="token function">count</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">// 此处判断是否存在x这个键</span>
+    cout <span class="token operator">&lt;&lt;</span> mp<span class="token punctuation">[</span>x<span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">// 只有存在才会索引对应的值，避免不存在x时多余空元素的创建</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</blockquote>
+<p>还有一种映射：</p>
+<p><a href>multimap</a><br>键可以重复，即一个键对应多个值，如要了解，可以自行搜索。</p>
 <hr>
 <h2 id="7-set"><a href="#7-set" class="headerlink" title="7 set"></a>7 set</h2><h3 id="7-1-介绍"><a href="#7-1-介绍" class="headerlink" title="7.1 介绍"></a>7.1 介绍</h3><p>set容器中的元素不会重复，当插入集合中已有的元素时，并不会插入进去，而且set容器里的元素自动从小到大排序。</p>
 <p>即：set里面的元素<strong>不重复 且有序</strong></p>
@@ -2087,6 +2130,18 @@ ll res <span class="token operator">=</span> <span class="token function">accumu
     <span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">.</span>num<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="atoi-const-char"><a href="#atoi-const-char" class="headerlink" title="atoi(const char *)"></a><code>atoi(const char *)</code></h2><blockquote>
+<p>将字符串转换为<code>int</code>类型</p>
+</blockquote>
+<p>注意参数为<code>char</code>型数组，如果需要将string类型转换为int类型，可以使用<code>stoi</code>函数（参考下文），或者将<code>string</code>类型转换为<code>const char *</code>类型。</p>
+<p>关于输出数字的范围：<br><code>atoi</code><strong>不做</strong>范围检查，如果超出上界，输出上界，超出下界，输出下界。<br><code>stoi</code><strong>会做</strong>范围检查，默认必须在<code>int</code>范围内，如果超出范围，会出现RE（Runtime Error）错误。</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp">string s <span class="token operator">=</span> <span class="token string">"1234"</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token function">atoi</span><span class="token punctuation">(</span>s<span class="token punctuation">.</span><span class="token function">c_str</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+cout <span class="token operator">&lt;&lt;</span> a <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 1234</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>或者</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">char</span> s<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"1234"</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token function">atoi</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+cout <span class="token operator">&lt;&lt;</span> a <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h2 id="fill-beg-end-num"><a href="#fill-beg-end-num" class="headerlink" title="fill(beg,end,num)"></a><code>fill(beg,end,num)</code></h2><p><strong>复杂度：</strong> $O(N)$</p>
 <blockquote>
 <p>对一个序列进行初始化赋值</p>
@@ -2245,6 +2300,14 @@ cout <span class="token operator">&lt;&lt;</span> a<span class="token punctuatio
 <p>区别在于<code>stable_sort()</code>能够保证相等元素的相对位置，排序时不会改变相等元素的相对位置</p>
 </blockquote>
 <p>使用用法和<code>sort()</code>一样,见上</p>
+<h2 id="stoi-const-string"><a href="#stoi-const-string" class="headerlink" title="stoi(const string*)"></a><code>stoi(const string*)</code></h2><blockquote>
+<p>将对应string类型字符串转换为数字</p>
+</blockquote>
+<p>注意参数为<code>string</code>字符串类型。</p>
+<p>关于输出数字的范围：<br><code>stoi</code><strong>会做</strong>范围检查，默认必须在<code>int</code>范围内，如果超出范围，会出现RE（Runtime Error）错误。<br><code>atoi</code><strong>不做</strong>范围检查，如果超出上界，输出上界，超出下界，输出下界。</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp">string s <span class="token operator">=</span> <span class="token string">"1234"</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token function">atoi</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>
+cout <span class="token operator">&lt;&lt;</span> a <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 1234</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h2 id="transform"><a href="#transform" class="headerlink" title="transform()"></a><code>transform()</code></h2><p><strong>复杂度：</strong> $O(N)$</p>
 <blockquote>
 <p>作用：使用给定操作，将结果写到dest中</p>
@@ -2805,7 +2868,7 @@ cout <span class="token operator">&lt;&lt;</span> <span class="token function">t
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="C++ STL超全总结-基于算法竞赛（悠享版）">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="C++ STL超全总结-基于算法竞赛（悠享版）">
                         
                         <span class="card-title">C++ STL超全总结-基于算法竞赛（悠享版）</span>
                     </div>
@@ -2839,16 +2902,16 @@ cout <span class="token operator">&lt;&lt;</span> <span class="token function">t
                 
                 <div class="card-action article-tags">
                     
+                    <a href="/tags/学习总结/" target="_blank">
+                        <span class="chip bg-color">学习总结</span>
+                    </a>
+                    
                     <a href="/tags/C/" target="_blank">
                         <span class="chip bg-color">C++</span>
                     </a>
                     
                     <a href="/tags/STL/" target="_blank">
                         <span class="chip bg-color">STL</span>
-                    </a>
-                    
-                    <a href="/tags/学习总结/" target="_blank">
-                        <span class="chip bg-color">学习总结</span>
                     </a>
                     
                 </div>
@@ -2866,7 +2929,7 @@ cout <span class="token operator">&lt;&lt;</span> <span class="token function">t
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="CF1055C Lucky Days|裴蜀定理">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="CF1055C Lucky Days|裴蜀定理">
                         
                         <span class="card-title">CF1055C Lucky Days|裴蜀定理</span>
                     </div>
@@ -3078,7 +3141,7 @@ cout <span class="token operator">&lt;&lt;</span> <span class="token function">t
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">26k</span>
+            <span class="white-color">26.7k</span>
             
 
             <br>
@@ -3086,7 +3149,7 @@ cout <span class="token operator">&lt;&lt;</span> <span class="token function">t
             <br>
             <!-- 备案号添加 -->
             <img src="/medias/img/beian.png">
-            <a href="http://beian.miit.gov.cn/" style="color:#f72b07" target="_blank">豫ICP备2021035313号-1</a>
+            <a href="http://beian.miit.gov.cn/" style="color:#f72b07" target="_blank">豫ICP备2021035313号-2</a>
 
             
             
