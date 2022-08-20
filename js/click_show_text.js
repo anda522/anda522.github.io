@@ -1,7 +1,7 @@
 var a_idx = 0;
 $(document).ready(function() {
     $("body").click(function(e) {
-        var a = new Array("Java", "JavaScript", "Python", "C", "C++", "Css", "Html", "Mysql", "Json", "C#", "Go", "lua");
+        var a = new Array("SegmentTree", "Trie", "LCT", "FFT", "DP", "ST", "Tarjan", "DSU", "Fenwick", "STL", "Geometry", "SAM");
         var $i = $("<span/>").text(a[a_idx]);
         a_idx = (a_idx + 1) % a.length;
         var x = e.pageX, y = e.pageY;
