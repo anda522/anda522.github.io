@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2022-08-20T02:27:58.280Z</updated>
+  <updated>2022-08-23T14:18:02.870Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2022牛客多校2补题</title>
+    <link href="http://wyqz.top/p/2791995876.html"/>
+    <id>http://wyqz.top/p/2791995876.html</id>
+    <published>2022-08-23T14:13:03.000Z</published>
+    <updated>2022-08-23T14:18:02.870Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;2022牛客多校2补题&quot;&gt;&lt;a href=&quot;#2022牛客多校2补题&quot; class=&quot;headerlink&quot; title=&quot;2022牛客多校2补题&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://ac.nowcoder.com/acm/contest/33187&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="多校" scheme="http://wyqz.top/categories/%E5%A4%9A%E6%A0%A1/"/>
+    
+    
+      <category term="多校" scheme="http://wyqz.top/tags/%E5%A4%9A%E6%A0%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2022牛客多校1补题</title>
+    <link href="http://wyqz.top/p/2541904761.html"/>
+    <id>http://wyqz.top/p/2541904761.html</id>
+    <published>2022-08-21T14:57:49.000Z</published>
+    <updated>2022-08-21T15:01:19.641Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;2022牛客多校1补题&quot;&gt;&lt;a href=&quot;#2022牛客多校1补题&quot; class=&quot;headerlink&quot; title=&quot;2022牛客多校1补题&quot;&gt;&lt;/a&gt;2022牛客多校1补题&lt;/h1&gt;&lt;p&gt;题解有&lt;code&gt;A C D G I
+        
+      
+    
+    </summary>
+    
+      <category term="多校" scheme="http://wyqz.top/categories/%E5%A4%9A%E6%A0%A1/"/>
+    
+    
+      <category term="多校" scheme="http://wyqz.top/tags/%E5%A4%9A%E6%A0%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>树上拓扑序计数|树形DP</title>
@@ -49,7 +101,7 @@
     <link href="http://wyqz.top/p/870124582.html"/>
     <id>http://wyqz.top/p/870124582.html</id>
     <published>2022-08-09T13:34:49.000Z</published>
-    <updated>2022-08-14T00:58:25.623Z</updated>
+    <updated>2022-08-22T10:50:43.412Z</updated>
     
     <summary type="html">
     
