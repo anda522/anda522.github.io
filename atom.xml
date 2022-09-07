@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2022-08-30T01:10:47.267Z</updated>
+  <updated>2022-09-07T14:31:34.224Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2022牛客多校补题3</title>
+    <link href="http://wyqz.top/p/3182360886.html"/>
+    <id>http://wyqz.top/p/3182360886.html</id>
+    <published>2022-09-07T14:26:25.000Z</published>
+    <updated>2022-09-07T14:31:34.224Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;2022牛客多校3补题&quot;&gt;&lt;a href=&quot;#2022牛客多校3补题&quot; class=&quot;headerlink&quot; title=&quot;2022牛客多校3补题&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://ac.nowcoder.com/acm/contest/33188&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="多校" scheme="http://wyqz.top/categories/%E5%A4%9A%E6%A0%A1/"/>
+    
+    
+      <category term="多校" scheme="http://wyqz.top/tags/%E5%A4%9A%E6%A0%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>AtCoder Beginner Contest 266 A-G</title>
@@ -123,11 +149,11 @@
   </entry>
   
   <entry>
-    <title>C++ STL超全总结-基于算法竞赛（悠享版）</title>
+    <title>C++ STL总结</title>
     <link href="http://wyqz.top/p/870124582.html"/>
     <id>http://wyqz.top/p/870124582.html</id>
     <published>2022-08-09T13:34:49.000Z</published>
-    <updated>2022-08-22T10:50:43.412Z</updated>
+    <updated>2022-09-02T08:25:19.012Z</updated>
     
     <summary type="html">
     
@@ -135,7 +161,7 @@
       
         
         
-          &lt;h1 id=&quot;C-STL-超全总结-基于算法竞赛（悠享版）&quot;&gt;&lt;a href=&quot;#C-STL-超全总结-基于算法竞赛（悠享版）&quot; class=&quot;headerlink&quot; title=&quot;C++ STL 超全总结-基于算法竞赛（悠享版）&quot;&gt;&lt;/a&gt;C++ STL
+          &lt;h1 id=&quot;C-STL-总结-基于算法竞赛（悠享版）&quot;&gt;&lt;a href=&quot;#C-STL-总结-基于算法竞赛（悠享版）&quot; class=&quot;headerlink&quot; title=&quot;C++ STL 总结-基于算法竞赛（悠享版）&quot;&gt;&lt;/a&gt;C++ STL
         
       
     
