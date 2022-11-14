@@ -1010,7 +1010,7 @@ priority_queue<span class="token operator">&lt;</span>Point<span class="token pu
 <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>优先队列的定义</p>
 <pre class="line-numbers language-cpp"><code class="language-cpp">priority_queue<span class="token operator">&lt;</span>Point<span class="token operator">></span> q<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><strong>注意：</strong> 优先对列自定义排序规则和<code>sort()</code>函数定义<code>cmp</code>函数很相似，但是最后返回的情况是<strong>相反</strong>的。即相同的符号，最后定义的排列顺序是完全相反的。<br>所以只需要记住<code>sort</code>的排序规则和优先队列的排序规则是相反的就可以了。</p>
+<p><strong>注意：</strong> 优先队列自定义排序规则和<code>sort()</code>函数定义<code>cmp</code>函数很相似，但是最后返回的情况是<strong>相反</strong>的。即相同的符号，最后定义的排列顺序是完全相反的。<br>所以只需要记住<code>sort</code>的排序规则和优先队列的排序规则是相反的就可以了。</p>
 <hr>
 <h3 id="5-4-存储特殊类型的优先级"><a href="#5-4-存储特殊类型的优先级" class="headerlink" title="5.4 存储特殊类型的优先级"></a>5.4 存储特殊类型的优先级</h3><h4 id="5-4-1-存储pair类型"><a href="#5-4-1-存储pair类型" class="headerlink" title="5.4.1 存储pair类型"></a>5.4.1 存储pair类型</h4><ul>
 <li>排序规则：<br>默认先对<code>pair</code>的<code>first</code>进行降序排序，然后再对<code>second</code>降序排序<br>对<code>first</code>先排序，大的排在前面，如果<code>first</code>元素相同，再对<code>second</code>元素排序，保持大的在前面。</li>
