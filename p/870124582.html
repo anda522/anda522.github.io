@@ -343,7 +343,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -506,14 +506,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    12.9k
+                    13.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    54 分
+                    55 分
                 </div>
                 
                 
@@ -2199,6 +2199,21 @@ mn <span class="token operator">=</span> <span class="token function">min</span>
 <pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">//找到a,b,c,d的最大值和最小值</span>
 mx <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span><span class="token punctuation">{</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">,</span> d<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 mn <span class="token operator">=</span> <span class="token function">min</span><span class="token punctuation">(</span><span class="token punctuation">{</span>a<span class="token punctuation">,</span> b<span class="token punctuation">,</span> c<span class="token punctuation">,</span> d<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="minmax-a-b"><a href="#minmax-a-b" class="headerlink" title="minmax(a, b)"></a><code>minmax(a, b)</code></h2><p><strong>复杂度：</strong> $O(1)$</p>
+<blockquote>
+<p>返回一个<code>pair</code>类型，第一个元素是<code>min(a, b)</code>， 第二个元素是<code>max(a, b)</code></p>
+</blockquote>
+<pre class="line-numbers language-cpp"><code class="language-cpp">pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">></span> t <span class="token operator">=</span> <span class="token function">minmax</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// t.first = 2, t.second = 4</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="minmax-element-beg-end"><a href="#minmax-element-beg-end" class="headerlink" title="minmax_element(beg, end)"></a><code>minmax_element(beg, end)</code></h2><p><strong>复杂度：</strong> $O(N)$</p>
+<blockquote>
+<p>返回序列中的最小和最大值，返回类型为<code>pair</code></p>
+</blockquote>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">a</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">iota</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">></span> t <span class="token operator">=</span> <span class="token function">minmax_element</span><span class="token punctuation">(</span>a<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> a<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// t.first = 1, t.second = 10</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="nth-element-beg-nth-end"><a href="#nth-element-beg-nth-end" class="headerlink" title="nth_element(beg,nth,end)"></a><code>nth_element(beg,nth,end)</code></h2><p><strong>复杂度：</strong> 平均$O(N)$</p>
 <blockquote>
 <p>寻找第序列第n小的值</p>
@@ -2258,10 +2273,17 @@ cout <span class="token operator">&lt;&lt;</span> a<span class="token punctuatio
 <span class="token comment" spellcheck="true">//前五个元素降序有序</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="random-shuffle"><a href="#random-shuffle" class="headerlink" title="random_shuffle()"></a><code>random_shuffle()</code></h2><p><strong>复杂度：</strong> $O(N)$</p>
 <blockquote>
-<p>对序列随机重排</p>
+<ol>
+<li>随机打乱序列的顺序</li>
+<li>在 <code>C++14</code> 中被弃用，在 <code>C++17</code> 中被废除，C++11之后应尽量使用<code>shuffle</code>来代替。</li>
+</ol>
 </blockquote>
-<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">//对a数组随机重排</span>
-<span class="token function">random_shuffle</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> a <span class="token operator">+</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-cpp"><code class="language-cpp">vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">b</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">iota</span><span class="token punctuation">(</span>b<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> b<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 序列b递增赋值 1, 2, 3, 4,...</span>
+<span class="token comment" spellcheck="true">//对a数组随机重排</span>
+<span class="token function">random_shuffle</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> a <span class="token operator">+</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// C++11之后尽量使用shuffle</span>
+<span class="token function">shuffle</span><span class="token punctuation">(</span>b<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> b<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="reverse-beg-end"><a href="#reverse-beg-end" class="headerlink" title="reverse(beg,end)"></a><code>reverse(beg,end)</code></h2><p><strong>复杂度：</strong> $O(N)$</p>
 <blockquote>
 <p>对序列进行翻转</p>
@@ -2351,7 +2373,11 @@ cout <span class="token operator">&lt;&lt;</span> <span class="token function">t
 <p><code>__gcd(12,15) = 3</code></p>
 <p><code>__gcd(21,0) = 21</code></p>
 <h2 id="lg-a"><a href="#lg-a" class="headerlink" title="__lg(a)"></a><code>__lg(a)</code></h2><blockquote>
-<p>求一个数二进制下最高位位于第几位（从<strong>第0位</strong>开始）（或二进制数下有几位）</p>
+<ol>
+<li>求一个数二进制下最高位位于第几位（从<strong>第0位</strong>开始）（或二进制数下有几位）</li>
+<li><code>__lg(x)</code>相当于返回$\lfloor log_2 x \rfloor$</li>
+<li>复杂度$O(1)$</li>
+</ol>
 </blockquote>
 <p><code>__lg(8) = 3</code></p>
 <p><code>__lg(15) = 3</code></p>
@@ -2372,6 +2398,12 @@ cout <span class="token operator">&lt;&lt;</span> <span class="token function">t
 <span class="token comment" spellcheck="true">//因为共有6位,默认数据范围为32位，32 - 6 = 26</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h3 id="builtin-parity-x"><a href="#builtin-parity-x" class="headerlink" title="__builtin_parity(x)"></a><code>__builtin_parity(x)</code></h3><blockquote>
 <p><code>x</code>中1的个数的奇偶性， 奇数输出<code>1</code>，偶数输出<code>0</code></p>
+</blockquote>
+<blockquote>
+<p>可参考链接：</p>
+<ol>
+<li><a href="https://www.luogu.com.cn/blog/AccRobin/grammar-candies" target="_blank" rel="noopener">C++语法糖</a> <a href="https://www.luogu.com.cn/blog/AccRobin/grammar-candies" target="_blank" rel="noopener">https://www.luogu.com.cn/blog/AccRobin/grammar-candies</a></li>
+</ol>
 </blockquote>
 
             </div>
@@ -2869,7 +2901,7 @@ cout <span class="token operator">&lt;&lt;</span> <span class="token function">t
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="树上拓扑序计数|树形DP">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="树上拓扑序计数|树形DP">
                         
                         <span class="card-title">树上拓扑序计数|树形DP</span>
                     </div>
@@ -2923,7 +2955,7 @@ cout <span class="token operator">&lt;&lt;</span> <span class="token function">t
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="CF1055C Lucky Days|裴蜀定理">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="CF1055C Lucky Days|裴蜀定理">
                         
                         <span class="card-title">CF1055C Lucky Days|裴蜀定理</span>
                     </div>
@@ -3135,7 +3167,7 @@ cout <span class="token operator">&lt;&lt;</span> <span class="token function">t
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">38.8k</span>
+            <span class="white-color">39k</span>
             
 
             <br>
