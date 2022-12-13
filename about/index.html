@@ -535,7 +535,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
         },
         xAxis: {
             type: 'category',
-            data: ["2021-11","2021-12","2022-01","2022-02","2022-03","2022-04","2022-05","2022-06","2022-07","2022-08","2022-09","2022-10","2022-11"]
+            data: ["2021-12","2022-01","2022-02","2022-03","2022-04","2022-05","2022-06","2022-07","2022-08","2022-09","2022-10","2022-11","2022-12"]
         },
         yAxis: {
             type: 'value',
@@ -545,7 +545,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
                 name: '文章篇数',
                 type: 'line',
                 color: ['#6772e5'],
-                data: [0,0,0,0,0,0,0,7,3,8,1,0,0],
+                data: [0,0,0,0,0,0,7,3,8,1,0,0,0],
                 markPoint: {
                     symbolSize: 45,
                     color: ['#fa755a','#3ecf8e','#82d3f4'],
@@ -587,7 +587,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"知识总结","value":3},{"name":"思考总结","value":1},{"name":"多校","value":3},{"name":"数论","value":3},{"name":"图论","value":2},{"name":"AT","value":1},{"name":"STL","value":2},{"name":"树","value":1},{"name":"nginx","value":1},{"name":"DP","value":1},{"name":"树形DP","value":1}],
+                data: [{"name":"知识总结","value":3},{"name":"思考总结","value":1},{"name":"图论","value":2},{"name":"多校","value":3},{"name":"AT","value":1},{"name":"STL","value":2},{"name":"树","value":1},{"name":"数论","value":3},{"name":"DP","value":1},{"name":"nginx","value":1},{"name":"树形DP","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -611,7 +611,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
         xAxis: [
             {
                 type: 'category',
-                data: ["学习总结","多校","数论","树链剖分","C++","STL","DFS","CF","组合数学","裴蜀定理"]
+                data: ["学习总结","多校","树链剖分","C++","STL","DFS","CF","数论","组合数学","AT"]
             }
         ],
         yAxis: [
@@ -769,26 +769,14 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
             
             
             
-            <a href="/tags/多校/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">多校</span>
-            </a>
-            
-            
-            
-            <a href="/tags/数论/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">数论</span>
-            </a>
-            
-            
-            
-            <a href="/tags/裴蜀定理/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">裴蜀定理</span>
-            </a>
-            
-            
-            
             <a href="/tags/树链剖分/" target="_blank">
                 <span class="chip center-align waves-effect waves-light chip-default">树链剖分</span>
+            </a>
+            
+            
+            
+            <a href="/tags/多校/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">多校</span>
             </a>
             
             
@@ -825,8 +813,20 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
             
             
             
-            <a href="/tags/git/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">git</span>
+            <a href="/tags/数论/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">数论</span>
+            </a>
+            
+            
+            
+            <a href="/tags/裴蜀定理/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">裴蜀定理</span>
+            </a>
+            
+            
+            
+            <a href="/tags/DP/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">DP</span>
             </a>
             
             
@@ -843,14 +843,14 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
             
             
             
-            <a href="/tags/nginx/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">nginx</span>
+            <a href="/tags/git/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">git</span>
             </a>
             
             
             
-            <a href="/tags/DP/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">DP</span>
+            <a href="/tags/nginx/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">nginx</span>
             </a>
             
             
@@ -895,26 +895,28 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
 [English Version](/medias/files/cv-en.pdf) -->
 
 <h1 id="太菜了，无法展示"><a href="#太菜了，无法展示" class="headerlink" title="太菜了，无法展示"></a>太菜了，无法展示</h1><h2 id="教育背景"><a href="#教育背景" class="headerlink" title="教育背景"></a>教育背景</h2><ul>
-<li><p><b>本科 郑州大学 物联网工程</b><br>2020/09 - 2021/09, 4 / 240</p>
-<p>2021/09 - 2022/09, 4 / 240</p>
+<li><p><b>本科 郑州大学 物联网工程</b> </p>
+<p><strong>综合测评</strong><br>2020/09 - 2021/09, 4 / 240</p>
+<p>2021/09 - 2022/09, 3 / 240</p>
 </li>
 </ul>
 <h2 id="获奖情况"><a href="#获奖情况" class="headerlink" title="获奖情况"></a>获奖情况</h2><h3 id="2020"><a href="#2020" class="headerlink" title="2020"></a>2020</h3><ul>
 <li><b>国家励志奖学金</b></li>
-<li><strong>ICPC省银</strong></li>
+<li><strong>ICPC省赛银牌</strong></li>
 </ul>
 <h3 id="2021"><a href="#2021" class="headerlink" title="2021"></a>2021</h3><ul>
-<li><strong>CCPC省银</strong></li>
+<li><strong>CCPC省赛银牌</strong></li>
 </ul>
 <h3 id="2022"><a href="#2022" class="headerlink" title="2022"></a>2022</h3><ul>
-<li><strong>CCPC省金</strong></li>
+<li><strong>CCPC省赛金牌</strong></li>
+<li><strong>CCPC广州站银牌</strong></li>
 </ul>
 <h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><ul>
 <li><p><b>电子邮箱</b><br><a href="mailto:wyq522208@qq.com" target="_blank" rel="noopener">wyq522208@qq.com</a></p>
 </li>
 <li><p><b>QQ</b><br>2579272746</p>
 </li>
-<li><p><b>QQ 技术交流群</b><br>231756780</p>
+<li><p><b>QQ 技术交流群</b><br>231756780 （基本没人，哈哈）</p>
 </li>
 </ul>
 <p><img src="/medias/gzh.jpg" alt></p>
@@ -996,8 +998,8 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
     $(document).ready(function () {
 
         var int = setInterval(fixCount, 50);
-        var pvcountOffset = 80000;
-        var uvcountOffset = 80000;
+        var pvcountOffset = 0;
+        var uvcountOffset = 0;
 
         function fixCount() {
             if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
