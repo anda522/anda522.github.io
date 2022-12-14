@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2022-09-07T14:31:34.224Z</updated>
+  <updated>2022-12-14T14:01:57.133Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Pytorch入门知识总结</title>
+    <link href="http://wyqz.top/p/1888017128.html"/>
+    <id>http://wyqz.top/p/1888017128.html</id>
+    <published>2022-12-14T13:53:28.000Z</published>
+    <updated>2022-12-14T14:01:57.133Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Pytorch深度学习入门知识总结&quot;&gt;&lt;a href=&quot;#Pytorch深度学习入门知识总结&quot; class=&quot;headerlink&quot; title=&quot;Pytorch深度学习入门知识总结&quot;&gt;&lt;/a&gt;Pytorch深度学习入门知识总结&lt;/h1&gt;&lt;h1
+        
+      
+    
+    </summary>
+    
+      <category term="知识总结" scheme="http://wyqz.top/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>2022牛客多校补题3</title>
