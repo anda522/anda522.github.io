@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2022-12-14T14:01:57.133Z</updated>
+  <updated>2022-12-28T09:14:18.752Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>机器学习基础知识总结</title>
+    <link href="http://wyqz.top/p/808139430.html"/>
+    <id>http://wyqz.top/p/808139430.html</id>
+    <published>2022-12-27T09:04:31.000Z</published>
+    <updated>2022-12-28T09:14:18.752Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;机器学习基础概念知识总结&quot;&gt;&lt;a href=&quot;#机器学习基础概念知识总结&quot; class=&quot;headerlink&quot; title=&quot;机器学习基础概念知识总结&quot;&gt;&lt;/a&gt;机器学习基础概念知识总结&lt;/h1&gt;&lt;h1 id=&quot;机器学习环境搭建&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="知识总结" scheme="http://wyqz.top/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>Pytorch入门知识总结</title>
@@ -533,36 +559,6 @@
     
     
       <category term="数论" scheme="http://wyqz.top/tags/%E6%95%B0%E8%AE%BA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++ STL超全总结</title>
-    <link href="http://wyqz.top/p/16970766.html"/>
-    <id>http://wyqz.top/p/16970766.html</id>
-    <published>2022-06-22T07:54:47.000Z</published>
-    <updated>2022-08-10T00:45:00.621Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;C-STL常用内容总结&quot;&gt;&lt;a href=&quot;#C-STL常用内容总结&quot; class=&quot;headerlink&quot; title=&quot;C++ STL常用内容总结&quot;&gt;&lt;/a&gt;C++
-        
-      
-    
-    </summary>
-    
-      <category term="STL" scheme="http://wyqz.top/categories/STL/"/>
-    
-    
-      <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
-    
-      <category term="C++" scheme="http://wyqz.top/tags/C/"/>
-    
-      <category term="STL" scheme="http://wyqz.top/tags/STL/"/>
     
   </entry>
   
