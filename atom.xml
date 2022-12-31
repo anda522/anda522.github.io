@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2022-12-28T09:14:18.752Z</updated>
+  <updated>2022-12-31T06:20:03.546Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://wyqz.top/p/808139430.html"/>
     <id>http://wyqz.top/p/808139430.html</id>
     <published>2022-12-27T09:04:31.000Z</published>
-    <updated>2022-12-28T09:14:18.752Z</updated>
+    <updated>2022-12-31T06:20:03.546Z</updated>
     
     <summary type="html">
     
@@ -194,9 +194,9 @@
       <category term="树形DP" scheme="http://wyqz.top/categories/%E6%A0%91%E5%BD%A2DP/"/>
     
     
-      <category term="树形DP" scheme="http://wyqz.top/tags/%E6%A0%91%E5%BD%A2DP/"/>
-    
       <category term="组合数学" scheme="http://wyqz.top/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
+    
+      <category term="树形DP" scheme="http://wyqz.top/tags/%E6%A0%91%E5%BD%A2DP/"/>
     
   </entry>
   
@@ -306,11 +306,11 @@
       <category term="树" scheme="http://wyqz.top/categories/%E6%A0%91/"/>
     
     
-      <category term="CF" scheme="http://wyqz.top/tags/CF/"/>
-    
       <category term="DFS" scheme="http://wyqz.top/tags/DFS/"/>
     
       <category term="树" scheme="http://wyqz.top/tags/%E6%A0%91/"/>
+    
+      <category term="CF" scheme="http://wyqz.top/tags/CF/"/>
     
   </entry>
   
@@ -529,9 +529,9 @@
       <category term="数论" scheme="http://wyqz.top/categories/%E6%95%B0%E8%AE%BA/"/>
     
     
-      <category term="组合数学" scheme="http://wyqz.top/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
-    
       <category term="逆元" scheme="http://wyqz.top/tags/%E9%80%86%E5%85%83/"/>
+    
+      <category term="组合数学" scheme="http://wyqz.top/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   

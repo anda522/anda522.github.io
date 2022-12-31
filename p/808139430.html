@@ -342,7 +342,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -497,14 +497,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    4.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    17 分
                 </div>
                 
                 
@@ -583,7 +583,165 @@
 </blockquote>
 <p>多分类问题：</p>
 <p><img src="808139430/image-20221228171310763.png" alt="多分类"></p>
-
+<h1 id="模型评估标准"><a href="#模型评估标准" class="headerlink" title="模型评估标准"></a>模型评估标准</h1><h2 id="1-回归模型评估"><a href="#1-回归模型评估" class="headerlink" title="1 回归模型评估"></a>1 回归模型评估</h2><h3 id="1-1-平均绝对误差（Mean-Absolute-Error，MAE）"><a href="#1-1-平均绝对误差（Mean-Absolute-Error，MAE）" class="headerlink" title="1.1 平均绝对误差（Mean Absolute Error，MAE）"></a>1.1 平均绝对误差（Mean Absolute Error，MAE）</h3><p>平均绝对误差就是指预测值与真实值之间平均相差多大<br>$$<br>MAE = \frac{1}{m}\sum \limits _{i = 1}^m \lvert f_i - y_i \rvert<br>$$</p>
+<h3 id="1-2-均方误差（Mean-Squared-Error，MSE）"><a href="#1-2-均方误差（Mean-Squared-Error，MSE）" class="headerlink" title="1.2 均方误差（Mean Squared Error，MSE）"></a>1.2 均方误差（Mean Squared Error，MSE）</h3><p>观测值与真值偏差的平方和与观测次数的比值<br>$$<br>MSE = \frac{1}{m} \sum \limits_{i = 1}^m(f_i - y_i)^2<br>$$<br>这也是线性回归中最常用的损失函数，线性回归过程中尽量让该损失函数最小。那么模型之间的对比也可以用它来比较。</p>
+<p>MSE可以评价数据的变化程度，MSE的值越小，说明预测模型描述实验数据具有更好的精确度。</p>
+<h3 id="1-3-R-square（决定系数）"><a href="#1-3-R-square（决定系数）" class="headerlink" title="1.3 R-square（决定系数）"></a>1.3 R-square（决定系数）</h3><p>$$<br>R^2 = 1 - \frac{\sum(Y_{actual} - Y_{predict})^2}{\sum(Y_{actual} - Y_{mean})^2}<br>$$</p>
+<h3 id="1-4-Adjusted-R-Square（校正决定系数）"><a href="#1-4-Adjusted-R-Square（校正决定系数）" class="headerlink" title="1.4 Adjusted R-Square（校正决定系数）"></a>1.4 Adjusted R-Square（校正决定系数）</h3><p>$$<br>R^2_{adjusted} = 1 - \frac{(1 - R^2)(n - 1)}{n - p - 1}<br>$$</p>
+<p>n为样本数量，p为特征数量</p>
+<p>消除了样本数量和特征数量的影响</p>
+<h3 id="1-5-交叉验证"><a href="#1-5-交叉验证" class="headerlink" title="1.5 交叉验证"></a>1.5 交叉验证</h3><p>我们有一个总的数据集，将总数据集切分，例如，将数据分为训练集（80%）和测试集（20%），训练集用来训练model，测试集用来最终的测试。</p>
+<p>训练集还再平均进行切分为3份（标号为1、2、3）。</p>
+<blockquote>
+<p>测试集和训练集的比例自己定。</p>
+</blockquote>
+<p>交叉验证就是在训练集中，采用2份数据来训练，用另一份数据来验证训练出的模型的参数，进行3次。</p>
+<p>即：1 + 2来训练，3验证；2 + 3来训练，1来验证；1 + 3来训练，2来验证。</p>
+<p>为了让模型的评估效果比较好，最后将3次的参数取平均值。</p>
+<blockquote>
+<p>无论分类还是回归模型，都可以利用交叉验证，进行模型评估</p>
+<p>sklearn模块中有交叉验证函数，例如<code>sklearn.cross_validation</code> 中的 <code>train_testsplit</code> 函数</p>
+</blockquote>
+<p>交叉验证主要是为了防止某一部分数据比较简单，导致模型的效果比较高。</p>
+<h2 id="2-分类模型评估"><a href="#2-分类模型评估" class="headerlink" title="2 分类模型评估"></a>2 分类模型评估</h2><h3 id="2-1-准确率、精确率、召回率、f1-score"><a href="#2-1-准确率、精确率、召回率、f1-score" class="headerlink" title="2.1 准确率、精确率、召回率、f1_score"></a>2.1 准确率、精确率、召回率、f1_score</h3><ul>
+<li><p>准确率（Accuracy）的定义是：对于给定的测试集，分类模型正确分类的样本数与总样本数之比；</p>
+</li>
+<li><p>精确率（Precision）的定义是：对于给定测试集的某一个类别，分类模型预测正确的比例，或者说：分类模型预测的正样本中有多少是真正的正样本；</p>
+</li>
+<li><p>召回率（Recall）的定义为：对于给定测试集的某一个类别，样本中的正类有多少被分类模型预测正确；</p>
+<blockquote>
+<p>假设有1000个人，其中990个人正常，有10个人患有癌症，模型旨在预测哪些人是患有癌症的。</p>
+<p>如果模型预测1000个人中都是正常的，没有癌症患者，那么可以说模型的精度是$\frac{990}{1000}=0.99$。虽然精度很高，但是都是正样本，没有负样本，模型是无用的，因为一个患者都没有找到。因此无法用精度来评估模型，而是使用recall召回率来评估。</p>
+</blockquote>
+</li>
+<li><p>F1_score，在理想情况下，我们希望模型的精确率越高越好，同时召回率也越高越高，但是，现实情况往往事与愿违，在现实情况下，精确率和召回率像是坐在跷跷板上一样，往往出现一个值升高，另一个值降低，那么，有没有一个指标来综合考虑精确率和召回率了，这个指标就是F值。F值的计算公式为：<br>$$<br>F = \frac{(a ^ 2 + 1) <em> P </em> R}{a ^ 2 * (P + R)}<br>$$</p>
+<blockquote>
+<p>P: Precision， R: Recall, a：权重因子</p>
+<p>当a=1时，F值便是F1值，代表精确率和召回率的权重是一样的，是最常用的一种评价指标。</p>
+<p>F1的计算公式为：$F1 = \frac{2 <em> P </em> R}{P + R}$</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="2-2-混淆矩阵"><a href="#2-2-混淆矩阵" class="headerlink" title="2.2 混淆矩阵"></a>2.2 混淆矩阵</h3><p>混淆矩阵也称误差矩阵，是表示精度评价的一种标准格式，用n行n列的矩阵形式来表示。</p>
+<p>具体评价指标有总体精度、制图精度、用户精度等，这些精度指标从不同的侧面反映了图像分类的精度。</p>
+<p>下面是一个混淆矩阵，<code>Actual</code>代表真实值，<code>Predicted</code>代表预测值，预测的是标签号（因为是分类任务，主要对标签进行分类）。</p>
+<blockquote>
+<p>下面是我对TP、TN、FP、FN四个值的理解（助记）</p>
+<p>TP：预测正确，预测成1</p>
+<p>TN：预测正确，预测成0</p>
+<p>FP：预测错误，预测成1</p>
+<p>FN：预测错误，预测成0</p>
+</blockquote>
+<p><img src="808139430/image-20221230142020907.png" alt="混淆矩阵"></p>
+<p>可以通过上面四个值计算相应的评估值，见下图。</p>
+<p><img src="808139430/image-20221230143921870.png" alt="混淆矩阵计算评估指标"></p>
+<h1 id="回归模型相关技巧"><a href="#回归模型相关技巧" class="headerlink" title="回归模型相关技巧"></a>回归模型相关技巧</h1><h2 id="1-下采样和上采样"><a href="#1-下采样和上采样" class="headerlink" title="1 下采样和上采样"></a>1 下采样和上采样</h2><p>在分类问题的数据中，很容易出现正反数据集数量存在极大的差距，这类数据直接用于训练不利于模型的构架，所以我们需要对数据进行些许处理。</p>
+<p>很容易想到，合理的数据集应该是正反数据集数量应接近，那就存在两种策略：</p>
+<p>下采样策略：把数量多的减少到与数量少的相近</p>
+<p>上（过）采样策略：把数量少的增加到与数量多的相近</p>
+<ul>
+<li>下采样：</li>
+</ul>
+<p><img src="808139430/2.png" alt="img"></p>
+<ul>
+<li>上采样：SMOTE算法</li>
+</ul>
+<p><strong>步骤：</strong></p>
+<p>（1）对于少数类中每一个样本x，以<strong>欧氏距离（两点之间距离）</strong>为标准计算它到少数类样本集中所有样本的距离，得到其<code>k</code>近邻（所有距离排序后前<code>k</code>小的距离）</p>
+<p>（2）根据样本不平衡比例设置一个采样比例以确定采样倍率N，对于每一个少数类样本x，从其k近邻中随机选择若干个样本，假设选择的近邻为xn</p>
+<p>（3）对于每一个随机选出的近邻xn，分别与原样本按照如下的公式构建新的样本。<br>$$<br>x_{new} = x + rand(0, 1) \times (\widetilde x - x)<br>$$</p>
+<blockquote>
+<p>$(\widetilde x - x)$ 相当于距离 $d_i$ （欧几里得距离），那么每个 $d_i$ 都可以生成一个新的数据。</p>
+</blockquote>
+<p><img src="808139430/image-20221230161807567.png" alt="SMOTE算法原理图"></p>
+<h2 id="2-正则化惩罚"><a href="#2-正则化惩罚" class="headerlink" title="2 正则化惩罚"></a>2 正则化惩罚</h2><p>加上了正则化项能在一定程度上避免过拟合</p>
+<h1 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h1><h2 id="1-概述-1"><a href="#1-概述-1" class="headerlink" title="1 概述"></a>1 概述</h2><h3 id="1-1-定义"><a href="#1-1-定义" class="headerlink" title="1.1 定义"></a>1.1 定义</h3><p>决策树是一种解决分类问题的算法，决策树算法采用树形结构，使用层层推理来实现最终的分类。</p>
+<p>决策树即可以做分类，也可以做回归。它主要分为两种：<strong>分类树</strong> 和 <strong>回归树</strong>。</p>
+<h3 id="1-2-决策树算法"><a href="#1-2-决策树算法" class="headerlink" title="1.2 决策树算法"></a>1.2 决策树算法</h3><ul>
+<li>第一个决策树算法: CLS （Concept Learning System）</li>
+<li>使决策树受到关注、成为机器学习主流技术的算法: ID3</li>
+<li>最常用的决策树算法: C4.5</li>
+<li>可以用于回归任务的决策树算法: CART （Classification and Regression Tree）</li>
+<li>基于决策树的最强大算法: RF （Random Forest）</li>
+</ul>
+<h3 id="1-3-结构"><a href="#1-3-结构" class="headerlink" title="1.3 结构"></a>1.3 结构</h3><p>决策树由下面几种元素构成：</p>
+<ul>
+<li>根节点：包含样本的全集（全部训练数据）</li>
+<li>内部节点：对应特征属性测试</li>
+<li>叶节点：代表决策的结果</li>
+</ul>
+<p><img src="808139430/image-20221230164038527.png" alt="决策树结构"></p>
+<p>决策树学习的<strong>目的</strong>是为了产生一棵泛化能力强的决策树</p>
+<h2 id="2-决策树构建"><a href="#2-决策树构建" class="headerlink" title="2 决策树构建"></a>2 决策树构建</h2><h3 id="2-1-构建过程"><a href="#2-1-构建过程" class="headerlink" title="2.1 构建过程"></a>2.1 构建过程</h3><p>整体策略：自上而下分而治之</p>
+<p>决策树的构建过程就是一个<strong>自根至叶的递归过程</strong>， 在每个中间结点寻找一个<strong>划分</strong>属性。</p>
+<p>大致过程：</p>
+<ul>
+<li>开始：构建根节点，所有训练数据都放在根节点，选择x个最优特征，按着这一特征将训练数据集分割成子集，进入子节点。</li>
+<li>所有子集按内部节点的属性递归地进行分割。</li>
+<li>如果这些子集已经能够被基本正确分类，那么构建叶节点，并将这些子集分到所对应的叶节点去。</li>
+<li>每个子集都被分到叶节点上，即都有了明确的类，这样就生成了一颗决策树。</li>
+</ul>
+<p>递归的三种停止条件：</p>
+<ul>
+<li>当前结点包含的样本全属于同一类别，无需划分；</li>
+<li>当前属性集为空，或是所有样本在所有属性上取值相同，无法划分;</li>
+<li>当前结点包含的样本集合为空，不能划分。</li>
+</ul>
+<h3 id="2-2-特征选择"><a href="#2-2-特征选择" class="headerlink" title="2.2 特征选择"></a>2.2 特征选择</h3><p><strong>信息熵</strong>：随机变量的不确定性。<br>$$<br>H(X) = - \sum p_i log_2 p_i \hspace{2em} \text{i = 1, 2, …, n}<br>$$</p>
+<blockquote>
+<p>例：</p>
+<p>A集合 $[1, 1, 1, 1, 1, 1, 1, 1, 2, 2]$</p>
+<p>B集合$[1, 2, 3, 4, 5, 6, 7, 8, 9, 1]$</p>
+<p>A集合熵值低于B集合熵值，因为A集合中只有两种类别，B集合中类别比较多（结构比较乱），熵值就会比较大</p>
+</blockquote>
+<p><strong>信息增益：</strong> 表示特征X使得类Y的不确定性减少的程度（熵值减少），即当前划分对信息熵所造成的变化。</p>
+<p>信息增益越大，表示特征a来划分所减少的熵最大，即提升最大，应当作为根节点。</p>
+<h2 id="3-决策树算法"><a href="#3-决策树算法" class="headerlink" title="3 决策树算法"></a>3 决策树算法</h2><h3 id="3-1-ID3（信息增益）"><a href="#3-1-ID3（信息增益）" class="headerlink" title="3.1 ID3（信息增益）"></a>3.1 ID3（信息增益）</h3><p>下面是基于信息增益的ID3算法的实例：</p>
+<p>我们有14天的数据，4个特征条件：<strong>天气，温度，湿度，是否有风</strong>。最终结果是去玩不玩。</p>
+<p><img src="808139430/image-20221231110826312.png" alt="数据"></p>
+<p><img src="808139430/image-20221231110929844.png" alt="划分方式"></p>
+<p>上面有四种划分方式，我们需要判断谁来当根节点，根据的主要就是信息增益这个指标。下面计算信息增益来判断根节点。</p>
+<p>总的数据中，9天玩，5天不玩，熵值为：<br>$$<br>-\frac{9}{14}log_2 \frac{9}{14} - \frac{5}{14}log_2 \frac{5}{14} = 0.940<br>$$<br>然后对4个特征逐个分析：</p>
+<ul>
+<li><p>outlook</p>
+<ul>
+<li><code>outlook = sunny</code>时，熵值为0.971，取值为sunny的概率为 $\frac{5}{14}$</li>
+<li><code>outlook = overcast</code>时，熵值为0，取值为overcast的概率为 $\frac{4}{14}$</li>
+<li><code>outlook = rainy</code>时，熵值为0.971，取值为rainy的概率为 $\frac{5}{14}$</li>
+</ul>
+<p>熵值为：<br>$$<br>\frac{5}{14} \times 0.971 + \frac{4}{14} \times 0 + \frac{5}{14} \times 0.971 = 0.693<br>$$<br>信息增益：系统熵值从0.940下降到0.693，增益为0.247。</p>
+</li>
+<li><p>其他特征按照相同方法来做</p>
+</li>
+</ul>
+<p>计算出所有的信息增益之后，选择<strong>有最大的信息增益的特征</strong>作为根节点。</p>
+<h3 id="3-2-C4-5（信息增益率）"><a href="#3-2-C4-5（信息增益率）" class="headerlink" title="3.2 C4.5（信息增益率）"></a>3.2 C4.5（信息增益率）</h3><blockquote>
+<p>基于信息增益的决策树算法会有哪些问题：</p>
+<p>如果有一个特征：id，代表样本的编号，以上述数据为例，id为从1到14，如果计算id特征的根节点，发现信息增益是最大的，因为每一个子节点的信息熵值都为0。</p>
+</blockquote>
+<p>信息增益率：（解决了ID3的问题，考虑自身熵，信息增益除以自身熵）<br>$$<br>\frac{G}{H(x)} \hspace{2em} \text{G:信息增益, H(x):熵值}<br>$$</p>
+<h3 id="3-3-CART（GINI系数）"><a href="#3-3-CART（GINI系数）" class="headerlink" title="3.3 CART（GINI系数）"></a>3.3 CART（GINI系数）</h3><p>使用基尼系数作为衡量标准。<br>$$<br>Gini(p) = \sum \limits _{k = 1}^K p_k (1 - p_k) = 1 - \sum \limits _{k = 1}^K p_k^2<br>$$</p>
+<h2 id="3-决策树剪枝"><a href="#3-决策树剪枝" class="headerlink" title="3 决策树剪枝"></a>3 决策树剪枝</h2><h3 id="3-1-预剪枝"><a href="#3-1-预剪枝" class="headerlink" title="3.1 预剪枝"></a>3.1 预剪枝</h3><p>在建立决策树边的时候进行剪枝的操作，比较使用实用。</p>
+<p>剪枝策略：</p>
+<ul>
+<li>限制深度</li>
+<li>限制叶子结点个数</li>
+<li>限制叶子结点样本数</li>
+<li>限制信息增益量等。</li>
+</ul>
+<h3 id="3-2-后剪枝"><a href="#3-2-后剪枝" class="headerlink" title="3.2 后剪枝"></a>3.2 后剪枝</h3><p>建立完决策树后进行剪枝操作。</p>
+<h2 id="4-连续值和缺失值处理"><a href="#4-连续值和缺失值处理" class="headerlink" title="4 连续值和缺失值处理"></a>4 连续值和缺失值处理</h2><ul>
+<li><p>连续值属性可取数值不是有限的，不能根据连续树形的可取值对节点进行划分。常见做法是：<strong>二分法</strong>对其进行离散化。</p>
+</li>
+<li><p>现实应用中，经常会遇到属性值<code>缺失</code>现象仅使用无缺失的样例，这是对数据的极大浪费使用带缺失值的样例，需解决：</p>
+<ul>
+<li>如何进行划分属性选择?</li>
+<li>给定划分属性，若样本在该属性上的值缺失，如何进行划分?</li>
+</ul>
+<p>基本思路：<strong>样本赋权，权重划分</strong></p>
+</li>
+</ul>
+<h1 id="集成算法-随机森林"><a href="#集成算法-随机森林" class="headerlink" title="集成算法-随机森林"></a>集成算法-随机森林</h1>
             </div>
             <hr />
 
@@ -1080,7 +1238,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="机器学习基础知识总结">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="机器学习基础知识总结">
                         
                         <span class="card-title">机器学习基础知识总结</span>
                     </div>
@@ -1133,7 +1291,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Pytorch入门知识总结">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Pytorch入门知识总结">
                         
                         <span class="card-title">Pytorch入门知识总结</span>
                     </div>
@@ -1344,7 +1502,7 @@ from torch.utils.data
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">42.6k</span>
+            <span class="white-color">45.6k</span>
             
 
             <br>
