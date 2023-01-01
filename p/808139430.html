@@ -342,7 +342,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -497,14 +497,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.5k
+                    4.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    17 分
+                    18 分
                 </div>
                 
                 
@@ -614,11 +614,11 @@
 <p>如果模型预测1000个人中都是正常的，没有癌症患者，那么可以说模型的精度是$\frac{990}{1000}=0.99$。虽然精度很高，但是都是正样本，没有负样本，模型是无用的，因为一个患者都没有找到。因此无法用精度来评估模型，而是使用recall召回率来评估。</p>
 </blockquote>
 </li>
-<li><p>F1_score，在理想情况下，我们希望模型的精确率越高越好，同时召回率也越高越高，但是，现实情况往往事与愿违，在现实情况下，精确率和召回率像是坐在跷跷板上一样，往往出现一个值升高，另一个值降低，那么，有没有一个指标来综合考虑精确率和召回率了，这个指标就是F值。F值的计算公式为：<br>$$<br>F = \frac{(a ^ 2 + 1) <em> P </em> R}{a ^ 2 * (P + R)}<br>$$</p>
+<li><p>F1_score，在理想情况下，我们希望模型的精确率越高越好，同时召回率也越高越高，但是，现实情况往往事与愿违，在现实情况下，精确率和召回率像是坐在跷跷板上一样，往往出现一个值升高，另一个值降低，那么，有没有一个指标来综合考虑精确率和召回率了，这个指标就是F值。F值的计算公式为：<br>$$<br>F = \frac{(a ^ 2 + 1) \times P \times R}{a ^ 2 \times (P + R)}<br>$$</p>
 <blockquote>
 <p>P: Precision， R: Recall, a：权重因子</p>
 <p>当a=1时，F值便是F1值，代表精确率和召回率的权重是一样的，是最常用的一种评价指标。</p>
-<p>F1的计算公式为：$F1 = \frac{2 <em> P </em> R}{P + R}$</p>
+<p>F1的计算公式为：$F1 = \frac{2 \times P \times R}{P + R}$</p>
 </blockquote>
 </li>
 </ul>
@@ -741,7 +741,21 @@
 <p>基本思路：<strong>样本赋权，权重划分</strong></p>
 </li>
 </ul>
-<h1 id="集成算法-随机森林"><a href="#集成算法-随机森林" class="headerlink" title="集成算法-随机森林"></a>集成算法-随机森林</h1>
+<h1 id="集成算法"><a href="#集成算法" class="headerlink" title="集成算法"></a>集成算法</h1><h2 id="1-概述-2"><a href="#1-概述-2" class="headerlink" title="1 概述"></a>1 概述</h2><p>集成算法：Ensemble Learning</p>
+<p>Bagging：训练多个分类器取平均<br>$$<br>f(x) = \frac{1}{M} \sum \limits_{m = 1}^M f_m(x)<br>$$<br>Boosting：从弱学习器开始加强，通过加权来训练。<br>$$<br>F_m(x) = F_{m - 1}(x) + argmin_h \sum \limits_{i = 1}^n L(y_i, F_{m - 1}(x_i) + h(x_i))<br>$$<br>Stacking：聚合多个分类或回归模型。</p>
+<h2 id="2-Bagging模型-随机森林"><a href="#2-Bagging模型-随机森林" class="headerlink" title="2 Bagging模型-随机森林"></a>2 Bagging模型-随机森林</h2><p>其实就是并行训练一堆分类器（每个分类器互相独立）。典型代表为随机森林（多个决策树并行放在一起）。</p>
+<blockquote>
+<p>随机指的是：数据随机采样，特征随机选择</p>
+<p>每个分类器喂的数据随机，数据的特征数随机。二重随机性，会让每个树基本都不一样，最终的结果也不一样。</p>
+</blockquote>
+<p>随机森林优势：</p>
+<ul>
+<li>可以处理高维度（feature多）数据，不用做特征选择</li>
+<li>训练完之后，可以给出那些feature比较重要</li>
+<li>容易做成并行化方法，速度快</li>
+<li>可以进行可视化展示，便于分析</li>
+</ul>
+
             </div>
             <hr />
 
@@ -1229,46 +1243,46 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/p/808139430.html">
+                <a href="/p/1646942053.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="机器学习基础知识总结">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="2022年度总结">
                         
-                        <span class="card-title">机器学习基础知识总结</span>
+                        <span class="card-title">2022年度总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            机器学习基础概念知识总结机器学习环境搭建
-一般使用anaconda搭建python虚拟环境（miniconda占的空间应该小一点，这个也可以）
+                            
+希望2023健康，发论文，比赛拿牌，成功上岸。
 
-使用工具库一般有科学计算库numpy，数据处理库pandas，绘图matplotlib等，需要
+今天是2023年1月1日，2022有许多不顺心的事，也有一些值得记忆的事，希望通过下面的片段来回顾这年不易的时光。
+
+能说的尽量说，不能说的你我心领神会。我发现时间让我越来越不想说什么东西
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-12-27
-                            </span>
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2023-01-01
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/知识总结/" class="post-category" target="_blank">
-                                    知识总结
+                            <a href="/categories/思考总结/" class="post-category" target="_blank">
+                                    思考总结
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1291,7 +1305,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Pytorch入门知识总结">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Pytorch入门知识总结">
                         
                         <span class="card-title">Pytorch入门知识总结</span>
                     </div>
@@ -1502,7 +1516,7 @@ from torch.utils.data
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">45.6k</span>
+            <span class="white-color">47k</span>
             
 
             <br>

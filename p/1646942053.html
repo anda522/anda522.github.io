@@ -4,17 +4,16 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Git|详解|命令, ZZU 行码棋">
+    <meta name="keywords" content="2022年度总结, ZZU 行码棋">
     <meta name="baidu-site-verification" content="code-L7AVcsbU14">
     <meta name="google-site-verification" content="x4QfrBHn9imI1RhTNCB8RD8Q2Rx6rE_zylSBptBgdZY">
     <!-- <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" /> -->
-    <meta name="description" content="Git | 详解 | 命令概念Git是基于树进行维护的，每一个节点都是一个历史版本，可以进行代码管理。
+    <meta name="description" content="
+希望2023健康，发论文，比赛拿牌，成功上岸。
 
+今天是2023年1月1日，2022有许多不顺心的事，也有一些值得记忆的事，希望通过下面的片段来回顾这年不易的时光。
 
-工作区（Workspace） 
-暂存区（Index / Stage）  
-本地仓库（Repository）  
-远程仓库（Remot">
+能说的尽量说，不能说的你我心领神会。我发现时间让我越来越不想说什么东西">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +21,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Git|详解|命令 | 行码棋</title>
+    <title>2022年度总结 | 行码棋</title>
     <link rel="icon" type="image/png" href="/medias/logo.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -345,13 +344,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Git|详解|命令
+                        2022年度总结
                     </div>
                 </div>
             </div>
@@ -462,8 +461,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/git/" target="_blank">
-                            <span class="chip bg-color">git</span>
+                        <a href="/tags/学习总结/" target="_blank">
+                            <span class="chip bg-color">学习总结</span>
                         </a>
                         
                     </div>
@@ -474,8 +473,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/知识总结/" class="post-category" target="_blank">
-                            知识总结
+                        <a href="/categories/思考总结/" class="post-category" target="_blank">
+                            思考总结
                         </a>
                         
                     </div>
@@ -486,7 +485,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-06-30
+                    2023-01-01
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -500,14 +499,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    3 分
                 </div>
                 
                 
@@ -523,114 +522,47 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Git-详解-命令"><a href="#Git-详解-命令" class="headerlink" title="Git | 详解 | 命令"></a>Git | 详解 | 命令</h1><h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>Git是基于树进行维护的，每一个节点都是一个历史版本，可以进行代码管理。</p>
-<p><img src="1843856130/webp.webp" alt="Git图示"></p>
-<blockquote>
-<p>工作区（Workspace） </p>
-<p>暂存区（Index / Stage）  </p>
-<p>本地仓库（Repository）  </p>
-<p>远程仓库（Remote）</p>
+                <blockquote>
+<p>希望2023健康，发论文，比赛拿牌，成功上岸。</p>
 </blockquote>
-<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><p><code>git config [--global] user.name xxx</code>：设置全局用户名，信息记录在<code>~/.gitconfig</code>文件中</p>
-<p><code>git config [--global] user.email xxx@xxx.com</code>：设置全局邮箱地址，信息记录在<code>~/.gitconfig</code>文件中</p>
-<p><code>git init</code>：将当前目录配置成git仓库，信息记录在隐藏的<code>.git</code>文件夹中</p>
-<p><code>git status</code>：显示有变更的文件</p>
-<p><code>git add .</code>：将当前工作区的所有文件的修改信息加入<strong>暂存区</strong></p>
-<p><code>git log</code>：查看当前分支的所有版本</p>
-<p><code>git remote add origin git@github.com:XXX/XXX.git</code>：将本地仓库关联到远程仓库</p>
-<p><code>git clone git@github.com:XXX/XXX.git</code>：将远程仓库XXX下载到当前目录下</p>
-<p><code>git branch --set-upstream-to=origin/branch_name1 branch_name2</code>：将远程的branch_name1分支与本地的branch_name2分支对应</p>
-<p><code>git push -u</code> （第一次需要-u以后不需要）：将当前分支推送到远程仓库</p>
-<p><code>git pull</code>：将远程仓库的当前分支与本地仓库的当前分支合并</p>
-<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>Git的设置文件为<code>.gitconfig</code>，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。</p>
-<p><code>git config --list</code> : 显示当前的Git配置</p>
-<p><code>git config -e [--global]</code> : 编辑Git配置文件</p>
-<p><code>git config [--global] user.name xxx</code>：设置全局用户名，信息记录在<code>~/.gitconfig</code>文件中</p>
-<p><code>git config [--global] user.email xxx@xxx.com</code>：设置全局邮箱地址，信息记录在<code>~/.gitconfig</code>文件中</p>
-<p><code>git init</code>：将当前目录配置成git仓库，信息记录在隐藏的<code>.git</code>文件夹中</p>
-<h1 id="工作区"><a href="#工作区" class="headerlink" title="工作区"></a>工作区</h1><p><code>git status</code>：显示有变更的文件</p>
-<p><code>git restore XXX</code> : 将工作区的XXX文件的修改（该修改未添加到暂存区）恢复</p>
-<p><code>git add XX</code>：将XX文件的 <strong>修改信息</strong> 添加到<strong>暂存区</strong></p>
-<p><code>git add .</code>：将当前工作区的所有文件的修改信息加入<strong>暂存区</strong></p>
-<p><code>git rm [file1] [file2] ...</code> : 删除工作区文件，并把这次删除加入到暂存区</p>
-<p><code>git diff XX</code>：查看XX文件相对于暂存区修改了哪些内容</p>
-<p><code>git checkout — XX</code>或<code>git restore XX</code>：将XX文件尚未加入暂存区的修改全部撤销</p>
+<p>今天是2023年1月1日，2022有许多不顺心的事，也有一些值得记忆的事，希望通过下面的片段来回顾这年不易的时光。</p>
 <blockquote>
-<p>更多撤销操作见下文 【撤销回退】</p>
+<p>能说的尽量说，不能说的你我心领神会。我发现时间让我越来越不想说什么东西了，想说的基本都不能说，现实陈述基本是完全禁止的，当下的环境就让人容易窒息。</p>
 </blockquote>
-<h1 id="暂存区"><a href="#暂存区" class="headerlink" title="暂存区"></a>暂存区</h1><p><code>git rm --cached XX</code>：将文件XX从暂存区中删掉，停止追踪指定文件，但该文件会保留在工作区</p>
-<p><code>git restore --staged XXX</code> ： 将<strong>暂存区</strong>的XXX清空，工作区<strong>不变</strong></p>
-<p><code>git commit -m &quot;给自己看的备注信息&quot;</code>：将<strong>暂存区</strong>的内容提交到当前分支（可持久化）</p>
-<p><code>git checkout [file]</code>: 恢复暂存区的指定文件到工作区（工作区文件发生改变）</p>
-<p><code>git reset [file]</code> : 重置暂存区的指定文件，与上一次commit保持一致，但工作区不变</p>
-<blockquote>
-<p>更多撤销操作见下文 【撤销回退】</p>
-</blockquote>
-<h1 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h1><h2 id="本地分支"><a href="#本地分支" class="headerlink" title="本地分支"></a>本地分支</h2><p><code>git branch</code>: 列出所有本地分支</p>
-<p><code>git branch branch_name</code>：创建新分支，但依然停留在当前分支</p>
-<p><code>git checkout branch_name</code>：切换到branch_name这个分支，并更新工作区</p>
-<p><code>git checkout -b branch_name</code>：创建并切换到branch_name这个分支</p>
-<p><code>git branch -m oldBranchName newBranchName</code> ： 修改本地分支名字</p>
-<p><code>git merge branch_name</code>：将分支branch_name合并到当前分支上</p>
-<p><code>git checkout -</code>： 切换到上一个分支</p>
-<p><code>git cherry-pick [commit]</code> ： 选择一个commit，合并进当前分支</p>
-<p><code>git branch -d branch_name</code>：删除本地仓库的branch_name分支</p>
-<h2 id="远程分支"><a href="#远程分支" class="headerlink" title="远程分支"></a>远程分支</h2><p><code>git branch -r</code> : 列出所有远程分支</p>
-<p><code>git branch [branch] [commit]</code>： 新建一个分支，指向指定commit</p>
-<p><code>git push origin --delete [branch-name]</code> ： 删除远程分支</p>
-<p><code>git branch -dr [remote/branch]</code> ： 删除远程分支</p>
-<h2 id="本地和远程"><a href="#本地和远程" class="headerlink" title="本地和远程"></a>本地和远程</h2><p><code>git branch -a</code> ： 列出所有本地分支和远程分支</p>
-<p><code>git branch --track [branch] [remote-branch]</code> ： 新建一个分支，与指定的远程分支建立追踪关系</p>
-<p><code>git branch --set-upstream [branch] [remote-branch]</code> ： 建立追踪关系，在现有分支与指定的远程分支之间 （现在已经不支持）</p>
-<p><code>git branch --set-upstream-to=origin/branch_name1 branch_name2</code>：将远程的branch_name1分支与本地的branch_name2分支对应</p>
-<h1 id="信息查看"><a href="#信息查看" class="headerlink" title="信息查看"></a>信息查看</h1><p><code>git log</code>：查看当前分支的所有版本</p>
-<p><code>git reflog</code>：查看HEAD指针的移动历史（包括被回滚的版本）</p>
-<p><code>git status</code> : 显示有变更的文件</p>
-<p><code>git log --stat</code> : 显示commit历史，以及每次commit发生变更的文件</p>
-<p><code>git log -S [keyword]</code>: 搜索提交历史，根据关键词</p>
-<p><code>git log [tag] HEAD --pretty=format:%s</code> : 显示某个commit之后的所有变动，每个commit占据一行</p>
-<p><code>git log [tag] HEAD --grep feature</code> : 显示某个commit之后的所有变动，其”提交说明”必须符合搜索条件</p>
-<p><code>git log --follow [file]</code>: 显示某个文件的版本历史，包括文件改名</p>
-<p><code>git whatchanged [file]</code> : 显示某个文件的版本历史，包括文件改名</p>
-<p><code>git log -p [file]</code> : 显示指定文件相关的每一次diff</p>
-<p><code>git log -5 --pretty --oneline</code>: 显示过去5次提交</p>
-<p><code>git shortlog -sn</code> : 显示所有提交过的用户，按提交次数排序</p>
-<p><code>git blame [file]</code> : 显示指定文件是什么人在什么时间修改过</p>
-<p><code>git diff</code> : 显示暂存区和工作区的差异</p>
-<p><code>git diff --cached [file]</code> : 显示暂存区和上一个commit的差异</p>
-<p><code>git diff HEAD</code>: 显示工作区与当前分支最新commit之间的差异</p>
-<p><code>git diff [first-branch]...[second-branch]</code>: 显示两次提交之间的差异</p>
-<p><code>git diff --shortstat &quot;@{0 day ago}&quot;</code> : 显示今天你写了多少行代码</p>
-<p><code>git show [commit]</code> : 显示某次提交的元数据和内容变化</p>
-<p><code>git show --name-only [commit]</code>: 显示某次提交发生变化的文件</p>
-<p><code>git show [commit]:[filename]</code> : 显示某次提交时，某个文件的内容</p>
-<h1 id="远程同步"><a href="#远程同步" class="headerlink" title="远程同步"></a>远程同步</h1><p><code>git remote add origin git@github.com:xxx/XXX.git</code>：将本地仓库关联到远程仓库</p>
-<p><code>git push -u</code> （第一次需要-u以后不需要）：将当前分支推送到远程仓库</p>
-<p><code>git push origin branch_name</code>：将本地的某个分支推送到远程仓库</p>
-<p><code>git clone git@github.com:anda522/XXX.git</code>：将远程仓库XXX下载到当前目录下</p>
-<p><code>git pull</code>：将远程仓库的当前分支与本地仓库的当前分支合并</p>
-<p><code>git pull origin branch_name</code>：将远程仓库的branch_name分支与本地仓库的当前分支合并</p>
-<p><code>git push --set-upstream origin branch_name</code>：设置本地的branch_name分支对应远程仓库的branch_name分支</p>
-<p><code>git push -d origin branch_name</code>：删除远程仓库的branch_name分支</p>
-<p><code>git checkout -t origin/branch_name</code>: 将远程的branch_name分支拉取到本地</p>
-<h1 id="撤销回退"><a href="#撤销回退" class="headerlink" title="撤销回退"></a>撤销回退</h1><p><code>git reset --hard</code>: 重置暂存区与工作区，与上一次commit保持一致</p>
-<p><code>git reset --hard HEAD^</code> 或 <code>git reset --hard HEAD~</code>：将代码库回滚到上一个版本</p>
-<p><code>git reset --hard HEAD^^</code>：往上回滚两次，以此类推</p>
-<p><code>git reset --hard HEAD~100</code>：往上回滚100个版本</p>
-<p><code>git reset --hard 版本号</code>：回滚到某一特定版本</p>
-<p><code>git stash</code>：将工作区和暂存区中尚未提交的修改存入栈中</p>
-<p><code>git stash apply</code>：将栈顶存储的修改恢复到当前分支，但不删除栈顶元素</p>
-<p><code>git stash drop</code>：删除栈顶存储的修改</p>
-<p><code>git stash pop</code>：将栈顶存储的修改恢复到当前分支，同时删除栈顶元素</p>
-<p><code>git stash list</code>：查看栈中所有元素</p>
-<p><code>git checkout [file]</code>: 恢复暂存区的指定文件到工作区</p>
-<p><code>git checkout [commit] [file]</code> : 恢复某个commit的指定文件到暂存区和工作区</p>
-<p><code>git checkout .</code> : 恢复暂存区的所有文件到工作区</p>
-<p><code>git reset [file]</code> : 重置暂存区的指定文件，与上一次commit保持一致，但工作区不变</p>
-<p><code>git reset [commit]</code>: 重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变</p>
-<p><code>git reset --hard [commit]</code> : 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致</p>
-<p><code>git reset --keep [commit]</code> : 重置当前HEAD为指定commit，但保持暂存区和工作区不变</p>
-<p><code>git revert [commit]</code> : 新建一个commit，用来撤销指定commit，后者的所有变化都将被前者抵消，并且应用到当前分支</p>
+<p>我想还是多记录一下2022年的生活状态吧。</p>
+<p>转眼一看，过的好快啊，转眼间就大三了，大学不知不觉在校内和家里过了三年之久。</p>
+<h1 id="学期片刻"><a href="#学期片刻" class="headerlink" title="学期片刻"></a>学期片刻</h1><h2 id="大二下"><a href="#大二下" class="headerlink" title="大二下"></a>大二下</h2><p>大二上的考试依然是提前的，没有复习周，三年了，考试要么是提前考试，要么是在家线上考试。</p>
+<p>大二下是我计协会长的最后半年，开学是第一次正常开学，前面疫情形势大好，活动遥遥在望。可是近邻活动举办之时（也才过了一两周），疫情形势急转直下，整个学校又是一片封控之态。</p>
+<p>哎，整个会长的任期间完全废掉了：</p>
+<ul>
+<li>院赛没法办，学校不让办（疫情影响）</li>
+<li>活动全线上</li>
+<li>活动少之又少，线上根本难以办起有效活动</li>
+</ul>
+<p>这学期应该就参加了个蓝桥杯，实验室里参加的，题呢难死了，可最终省一还是没想到的，但是国赛在考试期间比就很拉跨了，那时候代码没敲基本一个月了，加之自身实力太菜，根本难以应对，故以国优落幕。</p>
+<p>XCPC省赛也没了，CCPC在学期后半段时间一改再改，因为教育厅通知6月初之前全部离校，传的很广了。校内甚至还出现了几次集体性聚集事件（我没有参加，只是听说），回家的这件事那么就理所当然的确定了。</p>
+<p>关于期末考试呢，学生闹之又闹，考试口头通知改之又改，最后定于回家之后延期数十天线上进行，所幸本次考试我没有过于拉跨。</p>
+<h2 id="大三上"><a href="#大三上" class="headerlink" title="大三上"></a>大三上</h2><p>又一次推迟开学，21和22届军训都没有进行，真有你的！</p>
+<p>辛亏CCPC省赛在前期抓紧办了，所幸拿金。</p>
+<p>好啦，这回前面基本上了5周以内的线下课呀，后面就完全封控了，封在寝室里面的。</p>
+<p>线上，封寝，做核酸等等，那么上课呢肯定不会好好上的，基本是无听状态，因为大二下假期后期入了原神，封寝室是有事可做的，要么玩，要么刷b站，前期刷题还坚持了一段，后面就很难进行下去了。</p>
+<p>那么XCPC区域赛都是没法打的，只能单挑了，基本整个学校的比赛都是拉跨的。</p>
+<p>毫无疑问，这次又是提前放假回家了，学校遣返，疫情形势很难控制住了（还未放开，各地瞒况皆有），考试呢从线上提前考试又改为了下学期线下考试（这时候基本就是大放开阶段了）。</p>
+<p>这个时期的社会事件真的是多之又多，fsk，zz，xj，bz运动等等，惊叹之后便保持沉默。</p>
+<h1 id="专项行动"><a href="#专项行动" class="headerlink" title="专项行动"></a>专项行动</h1><h2 id="比赛"><a href="#比赛" class="headerlink" title="比赛"></a>比赛</h2><p>今年的比赛完全是拉跨的，大三上多好的比赛机会，都被疫情带走了。</p>
+<p>所幸还留有一丝希望：</p>
+<p>CCPC省赛拿金，CCPC广州站队友拿银（zsy tql）</p>
+<h2 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h2><p>今年QQ机器人继续完善，现在基本不怎么关注了，后续应该还会再次启动，准备软著。</p>
+<p>新建vj平台，虽然是copy的，因为自身水平受限，还是废了一番功夫。</p>
+<p>拿下新域名，新建博客网站，目前已经运行半年之久。</p>
+<p>django和app开发都有所了解，github初步使用</p>
+<p>买了代理，不再受限于那堵墙。</p>
+<p>给出3张图纪念一下：</p>
+<p><img src="1646942053/image-20230101121342445.png" alt="CF"></p>
+<p><img src="1646942053/image-20230101121415331.png" alt="Github"></p>
+<p><img src="1646942053/image-20230101121441216.png" alt="本站博客"></p>
+<h2 id="思想"><a href="#思想" class="headerlink" title="思想"></a>思想</h2><p>我发现，我心态不再是像之前那样乐观了，现在似乎是<code>面对可能发生之事保持谨慎，面对未知之事保持关注</code>这样的态度了，我对许多东西已不报希望，这样的环境只能说尽量存活下去吧。</p>
+<p>越来越寡言少语，越来越艰难。2023希望好过些吧，毕竟放开了，比赛能线下了，大学生活或许会改变，但是之前的时间浪费是弄不回来了。</p>
 
             </div>
             <hr />
@@ -789,9 +721,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Git|详解|命令》
+                    《2022年度总结》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/p/1843856130.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/p/1646942053.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 行码棋
             </a> 采用
@@ -833,7 +765,7 @@
         repo: 'anda522.github.io',
         owner: 'anda522',
         admin: "anda522",
-        id: 'p/1843856130.html',
+        id: 'p/1646942053.html',
         // id: md5(location.pathname), // 使用MD5生成gitalk id
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
@@ -1119,54 +1051,53 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/p/1146830909.html">
+                <a href="/p/1646942053.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="docker|常用命令">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="2022年度总结">
                         
-                        <span class="card-title">docker|常用命令</span>
+                        <span class="card-title">2022年度总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
                             
-将当前用户添加到docker用户组
-为了避免每次使用docker命令都需要加上sudo权限，可以将当前用户加入安装中自动创建的docker用户组（可以参考官方文档）：
-sudo usermod -aG docker $USER
-执行完此操
+希望2023健康，发论文，比赛拿牌，成功上岸。
+
+今天是2023年1月1日，2022有许多不顺心的事，也有一些值得记忆的事，希望通过下面的片段来回顾这年不易的时光。
+
+能说的尽量说，不能说的你我心领神会。我发现时间让我越来越不想说什么东西
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-07-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-01-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/知识总结/" class="post-category" target="_blank">
-                                    知识总结
+                            <a href="/categories/思考总结/" class="post-category" target="_blank">
+                                    思考总结
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/docker/" target="_blank">
-                        <span class="chip bg-color">docker</span>
-                    </a>
-                    
-                    <a href="/tags/linux/" target="_blank">
-                        <span class="chip bg-color">linux</span>
+                    <a href="/tags/学习总结/" target="_blank">
+                        <span class="chip bg-color">学习总结</span>
                     </a>
                     
                 </div>
@@ -1180,25 +1111,27 @@ sudo usermod -aG docker $USER
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/p/454636061.html">
+                <a href="/p/808139430.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="2021大二上期末知识点总结">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="机器学习基础知识总结">
                         
-                        <span class="card-title">2021大二上期末知识点总结</span>
+                        <span class="card-title">机器学习基础知识总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本文知识点均为从网络或其他地方搜集整理而来，提到的习题均无答案，完全不具备权威性质，作者不对看本文造成的后果负责，请合理参考。
-Linux指令基本都是基本指令，输入输出流，统计行数，复制，文件权限修改等等大题会考swap分区构建的具体步骤考
+                            机器学习基础概念知识总结机器学习环境搭建
+一般使用anaconda搭建python虚拟环境（miniconda占的空间应该小一点，这个也可以）
+
+使用工具库一般有科学计算库numpy，数据处理库pandas，绘图matplotlib等，需要
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-29
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-12-27
                             </span>
                         <span class="publish-author">
                             

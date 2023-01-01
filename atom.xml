@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2022-12-31T06:20:03.546Z</updated>
+  <updated>2023-01-01T04:19:22.671Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -17,11 +17,42 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>2022年度总结</title>
+    <link href="http://wyqz.top/p/1646942053.html"/>
+    <id>http://wyqz.top/p/1646942053.html</id>
+    <published>2023-01-01T02:38:55.000Z</published>
+    <updated>2023-01-01T04:19:22.671Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;希望2023健康，发论文，比赛拿牌，成功上岸。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;今天是2023年1月1日，2022有许多不顺心的事，也有一些值得记忆的事，希望通过下面的片段来回顾这年不易的时光。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;能
+        
+      
+    
+    </summary>
+    
+      <category term="思考总结" scheme="http://wyqz.top/categories/%E6%80%9D%E8%80%83%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
     <title>机器学习基础知识总结</title>
     <link href="http://wyqz.top/p/808139430.html"/>
     <id>http://wyqz.top/p/808139430.html</id>
     <published>2022-12-27T09:04:31.000Z</published>
-    <updated>2022-12-31T06:20:03.546Z</updated>
+    <updated>2022-12-31T07:58:10.815Z</updated>
     
     <summary type="html">
     
@@ -194,9 +225,9 @@
       <category term="树形DP" scheme="http://wyqz.top/categories/%E6%A0%91%E5%BD%A2DP/"/>
     
     
-      <category term="组合数学" scheme="http://wyqz.top/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
-    
       <category term="树形DP" scheme="http://wyqz.top/tags/%E6%A0%91%E5%BD%A2DP/"/>
+    
+      <category term="组合数学" scheme="http://wyqz.top/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
@@ -529,36 +560,9 @@
       <category term="数论" scheme="http://wyqz.top/categories/%E6%95%B0%E8%AE%BA/"/>
     
     
-      <category term="逆元" scheme="http://wyqz.top/tags/%E9%80%86%E5%85%83/"/>
-    
       <category term="组合数学" scheme="http://wyqz.top/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
-  </entry>
-  
-  <entry>
-    <title>容斥定理</title>
-    <link href="http://wyqz.top/p/1292892888.html"/>
-    <id>http://wyqz.top/p/1292892888.html</id>
-    <published>2022-06-25T09:36:11.000Z</published>
-    <updated>2022-08-04T07:14:07.542Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;﻿﻿# 容斥定理&lt;/p&gt;
-&lt;h2 id=&quot;简单版本：&quot;&gt;&lt;a href=&quot;#简单版本：&quot; class=&quot;headerlink&quot; title=&quot;简单版本：&quot;&gt;&lt;/a&gt;简单版本：&lt;/h2&gt;&lt;p&gt;&lt;img
-        
-      
-    
-    </summary>
-    
-      <category term="数论" scheme="http://wyqz.top/categories/%E6%95%B0%E8%AE%BA/"/>
-    
-    
-      <category term="数论" scheme="http://wyqz.top/tags/%E6%95%B0%E8%AE%BA/"/>
+      <category term="逆元" scheme="http://wyqz.top/tags/%E9%80%86%E5%85%83/"/>
     
   </entry>
   
