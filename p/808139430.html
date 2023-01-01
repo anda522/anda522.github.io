@@ -497,14 +497,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.7k
+                    5.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    18 分
+                    22 分
                 </div>
                 
                 
@@ -755,7 +755,77 @@
 <li>容易做成并行化方法，速度快</li>
 <li>可以进行可视化展示，便于分析</li>
 </ul>
+<h2 id="3-Boosting模型"><a href="#3-Boosting模型" class="headerlink" title="3 Boosting模型"></a>3 Boosting模型</h2><p>提升模型典型代表：AdaBoost，XgBoost</p>
+<p>AdaBoost：会根据前一次的分类效果调整数据权重</p>
+<h2 id="4-Stacking模型"><a href="#4-Stacking模型" class="headerlink" title="4 Stacking模型"></a>4 Stacking模型</h2><p>堆叠模型：可以堆叠各种各样的分类器（KNN，SVM，RF等）</p>
+<p>分阶段进行：第一阶段得出各自的结果，第二阶段再利用前一阶段结果进行训练。</p>
+<h1 id="贝叶斯算法"><a href="#贝叶斯算法" class="headerlink" title="贝叶斯算法"></a>贝叶斯算法</h1><p>贝叶斯公式：<br>$$<br>P(A | B) = \frac{P(B|A)P(A)}{P(B)}<br>$$</p>
+<h2 id="1-1-实例：拼写纠正"><a href="#1-1-实例：拼写纠正" class="headerlink" title="1.1 实例：拼写纠正"></a>1.1 实例：拼写纠正</h2><p>用户输入一个不在词典中的单词，需要猜测用户真正想输入的单词。</p>
+<p>我们要求的是<code>P(我们猜测用户想输入的单词|用户实际输入的单词)</code></p>
+<p>假设用户实际输入的单词为<code>D</code>（Data）</p>
+<p>我们有多个猜测：<code>P(h1 | D), P(h2 | D)</code>， 方便后续计算，统一为<code>P(h | D)</code><br>$$<br>P(h | D) = \frac{P(h) P(D | h)}{P(D)}<br>$$</p>
+<blockquote>
+<p>$P(h)$为单词在语料库中出现的概率（出现次数 / 总次数），我们叫做<strong>先验概率</strong>，这个概率可以算出来。</p>
+<p>$P(D|h)$ 为我们将一个正确的词输入错误的概率。</p>
+</blockquote>
+<p>对于所有的猜测，$P(D)$ 都是一样的，所以可以忽略这个常数。</p>
+<p>则<br>$$<br>P(h|D) \varpropto P(h)P(D|h)<br>$$</p>
+<blockquote>
+<p>$P(D|h)$可以根据某种指标来判定，可以看键盘上字母的编辑距离来算概率等等。</p>
+</blockquote>
+<p>如果计算出来多个结果预测概率是一样的，那么就可以使用<strong>先验概率</strong>来进行判断谁最优先。</p>
+<h2 id="1-2-拼写检查器实现"><a href="#1-2-拼写检查器实现" class="headerlink" title="1.2 拼写检查器实现"></a>1.2 拼写检查器实现</h2><p>原理：<br>$$<br>argmaxc \ P(A|B) = argmaxc \  \frac{P(B|A) P(A)}{P(B)}<br>$$</p>
+<p>$P(A|B)$：待求值，用户本想输入B的前提下，错输成A的概率</p>
+<p>$P(A)$：文章中出现正确单词A的概率</p>
+<p>$P(B|A)$：用户本想输入A的前提下，错输成B的概率</p>
+<p>$P(B)$：文章中出现正确单词B的概率</p>
+<p>$argmaxc$：用来枚举所有可能的A，并选取概率最大的那个</p>
+<p>拼写检查器就是，输入一个单词，先判断这个单词是否存在于语料库中（是否正确），如果不在（可能语料库中没有，或者拼写错误），则需要根据编辑距离进行检查修正。</p>
+<p><code>big.txt</code>文件：<a href="https://wwwi.lanzouo.com/i9s8t0ju5qzg" target="_blank" rel="noopener">https://wwwi.lanzouo.com/i9s8t0ju5qzg</a></p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> re<span class="token punctuation">,</span> collections
 
+<span class="token comment" spellcheck="true">#  将所有大写字母转化为小写，并且去掉特殊字符</span>
+<span class="token keyword">def</span> <span class="token function">words</span><span class="token punctuation">(</span>text<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">return</span> re<span class="token punctuation">.</span>findall<span class="token punctuation">(</span><span class="token string">'[a-z]+'</span><span class="token punctuation">,</span> text<span class="token punctuation">.</span>lower<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword">def</span> <span class="token function">train</span><span class="token punctuation">(</span>features<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment" spellcheck="true"># 遇到从来没有见过的新词但语料库中未包含，概率模型中希望返回一个很小的概率，故出现次数设置为1</span>
+    model <span class="token operator">=</span> collections<span class="token punctuation">.</span>defaultdict<span class="token punctuation">(</span><span class="token keyword">lambda</span><span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token keyword">for</span> f <span class="token keyword">in</span> features<span class="token punctuation">:</span>
+        model<span class="token punctuation">[</span>f<span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token keyword">return</span> model
+
+
+NWORDS <span class="token operator">=</span> train<span class="token punctuation">(</span>words<span class="token punctuation">(</span>open<span class="token punctuation">(</span><span class="token string">'big.txt'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 词频</span>
+alphabet <span class="token operator">=</span> <span class="token string">'abcdefghijklmnopqrstuvwxyz'</span>
+
+<span class="token comment" spellcheck="true"># 编辑距离为1的单词</span>
+<span class="token keyword">def</span> <span class="token function">edits1</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    n <span class="token operator">=</span> len<span class="token punctuation">(</span>word<span class="token punctuation">)</span>
+    <span class="token keyword">return</span> set<span class="token punctuation">(</span><span class="token punctuation">[</span>word<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span> i<span class="token punctuation">]</span> <span class="token operator">+</span> word<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">+</span>   <span class="token comment" spellcheck="true"># deletion</span>
+               <span class="token punctuation">[</span>word<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span> i<span class="token punctuation">]</span> <span class="token operator">+</span> word<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> word<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> word<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">2</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">+</span>  <span class="token comment" spellcheck="true"># transportation</span>
+               <span class="token punctuation">[</span>word<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span> i<span class="token punctuation">]</span> <span class="token operator">+</span> c <span class="token operator">+</span> word<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">:</span> <span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>n<span class="token punctuation">)</span> <span class="token keyword">for</span> c <span class="token keyword">in</span> alphabet<span class="token punctuation">]</span> <span class="token operator">+</span>  <span class="token comment" spellcheck="true"># alteration</span>
+               <span class="token punctuation">[</span>word<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span> i<span class="token punctuation">]</span> <span class="token operator">+</span> c <span class="token operator">+</span> word<span class="token punctuation">[</span>i<span class="token punctuation">:</span> <span class="token punctuation">]</span> <span class="token keyword">for</span> i <span class="token keyword">in</span> range<span class="token punctuation">(</span>n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">for</span> c <span class="token keyword">in</span> alphabet<span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># insertion</span>
+
+
+<span class="token comment" spellcheck="true"># 编辑距离为2 的单词</span>
+<span class="token keyword">def</span> <span class="token function">edists2</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> set<span class="token punctuation">(</span>e2 <span class="token keyword">for</span> e1 <span class="token keyword">in</span> edits1<span class="token punctuation">(</span>word<span class="token punctuation">)</span> <span class="token keyword">for</span> e2 <span class="token keyword">in</span> edits1<span class="token punctuation">(</span>e1<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+
+<span class="token comment" spellcheck="true"># 将那些正确的词作为候选词</span>
+<span class="token keyword">def</span> <span class="token function">known</span><span class="token punctuation">(</span>words<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> set<span class="token punctuation">(</span>w <span class="token keyword">for</span> w <span class="token keyword">in</span> words <span class="token keyword">if</span> w <span class="token keyword">in</span> NWORDS<span class="token punctuation">)</span>
+
+
+<span class="token comment" spellcheck="true"># 检查器函数，先判断是不是正确的拼写形式，如果不是则选出编辑距离为1的单词……</span>
+<span class="token keyword">def</span> <span class="token function">correct</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    candidates <span class="token operator">=</span> known<span class="token punctuation">(</span><span class="token punctuation">[</span>word<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">or</span> known<span class="token punctuation">(</span>edits1<span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">or</span> known<span class="token punctuation">(</span>edists2<span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">or</span> <span class="token punctuation">[</span>word<span class="token punctuation">]</span>
+    <span class="token keyword">return</span> max<span class="token punctuation">(</span>candidates<span class="token punctuation">,</span> key<span class="token operator">=</span><span class="token keyword">lambda</span> w<span class="token punctuation">:</span> NWORDS<span class="token punctuation">[</span>w<span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>correct<span class="token punctuation">(</span><span class="token string">'mach'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="1-3-新闻分类"><a href="#1-3-新闻分类" class="headerlink" title="1.3 新闻分类"></a>1.3 新闻分类</h2><p>之后用到了再补，短时间不会写。</p>
+<h1 id="SVM支持向量机"><a href="#SVM支持向量机" class="headerlink" title="SVM支持向量机"></a>SVM支持向量机</h1>
             </div>
             <hr />
 
@@ -1516,7 +1586,7 @@ from torch.utils.data
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">47k</span>
+            <span class="white-color">47.9k</span>
             
 
             <br>
