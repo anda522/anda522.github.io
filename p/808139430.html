@@ -850,7 +850,7 @@ alphabet <span class="token operator">=</span> <span class="token string">'abcde
 <h3 id="2-2-数据"><a href="#2-2-数据" class="headerlink" title="2.2 数据"></a>2.2 数据</h3><p>数据集：$(x_1, y_1)(x_2, y_2)…(x_n, y_n)$</p>
 <p>$Y$ 为样本的类别：当$X$ 为正例时，$Y = +1$，当$X$为负例时，$Y = -1$</p>
 <p>决策方程：$y(x) = w^T \Phi(x) + b$ （其中$\Phi(x)$是对数据做了变换）<br>$$<br>\begin{cases}<br>y(x_i) &gt; 0 \Leftrightarrow y_i = +1 \\<br>y(x_i) &lt; 0 \Leftrightarrow y_i = -1<br>\end{cases}<br>\Longrightarrow<br>y_i y(x_i) &gt; 0<br>$$</p>
-<h3 id="2-3-目标函数"><a href="#2-3-目标函数" class="headerlink" title="2.3 目标函数"></a>2.3 目标函数</h3><p>将点到直线距离进行转化（化简）：<br>$$<br>\frac{y_i \cdot (w^T \cdot \Phi(x) + b)}{\vert w \vert}<br>$$</p>
+<h3 id="2-3-目标函数求解"><a href="#2-3-目标函数求解" class="headerlink" title="2.3 目标函数求解"></a>2.3 目标函数求解</h3><p>将点到直线距离进行转化（化简）：<br>$$<br>\frac{y_i \cdot (w^T \cdot \Phi(x) + b)}{\vert w \vert}<br>$$</p>
 <blockquote>
 <p>$y_i y(x_i) &gt; 0$ 直接乘上$y_i$ 将绝对值去掉，$|y_i| = 1$，并不影响值大小</p>
 </blockquote>
@@ -864,7 +864,10 @@ alphabet <span class="token operator">=</span> <span class="token string">'abcde
 <p>$arg\ max$ 是<strong>最大化到平面最小距离的点的距离</strong></p>
 <p>由于$y_i \cdot (w^T \cdot \Phi(x_i) + b) \geq 1$， 故最小值为1，只需要考虑 $\mathop{arg\  max} \limits_{w, b} \frac{1}{|w|}$</p>
 </blockquote>
-<h3 id="2-4-目标函数求解"><a href="#2-4-目标函数求解" class="headerlink" title="2.4 目标函数求解"></a>2.4 目标函数求解</h3>
+<p>当前目标变为：$\mathop{max} \limits_{w, b} \frac{1}{|w|}$，即求$|w|$的最小值，但有约束条件 $y_i \cdot (w^T \cdot \Phi(x_i) + b) \geq 1$</p>
+<p>将求极大值转化为求极小值的问题，求$\frac{1}{2}w^2$ 的最小值。</p>
+<p>拉格朗日乘子法：</p>
+
             </div>
             <hr />
 
@@ -1626,7 +1629,7 @@ from torch.utils.data
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">48.6k</span>
+            <span class="white-color">48.7k</span>
             
 
             <br>
