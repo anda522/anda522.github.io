@@ -497,14 +497,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6.4k
+                    6.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    25 分
+                    26 分
                 </div>
                 
                 
@@ -866,8 +866,14 @@ alphabet <span class="token operator">=</span> <span class="token string">'abcde
 </blockquote>
 <p>当前目标变为：$\mathop{max} \limits_{w, b} \frac{1}{|w|}$，即求$|w|$的最小值，但有约束条件 $y_i \cdot (w^T \cdot \Phi(x_i) + b) \geq 1$</p>
 <p>将求极大值转化为求极小值的问题，求$\frac{1}{2}w^2$ 的最小值。</p>
-<p>拉格朗日乘子法：</p>
-
+<p>需要使用<strong>拉格朗日乘子法</strong>：（此处不做证明，直接给出结论，我还不知道$\alpha$的作用，呜呜呜）<br>$$<br>L(w, b, \alpha) = \frac{1}{2}|w|^2 - \sum \limits_{i = 1}^n \alpha_i (y_i \cdot (w^T \cdot \Phi(x_i) + b) - 1)<br>$$</p>
+<blockquote>
+<p>上式需要满足约束条件：$y_i \cdot (w^T \cdot \Phi(x_i) + b) \geq 1$</p>
+</blockquote>
+<p><img src="808139430/image-20230102224841617.png" alt="求解过程"></p>
+<p><img src="808139430/image-20230102225344026.png" alt="求解过程"></p>
+<p><img src="808139430/image-20230102225422893.png" alt="求解过程"></p>
+<h2 id="3-SVM实例"><a href="#3-SVM实例" class="headerlink" title="3 SVM实例"></a>3 SVM实例</h2>
             </div>
             <hr />
 
@@ -1629,7 +1635,7 @@ from torch.utils.data
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">48.7k</span>
+            <span class="white-color">48.8k</span>
             
 
             <br>
