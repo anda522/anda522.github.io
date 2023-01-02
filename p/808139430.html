@@ -342,7 +342,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -497,14 +497,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.7k
+                    6.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    22 分
+                    25 分
                 </div>
                 
                 
@@ -808,7 +808,7 @@ alphabet <span class="token operator">=</span> <span class="token string">'abcde
 
 
 <span class="token comment" spellcheck="true"># 编辑距离为2 的单词</span>
-<span class="token keyword">def</span> <span class="token function">edists2</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">:</span>
+<span class="token keyword">def</span> <span class="token function">edits2</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">:</span>
     <span class="token keyword">return</span> set<span class="token punctuation">(</span>e2 <span class="token keyword">for</span> e1 <span class="token keyword">in</span> edits1<span class="token punctuation">(</span>word<span class="token punctuation">)</span> <span class="token keyword">for</span> e2 <span class="token keyword">in</span> edits1<span class="token punctuation">(</span>e1<span class="token punctuation">)</span><span class="token punctuation">)</span>
 
 
@@ -819,13 +819,52 @@ alphabet <span class="token operator">=</span> <span class="token string">'abcde
 
 <span class="token comment" spellcheck="true"># 检查器函数，先判断是不是正确的拼写形式，如果不是则选出编辑距离为1的单词……</span>
 <span class="token keyword">def</span> <span class="token function">correct</span><span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    candidates <span class="token operator">=</span> known<span class="token punctuation">(</span><span class="token punctuation">[</span>word<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">or</span> known<span class="token punctuation">(</span>edits1<span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">or</span> known<span class="token punctuation">(</span>edists2<span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">or</span> <span class="token punctuation">[</span>word<span class="token punctuation">]</span>
+    candidates <span class="token operator">=</span> known<span class="token punctuation">(</span><span class="token punctuation">[</span>word<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">or</span> known<span class="token punctuation">(</span>edits1<span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">or</span> known<span class="token punctuation">(</span>edits2<span class="token punctuation">(</span>word<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">or</span> <span class="token punctuation">[</span>word<span class="token punctuation">]</span>
     <span class="token keyword">return</span> max<span class="token punctuation">(</span>candidates<span class="token punctuation">,</span> key<span class="token operator">=</span><span class="token keyword">lambda</span> w<span class="token punctuation">:</span> NWORDS<span class="token punctuation">[</span>w<span class="token punctuation">]</span><span class="token punctuation">)</span>
 
 
 <span class="token keyword">print</span><span class="token punctuation">(</span>correct<span class="token punctuation">(</span><span class="token string">'mach'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="1-3-新闻分类"><a href="#1-3-新闻分类" class="headerlink" title="1.3 新闻分类"></a>1.3 新闻分类</h2><p>之后用到了再补，短时间不会写。</p>
-<h1 id="SVM支持向量机"><a href="#SVM支持向量机" class="headerlink" title="SVM支持向量机"></a>SVM支持向量机</h1>
+<h1 id="SVM支持向量机"><a href="#SVM支持向量机" class="headerlink" title="SVM支持向量机"></a>SVM支持向量机</h1><h2 id="1-概述-3"><a href="#1-概述-3" class="headerlink" title="1 概述"></a>1 概述</h2><p>Support Vector Machine是一种二分类模型，它的基本模型是定义在特征空间上的<strong>间隔最大的线性分类器</strong></p>
+<p>SVM学习的基本想法是求解能够正确划分训练数据集并且几何间隔最大的分离超平面。如下图所示， $wx+b=0$ 即为分离超平面，对于线性可分的数据集来说，这样的超平面有无穷多个（即感知机），但是几何间隔最大的分离超平面却是唯一的。</p>
+<p><img src="808139430/image-20230102144808362.png" alt="支持向量机"></p>
+<h2 id="2-推导"><a href="#2-推导" class="headerlink" title="2 推导"></a>2 推导</h2><h3 id="2-1-距离"><a href="#2-1-距离" class="headerlink" title="2.1 距离"></a>2.1 距离</h3><p>正常三维条件下点$(x_0, y_0, z_0)$到平面$Ax + By + Cz + D = 0$的距离公式（高中知识）：<br>$$<br>\frac{\vert Ax_0 + By_0 + Cz_0 + D \vert}{\sqrt{A^2 + B^2 + C^2}}<br>$$<br>推导分析过程：</p>
+<p>平面方程： $ax + by + cz = d$ ，平面外一点$P(x_0, y_0, z_0)$</p>
+<p><img src="808139430/image-20230102153203878.png" alt="示意图"></p>
+<p>PQ垂直平面，即为求PQ的长度，但不知Q点的具体数据。</p>
+<p>故构造一个平面上的点$P^{‘}(x_1, y_1, z_1)$，问题即转化为求$\overrightarrow {P^{‘}P}$ 在法向量N上面的分量，即$\overrightarrow {P^{‘}P}$ 与N相同方向的单位向量的点积。</p>
+<p><img src="808139430/image-20230102153230935.png" alt="示意图"></p>
+<p>设距离为D。</p>
+<p><img src="808139430/1203675-20180109152428254-718844217.png" alt="距离公式推导"></p>
+<p>现在考虑一般情况：</p>
+<p>求平面外一点 $x$ 到平面$w^T x + b = 0$ 的距离：</p>
+<blockquote>
+<p>结论：平面$Ax + By + Cz + D = 0$的法向量为$(A, B, C)$</p>
+</blockquote>
+<p><img src="808139430/image-20230102154354917.png" alt="示意图"></p>
+<p>同上述原理：</p>
+<p>距离就为<br>$$<br>distance(x, b, w) = \vert \frac{w^T}{\vert w \vert}(x - x^{‘}) \vert = \frac{1}{\vert w \vert} \vert w^Tx + b \vert<br>$$</p>
+<blockquote>
+<p>上述公式进行了代入，将$x^{‘}$代入平面方程得$w^Tx^{‘} = -b$</p>
+</blockquote>
+<h3 id="2-2-数据"><a href="#2-2-数据" class="headerlink" title="2.2 数据"></a>2.2 数据</h3><p>数据集：$(x_1, y_1)(x_2, y_2)…(x_n, y_n)$</p>
+<p>$Y$ 为样本的类别：当$X$ 为正例时，$Y = +1$，当$X$为负例时，$Y = -1$</p>
+<p>决策方程：$y(x) = w^T \Phi(x) + b$ （其中$\Phi(x)$是对数据做了变换）<br>$$<br>\begin{cases}<br>y(x_i) &gt; 0 \Leftrightarrow y_i = +1 \\<br>y(x_i) &lt; 0 \Leftrightarrow y_i = -1<br>\end{cases}<br>\Longrightarrow<br>y_i y(x_i) &gt; 0<br>$$</p>
+<h3 id="2-3-目标函数"><a href="#2-3-目标函数" class="headerlink" title="2.3 目标函数"></a>2.3 目标函数</h3><p>将点到直线距离进行转化（化简）：<br>$$<br>\frac{y_i \cdot (w^T \cdot \Phi(x) + b)}{\vert w \vert}<br>$$</p>
+<blockquote>
+<p>$y_i y(x_i) &gt; 0$ 直接乘上$y_i$ 将绝对值去掉，$|y_i| = 1$，并不影响值大小</p>
+</blockquote>
+<p>放缩变换：对于决策方程（w, b）可以通过放缩变换是的其结果值$|Y| \geq 1$ ，则<br>$$<br>y_i \cdot (w^T \cdot \Phi(x_i) + b) \geq 1<br>$$</p>
+<blockquote>
+<p>缩放之前w和b有无数组解，缩放之后w和b只有一组解。</p>
+</blockquote>
+<p>优化目标：<br>$$<br>\mathop{arg\  max} \limits_{w, b} \bigg\{ \frac{1}{|w|} \mathop{min} \limits_i \Big \{ y_i \cdot (w^T \cdot \Phi(x_i) + b)\Big \} \bigg\}<br>$$</p>
+<blockquote>
+<p>$\mathop{min} \limits_i \Big \{ y_i \cdot (w^T \cdot \Phi(x_i) + b) \Big \}$ 是求所有样本点到平面的最小距离的那个点</p>
+<p>$arg\ max$ 是<strong>最大化到平面最小距离的点的距离</strong></p>
+<p>由于$y_i \cdot (w^T \cdot \Phi(x_i) + b) \geq 1$， 故最小值为1，只需要考虑 $\mathop{arg\  max} \limits_{w, b} \frac{1}{|w|}$</p>
+</blockquote>
+<h3 id="2-4-目标函数求解"><a href="#2-4-目标函数求解" class="headerlink" title="2.4 目标函数求解"></a>2.4 目标函数求解</h3>
             </div>
             <hr />
 
@@ -1301,8 +1340,9 @@ alphabet <span class="token operator">=</span> <span class="token string">'abcde
         avatar: 'wavatar',
         pageSize: '10',
         lang: 'zh-cn',
-        placeholder: '如果你没有GitHub账号，还可以在这里评论啦！',
-        serverURLs: ''
+        placeholder: '欢迎提问与质疑，你可以在这里评论啦！',
+        serverURLs: '',
+        requiredFields: ['mail']
     });
 </script>
 
@@ -1321,7 +1361,7 @@ alphabet <span class="token operator">=</span> <span class="token string">'abcde
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="2022年度总结">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="2022年度总结">
                         
                         <span class="card-title">2022年度总结</span>
                     </div>
@@ -1375,7 +1415,7 @@ alphabet <span class="token operator">=</span> <span class="token string">'abcde
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Pytorch入门知识总结">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Pytorch入门知识总结">
                         
                         <span class="card-title">Pytorch入门知识总结</span>
                     </div>
@@ -1586,7 +1626,7 @@ from torch.utils.data
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">47.9k</span>
+            <span class="white-color">48.6k</span>
             
 
             <br>
