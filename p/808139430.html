@@ -497,14 +497,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    6.5k
+                    7.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    26 分
+                    29 分
                 </div>
                 
                 
@@ -873,7 +873,37 @@ alphabet <span class="token operator">=</span> <span class="token string">'abcde
 <p><img src="808139430/image-20230102224841617.png" alt="求解过程"></p>
 <p><img src="808139430/image-20230102225344026.png" alt="求解过程"></p>
 <p><img src="808139430/image-20230102225422893.png" alt="求解过程"></p>
-<h2 id="3-SVM实例"><a href="#3-SVM实例" class="headerlink" title="3 SVM实例"></a>3 SVM实例</h2>
+<h2 id="3-SVM实例"><a href="#3-SVM实例" class="headerlink" title="3 SVM实例"></a>3 SVM实例</h2><p>有三个数据：3个点，正例$x_1(3, 3), x_2(4, 3)$， 负例$x_3(1, 1)$，（数据是二维数据）对其进行二分类。</p>
+<p>首先需要求解下式的最小值：<br>$$<br>\frac{1}{2}\sum \limits_{i = 1}^n \sum \limits _{j = 1}^n \alpha_i \alpha_j y_i y_j (x_i \cdot x_j) - \sum \limits_{i = 1}^n\alpha_i \hspace{3em} (1)<br>$$</p>
+<blockquote>
+<p>注意：$x_i \cdot x_j$ 的运算是点积运算。</p>
+<p>约束条件：<br>$$<br>\alpha_1 + \alpha_2 - \alpha_3 = 0 \\<br>\alpha_i \geq 0, \hspace{2em} i = 1, 2, 3<br>$$</p>
+</blockquote>
+<p><img src="808139430/image-20230103144319179.png" alt="图像示意"></p>
+<p>将对应的数据带入（1）式，得：<br>$$<br>\frac{1}{2} \Big( 18 \alpha_1^2 + 25\alpha_2^2 + 2 \alpha_3^2 + 42\alpha_1\alpha_2 - 12\alpha_1\alpha_3 - 14\alpha_2\alpha_3 \Big) - \alpha_1 - \alpha_2 - \alpha_3<br>$$<br>由于$\alpha_1 + \alpha_2 = \alpha_3$，化简得：<br>$$<br>4 \alpha_1 ^ 2 + \frac{13}{2} \alpha_2^2 + 10\alpha_1\alpha_2 - 2\alpha_1 - 2\alpha_2<br>$$<br>分别对$\alpha_1,\alpha_2$求偏导，偏导等于0得<br>$$<br>\begin{cases}<br>\alpha_1 = 1.5 \\<br>\alpha_2 = -1<br>\end{cases}<br>$$<br>发现不满足约束条件$\alpha_i \geq 0$，故解应在边界上。分别让两个值等于0求解<br>$$<br>\begin{cases}<br>\alpha_1 = 0 \\<br>\alpha_2 = -\frac{2}{13}<br>\end{cases}<br>(\times)<br>\hspace{4em}<br>\begin{cases}<br>\alpha_1 = 0.25 \\<br>\alpha_2 = 0<br>\end{cases}<br>(\checkmark)<br>$$<br>第一组解不满足，故最小值在$(0.25, 0.25)$处取得。</p>
+<p>将$\alpha$结果带求解$w = \sum \limits_{i = 1}^n \alpha_i y_i \Phi(x_i)$，$\Phi(x_i)$以$x_i$来代替<br>$$<br>w = \frac{1}{4} \times 1 \times (3,3) + \frac{1}{4} \times (-1) \times(1,1) = (\frac{1}{2}, \frac{1}{2})<br>\\<br>b = y_i - \sum \limits_{i = 1}^n a_i y_i (x_i x_j) = 1 - (\frac{1}{4} \times 1 \times 18  + \frac{1}{4} \times (-1) \times 6) = -2<br>$$<br>故平面方程为：<br>$$<br>0.5 x_1 + 0.5 x_2 - 2 = 0<br>$$</p>
+<blockquote>
+<p>因为$w = \sum \limits_{i = 1}^n \alpha_i y_i \Phi(x_i)$</p>
+<p>支持向量的$\alpha$值不等于0，$\alpha = 0$的向量不是支持向量，对最终结果没有影响。</p>
+<p>支持向量就是那些对最终结果起作用的向量，也可以当做是边界上的向量。</p>
+</blockquote>
+<h2 id="4-软间隔"><a href="#4-软间隔" class="headerlink" title="4 软间隔"></a>4 软间隔</h2><p>数据中有时候会有一些噪音点，如果考虑它们结果可能不会很好。</p>
+<p>为解决该问题，引入松弛因子：$y_i(w \cdot x_i + b) \geq 1 - \xi_i$</p>
+<p>新的目标函数：<br>$$<br>min \frac{1}{2} |w|^2 + C \sum \limits _{i = 1}^n \xi_i<br>$$</p>
+<blockquote>
+<p>C是我们需要指定的一个参数</p>
+<p>当C趋近于很大时：意味着分类严格不能有错误</p>
+<p>当C趋近于很小时：意味着可以由更大的错误容忍</p>
+</blockquote>
+<p>解法基本一样：</p>
+<p><img src="808139430/image-20230103153918323.png" alt="解法"></p>
+<h2 id="5-SVM核变换"><a href="#5-SVM核变换" class="headerlink" title="5 SVM核变换"></a>5 SVM核变换</h2><p>将低维不可分映射到高维，找到一种变换方法，即为$\phi(x)$</p>
+<p>高斯核函数：<br>$$<br>K(X, Y) =  exp \bigg\{ -\frac{||X-Y||^2}{2\sigma^2} \bigg\}<br>$$</p>
+<h2 id="6-基于sklearn求解SVM"><a href="#6-基于sklearn求解SVM" class="headerlink" title="6 基于sklearn求解SVM"></a>6 基于sklearn求解SVM</h2><p>参考 <a href="https://blog.csdn.net/weixin_42600072/article/details/88644229" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42600072/article/details/88644229</a></p>
+<h1 id="K-MEANS算法"><a href="#K-MEANS算法" class="headerlink" title="K-MEANS算法"></a>K-MEANS算法</h1><blockquote>
+<p>机器学习实战参考：<a href="https://blog.csdn.net/weixin_42600072/category_8751294.html" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42600072/category_8751294.html</a></p>
+</blockquote>
+
             </div>
             <hr />
 
@@ -1635,7 +1665,7 @@ from torch.utils.data
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">48.8k</span>
+            <span class="white-color">49.4k</span>
             
 
             <br>
