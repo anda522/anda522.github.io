@@ -497,14 +497,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    7.1k
+                    8.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    29 分
+                    34 分
                 </div>
                 
                 
@@ -900,7 +900,138 @@ alphabet <span class="token operator">=</span> <span class="token string">'abcde
 <h2 id="5-SVM核变换"><a href="#5-SVM核变换" class="headerlink" title="5 SVM核变换"></a>5 SVM核变换</h2><p>将低维不可分映射到高维，找到一种变换方法，即为$\phi(x)$</p>
 <p>高斯核函数：<br>$$<br>K(X, Y) =  exp \bigg\{ -\frac{||X-Y||^2}{2\sigma^2} \bigg\}<br>$$</p>
 <h2 id="6-基于sklearn求解SVM"><a href="#6-基于sklearn求解SVM" class="headerlink" title="6 基于sklearn求解SVM"></a>6 基于sklearn求解SVM</h2><p>参考 <a href="https://blog.csdn.net/weixin_42600072/article/details/88644229" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42600072/article/details/88644229</a></p>
-<h1 id="K-MEANS算法"><a href="#K-MEANS算法" class="headerlink" title="K-MEANS算法"></a>K-MEANS算法</h1><blockquote>
+<h1 id="K-MEANS算法"><a href="#K-MEANS算法" class="headerlink" title="K-MEANS算法"></a>K-MEANS算法</h1><h2 id="1-概述-4"><a href="#1-概述-4" class="headerlink" title="1 概述"></a>1 概述</h2><p>聚类概念：这是个无监督问题（没有标签数据），目的是将相似的东西分到一组。</p>
+<p>通常使用的算法是K-MEANS算法</p>
+<blockquote>
+<p>K-MEANS算法：</p>
+<ul>
+<li>需要指定簇的个数，即K值</li>
+<li>质心：数据的均值，即向量各维取平均即可</li>
+<li>距离的度量：常用欧几里得距离和余弦相似度（先标准化，让数据基本都是在一个比较小的范围内浮动）</li>
+<li>优化目标：$min\sum \limits_{i = 1}^K \sum \limits_{x \in C_i} dist(c_i, x)^2$ （对于每一个簇让每一个样本到中心点的距离越小越好，$c_i$代表中心点）</li>
+</ul>
+</blockquote>
+<h2 id="2-K-MEANS流程"><a href="#2-K-MEANS流程" class="headerlink" title="2 K-MEANS流程"></a>2 K-MEANS流程</h2><p>假设平面上有一系列样本点，现在需要将其进行分组。</p>
+<p>选定<code>K=2</code>，即将这些数据点分成两个组别。</p>
+<ul>
+<li>随机选择两个质心（分别代表两个簇），计算所有样本点到两个质心的距离。每个样本点会计算出到两个质心的距离，那么选择最小的距离，这个样本点就归属于哪个簇。</li>
+<li>然后对于两个簇的所有样本点分别算出对应的质心（这两个质心便充当新的质心），再对所有样本点计算到两个新的质心的距离，还是选择最小的距离，那么这个样本点就归属于哪个簇。</li>
+<li>最终直到两个簇所属的样本点不在发生变化。</li>
+</ul>
+<blockquote>
+<p><a href="https://www.bilibili.com/video/BV1bt411i77G?p=101&vd_source=bb4ca29d8dfb2e3c28c10bb09f4b962e" target="_blank" rel="noopener">K-MEANS工作流程视频参考</a></p>
+</blockquote>
+<h2 id="3-优缺点"><a href="#3-优缺点" class="headerlink" title="3 优缺点"></a>3 优缺点</h2><p>优点：</p>
+<ul>
+<li>简单快速，适合常规数据集</li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>K值难以确定</li>
+<li>复杂度与样本呈线性关系</li>
+<li>很难发现任意形状的簇</li>
+<li>初始的点影响很大</li>
+</ul>
+<blockquote>
+<p> <a href="https://www.naftaliharris.com/blog/visualizing-k-means-clustering/" target="_blank" rel="noopener">K-MEANS可视化演示</a></p>
+</blockquote>
+<h2 id="4-K-MEANS进行图像压缩"><a href="#4-K-MEANS进行图像压缩" class="headerlink" title="4 K-MEANS进行图像压缩"></a>4 K-MEANS进行图像压缩</h2><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> skimage <span class="token keyword">import</span> io
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>cluster <span class="token keyword">import</span> KMeans
+<span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+
+image <span class="token operator">=</span> io<span class="token punctuation">.</span>imread<span class="token punctuation">(</span><span class="token string">"1.jpg"</span><span class="token punctuation">)</span>
+io<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>image<span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># io.show()  # 显示图片</span>
+
+rows <span class="token operator">=</span> image<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+cols <span class="token operator">=</span> image<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>image<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+
+image <span class="token operator">=</span> image<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span>rows <span class="token operator">*</span> cols<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+kmeans <span class="token operator">=</span> KMeans<span class="token punctuation">(</span>n_clusters<span class="token operator">=</span><span class="token number">128</span><span class="token punctuation">,</span> n_init<span class="token operator">=</span><span class="token number">10</span><span class="token punctuation">,</span> max_iter<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 簇128, 最大迭代次数100</span>
+kmeans<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>image<span class="token punctuation">)</span>
+
+clusters <span class="token operator">=</span> np<span class="token punctuation">.</span>asarray<span class="token punctuation">(</span>kmeans<span class="token punctuation">.</span>cluster_centers_<span class="token punctuation">,</span> dtype<span class="token operator">=</span>np<span class="token punctuation">.</span>uint8<span class="token punctuation">)</span>
+labels <span class="token operator">=</span> np<span class="token punctuation">.</span>asarray<span class="token punctuation">(</span>kmeans<span class="token punctuation">.</span>labels_<span class="token punctuation">,</span> dtype<span class="token operator">=</span>np<span class="token punctuation">.</span>uint8<span class="token punctuation">)</span>
+labels <span class="token operator">=</span> labels<span class="token punctuation">.</span>reshape<span class="token punctuation">(</span>rows<span class="token punctuation">,</span> cols<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>clusters<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
+np<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'test.npy'</span><span class="token punctuation">,</span> clusters<span class="token punctuation">)</span>
+io<span class="token punctuation">.</span>imsave<span class="token punctuation">(</span><span class="token string">'compressed.jpg'</span><span class="token punctuation">,</span> labels<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="DBSCAN算法"><a href="#DBSCAN算法" class="headerlink" title="DBSCAN算法"></a>DBSCAN算法</h1><h2 id="1-概述-5"><a href="#1-概述-5" class="headerlink" title="1 概述"></a>1 概述</h2><p>DBSCAN（Density-Based Spatial Clustering of Applications with Noise，具有噪声的基于密度的聚类方法）是一种<strong>基于密度的空间聚类算法</strong>。该算法将具有足够密度的区域划分为簇，并在具有噪声的空间<a href="https://cloud.tencent.com/solution/database?from=10680" target="_blank" rel="noopener">数据库</a>中发现任意形状的簇，DBSCAN算法将<code>簇</code>定义为密度相连的点的最大集合。</p>
+<p>核心对象：若某个点的密度达到算法设定的阈值则称其为核心点。（即<code>r</code>邻域内的点的数量不小于<code>minPts</code>）</p>
+<p>基于以上密度的定义，我们可以将样本集中的点划分为以下三类：</p>
+<ul>
+<li><strong>核心点</strong>：在半径r区域内，含有超过MinPts数目（最小数目）的点，称为核心点；</li>
+<li><strong>边界点</strong>：在半径r区域内，点的数量小于MinPts数目，但是是核心点的直接邻居；</li>
+<li><strong>噪声点</strong>：既不是核心点也不是边界点的点</li>
+</ul>
+<blockquote>
+<p>噪声点是不会被聚类纳入的点，边界点与核心点组成聚类的“簇”。</p>
+</blockquote>
+<p>一些概念：</p>
+<ul>
+<li><strong>直接密度可达</strong>：在给定一个对象集合D，如果p在q的r领域内，且<strong>q是一个核心点对象</strong>，则称对象p从对象q出发时是直接密度可达的</li>
+<li><strong>密度可达</strong>：在给定对象集合D中，如果存在一个对象链q–&gt;e–&gt;a–&gt;k–&gt;l–&gt;p，任意相邻两个对象间都是直接密度可达的，则称对象p是对象q关于r邻域内、MinPts数目下，是密度可达的；</li>
+<li><strong>密度相连</strong>：如果在对象集合D中存在一个对象O，使得对象p和q都是从O关于r邻域内、MinPts数目下，是密度相连的。</li>
+</ul>
+<blockquote>
+<p>核心点能够连通（密度可达），它们构成的以r为半径的圆形邻域相互连接或重叠，这些连通的核心点及其所处的邻域内的全部点构成一个簇。</p>
+</blockquote>
+<h2 id="2-原理"><a href="#2-原理" class="headerlink" title="2 原理"></a>2 原理</h2><ol>
+<li>DBSCAN通过检查数据集中每个点的r邻域来搜索簇，如果点p的r邻域包含多于MinPts个点，则创建一个以p为核心对象的簇；</li>
+<li>然后， DBSCAN迭代的聚集从这些核心对象直接密度可达的对象，这个过程可能涉及一些密度可达簇的合并；</li>
+<li>当没有新的带你添加到任何簇时，迭代过程结束。</li>
+</ol>
+<p>优缺点：</p>
+<ul>
+<li><p>优点：基于密度定义，可以对抗噪声，能处理任意形状和大小的簇</p>
+</li>
+<li><p>缺点：当簇的密度变化太大时候，聚类得到的结果会不理想；对于高维问题，密度定义也是一个比较麻烦的问题。</p>
+</li>
+</ul>
+<h2 id="3-实现"><a href="#3-实现" class="headerlink" title="3 实现"></a>3 实现</h2><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+<span class="token keyword">from</span> sklearn <span class="token keyword">import</span> datasets
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>colors
+
+<span class="token comment" spellcheck="true"># 创建Figure</span>
+fig <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment" spellcheck="true"># 用来正常显示中文标签</span>
+matplotlib<span class="token punctuation">.</span>rcParams<span class="token punctuation">[</span><span class="token string">'font.sans-serif'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span>u<span class="token string">'SimHei'</span><span class="token punctuation">]</span>
+<span class="token comment" spellcheck="true"># 用来正常显示负号</span>
+matplotlib<span class="token punctuation">.</span>rcParams<span class="token punctuation">[</span><span class="token string">'axes.unicode_minus'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">False</span>
+
+X1<span class="token punctuation">,</span> y1 <span class="token operator">=</span> datasets<span class="token punctuation">.</span>make_circles<span class="token punctuation">(</span>n_samples<span class="token operator">=</span><span class="token number">5000</span><span class="token punctuation">,</span> factor<span class="token operator">=</span><span class="token punctuation">.</span><span class="token number">6</span><span class="token punctuation">,</span>
+                                      noise<span class="token operator">=</span><span class="token punctuation">.</span><span class="token number">05</span><span class="token punctuation">)</span>
+X2<span class="token punctuation">,</span> y2 <span class="token operator">=</span> datasets<span class="token punctuation">.</span>make_blobs<span class="token punctuation">(</span>n_samples<span class="token operator">=</span><span class="token number">1000</span><span class="token punctuation">,</span> n_features<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">,</span>
+                             centers<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">1.2</span><span class="token punctuation">,</span><span class="token number">1.2</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span> cluster_std<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token punctuation">.</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">,</span>random_state<span class="token operator">=</span><span class="token number">9</span><span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># 原始点的分布</span>
+ax1 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">311</span><span class="token punctuation">)</span>
+X <span class="token operator">=</span> np<span class="token punctuation">.</span>concatenate<span class="token punctuation">(</span><span class="token punctuation">(</span>X1<span class="token punctuation">,</span> X2<span class="token punctuation">)</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>X<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> X<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> marker<span class="token operator">=</span><span class="token string">'o'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span>u<span class="token string">'原始数据分布'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>sca<span class="token punctuation">(</span>ax1<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># K-means聚类</span>
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>cluster <span class="token keyword">import</span> KMeans
+ax2 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">312</span><span class="token punctuation">)</span>
+y_pred <span class="token operator">=</span> KMeans<span class="token punctuation">(</span>n_clusters<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">,</span> random_state<span class="token operator">=</span><span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">.</span>fit_predict<span class="token punctuation">(</span>X<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>X<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> X<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> c<span class="token operator">=</span>y_pred<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span>u<span class="token string">'K-means聚类'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>sca<span class="token punctuation">(</span>ax2<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true"># DBSCAN聚类</span>
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>cluster <span class="token keyword">import</span> DBSCAN
+ax3 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">313</span><span class="token punctuation">)</span>
+y_pred <span class="token operator">=</span> DBSCAN<span class="token punctuation">(</span>eps <span class="token operator">=</span> <span class="token number">0.1</span><span class="token punctuation">,</span> min_samples <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">.</span>fit_predict<span class="token punctuation">(</span>X<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>scatter<span class="token punctuation">(</span>X<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> X<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> c<span class="token operator">=</span>y_pred<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span>u<span class="token string">'DBSCAN聚类'</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>sca<span class="token punctuation">(</span>ax3<span class="token punctuation">)</span>
+
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
 <p>机器学习实战参考：<a href="https://blog.csdn.net/weixin_42600072/category_8751294.html" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42600072/category_8751294.html</a></p>
 </blockquote>
 
@@ -1665,7 +1796,7 @@ from torch.utils.data
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">49.4k</span>
+            <span class="white-color">50.9k</span>
             
 
             <br>
