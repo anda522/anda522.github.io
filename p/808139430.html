@@ -342,7 +342,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -497,14 +497,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    8.6k
+                    9.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    34 分
+                    40 分
                 </div>
                 
                 
@@ -1031,6 +1031,49 @@ plt<span class="token punctuation">.</span>title<span class="token punctuation">
 plt<span class="token punctuation">.</span>sca<span class="token punctuation">(</span>ax3<span class="token punctuation">)</span>
 
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="PCA主成分分析"><a href="#PCA主成分分析" class="headerlink" title="PCA主成分分析"></a>PCA主成分分析</h1><p>Principal Component Analysis：降维中最常用的一种手段</p>
+<h2 id="1-基变换"><a href="#1-基变换" class="headerlink" title="1 基变换"></a>1 基变换</h2><p>目标：提取最有价值的信息（基于方差）</p>
+<ul>
+<li><p>基概念：例如在二维坐标系中，向量（3，4）也可表示为线性组合$x(1, 0) + y(0, 1)$，而$(0,1)(1,0)$叫做二维空间的一组基。</p>
+</li>
+<li><p>基变换</p>
+<ul>
+<li><p>要求：基是正交的（内积/点积为0，或者说互相垂直，线性无关）</p>
+</li>
+<li><p>变换：数据与第一个基做内积运算，结果作为第一个新的坐标分量；数据与第二个基做内积运算，结果作为第二个新的坐标分量。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>比如$(3,2)$映射到基的坐标：<br>$$<br>\begin{pmatrix}<br>\frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}} \\<br>-\frac{1}{\sqrt{2}} &amp; \frac{1}{\sqrt{2}}<br>\end{pmatrix}<br>\begin{pmatrix}<br>3 \\<br>2<br>\end{pmatrix}<br>=<br>\begin{pmatrix}<br>\frac{5}{\sqrt 2} \\<br>-\frac{1}{\sqrt 2}<br>\end{pmatrix}<br>$$</p>
+<ul>
+<li>基变换一般公式：</li>
+</ul>
+<p>$$<br>\begin{pmatrix}<br>p_1 \\<br>p_2 \\<br>\vdots \\<br>p_n<br>\end{pmatrix}<br>\begin{pmatrix}<br>a_1 &amp; a_2 &amp; \cdots &amp;a_m<br>\end{pmatrix}<br>=<br>\begin{pmatrix}<br>p_1a_1 &amp; p_1a_2 &amp; \cdots &amp; p_1a_m \\<br>p_2a_1 &amp; p_2a_2 &amp; \cdots &amp; p_2a_m \\<br>\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\<br>p_na_1 &amp; p_na_2 &amp; \cdots &amp; p_na_m \\<br>\end{pmatrix}<br>$$</p>
+<blockquote>
+<p>等式左边的两个矩阵中，左边是基，右边是数据。</p>
+<p>两个矩阵相乘的意义是将右边的矩阵中的每一列列向量变换到左边矩阵中每一行行向量为基所表示的空间中去。</p>
+</blockquote>
+<h2 id="2-协方差矩阵"><a href="#2-协方差矩阵" class="headerlink" title="2 协方差矩阵"></a>2 协方差矩阵</h2><p>我们希望选择一个方向（基）：数据能够保留更多的原始信息，也可以说希望经过某个基投影后的投影值尽可能分散。（雾</p>
+<p>方差：<br>$$<br>Var(a) = \frac{1}{m} \sum \limits_{i = 1}^m (a_i - \mu)^2<br>$$<br>寻找一个一维基，使得所有数据变换为这个基上的坐标表示后，<strong>方差值最大</strong>（分散）。</p>
+<p>协方差：（假设均值为0时）（对于标签$a_i, b_i$，如果两个相似度越大，协方差越大）<br>$$<br>Cov(a, b) = \frac{1}{m} \sum \limits_{i = 1}^m a_ib_i<br>$$</p>
+<blockquote>
+<p>如果单纯选择方差最大的方向，后续方向应该会和方差最大的方向接近重合。</p>
+<p>解决方案：为了让两个子段尽可能表示更多的原始信息，我们是不希望他们之间存在（线性）相关性的。</p>
+<p>可以用两个字段的协方差表示相关性，当协方差为0时，代表两个字段是相互独立的。</p>
+</blockquote>
+<p>题意：将一组N维向量降为K维，目标是选择K个单位的正交基，使原始数据变换到这组基上面后，各字段两两之间协方差为0，字段方差尽可能大。</p>
+<p>$$<br>\text{特征数据}X =<br>\begin{pmatrix}<br>a_1 &amp; a_2 &amp; \cdots &amp; a_m \\<br>b_1 &amp; b_2 &amp; \cdots &amp; b_m<br>\end{pmatrix}<br>$$<br>协方差矩阵：<br>$$<br>\frac{1}{m}XX^T =<br>\begin{pmatrix}<br>\frac{1}{m}\sum \limits_{i = 1}^m a_i^2  &amp; \frac{1}{m}\sum \limits_{i = 1}^ma_ib_i \\<br>\frac{1}{m}\sum \limits_{i = 1}^m a_ib_i &amp; \frac{1}{m}\sum \limits_{i = 1}^mb_i^2<br>\end{pmatrix}<br>$$</p>
+<blockquote>
+<p>矩阵对角线上的两个元素分别为两个字段的方差（假设均值为0），而其他元素是a和b的协方差。</p>
+</blockquote>
+<h2 id="3-优化"><a href="#3-优化" class="headerlink" title="3 优化"></a>3 优化</h2><p>接下来就是希望让协方差矩阵的除对角线位置的元素为0（协方差为0），就是进行对角化操作。</p>
+<p>协方差矩阵对角化：<br>$$<br>PCP^T = \Lambda =<br>\begin{pmatrix}<br>\lambda_1 \\<br>&amp; \lambda_2 \\<br>&amp; &amp; \ddots \\<br>&amp; &amp; &amp; \lambda_n<br>\end{pmatrix}<br>$$</p>
+<blockquote>
+<p>结论：一个n行n列的实对称矩阵一定可以找到n个单位正交特征向量<br>$$<br>E = \begin{pmatrix} e_1 &amp; e_2 &amp; \cdots &amp; e_n\end{pmatrix}<br>$$<br>实对称矩阵可以进行对角化：<br>$$<br>ECE^T = \Lambda =<br>\begin{pmatrix}<br>\lambda_1 \\<br>&amp; \lambda_2 \\<br>&amp; &amp; \ddots \\<br>&amp; &amp; &amp; \lambda_n<br>\end{pmatrix}<br>$$</p>
+</blockquote>
+<p>将特征值从大到小排列，用前K行组成的矩阵乘原始数据矩阵X，就得到降维后的数据矩阵Y。</p>
+<h2 id="4-示例"><a href="#4-示例" class="headerlink" title="4 示例"></a>4 示例</h2><p>数据（共5个数据，每个数据2个特征点）<br>$$<br>\begin{pmatrix}<br>-1 &amp; -1 &amp; 0 &amp; 2 &amp; 0 \\<br>-2 &amp; 0 &amp; 0 &amp; 1 &amp; 1<br>\end{pmatrix}<br>$$<br>协方差矩阵<br>$$<br>C = \frac{1}{5}<br>\begin{pmatrix}<br>-1 &amp; -1 &amp; 0 &amp; 2 &amp; 0 \\<br>-2 &amp; 0 &amp; 0 &amp; 1 &amp; 1<br>\end{pmatrix}<br>\begin{pmatrix}<br>-1 &amp; -2 \\<br>-1 &amp; 0 \\<br>0 &amp; 0 \\<br>2 &amp; 1 \\<br>0 &amp; 1<br>\end{pmatrix}<br>=<br>\begin{pmatrix}<br>\frac{6}{5} &amp; \frac{4}{5} \\<br>\frac{4}{5} &amp; \frac{6}{5}<br>\end{pmatrix}<br>$$<br>特征值<br>$$<br>\lambda_1 = 2, \lambda_2 = \frac{2}{5}<br>$$<br>特征向量<br>$$<br>c_1<br>\begin{pmatrix}<br>1 \\<br>1<br>\end{pmatrix} ,<br>c_2<br>\begin{pmatrix}<br>-1 \\<br>1<br>\end{pmatrix}<br>$$<br>对角化，我们要降成1维，选择（选择前1大）最大特征值对应的特征向量$c_1$这个<br>$$<br>PCP^T =<br>\begin{pmatrix}<br>\frac{1}{\sqrt 2} &amp; \frac{1}{\sqrt 2} \\<br>-\frac{1}{\sqrt 2} &amp; \frac{1}{\sqrt 2}<br>\end{pmatrix}<br>\begin{pmatrix}<br>\frac{6}{5} &amp; \frac{4}{5} \\<br>\frac{4}{5} &amp; \frac{6}{5}<br>\end{pmatrix}<br>\begin{pmatrix}<br>\frac{1}{\sqrt 2} &amp; -\frac{1}{\sqrt 2} \\<br>\frac{1}{\sqrt 2} &amp; \frac{1}{\sqrt 2}<br>\end{pmatrix}<br>=<br>\begin{pmatrix}<br>2 &amp; 0 \\<br>0 &amp; \frac{2}{5}<br>\end{pmatrix}<br>$$<br>降维<br>$$<br>Y =<br>\begin{pmatrix}<br>\frac{1}{\sqrt 2} &amp; \frac{1}{\sqrt 2}<br>\end{pmatrix}<br>\begin{pmatrix}<br>-1 &amp; -1 &amp; 0 &amp; 2 &amp; 0 \\<br>-2 &amp; 0 &amp; 0 &amp; 1 &amp; 1<br>\end{pmatrix}<br>=<br>\begin{pmatrix}<br>-\frac{3}{\sqrt 2} &amp; -\frac{1}{\sqrt 2} &amp; 0 &amp; \frac{3}{\sqrt 2} &amp; -\frac{1}{\sqrt 2}<br>\end{pmatrix}<br>$$</p>
 <blockquote>
 <p>机器学习实战参考：<a href="https://blog.csdn.net/weixin_42600072/category_8751294.html" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42600072/category_8751294.html</a></p>
 </blockquote>
@@ -1531,7 +1574,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="2022年度总结">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="2022年度总结">
                         
                         <span class="card-title">2022年度总结</span>
                     </div>
@@ -1585,7 +1628,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Pytorch入门知识总结">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Pytorch入门知识总结">
                         
                         <span class="card-title">Pytorch入门知识总结</span>
                     </div>
@@ -1796,7 +1839,7 @@ from torch.utils.data
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">50.9k</span>
+            <span class="white-color">52.1k</span>
             
 
             <br>
