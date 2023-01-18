@@ -342,7 +342,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -463,6 +463,10 @@
                             <span class="chip bg-color">学习总结</span>
                         </a>
                         
+                        <a href="/tags/MachineLearning/" target="_blank">
+                            <span class="chip bg-color">MachineLearning</span>
+                        </a>
+                        
                     </div>
                     
                 </div>
@@ -497,7 +501,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    9.8k
+                    9.9k
                 </div>
                 
 
@@ -560,7 +564,7 @@
 <ul>
 <li>小批量梯度下降</li>
 </ul>
-<p>每次更新一小部分数据来算，比较实用。</p>
+<p>每次更新一小部分数据来算，因为在整个训练集上算梯度资源消耗太大，我们可以随机采取$b$个样本$i_1, i_2, \cdots, i_b$来近似损失，$e$是损失函数，$b$是批量大小。<br>$$<br>\frac{1}{b} \sum \limits_{i \in I_b} \mathcal{e}(\mathbf{x_i}, y_i, \mathbf{w})<br>$$</p>
 <h3 id="4-2-其他参数"><a href="#4-2-其他参数" class="headerlink" title="4.2 其他参数"></a>4.2 其他参数</h3><ul>
 <li>学习率：更新的步长</li>
 </ul>
@@ -583,6 +587,9 @@
 </blockquote>
 <p>多分类问题：</p>
 <p><img src="808139430/image-20221228171310763.png" alt="多分类"></p>
+<blockquote>
+<p>Softmax回归是逻辑回归的一般化，相关对比参考 <a href="https://zhuanlan.zhihu.com/p/98061179" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/98061179</a></p>
+</blockquote>
 <h1 id="模型评估标准"><a href="#模型评估标准" class="headerlink" title="模型评估标准"></a>模型评估标准</h1><h2 id="1-回归模型评估"><a href="#1-回归模型评估" class="headerlink" title="1 回归模型评估"></a>1 回归模型评估</h2><h3 id="1-1-平均绝对误差（Mean-Absolute-Error，MAE）"><a href="#1-1-平均绝对误差（Mean-Absolute-Error，MAE）" class="headerlink" title="1.1 平均绝对误差（Mean Absolute Error，MAE）"></a>1.1 平均绝对误差（Mean Absolute Error，MAE）</h3><p>平均绝对误差就是指预测值与真实值之间平均相差多大<br>$$<br>MAE = \frac{1}{m}\sum \limits _{i = 1}^m \lvert f_i - y_i \rvert<br>$$</p>
 <h3 id="1-2-均方误差（Mean-Squared-Error，MSE）"><a href="#1-2-均方误差（Mean-Squared-Error，MSE）" class="headerlink" title="1.2 均方误差（Mean Squared Error，MSE）"></a>1.2 均方误差（Mean Squared Error，MSE）</h3><p>观测值与真值偏差的平方和与观测次数的比值<br>$$<br>MSE = \frac{1}{m} \sum \limits_{i = 1}^m(f_i - y_i)^2<br>$$<br>这也是线性回归中最常用的损失函数，线性回归过程中尽量让该损失函数最小。那么模型之间的对比也可以用它来比较。</p>
 <p>MSE可以评价数据的变化程度，MSE的值越小，说明预测模型描述实验数据具有更好的精确度。</p>
@@ -1574,7 +1581,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="2022年度总结">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="2022年度总结">
                         
                         <span class="card-title">2022年度总结</span>
                     </div>
@@ -1628,7 +1635,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Pytorch入门知识总结">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Pytorch入门知识总结">
                         
                         <span class="card-title">Pytorch入门知识总结</span>
                     </div>
@@ -1839,7 +1846,7 @@ from torch.utils.data
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">52.1k</span>
+            <span class="white-color">52.7k</span>
             
 
             <br>

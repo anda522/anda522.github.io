@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2023-01-11T11:34:51.118Z</updated>
+  <updated>2023-01-17T13:24:51.040Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>《动手学深度学习》笔记</title>
+    <link href="http://wyqz.top/p/1060509989.html"/>
+    <id>http://wyqz.top/p/1060509989.html</id>
+    <published>2023-01-15T11:36:00.000Z</published>
+    <updated>2023-01-17T13:24:51.040Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt; 本笔记主要参考&lt;a href=&quot;https://zh-v2.d2l.ai/index.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;《动手学深度学习》&lt;/a&gt;
+        
+      
+    
+    </summary>
+    
+      <category term="知识总结" scheme="http://wyqz.top/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="DeepLearning" scheme="http://wyqz.top/tags/DeepLearning/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2022年度总结</title>
     <link href="http://wyqz.top/p/1646942053.html"/>
     <id>http://wyqz.top/p/1646942053.html</id>
     <published>2023-01-01T02:38:55.000Z</published>
-    <updated>2023-01-11T11:34:51.118Z</updated>
+    <updated>2023-01-14T14:13:14.931Z</updated>
     
     <summary type="html">
     
@@ -52,7 +81,7 @@
     <link href="http://wyqz.top/p/808139430.html"/>
     <id>http://wyqz.top/p/808139430.html</id>
     <published>2022-12-27T09:04:31.000Z</published>
-    <updated>2023-01-14T13:11:50.959Z</updated>
+    <updated>2023-01-17T11:44:53.438Z</updated>
     
     <summary type="html">
     
@@ -70,6 +99,8 @@
     
     
       <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="MachineLearning" scheme="http://wyqz.top/tags/MachineLearning/"/>
     
   </entry>
   
@@ -535,34 +566,6 @@
       <category term="CF" scheme="http://wyqz.top/tags/CF/"/>
     
       <category term="DP" scheme="http://wyqz.top/tags/DP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>阶乘逆元和线性逆元</title>
-    <link href="http://wyqz.top/p/652576208.html"/>
-    <id>http://wyqz.top/p/652576208.html</id>
-    <published>2022-06-25T11:27:26.000Z</published>
-    <updated>2022-08-04T07:14:42.382Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;逆元简介&quot;&gt;&lt;a href=&quot;#逆元简介&quot; class=&quot;headerlink&quot; title=&quot;逆元简介&quot;&gt;&lt;/a&gt;逆元简介&lt;/h1&gt;&lt;p&gt;$a \times b \equiv  1 (
-        
-      
-    
-    </summary>
-    
-      <category term="数论" scheme="http://wyqz.top/categories/%E6%95%B0%E8%AE%BA/"/>
-    
-    
-      <category term="组合数学" scheme="http://wyqz.top/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
-    
-      <category term="逆元" scheme="http://wyqz.top/tags/%E9%80%86%E5%85%83/"/>
     
   </entry>
   
