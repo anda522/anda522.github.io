@@ -31,11 +31,11 @@ body {
     background-color: #eaeaea;
     margin: 0;
     color: #34495e;
-    /* 背景图 */
+    /* 背景图设置 */
     background: url('/medias/img/background.jpg');
-    /* 图床 */
-    /* background: url('https://static01.imgkr.com/temp/c16a43b9c339431d93bed18c4b4668a2.png'); */
     background-attachment: fixed;
+    /* 鼠标特效
+    cursor: url(/medias/img/Arrow.cur), auto; */
 }
 
 h1 {
@@ -96,40 +96,6 @@ blockquote {
     color: #666;
     background-color: rgba(66, 185, 131, .1);
 }
-
-/* pre {
-    padding: 1.5rem 1.5rem 1.5rem 3.3rem !important;
-    margin: 1rem 0 !important;
-    background: #272822;
-    overflow: auto;
-    border-radius: 0.35rem;
-    tab-size: 4;
-}
-
-code {
-    padding: 1px 5px;
-    font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
-    color: #e96900;
-    background-color: #f8f8f8;
-    border-radius: 2px;
-}
-
-pre code {
-    padding: 0;
-    color: #e8eaf6;
-    background-color: #272822;
-}
-
-pre[class*="language-"] {
-    padding: 1.2em;
-    margin: .5em 0;
-}
-
-code[class*="language-"],
-pre[class*="language-"] {
-    color: #e8eaf6;
-    white-space: pre-wrap !important;
-} */
 
 .line-numbers-rows {
     border-right-width: 0px !important;
@@ -1947,8 +1913,4 @@ footer .copy-right {
 ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
-}
-/* dream展示的图片边角样式 */
-.front-img img {
-    border-radius: 8px;
 }
