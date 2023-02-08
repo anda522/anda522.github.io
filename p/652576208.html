@@ -66,9 +66,6 @@
         document.write('<script src="' + src + '" id="sozz"><\/script>');
         })();
     </script>
-    
-
-
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
@@ -333,7 +330,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -535,7 +532,7 @@ inv<span class="token punctuation">[</span>n<span class="token punctuation">]</s
 <hr>
 <h1 id="线性求逆元"><a href="#线性求逆元" class="headerlink" title="线性求逆元"></a>线性求逆元</h1><p>求$[1,N-1]$关于<code>mod</code>的逆元时，可以做到在$O(N)$时间内解决</p>
 <p>设模数为<code>p</code><br>对于当前的<code>i</code>，设$p=k×i+r$,则</p>
-<p>$\begin{aligned}<br>k \times i + r &amp; \equiv   0  &amp;\,\,(mod \,\, p) \<br>k \times i \times ( i^{-1} \times r ^{-1}) + r \times (i^{-1} \times r^{-1}) &amp;\equiv 0 &amp;\,\,( mod \,\, p) \<br>k \times r^{-1} + i ^ {-1} &amp; \equiv 0 &amp;\,\, (mod \,\, p)\<br>i^{-1} &amp; \equiv -k \times r^{-1} &amp;\,\, (mod \,\, p) \<br>i^{-1} &amp; \equiv - \left \lfloor \frac{p}{i}\right \rfloor \times r^{-1} &amp;\,\,(mod\,\,p)<br>\end{aligned}$<br>注意：<br>$inv[1]$一定要初始化为1，需要从2开始递推，不能从1开始递推</p>
+<p>$\begin{aligned}<br>k \times i + r &amp; \equiv   0  &amp;\,\,(mod \,\, p) \\<br>k \times i \times ( i^{-1} \times r ^{-1}) + r \times (i^{-1} \times r^{-1}) &amp;\equiv 0 &amp;\,\,( mod \,\, p) \\<br>k \times r^{-1} + i ^ {-1} &amp; \equiv 0 &amp;\,\, (mod \,\, p)\\<br>i^{-1} &amp; \equiv -k \times r^{-1} &amp;\,\, (mod \,\, p) \\<br>i^{-1} &amp; \equiv - \left \lfloor \frac{p}{i}\right \rfloor \times r^{-1} &amp;\,\,(mod\,\,p)<br>\end{aligned}$<br>注意：<br>$inv[1]$一定要初始化为1，需要从2开始递推，不能从1开始递推</p>
 <pre class="line-numbers language-cpp"><code class="language-cpp">inv<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> inv<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
 <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> N<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
     inv<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> inv<span class="token punctuation">[</span>mod <span class="token operator">%</span> i<span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token punctuation">(</span>mod <span class="token operator">-</span> mod <span class="token operator">/</span> i<span class="token punctuation">)</span> <span class="token operator">%</span> mod<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -1127,7 +1124,7 @@ ll <span class="token function">C</span><span class="token punctuation">(</span>
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="CF1181C Flag-子矩阵数量统计">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="CF1181C Flag-子矩阵数量统计">
                         
                         <span class="card-title">CF1181C Flag-子矩阵数量统计</span>
                     </div>
@@ -1184,7 +1181,7 @@ https://codeforces.com/problemset/problem/1181/C
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="容斥定理">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="容斥定理">
                         
                         <span class="card-title">容斥定理</span>
                     </div>
@@ -1393,7 +1390,7 @@ https://codeforces.com/problemset/problem/1181/C
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">52.7k</span>
+            <span class="white-color">53.1k</span>
             
 
             <br>
