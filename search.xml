@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>组合数学常用公式</title>
+      <link href="/p/3821341893.html"/>
+      <url>/p/3821341893.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="组合数学常用公式"><a href="#组合数学常用公式" class="headerlink" title="组合数学常用公式"></a>组合数学常用公式</h1><h2 id="二项式定理"><a href="#二项式定理" class="headerlink" title="二项式定理"></a>二项式定理</h2><p>二项式系数相关性质：</p><ul><li><p>对称性：$C_n^m = C_n^{n-m}$</p></li><li><p>增减性与最大值：二项式系数前半部分逐渐增大，后半部分逐渐减小，中间取最大值。<br>$$<br>\text{最大值} max=\begin{cases} C_n^{\frac{n}{2}} \\ C_n^{\frac{n-1}{2}}=C_n^{\frac{n+1}{2}}\end{cases}<br>$$</p></li><li><p>二项式系数之和<br>$$<br>C_n^0+C_n^1+C_n^2+C_n^3+…+C_n^{n-1}+C_n^n=2^n<br>$$</p></li><li><p>二项式奇数项系数之和等于偶数项系数之和，即<br>$$<br>C_n^1+C_n^3+C_n^5+…=C_n^0+C_n^2+C_n^4+C_n^6+…=2^{n-1}<br>$$</p></li></ul><h3 id="杨辉三角"><a href="#杨辉三角" class="headerlink" title="杨辉三角"></a>杨辉三角</h3><p><img src="3821341893/image-20230209115625513.png" alt="杨辉三角"></p><h2 id="组合数公式"><a href="#组合数公式" class="headerlink" title="组合数公式"></a>组合数公式</h2><p>$C_n^m$计算</p><ul><li>方式一：公式计算<br>计算都是在逆元或者阶乘基础上计算的</li></ul><p>$$<br>C_n^m = \frac{n!}{m!*(n-m)!}<br>$$</p><pre class="line-numbers language-cpp"><code class="language-cpp">ll <span class="token function">C</span><span class="token punctuation">(</span>ll n<span class="token punctuation">,</span> ll m<span class="token punctuation">)</span><span class="token punctuation">{</span>    <span class="token keyword">if</span><span class="token punctuation">(</span>n <span class="token operator">&lt;</span> m<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>    <span class="token keyword">return</span> fact<span class="token punctuation">[</span>n<span class="token punctuation">]</span> <span class="token operator">*</span> invfac<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">%</span> mod <span class="token operator">*</span> invfac<span class="token punctuation">[</span>n <span class="token operator">-</span> m<span class="token punctuation">]</span> <span class="token operator">%</span> mod<span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><ul><li>方式二：递推方式<br>需要建表，所以如果计算范围比较大时需要的空间也大<br>递推公式 ： </li></ul><p>$$<br>C_n^m = C_{n-1}^{m} + C_{n-1}^{m-1}<br>$$</p><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;=</span> i<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span>    <span class="token punctuation">{</span>        <span class="token keyword">if</span><span class="token punctuation">(</span>i <span class="token operator">==</span> j <span class="token operator">||</span> j <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> c<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>        <span class="token keyword">else</span> c<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> c<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> c<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="排列组合方法"><a href="#排列组合方法" class="headerlink" title="排列组合方法"></a>排列组合方法</h2><h3 id="1-隔板法"><a href="#1-隔板法" class="headerlink" title="1. 隔板法"></a>1. 隔板法</h3><blockquote><p>引入： 10 个<strong>相同</strong>小球放进 3 个<strong>不同</strong>盒子，每个盒子至少放进一个， 求种类数。</p><p>在10 个小球中间插入隔板， 共有 $10-1=9$ 个位置， 需要插入 $3-1=2$ 个隔板将其分成 3 部分。 共 $C_9^2 = 36$ 种。</p></blockquote><ul><li>一般隔板法：</li></ul><p>将 $n$ 个相同的元素分成 $k$ 部分，每部分至少分得一个元素， 即在 $n-1$ 个空隙中插入 $k-1$ 个隔板，情况数为<br>$$<br>C_{n-1}^{k-1}<br>$$<br>等价于 $x_1+ x_2+x_3+…+x_k=n, x_i \geq 1$ 的可行解个数。</p><ul><li>添元素隔板法：</li></ul><p>将 $n$ 个相同的元素分成 $k$ 部分，每部分可以为空， 等价于我们先让元素个数添加上 $k$ 个，然后在 $n+k$ 个元素中分成 $k$ 部分， 最后再在 $k$ 部分的每一个部分都拿走一个元素，共拿走 $k$ 个元素。 即在 $n+k-1$ 个空隙中插入 $k-1$ 个隔板，情况数为<br>$$<br>C_{n+k-1}^{k-1}<br>$$<br>等价于 $x_1+ x_2+x_3+…+x_k=n, x_i \geq 0$ 的可行解个数。</p><blockquote><p>此时该式可以转化为一般隔板法， 我们让 $x_i \geq 1$ 即可，操作是将每一个 $x_i$ 元素加上 $1$ ，相当于等式两边同时加了 $k$ ，即 $x_1+x_2+…+x_k=n+k,x_i \geq 1$ ，即可转化为一般隔板法。</p></blockquote><ul><li>隔板法应用</li></ul><p>把10个相同的小球放到3个不同的箱子，第一个箱子至少1个，第二个箱子至少3个，第3个箱子可以为</p><p>空，有几种情况？</p><blockquote><p>我们可以在第二个箱子先放入10个小球中的2个，小球剩8个放3个箱子，然后在第三个箱子放入8</p><p>个小球之外的1个小球（即补充了一个球），则问题转化为把9个相同小球放3不同箱子，每箱至</p><p>少1个，几种方法？ </p><p>$C^2_8=28$</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数论 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 组合数学 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>《动手学深度学习》笔记</title>
       <link href="/p/1060509989.html"/>
       <url>/p/1060509989.html</url>
@@ -332,11 +357,11 @@
       
         <tags>
             
+            <tag> CF </tag>
+            
             <tag> DFS </tag>
             
             <tag> 树 </tag>
-            
-            <tag> CF </tag>
             
         </tags>
       
