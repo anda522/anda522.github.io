@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2023-02-09T04:01:54.883Z</updated>
+  <updated>2023-03-09T13:17:39.609Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Latex语法</title>
+    <link href="http://wyqz.top/p/917541138.html"/>
+    <id>http://wyqz.top/p/917541138.html</id>
+    <published>2023-03-09T09:48:41.000Z</published>
+    <updated>2023-03-09T13:17:39.609Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Latex语法&quot;&gt;&lt;a href=&quot;#Latex语法&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="知识总结" scheme="http://wyqz.top/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
+    
+    
+      <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="Latex" scheme="http://wyqz.top/tags/Latex/"/>
+    
+  </entry>
   
   <entry>
     <title>组合数学常用公式</title>
@@ -47,7 +75,7 @@
     <link href="http://wyqz.top/p/1060509989.html"/>
     <id>http://wyqz.top/p/1060509989.html</id>
     <published>2023-01-15T11:36:00.000Z</published>
-    <updated>2023-03-03T13:46:59.501Z</updated>
+    <updated>2023-03-04T10:01:40.239Z</updated>
     
     <summary type="html">
     
@@ -535,32 +563,6 @@
     </summary>
     
       <category term="知识总结" scheme="http://wyqz.top/categories/%E7%9F%A5%E8%AF%86%E6%80%BB%E7%BB%93/"/>
-    
-    
-      <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2021年度总结</title>
-    <link href="http://wyqz.top/p/3756014507.html"/>
-    <id>http://wyqz.top/p/3756014507.html</id>
-    <published>2022-06-29T10:52:55.000Z</published>
-    <updated>2023-01-19T09:17:08.591Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;2021年度总结&quot;&gt;&lt;a href=&quot;#2021年度总结&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="哲思" scheme="http://wyqz.top/categories/%E5%93%B2%E6%80%9D/"/>
     
     
       <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
