@@ -5,6 +5,7 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="分类: 树形DP, ZZU 行码棋">
+    <!-- 百度和谷歌统计验证 -->
     <meta name="baidu-site-verification" content="code-L7AVcsbU14">
     <meta name="google-site-verification" content="x4QfrBHn9imI1RhTNCB8RD8Q2Rx6rE_zylSBptBgdZY">
     <!-- <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" /> -->
@@ -19,6 +20,8 @@
     <title>分类: 树形DP | 行码棋</title>
     <link rel="icon" type="image/png" href="/medias/logo.png">
 
+    <link rel="stylesheey" type="text/css" href="//at.alicdn.com/t/c/font_3948353_97hiukrvyh.css">
+    <!-- fa图标css文件引入 -->
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
@@ -27,7 +30,7 @@
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
-
+    <!-- 调用今日诗词API -->
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     <!-- wyqz.top 百度统计-->
@@ -41,7 +44,7 @@
     })();
     </script>
             
-
+    <!-- 百度推送 -->
     
         <script>
             (function(){
@@ -338,7 +341,8 @@
 </div>
 <script>
 // 每天切换 banner 图.  Switch banner image every day. 每次打开页面切换banner图
-$('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.random() * 9) + '.jpg)');
+// 每打开新页面切换一次 Math.floor(Math.random() * 9)
+$('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
 </script>
     </div>
 </div>
@@ -357,11 +361,11 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
                 
                 
                 
-                <a href="/categories/图论/" title="图论: 2">
+                <a href="/categories/知识总结/" title="知识总结: 7">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F9EBEA;">图论
-                        <span class="tag-length">2</span>
+                            style="background-color: #F9EBEA;">知识总结
+                        <span class="tag-length">7</span>
                     </span>
                 </a>
                 
@@ -375,11 +379,11 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
                 </a>
                 
                 
-                <a href="/categories/知识总结/" title="知识总结: 7">
+                <a href="/categories/图论/" title="图论: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #D5F5E3;">知识总结
-                        <span class="tag-length">7</span>
+                            style="background-color: #D5F5E3;">图论
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -393,10 +397,19 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
                 </a>
                 
                 
+                <a href="/categories/AT/" title="AT: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #FEF9E7;">AT
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/categories/STL/" title="STL: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #FEF9E7;">STL
+                            style="background-color: #F8F9F9;">STL
                         <span class="tag-length">2</span>
                     </span>
                 </a>
@@ -405,16 +418,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
                 <a href="/categories/树/" title="树: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F8F9F9;">树
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/categories/AT/" title="AT: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #82E0AA;">AT
+                            style="background-color: #82E0AA;">树
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -472,7 +476,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="树上拓扑序计数|树形DP">
+                            <img src="/medias/featureimages/9.png" class="responsive-img" alt="树上拓扑序计数|树形DP">
                             
                             <span class="card-title">树上拓扑序计数|树形DP</span>
                         </div>
@@ -678,16 +682,21 @@ $(function () {
     <script src="/libs/aos/aos.js"></script>
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+
     <script src="/js/matery.js"></script>
     <script src="/js/click_show_text.js"></script>
     
-    <script type="text/javascript"> var OriginTitile = document.title, st; document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) })
+    <script type="text/javascript"> 
+        var OriginTitile = document.title, st;
+        document.addEventListener("visibilitychange", function () {
+            document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) 
+        })
     </script>
     
-
-    <script type="text/javascript" color="56,152,252" opacity="0.9" zindex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    <!-- 动态线条背景 -->
+    <!-- <script type="text/javascript" color="56,152,252" opacity="0.9" zindex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
     </script>
-    <canvas id="c_n4" width="602" height="852" style="position: fixed; top: 0px; left: 0px; z-index: -2; opacity: 0.9;"></canvas>
+    <canvas id="c_n4" width="602" height="852" style="position: fixed; top: 0px; left: 0px; z-index: -2; opacity: 0.9;"></canvas> -->
     
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -711,7 +720,6 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
 
-    <!-- 雪花特效 -->
     
 
 </body>

@@ -5,6 +5,7 @@
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
     <meta name="keywords" content="标签: AT, ZZU 行码棋">
+    <!-- 百度和谷歌统计验证 -->
     <meta name="baidu-site-verification" content="code-L7AVcsbU14">
     <meta name="google-site-verification" content="x4QfrBHn9imI1RhTNCB8RD8Q2Rx6rE_zylSBptBgdZY">
     <!-- <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" /> -->
@@ -19,6 +20,8 @@
     <title>标签: AT | 行码棋</title>
     <link rel="icon" type="image/png" href="/medias/logo.png">
 
+    <link rel="stylesheey" type="text/css" href="//at.alicdn.com/t/c/font_3948353_97hiukrvyh.css">
+    <!-- fa图标css文件引入 -->
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
@@ -27,7 +30,7 @@
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
-
+    <!-- 调用今日诗词API -->
     <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     <!-- wyqz.top 百度统计-->
@@ -41,7 +44,7 @@
     })();
     </script>
             
-
+    <!-- 百度推送 -->
     
         <script>
             (function(){
@@ -338,7 +341,8 @@
 </div>
 <script>
 // 每天切换 banner 图.  Switch banner image every day. 每次打开页面切换banner图
-$('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.random() * 9) + '.jpg)');
+// 每打开新页面切换一次 Math.floor(Math.random() * 9)
+$('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay() + '.jpg)');
 </script>
     </div>
 </div>
@@ -356,20 +360,20 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
             <div class="tag-chips">
                 
                 
-                <a href="/tags/树链剖分/" title="树链剖分: 2">
+                <a href="/tags/学习总结/" title="学习总结: 9">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="树链剖分" style="background-color: #F9EBEA;">树链剖分
-                        <span class="tag-length">2</span>
+                            data-tagname="学习总结" style="background-color: #F9EBEA;">学习总结
+                        <span class="tag-length">9</span>
                     </span>
                 </a>
                 
                 
-                <a href="/tags/学习总结/" title="学习总结: 9">
+                <a href="/tags/树链剖分/" title="树链剖分: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="学习总结" style="background-color: #F5EEF8;">学习总结
-                        <span class="tag-length">9</span>
+                            data-tagname="树链剖分" style="background-color: #F5EEF8;">树链剖分
+                        <span class="tag-length">2</span>
                     </span>
                 </a>
                 
@@ -383,10 +387,19 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
                 </a>
                 
                 
+                <a href="/tags/AT/" title="AT: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            data-tagname="AT" style="background-color: #E8F8F5;">AT
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/tags/C/" title="C++: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="C++" style="background-color: #E8F8F5;">C++
+                            data-tagname="C++" style="background-color: #FEF9E7;">C++
                         <span class="tag-length">2</span>
                     </span>
                 </a>
@@ -395,7 +408,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
                 <a href="/tags/STL/" title="STL: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="STL" style="background-color: #FEF9E7;">STL
+                            data-tagname="STL" style="background-color: #F8F9F9;">STL
                         <span class="tag-length">2</span>
                     </span>
                 </a>
@@ -404,7 +417,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
                 <a href="/tags/DFS/" title="DFS: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="DFS" style="background-color: #F8F9F9;">DFS
+                            data-tagname="DFS" style="background-color: #82E0AA;">DFS
                         <span class="tag-length">2</span>
                     </span>
                 </a>
@@ -413,7 +426,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
                 <a href="/tags/树/" title="树: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="树" style="background-color: #82E0AA;">树
+                            data-tagname="树" style="background-color: #D7BDE2;">树
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -422,17 +435,8 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
                 <a href="/tags/CF/" title="CF: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="CF" style="background-color: #D7BDE2;">CF
+                            data-tagname="CF" style="background-color: #A3E4D7;">CF
                         <span class="tag-length">2</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/AT/" title="AT: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="AT" style="background-color: #A3E4D7;">AT
-                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -455,19 +459,10 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
                 </a>
                 
                 
-                <a href="/tags/Latex/" title="Latex: 1">
+                <a href="/tags/DP/" title="DP: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Latex" style="background-color: #F9E79F;">Latex
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/git/" title="git: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="git" style="background-color: #F8F9F9;">git
+                            data-tagname="DP" style="background-color: #F9E79F;">DP
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -491,10 +486,28 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
                 </a>
                 
                 
-                <a href="/tags/DP/" title="DP: 1">
+                <a href="/tags/Latex/" title="Latex: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="DP" style="background-color: #FEF9E7;">DP
+                            data-tagname="Latex" style="background-color: #85C1E9;">Latex
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/git/" title="git: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="git" style="background-color: #F8F9F9;">git
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/tags/DeepLearning/" title="DeepLearning: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="DeepLearning" style="background-color: #F8F9F9;">DeepLearning
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -509,10 +522,10 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
                 </a>
                 
                 
-                <a href="/tags/DeepLearning/" title="DeepLearning: 1">
+                <a href="/tags/MachineLearning/" title="MachineLearning: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="DeepLearning" style="background-color: #F8F9F9;">DeepLearning
+                            data-tagname="MachineLearning" style="background-color: #F8C471;">MachineLearning
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -532,15 +545,6 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
                              chip-default "
                             data-tagname="组合数学" style="background-color: #E8F8F5;">组合数学
                         <span class="tag-length">3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/MachineLearning/" title="MachineLearning: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="MachineLearning" style="background-color: #F8C471;">MachineLearning
-                        <span class="tag-length">1</span>
                     </span>
                 </a>
                 
@@ -570,7 +574,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + Math.floor(Math.r
                         <div class="card-image tag-image">
                             
                             
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="AtCoder Beginner Contest 266 A-G">
+                            <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="AtCoder Beginner Contest 266 A-G">
                             
                             <span class="card-title">AtCoder Beginner Contest 266 A-G</span>
                         </div>
@@ -756,16 +760,21 @@ $(function () {
     <script src="/libs/aos/aos.js"></script>
     <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+
     <script src="/js/matery.js"></script>
     <script src="/js/click_show_text.js"></script>
     
-    <script type="text/javascript"> var OriginTitile = document.title, st; document.addEventListener("visibilitychange", function () { document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) })
+    <script type="text/javascript"> 
+        var OriginTitile = document.title, st;
+        document.addEventListener("visibilitychange", function () {
+            document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) 
+        })
     </script>
     
-
-    <script type="text/javascript" color="56,152,252" opacity="0.9" zindex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    <!-- 动态线条背景 -->
+    <!-- <script type="text/javascript" color="56,152,252" opacity="0.9" zindex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
     </script>
-    <canvas id="c_n4" width="602" height="852" style="position: fixed; top: 0px; left: 0px; z-index: -2; opacity: 0.9;"></canvas>
+    <canvas id="c_n4" width="602" height="852" style="position: fixed; top: 0px; left: 0px; z-index: -2; opacity: 0.9;"></canvas> -->
     
     
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -789,7 +798,6 @@ $(function () {
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
 
-    <!-- 雪花特效 -->
     
 
 </body>
