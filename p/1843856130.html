@@ -9,13 +9,14 @@
     <meta name="baidu-site-verification" content="code-L7AVcsbU14">
     <meta name="google-site-verification" content="x4QfrBHn9imI1RhTNCB8RD8Q2Rx6rE_zylSBptBgdZY">
     <!-- <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" /> -->
-    <meta name="description" content="Git | 详解 | 命令概念Git是基于树进行维护的，每一个节点都是一个历史版本，可以进行代码管理。
+    <meta name="description" content="Git命令 | 详解概念Git是基于树进行维护的，每一个节点都是一个历史版本，可以进行代码管理。
 
 
 工作区（Workspace） 
 暂存区（Index / Stage）  
 本地仓库（Repository）  
-远程仓库（Remot">
+远程仓库（Remote）
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -338,7 +339,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -493,14 +494,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    3.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    12 分
                 </div>
                 
                 
@@ -516,7 +517,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Git-详解-命令"><a href="#Git-详解-命令" class="headerlink" title="Git | 详解 | 命令"></a>Git | 详解 | 命令</h1><h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>Git是基于树进行维护的，每一个节点都是一个历史版本，可以进行代码管理。</p>
+                <h1 id="Git命令-详解"><a href="#Git命令-详解" class="headerlink" title="Git命令 | 详解"></a>Git命令 | 详解</h1><h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>Git是基于树进行维护的，每一个节点都是一个历史版本，可以进行代码管理。</p>
 <p><img src="1843856130/webp.webp" alt="Git图示"></p>
 <blockquote>
 <p>工作区（Workspace） </p>
@@ -536,11 +537,12 @@
 <p><code>git push -u</code> （第一次需要-u以后不需要）：将当前分支推送到远程仓库</p>
 <p><code>git pull</code>：将远程仓库的当前分支与本地仓库的当前分支合并</p>
 <h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>Git的设置文件为<code>.gitconfig</code>，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。</p>
+<p><code>git init</code>：将当前目录配置成git仓库，信息记录在隐藏的<code>.git</code>文件夹中</p>
 <p><code>git config --list</code> : 显示当前的Git配置</p>
 <p><code>git config -e [--global]</code> : 编辑Git配置文件</p>
 <p><code>git config [--global] user.name xxx</code>：设置全局用户名，信息记录在<code>~/.gitconfig</code>文件中</p>
 <p><code>git config [--global] user.email xxx@xxx.com</code>：设置全局邮箱地址，信息记录在<code>~/.gitconfig</code>文件中</p>
-<p><code>git init</code>：将当前目录配置成git仓库，信息记录在隐藏的<code>.git</code>文件夹中</p>
+<p><code>git config --global init.defaultBranch &lt;defaultBranch&gt;</code>：配置初始默认的分支名</p>
 <h1 id="工作区"><a href="#工作区" class="headerlink" title="工作区"></a>工作区</h1><p><code>git status</code>：显示有变更的文件</p>
 <p><code>git restore XXX</code> : 将工作区的XXX文件的修改（该修改未添加到暂存区）恢复</p>
 <p><code>git add XX</code>：将XX文件的 <strong>修改信息</strong> 添加到<strong>暂存区</strong></p>
@@ -559,7 +561,23 @@
 <blockquote>
 <p>更多撤销操作见下文 【撤销回退】</p>
 </blockquote>
-<h1 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h1><h2 id="本地分支"><a href="#本地分支" class="headerlink" title="本地分支"></a>本地分支</h2><p><code>git branch</code>: 列出所有本地分支</p>
+<h1 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h1><ul>
+<li>查看分支</li>
+</ul>
+<p><code>git branch</code>: 查看本地分支</p>
+<p><code>git branch -r</code> : 列出所有远程分支</p>
+<p><code>git branch -a</code> ： 列出所有本地分支和远程分支</p>
+<ul>
+<li>删除分支</li>
+</ul>
+<p><code>git branch -d branch_name</code>：删除本地的branch_name分支</p>
+<p><code>git push origin --delete [branch-name]</code> ： 删除远程分支</p>
+<ul>
+<li>切换分支</li>
+</ul>
+<p><code>git checkout branch_name</code>：切换到branch_name这个分支</p>
+<p><code>git checkout -b branch_name</code>：创建并切换到branch_name这个分支</p>
+<h2 id="本地分支"><a href="#本地分支" class="headerlink" title="本地分支"></a>本地分支</h2><p><code>git branch</code>: 列出所有本地分支</p>
 <p><code>git branch branch_name</code>：创建新分支，但依然停留在当前分支</p>
 <p><code>git checkout branch_name</code>：切换到branch_name这个分支，并更新工作区</p>
 <p><code>git checkout -b branch_name</code>：创建并切换到branch_name这个分支</p>
@@ -624,6 +642,73 @@
 <p><code>git reset --hard [commit]</code> : 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致</p>
 <p><code>git reset --keep [commit]</code> : 重置当前HEAD为指定commit，但保持暂存区和工作区不变</p>
 <p><code>git revert [commit]</code> : 新建一个commit，用来撤销指定commit，后者的所有变化都将被前者抵消，并且应用到当前分支</p>
+<h1 id="序列化操作"><a href="#序列化操作" class="headerlink" title="序列化操作"></a>序列化操作</h1><h2 id="1-基础上传操作"><a href="#1-基础上传操作" class="headerlink" title="1 基础上传操作"></a>1 基础上传操作</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> add <span class="token keyword">.</span>
+<span class="token function">git</span> commit -m <span class="token string">"备注信息"</span>
+<span class="token function">git</span> push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="2-新建仓库的初始化操作"><a href="#2-新建仓库的初始化操作" class="headerlink" title="2 新建仓库的初始化操作"></a>2 新建仓库的初始化操作</h2><ol>
+<li>远程新建仓库，默认不添加<code>README.md</code>文件</li>
+<li>此时请注意远程仓库的主分支名为<code>main</code>还是<code>master</code></li>
+<li>本地新建一个文件夹用来作为上传该远程仓库的文件（或者用已存在的文件夹也行），在该目录下使用<code>git init</code>命令初始化仓库</li>
+<li>将本地仓库主分支名字设为和远端一样，例如<code>git branch -M main</code></li>
+<li>关联远程仓库，例如<code>git remote add origin https://github.com/anda522/bot.git</code></li>
+<li>上传的操作：<code>git add .</code>，<code>git commit -m &quot;提交代码的备注信息&quot;</code>，<code>git push</code></li>
+</ol>
+<h2 id="3-新建dev分支并上传"><a href="#3-新建dev分支并上传" class="headerlink" title="3 新建dev分支并上传"></a>3 新建dev分支并上传</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> checkout -b dev <span class="token comment" spellcheck="true"># 本地新建一个dev分支，并且切换到dev分支</span>
+<span class="token function">git</span> push --set-upstream origin dev <span class="token comment" spellcheck="true"># 本地在dev分支；需要上传在dev分支的操作；默认远端没有dev分支，远端将创建一个dev分支并进行push操作</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="4-删除久远的未被追踪的分支"><a href="#4-删除久远的未被追踪的分支" class="headerlink" title="4 删除久远的未被追踪的分支"></a>4 删除久远的未被追踪的分支</h2><p>有时候分支已经从远程分支中删除，但是本地分支并不知道当前这几个远程分支是否被删除，可以使用<code>git remote show origin</code>命令查看</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> remote show origin <span class="token comment" spellcheck="true">#  会出现stale (use 'git remote prune' to remove)字样</span>
+<span class="token comment" spellcheck="true"># git branch -a 这个可以看到远程不存在的分支还能显示出来</span>
+<span class="token function">git</span> remote prune origin <span class="token comment" spellcheck="true"># 删除未被追踪的分支</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="5-打tag"><a href="#5-打tag" class="headerlink" title="5 打tag"></a>5 打tag</h2><ul>
+<li>以本地最后一个<code>commit</code>创建tag</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> tag <span class="token operator">&lt;</span>tagName<span class="token operator">></span> <span class="token comment" spellcheck="true"># 基于本地最后一个commit创建一个tag</span>
+<span class="token function">git</span> push origin <span class="token operator">&lt;</span>tagName<span class="token operator">></span> <span class="token comment" spellcheck="true"># 将tag推送到远程仓库</span>
+<span class="token function">git</span> push origin --tags <span class="token comment" spellcheck="true"># 将所有tag推送到远程仓库</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>以特定的提交为tag</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> log --pretty<span class="token operator">=</span>oneline <span class="token comment" spellcheck="true"># 查看当前分支的提交历史 里面包含 commit id</span>
+<span class="token function">git</span> tag -a <span class="token operator">&lt;</span>tagName<span class="token operator">></span> <span class="token operator">&lt;</span>commitId<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<ul>
+<li>查看信息</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> show <span class="token operator">&lt;</span>tagName<span class="token operator">></span> <span class="token comment" spellcheck="true"># 查看tag的详细信息</span>
+<span class="token function">git</span> tag <span class="token comment" spellcheck="true"># 查看本地所有tag</span>
+<span class="token function">git</span> ls-remote --tag origin <span class="token comment" spellcheck="true"># 查看远程tag</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>删除tag</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> tag -d <span class="token operator">&lt;</span>tagName<span class="token operator">></span> <span class="token comment" spellcheck="true"># 删除本地tag</span>
+<span class="token function">git</span> push origin :refs/tags/<span class="token operator">&lt;</span>tagName<span class="token operator">></span> <span class="token comment" spellcheck="true"># 删除远程tag</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<ul>
+<li>其他</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> tag -a <span class="token operator">&lt;</span>tagname<span class="token operator">></span> -m <span class="token string">"XXX..."</span> <span class="token comment" spellcheck="true"># 指定标签信息</span>
+<span class="token function">git</span> tag -a v1.0 -m <span class="token string">"release 0.1.0 version"</span>  <span class="token comment" spellcheck="true"># 创建附注标签</span>
+<span class="token function">git</span> checkout <span class="token punctuation">[</span>tagname<span class="token punctuation">]</span> <span class="token comment" spellcheck="true"># 切换标签</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="6-git-fetch和git-pull"><a href="#6-git-fetch和git-pull" class="headerlink" title="6 git fetch和git pull"></a>6 git fetch和git pull</h2><ul>
+<li><code>git fetch</code>：将远程更新信息全部取回本地</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> fetch <span class="token operator">&lt;</span>远程主机名<span class="token operator">></span> //这个命令将某个远程主机的更新全部取回本地<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>如果只想取回特定分支，可以指定分支名</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> fetch <span class="token operator">&lt;</span>远程主机名<span class="token operator">></span> <span class="token operator">&lt;</span>分支名<span class="token operator">></span> //注意之间有空格<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>常见命令：</p>
+<p>取回<code>origin</code> 主机的<code>master</code> 分支：</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> fetch origin master<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>取回更新后会返回一个<code>FETCH_HEAD</code> ，指的是某个branch在服务器上的最新状态，我们可以在本地通过它查看刚取回的更新信息：</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> log -p FETCH_HEAD<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>可以看到返回的信息包括更新的文件名，更新的作者和时间，以及更新的代码。我们可以通过这些信息来判断是否产生冲突，以确定是否将更新merge到当前分支。 </p>
+<ul>
+<li><code>git pull</code>：拉取并合并</li>
+</ul>
+<p>可以理解为两个过程：</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> fetch origin master //从远程主机的master分支拉取最新内容 
+<span class="token function">git</span> merge FETCH_HEAD    //将拉取下来的最新内容合并到当前所在的分支中<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>完整命令：将远程主机的某个分支的更新取回，并与本地指定的分支合并</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> pull <span class="token operator">&lt;</span>远程主机名<span class="token operator">></span> <span class="token operator">&lt;</span>远程分支名<span class="token operator">></span>:<span class="token operator">&lt;</span>本地分支名<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>如果是与当前分支合并，则冒号后面的可以省略，例如：</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> pull origin master<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -1121,7 +1206,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="docker|常用命令">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="docker|常用命令">
                         
                         <span class="card-title">docker|常用命令</span>
                     </div>
@@ -1178,7 +1263,7 @@ sudo usermod -aG docker $USER
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="2021大二上期末知识点总结">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="2021大二上期末知识点总结">
                         
                         <span class="card-title">2021大二上期末知识点总结</span>
                     </div>
@@ -1386,7 +1471,7 @@ Linux指令基本都是基本指令，输入输出流，统计行数，复制，
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">56.6k</span>
+            <span class="white-color">57.6k</span>
             
 
             <br>
