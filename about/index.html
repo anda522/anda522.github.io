@@ -22,16 +22,16 @@
 
     <link rel="stylesheey" type="text/css" href="//at.alicdn.com/t/c/font_3948353_97hiukrvyh.css">
     <!-- fa图标css文件引入 -->
-    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
-    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/anda522/cdn@1.0/source/libs/awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/anda522/cdn@1.0/source/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/anda522/cdn@1.0/source/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/anda522/cdn@1.0/source/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/anda522/cdn@1.0/source/libs/lightGallery/css/lightgallery.min.css">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
 
     <!-- 调用今日诗词API -->
-    <script src="/libs/jquery/jquery-2.2.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/anda522/cdn@1.0/source/libs/jquery/jquery-2.2.0.min.js"></script>
     <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
     <!-- wyqz.top 百度统计-->
     <script>
@@ -510,7 +510,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
     </div>
 </div>
 
-<script type="text/javascript" src="/libs/echarts/echarts.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/anda522/cdn@1.0/source/libs/echarts/echarts.min.js"></script>
 <script>
     let postsChart = echarts.init(document.getElementById('posts-chart'));
     let categoriesChart = echarts.init(document.getElementById('categories-chart'));
@@ -581,7 +581,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"知识总结","value":7},{"name":"多校","value":3},{"name":"哲思","value":2},{"name":"图论","value":2},{"name":"AT","value":1},{"name":"STL","value":2},{"name":"树","value":1},{"name":"数论","value":4},{"name":"DP","value":1},{"name":"nginx","value":1},{"name":"树形DP","value":1}],
+                data: [{"name":"哲思","value":2},{"name":"知识总结","value":7},{"name":"图论","value":2},{"name":"多校","value":3},{"name":"STL","value":2},{"name":"AT","value":1},{"name":"数论","value":4},{"name":"树","value":1},{"name":"DP","value":1},{"name":"nginx","value":1},{"name":"树形DP","value":1}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -605,7 +605,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         xAxis: [
             {
                 type: 'category',
-                data: ["学习总结","多校","组合数学","树链剖分","C++","STL","DFS","CF","数论","AT"]
+                data: ["学习总结","多校","组合数学","树链剖分","C++","STL","数论","DFS","CF","AT"]
             }
         ],
         yAxis: [
@@ -801,14 +801,22 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             
             
+            <a href="/tags/树链剖分/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">树链剖分</span>
+            </a>
+            
+            
+            
             <a href="/tags/多校/" target="_blank">
                 <span class="chip center-align waves-effect waves-light chip-default">多校</span>
             </a>
             
             
             
-            <a href="/tags/树链剖分/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">树链剖分</span>
+            
+            
+            <a href="/tags/STL/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">STL</span>
             </a>
             
             
@@ -819,10 +827,14 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             
             
+            <a href="/tags/数论/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">数论</span>
+            </a>
             
             
-            <a href="/tags/STL/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">STL</span>
+            
+            <a href="/tags/裴蜀定理/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">裴蜀定理</span>
             </a>
             
             
@@ -845,20 +857,8 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             
             
-            <a href="/tags/数论/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">数论</span>
-            </a>
-            
-            
-            
-            <a href="/tags/裴蜀定理/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">裴蜀定理</span>
-            </a>
-            
-            
-            
-            <a href="/tags/DP/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">DP</span>
+            <a href="/tags/Latex/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">Latex</span>
             </a>
             
             
@@ -881,14 +881,14 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             
             
-            <a href="/tags/nginx/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">nginx</span>
+            <a href="/tags/DP/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">DP</span>
             </a>
             
             
             
-            <a href="/tags/Latex/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">Latex</span>
+            <a href="/tags/nginx/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">nginx</span>
             </a>
             
             
@@ -899,6 +899,10 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             
             
+            <a href="/tags/组合数学/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">组合数学</span>
+            </a>
+            
             
             
             <a href="/tags/树形DP/" target="_blank">
@@ -906,10 +910,6 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             </a>
             
             
-            
-            <a href="/tags/组合数学/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">组合数学</span>
-            </a>
             
             
             
@@ -1114,11 +1114,11 @@ $(function () {
 </div>
 
 
-    <script src="/libs/materialize/materialize.min.js"></script>
-    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
-    <script src="/libs/aos/aos.js"></script>
-    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
-    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/anda522/cdn@1.0/source/libs/materialize/materialize.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/anda522/cdn@1.0/source/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/anda522/cdn@1.0/source/libs/aos/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/anda522/cdn@1.0/source/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/anda522/cdn@1.0/source/libs/lightGallery/js/lightgallery-all.min.js"></script>
 
     <script src="/js/matery.js"></script>
     <script src="/js/click_show_text.js"></script>
@@ -1154,7 +1154,7 @@ $(function () {
     
 
     
-    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    <script async src="https://cdn.jsdelivr.net/gh/anda522/cdn@1.0/source/libs/others/busuanzi.pure.mini.js"></script>
     
 
     
