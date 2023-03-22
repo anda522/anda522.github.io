@@ -4,15 +4,15 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="C++多线程, ZZU 行码棋">
+    <meta name="keywords" content="C++11 多线程, ZZU 行码棋">
     <!-- 百度和谷歌统计验证 -->
     <meta name="baidu-site-verification" content="code-L7AVcsbU14">
     <meta name="google-site-verification" content="x4QfrBHn9imI1RhTNCB8RD8Q2Rx6rE_zylSBptBgdZY">
     <!-- <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" /> -->
-    <meta name="description" content="C++多线程
+    <meta name="description" content="C++11 多线程
 参考：
 C++11 thread多线程：https://blog.csdn.net/sjc_0910/article/details/118861539
-C++11 左右值引用：https://blog.csdn.net/Ja">
+C++11 左右值引用：https://blog.csdn.net">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +20,7 @@ C++11 左右值引用：https://blog.csdn.net/Ja">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>C++多线程 | 行码棋</title>
+    <title>C++11 多线程 | 行码棋</title>
     <link rel="icon" type="image/png" href="https://cdn.jsdelivr.net/gh/anda522/cdn@1.0/source/medias/logo.png">
 
     <link rel="stylesheey" type="text/css" href="//at.alicdn.com/t/c/font_3948353_97hiukrvyh.css">
@@ -335,13 +335,13 @@ C++11 左右值引用：https://blog.csdn.net/Ja">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        C++多线程
+                        C++11 多线程
                     </div>
                 </div>
             </div>
@@ -451,11 +451,28 @@ C++11 左右值引用：https://blog.csdn.net/Ja">
                 <div class="col s7">
                     
                     <div class="article-tag">
-                        <span class="chip bg-color">无标签</span>
+                        
+                        <a href="/tags/C/" target="_blank">
+                            <span class="chip bg-color">C++</span>
+                        </a>
+                        
+                        <a href="/tags/多线程/" target="_blank">
+                            <span class="chip bg-color">多线程</span>
+                        </a>
+                        
                     </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                        <a href="/categories/C/" class="post-category" target="_blank">
+                            C++
+                        </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -477,14 +494,14 @@ C++11 左右值引用：https://blog.csdn.net/Ja">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    847
+                    1.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    8 分
                 </div>
                 
                 
@@ -500,7 +517,7 @@ C++11 左右值引用：https://blog.csdn.net/Ja">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="C-多线程"><a href="#C-多线程" class="headerlink" title="C++多线程"></a>C++多线程</h1><blockquote>
+                <h1 id="C-11-多线程"><a href="#C-11-多线程" class="headerlink" title="C++11 多线程"></a>C++11 多线程</h1><blockquote>
 <p>参考：</p>
 <p>C++11 thread多线程：<a href="https://blog.csdn.net/sjc_0910/article/details/118861539" target="_blank" rel="noopener">https://blog.csdn.net/sjc_0910/article/details/118861539</a></p>
 <p>C++11 左右值引用：<a href="https://blog.csdn.net/Jacky_Feng/article/details/120742414" target="_blank" rel="noopener">https://blog.csdn.net/Jacky_Feng/article/details/120742414</a></p>
@@ -552,7 +569,7 @@ C++11 左右值引用：https://blog.csdn.net/Ja">
 </thead>
 <tbody><tr>
 <td align="center"><code>void join()</code></td>
-<td align="center">等待线程结束并清理资源（会阻塞）</td>
+<td align="center">等待子线程结束并清理资源（会阻塞）</td>
 </tr>
 <tr>
 <td align="center"><code>bool joinable()</code></td>
@@ -641,16 +658,214 @@ C++11 左右值引用：https://blog.csdn.net/Ja">
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="3-注意"><a href="#3-注意" class="headerlink" title="3 注意"></a>3 注意</h2><ul>
-<li><p>线程是在thread对象被定义的时候开始执行的，而不是在调用join函数时才执行的，调用join函数只是阻塞等待线程结束并回收资源。</p>
-</li>
-<li><p>分离的线程（执行过detach的线程）会在调用它的线程结束或自己结束时释放资源。</p>
-</li>
-<li><p>线程会在函数运行完毕后自动释放，不推荐利用其他方法强制结束线程，可能会因资源未释放而导致内存泄漏。</p>
-</li>
-<li><p><strong>没有执行<code>join</code>或<code>detach</code>的线程在程序结束时会引发异常</strong></p>
-</li>
+<li>线程是在thread对象被定义的时候开始执行的，而不是在调用join函数时才执行的，调用join函数只是阻塞等待线程结束并回收资源。</li>
 </ul>
-<h1 id="C-11-std-mutex"><a href="#C-11-std-mutex" class="headerlink" title="C++11 std::mutex"></a>C++11 std::mutex</h1><p>多线程操作同一变量</p>
+<blockquote>
+<p><code>join</code>函数是等待子线程完成，然后主线程再继续执行</p>
+</blockquote>
+<ul>
+<li>分离的线程（执行过detach的线程）会在调用它的线程结束或自己结束时释放资源。</li>
+<li>线程会在函数运行完毕后自动释放，不推荐利用其他方法强制结束线程，可能会因资源未释放而导致内存泄漏。</li>
+<li><strong>没有执行<code>join</code>或<code>detach</code>的线程在程序结束时会引发异常</strong></li>
+</ul>
+<h1 id="C-11-std-mutex与std-atomic"><a href="#C-11-std-mutex与std-atomic" class="headerlink" title="C++11 std::mutex与std::atomic"></a>C++11 std::mutex与std::atomic</h1><h2 id="1-std-mutex"><a href="#1-std-mutex" class="headerlink" title="1 std::mutex"></a>1 std::mutex</h2><p>多线程操作同一变量</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;thread></span></span>
+
+<span class="token keyword">int</span> val <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">increase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">100000</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        val<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    std<span class="token operator">::</span>thread t<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">20</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        t<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> std<span class="token operator">::</span><span class="token function">thread</span><span class="token punctuation">(</span>increase<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">20</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        t<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> val <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>    
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>可以发现此代码输出并不是正常情况下的<code>2000000</code>，原因就是多线程访问并修改一个变量时造成了冲突，所以mutex派上用场</p>
+<table>
+<thead>
+<tr>
+<th align="center">函数</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>void lock()</code></td>
+<td align="center">将mutex上锁。 <br>如果mutex已经被其它线程上锁， 那么会阻塞，直到解锁；<br> 如果mutex已经被同一个线程锁住， 那么会产生死锁。</td>
+</tr>
+<tr>
+<td align="center"><code>void unlock()</code></td>
+<td align="center">解锁mutex，释放其所有权。 如果有线程因为调用lock()不能上锁而被阻塞，则调用此函数会将mutex的主动权随机交给其中一个线程； 如果mutex不是被此线程上锁，那么会引发未定义的异常。</td>
+</tr>
+<tr>
+<td align="center"><code>bool try_lock()</code></td>
+<td align="center">尝试将mutex上锁。 如果mutex未被上锁，则将其上锁并返回true； <br>如果mutex已被锁则返回false。</td>
+</tr>
+</tbody></table>
+<p>可以利用mutex进行改进：</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;thread></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;mutex></span></span>
+
+std<span class="token operator">::</span>mutex mtx<span class="token punctuation">;</span>
+<span class="token keyword">int</span> val <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">increase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">100000</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        mtx<span class="token punctuation">.</span><span class="token function">lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        val<span class="token operator">++</span><span class="token punctuation">;</span>
+        mtx<span class="token punctuation">.</span><span class="token function">unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    std<span class="token operator">::</span>thread t<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">20</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        t<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> std<span class="token operator">::</span><span class="token function">thread</span><span class="token punctuation">(</span>increase<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">20</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        t<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> val <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="2-std-atomic"><a href="#2-std-atomic" class="headerlink" title="2 std::atomic"></a>2 std::atomic</h2><p>mutex每次循环都要加锁解锁，比较慢，而atomic比较快。将上述代码改成下面代码同样也可。</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;thread></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;atomic></span></span>
+
+std<span class="token operator">::</span>atomic_int val <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">increase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">100000</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        val<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    std<span class="token operator">::</span>thread t<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">20</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        t<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> std<span class="token operator">::</span><span class="token function">thread</span><span class="token punctuation">(</span>increase<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">20</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        t<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> val <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><code>std::atomic_int</code>只是<code>std::atomic&lt;int&gt;</code>的别名。</p>
+<p>即使是多线程，也要像同步进行一样<strong>同步操作</strong>atomic对象，从而省去了mutex上锁、解锁的时间消耗。</p>
+<table>
+<thead>
+<tr>
+<th align="center">构造函数</th>
+<th align="center">类型</th>
+<th align="center">作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><code>atomic() noexcept = default</code></td>
+<td align="center">默认构造函数</td>
+<td align="center">构造一个atomic对象（未初始化，可通过atomic_init进行初始化）</td>
+</tr>
+<tr>
+<td align="center"><code>constexpr atomic(T val) noexcept</code></td>
+<td align="center">初始化构造函数</td>
+<td align="center">构造一个atomic对象，用<code>val</code>的值来初始化</td>
+</tr>
+</tbody></table>
+<h1 id="C-11-std-async"><a href="#C-11-std-async" class="headerlink" title="C++11 std::async"></a>C++11 std::async</h1><h2 id="1-async"><a href="#1-async" class="headerlink" title="1 async"></a>1 async</h2><blockquote>
+<p>头文件<code>&lt;future&gt;</code></p>
+</blockquote>
+<p><strong>大多数情况下使用async而不用thread</strong></p>
+<ul>
+<li>thread可以快速、方便地创建线程，但在async面前，就是小巫见大巫了。</li>
+<li>async可以根据情况选择同步执行或创建新线程来异步执行，当然也可以手动选择。对于async的返回值操作也比thread更加方便。</li>
+</ul>
+<p><strong>std::async参数：</strong></p>
+<p>不同于thread，async是一个函数，所以没有成员函数。</p>
+<table>
+<thead>
+<tr>
+<th>重载版本</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>template &lt;class Fn, class… Args&gt; <br>future&lt;typename result_of&lt;Fn(Args…)&gt;::type&gt;  <br><code>async (Fn&amp;&amp; fn, Args&amp;&amp;… args)</code></td>
+<td>异步或同步（根据操作系统而定）以args为参数执行fn<br>同样地，传递引用参数需要<code>std::ref</code>或<code>std::cref</code></td>
+</tr>
+<tr>
+<td>template &lt;class Fn, class… Args&gt;<br> future&lt;typename result_of&lt;Fn(Args…)&gt;::type&gt;<br>  <code>async (launch policy, Fn&amp;&amp; fn, Args&amp;&amp;… args);</code></td>
+<td>异步或同步（根据<code>policy</code>参数而定（见下文））以args为参数执行fn，引用参数同上</td>
+</tr>
+</tbody></table>
+<h2 id="2-std-launch强枚举类（enum-class）"><a href="#2-std-launch强枚举类（enum-class）" class="headerlink" title="2 std::launch强枚举类（enum class）"></a>2 std::launch强枚举类（enum class）</h2><p>std::launch有2个枚举值和1个特殊值：</p>
+<table>
+<thead>
+<tr>
+<th>标识符</th>
+<th>实际值</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>枚举值：launch::async</td>
+<td>0x1（1）</td>
+<td>异步启动</td>
+</tr>
+<tr>
+<td>枚举值：launch::deferred</td>
+<td>0x2（2）</td>
+<td>在调用<code>future::get</code>、<code>future::wait</code>时同步启动（std::future见后文）</td>
+</tr>
+<tr>
+<td>特殊值：launch::async | launch::deferred</td>
+<td>0x3（3）</td>
+<td>同步或异步，根据操作系统而定</td>
+</tr>
+</tbody></table>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;thread></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;future></span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    std<span class="token operator">::</span><span class="token function">async</span><span class="token punctuation">(</span>std<span class="token operator">::</span>launch<span class="token operator">::</span>async<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> message<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">"Hello, "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"World\n"</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>编译器可能会有警告，因为编译器不想让你丢弃async的返回值std::future，不过在这个例子中不需要它，忽略这个警告就行了。</p>
+<h2 id="3-std-future"><a href="#3-std-future" class="headerlink" title="3 std::future"></a>3 std::future</h2><p>使用它获取函数返回值</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;thread></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;future></span></span>
+
+<span class="token keyword">template</span><span class="token operator">&lt;</span><span class="token keyword">class</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> Args<span class="token operator">></span>
+<span class="token keyword">decltype</span><span class="token punctuation">(</span><span class="token keyword">auto</span><span class="token punctuation">)</span> <span class="token function">sum</span><span class="token punctuation">(</span>Args<span class="token operator">&amp;&amp;</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token number">0</span> <span class="token operator">+</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token operator">+</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    std<span class="token operator">::</span>future<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> val <span class="token operator">=</span> std<span class="token operator">::</span><span class="token function">async</span><span class="token punctuation">(</span>std<span class="token operator">::</span>launch<span class="token operator">::</span>async<span class="token punctuation">,</span> sum<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">></span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> val<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>输出</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token number">6</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -809,7 +1024,7 @@ C++11 左右值引用：https://blog.csdn.net/Ja">
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《C++多线程》
+                    《C++11 多线程》
                 </span> 由
             <a xmlns:cc="http://creativecommons.org/ns#" href="/p/2668140628.html" property="cc:attributionName"
                rel="cc:attributionURL">
@@ -1149,18 +1364,18 @@ C++11 左右值引用：https://blog.csdn.net/Ja">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="C++多线程">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="C++11 多线程">
                         
-                        <span class="card-title">C++多线程</span>
+                        <span class="card-title">C++11 多线程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            C++多线程
+                            C++11 多线程
 参考：
 C++11 thread多线程：https://blog.csdn.net/sjc_0910/article/details/118861539
-C++11 左右值引用：https://blog.csdn.net/Ja
+C++11 左右值引用：https://blog.csdn.net
                         
                     </div>
                     <div class="publish-info">
@@ -1169,10 +1384,29 @@ C++11 左右值引用：https://blog.csdn.net/Ja
                             </span>
                         <span class="publish-author">
                             
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/C/" class="post-category" target="_blank">
+                                    C++
+                                </a>
+                            
+                            
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/C/" target="_blank">
+                        <span class="chip bg-color">C++</span>
+                    </a>
+                    
+                    <a href="/tags/多线程/" target="_blank">
+                        <span class="chip bg-color">多线程</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -1187,7 +1421,7 @@ C++11 左右值引用：https://blog.csdn.net/Ja
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="Latex语法">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="Latex语法">
                         
                         <span class="card-title">Latex语法</span>
                     </div>
@@ -1400,7 +1634,7 @@ C++11 左右值引用：https://blog.csdn.net/Ja
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">58.5k</span>
+            <span class="white-color">59.6k</span>
             
 
             <br>
