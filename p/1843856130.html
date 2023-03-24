@@ -339,7 +339,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.png')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -456,8 +456,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/git/" target="_blank">
-                            <span class="chip bg-color">git</span>
+                        <a href="/tags/Git/" target="_blank">
+                            <span class="chip bg-color">Git</span>
                         </a>
                         
                     </div>
@@ -468,8 +468,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/知识总结/" class="post-category" target="_blank">
-                            知识总结
+                        <a href="/categories/开发工具/" class="post-category" target="_blank">
+                            开发工具
                         </a>
                         
                     </div>
@@ -651,8 +651,17 @@
 <li>本地新建一个文件夹用来作为上传该远程仓库的文件（或者用已存在的文件夹也行），在该目录下使用<code>git init</code>命令初始化仓库</li>
 <li>将本地仓库主分支名字设为和远端一样，例如<code>git branch -M main</code></li>
 <li>关联远程仓库，例如<code>git remote add origin https://github.com/anda522/bot.git</code></li>
-<li>上传的操作：<code>git add .</code>，<code>git commit -m &quot;提交代码的备注信息&quot;</code>，<code>git push</code></li>
+<li>上传的操作：</li>
 </ol>
+<ul>
+<li><code>git add .</code></li>
+<li>``git commit -m “提交代码的备注信息”`</li>
+<li><code>git push</code>（此代码一般会报错）</li>
+</ul>
+<blockquote>
+<p>原因：新建仓库时默认仓库为空，此时没有任何分支，如果本地有分支需要上传到远程的相同的分支上，需要将远程新建一个分支进行push操作。</p>
+<p>故代码可更新为：<code>git push --set-upstream origin main</code></p>
+</blockquote>
 <h2 id="3-新建dev分支并上传"><a href="#3-新建dev分支并上传" class="headerlink" title="3 新建dev分支并上传"></a>3 新建dev分支并上传</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> checkout -b dev <span class="token comment" spellcheck="true"># 本地新建一个dev分支，并且切换到dev分支</span>
 <span class="token function">git</span> push --set-upstream origin dev <span class="token comment" spellcheck="true"># 本地在dev分支；需要上传在dev分支的操作；默认远端没有dev分支，远端将创建一个dev分支并进行push操作</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h2 id="4-删除久远的未被追踪的分支"><a href="#4-删除久远的未被追踪的分支" class="headerlink" title="4 删除久远的未被追踪的分支"></a>4 删除久远的未被追踪的分支</h2><p>有时候分支已经从远程分支中删除，但是本地分支并不知道当前这几个远程分支是否被删除，可以使用<code>git remote show origin</code>命令查看</p>
@@ -1206,7 +1215,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="docker|常用命令">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="docker|常用命令">
                         
                         <span class="card-title">docker|常用命令</span>
                     </div>
@@ -1229,8 +1238,8 @@ sudo usermod -aG docker $USER
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/知识总结/" class="post-category" target="_blank">
-                                    知识总结
+                            <a href="/categories/开发工具/" class="post-category" target="_blank">
+                                    开发工具
                                 </a>
                             
                             
@@ -1263,9 +1272,9 @@ sudo usermod -aG docker $USER
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="2021大二上期末知识点总结">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="2021大二上期末题目回顾">
                         
-                        <span class="card-title">2021大二上期末知识点总结</span>
+                        <span class="card-title">2021大二上期末题目回顾</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1283,8 +1292,8 @@ Linux指令基本都是基本指令，输入输出流，统计行数，复制，
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/知识总结/" class="post-category" target="_blank">
-                                    知识总结
+                            <a href="/categories/考试/" class="post-category" target="_blank">
+                                    考试
                                 </a>
                             
                             
@@ -1471,7 +1480,7 @@ Linux指令基本都是基本指令，输入输出流，统计行数，复制，
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">59.6k</span>
+            <span class="white-color">59.7k</span>
             
 
             <br>
