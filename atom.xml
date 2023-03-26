@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2023-03-24T06:06:49.832Z</updated>
+  <updated>2023-03-26T03:01:36.354Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -15,6 +15,68 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>matplotlib画图</title>
+    <link href="http://wyqz.top/p/3804173379.html"/>
+    <id>http://wyqz.top/p/3804173379.html</id>
+    <published>2023-03-26T02:51:42.000Z</published>
+    <updated>2023-03-26T03:01:36.354Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;matplotlib-pyplot&quot;&gt;&lt;a href=&quot;#matplotlib-pyplot&quot; class=&quot;headerlink&quot; title=&quot;matplotlib.pyplot&quot;&gt;&lt;/a&gt;matplotlib.pyplot&lt;/h1&gt;&lt;h1
+        
+      
+    
+    </summary>
+    
+      <category term="人工智能" scheme="http://wyqz.top/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+      <category term="Python" scheme="http://wyqz.top/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/Python/"/>
+    
+    
+      <category term="Python" scheme="http://wyqz.top/tags/Python/"/>
+    
+      <category term="画图" scheme="http://wyqz.top/tags/%E7%94%BB%E5%9B%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Pandas数据处理</title>
+    <link href="http://wyqz.top/p/2946568862.html"/>
+    <id>http://wyqz.top/p/2946568862.html</id>
+    <published>2023-03-24T08:29:49.000Z</published>
+    <updated>2023-03-26T03:01:26.737Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Pandas&quot;&gt;&lt;a href=&quot;#Pandas&quot; class=&quot;headerlink&quot; title=&quot;Pandas&quot;&gt;&lt;/a&gt;Pandas&lt;/h1&gt;&lt;h1 id=&quot;读取数据&quot;&gt;&lt;a href=&quot;#读取数据&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="人工智能" scheme="http://wyqz.top/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+      <category term="Python" scheme="http://wyqz.top/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/Python/"/>
+    
+    
+      <category term="Pandas" scheme="http://wyqz.top/tags/Pandas/"/>
+    
+      <category term="数据处理" scheme="http://wyqz.top/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
+    
+      <category term="Python" scheme="http://wyqz.top/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>C++11 多线程</title>
@@ -512,63 +574,6 @@
       <category term="树链剖分" scheme="http://wyqz.top/tags/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/"/>
     
       <category term="DFS" scheme="http://wyqz.top/tags/DFS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>docker|常用命令</title>
-    <link href="http://wyqz.top/p/1146830909.html"/>
-    <id>http://wyqz.top/p/1146830909.html</id>
-    <published>2022-07-02T03:27:31.000Z</published>
-    <updated>2023-03-24T05:55:47.696Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;p&gt;将当前用户添加到docker用户组&lt;/p&gt;
-&lt;p&gt;为了避免每次使用docker命令都需要加上sudo权限，可以将当前用户加入安装中自动创建的docker用户组（可以参考官方文档）：&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;sudo usermod -aG
-        
-      
-    
-    </summary>
-    
-      <category term="开发工具" scheme="http://wyqz.top/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="docker" scheme="http://wyqz.top/tags/docker/"/>
-    
-      <category term="linux" scheme="http://wyqz.top/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Git|详解|命令</title>
-    <link href="http://wyqz.top/p/1843856130.html"/>
-    <id>http://wyqz.top/p/1843856130.html</id>
-    <published>2022-06-30T02:14:41.000Z</published>
-    <updated>2023-03-24T06:10:48.054Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Git命令-详解&quot;&gt;&lt;a href=&quot;#Git命令-详解&quot; class=&quot;headerlink&quot; title=&quot;Git命令 | 详解&quot;&gt;&lt;/a&gt;Git命令 | 详解&lt;/h1&gt;&lt;h1 id=&quot;概念&quot;&gt;&lt;a href=&quot;#概念&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="开发工具" scheme="http://wyqz.top/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="Git" scheme="http://wyqz.top/tags/Git/"/>
     
   </entry>
   
