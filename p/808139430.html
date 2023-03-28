@@ -339,7 +339,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -498,14 +498,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    10.5k
+                    10.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    43 分
+                    44 分
                 </div>
                 
                 
@@ -557,8 +557,8 @@
 <blockquote>
 <p>矩阵求导参考：</p>
 <ul>
-<li><a href="https://zhuanlan.zhihu.com/p/263777564（先导篇）" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/263777564（先导篇）</a></li>
-<li><a href="https://zhuanlan.zhihu.com/p/273729929（公式篇）" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/273729929（公式篇）</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/263777564" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/263777564</a> （先导篇）</li>
+<li><a href="https://zhuanlan.zhihu.com/p/273729929" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/273729929</a> （公式篇）</li>
 </ul>
 </blockquote>
 <p><img src="808139430/image-20221227173755095.png" alt="评估方法"></p>
@@ -566,7 +566,7 @@
 <h3 id="4-1-梯度下降方法"><a href="#4-1-梯度下降方法" class="headerlink" title="4.1 梯度下降方法"></a>4.1 梯度下降方法</h3><ul>
 <li>批量梯度下降</li>
 </ul>
-<p>容易得到最优解，但是由于每次考虑所有样本，速度很慢。</p>
+<p>容易得到最优解，但是由于每次考虑<strong>所有样本</strong>，速度很慢。</p>
 <ul>
 <li>随机梯度下降</li>
 </ul>
@@ -652,6 +652,13 @@
 <p><img src="808139430/image-20221230142020907.png" alt="混淆矩阵"></p>
 <p>可以通过上面四个值计算相应的评估值，见下图。</p>
 <p><img src="808139430/image-20221230143921870.png" alt="混淆矩阵计算评估指标"></p>
+<blockquote>
+<ul>
+<li>准确率：预测正确的比例</li>
+<li>精确率：在预测之后，在预测结果的某一结果上，正确的比例</li>
+<li>召回率：在预测之前，真实值为某一结果上，正确的比例</li>
+</ul>
+</blockquote>
 <h1 id="回归模型相关技巧"><a href="#回归模型相关技巧" class="headerlink" title="回归模型相关技巧"></a>回归模型相关技巧</h1><h2 id="1-下采样和上采样"><a href="#1-下采样和上采样" class="headerlink" title="1 下采样和上采样"></a>1 下采样和上采样</h2><p>在分类问题的数据中，很容易出现正反数据集数量存在极大的差距，这类数据直接用于训练不利于模型的构架，所以我们需要对数据进行些许处理。</p>
 <p>很容易想到，合理的数据集应该是正反数据集数量应接近，那就存在两种策略：</p>
 <p>下采样策略：把数量多的减少到与数量少的相近</p>
@@ -914,7 +921,10 @@ alphabet <span class="token operator">=</span> <span class="token string">'abcde
 <h3 id="2-2-数据"><a href="#2-2-数据" class="headerlink" title="2.2 数据"></a>2.2 数据</h3><p>数据集：$(x_1, y_1)(x_2, y_2)…(x_n, y_n)$</p>
 <p>$Y$ 为样本的类别：当$X$ 为正例时，$Y = +1$，当$X$为负例时，$Y = -1$</p>
 <p>决策方程：$y(x) = w^T \Phi(x) + b$ （其中$\Phi(x)$是对数据做了核变换，可以暂时理解为$x$）<br>$$<br>\begin{cases}<br>y(x_i) &gt; 0 \Leftrightarrow y_i = +1 \\<br>y(x_i) &lt; 0 \Leftrightarrow y_i = -1<br>\end{cases}<br>\Longrightarrow<br>y_i y(x_i) &gt; 0<br>$$</p>
-<h3 id="2-3-目标函数求解"><a href="#2-3-目标函数求解" class="headerlink" title="2.3 目标函数求解"></a>2.3 目标函数求解</h3><p>将点到直线距离进行转化（化简）：<br>$$<br>\frac{y_i \cdot (w^T \cdot \Phi(x) + b)}{\vert \vert w \vert \vert}<br>$$</p>
+<h3 id="2-3-目标函数求解"><a href="#2-3-目标函数求解" class="headerlink" title="2.3 目标函数求解"></a>2.3 目标函数求解</h3><blockquote>
+<p>我们要求的就是找到一个线性划分（比如说直线），使得离该线最近的点最远。</p>
+</blockquote>
+<p>将点到直线距离进行转化（化简）：<br>$$<br>\frac{y_i \cdot (w^T \cdot \Phi(x) + b)}{\vert \vert w \vert \vert}<br>$$</p>
 <blockquote>
 <p>$y_i y(x_i) &gt; 0$ 直接乘上$y_i$ 将绝对值去掉，$|y_i| = 1$，并不影响值大小</p>
 </blockquote>
@@ -925,14 +935,16 @@ alphabet <span class="token operator">=</span> <span class="token string">'abcde
 <p>优化目标：<br>$$<br>\mathop{arg\  max} \limits_{w, b} \bigg\{ \frac{1}{||w||} \mathop{min} \limits_i \Big \{ y_i \cdot (w^T \cdot \Phi(x_i) + b)\Big \} \bigg\}<br>$$</p>
 <blockquote>
 <p>$\mathop{min} \limits_i \Big \{ y_i \cdot (w^T \cdot \Phi(x_i) + b) \Big \}$ 是求所有样本点到平面的最小距离的那个点</p>
-<p>$arg\ max$ 是<strong>最大化到平面最小距离的点的距离</strong></p>
-<p>由于$y_i \cdot (w^T \cdot \Phi(x_i) + b) \geq 1$， 故最小值为1，只需要考虑 $\mathop{arg\  max} \limits_{w, b} \frac{1}{|w|}$</p>
+<p>$\mathop{argmax} \limits_{w,b}$ 是<strong>最大化到平面最小距离的点的距离，此时的w,b的值</strong></p>
+<p>由于$y_i \cdot (w^T \cdot \Phi(x_i) + b) \geq 1$， 故最小值为1，只需要考虑 $\mathop{arg\  max} \limits_{w, b} \frac{1}{||w||}$</p>
 </blockquote>
 <p>当前目标变为：$\mathop{max} \limits_{w, b} \frac{1}{||w||}$，即求$||w||$的最小值，但有约束条件 $y_i \cdot (w^T \cdot \Phi(x_i) + b) \geq 1$</p>
-<p>将求极大值转化为求极小值的问题，求$\frac{1}{2}w^2$ 的最小值。</p>
-<p>需要使用<strong>拉格朗日乘子法</strong>：（此处不做证明，直接给出结论，我还不知道$\alpha$的作用，呜呜呜）<br>$$<br>L(w, b, \alpha) = \frac{1}{2}||w||^2 - \sum \limits_{i = 1}^n \alpha_i (y_i \cdot (w^T \cdot \Phi(x_i) + b) - 1)<br>$$</p>
+<p>将求极大值转化为求极小值的问题，求$\frac{1}{2}||w||^2$ 的最小值。</p>
+<p>需要使用<strong>拉格朗日乘子法</strong>：（此处不做证明，直接给出结论）<br>$$<br>L(w, b, \alpha) = \frac{1}{2}||w||^2 - \sum \limits_{i = 1}^n \alpha_i (y_i \cdot (w^T \cdot \Phi(x_i) + b) - 1)<br>$$</p>
 <blockquote>
 <p>上式需要满足约束条件：$y_i \cdot (w^T \cdot \Phi(x_i) + b) \geq 1$</p>
+<p>推导可参考：<a href="https://blog.csdn.net/v_july_v/article/details/7624837" target="_blank" rel="noopener">https://blog.csdn.net/v_july_v/article/details/7624837</a> </p>
+<p>原理可参考：<a href="https://zhuanlan.zhihu.com/p/31886934" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/31886934</a> </p>
 </blockquote>
 <p><img src="808139430/image-20230102224841617.png" alt="求解过程"></p>
 <p><img src="808139430/image-20230102225344026.png" alt="求解过程"></p>
@@ -1638,7 +1650,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="2022年度总结">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="2022年度总结">
                         
                         <span class="card-title">2022年度总结</span>
                     </div>
@@ -1692,7 +1704,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="Pytorch入门知识总结">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="Pytorch入门知识总结">
                         
                         <span class="card-title">Pytorch入门知识总结</span>
                     </div>
@@ -1903,7 +1915,7 @@ from torch.utils.data
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">61k</span>
+            <span class="white-color">61.1k</span>
             
 
             <br>
