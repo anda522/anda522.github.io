@@ -523,6 +523,35 @@
   </entry>
   
   <entry>
+    <title>ACM模板</title>
+    <link href="http://wyqz.top/p/3941430957.html"/>
+    <id>http://wyqz.top/p/3941430957.html</id>
+    <published>2022-07-29T07:30:42.000Z</published>
+    <updated>2023-03-30T07:45:32.231Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;目录&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&quot;1-杂项&quot;&gt;&lt;a href=&quot;#1-杂项&quot; class=&quot;headerlink&quot; title=&quot;1 杂项&quot;&gt;&lt;/a&gt;1 杂项&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+      <category term="ACM" scheme="http://wyqz.top/categories/ACM/"/>
+    
+    
+      <category term="模板" scheme="http://wyqz.top/tags/%E6%A8%A1%E6%9D%BF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2022杭电多校2 Static Query on Tree|树链剖分</title>
     <link href="http://wyqz.top/p/3388199031.html"/>
     <id>http://wyqz.top/p/3388199031.html</id>
@@ -545,35 +574,6 @@
     
     
       <category term="树链剖分" scheme="http://wyqz.top/tags/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>树链剖分|模板题</title>
-    <link href="http://wyqz.top/p/1046407529.html"/>
-    <id>http://wyqz.top/p/1046407529.html</id>
-    <published>2022-07-22T10:27:24.000Z</published>
-    <updated>2022-08-04T07:03:44.667Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;树链剖分模板题&quot;&gt;&lt;a href=&quot;#树链剖分模板题&quot; class=&quot;headerlink&quot; title=&quot;树链剖分模板题&quot;&gt;&lt;/a&gt;树链剖分模板题&lt;/h1&gt;&lt;p&gt;题目链接：&lt;/p&gt;
-&lt;p&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="图论" scheme="http://wyqz.top/categories/%E5%9B%BE%E8%AE%BA/"/>
-    
-    
-      <category term="树链剖分" scheme="http://wyqz.top/tags/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/"/>
-    
-      <category term="DFS" scheme="http://wyqz.top/tags/DFS/"/>
     
   </entry>
   
