@@ -339,7 +339,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -498,14 +498,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    10.8k
+                    11.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    44 分
+                    46 分
                 </div>
                 
                 
@@ -978,7 +978,50 @@ alphabet <span class="token operator">=</span> <span class="token string">'abcde
 <h2 id="5-SVM核变换"><a href="#5-SVM核变换" class="headerlink" title="5 SVM核变换"></a>5 SVM核变换</h2><p>将低维不可分映射到高维，找到一种变换方法，即为$\phi(x)$</p>
 <p>高斯核函数：<br>$$<br>K(X, Y) =  exp \bigg\{ -\frac{||X-Y||^2}{2\sigma^2} \bigg\}<br>$$</p>
 <h2 id="6-基于sklearn求解SVM"><a href="#6-基于sklearn求解SVM" class="headerlink" title="6 基于sklearn求解SVM"></a>6 基于sklearn求解SVM</h2><p>参考 <a href="https://blog.csdn.net/weixin_42600072/article/details/88644229" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42600072/article/details/88644229</a></p>
-<h1 id="聚类算法"><a href="#聚类算法" class="headerlink" title="聚类算法"></a>聚类算法</h1><h2 id="K-MEANS算法"><a href="#K-MEANS算法" class="headerlink" title="K-MEANS算法"></a>K-MEANS算法</h2><h3 id="1-概述-4"><a href="#1-概述-4" class="headerlink" title="1 概述"></a>1 概述</h3><p>聚类概念：这是个无监督问题（没有标签数据），目的是将相似的东西分到一组。</p>
+<h1 id="聚类算法"><a href="#聚类算法" class="headerlink" title="聚类算法"></a>聚类算法</h1><p>性能度量：</p>
+<ul>
+<li>外部指标<ul>
+<li><code>jaccard</code>系数（简称<code>JC</code>）</li>
+<li><code>FM</code>指数（简称<code>FMI</code>）</li>
+<li><code>Rand</code>指数（简称<code>RI</code>）</li>
+</ul>
+</li>
+<li>内部指标<ul>
+<li><code>DB</code>指数（简称<code>DBI</code>）</li>
+<li><code>Dunn</code>指数（简称<code>DI</code>）</li>
+</ul>
+</li>
+</ul>
+<p>距离计算：</p>
+<ul>
+<li>$L_p$ 范数</li>
+<li>欧氏距离</li>
+<li>曼哈顿距离</li>
+</ul>
+<p>分类：</p>
+<ul>
+<li>原型聚类：<code>k-means</code>算法，学习向量量化（有监督学习），高斯混合聚类 都是此类型算法</li>
+</ul>
+<blockquote>
+<p>假设聚类结构能够通过一组原型刻画，然后对原型进行迭代更新求解。</p>
+</blockquote>
+<ul>
+<li><p>密度聚类：DBSCAN</p>
+</li>
+<li><p>层次聚类：AGNES</p>
+<p>试图在不同层次上对数据集进行划分，分为自底向上的聚合策略和自顶向下的分拆策略</p>
+</li>
+</ul>
+<p>聚簇之间的距离的计算：最小距离，最大距离和平均距离（两个簇中样本点对距离之和取平均）</p>
+<p>AGNES算法被相应称为：单链接算法（以最小距离为准），全链接算法（以最大距离为准）和均链接算法</p>
+<blockquote>
+<p>以单链接算法为例：</p>
+<ul>
+<li>初始时每个样本点看做一个簇，找到所有簇对中最小的距离，将他们合并为一个簇，此时合并的簇与其他簇的距离更新为两个点到其他簇距离的最小值。</li>
+<li>上面的步骤为循环里面的步骤，接着进行下一次循环，找到所有簇中最短的距离，然后将他们合并，合并后更新簇之间的距离为【合并簇中的所有点到其他簇距离的最小值】，一直进行上述循环操作，直到达到指定簇的数量再停止循环。</li>
+</ul>
+</blockquote>
+<h2 id="K-MEANS算法"><a href="#K-MEANS算法" class="headerlink" title="K-MEANS算法"></a>K-MEANS算法</h2><h3 id="1-概述-4"><a href="#1-概述-4" class="headerlink" title="1 概述"></a>1 概述</h3><p>聚类概念：这是个无监督问题（没有标签数据），目的是将相似的东西分到一组。</p>
 <p>通常使用的算法是K-MEANS算法</p>
 <blockquote>
 <p>K-MEANS算法：</p>
@@ -1652,7 +1695,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="2022年度总结">
+                        <img src="/medias/featureimages/9.png" class="responsive-img" alt="2022年度总结">
                         
                         <span class="card-title">2022年度总结</span>
                     </div>
@@ -1706,7 +1749,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Pytorch入门知识总结">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Pytorch入门知识总结">
                         
                         <span class="card-title">Pytorch入门知识总结</span>
                     </div>
@@ -1917,7 +1960,7 @@ from torch.utils.data
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">68.2k</span>
+            <span class="white-color">68.7k</span>
             
 
             <br>
