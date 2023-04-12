@@ -322,7 +322,7 @@
 <script src="https://lib.baomitu.com/crypto-js/4.1.1/crypto-js.min.js"></script>
 <script>
     (function() {
-        let pwd = '123456';
+        let pwd = '';
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
@@ -354,7 +354,7 @@
 <main class="post-container content">
 
     
-    <link rel="stylesheet" href="https://lib.baomitu.com/tocbot/4.21.0/tocbot.css">
+    <link rel="stylesheet" href="https://lib.baomitu.com/tocbot/latest/tocbot.css">
 <style>
     #articleContent h1::before,
     #articleContent h2::before,
@@ -490,7 +490,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    348
+                    402
                 </div>
                 
 
@@ -562,6 +562,16 @@
 <p><a href="https://bk.hallowlib.org/" target="_blank" rel="noopener">https://bk.hallowlib.org/</a></p>
 <p><a href="https://1lib.ink/" target="_blank" rel="noopener">https://1lib.ink/</a></p>
 <p><a href="https://annas-archive.org/" target="_blank" rel="noopener">https://annas-archive.org/</a>  </p>
+<h1 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h1><ul>
+<li>静态资源JS、CSS开源库</li>
+</ul>
+<p>链接：<a href="https://cdn.baomitu.com/" target="_blank" rel="noopener">https://cdn.baomitu.com/</a></p>
+<p>极好用的CDN</p>
+<ul>
+<li>某CDN</li>
+</ul>
+<p>链接：<a href="https://unpkg.com/" target="_blank" rel="noopener">https://unpkg.com/</a></p>
+<p>具体是干什么的可以自行去了解，我没有做详细调查与使用</p>
 
             </div>
             <hr />
@@ -700,7 +710,9 @@
     
 </div>
 
-<script src="/libs/share/js/social-share.min.js"></script>
+<!-- <script src="/libs/share/js/social-share.min.js"></script> -->
+<script src="https://lib.baomitu.com/social-share.js/latest/js/social-share.min.js"></script>
+
 
             
 
@@ -1023,6 +1035,7 @@
 </div>
 
 <!-- <script src="/libs/valine/av-min.js"></script> -->
+<!-- 需要必填某些选项，所以不能换源 -->
 <script src="/libs/valine/Valine.min.js"></script>
 <!-- <script src="//code.bdstatic.com/npm/leancloud-storage@4.12.0/dist/av-min.js"></script> -->
 <!-- <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script> -->
@@ -1219,7 +1232,7 @@ fig = plt.figure()
 </div>
 
 
-<script src="https://lib.baomitu.com/tocbot/4.21.0/tocbot.min.js"></script>
+<script src="https://lib.baomitu.com/tocbot/latest/tocbot.min.js"></script>
 <script>
     $(function () {
         tocbot.init({

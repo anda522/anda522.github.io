@@ -510,7 +510,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
     </div>
 </div>
 
-<script type="text/javascript" src="https://lib.baomitu.com/echarts/5.4.2/echarts.min.js"></script>
+<script type="text/javascript" src="https://lib.baomitu.com/echarts/latest/echarts.min.js"></script>
 <script>
     let postsChart = echarts.init(document.getElementById('posts-chart'));
     let categoriesChart = echarts.init(document.getElementById('categories-chart'));
@@ -581,7 +581,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"哲思","value":2},{"name":"多校","value":3},{"name":"图论","value":2},{"name":"考试","value":1},{"name":"Atcoder","value":1},{"name":"C++","value":3},{"name":"ACM","value":1},{"name":"树","value":1},{"name":"数论","value":4},{"name":"DP","value":1},{"name":"文档编写","value":1},{"name":"人工智能","value":5},{"name":"开发工具","value":3},{"name":"树形DP","value":1},{"name":"资源","value":1},{"name":"Python","value":2}],
+                data: [{"name":"哲思","value":2},{"name":"考试","value":1},{"name":"图论","value":2},{"name":"多校","value":3},{"name":"Atcoder","value":1},{"name":"C++","value":3},{"name":"ACM","value":1},{"name":"数论","value":4},{"name":"DP","value":1},{"name":"树","value":1},{"name":"人工智能","value":5},{"name":"开发工具","value":3},{"name":"文档编写","value":1},{"name":"树形DP","value":1},{"name":"资源","value":1},{"name":"Python","value":2}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -605,7 +605,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         xAxis: [
             {
                 type: 'category',
-                data: ["学习总结","多校","C++","组合数学","阶段性总结","树链剖分","STL","DFS","CF","数论"]
+                data: ["学习总结","多校","C++","组合数学","阶段性总结","树链剖分","STL","数论","CF","DFS"]
             }
         ],
         yAxis: [
@@ -814,8 +814,8 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             
             
-            <a href="/tags/多校/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">多校</span>
+            <a href="/tags/学习总结/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">学习总结</span>
             </a>
             
             
@@ -826,8 +826,8 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             
             
-            <a href="/tags/学习总结/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">学习总结</span>
+            <a href="/tags/多校/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">多校</span>
             </a>
             
             
@@ -852,24 +852,6 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             
             
-            <a href="/tags/DFS/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">DFS</span>
-            </a>
-            
-            
-            
-            <a href="/tags/树/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">树</span>
-            </a>
-            
-            
-            
-            <a href="/tags/CF/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">CF</span>
-            </a>
-            
-            
-            
             <a href="/tags/数论/" target="_blank">
                 <span class="chip center-align waves-effect waves-light chip-default">数论</span>
             </a>
@@ -882,26 +864,32 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             
             
-            <a href="/tags/DP/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">DP</span>
-            </a>
-            
-            
-            
-            <a href="/tags/Latex/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">Latex</span>
-            </a>
-            
-            
-            
             <a href="/tags/多线程/" target="_blank">
                 <span class="chip center-align waves-effect waves-light chip-default">多线程</span>
             </a>
             
             
             
-            <a href="/tags/Pytorch/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">Pytorch</span>
+            <a href="/tags/CF/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">CF</span>
+            </a>
+            
+            
+            
+            <a href="/tags/DP/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">DP</span>
+            </a>
+            
+            
+            
+            <a href="/tags/DFS/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">DFS</span>
+            </a>
+            
+            
+            
+            <a href="/tags/树/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">树</span>
             </a>
             
             
@@ -932,26 +920,32 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             
             
+            <a href="/tags/Latex/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">Latex</span>
+            </a>
+            
+            
+            
             <a href="/tags/Git/" target="_blank">
                 <span class="chip center-align waves-effect waves-light chip-default">Git</span>
             </a>
             
             
             
-            <a href="/tags/nginx/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">nginx</span>
-            </a>
-            
-            
-            
-            <a href="/tags/画图/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">画图</span>
+            <a href="/tags/Pytorch/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">Pytorch</span>
             </a>
             
             
             
             <a href="/tags/DeepLearning/" target="_blank">
                 <span class="chip center-align waves-effect waves-light chip-default">DeepLearning</span>
+            </a>
+            
+            
+            
+            <a href="/tags/nginx/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">nginx</span>
             </a>
             
             
@@ -968,16 +962,22 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             
             
-            
-            
-            <a href="/tags/资源/" target="_blank">
-                <span class="chip center-align waves-effect waves-light chip-default">资源</span>
+            <a href="/tags/画图/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">画图</span>
             </a>
+            
+            
             
             
             
             <a href="/tags/逆元/" target="_blank">
                 <span class="chip center-align waves-effect waves-light chip-default">逆元</span>
+            </a>
+            
+            
+            
+            <a href="/tags/资源/" target="_blank">
+                <span class="chip center-align waves-effect waves-light chip-default">资源</span>
             </a>
             
             
