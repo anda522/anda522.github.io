@@ -1,7 +1,7 @@
 /* Here is your custom css styles. */
 /* 添加鼠标样式 */
 body {
-    cursor: url("https://cdn.jsdelivr.net/gh/anda522/cdn@1.0/source/medias/img/Arrow.cur"), auto;
+    cursor: url("/medias/img/Arrow.cur"), auto;
 }
 
 /* dream展示的图片边角样式 */
