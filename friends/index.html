@@ -701,8 +701,34 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
         </article>
 
-        <!-- 添加评论模块 -->
+        <!-- 友链页面添加评论模块 -->
         <div class="card">
+            
+            <link rel="stylesheet" href="https://lib.baomitu.com/gitalk/latest/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/gangdong/gangdong.github.io@dev/assets/js/md5.min.js"></script> -->
+<script src="https://lib.baomitu.com/gitalk/latest/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '132746b84c5638134a72',
+        clientSecret: '9026078c86f550ac2f804f817046f2f02aa1bf46',
+        repo: 'anda522.github.io',
+        owner: 'anda522',
+        admin: "anda522",
+        id: 'friends/index.html',
+        // id: md5(location.pathname), // 使用MD5生成gitalk id
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+            
+
             
             <style>
     .valine-card {
