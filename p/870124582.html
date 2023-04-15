@@ -336,7 +336,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.png')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -517,7 +517,7 @@
                 </div>
                 
                 
-
+                <!-- 页面访问次数统计 -->
                 
                 <div id="busuanzi_container_page_pv" class="info-break-policy">
                     <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
@@ -2617,7 +2617,7 @@ cout <span class="token operator">&lt;&lt;</span> <span class="token function">t
     <div id="gitalk-container" class="card-content"></div>
 </div>
 
-<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/gangdong/gangdong.github.io@dev/assets/js/md5.min.js"></script> -->
+
 <script src="https://lib.baomitu.com/gitalk/latest/gitalk.min.js"></script>
 <script>
     let gitalk = new Gitalk({
@@ -2626,8 +2626,8 @@ cout <span class="token operator">&lt;&lt;</span> <span class="token function">t
         repo: 'anda522.github.io',
         owner: 'anda522',
         admin: "anda522",
-        id: 'p/870124582.html',
-        // id: md5(location.pathname), // 使用MD5生成gitalk id
+        id: 'p/870124582.html',  // 使用页面路径生成gitalk id
+        
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -2922,7 +2922,7 @@ cout <span class="token operator">&lt;&lt;</span> <span class="token function">t
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="树上拓扑序计数|树形DP">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="树上拓扑序计数|树形DP">
                         
                         <span class="card-title">树上拓扑序计数|树形DP</span>
                     </div>
@@ -2976,7 +2976,7 @@ cout <span class="token operator">&lt;&lt;</span> <span class="token function">t
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="CF1055C Lucky Days|裴蜀定理">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="CF1055C Lucky Days|裴蜀定理">
                         
                         <span class="card-title">CF1055C Lucky Days|裴蜀定理</span>
                     </div>
@@ -3201,6 +3201,7 @@ cout <span class="token operator">&lt;&lt;</span> <span class="token function">t
             
             
             <br>
+
             
             <span id="busuanzi_container_site_pv" style='display:none'>
                 <i class="fa fa-heart-o"></i>
@@ -3211,6 +3212,7 @@ cout <span class="token operator">&lt;&lt;</span> <span class="token function">t
             <span id="busuanzi_container_site_uv" style='display:none'>
                 人次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
             </span>
+            
             
             
         </div>
@@ -3374,7 +3376,8 @@ $(function () {
     
     <script async src="https://lib.baomitu.com/busuanzi/latest/bsz.pure.mini.js"></script>
     
-
+    
+    <!-- 不蒜子统计修改网页请求头 -->
     
 
 </body>

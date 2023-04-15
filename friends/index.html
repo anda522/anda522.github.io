@@ -522,6 +522,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
 <li>2023-03-14    网站所有JS/CSS添加CDN加速，网站图片也添加CDN加速（jsdeliver加速）</li>
 <li>2023-04-12    网站CSS、JS全部使用开源资源CDN加速，网站打开速度步上新台阶（jsdeliver全部转为本地存取）</li>
 <li>2023-04-13    目录框添加白色背景，样式适配其他卡片样式（GPT真的太强了，没它我还真不一定会加这个功能）</li>
+<li>2023-04-14    修改部分feature图片，将200-400k的图片进行了替换，压缩访问资源大小</li>
 </ul>
 <h2 id="2-疑难问题"><a href="#2-疑难问题" class="headerlink" title="2 疑难问题"></a>2 疑难问题</h2><ul>
 <li>文章访问量统计不准确</li>
@@ -711,7 +712,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
     <div id="gitalk-container" class="card-content"></div>
 </div>
 
-<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/gangdong/gangdong.github.io@dev/assets/js/md5.min.js"></script> -->
+
 <script src="https://lib.baomitu.com/gitalk/latest/gitalk.min.js"></script>
 <script>
     let gitalk = new Gitalk({
@@ -720,8 +721,8 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
         repo: 'anda522.github.io',
         owner: 'anda522',
         admin: "anda522",
-        id: 'friends/index.html',
-        // id: md5(location.pathname), // 使用MD5生成gitalk id
+        id: 'friends/index.html',  // 使用页面路径生成gitalk id
+        
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1029,6 +1030,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             
             <br>
+
             
             <span id="busuanzi_container_site_pv" style='display:none'>
                 <i class="fa fa-heart-o"></i>
@@ -1039,6 +1041,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             <span id="busuanzi_container_site_uv" style='display:none'>
                 人次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
             </span>
+            
             
             
         </div>
@@ -1202,7 +1205,8 @@ $(function () {
     
     <script async src="https://lib.baomitu.com/busuanzi/latest/bsz.pure.mini.js"></script>
     
-
+    
+    <!-- 不蒜子统计修改网页请求头 -->
     
 
 </body>

@@ -337,7 +337,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -510,7 +510,7 @@
                 </div>
                 
                 
-
+                <!-- 页面访问次数统计 -->
                 
                 <div id="busuanzi_container_page_pv" class="info-break-policy">
                     <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
@@ -758,7 +758,7 @@
     <div id="gitalk-container" class="card-content"></div>
 </div>
 
-<!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/gangdong/gangdong.github.io@dev/assets/js/md5.min.js"></script> -->
+
 <script src="https://lib.baomitu.com/gitalk/latest/gitalk.min.js"></script>
 <script>
     let gitalk = new Gitalk({
@@ -767,8 +767,8 @@
         repo: 'anda522.github.io',
         owner: 'anda522',
         admin: "anda522",
-        id: 'p/1646942053.html',
-        // id: md5(location.pathname), // 使用MD5生成gitalk id
+        id: 'p/1646942053.html',  // 使用页面路径生成gitalk id
+        
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1063,7 +1063,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="《动手学深度学习》笔记">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="《动手学深度学习》笔记">
                         
                         <span class="card-title">《动手学深度学习》笔记</span>
                     </div>
@@ -1122,7 +1122,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="机器学习常见算法总结">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="机器学习常见算法总结">
                         
                         <span class="card-title">机器学习常见算法总结</span>
                     </div>
@@ -1353,6 +1353,7 @@
             
             
             <br>
+
             
             <span id="busuanzi_container_site_pv" style='display:none'>
                 <i class="fa fa-heart-o"></i>
@@ -1363,6 +1364,7 @@
             <span id="busuanzi_container_site_uv" style='display:none'>
                 人次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
             </span>
+            
             
             
         </div>
@@ -1526,7 +1528,8 @@ $(function () {
     
     <script async src="https://lib.baomitu.com/busuanzi/latest/bsz.pure.mini.js"></script>
     
-
+    
+    <!-- 不蒜子统计修改网页请求头 -->
     
 
 </body>
