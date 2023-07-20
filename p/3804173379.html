@@ -9,9 +9,13 @@
     <meta name="baidu-site-verification" content="code-L7AVcsbU14">
     <meta name="google-site-verification" content="x4QfrBHn9imI1RhTNCB8RD8Q2Rx6rE_zylSBptBgdZY">
     <!-- <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" /> -->
-    <meta name="description" content="matplotlib.pyplot折线图绘制子图操作import matplotlib.pyplot as plt
-fig = plt.figure()
-# fig = plt.figure(figsize=(4, 3)) 画的图大小宽4高">
+    <meta name="description" content="相关设置：
+如果是在notebook中想使用嵌入式绘图，需添加
+%matplotlib inline
+如果想使用交互式绘图，需添加
+%matplotlib notebook
+折线图绘制子图操作figure相当于一张画布，画布中可以添加子图
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -504,7 +508,7 @@ fig = plt.figure()
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    87
+                    385
                 </div>
                 
 
@@ -527,18 +531,48 @@ fig = plt.figure()
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="matplotlib-pyplot"><a href="#matplotlib-pyplot" class="headerlink" title="matplotlib.pyplot"></a>matplotlib.pyplot</h1><h1 id="折线图绘制"><a href="#折线图绘制" class="headerlink" title="折线图绘制"></a>折线图绘制</h1><h1 id="子图操作"><a href="#子图操作" class="headerlink" title="子图操作"></a>子图操作</h1><pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+                <p>相关设置：</p>
+<p>如果是在notebook中想使用<strong>嵌入式绘图</strong>，需添加</p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token operator">%</span>matplotlib inline<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>如果想使用<strong>交互式绘图</strong>，需添加</p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token operator">%</span>matplotlib notebook<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h1 id="折线图绘制"><a href="#折线图绘制" class="headerlink" title="折线图绘制"></a>折线图绘制</h1><h1 id="子图操作"><a href="#子图操作" class="headerlink" title="子图操作"></a>子图操作</h1><p><code>figure</code>相当于一张画布，画布中可以添加子图</p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
 fig <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token comment" spellcheck="true"># fig = plt.figure(figsize=(4, 3)) 画的图大小宽4高3</span>
-<span class="token comment" spellcheck="true"># 在 2 * 2 图像中显示在第1,2,4个位置(从1开始)</span>
+
+<span class="token comment" spellcheck="true"># 在 2*2 方格中（假设画布被分成了4个网格） 显示在第1,2,4个位置(从1开始)</span>
 ax1 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
 ax2 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
-ax3 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span>
-plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+ax3 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 还可以简写参数为224</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 此时就可以显示出图像了，此时图像具有横纵坐标相关信息</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>对子图分别进行操作</p>
 <pre class="line-numbers language-python"><code class="language-python">ax1<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token punctuation">)</span>
 ax2<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h1 id="操作-显示图片"><a href="#操作-显示图片" class="headerlink" title="操作-显示图片"></a>操作-显示图片</h1><p>第一种：使用<code>IPython + PIL</code>进行显示</p>
+<p>下面代码显示多张图片，多张图片在一列显示，看着可能不美观。</p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
+<span class="token keyword">from</span> IPython<span class="token punctuation">.</span>display <span class="token keyword">import</span> display
+
+<span class="token comment" spellcheck="true"># 显示多张图像</span>
+<span class="token keyword">for</span> file_path <span class="token keyword">in</span> file_list<span class="token punctuation">:</span>
+    img <span class="token operator">=</span> Image<span class="token punctuation">.</span>open<span class="token punctuation">(</span>file_path<span class="token punctuation">)</span>
+    <span class="token comment" spellcheck="true"># 同时还可以修改显示图片的尺寸 修改成180 * 180</span>
+    img<span class="token punctuation">.</span>resize<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">180</span><span class="token punctuation">,</span> <span class="token number">180</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    display<span class="token punctuation">(</span>img<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>第二种：使用<code>matplotlib</code> 子图功能进行显示</p>
+<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">import</span> cv2
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+
+path <span class="token operator">=</span> <span class="token string">''</span>
+img <span class="token operator">=</span> cv2<span class="token punctuation">.</span>imread<span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+ax1 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+ax1<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>img<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 此时第一个位置就显示出对应路径的图像了，此时具有坐标轴信息</span>
+
+ax2 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>img<span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 也可以这样写，默认图像显示到最新子图的位置</span>
+ax3 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true"># 还可以简写参数为224</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -1312,7 +1346,7 @@ d
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">69.9k</span>
+            <span class="white-color">70.7k</span>
             
 
             <br>

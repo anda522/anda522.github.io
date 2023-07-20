@@ -723,9 +723,13 @@ $(function () {
                     <div class="card-content article-content">
                         <div class="summary block-with-text">
                             
-                            matplotlib.pyplot折线图绘制子图操作import matplotlib.pyplot as plt
-fig = plt.figure()
-# fig = plt.figure(figsize=(4, 3)) 画的图大小宽4高
+                            相关设置：
+如果是在notebook中想使用嵌入式绘图，需添加
+%matplotlib inline
+如果想使用交互式绘图，需添加
+%matplotlib notebook
+折线图绘制子图操作figure相当于一张画布，画布中可以添加子图
+
                             
                         </div>
                         <div class="publish-info">
@@ -1343,7 +1347,7 @@ us
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">69.9k</span>
+            <span class="white-color">70.7k</span>
             
 
             <br>

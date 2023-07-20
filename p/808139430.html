@@ -505,14 +505,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    11.2k
+                    11.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    46 分
+                    47 分
                 </div>
                 
                 
@@ -1086,7 +1086,7 @@ labels <span class="token operator">=</span> labels<span class="token punctuatio
 <span class="token keyword">print</span><span class="token punctuation">(</span>clusters<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>
 np<span class="token punctuation">.</span>save<span class="token punctuation">(</span><span class="token string">'test.npy'</span><span class="token punctuation">,</span> clusters<span class="token punctuation">)</span>
 io<span class="token punctuation">.</span>imsave<span class="token punctuation">(</span><span class="token string">'compressed.jpg'</span><span class="token punctuation">,</span> labels<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="DBSCAN算法"><a href="#DBSCAN算法" class="headerlink" title="DBSCAN算法"></a>DBSCAN算法</h2><h3 id="1-概述-5"><a href="#1-概述-5" class="headerlink" title="1 概述"></a>1 概述</h3><p>DBSCAN（Density-Based Spatial Clustering of Applications with Noise，具有噪声的基于密度的聚类方法）是一种<strong>基于密度的空间聚类算法</strong>。该算法将具有足够密度的区域划分为簇，并在具有噪声的空间<a href="https://cloud.tencent.com/solution/database?from=10680" target="_blank" rel="noopener">数据库</a>中发现任意形状的簇，DBSCAN算法将<code>簇</code>定义为密度相连的点的最大集合。</p>
+<h2 id="DBSCAN算法"><a href="#DBSCAN算法" class="headerlink" title="DBSCAN算法"></a>DBSCAN算法</h2><h3 id="1-概述-5"><a href="#1-概述-5" class="headerlink" title="1 概述"></a>1 概述</h3><p>DBSCAN（Density-Based Spatial Clustering of Applications with Noise，具有噪声的基于密度的聚类方法）是一种<strong>基于密度的空间聚类算法</strong>。该算法将具有足够密度的区域划分为簇，并在具有噪声的空间数据库中发现任意形状的簇，DBSCAN算法将<code>簇</code>定义为密度相连的点的最大集合。</p>
 <p>核心对象：若某个点的密度达到算法设定的阈值则称其为核心点。（即<code>r</code>邻域内的点的数量不小于<code>minPts</code>）</p>
 <p>基于以上密度的定义，我们可以将样本集中的点划分为以下三类：</p>
 <ul>
@@ -1099,9 +1099,9 @@ io<span class="token punctuation">.</span>imsave<span class="token punctuation">
 </blockquote>
 <p>一些概念：</p>
 <ul>
-<li><strong>直接密度可达</strong>：在给定一个对象集合D，如果p在q的r领域内，且<strong>q是一个核心点对象</strong>，则称对象p从对象q出发时是直接密度可达的</li>
-<li><strong>密度可达</strong>：在给定对象集合D中，如果存在一个对象链q–&gt;e–&gt;a–&gt;k–&gt;l–&gt;p，任意相邻两个对象间都是直接密度可达的，则称对象p是对象q关于r邻域内、MinPts数目下，是密度可达的；</li>
-<li><strong>密度相连</strong>：如果在对象集合D中存在一个对象O，使得对象p和q都是从O关于r邻域内、MinPts数目下，是密度相连的。</li>
+<li><strong>直接密度可达（密度直达）</strong>：如果p在q的r领域内，且<strong>q是一个核心点对象</strong>，则称对象p从对象q出发时直接密度可达，反之不一定成立，即密度直达不满足对称性。</li>
+<li><strong>密度可达</strong>：如果存在一个对象链q–&gt;e–&gt;a–&gt;k–&gt;l–&gt;p，任意相邻两个对象间都是密度直达的，则称对象p由对象q出发密度可达。密度可达满足传递性。</li>
+<li><strong>密度相连</strong>：对于 $x_i$ 和 $x_j$ ,如果存在核心对象样本 $x_k$ ，使 $x_i$ 和 $x_j$ 均由 $x_k$ 密度可达，则称 $x_i$ 和 $x_j$ 密度相连。<strong>密度相连关系满足对称性</strong>。</li>
 </ul>
 <blockquote>
 <p>核心点能够连通（密度可达），它们构成的以r为半径的圆形邻域相互连接或重叠，这些连通的核心点及其所处的邻域内的全部点构成一个簇。</p>
@@ -1159,7 +1159,16 @@ plt<span class="token punctuation">.</span>title<span class="token punctuation">
 plt<span class="token punctuation">.</span>sca<span class="token punctuation">(</span>ax3<span class="token punctuation">)</span>
 
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h1 id="PCA主成分分析"><a href="#PCA主成分分析" class="headerlink" title="PCA主成分分析"></a>PCA主成分分析</h1><p>Principal Component Analysis：降维中最常用的一种手段</p>
+<h1 id="PCA主成分分析"><a href="#PCA主成分分析" class="headerlink" title="PCA主成分分析"></a>PCA主成分分析</h1><p>Principal Component Analysis：降维中最常用的一种手段，PCA的主要思想是将<code>n</code>维特征映射到<code>k</code>维上，这<code>k</code>维是全新的正交特征也被称为主成分，是在原有<code>n</code>维特征的基础上重新构造出来的<code>k</code>维特征。</p>
+<p>PCA的工作就是从原始的空间中顺序地找一组相互正交的坐标轴，新的坐标轴的选择与数据本身是密切相关的。其中，第一个新坐标轴选择是原始数据中方差最大的方向，第二个新坐标轴选取是与第一个坐标轴正交的平面中使得方差最大的，第三个轴是与第1,2个轴正交的平面中方差最大的。依次类推，可以得到n个这样的坐标轴。通过这种方式获得的新的坐标轴，我们发现，大部分方差都包含在前面k个坐标轴中，后面的坐标轴所含的方差几乎为0。于是，我们可以忽略余下的坐标轴，只保留前面k个含有绝大部分方差的坐标轴。</p>
+<p>通过计算数据矩阵的协方差矩阵，然后得到协方差矩阵的特征值特征向量，选择特征值最大(即方差最大)的k个特征所对应的特征向量组成的矩阵。这样就可以将数据矩阵转换到新的空间当中，实现数据特征的降维。</p>
+<p>由于得到协方差矩阵的特征值特征向量有两种方法：特征值分解协方差矩阵、奇异值分解协方差矩阵，所以PCA算法有两种实现方法：</p>
+<ul>
+<li><p>基于特征值分解协方差矩阵实现PCA算法</p>
+</li>
+<li><p>基于SVD分解协方差矩阵实现PCA算法</p>
+</li>
+</ul>
 <h2 id="1-基变换"><a href="#1-基变换" class="headerlink" title="1 基变换"></a>1 基变换</h2><p>目标：提取最有价值的信息（基于方差）</p>
 <ul>
 <li><p>基概念：例如在二维坐标系中，向量（3，4）也可表示为线性组合$x(1, 0) + y(0, 1)$，而$(0,1)(1,0)$叫做二维空间的一组基。</p>
@@ -1201,8 +1210,13 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 <p>结论：一个n行n列的实对称矩阵一定可以找到n个单位正交特征向量<br>$$<br>E = \begin{pmatrix} e_1 &amp; e_2 &amp; \cdots &amp; e_n\end{pmatrix}<br>$$<br>实对称矩阵可以进行对角化：<br>$$<br>ECE^T = \Lambda =<br>\begin{pmatrix}<br>\lambda_1 \\<br>&amp; \lambda_2 \\<br>&amp; &amp; \ddots \\<br>&amp; &amp; &amp; \lambda_n<br>\end{pmatrix}<br>$$</p>
 </blockquote>
 <p>将特征值从大到小排列，用前K行组成的矩阵乘原始数据矩阵X，就得到降维后的数据矩阵Y。</p>
-<h2 id="4-示例"><a href="#4-示例" class="headerlink" title="4 示例"></a>4 示例</h2><p>数据（共5个数据，每个数据2个特征点）<br>$$<br>\begin{pmatrix}<br>-1 &amp; -1 &amp; 0 &amp; 2 &amp; 0 \\<br>-2 &amp; 0 &amp; 0 &amp; 1 &amp; 1<br>\end{pmatrix}<br>$$<br>协方差矩阵<br>$$<br>C = \frac{1}{5}<br>\begin{pmatrix}<br>-1 &amp; -1 &amp; 0 &amp; 2 &amp; 0 \\<br>-2 &amp; 0 &amp; 0 &amp; 1 &amp; 1<br>\end{pmatrix}<br>\begin{pmatrix}<br>-1 &amp; -2 \\<br>-1 &amp; 0 \\<br>0 &amp; 0 \\<br>2 &amp; 1 \\<br>0 &amp; 1<br>\end{pmatrix}<br>=<br>\begin{pmatrix}<br>\frac{6}{5} &amp; \frac{4}{5} \\<br>\frac{4}{5} &amp; \frac{6}{5}<br>\end{pmatrix}<br>$$<br>特征值<br>$$<br>\lambda_1 = 2, \lambda_2 = \frac{2}{5}<br>$$<br>特征向量<br>$$<br>c_1<br>\begin{pmatrix}<br>1 \\<br>1<br>\end{pmatrix} ,<br>c_2<br>\begin{pmatrix}<br>-1 \\<br>1<br>\end{pmatrix}<br>$$<br>对角化，我们要降成1维，选择（选择前1大）最大特征值对应的特征向量$c_1$这个<br>$$<br>PCP^T =<br>\begin{pmatrix}<br>\frac{1}{\sqrt 2} &amp; \frac{1}{\sqrt 2} \\<br>-\frac{1}{\sqrt 2} &amp; \frac{1}{\sqrt 2}<br>\end{pmatrix}<br>\begin{pmatrix}<br>\frac{6}{5} &amp; \frac{4}{5} \\<br>\frac{4}{5} &amp; \frac{6}{5}<br>\end{pmatrix}<br>\begin{pmatrix}<br>\frac{1}{\sqrt 2} &amp; -\frac{1}{\sqrt 2} \\<br>\frac{1}{\sqrt 2} &amp; \frac{1}{\sqrt 2}<br>\end{pmatrix}<br>=<br>\begin{pmatrix}<br>2 &amp; 0 \\<br>0 &amp; \frac{2}{5}<br>\end{pmatrix}<br>$$<br>降维<br>$$<br>Y =<br>\begin{pmatrix}<br>\frac{1}{\sqrt 2} &amp; \frac{1}{\sqrt 2}<br>\end{pmatrix}<br>\begin{pmatrix}<br>-1 &amp; -1 &amp; 0 &amp; 2 &amp; 0 \\<br>-2 &amp; 0 &amp; 0 &amp; 1 &amp; 1<br>\end{pmatrix}<br>=<br>\begin{pmatrix}<br>-\frac{3}{\sqrt 2} &amp; -\frac{1}{\sqrt 2} &amp; 0 &amp; \frac{3}{\sqrt 2} &amp; -\frac{1}{\sqrt 2}<br>\end{pmatrix}<br>$$</p>
+<h2 id="4-示例"><a href="#4-示例" class="headerlink" title="4 示例"></a>4 示例</h2><p>数据（共5个数据，每个数据2个特征点）<br>$$<br>\begin{pmatrix}<br>-1 &amp; -1 &amp; 0 &amp; 2 &amp; 0 \\<br>-2 &amp; 0 &amp; 0 &amp; 1 &amp; 1<br>\end{pmatrix}<br>$$<br>协方差矩阵<br>$$<br>C = \frac{1}{5}<br>\begin{pmatrix}<br>-1 &amp; -1 &amp; 0 &amp; 2 &amp; 0 \\<br>-2 &amp; 0 &amp; 0 &amp; 1 &amp; 1<br>\end{pmatrix}<br>\begin{pmatrix}<br>-1 &amp; -2 \\<br>-1 &amp; 0 \\<br>0 &amp; 0 \\<br>2 &amp; 1 \\<br>0 &amp; 1<br>\end{pmatrix}<br>=<br>\begin{pmatrix}<br>\frac{6}{5} &amp; \frac{4}{5} \\<br>\frac{4}{5} &amp; \frac{6}{5}<br>\end{pmatrix}<br>$$<br>特征值<br>$$<br>\lambda_1 = 2, \lambda_2 = \frac{2}{5}<br>$$<br>特征向量<br>$$<br>c_1<br>\begin{pmatrix}<br>1 \\<br>1<br>\end{pmatrix} ,<br>c_2<br>\begin{pmatrix}<br>-1 \\<br>1<br>\end{pmatrix}<br>$$</p>
 <blockquote>
+<p>我们求特征值与特征向量的时候，就是为了求矩阵A能使哪些向量（特征向量）只发生伸缩变换，而变换的程度可以用特征值λ表示。</p>
+</blockquote>
+<p>对角化，我们要降成1维，选择（选择前1大）最大特征值对应的特征向量$c_1$这个<br>$$<br>PCP^T =<br>\begin{pmatrix}<br>\frac{1}{\sqrt 2} &amp; \frac{1}{\sqrt 2} \\<br>-\frac{1}{\sqrt 2} &amp; \frac{1}{\sqrt 2}<br>\end{pmatrix}<br>\begin{pmatrix}<br>\frac{6}{5} &amp; \frac{4}{5} \\<br>\frac{4}{5} &amp; \frac{6}{5}<br>\end{pmatrix}<br>\begin{pmatrix}<br>\frac{1}{\sqrt 2} &amp; -\frac{1}{\sqrt 2} \\<br>\frac{1}{\sqrt 2} &amp; \frac{1}{\sqrt 2}<br>\end{pmatrix}<br>=<br>\begin{pmatrix}<br>2 &amp; 0 \\<br>0 &amp; \frac{2}{5}<br>\end{pmatrix}<br>$$<br>降维<br>$$<br>Y =<br>\begin{pmatrix}<br>\frac{1}{\sqrt 2} &amp; \frac{1}{\sqrt 2}<br>\end{pmatrix}<br>\begin{pmatrix}<br>-1 &amp; -1 &amp; 0 &amp; 2 &amp; 0 \\<br>-2 &amp; 0 &amp; 0 &amp; 1 &amp; 1<br>\end{pmatrix}<br>=<br>\begin{pmatrix}<br>-\frac{3}{\sqrt 2} &amp; -\frac{1}{\sqrt 2} &amp; 0 &amp; \frac{3}{\sqrt 2} &amp; -\frac{1}{\sqrt 2}<br>\end{pmatrix}<br>$$</p>
+<blockquote>
+<p>PCA降维可参考：<a href="https://zhuanlan.zhihu.com/p/37777074" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/37777074</a></p>
 <p>机器学习实战参考：<a href="https://blog.csdn.net/weixin_42600072/category_8751294.html" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42600072/category_8751294.html</a></p>
 </blockquote>
 
@@ -1970,7 +1984,7 @@ from torch.utils.data
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">69.9k</span>
+            <span class="white-color">70.7k</span>
             
 
             <br>
