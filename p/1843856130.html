@@ -339,7 +339,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -501,14 +501,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.1k
+                    3.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    12 分
+                    13 分
                 </div>
                 
                 
@@ -622,7 +622,9 @@
 <p><code>git show [commit]</code> : 显示某次提交的元数据和内容变化</p>
 <p><code>git show --name-only [commit]</code>: 显示某次提交发生变化的文件</p>
 <p><code>git show [commit]:[filename]</code> : 显示某次提交时，某个文件的内容</p>
-<h1 id="远程同步"><a href="#远程同步" class="headerlink" title="远程同步"></a>远程同步</h1><p><code>git remote add origin git@github.com:xxx/XXX.git</code>：将本地仓库关联到远程仓库</p>
+<h1 id="远程同步"><a href="#远程同步" class="headerlink" title="远程同步"></a>远程同步</h1><p><code>git remote -v</code> ： 查看与远程仓库的关联</p>
+<p><code>git remote remove origin</code> ：删除与远程仓库的关联</p>
+<p><code>git remote add origin git@github.com:xxx/XXX.git</code>：将本地仓库关联到远程仓库</p>
 <p><code>git push -u</code> （第一次需要-u以后不需要）：将当前分支推送到远程仓库</p>
 <p><code>git push origin branch_name</code>：将本地的某个分支推送到远程仓库</p>
 <p><code>git clone git@github.com:anda522/XXX.git</code>：将远程仓库XXX下载到当前目录下</p>
@@ -723,6 +725,11 @@
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> pull <span class="token operator">&lt;</span>远程主机名<span class="token operator">></span> <span class="token operator">&lt;</span>远程分支名<span class="token operator">></span>:<span class="token operator">&lt;</span>本地分支名<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>如果是与当前分支合并，则冒号后面的可以省略，例如：</p>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> pull origin master<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="7-仓库名改动"><a href="#7-仓库名改动" class="headerlink" title="7 仓库名改动"></a>7 仓库名改动</h2><p>需要进行仓库名改动，先改动了远程仓库名，本地直接目录名就行。</p>
+<p>之后就要进行重新关联远程仓库，因为远程仓库名发生变化，仓库地址也就发生了变化。</p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> remote -v // 可以先查看与远程仓库的关联
+<span class="token function">git</span> remote remove origin // 然后删除与远程仓库的关联
+<span class="token function">git</span> remote add origin git@github.com:xxx/XXX.git // 将本地仓库关联到远程仓库<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -1223,7 +1230,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="docker|常用命令">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="docker|常用命令">
                         
                         <span class="card-title">docker|常用命令</span>
                     </div>
@@ -1280,7 +1287,7 @@ sudo usermod -aG docker $USER
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="2021大二上期末题目回顾">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="2021大二上期末题目回顾">
                         
                         <span class="card-title">2021大二上期末题目回顾</span>
                     </div>
@@ -1488,7 +1495,7 @@ Linux指令基本都是基本指令，输入输出流，统计行数，复制，
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">70.7k</span>
+            <span class="white-color">70.8k</span>
             
 
             <br>
