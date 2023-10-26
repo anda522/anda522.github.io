@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2023-10-02T13:35:46.066Z</updated>
+  <updated>2023-10-26T12:17:17.115Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Google搜索语法</title>
+    <link href="http://wyqz.top/p/2127276366.html"/>
+    <id>http://wyqz.top/p/2127276366.html</id>
+    <published>2023-10-26T11:14:19.000Z</published>
+    <updated>2023-10-26T12:17:17.115Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;希望能够使用Google搜索进行精准搜索。&lt;/p&gt;
+&lt;h1 id=&quot;Google搜索语法&quot;&gt;&lt;a href=&quot;#Google搜索语法&quot; class=&quot;headerlink&quot; title=&quot;Google搜索语法&quot;&gt;&lt;/a&gt;Google搜索语法&lt;/h1&gt;&lt;h1
+        
+      
+    
+    </summary>
+    
+      <category term="开发工具" scheme="http://wyqz.top/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
+    
+    
+      <category term="Google搜索" scheme="http://wyqz.top/tags/Google%E6%90%9C%E7%B4%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>关于推免的那些事</title>
@@ -551,36 +578,6 @@
     
     
       <category term="nginx" scheme="http://wyqz.top/tags/nginx/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CF1076E.Vasya and a Tree|树上差分</title>
-    <link href="http://wyqz.top/p/3632168690.html"/>
-    <id>http://wyqz.top/p/3632168690.html</id>
-    <published>2022-08-03T11:26:20.000Z</published>
-    <updated>2022-08-04T06:47:14.627Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;CF-1076E-Vasya-and-a-Tree-树上差分&quot;&gt;&lt;a href=&quot;#CF-1076E-Vasya-and-a-Tree-树上差分&quot; class=&quot;headerlink&quot; title=&quot;CF 1076E. Vasya and a
-        
-      
-    
-    </summary>
-    
-      <category term="树" scheme="http://wyqz.top/categories/%E6%A0%91/"/>
-    
-    
-      <category term="DFS" scheme="http://wyqz.top/tags/DFS/"/>
-    
-      <category term="树" scheme="http://wyqz.top/tags/%E6%A0%91/"/>
-    
-      <category term="CF" scheme="http://wyqz.top/tags/CF/"/>
     
   </entry>
   
