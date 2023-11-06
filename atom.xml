@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2023-11-06T06:19:34.285Z</updated>
+  <updated>2023-11-06T08:43:01.984Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>代码中的技巧或习惯</title>
+    <link href="http://wyqz.top/p/3703005386.html"/>
+    <id>http://wyqz.top/p/3703005386.html</id>
+    <published>2023-11-06T08:39:35.000Z</published>
+    <updated>2023-11-06T08:43:01.984Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;hr&gt;
+&lt;p&gt;1.需要一个数组或者字符串的目前的元素和前一个元素做相关运算时:&lt;br&gt;&lt;strong&gt;直接遍历这个序列，当 i 等于0时不满足条件，只有i 等于 1时才会执行if语句&lt;/strong&gt;&lt;/p&gt;
+&lt;pre class=&quot;line-numbers
+        
+      
+    
+    </summary>
+    
+      <category term="ACM" scheme="http://wyqz.top/categories/ACM/"/>
+    
+    
+      <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
     <title>个人算法题单整理</title>
     <link href="http://wyqz.top/p/542231525.html"/>
     <id>http://wyqz.top/p/542231525.html</id>
     <published>2023-11-06T06:04:56.000Z</published>
-    <updated>2023-11-06T06:19:34.285Z</updated>
+    <updated>2023-11-06T06:21:10.968Z</updated>
     
     <summary type="html">
     
@@ -552,34 +580,6 @@
       <category term="C++" scheme="http://wyqz.top/tags/C/"/>
     
       <category term="STL" scheme="http://wyqz.top/tags/STL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CF1055C Lucky Days|裴蜀定理</title>
-    <link href="http://wyqz.top/p/4188452413.html"/>
-    <id>http://wyqz.top/p/4188452413.html</id>
-    <published>2022-08-08T11:45:25.000Z</published>
-    <updated>2022-08-09T13:29:47.188Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Lucky-Days&quot;&gt;&lt;a href=&quot;#Lucky-Days&quot; class=&quot;headerlink&quot; title=&quot;Lucky Days&quot;&gt;&lt;/a&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="数论" scheme="http://wyqz.top/categories/%E6%95%B0%E8%AE%BA/"/>
-    
-    
-      <category term="数论" scheme="http://wyqz.top/tags/%E6%95%B0%E8%AE%BA/"/>
-    
-      <category term="裴蜀定理" scheme="http://wyqz.top/tags/%E8%A3%B4%E8%9C%80%E5%AE%9A%E7%90%86/"/>
     
   </entry>
   
