@@ -335,7 +335,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -497,14 +497,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    8.6k
+                    8.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    49 分
+                    50 分
                 </div>
                 
                 
@@ -552,7 +552,11 @@ std<span class="token operator">::</span>ostream<span class="token operator">&am
     <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token punctuation">;</span> c <span class="token operator">>=</span> <span class="token string">'0'</span> <span class="token operator">&amp;&amp;</span> c <span class="token operator">&lt;=</span> <span class="token string">'9'</span><span class="token punctuation">;</span> c <span class="token operator">=</span> <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
         x <span class="token operator">=</span> x <span class="token operator">*</span> <span class="token number">10</span> <span class="token operator">+</span> <span class="token punctuation">(</span>c <span class="token operator">&amp;</span> <span class="token number">15</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">return</span> x<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span>
+<span class="token keyword">void</span> <span class="token function">out</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>x <span class="token operator">></span> <span class="token number">9</span><span class="token punctuation">)</span> <span class="token function">out</span><span class="token punctuation">(</span>x <span class="token operator">/</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">putchar</span><span class="token punctuation">(</span>x <span class="token operator">%</span> <span class="token number">10</span> <span class="token operator">+</span> <span class="token string">'0'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="1-2-STL"><a href="#1-2-STL" class="headerlink" title="1.2 STL"></a>1.2 STL</h2><h3 id="bitset"><a href="#bitset" class="headerlink" title="bitset"></a>bitset</h3><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">// 动态长度bitset实现</span>
 <span class="token keyword">const</span> <span class="token keyword">int</span> N <span class="token operator">=</span> <span class="token number">1e6</span> <span class="token operator">+</span> <span class="token number">5</span><span class="token punctuation">;</span>
 <span class="token keyword">template</span> <span class="token operator">&lt;</span><span class="token keyword">int</span> len <span class="token operator">=</span> <span class="token number">1</span><span class="token operator">></span>
@@ -562,7 +566,7 @@ std<span class="token operator">::</span>ostream<span class="token operator">&am
         <span class="token keyword">return</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
     bitset<span class="token operator">&lt;</span>len <span class="token operator">+</span> <span class="token number">1</span><span class="token operator">></span> dp<span class="token punctuation">;</span>
-    <span class="token comment" spellcheck="true">// 相关实现</span>
+    <span class="token comment" spellcheck="true">// 具体实现</span>
 <span class="token punctuation">}</span>
 bitset<span class="token operator">&lt;</span><span class="token number">5</span><span class="token operator">></span>b<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//坐标从后往前计数，高位在前</span>
 bitset<span class="token operator">&lt;</span><span class="token number">5</span><span class="token operator">></span><span class="token function">b</span><span class="token punctuation">(</span><span class="token number">13</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1871,10 +1875,9 @@ cin <span class="token operator">>></span> s <span class="token operator">+</spa
     <span class="token keyword">if</span> <span class="token punctuation">(</span>s<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> p<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span> j<span class="token operator">++</span><span class="token punctuation">;</span>
     <span class="token keyword">if</span> <span class="token punctuation">(</span>j <span class="token operator">==</span> m<span class="token punctuation">)</span> <span class="token punctuation">{</span>
         j <span class="token operator">=</span> ne<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//匹配成功，后面必然不能再匹配，所以回退一步 </span>
-        <span class="token comment" spellcheck="true">//匹配成功后的逻辑</span>
-        cout <span class="token operator">&lt;&lt;</span> i <span class="token operator">-</span> m <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
+        cout <span class="token operator">&lt;&lt;</span> i <span class="token operator">-</span> m <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>  <span class="token comment" spellcheck="true">//匹配成功后的逻辑</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="5-3-Trie"><a href="#5-3-Trie" class="headerlink" title="5.3 Trie"></a>5.3 Trie</h2><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">struct</span> Trie <span class="token punctuation">{</span>
     vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> trie<span class="token punctuation">;</span>
     vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> cnt<span class="token punctuation">;</span>
@@ -2042,7 +2045,18 @@ ll <span class="token function">calc</span><span class="token punctuation">(</sp
         Point k1<span class="token operator">=</span>a<span class="token operator">-</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">,</span>k2<span class="token operator">=</span>b<span class="token operator">-</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
         <span class="token keyword">return</span> <span class="token function">atan2l</span><span class="token punctuation">(</span>k1<span class="token punctuation">.</span><span class="token function">cross</span><span class="token punctuation">(</span>k2<span class="token punctuation">)</span><span class="token punctuation">,</span> k1<span class="token punctuation">.</span><span class="token function">dot</span><span class="token punctuation">(</span>k2<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
-<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">struct</span> Point <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 极角排序的点</span>
+    ll x<span class="token punctuation">,</span> y<span class="token punctuation">;</span>
+    <span class="token function">Point</span><span class="token punctuation">(</span>ll x<span class="token punctuation">,</span> ll y<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token function">x</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">y</span><span class="token punctuation">(</span>y<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+    <span class="token keyword">int</span> <span class="token function">area</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>y <span class="token operator">></span> <span class="token number">0</span> <span class="token operator">||</span> y <span class="token operator">==</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> x <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    ll <span class="token function">cross</span><span class="token punctuation">(</span><span class="token keyword">const</span> Point<span class="token operator">&amp;</span> rhs<span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> x <span class="token operator">*</span> rhs<span class="token punctuation">.</span>y <span class="token operator">-</span> rhs<span class="token punctuation">.</span>x <span class="token operator">*</span> y<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword">bool</span> <span class="token keyword">operator</span> <span class="token operator">&lt;</span> <span class="token punctuation">(</span><span class="token keyword">const</span> Point<span class="token operator">&amp;</span> rhs<span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token function">area</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> rhs<span class="token punctuation">.</span><span class="token function">area</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">||</span> <span class="token function">area</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> rhs<span class="token punctuation">.</span><span class="token function">area</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token function">cross</span><span class="token punctuation">(</span>rhs<span class="token punctuation">)</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    <span class="token keyword">bool</span> <span class="token keyword">operator</span> <span class="token operator">==</span> <span class="token punctuation">(</span><span class="token keyword">const</span> Point<span class="token operator">&amp;</span> rhs<span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> <span class="token function">area</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> rhs<span class="token punctuation">.</span><span class="token function">area</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> <span class="token function">cross</span><span class="token punctuation">(</span>rhs<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -2543,7 +2557,7 @@ ll <span class="token function">calc</span><span class="token punctuation">(</sp
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="CF1076E.Vasya and a Tree|树上差分">
+                        <img src="/medias/featureimages/9.png" class="responsive-img" alt="CF1076E.Vasya and a Tree|树上差分">
                         
                         <span class="card-title">CF1076E.Vasya and a Tree|树上差分</span>
                     </div>
@@ -2606,7 +2620,7 @@ $x$节点的$k$级
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="2022杭电多校2 Static Query on Tree|树链剖分">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="2022杭电多校2 Static Query on Tree|树链剖分">
                         
                         <span class="card-title">2022杭电多校2 Static Query on Tree|树链剖分</span>
                     </div>
@@ -2819,7 +2833,7 @@ $x$节点的$k$级
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">75.2k</span>
+            <span class="white-color">75.4k</span>
             
 
             <br>

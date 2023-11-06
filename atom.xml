@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2023-10-26T12:17:17.115Z</updated>
+  <updated>2023-11-06T06:19:34.285Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>个人算法题单整理</title>
+    <link href="http://wyqz.top/p/542231525.html"/>
+    <id>http://wyqz.top/p/542231525.html</id>
+    <published>2023-11-06T06:04:56.000Z</published>
+    <updated>2023-11-06T06:19:34.285Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;记录个人刷过的算法经典题目（好题），以备复习回顾。&lt;/p&gt;
+&lt;p&gt;目录参考 &lt;a href=&quot;https://oi-wiki.org/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;OI Wiki&lt;/a&gt; 进行设置。&lt;/p&gt;
+&lt;h1 id=&quot;搜索&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="ACM" scheme="http://wyqz.top/categories/ACM/"/>
+    
+    
+      <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>Google搜索语法</title>
@@ -77,7 +105,7 @@
     <link href="http://wyqz.top/p/1473860796.html"/>
     <id>http://wyqz.top/p/1473860796.html</id>
     <published>2023-04-11T11:47:10.000Z</published>
-    <updated>2023-09-08T12:10:35.421Z</updated>
+    <updated>2023-10-30T05:29:01.898Z</updated>
     
     <summary type="html">
     
@@ -552,32 +580,6 @@
       <category term="数论" scheme="http://wyqz.top/tags/%E6%95%B0%E8%AE%BA/"/>
     
       <category term="裴蜀定理" scheme="http://wyqz.top/tags/%E8%A3%B4%E8%9C%80%E5%AE%9A%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>nginx知识总结</title>
-    <link href="http://wyqz.top/p/386249329.html"/>
-    <id>http://wyqz.top/p/386249329.html</id>
-    <published>2022-08-06T07:55:55.000Z</published>
-    <updated>2023-03-24T05:56:03.986Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;开关nginx&quot;&gt;&lt;a href=&quot;#开关nginx&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="开发工具" scheme="http://wyqz.top/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="nginx" scheme="http://wyqz.top/tags/nginx/"/>
     
   </entry>
   
