@@ -336,7 +336,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -506,14 +506,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    13.3k
+                    13.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    56 分
+                    57 分
                 </div>
                 
                 
@@ -1804,19 +1804,19 @@ cin<span class="token punctuation">.</span><span class="token function">tie</spa
 </tr>
 </thead>
 <tbody><tr>
-<td><code>bitset &lt; n &gt;a</code></td>
+<td><code>bitset&lt;n&gt; a</code></td>
 <td>a有n位，每位都为0</td>
 </tr>
 <tr>
-<td><code>bitset &lt; n &gt;a(b)</code></td>
+<td><code>bitset&lt;n&gt; a(b)</code></td>
 <td>a是unsigned long型u的一个副本</td>
 </tr>
 <tr>
-<td><code>bitset &lt; n &gt;a(s)</code></td>
+<td><code>bitset&lt;n&gt; a(s)</code></td>
 <td>a是string对象s中含有的位串的副本</td>
 </tr>
 <tr>
-<td><code>bitset &lt; n &gt;a(s,pos,n)</code></td>
+<td><code>bitset&lt;n&gt; a(s, pos, n)</code></td>
 <td>a是s中从位置pos开始的n个位的副本</td>
 </tr>
 </tbody></table>
@@ -1827,15 +1827,15 @@ cin<span class="token punctuation">.</span><span class="token function">tie</spa
 <pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h></span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
 <span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    bitset<span class="token operator">&lt;</span><span class="token number">4</span><span class="token operator">></span> bitset1<span class="token punctuation">;</span>　　  <span class="token comment" spellcheck="true">//无参构造，长度为４，默认每一位为０</span>
+    bitset<span class="token operator">&lt;</span><span class="token number">4</span><span class="token operator">></span> bitset1<span class="token punctuation">;</span>　　  <span class="token comment" spellcheck="true">//无参构造，长度为４，默认每一位为0</span>
 
-    bitset<span class="token operator">&lt;</span><span class="token number">9</span><span class="token operator">></span> <span class="token function">bitset2</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span>　<span class="token comment" spellcheck="true">//长度为9，二进制保存，前面用０补充</span>
+    bitset<span class="token operator">&lt;</span><span class="token number">9</span><span class="token operator">></span> <span class="token function">bitset2</span><span class="token punctuation">(</span><span class="token number">12</span><span class="token punctuation">)</span><span class="token punctuation">;</span>　<span class="token comment" spellcheck="true">//长度为9，二进制保存，前面用0补充</span>
 
     string s <span class="token operator">=</span> <span class="token string">"100101"</span><span class="token punctuation">;</span>
-    bitset<span class="token operator">&lt;</span><span class="token number">10</span><span class="token operator">></span> <span class="token function">bitset3</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>　　<span class="token comment" spellcheck="true">//长度为10，前面用０补充</span>
+    bitset<span class="token operator">&lt;</span><span class="token number">10</span><span class="token operator">></span> <span class="token function">bitset3</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span>　　<span class="token comment" spellcheck="true">//长度为10，前面用0补充</span>
 
     <span class="token keyword">char</span> s2<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"10101"</span><span class="token punctuation">;</span>
-    bitset<span class="token operator">&lt;</span><span class="token number">13</span><span class="token operator">></span> <span class="token function">bitset4</span><span class="token punctuation">(</span>s2<span class="token punctuation">)</span><span class="token punctuation">;</span>　　<span class="token comment" spellcheck="true">//长度为13，前面用０补充</span>
+    bitset<span class="token operator">&lt;</span><span class="token number">13</span><span class="token operator">></span> <span class="token function">bitset4</span><span class="token punctuation">(</span>s2<span class="token punctuation">)</span><span class="token punctuation">;</span>　　<span class="token comment" spellcheck="true">//长度为13，前面用0补充</span>
 
     cout <span class="token operator">&lt;&lt;</span> bitset1 <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>　　<span class="token comment" spellcheck="true">//0000</span>
     cout <span class="token operator">&lt;&lt;</span> bitset2 <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>　　<span class="token comment" spellcheck="true">//000001100</span>
@@ -1848,11 +1848,11 @@ cin<span class="token punctuation">.</span><span class="token function">tie</spa
 <pre class="line-numbers language-cpp"><code class="language-cpp">bitset<span class="token operator">&lt;</span><span class="token number">4</span><span class="token operator">></span> <span class="token function">foo</span> <span class="token punctuation">(</span><span class="token function">string</span><span class="token punctuation">(</span><span class="token string">"1001"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 bitset<span class="token operator">&lt;</span><span class="token number">4</span><span class="token operator">></span> <span class="token function">bar</span> <span class="token punctuation">(</span><span class="token function">string</span><span class="token punctuation">(</span><span class="token string">"0011"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-cout <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>foo<span class="token operator">^</span><span class="token operator">=</span>bar<span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 1010 (foo对bar按位异或后赋值给foo)</span>
+cout <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>foo <span class="token operator">^</span><span class="token operator">=</span> bar<span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 1010 (foo对bar按位异或后赋值给foo)</span>
 
-cout <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>foo<span class="token operator">&amp;</span><span class="token operator">=</span>bar<span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 0001 (按位与后赋值给foo)</span>
+cout <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>foo <span class="token operator">&amp;</span><span class="token operator">=</span> bar<span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 0001 (按位与后赋值给foo)</span>
 
-cout <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>foo<span class="token operator">|</span><span class="token operator">=</span>bar<span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 1011 (按位或后赋值给foo)</span>
+cout <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>foo <span class="token operator">|</span><span class="token operator">=</span> bar<span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 1011 (按位或后赋值给foo)</span>
 
 cout <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>foo<span class="token operator">&lt;&lt;=</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 0100 (左移2位，低位补0，有自身赋值)</span>
 
@@ -1874,12 +1874,11 @@ cout <span class="token operator">&lt;&lt;</span> <span class="token punctuation
 
 cout <span class="token operator">&lt;&lt;</span> <span class="token punctuation">(</span>foo<span class="token operator">^</span>bar<span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 1010 (按位异或，不赋值)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>访问</strong></p>
-<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">//可以通过 [ ] 访问元素(类似数组)，注意最低位下标为０，如下：</span>
-bitset<span class="token operator">&lt;</span><span class="token number">4</span><span class="token operator">></span> <span class="token function">foo</span> <span class="token punctuation">(</span><span class="token string">"1011"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
-
-cout <span class="token operator">&lt;&lt;</span> foo<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>　　<span class="token comment" spellcheck="true">//1</span>
-cout <span class="token operator">&lt;&lt;</span> foo<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>　　<span class="token comment" spellcheck="true">//0</span>
-cout <span class="token operator">&lt;&lt;</span> foo<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>　　<span class="token comment" spellcheck="true">//1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">//可以通过 [] 访问元素(类似数组)，注意最低位下标为0，类似于数的二进制表示，如下：</span>
+bitset<span class="token operator">&lt;</span><span class="token number">4</span><span class="token operator">></span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token string">"1011"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">4</span><span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    cout <span class="token operator">&lt;&lt;</span> f<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token comment" spellcheck="true">// 输出1101</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h3 id="10-4-方法函数"><a href="#10-4-方法函数" class="headerlink" title="10.4 方法函数"></a>10.4 方法函数</h3><table>
 <thead>
@@ -1941,6 +1940,16 @@ cout <span class="token operator">&lt;&lt;</span> foo<span class="token punctuat
 <td align="center">用b中同样的二进制位返回一个unsigned long值</td>
 </tr>
 </tbody></table>
+<h3 id="10-5-bitset优化"><a href="#10-5-bitset优化" class="headerlink" title="10.5 bitset优化"></a>10.5 bitset优化</h3><p>一般会使用bitset来优化时间复杂度，大概时间复杂度会除64或32，例如没有优化的时间复杂度为 $O(NM)$ ，使用bitset优化后复杂度可能就为 $O(\frac{NM}{64})$</p>
+<p>bitset还有开动态空间的技巧，bitset常用在<code>01背包</code>优化等算法中</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">// 动态长度bitset实现</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> N <span class="token operator">=</span> <span class="token number">1e6</span> <span class="token operator">+</span> <span class="token number">5</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 开空间的上限，一般为数据范围附近的值</span>
+<span class="token keyword">template</span> <span class="token operator">&lt;</span><span class="token keyword">int</span> len <span class="token operator">=</span> <span class="token number">1</span><span class="token operator">></span>
+<span class="token keyword">void</span> <span class="token function">bitset_</span><span class="token punctuation">(</span><span class="token keyword">int</span> sz<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// sz即为想要开的大小</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>len <span class="token operator">&lt;</span> sz<span class="token punctuation">)</span> <span class="token punctuation">{</span> bitset_<span class="token operator">&lt;</span><span class="token function">min</span><span class="token punctuation">(</span>len <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">,</span> N<span class="token punctuation">)</span><span class="token operator">></span><span class="token punctuation">(</span>sz<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token keyword">return</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+    bitset<span class="token operator">&lt;</span>len <span class="token operator">+</span> <span class="token number">1</span><span class="token operator">></span> dp<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">// 具体算法的实现</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <h2 id="11-array"><a href="#11-array" class="headerlink" title="11 array"></a>11 array</h2><h3 id="11-1-介绍"><a href="#11-1-介绍" class="headerlink" title="11.1 介绍"></a>11.1 介绍</h3><p>头文件</p>
 <pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;array></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -2922,7 +2931,7 @@ cout <span class="token operator">&lt;&lt;</span> <span class="token function">t
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="树上拓扑序计数|树形DP">
+                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="树上拓扑序计数|树形DP">
                         
                         <span class="card-title">树上拓扑序计数|树形DP</span>
                     </div>
@@ -2953,12 +2962,12 @@ cout <span class="token operator">&lt;&lt;</span> <span class="token function">t
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/树形DP/" target="_blank">
-                        <span class="chip bg-color">树形DP</span>
-                    </a>
-                    
                     <a href="/tags/组合数学/" target="_blank">
                         <span class="chip bg-color">组合数学</span>
+                    </a>
+                    
+                    <a href="/tags/树形DP/" target="_blank">
+                        <span class="chip bg-color">树形DP</span>
                     </a>
                     
                 </div>
@@ -2976,7 +2985,7 @@ cout <span class="token operator">&lt;&lt;</span> <span class="token function">t
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="CF1055C Lucky Days|裴蜀定理">
+                        <img src="/medias/featureimages/9.png" class="responsive-img" alt="CF1055C Lucky Days|裴蜀定理">
                         
                         <span class="card-title">CF1055C Lucky Days|裴蜀定理</span>
                     </div>
@@ -3188,7 +3197,7 @@ cout <span class="token operator">&lt;&lt;</span> <span class="token function">t
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">78.4k</span>
+            <span class="white-color">79.1k</span>
             
 
             <br>
