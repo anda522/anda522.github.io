@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2023-11-17T08:04:53.965Z</updated>
+  <updated>2023-11-17T08:45:17.053Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://wyqz.top/p/2589851505.html"/>
     <id>http://wyqz.top/p/2589851505.html</id>
     <published>2023-11-14T12:28:19.000Z</published>
-    <updated>2023-11-17T08:04:53.965Z</updated>
+    <updated>2023-11-17T08:45:17.053Z</updated>
     
     <summary type="html">
     
@@ -75,7 +75,7 @@
     <link href="http://wyqz.top/p/542231525.html"/>
     <id>http://wyqz.top/p/542231525.html</id>
     <published>2023-11-06T06:04:56.000Z</published>
-    <updated>2023-11-16T11:06:46.555Z</updated>
+    <updated>2023-11-19T08:46:04.500Z</updated>
     
     <summary type="html">
     
@@ -574,9 +574,9 @@
       <category term="树形DP" scheme="http://wyqz.top/categories/%E6%A0%91%E5%BD%A2DP/"/>
     
     
-      <category term="组合数学" scheme="http://wyqz.top/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
-    
       <category term="树形DP" scheme="http://wyqz.top/tags/%E6%A0%91%E5%BD%A2DP/"/>
+    
+      <category term="组合数学" scheme="http://wyqz.top/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
