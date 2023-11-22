@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2023-11-17T08:45:17.053Z</updated>
+  <updated>2023-11-22T13:43:05.321Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>折腾长久，终退役-致我的ACM生涯</title>
+    <link href="http://wyqz.top/p/2569313091.html"/>
+    <id>http://wyqz.top/p/2569313091.html</id>
+    <published>2023-11-22T13:41:06.000Z</published>
+    <updated>2023-11-22T13:43:05.321Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;先留坑，打完终幕场便填上，静候。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Mit6.s081操作系统笔记</title>
@@ -75,7 +100,7 @@
     <link href="http://wyqz.top/p/542231525.html"/>
     <id>http://wyqz.top/p/542231525.html</id>
     <published>2023-11-06T06:04:56.000Z</published>
-    <updated>2023-11-19T08:46:04.500Z</updated>
+    <updated>2023-11-22T13:00:25.191Z</updated>
     
     <summary type="html">
     
@@ -549,34 +574,6 @@
     
     
       <category term="多校" scheme="http://wyqz.top/tags/%E5%A4%9A%E6%A0%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>树上拓扑序计数|树形DP</title>
-    <link href="http://wyqz.top/p/2852940489.html"/>
-    <id>http://wyqz.top/p/2852940489.html</id>
-    <published>2022-08-20T02:12:01.000Z</published>
-    <updated>2022-08-20T02:27:58.280Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;树上拓扑序计数-树形DP&quot;&gt;&lt;a href=&quot;#树上拓扑序计数-树形DP&quot; class=&quot;headerlink&quot; title=&quot;树上拓扑序计数|树形DP&quot;&gt;&lt;/a&gt;树上拓扑序计数|树形DP&lt;/h1&gt;&lt;p&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="树形DP" scheme="http://wyqz.top/categories/%E6%A0%91%E5%BD%A2DP/"/>
-    
-    
-      <category term="树形DP" scheme="http://wyqz.top/tags/%E6%A0%91%E5%BD%A2DP/"/>
-    
-      <category term="组合数学" scheme="http://wyqz.top/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
