@@ -8,9 +8,21 @@
       <link href="/p/2569313091.html"/>
       <url>/p/2569313091.html</url>
       
-        <content type="html"><![CDATA[<blockquote><p>先留坑，打完终幕场便填上，静候。</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>先留坑，打完终幕场便填上，静候。</p><p>从2023-11-20建文件，打完最后一场济南就算正式退了，打完比赛还要立马交一个实训课的证明，还需搞一下，所以先起个草稿，打算写一篇正式的退役记来记录和纪念我这跌跌撞撞、无所成绩的ACM生涯。</p></blockquote>]]></content>
       
       
+      <categories>
+          
+          <category> 哲思 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 阶段性总结 </tag>
+            
+        </tags>
       
     </entry>
     
@@ -526,9 +538,9 @@
       
         <tags>
             
-            <tag> 组合数学 </tag>
-            
             <tag> 树形DP </tag>
+            
+            <tag> 组合数学 </tag>
             
         </tags>
       
@@ -634,11 +646,11 @@
       
         <tags>
             
+            <tag> CF </tag>
+            
             <tag> DFS </tag>
             
             <tag> 树 </tag>
-            
-            <tag> CF </tag>
             
         </tags>
       
