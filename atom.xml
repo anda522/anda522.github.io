@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2023-11-23T06:28:39.935Z</updated>
+  <updated>2023-12-08T11:25:50.190Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C/C++指针操作详细整理</title>
+    <link href="http://wyqz.top/p/360366309.html"/>
+    <id>http://wyqz.top/p/360366309.html</id>
+    <published>2023-12-08T10:42:58.000Z</published>
+    <updated>2023-12-08T11:25:50.190Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;C-C-指针操作整理&quot;&gt;&lt;a href=&quot;#C-C-指针操作整理&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="C++" scheme="http://wyqz.top/categories/C/"/>
+    
+    
+      <category term="C++" scheme="http://wyqz.top/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>折腾长久，终退役-致我的ACM生涯</title>
@@ -77,7 +103,7 @@
     <link href="http://wyqz.top/p/542231525.html"/>
     <id>http://wyqz.top/p/542231525.html</id>
     <published>2023-11-06T06:04:56.000Z</published>
-    <updated>2023-11-28T07:23:52.056Z</updated>
+    <updated>2023-11-29T07:43:42.498Z</updated>
     
     <summary type="html">
     
@@ -161,7 +187,7 @@
     <link href="http://wyqz.top/p/1473860796.html"/>
     <id>http://wyqz.top/p/1473860796.html</id>
     <published>2023-04-11T11:47:10.000Z</published>
-    <updated>2023-11-28T04:54:28.957Z</updated>
+    <updated>2023-11-30T09:32:20.861Z</updated>
     
     <summary type="html">
     
@@ -549,34 +575,6 @@
     
     
       <category term="多校" scheme="http://wyqz.top/tags/%E5%A4%9A%E6%A0%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>树上拓扑序计数|树形DP</title>
-    <link href="http://wyqz.top/p/2852940489.html"/>
-    <id>http://wyqz.top/p/2852940489.html</id>
-    <published>2022-08-20T02:12:01.000Z</published>
-    <updated>2022-08-20T02:27:58.280Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;树上拓扑序计数-树形DP&quot;&gt;&lt;a href=&quot;#树上拓扑序计数-树形DP&quot; class=&quot;headerlink&quot; title=&quot;树上拓扑序计数|树形DP&quot;&gt;&lt;/a&gt;树上拓扑序计数|树形DP&lt;/h1&gt;&lt;p&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="树形DP" scheme="http://wyqz.top/categories/%E6%A0%91%E5%BD%A2DP/"/>
-    
-    
-      <category term="组合数学" scheme="http://wyqz.top/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
-    
-      <category term="树形DP" scheme="http://wyqz.top/tags/%E6%A0%91%E5%BD%A2DP/"/>
     
   </entry>
   
