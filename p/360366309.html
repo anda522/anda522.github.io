@@ -338,7 +338,7 @@ int *p = &amp;amp;a;
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -500,7 +500,7 @@ int *p = &amp;amp;a;
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    839
+                    885
                 </div>
                 
 
@@ -573,7 +573,14 @@ std<span class="token operator">::</span>cout <span class="token operator">&lt;&
 <pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token operator">*</span><span class="token operator">*</span>f <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     f<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token keyword">int</span><span class="token punctuation">[</span>m<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">// 同样可以以数组形式输出</span>
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;</span> m<span class="token punctuation">;</span> <span class="token operator">++</span>j<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        f<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> i <span class="token operator">*</span> n <span class="token operator">+</span> j<span class="token punctuation">;</span>
+        std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> f<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> <span class="token string">" \n"</span><span class="token punctuation">[</span>j <span class="token operator">==</span> m <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>方法二：利用二维指针，C malloc操作</li>
 </ul>
@@ -1101,7 +1108,7 @@ std<span class="token operator">::</span>cout <span class="token operator">&lt;&
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="C/C++指针操作详细整理">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="C/C++指针操作详细整理">
                         
                         <span class="card-title">C/C++指针操作详细整理</span>
                     </div>
@@ -1157,7 +1164,7 @@ int *p = &amp;a;
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="折腾长久，终退役-致我的ACM生涯">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="折腾长久，终退役-致我的ACM生涯">
                         
                         <span class="card-title">折腾长久，终退役-致我的ACM生涯</span>
                     </div>
@@ -1368,7 +1375,7 @@ int *p = &amp;a;
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">84k</span>
+            <span class="white-color">85.5k</span>
             
 
             <br>
