@@ -336,7 +336,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -506,14 +506,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    14.4k
+                    14.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    61 分
+                    62 分
                 </div>
                 
                 
@@ -655,8 +655,33 @@ v<span class="token punctuation">.</span><span class="token function">push_back<
 <td>判断是否为空，为空返回真，反之返回假 $O(1)$</td>
 </tr>
 </tbody></table>
-<p>注意： <code>end()</code>返回的是最后一个元素的后一个位置的地址，不是最后一个元素的地址，<strong>所有STL容器均是如此</strong></p>
-<p><strong>排序</strong></p>
+<blockquote>
+<p>注意：</p>
+<ul>
+<li><p><code>end()</code>返回的是最后一个元素的后一个位置的地址，不是最后一个元素的地址，<strong>所有STL容器均是如此</strong> </p>
+</li>
+<li><p>使用 <code>vi.resize(n, v)</code> 函数时，若 <code>vi</code> 之前指定过大小为 <code>pre</code> </p>
+<ul>
+<li><code>pre &gt; n</code> ：即数组大小变小了，数组会保存前 <code>n</code> 个元素，前 <code>n</code> 个元素值为原来的值，不是都为 <code>v</code> </li>
+<li><code>pre &lt; n</code> ：即数组大小变大了，数组会在后面插入 <code>n - pre</code> 个值为 <code>v</code> 的元素</li>
+</ul>
+<p>也就是说，这个初始值 <code>v</code> 只对新插入的元素生效。</p>
+</li>
+</ul>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h></span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">out</span><span class="token punctuation">(</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token operator">&amp;</span>a<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> <span class="token operator">&amp;</span>x<span class="token operator">:</span> a<span class="token punctuation">)</span> cout <span class="token operator">&lt;&lt;</span> x <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span><span class="token punctuation">;</span> cout <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">a</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">out</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 1 1 1 1 1</span>
+    a<span class="token punctuation">.</span><span class="token function">resize</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">out</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 1 1 1 1 1 2 2 2 2 2</span>
+    a<span class="token punctuation">.</span><span class="token function">resize</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">out</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 1 1 1</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</blockquote>
+<p><strong>排序：</strong></p>
 <p>使用<code>sort</code>排序要：  <code>sort(c.begin(), c.end());</code></p>
 <blockquote>
 <p><code>sort()</code>为STL函数，请参考本文最后面STL函数系列。</p>
@@ -3019,7 +3044,7 @@ b<span class="token punctuation">.</span><span class="token function">erase</spa
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="树上拓扑序计数|树形DP">
+                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="树上拓扑序计数|树形DP">
                         
                         <span class="card-title">树上拓扑序计数|树形DP</span>
                     </div>
@@ -3073,7 +3098,7 @@ b<span class="token punctuation">.</span><span class="token function">erase</spa
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="CF1055C Lucky Days|裴蜀定理">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="CF1055C Lucky Days|裴蜀定理">
                         
                         <span class="card-title">CF1055C Lucky Days|裴蜀定理</span>
                     </div>
@@ -3285,7 +3310,7 @@ b<span class="token punctuation">.</span><span class="token function">erase</spa
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">85.5k</span>
+            <span class="white-color">86.5k</span>
             
 
             <br>
