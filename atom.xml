@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2023-12-16T09:39:23.223Z</updated>
+  <updated>2023-12-16T11:43:18.414Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自建私有git发布博客</title>
+    <link href="http://wyqz.top/p/3211658549.html"/>
+    <id>http://wyqz.top/p/3211658549.html</id>
+    <published>2023-12-16T10:41:02.000Z</published>
+    <updated>2023-12-16T11:43:18.414Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;自建私有git进行项目发布&quot;&gt;&lt;a href=&quot;#自建私有git进行项目发布&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="开发知识" scheme="http://wyqz.top/categories/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/"/>
+    
+    
+      <category term="git" scheme="http://wyqz.top/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title>2023年度总结</title>
@@ -550,32 +576,6 @@
     
     
       <category term="多校" scheme="http://wyqz.top/tags/%E5%A4%9A%E6%A0%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AtCoder Beginner Contest 266 A-G</title>
-    <link href="http://wyqz.top/p/2022907814.html"/>
-    <id>http://wyqz.top/p/2022907814.html</id>
-    <published>2022-08-30T01:07:31.000Z</published>
-    <updated>2023-03-24T05:58:46.345Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;AtCoder-Beginner-Contest-266-A-G&quot;&gt;&lt;a href=&quot;#AtCoder-Beginner-Contest-266-A-G&quot; class=&quot;headerlink&quot; title=&quot;AtCoder Beginner Contest
-        
-      
-    
-    </summary>
-    
-      <category term="Atcoder" scheme="http://wyqz.top/categories/Atcoder/"/>
-    
-    
-      <category term="Atcoder" scheme="http://wyqz.top/tags/Atcoder/"/>
     
   </entry>
   
