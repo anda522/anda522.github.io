@@ -4,17 +4,15 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="【Mit6.s081】Lab1:Unix utilities|Unix实用工具, ZZU 行码棋">
+    <meta name="keywords" content="【Mit6.s081】课程记录, ZZU 行码棋">
     <!-- 百度和谷歌统计验证 -->
     <meta name="baidu-site-verification" content="code-L7AVcsbU14">
     <meta name="google-site-verification" content="x4QfrBHn9imI1RhTNCB8RD8Q2Rx6rE_zylSBptBgdZY">
     <!-- <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" /> -->
-    <meta name="description" content="01 Introduction and Examples1.2 操作系统结构用户空间程序：正在运行的程序，他们处于同一个空间
-Kernel：Kernel程序只有一个，维护数据管理每一个用户空间进程，维护硬件资源
+    <meta name="description" content="
+实验代码记录：https://github.com/anda522/LabCode/tree/main/Mit6.S081 
 
-Kernel中的服务：
-
-">
+01 Introduction and Examples1.2 操作系统结构用户空间程序：正在运行的程序，他们">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +20,7 @@ Kernel中的服务：
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>【Mit6.s081】Lab1:Unix utilities|Unix实用工具 | 行码棋</title>
+    <title>【Mit6.s081】课程记录 | 行码棋</title>
     <link rel="icon" type="image/png" href="/medias/logo.png">
 
     <link rel="stylesheey" type="text/css" href="//at.alicdn.com/t/c/font_3948353_97hiukrvyh.css">
@@ -337,13 +335,13 @@ Kernel中的服务：
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        【Mit6.s081】Lab1:Unix utilities|Unix实用工具
+                        【Mit6.s081】课程记录
                     </div>
                 </div>
             </div>
@@ -499,7 +497,7 @@ Kernel中的服务：
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    625
+                    630
                 </div>
                 
 
@@ -522,23 +520,20 @@ Kernel中的服务：
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="01-Introduction-and-Examples"><a href="#01-Introduction-and-Examples" class="headerlink" title="01 Introduction and Examples"></a>01 Introduction and Examples</h1><h2 id="1-2-操作系统结构"><a href="#1-2-操作系统结构" class="headerlink" title="1.2 操作系统结构"></a>1.2 操作系统结构</h2><p>用户空间程序：正在运行的程序，他们处于同一个空间</p>
+                <blockquote>
+<p>实验代码记录：<a href="https://github.com/anda522/LabCode/tree/main/Mit6.S081" target="_blank" rel="noopener">https://github.com/anda522/LabCode/tree/main/Mit6.S081</a> </p>
+</blockquote>
+<h1 id="01-Introduction-and-Examples"><a href="#01-Introduction-and-Examples" class="headerlink" title="01 Introduction and Examples"></a>01 Introduction and Examples</h1><h2 id="1-2-操作系统结构"><a href="#1-2-操作系统结构" class="headerlink" title="1.2 操作系统结构"></a>1.2 操作系统结构</h2><p>用户空间程序：正在运行的程序，他们处于同一个空间</p>
 <p>Kernel：Kernel程序只有一个，维护数据管理每一个用户空间进程，维护硬件资源</p>
 <blockquote>
-<p>Kernel中的服务：</p>
-<ul>
-<li>文件系统</li>
-<li>进程管理系统</li>
-<li>访问控制</li>
-</ul>
+<p>Kernel中存在各种服务：文件系统、进程管理系统、访问控制等等</p>
 </blockquote>
-<p>硬件资源：CPU，内存，显卡，网卡等</p>
 <p>应用程序访问Kernel通过 <strong>系统调用</strong> 来完成，Kernel具有对硬件操作的特殊权限。</p>
 <h2 id="1-8-fork系统调用"><a href="#1-8-fork系统调用" class="headerlink" title="1.8 fork系统调用"></a>1.8 fork系统调用</h2><p>作用：用于创建子进程</p>
 <ul>
 <li>fork会拷贝当前进程的内存，并创建一个新的进程，这里的内存包含了进程的指令和数据。</li>
 </ul>
-<p>之后，我们就有了两个拥有完全一样内存的进程。fork系统调用在两个进程中都会返回，在原始的进程中，fork系统调用会返回大于0的整数，这个是新创建进程的ID。而在新创建的进程中，fork系统调用会返回0。</p>
+<p>之后，就有了两个拥有完全一样内存的进程。fork系统调用在两个进程中都会返回，在原始的进程中，fork系统调用会返回大于0的整数，这个是新创建进程的ID。而在新创建的进程中，fork系统调用会返回0。</p>
 <ul>
 <li>如果 <code>pid</code> 等于0，那么这必然是子进程。调用进程通常称为父进程，父进程看到的 <code>pid</code> 必然大于0。</li>
 </ul>
@@ -556,7 +551,7 @@ Kernel中的服务：
 <li>管道具有先进先出(FIFO)的特性。数据写入管道的一端，从管道的另一端读出时是按写入顺序读取的。</li>
 <li>父进程在写入管道后,会通过 read 操作等待子进程的响应。该 read 操作会被阻塞，直到有数据可读。</li>
 </ul>
-<h1 id="sleep"><a href="#sleep" class="headerlink" title="sleep"></a>sleep</h1>
+
             </div>
             <hr />
 
@@ -716,7 +711,7 @@ Kernel中的服务：
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《【Mit6.s081】Lab1:Unix utilities|Unix实用工具》
+                    《【Mit6.s081】课程记录》
                 </span> 由
             <a xmlns:cc="http://creativecommons.org/ns#" href="/p/2589851505.html" property="cc:attributionName"
                rel="cc:attributionURL">
@@ -1056,7 +1051,7 @@ Kernel中的服务：
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="折腾长久，终退役-致我的ACM生涯">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="折腾长久，终退役-致我的ACM生涯">
                         
                         <span class="card-title">折腾长久，终退役-致我的ACM生涯</span>
                     </div>
@@ -1109,7 +1104,7 @@ Kernel中的服务：
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="代码中的技巧或习惯">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="代码中的技巧或习惯">
                         
                         <span class="card-title">代码中的技巧或习惯</span>
                     </div>

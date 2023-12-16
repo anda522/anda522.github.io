@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2023-12-10T10:49:39.205Z</updated>
+  <updated>2023-12-16T04:51:19.476Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2023年度总结</title>
+    <link href="http://wyqz.top/p/3216805600.html"/>
+    <id>http://wyqz.top/p/3216805600.html</id>
+    <published>2023-12-16T04:49:15.000Z</published>
+    <updated>2023-12-16T04:51:19.476Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;2023年度总结&quot;&gt;&lt;a href=&quot;#2023年度总结&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="哲思" scheme="http://wyqz.top/categories/%E5%93%B2%E6%80%9D/"/>
+    
+    
+      <category term="阶段性总结" scheme="http://wyqz.top/tags/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>C/C++指针操作详细整理</title>
@@ -71,11 +97,11 @@
   </entry>
   
   <entry>
-    <title>【Mit6.s081】Lab1:Unix utilities|Unix实用工具</title>
+    <title>【Mit6.s081】课程记录</title>
     <link href="http://wyqz.top/p/2589851505.html"/>
     <id>http://wyqz.top/p/2589851505.html</id>
     <published>2023-11-14T12:28:19.000Z</published>
-    <updated>2023-12-09T08:09:40.896Z</updated>
+    <updated>2023-12-15T13:47:59.910Z</updated>
     
     <summary type="html">
     
@@ -83,7 +109,8 @@
       
         
         
-          &lt;h1 id=&quot;01-Introduction-and-Examples&quot;&gt;&lt;a href=&quot;#01-Introduction-and-Examples&quot; class=&quot;headerlink&quot; title=&quot;01 Introduction and
+          &lt;blockquote&gt;
+&lt;p&gt;实验代码记录：&lt;a href=&quot;https://github.com/anda522/LabCode/tree/main/Mit6.S081&quot; target=&quot;_blank&quot;
         
       
     
@@ -184,7 +211,7 @@
     <link href="http://wyqz.top/p/2802848655.html"/>
     <id>http://wyqz.top/p/2802848655.html</id>
     <published>2023-10-02T11:21:13.000Z</published>
-    <updated>2023-12-14T08:28:53.709Z</updated>
+    <updated>2023-12-14T08:35:42.333Z</updated>
     
     <summary type="html">
     
@@ -549,32 +576,6 @@
     
     
       <category term="Atcoder" scheme="http://wyqz.top/tags/Atcoder/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2022牛客多校2补题</title>
-    <link href="http://wyqz.top/p/2791995876.html"/>
-    <id>http://wyqz.top/p/2791995876.html</id>
-    <published>2022-08-23T14:13:03.000Z</published>
-    <updated>2022-08-23T14:18:02.870Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;2022牛客多校2补题&quot;&gt;&lt;a href=&quot;#2022牛客多校2补题&quot; class=&quot;headerlink&quot; title=&quot;2022牛客多校2补题&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://ac.nowcoder.com/acm/contest/33187&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="多校" scheme="http://wyqz.top/categories/%E5%A4%9A%E6%A0%A1/"/>
-    
-    
-      <category term="多校" scheme="http://wyqz.top/tags/%E5%A4%9A%E6%A0%A1/"/>
     
   </entry>
   
