@@ -507,7 +507,7 @@
                 </div>
                 
                 
-                <!-- 页面访问次数统计 -->
+                <!-- 文章访问次数统计 -->
                 
                 <div id="busuanzi_container_page_pv" class="info-break-policy">
                     <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
@@ -589,9 +589,6 @@ DIR<span class="token operator">=</span>/home/git/public <span class="token comm
   repository: git@101.35.203.216:/home/git/blog.git
   branch: main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>执行 <code>hexo d</code> 命令后，就会将生成的前端文件上传至自建的裸仓库。</p>
-<blockquote>
-<p>注意项目</p>
-</blockquote>
 <h1 id="注意点"><a href="#注意点" class="headerlink" title="注意点"></a>注意点</h1><ul>
 <li>各种权限问题，登录账户为 <code>git</code> ，需要时刻注意某些文件能不能用 <code>git</code> 用户访问</li>
 <li><code>git</code> 的各种命令的理解， <code>pull push</code> 等，需要了解</li>
@@ -1558,6 +1555,7 @@ $(function () {
     <!-- 不蒜子统计修改网页请求头 -->
     
     <script async src="https://lib.baomitu.com/busuanzi/latest/bsz.pure.mini.js"></script>
+    <meta name="referrer" content="no-referrer-when-downgrade">
     
     
     
