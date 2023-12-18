@@ -12,7 +12,7 @@
     <meta name="description" content="
 实验代码记录：https://github.com/anda522/LabCode/tree/main/Mit6.S081 
 
-01 Introduction and Examples1.2 操作系统结构用户空间程序：正在运行的程序，他们">
+1 Unix utilitiesKnowledge操作系统结构用户空间程序：正在运行的程序，他们处于同一个空间">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -499,7 +499,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    630
+                    823
                 </div>
                 
 
@@ -525,13 +525,13 @@
                 <blockquote>
 <p>实验代码记录：<a href="https://github.com/anda522/LabCode/tree/main/Mit6.S081" target="_blank" rel="noopener">https://github.com/anda522/LabCode/tree/main/Mit6.S081</a> </p>
 </blockquote>
-<h1 id="01-Introduction-and-Examples"><a href="#01-Introduction-and-Examples" class="headerlink" title="01 Introduction and Examples"></a>01 Introduction and Examples</h1><h2 id="1-2-操作系统结构"><a href="#1-2-操作系统结构" class="headerlink" title="1.2 操作系统结构"></a>1.2 操作系统结构</h2><p>用户空间程序：正在运行的程序，他们处于同一个空间</p>
+<h1 id="1-Unix-utilities"><a href="#1-Unix-utilities" class="headerlink" title="1 Unix utilities"></a>1 Unix utilities</h1><h2 id="Knowledge"><a href="#Knowledge" class="headerlink" title="Knowledge"></a>Knowledge</h2><h3 id="操作系统结构"><a href="#操作系统结构" class="headerlink" title="操作系统结构"></a>操作系统结构</h3><p>用户空间程序：正在运行的程序，他们处于同一个空间</p>
 <p>Kernel：Kernel程序只有一个，维护数据管理每一个用户空间进程，维护硬件资源</p>
 <blockquote>
 <p>Kernel中存在各种服务：文件系统、进程管理系统、访问控制等等</p>
 </blockquote>
 <p>应用程序访问Kernel通过 <strong>系统调用</strong> 来完成，Kernel具有对硬件操作的特殊权限。</p>
-<h2 id="1-8-fork系统调用"><a href="#1-8-fork系统调用" class="headerlink" title="1.8 fork系统调用"></a>1.8 fork系统调用</h2><p>作用：用于创建子进程</p>
+<h3 id="fork系统调用"><a href="#fork系统调用" class="headerlink" title="fork系统调用"></a>fork系统调用</h3><p>作用：用于创建子进程</p>
 <ul>
 <li>fork会拷贝当前进程的内存，并创建一个新的进程，这里的内存包含了进程的指令和数据。</li>
 </ul>
@@ -540,7 +540,7 @@
 <li>如果 <code>pid</code> 等于0，那么这必然是子进程。调用进程通常称为父进程，父进程看到的 <code>pid</code> 必然大于0。</li>
 </ul>
 <p>除了拷贝内存以外，fork还会拷贝文件描述符表单。</p>
-<h2 id="1-9-exec-wait系统调用"><a href="#1-9-exec-wait系统调用" class="headerlink" title="1.9 exec,wait系统调用"></a>1.9 exec,wait系统调用</h2><p>exec：用于执行新程序</p>
+<h3 id="exec-wait系统调用"><a href="#exec-wait系统调用" class="headerlink" title="exec,wait系统调用"></a>exec,wait系统调用</h3><p>exec：用于执行新程序</p>
 <p>exec系统调用：</p>
 <ul>
 <li>exec系统调用会保留当前的文件描述符表单。所以任何在exec系统调用之前的文件描述符，例如0，1，2等。它们在新的程序中表示相同的东西。</li>
@@ -553,6 +553,19 @@
 <li>管道具有先进先出(FIFO)的特性。数据写入管道的一端，从管道的另一端读出时是按写入顺序读取的。</li>
 <li>父进程在写入管道后,会通过 read 操作等待子进程的响应。该 read 操作会被阻塞，直到有数据可读。</li>
 </ul>
+<blockquote>
+<p>参考：</p>
+<p>[1] <a href="https://blog.rayzhang.top/2022/06/27/mit-6.s081-lab-util/" target="_blank" rel="noopener">MIT 6.S081 Lab Util 实验</a></p>
+</blockquote>
+<h1 id="2-System-calls"><a href="#2-System-calls" class="headerlink" title="2 System calls"></a>2 System calls</h1><h1 id="3-Page-tables"><a href="#3-Page-tables" class="headerlink" title="3 Page tables"></a>3 Page tables</h1><h2 id="Knowledge-1"><a href="#Knowledge-1" class="headerlink" title="Knowledge"></a>Knowledge</h2><p><code>argaddr()</code> 和 <code>argint()</code> 函数都是从用户栈空间中提取参数。当用户调用系统调用时，需要将参数传给内核。参数通常会放到用户的栈中。</p>
+<p><code>walk</code> 函数在操作系统中通常用于页表的遍历和访问。在虚拟内存管理中，页表是一种数据结构，用于将虚拟地址映射到物理地址。<code>walk</code> 函数的主要作用是在给定的页表中查找特定虚拟地址对应的页表项。</p>
+<p><code>copyout</code> 函数通常用于从内核空间将数据复制到用户空间。</p>
+<p><code>PTE_A</code> 的默认值是第六位</p>
+<h2 id="Lab"><a href="#Lab" class="headerlink" title="Lab"></a>Lab</h2><blockquote>
+<p>参考：</p>
+<p>[1] <a href="https://zhuanlan.zhihu.com/p/429304672" target="_blank" rel="noopener">MIT 6.S081 2021: Lab page tables</a> </p>
+<p>[2] <a href="https://blog.rayzhang.top/2022/07/22/mit-6.s081-lab-pgtbl/" target="_blank" rel="noopener">MIT 6.S081 Lab Pgtbl 实验</a> （非常详细）</p>
+</blockquote>
 
             </div>
             <hr />
@@ -1316,7 +1329,7 @@ for(int i = 0; i &lt; len; ++i) {
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">90.9k</span>
+            <span class="white-color">91.1k</span>
             
 
             <br>
