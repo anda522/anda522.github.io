@@ -12,11 +12,9 @@
     <meta name="description" content="Git命令 | 详解概念Git是基于树进行维护的，每一个节点都是一个历史版本，可以进行代码管理。
 
 
-工作区（Workspace） 
+工作区（Workspace） ：就是会出现工作目录，即自己要编写的代码
 暂存区（Index / Stage）  
-本地仓库（Repository）  
-远程仓库（Remote）
-">
+本地仓库（Reposit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -503,7 +501,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.3k
+                    3.4k
                 </div>
                 
 
@@ -529,29 +527,20 @@
                 <h1 id="Git命令-详解"><a href="#Git命令-详解" class="headerlink" title="Git命令 | 详解"></a>Git命令 | 详解</h1><h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>Git是基于树进行维护的，每一个节点都是一个历史版本，可以进行代码管理。</p>
 <p><img src="1843856130/webp.webp" alt="Git图示"></p>
 <blockquote>
-<p>工作区（Workspace） </p>
+<p>工作区（Workspace） ：就是会出现工作目录，即自己要编写的代码</p>
 <p>暂存区（Index / Stage）  </p>
 <p>本地仓库（Repository）  </p>
 <p>远程仓库（Remote）</p>
 </blockquote>
-<h1 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h1><p><code>git config [--global] user.name xxx</code>：设置全局用户名，信息记录在<code>~/.gitconfig</code>文件中</p>
-<p><code>git config [--global] user.email xxx@xxx.com</code>：设置全局邮箱地址，信息记录在<code>~/.gitconfig</code>文件中</p>
-<p><code>git init</code>：将当前目录配置成git仓库，信息记录在隐藏的<code>.git</code>文件夹中</p>
-<p><code>git status</code>：显示有变更的文件</p>
-<p><code>git add .</code>：将当前工作区的所有文件的修改信息加入<strong>暂存区</strong></p>
-<p><code>git log</code>：查看当前分支的所有版本</p>
-<p><code>git remote add origin git@github.com:XXX/XXX.git</code>：将本地仓库关联到远程仓库</p>
-<p><code>git clone git@github.com:XXX/XXX.git</code>：将远程仓库XXX下载到当前目录下</p>
-<p><code>git branch --set-upstream-to=origin/branch_name1 branch_name2</code>：将远程的branch_name1分支与本地的branch_name2分支对应</p>
-<p><code>git push -u</code> （第一次需要-u以后不需要）：将当前分支推送到远程仓库</p>
-<p><code>git pull</code>：将远程仓库的当前分支与本地仓库的当前分支合并</p>
-<h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><p>Git的设置文件为<code>.gitconfig</code>，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。</p>
-<p><code>git init</code>：将当前目录配置成git仓库，信息记录在隐藏的<code>.git</code>文件夹中</p>
+<h1 id="配置Git命令"><a href="#配置Git命令" class="headerlink" title="配置Git命令"></a>配置Git命令</h1><blockquote>
+<p>Git的设置文件为<code>.gitconfig</code>，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。</p>
+</blockquote>
 <p><code>git config --list</code> : 显示当前的Git配置</p>
 <p><code>git config -e [--global]</code> : 编辑Git配置文件</p>
 <p><code>git config [--global] user.name xxx</code>：设置全局用户名，信息记录在<code>~/.gitconfig</code>文件中</p>
 <p><code>git config [--global] user.email xxx@xxx.com</code>：设置全局邮箱地址，信息记录在<code>~/.gitconfig</code>文件中</p>
 <p><code>git config --global init.defaultBranch &lt;defaultBranch&gt;</code>：配置初始默认的分支名</p>
+<p><code>git init</code>：将当前目录配置成 <code>git</code> 仓库，信息记录在隐藏的<code>.git</code>文件夹中</p>
 <h1 id="工作区"><a href="#工作区" class="headerlink" title="工作区"></a>工作区</h1><p><code>git status</code>：显示有变更的文件</p>
 <p><code>git restore XXX</code> : 将工作区的XXX文件的修改（该修改未添加到暂存区）恢复</p>
 <p><code>git add XX</code>：将XX文件的 <strong>修改信息</strong> 添加到<strong>暂存区</strong></p>
@@ -570,7 +559,7 @@
 <blockquote>
 <p>更多撤销操作见下文 【撤销回退】</p>
 </blockquote>
-<h1 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h1><ul>
+<h1 id="分支相关命令"><a href="#分支相关命令" class="headerlink" title="分支相关命令"></a>分支相关命令</h1><ul>
 <li>查看分支</li>
 </ul>
 <p><code>git branch</code>: 查看本地分支</p>
@@ -586,7 +575,7 @@
 </ul>
 <p><code>git checkout branch_name</code>：切换到branch_name这个分支</p>
 <p><code>git checkout -b branch_name</code>：创建并切换到branch_name这个分支</p>
-<h2 id="本地分支"><a href="#本地分支" class="headerlink" title="本地分支"></a>本地分支</h2><p><code>git branch</code>: 列出所有本地分支</p>
+<h2 id="1-本地分支"><a href="#1-本地分支" class="headerlink" title="1 本地分支"></a>1 本地分支</h2><p><code>git branch</code>: 列出所有本地分支</p>
 <p><code>git branch branch_name</code>：创建新分支，但依然停留在当前分支</p>
 <p><code>git checkout branch_name</code>：切换到branch_name这个分支，并更新工作区</p>
 <p><code>git checkout -b branch_name</code>：创建并切换到branch_name这个分支</p>
@@ -595,17 +584,17 @@
 <p><code>git checkout -</code>： 切换到上一个分支</p>
 <p><code>git cherry-pick [commit]</code> ： 选择一个commit，合并进当前分支</p>
 <p><code>git branch -d branch_name</code>：删除本地仓库的branch_name分支</p>
-<h2 id="远程分支"><a href="#远程分支" class="headerlink" title="远程分支"></a>远程分支</h2><p><code>git branch -r</code> : 列出所有远程分支</p>
+<h2 id="2-远程分支"><a href="#2-远程分支" class="headerlink" title="2 远程分支"></a>2 远程分支</h2><p><code>git branch -r</code> : 列出所有远程分支</p>
 <p><code>git branch [branch] [commit]</code>： 新建一个分支，指向指定commit</p>
 <p><code>git push origin --delete [branch-name]</code> ： 删除远程分支</p>
 <p><code>git branch -dr [remote/branch]</code> ： 删除远程分支</p>
-<h2 id="本地和远程"><a href="#本地和远程" class="headerlink" title="本地和远程"></a>本地和远程</h2><p><code>git branch -a</code> ： 列出所有本地分支和远程分支</p>
+<h2 id="3-本地和远程"><a href="#3-本地和远程" class="headerlink" title="3 本地和远程"></a>3 本地和远程</h2><p><code>git branch -a</code> ： 列出所有本地分支和远程分支</p>
 <p><code>git branch --track [branch] [remote-branch]</code> ： 新建一个分支，与指定的远程分支建立追踪关系</p>
 <p><code>git branch --set-upstream [branch] [remote-branch]</code> ： 建立追踪关系，在现有分支与指定的远程分支之间 （现在已经不支持）</p>
 <p><code>git branch --set-upstream-to=origin/branch_name1 branch_name2</code>：将远程的branch_name1分支与本地的branch_name2分支对应</p>
-<h1 id="信息查看"><a href="#信息查看" class="headerlink" title="信息查看"></a>信息查看</h1><p><code>git log</code>：查看当前分支的所有版本</p>
+<h1 id="日志信息查看"><a href="#日志信息查看" class="headerlink" title="日志信息查看"></a>日志信息查看</h1><p><code>git log</code>：查看当前分支的所有版本</p>
 <p><code>git reflog</code>：查看HEAD指针的移动历史（包括被回滚的版本）</p>
-<p><code>git status</code> : 显示有变更的文件</p>
+<p><code>git status</code> : 显示当前工作区有变更的文件</p>
 <p><code>git log --stat</code> : 显示commit历史，以及每次commit发生变更的文件</p>
 <p><code>git log -S [keyword]</code>: 搜索提交历史，根据关键词</p>
 <p><code>git log [tag] HEAD --pretty=format:%s</code> : 显示某个commit之后的所有变动，每个commit占据一行</p>
@@ -624,17 +613,26 @@
 <p><code>git show [commit]</code> : 显示某次提交的元数据和内容变化</p>
 <p><code>git show --name-only [commit]</code>: 显示某次提交发生变化的文件</p>
 <p><code>git show [commit]:[filename]</code> : 显示某次提交时，某个文件的内容</p>
-<h1 id="远程同步"><a href="#远程同步" class="headerlink" title="远程同步"></a>远程同步</h1><p><code>git remote -v</code> ： 查看与远程仓库的关联</p>
+<h1 id="远程同步"><a href="#远程同步" class="headerlink" title="远程同步"></a>远程同步</h1><h2 id="1-仓库关联"><a href="#1-仓库关联" class="headerlink" title="1 仓库关联"></a>1 仓库关联</h2><p><code>git remote -v</code> ： 查看与远程仓库的关联</p>
 <p><code>git remote remove origin</code> ：删除与远程仓库的关联</p>
 <p><code>git remote add origin git@github.com:xxx/XXX.git</code>：将本地仓库关联到远程仓库</p>
+<h2 id="2-拉取-amp-推送-amp-克隆"><a href="#2-拉取-amp-推送-amp-克隆" class="headerlink" title="2 拉取&amp;推送&amp;克隆"></a>2 拉取&amp;推送&amp;克隆</h2><h3 id="2-1-拉取"><a href="#2-1-拉取" class="headerlink" title="2.1 拉取"></a>2.1 拉取</h3><p><code>git pull</code>：将远程仓库的<strong>当前分支</strong>与本地仓库的<strong>当前分支</strong>合并</p>
+<p><code>git pull origin branch_name</code>：将远程仓库的 <code>branch_name</code> 分支与本地仓库的当前分支合并</p>
+<p><code>git checkout -t origin/branch_name</code>: 将远程的branch_name分支拉取到本地</p>
+<h3 id="2-2-推送"><a href="#2-2-推送" class="headerlink" title="2.2 推送"></a>2.2 推送</h3><blockquote>
+<p>注意 <code>push</code> 操作会默认推送到和本地分支名相同的远程仓库的分支，如果远程仓库没有同名分支，会推送到默认分支。优先级：同名分支&gt;默认分支。</p>
+<p>如果推送到默认分支，你可能需要在远程进行merge操作了。</p>
+</blockquote>
 <p><code>git push -u</code> （第一次需要-u以后不需要）：将当前分支推送到远程仓库</p>
 <p><code>git push origin branch_name</code>：将本地的某个分支推送到远程仓库</p>
-<p><code>git clone git@github.com:anda522/XXX.git</code>：将远程仓库XXX下载到当前目录下</p>
-<p><code>git pull</code>：将远程仓库的当前分支与本地仓库的当前分支合并</p>
-<p><code>git pull origin branch_name</code>：将远程仓库的branch_name分支与本地仓库的当前分支合并</p>
-<p><code>git push --set-upstream origin branch_name</code>：设置本地的branch_name分支对应远程仓库的branch_name分支</p>
+<p><code>git push --set-upstream origin branch_name</code>：将本地的branch_name分支推送到远程仓库的branch_name分支</p>
+<blockquote>
+<p>如果远程没有 <code>branch_name</code> 分支，会自动创建该分支。</p>
+<p><code>git push origin main:branch_name</code>  命令类似，将 <code>main</code> 推送到 <code>branch_name</code> 分支，如果没有，便创建</p>
+</blockquote>
 <p><code>git push -d origin branch_name</code>：删除远程仓库的branch_name分支</p>
-<p><code>git checkout -t origin/branch_name</code>: 将远程的branch_name分支拉取到本地</p>
+<h3 id="2-3-克隆"><a href="#2-3-克隆" class="headerlink" title="2.3 克隆"></a>2.3 克隆</h3><p>下载下来就是一个仓库，无需进行 <code>git init</code> 操作。</p>
+<p><code>git clone git@github.com:anda522/XXX.git</code>：将远程仓库XXX下载到当前目录下</p>
 <h1 id="撤销回退"><a href="#撤销回退" class="headerlink" title="撤销回退"></a>撤销回退</h1><p><code>git reset --hard</code>: 重置暂存区与工作区，与上一次commit保持一致</p>
 <p><code>git reset --hard HEAD^</code> 或 <code>git reset --hard HEAD~</code>：将代码库回滚到上一个版本</p>
 <p><code>git reset --hard HEAD^^</code>：往上回滚两次，以此类推</p>
@@ -669,7 +667,7 @@
 <span class="token function">git</span> push <span class="token comment" spellcheck="true">#（此代码一般会报错）</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>报错原因：新建仓库时默认仓库为空，此时没有任何分支，如果本地有分支需要上传到远程的相同的分支上，需要将远程新建一个分支进行push操作。</p>
-<p>故代码可更新为：<code>git push --set-upstream origin main</code></p>
+<p>故代码可更新为：<code>git push --set-upstream origin main</code> 或 <code>git push origin main:main</code> </p>
 </blockquote>
 <h2 id="3-新建dev分支并上传"><a href="#3-新建dev分支并上传" class="headerlink" title="3 新建dev分支并上传"></a>3 新建dev分支并上传</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> checkout -b dev <span class="token comment" spellcheck="true"># 本地新建一个dev分支，并且切换到dev分支</span>
 <span class="token function">git</span> push --set-upstream origin dev <span class="token comment" spellcheck="true"># 本地在dev分支；需要上传在dev分支的操作；默认远端没有dev分支，远端将创建一个dev分支并进行push操作</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -705,7 +703,7 @@
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> tag -a <span class="token operator">&lt;</span>tagname<span class="token operator">></span> -m <span class="token string">"XXX..."</span> <span class="token comment" spellcheck="true"># 指定标签信息</span>
 <span class="token function">git</span> tag -a v1.0 -m <span class="token string">"release 0.1.0 version"</span>  <span class="token comment" spellcheck="true"># 创建附注标签</span>
 <span class="token function">git</span> checkout <span class="token punctuation">[</span>tagname<span class="token punctuation">]</span> <span class="token comment" spellcheck="true"># 切换标签</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h2 id="6-git-fetch和git-pull"><a href="#6-git-fetch和git-pull" class="headerlink" title="6 git fetch和git pull"></a>6 git fetch和git pull</h2><ul>
+<h2 id="6-git-fetch和git-pull对比"><a href="#6-git-fetch和git-pull对比" class="headerlink" title="6 git fetch和git pull对比"></a>6 git fetch和git pull对比</h2><ul>
 <li><code>git fetch</code>：将远程更新信息全部取回本地</li>
 </ul>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> fetch <span class="token operator">&lt;</span>远程主机名<span class="token operator">></span> //这个命令将某个远程主机的更新全部取回本地<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -717,6 +715,7 @@
 <p>取回更新后会返回一个<code>FETCH_HEAD</code> ，指的是某个branch在服务器上的最新状态，我们可以在本地通过它查看刚取回的更新信息：</p>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> log -p FETCH_HEAD<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>可以看到返回的信息包括更新的文件名，更新的作者和时间，以及更新的代码。我们可以通过这些信息来判断是否产生冲突，以确定是否将更新merge到当前分支。 </p>
+<hr>
 <ul>
 <li><code>git pull</code>：拉取并合并</li>
 </ul>
@@ -727,11 +726,20 @@
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> pull <span class="token operator">&lt;</span>远程主机名<span class="token operator">></span> <span class="token operator">&lt;</span>远程分支名<span class="token operator">></span>:<span class="token operator">&lt;</span>本地分支名<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>如果是与当前分支合并，则冒号后面的可以省略，例如：</p>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> pull origin master<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="7-仓库名改动"><a href="#7-仓库名改动" class="headerlink" title="7 仓库名改动"></a>7 仓库名改动</h2><p>需要进行仓库名改动，先改动了远程仓库名，本地直接目录名就行。</p>
+<h2 id="7-远程仓库名改动"><a href="#7-远程仓库名改动" class="headerlink" title="7 远程仓库名改动"></a>7 远程仓库名改动</h2><p>需要进行仓库名改动，先改动了远程仓库名，本地目录名不变就行。</p>
 <p>之后就要进行重新关联远程仓库，因为远程仓库名发生变化，仓库地址也就发生了变化。</p>
 <pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> remote -v // 可以先查看与远程仓库的关联
 <span class="token function">git</span> remote remove origin // 然后删除与远程仓库的关联
 <span class="token function">git</span> remote add origin git@github.com:xxx/XXX.git // 将本地仓库关联到远程仓库<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h2 id="8-设置不同的fetch和push源"><a href="#8-设置不同的fetch和push源" class="headerlink" title="8 设置不同的fetch和push源"></a>8 设置不同的fetch和push源</h2><p>我希望拉取公共的大项目代码，然后自己进行修改，上传到我的个人仓库中。所以fetch源需要是非个人源，push源为个人仓库的源。</p>
+<pre class="line-numbers language-shell"><code class="language-shell">git remote set-url origin  git://g.csail.mit.edu/xv6-labs-2021
+git remote set-url --add --push origin git@github.com:anda522/XV6-LAB.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>再用 <code>git remote -v</code> 命令可以查看已经修改完成。</p>
+<pre class="line-numbers language-shell"><code class="language-shell">origin git://g.csail.mit.edu/xv6-labs-2021 (push)
+origin git@github.com:anda522/XV6-LAB.git (fetch)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>然后就可以用下面代码进行操作了</p>
+<pre class="line-numbers language-shell"><code class="language-shell">git fetch
+git push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>[1] 如何设置git代理：<a href="https://ericclose.github.io/git-proxy-config.html" target="_blank" rel="noopener">https://ericclose.github.io/git-proxy-config.html</a></p>
 
             </div>
@@ -1498,7 +1506,7 @@ Linux指令基本都是基本指令，输入输出流，统计行数，复制，
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">90.8k</span>
+            <span class="white-color">90.9k</span>
             
 
             <br>
