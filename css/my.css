@@ -23,3 +23,13 @@ body, .gitcalendar {
     font-family: tzy !important;
 }
 
+/* 左侧广告栏 */
+#left-ad {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 160px; /* 调整到合适的宽度 */
+    height: 600px; /* 调整到合适的高度 */
+    z-index: 99;
+}
