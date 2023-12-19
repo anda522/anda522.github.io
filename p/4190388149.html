@@ -4,17 +4,15 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="Git|详解|命令, ZZU 行码棋">
+    <meta name="keywords" content="tmux命令详解及自定义配置, ZZU 行码棋">
     <!-- 百度和谷歌统计验证 -->
     <meta name="baidu-site-verification" content="code-L7AVcsbU14">
     <meta name="google-site-verification" content="x4QfrBHn9imI1RhTNCB8RD8Q2Rx6rE_zylSBptBgdZY">
     <!-- <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" /> -->
-    <meta name="description" content="Git命令 | 详解概念Git是基于树进行维护的，每一个节点都是一个历史版本，可以进行代码管理。
-
-
-工作区（Workspace） ：就是会出现工作目录，即自己要编写的代码
-暂存区（Index / Stage）  
-本地仓库（Reposit">
+    <meta name="description" content="Tmux命令tmux 是一个终端复用器，可以在一个窗口中运行多个终端会话。
+一个 tmux 可以包含多个 session ，一个 session 可以包含多个 window ，一个 window 可以包含多个 pane 。
+结构如下：
+tm">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -22,7 +20,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Git|详解|命令 | 行码棋</title>
+    <title>tmux命令详解及自定义配置 | 行码棋</title>
     <link rel="icon" type="image/png" href="/medias/logo.png">
 
     <link rel="stylesheey" type="text/css" href="//at.alicdn.com/t/c/font_3948353_97hiukrvyh.css">
@@ -339,13 +337,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Git|详解|命令
+                        tmux命令详解及自定义配置
                     </div>
                 </div>
             </div>
@@ -467,10 +465,6 @@
                             <span class="chip bg-color">Linux</span>
                         </a>
                         
-                        <a href="/tags/git/" target="_blank">
-                            <span class="chip bg-color">git</span>
-                        </a>
-                        
                     </div>
                     
                 </div>
@@ -491,7 +485,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-06-30
+                    2023-12-19
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -505,14 +499,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.4k
+                    959
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    13 分
+                    4 分
                 </div>
                 
                 
@@ -528,223 +522,183 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Git命令-详解"><a href="#Git命令-详解" class="headerlink" title="Git命令 | 详解"></a>Git命令 | 详解</h1><h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>Git是基于树进行维护的，每一个节点都是一个历史版本，可以进行代码管理。</p>
-<p><img src="1843856130/webp.webp" alt="Git图示"></p>
+                <h1 id="Tmux命令"><a href="#Tmux命令" class="headerlink" title="Tmux命令"></a>Tmux命令</h1><p><code>tmux</code> 是一个终端复用器，可以在一个窗口中运行多个终端会话。</p>
+<p>一个 <code>tmux</code> 可以包含多个 <code>session</code> ，一个 <code>session</code> 可以包含多个 <code>window</code> ，一个 <code>window</code> 可以包含多个 <code>pane</code> 。</p>
+<p>结构如下：</p>
+<pre class="line-numbers language-bash"><code class="language-bash">tmux:
+    session 0:
+        window 0:
+            pane 0
+            pane 1
+            pane 2
+            <span class="token punctuation">..</span>.
+        window 1
+        window 2
+        <span class="token punctuation">..</span>.
+    session 1
+    session 2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="1-会话命令-session"><a href="#1-会话命令-session" class="headerlink" title="1 会话命令-session"></a>1 会话命令-session</h2><ul>
+<li>开始新会话</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash">tmux<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>开始新会话指定会话名称</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash">tmux new -s <span class="token string">"新名称"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>连接现有会话</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash">tmux attach -t <span class="token string">"名字"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>列出所有运行的会话</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash">tmux <span class="token function">ls</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>结束特定会话</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash">tmux kill-session -t <span class="token string">"名字"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>打开之前挂起的会话</li>
+</ul>
+<pre class="line-numbers language-bash"><code class="language-bash">tmux a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li><p>进入会话界面后，切换其他会话：<code>Ctrl + a + s</code> ，之后上下键操作选择即可</p>
+</li>
+<li><p>从当前会话中断开连接（挂起，会在后台继续运行）： <code>Ctrl + a + d</code></p>
+</li>
+</ul>
 <blockquote>
-<p>工作区（Workspace） ：就是会出现工作目录，即自己要编写的代码</p>
-<p>暂存区（Index / Stage）  </p>
-<p>本地仓库（Repository）  </p>
-<p>远程仓库（Remote）</p>
+<p>注意： <code>Ctrl+b</code> 是 <code>tmux</code> 命令的默认前缀键组合。而我修改了配置文件，自定义前缀为 <code>Ctrl+a</code></p>
 </blockquote>
-<h1 id="配置Git命令"><a href="#配置Git命令" class="headerlink" title="配置Git命令"></a>配置Git命令</h1><blockquote>
-<p>Git的设置文件为<code>.gitconfig</code>，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。</p>
-</blockquote>
-<p><code>git config --list</code> : 显示当前的Git配置</p>
-<p><code>git config -e [--global]</code> : 编辑Git配置文件</p>
-<p><code>git config [--global] user.name xxx</code>：设置全局用户名，信息记录在<code>~/.gitconfig</code>文件中</p>
-<p><code>git config [--global] user.email xxx@xxx.com</code>：设置全局邮箱地址，信息记录在<code>~/.gitconfig</code>文件中</p>
-<p><code>git config --global init.defaultBranch &lt;defaultBranch&gt;</code>：配置初始默认的分支名</p>
-<p><code>git init</code>：将当前目录配置成 <code>git</code> 仓库，信息记录在隐藏的<code>.git</code>文件夹中</p>
-<h1 id="工作区"><a href="#工作区" class="headerlink" title="工作区"></a>工作区</h1><p><code>git status</code>：显示有变更的文件</p>
-<p><code>git restore XXX</code> : 将工作区的XXX文件的修改（该修改未添加到暂存区）恢复</p>
-<p><code>git add XX</code>：将XX文件的 <strong>修改信息</strong> 添加到<strong>暂存区</strong></p>
-<p><code>git add .</code>：将当前工作区的所有文件的修改信息加入<strong>暂存区</strong></p>
-<p><code>git rm [file1] [file2] ...</code> : 删除工作区文件，并把这次删除加入到暂存区</p>
-<p><code>git diff XX</code>：查看XX文件相对于暂存区修改了哪些内容</p>
-<p><code>git checkout — XX</code>或<code>git restore XX</code>：将XX文件尚未加入暂存区的修改全部撤销</p>
+<h2 id="2-窗口命令-window"><a href="#2-窗口命令-window" class="headerlink" title="2 窗口命令-window"></a>2 窗口命令-window</h2><ul>
+<li><p>创建新窗口： <code>Ctrl + a + c</code></p>
+</li>
+<li><p>切换到前一个/下一个窗口： <code>Ctrl + a + p/n</code> </p>
+</li>
+<li><p>切换其他窗口： <code>Ctrl + a + w</code> ，之后上下键操作选择即可</p>
+</li>
+</ul>
+<h2 id="3-窗格命令-pane"><a href="#3-窗格命令-pane" class="headerlink" title="3 窗格命令-pane"></a>3 窗格命令-pane</h2><ul>
+<li><p>左右分割窗格： <code>Ctrl + a + :</code></p>
+</li>
+<li><p>上下分割窗格： <code>Ctrl + a + &quot;</code> </p>
+</li>
+</ul>
 <blockquote>
-<p>更多撤销操作见下文 【撤销回退】</p>
+<p>上面两条在我的配置文件中配置了</p>
 </blockquote>
-<h1 id="暂存区"><a href="#暂存区" class="headerlink" title="暂存区"></a>暂存区</h1><p><code>git rm --cached XX</code>：将文件XX从暂存区中删掉，停止追踪指定文件，但该文件会保留在工作区</p>
-<p><code>git restore --staged XXX</code> ： 将<strong>暂存区</strong>的XXX清空，工作区<strong>不变</strong></p>
-<p><code>git commit -m &quot;给自己看的备注信息&quot;</code>：将<strong>暂存区</strong>的内容提交到当前分支（可持久化）</p>
-<p><code>git checkout [file]</code>: 恢复暂存区的指定文件到工作区（工作区文件发生改变）</p>
-<p><code>git reset [file]</code> : 重置暂存区的指定文件，与上一次commit保持一致，但工作区不变</p>
+<ul>
+<li>切换窗格： <code>Ctrl + a + 方向键</code> ，可以在窗格之间任意切换</li>
+</ul>
 <blockquote>
-<p>更多撤销操作见下文 【撤销回退】</p>
+<p>同时鼠标可以点击选择窗格。</p>
 </blockquote>
-<h1 id="分支相关命令"><a href="#分支相关命令" class="headerlink" title="分支相关命令"></a>分支相关命令</h1><ul>
-<li>查看分支</li>
-</ul>
-<p><code>git branch</code>: 查看本地分支</p>
-<p><code>git branch -r</code> : 列出所有远程分支</p>
-<p><code>git branch -a</code> ： 列出所有本地分支和远程分支</p>
 <ul>
-<li>删除分支</li>
+<li>关闭当前窗格： <code>Ctrl + a + x</code> 或 <code>Ctrl + d</code></li>
 </ul>
-<p><code>git branch -d branch_name</code>：删除本地的branch_name分支</p>
-<p><code>git push origin --delete [branch-name]</code> ： 删除远程分支</p>
-<ul>
-<li>切换分支</li>
-</ul>
-<p><code>git checkout branch_name</code>：切换到branch_name这个分支</p>
-<p><code>git checkout -b branch_name</code>：创建并切换到branch_name这个分支</p>
-<h2 id="1-本地分支"><a href="#1-本地分支" class="headerlink" title="1 本地分支"></a>1 本地分支</h2><p><code>git branch</code>: 列出所有本地分支</p>
-<p><code>git branch branch_name</code>：创建新分支，但依然停留在当前分支</p>
-<p><code>git checkout branch_name</code>：切换到branch_name这个分支，并更新工作区</p>
-<p><code>git checkout -b branch_name</code>：创建并切换到branch_name这个分支</p>
-<p><code>git branch -m oldBranchName newBranchName</code> ： 修改本地分支名字</p>
-<p><code>git merge branch_name</code>：将分支branch_name合并到当前分支上</p>
-<p><code>git checkout -</code>： 切换到上一个分支</p>
-<p><code>git cherry-pick [commit]</code> ： 选择一个commit，合并进当前分支</p>
-<p><code>git branch -d branch_name</code>：删除本地仓库的branch_name分支</p>
-<h2 id="2-远程分支"><a href="#2-远程分支" class="headerlink" title="2 远程分支"></a>2 远程分支</h2><p><code>git branch -r</code> : 列出所有远程分支</p>
-<p><code>git branch [branch] [commit]</code>： 新建一个分支，指向指定commit</p>
-<p><code>git push origin --delete [branch-name]</code> ： 删除远程分支</p>
-<p><code>git branch -dr [remote/branch]</code> ： 删除远程分支</p>
-<h2 id="3-本地和远程"><a href="#3-本地和远程" class="headerlink" title="3 本地和远程"></a>3 本地和远程</h2><p><code>git branch -a</code> ： 列出所有本地分支和远程分支</p>
-<p><code>git branch --track [branch] [remote-branch]</code> ： 新建一个分支，与指定的远程分支建立追踪关系</p>
-<p><code>git branch --set-upstream [branch] [remote-branch]</code> ： 建立追踪关系，在现有分支与指定的远程分支之间 （现在已经不支持）</p>
-<p><code>git branch --set-upstream-to=origin/branch_name1 branch_name2</code>：将远程的branch_name1分支与本地的branch_name2分支对应</p>
-<h1 id="日志信息查看"><a href="#日志信息查看" class="headerlink" title="日志信息查看"></a>日志信息查看</h1><p><code>git log</code>：查看当前分支的所有版本</p>
-<p><code>git reflog</code>：查看HEAD指针的移动历史（包括被回滚的版本）</p>
-<p><code>git status</code> : 显示当前工作区有变更的文件</p>
-<p><code>git log --stat</code> : 显示commit历史，以及每次commit发生变更的文件</p>
-<p><code>git log -S [keyword]</code>: 搜索提交历史，根据关键词</p>
-<p><code>git log [tag] HEAD --pretty=format:%s</code> : 显示某个commit之后的所有变动，每个commit占据一行</p>
-<p><code>git log [tag] HEAD --grep feature</code> : 显示某个commit之后的所有变动，其”提交说明”必须符合搜索条件</p>
-<p><code>git log --follow [file]</code>: 显示某个文件的版本历史，包括文件改名</p>
-<p><code>git whatchanged [file]</code> : 显示某个文件的版本历史，包括文件改名</p>
-<p><code>git log -p [file]</code> : 显示指定文件相关的每一次diff</p>
-<p><code>git log -5 --pretty --oneline</code>: 显示过去5次提交</p>
-<p><code>git shortlog -sn</code> : 显示所有提交过的用户，按提交次数排序</p>
-<p><code>git blame [file]</code> : 显示指定文件是什么人在什么时间修改过</p>
-<p><code>git diff</code> : 显示暂存区和工作区的差异</p>
-<p><code>git diff --cached [file]</code> : 显示暂存区和上一个commit的差异</p>
-<p><code>git diff HEAD</code>: 显示工作区与当前分支最新commit之间的差异</p>
-<p><code>git diff [first-branch]...[second-branch]</code>: 显示两次提交之间的差异</p>
-<p><code>git diff --shortstat &quot;@{0 day ago}&quot;</code> : 显示今天你写了多少行代码</p>
-<p><code>git show [commit]</code> : 显示某次提交的元数据和内容变化</p>
-<p><code>git show --name-only [commit]</code>: 显示某次提交发生变化的文件</p>
-<p><code>git show [commit]:[filename]</code> : 显示某次提交时，某个文件的内容</p>
-<h1 id="远程同步"><a href="#远程同步" class="headerlink" title="远程同步"></a>远程同步</h1><h2 id="1-仓库关联"><a href="#1-仓库关联" class="headerlink" title="1 仓库关联"></a>1 仓库关联</h2><p><code>git remote -v</code> ： 查看与远程仓库的关联</p>
-<p><code>git remote remove origin</code> ：删除与远程仓库的关联</p>
-<p><code>git remote add origin git@github.com:xxx/XXX.git</code>：将本地仓库关联到远程仓库</p>
-<h2 id="2-拉取-amp-推送-amp-克隆"><a href="#2-拉取-amp-推送-amp-克隆" class="headerlink" title="2 拉取&amp;推送&amp;克隆"></a>2 拉取&amp;推送&amp;克隆</h2><h3 id="2-1-拉取"><a href="#2-1-拉取" class="headerlink" title="2.1 拉取"></a>2.1 拉取</h3><p><code>git pull</code>：将远程仓库的<strong>当前分支</strong>与本地仓库的<strong>当前分支</strong>合并</p>
-<p><code>git pull origin branch_name</code>：将远程仓库的 <code>branch_name</code> 分支与本地仓库的当前分支合并</p>
-<p><code>git checkout -t origin/branch_name</code>: 将远程的branch_name分支拉取到本地</p>
-<h3 id="2-2-推送"><a href="#2-2-推送" class="headerlink" title="2.2 推送"></a>2.2 推送</h3><blockquote>
-<p>注意 <code>push</code> 操作会默认推送到和本地分支名相同的远程仓库的分支，如果远程仓库没有同名分支，会推送到默认分支。优先级：同名分支&gt;默认分支。</p>
-<p>如果推送到默认分支，你可能需要在远程进行merge操作了。</p>
-</blockquote>
-<p><code>git push -u</code> （第一次需要-u以后不需要）：将当前分支推送到远程仓库</p>
-<p><code>git push origin branch_name</code>：将本地的某个分支推送到远程仓库</p>
-<p><code>git push --set-upstream origin branch_name</code>：将本地的branch_name分支推送到远程仓库的branch_name分支</p>
 <blockquote>
-<p>如果远程没有 <code>branch_name</code> 分支，会自动创建该分支。</p>
-<p><code>git push origin main:branch_name</code>  命令类似，将 <code>main</code> 推送到 <code>branch_name</code> 分支，如果没有，便创建</p>
+<p>对于 <code>Ctrl + d</code> ，如果当前 <code>window</code> 的所有 <code>pane</code> 均已关闭，则自动关闭 <code>window</code> ；如果当前 <code>session</code> 的所有 <code>window</code> 均已关闭，则自动关闭 <code>session</code> 。</p>
 </blockquote>
-<p><code>git push -d origin branch_name</code>：删除远程仓库的branch_name分支</p>
-<h3 id="2-3-克隆"><a href="#2-3-克隆" class="headerlink" title="2.3 克隆"></a>2.3 克隆</h3><p>下载下来就是一个仓库，无需进行 <code>git init</code> 操作。</p>
-<p><code>git clone git@github.com:anda522/XXX.git</code>：将远程仓库XXX下载到当前目录下</p>
-<h1 id="撤销回退"><a href="#撤销回退" class="headerlink" title="撤销回退"></a>撤销回退</h1><p><code>git reset --hard</code>: 重置暂存区与工作区，与上一次commit保持一致</p>
-<p><code>git reset --hard HEAD^</code> 或 <code>git reset --hard HEAD~</code>：将代码库回滚到上一个版本</p>
-<p><code>git reset --hard HEAD^^</code>：往上回滚两次，以此类推</p>
-<p><code>git reset --hard HEAD~100</code>：往上回滚100个版本</p>
-<p><code>git reset --hard 版本号</code>：回滚到某一特定版本</p>
-<p><code>git stash</code>：将工作区和暂存区中尚未提交的修改存入栈中</p>
-<p><code>git stash apply</code>：将栈顶存储的修改恢复到当前分支，但不删除栈顶元素</p>
-<p><code>git stash drop</code>：删除栈顶存储的修改</p>
-<p><code>git stash pop</code>：将栈顶存储的修改恢复到当前分支，同时删除栈顶元素</p>
-<p><code>git stash list</code>：查看栈中所有元素</p>
-<p><code>git checkout [file]</code>: 恢复暂存区的指定文件到工作区</p>
-<p><code>git checkout [commit] [file]</code> : 恢复某个commit的指定文件到暂存区和工作区</p>
-<p><code>git checkout .</code> : 恢复暂存区的所有文件到工作区</p>
-<p><code>git reset [file]</code> : 重置暂存区的指定文件，与上一次commit保持一致，但工作区不变</p>
-<p><code>git reset [commit]</code>: 重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变</p>
-<p><code>git reset --hard [commit]</code> : 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致</p>
-<p><code>git reset --keep [commit]</code> : 重置当前HEAD为指定commit，但保持暂存区和工作区不变</p>
-<p><code>git revert [commit]</code> : 新建一个commit，用来撤销指定commit，后者的所有变化都将被前者抵消，并且应用到当前分支</p>
-<h1 id="序列化操作"><a href="#序列化操作" class="headerlink" title="序列化操作"></a>序列化操作</h1><h2 id="1-基础上传操作"><a href="#1-基础上传操作" class="headerlink" title="1 基础上传操作"></a>1 基础上传操作</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> add <span class="token keyword">.</span>
-<span class="token function">git</span> commit -m <span class="token string">"备注信息"</span>
-<span class="token function">git</span> push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h2 id="2-新建仓库的初始化操作"><a href="#2-新建仓库的初始化操作" class="headerlink" title="2 新建仓库的初始化操作"></a>2 新建仓库的初始化操作</h2><ol>
-<li>远程新建仓库，默认不添加<code>README.md</code>文件</li>
-<li>此时请注意远程仓库的主分支名为<code>main</code>还是<code>master</code></li>
-<li>本地新建一个文件夹用来作为上传该远程仓库的文件（或者用已存在的文件夹也行），在该目录下使用<code>git init</code>命令初始化仓库</li>
-<li>将本地仓库主分支名字设为和远端一样，例如<code>git branch -M main</code></li>
-<li>关联远程仓库，例如<code>git remote add origin https://github.com/anda522/bot.git</code></li>
-<li>上传的操作：</li>
-</ol>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> add <span class="token keyword">.</span>
-<span class="token function">git</span> commit -m <span class="token string">"提交代码的备注信息"</span>
-<span class="token function">git</span> push <span class="token comment" spellcheck="true">#（此代码一般会报错）</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>调整窗格大小： <code>Ctrl + a + Ctrl + 方向键</code> </li>
+</ul>
 <blockquote>
-<p>报错原因：新建仓库时默认仓库为空，此时没有任何分支，如果本地有分支需要上传到远程的相同的分支上，需要将远程新建一个分支进行push操作。</p>
-<p>故代码可更新为：<code>git push --set-upstream origin main</code> 或 <code>git push origin main:main</code> </p>
+<p>同时鼠标可以拖动分割线进行调整大小。</p>
 </blockquote>
-<h2 id="3-新建dev分支并上传"><a href="#3-新建dev分支并上传" class="headerlink" title="3 新建dev分支并上传"></a>3 新建dev分支并上传</h2><pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> checkout -b dev <span class="token comment" spellcheck="true"># 本地新建一个dev分支，并且切换到dev分支</span>
-<span class="token function">git</span> push --set-upstream origin dev <span class="token comment" spellcheck="true"># 本地在dev分支；需要上传在dev分支的操作；默认远端没有dev分支，远端将创建一个dev分支并进行push操作</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h2 id="4-删除久远的未被追踪的分支"><a href="#4-删除久远的未被追踪的分支" class="headerlink" title="4 删除久远的未被追踪的分支"></a>4 删除久远的未被追踪的分支</h2><p>有时候分支已经从远程分支中删除，但是本地分支并不知道当前这几个远程分支是否被删除，可以使用<code>git remote show origin</code>命令查看</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> remote show origin <span class="token comment" spellcheck="true">#  会出现stale (use 'git remote prune' to remove)字样</span>
-<span class="token comment" spellcheck="true"># git branch -a 这个可以看到远程不存在的分支还能显示出来</span>
-<span class="token function">git</span> remote prune origin <span class="token comment" spellcheck="true"># 删除未被追踪的分支</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h2 id="5-打tag"><a href="#5-打tag" class="headerlink" title="5 打tag"></a>5 打tag</h2><ul>
-<li>以本地最后一个<code>commit</code>创建tag</li>
-</ul>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> tag <span class="token operator">&lt;</span>tagName<span class="token operator">></span> <span class="token comment" spellcheck="true"># 基于本地最后一个commit创建一个tag</span>
-<span class="token function">git</span> push origin <span class="token operator">&lt;</span>tagName<span class="token operator">></span> <span class="token comment" spellcheck="true"># 将tag推送到远程仓库</span>
-<span class="token function">git</span> push origin --tags <span class="token comment" spellcheck="true"># 将所有tag推送到远程仓库</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <ul>
-<li>以特定的提交为tag</li>
+<li><p>将当前窗格全屏/取消全屏： <code>Ctrl + a + z</code></p>
+</li>
+<li><p>翻阅当前pane内的内容：鼠标滚轮。</p>
+</li>
+<li><p><code>tmux</code> 中复制/粘贴文本的通用方式：按下 <code>Ctrl + a</code> 后松开手指，然后按 <code>[</code> ，用鼠标选中文本，被选中的文本会被自动复制到tmux的剪贴板，按下 <code>Ctrl + a</code> 后松开手指，然后按 <code>]</code>，会将剪贴板中的内容粘贴到光标处。</p>
+</li>
 </ul>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> log --pretty<span class="token operator">=</span>oneline <span class="token comment" spellcheck="true"># 查看当前分支的提交历史 里面包含 commit id</span>
-<span class="token function">git</span> tag -a <span class="token operator">&lt;</span>tagName<span class="token operator">></span> <span class="token operator">&lt;</span>commitId<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<ul>
-<li>查看信息</li>
-</ul>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> show <span class="token operator">&lt;</span>tagName<span class="token operator">></span> <span class="token comment" spellcheck="true"># 查看tag的详细信息</span>
-<span class="token function">git</span> tag <span class="token comment" spellcheck="true"># 查看本地所有tag</span>
-<span class="token function">git</span> ls-remote --tag origin <span class="token comment" spellcheck="true"># 查看远程tag</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<ul>
-<li>删除tag</li>
-</ul>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> tag -d <span class="token operator">&lt;</span>tagName<span class="token operator">></span> <span class="token comment" spellcheck="true"># 删除本地tag</span>
-<span class="token function">git</span> push origin :refs/tags/<span class="token operator">&lt;</span>tagName<span class="token operator">></span> <span class="token comment" spellcheck="true"># 删除远程tag</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<ul>
-<li>其他</li>
-</ul>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> tag -a <span class="token operator">&lt;</span>tagname<span class="token operator">></span> -m <span class="token string">"XXX..."</span> <span class="token comment" spellcheck="true"># 指定标签信息</span>
-<span class="token function">git</span> tag -a v1.0 -m <span class="token string">"release 0.1.0 version"</span>  <span class="token comment" spellcheck="true"># 创建附注标签</span>
-<span class="token function">git</span> checkout <span class="token punctuation">[</span>tagname<span class="token punctuation">]</span> <span class="token comment" spellcheck="true"># 切换标签</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h2 id="6-git-fetch和git-pull对比"><a href="#6-git-fetch和git-pull对比" class="headerlink" title="6 git fetch和git pull对比"></a>6 git fetch和git pull对比</h2><ul>
-<li><code>git fetch</code>：将远程更新信息全部取回本地</li>
-</ul>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> fetch <span class="token operator">&lt;</span>远程主机名<span class="token operator">></span> //这个命令将某个远程主机的更新全部取回本地<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>如果只想取回特定分支，可以指定分支名</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> fetch <span class="token operator">&lt;</span>远程主机名<span class="token operator">></span> <span class="token operator">&lt;</span>分支名<span class="token operator">></span> //注意之间有空格<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>常见命令：</p>
-<p>取回<code>origin</code> 主机的<code>master</code> 分支：</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> fetch origin master<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>取回更新后会返回一个<code>FETCH_HEAD</code> ，指的是某个branch在服务器上的最新状态，我们可以在本地通过它查看刚取回的更新信息：</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> log -p FETCH_HEAD<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>可以看到返回的信息包括更新的文件名，更新的作者和时间，以及更新的代码。我们可以通过这些信息来判断是否产生冲突，以确定是否将更新merge到当前分支。 </p>
-<hr>
-<ul>
-<li><code>git pull</code>：拉取并合并</li>
-</ul>
-<p>可以理解为两个过程：</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> fetch origin master //从远程主机的master分支拉取最新内容 
-<span class="token function">git</span> merge FETCH_HEAD    //将拉取下来的最新内容合并到当前所在的分支中<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>完整命令：将远程主机的某个分支的更新取回，并与本地指定的分支合并</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> pull <span class="token operator">&lt;</span>远程主机名<span class="token operator">></span> <span class="token operator">&lt;</span>远程分支名<span class="token operator">></span>:<span class="token operator">&lt;</span>本地分支名<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>如果是与当前分支合并，则冒号后面的可以省略，例如：</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> pull origin master<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="7-远程仓库名改动"><a href="#7-远程仓库名改动" class="headerlink" title="7 远程仓库名改动"></a>7 远程仓库名改动</h2><p>需要进行仓库名改动，先改动了远程仓库名，本地目录名不变就行。</p>
-<p>之后就要进行重新关联远程仓库，因为远程仓库名发生变化，仓库地址也就发生了变化。</p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">git</span> remote -v // 可以先查看与远程仓库的关联
-<span class="token function">git</span> remote remove origin // 然后删除与远程仓库的关联
-<span class="token function">git</span> remote add origin git@github.com:xxx/XXX.git // 将本地仓库关联到远程仓库<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h2 id="8-设置不同的fetch和push源"><a href="#8-设置不同的fetch和push源" class="headerlink" title="8 设置不同的fetch和push源"></a>8 设置不同的fetch和push源</h2><p>我希望拉取公共的大项目代码，然后自己进行修改，上传到我的个人仓库中。所以fetch源需要是非个人源，push源为个人仓库的源。</p>
-<pre class="line-numbers language-shell"><code class="language-shell">git remote set-url origin  git://g.csail.mit.edu/xv6-labs-2021
-git remote set-url --add --push origin git@github.com:anda522/XV6-LAB.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>再用 <code>git remote -v</code> 命令可以查看已经修改完成。</p>
-<pre class="line-numbers language-shell"><code class="language-shell">origin git://g.csail.mit.edu/xv6-labs-2021 (push)
-origin git@github.com:anda522/XV6-LAB.git (fetch)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p>然后就可以用下面代码进行操作了</p>
-<pre class="line-numbers language-shell"><code class="language-shell">git fetch
-git push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><p>[1] 如何设置git代理：<a href="https://ericclose.github.io/git-proxy-config.html" target="_blank" rel="noopener">https://ericclose.github.io/git-proxy-config.html</a></p>
+<h1 id="Tmux配置"><a href="#Tmux配置" class="headerlink" title="Tmux配置"></a>Tmux配置</h1><h2 id="1-配置文件"><a href="#1-配置文件" class="headerlink" title="1 配置文件"></a>1 配置文件</h2><p>将 <code>.tmux.conf</code> 文件放置在用户目录下。</p>
+<p>我的配置，基本也是从网上整理的：</p>
+<p>也可见：<a href="https://github.com/anda522/config/blob/main/tmux/.tmux.conf" target="_blank" rel="noopener">https://github.com/anda522/config/blob/main/tmux/.tmux.conf</a> </p>
+<pre class="line-numbers language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># Note:</span>
+<span class="token comment" spellcheck="true"># -1 If the config is not valid, run the command "tmux source-file ~/.tmux.conf", </span>
+<span class="token comment" spellcheck="true"># then try your config again!</span>
+<span class="token comment" spellcheck="true"># -2 This is my personal config file according to my likes.</span>
+
+set-option -g status-keys <span class="token function">vi</span>
+setw -g mode-keys <span class="token function">vi</span>
+
+setw -g monitor-activity on
+
+<span class="token comment" spellcheck="true"># setw -g c0-change-trigger 10</span>
+<span class="token comment" spellcheck="true"># setw -g c0-change-interval 100</span>
+
+<span class="token comment" spellcheck="true"># setw -g c0-change-interval 50</span>
+<span class="token comment" spellcheck="true"># setw -g c0-change-trigger  75</span>
+
+set-window-option -g automatic-rename on
+set-option -g set-titles on
+<span class="token keyword">set</span> -g history-limit 100000
+
+<span class="token comment" spellcheck="true">#set-window-option -g utf8 on</span>
+
+<span class="token comment" spellcheck="true"># set command prefix</span>
+set-option -g prefix C-a
+unbind-key C-b
+bind-key C-a send-prefix
+
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
+
+bind <span class="token operator">&lt;</span> resize-pane -L 7
+bind <span class="token operator">></span> resize-pane -R 7
+bind - resize-pane -D 7
+bind + resize-pane -U 7
+
+bind-key -n M-l next-window
+bind-key -n M-h previous-window
+
+<span class="token keyword">set</span> -g status-interval 1
+<span class="token comment" spellcheck="true"># status bar</span>
+<span class="token keyword">set</span> -g status-bg black
+<span class="token keyword">set</span> -g status-fg blue
+
+<span class="token comment" spellcheck="true">#set -g status-utf8 on</span>
+<span class="token keyword">set</span> -g status-justify centre
+<span class="token keyword">set</span> -g status-bg default
+<span class="token keyword">set</span> -g status-left <span class="token string">" #[fg=green]#S@#H #[default]"</span>
+<span class="token keyword">set</span> -g status-left-length 20
+
+
+<span class="token comment" spellcheck="true"># mouse support</span>
+<span class="token comment" spellcheck="true"># for tmux 2.1</span>
+<span class="token comment" spellcheck="true"># set -g mouse-utf8 on</span>
+<span class="token keyword">set</span> -g mouse on
+
+<span class="token comment" spellcheck="true"># for previous version</span>
+<span class="token comment" spellcheck="true">#set -g mode-mouse on</span>
+<span class="token comment" spellcheck="true">#set -g mouse-resize-pane on</span>
+<span class="token comment" spellcheck="true">#set -g mouse-select-pane on</span>
+<span class="token comment" spellcheck="true">#set -g mouse-select-window on</span>
+
+
+<span class="token comment" spellcheck="true">#set -g status-right-length 25</span>
+<span class="token keyword">set</span> -g status-right <span class="token string">"#[fg=green]%H:%M:%S #[fg=magenta]%a %m-%d #[default]"</span>
+
+<span class="token comment" spellcheck="true"># Split the pane into left and right.</span>
+<span class="token comment" spellcheck="true"># Command: ctrl + a + "</span>
+bind <span class="token string">'"'</span> split-window -vc <span class="token string">"#{pane_current_path}"</span>
+
+<span class="token comment" spellcheck="true"># Split the pane into up and down.</span>
+<span class="token comment" spellcheck="true"># Command: ctrl + a + :</span>
+bind <span class="token string">':'</span> split-window -hc <span class="token string">"#{pane_current_path}"</span>
+
+bind <span class="token string">'c'</span> new-window -c <span class="token string">"#{pane_current_path}"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="2-配置文件不生效"><a href="#2-配置文件不生效" class="headerlink" title="2 配置文件不生效"></a>2 配置文件不生效</h2><p>在根目录下输入这个回车即可</p>
+<pre class="line-numbers language-bash"><code class="language-bash">tmux source-file ~/.tmux.conf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -905,9 +859,9 @@ git push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Git|详解|命令》
+                    《tmux命令详解及自定义配置》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/p/1843856130.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/p/4190388149.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 行码棋
             </a> 采用
@@ -949,7 +903,7 @@ git push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
         repo: 'anda522.github.io',
         owner: 'anda522',
         admin: "anda522",
-        id: 'p/1843856130.html',  // 使用页面路径生成gitalk id
+        id: 'p/4190388149.html',  // 使用页面路径生成gitalk id
         
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
@@ -1237,33 +1191,33 @@ git push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/p/1146830909.html">
+                <a href="/p/4190388149.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.png" class="responsive-img" alt="docker常用命令总结">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="tmux命令详解及自定义配置">
                         
-                        <span class="card-title">docker常用命令总结</span>
+                        <span class="card-title">tmux命令详解及自定义配置</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
-将当前用户添加到docker用户组
-为了避免每次使用docker命令都需要加上sudo权限，可以将当前用户加入安装中自动创建的docker用户组（可以参考官方文档）：
-sudo usermod -aG docker $USER
-执行完此操
+                            Tmux命令tmux 是一个终端复用器，可以在一个窗口中运行多个终端会话。
+一个 tmux 可以包含多个 session ，一个 session 可以包含多个 window ，一个 window 可以包含多个 pane 。
+结构如下：
+tm
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2022-07-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-12-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1276,12 +1230,9 @@ sudo usermod -aG docker $USER
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
-                    
-                    <a href="/tags/docker/" target="_blank">
-                        <span class="chip bg-color">docker</span>
-                    </a>
                     
                     <a href="/tags/Linux/" target="_blank">
                         <span class="chip bg-color">Linux</span>
@@ -1298,32 +1249,33 @@ sudo usermod -aG docker $USER
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/p/454636061.html">
+                <a href="/p/3211658549.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="2021大二上期末题目回顾">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="自建私有git发布博客">
                         
-                        <span class="card-title">2021大二上期末题目回顾</span>
+                        <span class="card-title">自建私有git发布博客</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            本文知识点均为从网络或其他地方搜集整理而来，提到的习题均无答案，完全不具备权威性质，作者不对看本文造成的后果负责，请合理参考。
-Linux指令基本都是基本指令，输入输出流，统计行数，复制，文件权限修改等等大题会考swap分区构建的具体步骤考
+                            自建私有git进行项目发布之前尝试过通过建立私有git仓库，来发布自己的hexo静态博客，但是失败了，今天尝试了一下午，算是有了结果。下面记录我的过程。
+我的需求：
+我有一个服务器，希望在服务器端建一个git仓库，本地部署时会同时往GitH
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-29
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-12-16
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/课程记录/" class="post-category" target="_blank">
-                                    课程记录
+                            <a href="/categories/开发知识/" class="post-category" target="_blank">
+                                    开发知识
                                 </a>
                             
                             
@@ -1333,8 +1285,8 @@ Linux指令基本都是基本指令，输入输出流，统计行数，复制，
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/学习总结/" target="_blank">
-                        <span class="chip bg-color">学习总结</span>
+                    <a href="/tags/git/" target="_blank">
+                        <span class="chip bg-color">git</span>
                     </a>
                     
                 </div>
