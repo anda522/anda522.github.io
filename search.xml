@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>CPP易懂文章记录</title>
+      <link href="/p/4162491037.html"/>
+      <url>/p/4162491037.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>记录一些看到的易懂的C++文章</p></blockquote><h1 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h1><p>结构体内存对齐： <a href="https://www.cnblogs.com/hyacinthLJP/p/16041690.html" target="_blank" rel="noopener">https://www.cnblogs.com/hyacinthLJP/p/16041690.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> CPP </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CPP </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>tmux命令详解及自定义配置</title>
       <link href="/p/4190388149.html"/>
       <url>/p/4190388149.html</url>
@@ -88,14 +113,14 @@
       
       <categories>
           
-          <category> C++ </category>
+          <category> CPP </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> C++ </tag>
+            <tag> CPP </tag>
             
         </tags>
       
@@ -348,14 +373,14 @@
       
       <categories>
           
-          <category> C++ </category>
+          <category> CPP </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> C++ </tag>
+            <tag> CPP </tag>
             
             <tag> 多线程 </tag>
             
@@ -638,9 +663,9 @@
       
         <tags>
             
-            <tag> 树形DP </tag>
-            
             <tag> 组合数学 </tag>
+            
+            <tag> 树形DP </tag>
             
         </tags>
       
@@ -658,7 +683,7 @@
       
       <categories>
           
-          <category> C++ </category>
+          <category> CPP </category>
           
       </categories>
       
@@ -667,7 +692,7 @@
             
             <tag> 学习总结 </tag>
             
-            <tag> C++ </tag>
+            <tag> CPP </tag>
             
             <tag> STL </tag>
             
@@ -744,11 +769,11 @@
       
         <tags>
             
+            <tag> CF </tag>
+            
             <tag> DFS </tag>
             
             <tag> 树 </tag>
-            
-            <tag> CF </tag>
             
         </tags>
       
@@ -1026,7 +1051,7 @@
       
       <categories>
           
-          <category> C++ </category>
+          <category> CPP </category>
           
       </categories>
       
@@ -1035,7 +1060,7 @@
             
             <tag> 学习总结 </tag>
             
-            <tag> C++ </tag>
+            <tag> CPP </tag>
             
             <tag> STL </tag>
             

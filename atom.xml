@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2023-12-19T11:17:02.032Z</updated>
+  <updated>2023-12-19T13:19:50.250Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CPP易懂文章记录</title>
+    <link href="http://wyqz.top/p/4162491037.html"/>
+    <id>http://wyqz.top/p/4162491037.html</id>
+    <published>2023-12-19T13:14:37.000Z</published>
+    <updated>2023-12-19T13:19:50.250Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;记录一些看到的易懂的C++文章&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;结构体&quot;&gt;&lt;a href=&quot;#结构体&quot; class=&quot;headerlink&quot; title=&quot;结构体&quot;&gt;&lt;/a&gt;结构体&lt;/h1&gt;&lt;p&gt;结构体内存对齐： &lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="CPP" scheme="http://wyqz.top/categories/CPP/"/>
+    
+    
+      <category term="CPP" scheme="http://wyqz.top/tags/CPP/"/>
+    
+  </entry>
   
   <entry>
     <title>tmux命令详解及自定义配置</title>
@@ -99,7 +128,7 @@
     <link href="http://wyqz.top/p/360366309.html"/>
     <id>http://wyqz.top/p/360366309.html</id>
     <published>2023-12-08T10:42:58.000Z</published>
-    <updated>2023-12-10T10:49:39.205Z</updated>
+    <updated>2023-12-19T13:17:56.625Z</updated>
     
     <summary type="html">
     
@@ -113,10 +142,10 @@
     
     </summary>
     
-      <category term="C++" scheme="http://wyqz.top/categories/C/"/>
+      <category term="CPP" scheme="http://wyqz.top/categories/CPP/"/>
     
     
-      <category term="C++" scheme="http://wyqz.top/tags/C/"/>
+      <category term="CPP" scheme="http://wyqz.top/tags/CPP/"/>
     
   </entry>
   
@@ -386,7 +415,7 @@
     <link href="http://wyqz.top/p/2668140628.html"/>
     <id>http://wyqz.top/p/2668140628.html</id>
     <published>2023-03-18T01:57:44.000Z</published>
-    <updated>2023-03-24T06:06:49.832Z</updated>
+    <updated>2023-12-19T13:17:32.251Z</updated>
     
     <summary type="html">
     
@@ -402,10 +431,10 @@
     
     </summary>
     
-      <category term="C++" scheme="http://wyqz.top/categories/C/"/>
+      <category term="CPP" scheme="http://wyqz.top/categories/CPP/"/>
     
     
-      <category term="C++" scheme="http://wyqz.top/tags/C/"/>
+      <category term="CPP" scheme="http://wyqz.top/tags/CPP/"/>
     
       <category term="多线程" scheme="http://wyqz.top/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
@@ -550,32 +579,6 @@
       <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
     
       <category term="MachineLearning" scheme="http://wyqz.top/tags/MachineLearning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Pytorch入门知识总结</title>
-    <link href="http://wyqz.top/p/1888017128.html"/>
-    <id>http://wyqz.top/p/1888017128.html</id>
-    <published>2022-12-14T13:53:28.000Z</published>
-    <updated>2023-03-24T05:56:45.684Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;Pytorch深度学习入门知识总结&quot;&gt;&lt;a href=&quot;#Pytorch深度学习入门知识总结&quot; class=&quot;headerlink&quot; title=&quot;Pytorch深度学习入门知识总结&quot;&gt;&lt;/a&gt;Pytorch深度学习入门知识总结&lt;/h1&gt;&lt;h1
-        
-      
-    
-    </summary>
-    
-      <category term="人工智能" scheme="http://wyqz.top/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
-    
-    
-      <category term="Pytorch" scheme="http://wyqz.top/tags/Pytorch/"/>
     
   </entry>
   
