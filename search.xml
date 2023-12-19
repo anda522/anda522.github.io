@@ -663,9 +663,9 @@
       
         <tags>
             
-            <tag> 组合数学 </tag>
-            
             <tag> 树形DP </tag>
+            
+            <tag> 组合数学 </tag>
             
         </tags>
       
@@ -769,11 +769,11 @@
       
         <tags>
             
-            <tag> CF </tag>
-            
             <tag> DFS </tag>
             
             <tag> 树 </tag>
+            
+            <tag> CF </tag>
             
         </tags>
       
