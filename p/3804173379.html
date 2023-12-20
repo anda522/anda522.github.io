@@ -382,6 +382,9 @@
         position: fixed;
         top: 64px;
     }
+    .toc-widget.hidden {
+        display: none;
+    }
     /* 目录背景白框 */
     .toc-widget {
         padding-left: 20px;
@@ -492,11 +495,16 @@
                     
                 </div>
             </div>
-
+            <!-- 文章发布信息 -->
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
                     2023-03-26
+                </div>
+                <!-- 显示更新日期 -->
+                <div class="post-update-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2023-07-18
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -1163,16 +1171,16 @@ d
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Python/" target="_blank">
-                        <span class="chip bg-color">Python</span>
-                    </a>
-                    
                     <a href="/tags/Pandas/" target="_blank">
                         <span class="chip bg-color">Pandas</span>
                     </a>
                     
                     <a href="/tags/数据处理/" target="_blank">
                         <span class="chip bg-color">数据处理</span>
+                    </a>
+                    
+                    <a href="/tags/Python/" target="_blank">
+                        <span class="chip bg-color">Python</span>
                     </a>
                     
                 </div>
@@ -1267,6 +1275,8 @@ d
         // Set scroll toc fixed.
         let tocHeight = parseInt($(window).height() * 0.4 - 64);
         let $tocWidget = $('.toc-widget');
+        let commentsSectionPosition = $('#gitalk-container').offset().top; 
+
         $(window).scroll(function () {
             let scroll = $(window).scrollTop();
             /* add post toc fixed. */
@@ -1274,6 +1284,12 @@ d
                 $tocWidget.addClass('toc-fixed');
             } else {
                 $tocWidget.removeClass('toc-fixed');
+            }
+            // 滚动至gitalk界面隐藏目录
+            if (scroll > commentsSectionPosition) {
+                $tocWidget.addClass('hidden');
+            } else {
+                $tocWidget.removeClass('hidden');
             }
         });
 

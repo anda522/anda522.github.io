@@ -377,6 +377,9 @@
         position: fixed;
         top: 64px;
     }
+    .toc-widget.hidden {
+        display: none;
+    }
     /* 目录背景白框 */
     .toc-widget {
         padding-left: 20px;
@@ -479,10 +482,15 @@
                     
                 </div>
             </div>
-
+            <!-- 文章发布信息 -->
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-08-23
+                </div>
+                <!-- 显示更新日期 -->
+                <div class="post-update-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>更新日期:&nbsp;&nbsp;
                     2022-08-23
                 </div>
 
@@ -1605,6 +1613,8 @@ G题意给定 $n$ ，将 $1,2,. . . , n$ 视为不含前导零的字符串
         // Set scroll toc fixed.
         let tocHeight = parseInt($(window).height() * 0.4 - 64);
         let $tocWidget = $('.toc-widget');
+        let commentsSectionPosition = $('#gitalk-container').offset().top; 
+
         $(window).scroll(function () {
             let scroll = $(window).scrollTop();
             /* add post toc fixed. */
@@ -1612,6 +1622,12 @@ G题意给定 $n$ ，将 $1,2,. . . , n$ 视为不含前导零的字符串
                 $tocWidget.addClass('toc-fixed');
             } else {
                 $tocWidget.removeClass('toc-fixed');
+            }
+            // 滚动至gitalk界面隐藏目录
+            if (scroll > commentsSectionPosition) {
+                $tocWidget.addClass('hidden');
+            } else {
+                $tocWidget.removeClass('hidden');
             }
         });
 

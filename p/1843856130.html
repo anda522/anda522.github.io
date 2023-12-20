@@ -381,6 +381,9 @@
         position: fixed;
         top: 64px;
     }
+    .toc-widget.hidden {
+        display: none;
+    }
     /* 目录背景白框 */
     .toc-widget {
         padding-left: 20px;
@@ -463,12 +466,12 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/git/" target="_blank">
-                            <span class="chip bg-color">git</span>
-                        </a>
-                        
                         <a href="/tags/Linux/" target="_blank">
                             <span class="chip bg-color">Linux</span>
+                        </a>
+                        
+                        <a href="/tags/git/" target="_blank">
+                            <span class="chip bg-color">git</span>
                         </a>
                         
                     </div>
@@ -487,11 +490,16 @@
                     
                 </div>
             </div>
-
+            <!-- 文章发布信息 -->
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
                     2022-06-30
+                </div>
+                <!-- 显示更新日期 -->
+                <div class="post-update-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2023-12-19
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -1279,12 +1287,12 @@ sudo usermod -aG docker $USER
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/" target="_blank">
-                        <span class="chip bg-color">Linux</span>
-                    </a>
-                    
                     <a href="/tags/docker/" target="_blank">
                         <span class="chip bg-color">docker</span>
+                    </a>
+                    
+                    <a href="/tags/Linux/" target="_blank">
+                        <span class="chip bg-color">Linux</span>
                     </a>
                     
                 </div>
@@ -1429,6 +1437,8 @@ Linux指令基本都是基本指令，输入输出流，统计行数，复制，
         // Set scroll toc fixed.
         let tocHeight = parseInt($(window).height() * 0.4 - 64);
         let $tocWidget = $('.toc-widget');
+        let commentsSectionPosition = $('#gitalk-container').offset().top; 
+
         $(window).scroll(function () {
             let scroll = $(window).scrollTop();
             /* add post toc fixed. */
@@ -1436,6 +1446,12 @@ Linux指令基本都是基本指令，输入输出流，统计行数，复制，
                 $tocWidget.addClass('toc-fixed');
             } else {
                 $tocWidget.removeClass('toc-fixed');
+            }
+            // 滚动至gitalk界面隐藏目录
+            if (scroll > commentsSectionPosition) {
+                $tocWidget.addClass('hidden');
+            } else {
+                $tocWidget.removeClass('hidden');
             }
         });
 

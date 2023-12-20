@@ -351,11 +351,11 @@
       
         <tags>
             
-            <tag> Python </tag>
-            
             <tag> Pandas </tag>
             
             <tag> 数据处理 </tag>
+            
+            <tag> Python </tag>
             
         </tags>
       
@@ -875,9 +875,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> docker </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       
@@ -902,9 +902,9 @@
       
         <tags>
             
-            <tag> git </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> git </tag>
             
         </tags>
       
