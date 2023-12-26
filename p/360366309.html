@@ -340,7 +340,7 @@ int *p = &amp;amp;a;
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -511,14 +511,14 @@ int *p = &amp;amp;a;
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    7 分
                 </div>
                 
                 
@@ -598,6 +598,13 @@ std<span class="token operator">::</span>cout <span class="token operator">&lt;&
 <ul>
 <li>方法二：利用<strong>二维指针</strong>，C malloc操作</li>
 </ul>
+<blockquote>
+<p>这种方法其实是对二维数组的拙劣模仿，正常二维数组是一次寻址就能找到数据，而这种方法是二次寻址。</p>
+<ul>
+<li>一次寻址是因为编译器会直接去找  <code>i * m + j</code> 位置的元素</li>
+<li>二次寻址是因为首先最外层指针对第一维寻址，然后再对第二维寻址</li>
+</ul>
+</blockquote>
 <pre class="line-numbers language-c"><code class="language-c"><span class="token keyword">int</span> <span class="token operator">*</span><span class="token operator">*</span>f <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">)</span> <span class="token operator">*</span> n<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span> <span class="token punctuation">{</span>
     f<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token operator">*</span> m<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -1243,7 +1250,7 @@ std<span class="token operator">::</span>cout <span class="token operator">&lt;&
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.png" class="responsive-img" alt="2023年度总结">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="2023年度总结">
                         
                         <span class="card-title">2023年度总结</span>
                     </div>
@@ -1296,7 +1303,7 @@ std<span class="token operator">::</span>cout <span class="token operator">&lt;&
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="折腾长久，终退役-致我的ACM生涯">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="折腾长久，终退役-致我的ACM生涯">
                         
                         <span class="card-title">折腾长久，终退役-致我的ACM生涯</span>
                     </div>
@@ -1515,7 +1522,7 @@ std<span class="token operator">::</span>cout <span class="token operator">&lt;&
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">92.8k</span>
+            <span class="white-color">93.9k</span>
             
 
             <br>
