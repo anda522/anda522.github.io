@@ -339,7 +339,7 @@ xv6系统为 RISC-V
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -496,7 +496,7 @@ xv6系统为 RISC-V
                 <!-- 显示更新日期 -->
                 <div class="post-update-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-12-25
+                    2023-12-26
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -510,14 +510,14 @@ xv6系统为 RISC-V
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.9k
+                    2.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    8 分
                 </div>
                 
                 
@@ -637,7 +637,12 @@ xv6系统为 RISC-V
 </li>
 </ul>
 <p><img src="https://blog.rayzhang.top/2022/10/01/mit-6.s081-lab-cow/mem.png" alt></p>
-
+<h1 id="6-Multithreading"><a href="#6-Multithreading" class="headerlink" title="6 Multithreading"></a>6 Multithreading</h1><h2 id="Knowledge-5"><a href="#Knowledge-5" class="headerlink" title="Knowledge"></a>Knowledge</h2><p>Xv6有两种类型的锁：自旋锁（spinlocks）和睡眠锁（sleep-locks）。</p>
+<p>自旋锁和中断的交互引发了潜在的危险。假设<code>sys_sleep</code>持有<code>tickslock</code>，并且它的CPU被计时器中断中断。<code>clockintr</code>会尝试获取<code>tickslock</code>，意识到它被持有后等待释放。在这种情况下，<code>tickslock</code>永远不会被释放：只有<code>sys_sleep</code>可以释放它，但是<code>sys_sleep</code>直到<code>clockintr</code>返回前不能继续运行。所以CPU会死锁，任何需要锁的代码也会冻结。</p>
+<p>为了避免这种情况，如果一个自旋锁被中断处理程序所使用，那么CPU必须保证在启用中断的情况下永远不能持有该锁。Xv6更保守：当CPU获取任何锁时，xv6总是禁用该CPU上的中断。中断仍然可能发生在其他CPU上，此时中断的<code>acquire</code>可以等待线程释放自旋锁；由于不在同一CPU上，不会造成死锁。</p>
+<p>自旋锁的另一个缺点是，一个进程在持有自旋锁的同时不能让出（yield）CPU，然而我们希望持有锁的进程等待磁盘I/O的时候其他进程可以使用CPU。</p>
+<p>Xv6以睡眠锁（sleep-locks）的形式提供了这种锁。<code>acquiresleep</code> (<strong>kernel/sleeplock.c</strong>:22) 在等待时让步CPU</p>
+<h2 id="Lab-5"><a href="#Lab-5" class="headerlink" title="Lab"></a>Lab</h2>
             </div>
             <hr />
 
@@ -1137,7 +1142,7 @@ xv6系统为 RISC-V
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="折腾长久，终退役-致我的ACM生涯">
+                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="折腾长久，终退役-致我的ACM生涯">
                         
                         <span class="card-title">折腾长久，终退役-致我的ACM生涯</span>
                     </div>
@@ -1190,7 +1195,7 @@ xv6系统为 RISC-V
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.png" class="responsive-img" alt="代码中的技巧或习惯">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="代码中的技巧或习惯">
                         
                         <span class="card-title">代码中的技巧或习惯</span>
                     </div>
@@ -1408,7 +1413,7 @@ for(int i = 0; i &lt; len; ++i) {
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">93.9k</span>
+            <span class="white-color">94.3k</span>
             
 
             <br>

@@ -338,7 +338,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -503,7 +503,7 @@
                 <!-- 显示更新日期 -->
                 <div class="post-update-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-12-19
+                    2023-12-27
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -2444,9 +2444,10 @@ vector<span class="token operator">&lt;</span><span class="token keyword">int</s
 </blockquote>
 <p>使用用法和<code>sort()</code>一样，见上</p>
 <h2 id="stoi"><a href="#stoi" class="headerlink" title="stoi"></a>stoi</h2><pre><code>stoi(const string*)</code></pre><blockquote>
-<p>将对应string类型字符串转换为数字，记忆：<code>s -&gt; t 分别对应两个数据类型的某个字母</code></p>
+<p>将对应string类型字符串转换为数字（<code>int</code> 型），记忆：<code>s -&gt; t 分别对应两个数据类型的某个字母</code></p>
 </blockquote>
 <p>注意参数为<code>string</code>字符串类型。</p>
+<p>如果要转换为其他类型的数字可使用 <code>stoll(转换为long long)</code> ， <code>stoull(转换为unsigned long long)</code> 等函数。</p>
 <p>关于输出数字的范围：</p>
 <ul>
 <li><p><code>stoi</code><strong>会做</strong>范围检查，默认必须在<code>int</code>范围内，如果超出范围，会出现RE（Runtime Error）错误。</p>
@@ -2523,25 +2524,40 @@ b<span class="token punctuation">.</span><span class="token function">erase</spa
 </blockquote>
 <p><code>__lg(8) = 3</code></p>
 <p><code>__lg(15) = 3</code></p>
-<h2 id="builtin-内置位运算函数"><a href="#builtin-内置位运算函数" class="headerlink" title="__builtin_ 内置位运算函数"></a>__builtin_ 内置位运算函数</h2><blockquote>
+<h2 id="builtin-内置位运算函数"><a href="#builtin-内置位运算函数" class="headerlink" title="__builtin_ 内置位运算函数"></a><code>__builtin_</code> 内置位运算函数</h2><blockquote>
 <p>需要注意：内置函数有相应的<code>unsigned lnt</code>和<code>unsigned long long</code>版本，<code>unsigned long long</code>只需要在函数名后面加上<code>ll</code>就可以了，比如<code>__builtin_clzll(x)</code> ，默认是32位<code>unsigned int</code></p>
 <p>很多题目和 <code>long long</code> 数据类型有关，如有需要注意添加 <code>ll</code> </p>
 </blockquote>
-<h3 id="builtin-ffs"><a href="#builtin-ffs" class="headerlink" title="__builtin_ffs"></a>__builtin_ffs</h3><pre><code>__builtin_ffs(x)</code></pre><blockquote>
+<ul>
+<li><code>__builtin_ffs</code> </li>
+</ul>
+<pre><code>__builtin_ffs(x)</code></pre><blockquote>
 <p>二进制中对应最后一位<code>1</code>的位数，比如<code>4</code>会返回<code>3</code>（100）</p>
 </blockquote>
-<h3 id="builtin-popcount"><a href="#builtin-popcount" class="headerlink" title="__builtin_popcount"></a>__builtin_popcount</h3><pre><code>__builtin_popcount(x)</code></pre><blockquote>
+<ul>
+<li><code>__builtin_popcount</code></li>
+</ul>
+<pre><code>__builtin_popcount(x)</code></pre><blockquote>
 <p><code>x</code>中<code>1</code>的个数</p>
 </blockquote>
-<h3 id="builtin-ctz"><a href="#builtin-ctz" class="headerlink" title="__builtin_ctz"></a>__builtin_ctz</h3><pre><code>__builtin_ctz(x)</code></pre><blockquote>
+<ul>
+<li><code>__builtin_ctz</code></li>
+</ul>
+<pre><code>__builtin_ctz(x)</code></pre><blockquote>
 <p><code>x</code>末尾<code>0</code>的个数（<code>count tail zero</code>）</p>
 </blockquote>
-<h3 id="builtin-clz"><a href="#builtin-clz" class="headerlink" title="__builtin_clz"></a>__builtin_clz</h3><pre><code>__builtin_clz(x)</code></pre><blockquote>
+<ul>
+<li><code>__builtin_clz</code></li>
+</ul>
+<pre><code>__builtin_clz(x)</code></pre><blockquote>
 <p><code>x</code>前导<code>0</code>的个数（<code>count leading zero</code>）</p>
 </blockquote>
 <pre class="line-numbers language-cpp"><code class="language-cpp">cout <span class="token operator">&lt;&lt;</span> <span class="token function">__builtin_clz</span><span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 26</span>
 <span class="token comment" spellcheck="true">//因为共有6位,默认数据范围为32位，32 - 6 = 26</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h3 id="builtin-parity"><a href="#builtin-parity" class="headerlink" title="__builtin_parity"></a>__builtin_parity</h3><pre><code>__builtin_parity(x)</code></pre><blockquote>
+<ul>
+<li><code>__builtin_parity</code></li>
+</ul>
+<pre><code>__builtin_parity(x)</code></pre><blockquote>
 <p><code>x</code>中1的个数的奇偶性， 奇数输出<code>1</code>，偶数输出<code>0</code></p>
 </blockquote>
 <blockquote>
@@ -3055,7 +3071,7 @@ b<span class="token punctuation">.</span><span class="token function">erase</spa
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="树上拓扑序计数|树形DP">
+                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="树上拓扑序计数|树形DP">
                         
                         <span class="card-title">树上拓扑序计数|树形DP</span>
                     </div>
@@ -3086,12 +3102,12 @@ b<span class="token punctuation">.</span><span class="token function">erase</spa
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/树形DP/" target="_blank">
-                        <span class="chip bg-color">树形DP</span>
-                    </a>
-                    
                     <a href="/tags/组合数学/" target="_blank">
                         <span class="chip bg-color">组合数学</span>
+                    </a>
+                    
+                    <a href="/tags/树形DP/" target="_blank">
+                        <span class="chip bg-color">树形DP</span>
                     </a>
                     
                 </div>
@@ -3109,7 +3125,7 @@ b<span class="token punctuation">.</span><span class="token function">erase</spa
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="【裴蜀定理】CF1055C Lucky Days">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="【裴蜀定理】CF1055C Lucky Days">
                         
                         <span class="card-title">【裴蜀定理】CF1055C Lucky Days</span>
                     </div>
@@ -3325,7 +3341,7 @@ b<span class="token punctuation">.</span><span class="token function">erase</spa
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">93.9k</span>
+            <span class="white-color">94.3k</span>
             
 
             <br>
