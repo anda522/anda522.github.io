@@ -12,8 +12,8 @@
     <meta name="description" content="CF1181C Flag子矩阵数量统计题目介绍题目链接：
 https://codeforces.com/problemset/problem/1181/C
 
-思路维护变量统计子矩阵一般都需要维护一些数组，大部分都是纵向维护或者横向维护。
-本">
+大意：有个人想要卖国旗。
+一面国旗可以抽象为一个 $n \times m$ 的矩形">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -338,7 +338,7 @@ https://codeforces.com/problemset/problem/1181/C
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/25.png')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -499,7 +499,7 @@ https://codeforces.com/problemset/problem/1181/C
                 <!-- 显示更新日期 -->
                 <div class="post-update-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-08-04
+                    2023-12-31
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -513,7 +513,7 @@ https://codeforces.com/problemset/problem/1181/C
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.3k
                 </div>
                 
 
@@ -538,7 +538,11 @@ https://codeforces.com/problemset/problem/1181/C
             <div id="articleContent">
                 <h1 id="CF1181C-Flag子矩阵数量统计"><a href="#CF1181C-Flag子矩阵数量统计" class="headerlink" title="CF1181C Flag子矩阵数量统计"></a>CF1181C Flag子矩阵数量统计</h1><h2 id="题目介绍"><a href="#题目介绍" class="headerlink" title="题目介绍"></a>题目介绍</h2><p>题目链接：</p>
 <p><a href="https://codeforces.com/problemset/problem/1181/C" target="_blank" rel="noopener">https://codeforces.com/problemset/problem/1181/C</a></p>
-<p><img src="2396599521/image-20220629160509729.png" alt="题目描述"></p>
+<blockquote>
+<p>大意：有个人想要卖国旗。</p>
+<p>一面国旗可以抽象为一个 $n \times m$ 的矩形，每一个位置有一个颜色。这个矩形由自上而下三条横向的颜色带组成，每一条颜色带宽度相等，而且相邻两个颜色带颜色不能相同。</p>
+<p>现在你有一个 $n \times m$ 的矩形，你需要计算其中能够称为国旗的子矩形数量</p>
+</blockquote>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><h3 id="维护变量"><a href="#维护变量" class="headerlink" title="维护变量"></a>维护变量</h3><p>统计子矩阵一般都需要维护一些数组，大部分都是纵向维护或者横向维护。</p>
 <p>本题维护两个数组：</p>
 <p>$d[i][j]$ : $(i, j)$位置向下最多延伸相同颜色的块数</p>
@@ -554,11 +558,11 @@ https://codeforces.com/problemset/problem/1181/C
 <h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>先考虑宽度为1时，在纵向方向上能否构成国旗</p>
 <p>即下面的条件（满足的旗子共三行，如题要求）</p>
 <ul>
-<li><p>$i + 3 * d[i][j] - 1 &lt;= n$  第三行的旗子不越界</p>
+<li><p>$i + 3 \times d[i][j] - 1 &lt;= n$  第三行的旗子不越界</p>
 </li>
 <li><p>$d[i][j] == d[i + d[i][j]][j]$ 第二行和第一行的长度相同</p>
 </li>
-<li><p>$d[i + 2 * d[i][j]][j] &gt;= d[i][j]$ 第三行的长度<strong>大于等于</strong>上面的行长度（大于等于请思考为什么，只要大于等于就能统计上）</p>
+<li><p>$d[i + 2 \times d[i][j]][j] &gt;= d[i][j]$ 第三行的长度<strong>大于等于</strong>上面的行长度（大于等于请思考为什么，只要大于等于就能统计上）</p>
 </li>
 </ul>
 <p>纵向能够形成旗子，那么考虑改纵向旗子的贡献。</p>
@@ -592,7 +596,7 @@ https://codeforces.com/problemset/problem/1181/C
 <p>但是上下各多出一个字母，如果统计最小值时，上面部分用到前缀最小值数组，就会把第一行向右扩展的长度统计上去，造成统计错误。下面部分同理。</p>
 <p>故上面部分需要用到后缀数组，下面部分需要用到前缀数组，中间部分无所谓</p>
 </blockquote>
-<p>则当前列能够造成的贡献为 $min(lmn[i][j], r[i + 2 * d[i][j] - 1][j], r[i + 3 * d[i][j] - 1][j])$</p>
+<p>则当前列能够造成的贡献为 $min(lmn[i][j], r[i + 2 \times d[i][j] - 1][j], r[i + 3 \times d[i][j] - 1][j])$</p>
 <p>具体整体实现见代码。</p>
 <h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h></span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
@@ -1166,7 +1170,7 @@ https://codeforces.com/problemset/problem/1181/C
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="2021年度总结">
+                        <img src="/medias/featureimages/25.png" class="responsive-img" alt="2021年度总结">
                         
                         <span class="card-title">2021年度总结</span>
                     </div>
@@ -1220,7 +1224,7 @@ https://codeforces.com/problemset/problem/1181/C
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="阶乘逆元和线性逆元">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="阶乘逆元和线性逆元">
                         
                         <span class="card-title">阶乘逆元和线性逆元</span>
                     </div>
@@ -1228,8 +1232,11 @@ https://codeforces.com/problemset/problem/1181/C
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            逆元简介$a \times b \equiv  1 ( mod\,\,p)$,可以称a是b在模p情况下的逆元.逆元其实就是可以看作倒数
-阶乘逆元方式一:通过费马小定理求逆元：当p为素数，并且gcd(a,p)=1时，我们有$a^{p−1}≡1
+                            逆元简介$a \times b \equiv  1 ( mod\,\,p)$,可以称a是b在模p情况下的逆元.
+逆元其实就是可以看作倒数
+阶乘逆元方式一:
+通过费马小定理求逆元：
+当p为素数，并且gcd(a,p)=1时，我们有$a^{p−1
                         
                     </div>
                     <div class="publish-info">
@@ -1440,7 +1447,7 @@ https://codeforces.com/problemset/problem/1181/C
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">95.2k</span>
+            <span class="white-color">95.4k</span>
             
 
             <br>
