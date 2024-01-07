@@ -367,7 +367,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="2021年度总结">
+                            <img src="/medias/featureimages/25.png" class="responsive-img" alt="2021年度总结">
                             
                             <span class="card-title">2021年度总结</span>
                         </div>
@@ -419,7 +419,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/3.png" class="responsive-img" alt="CF1181C Flag-子矩阵数量统计">
+                            <img src="/medias/featureimages/25.png" class="responsive-img" alt="CF1181C Flag-子矩阵数量统计">
                             
                             <span class="card-title">CF1181C Flag-子矩阵数量统计</span>
                         </div>
@@ -474,7 +474,7 @@ https://codeforces.com/problemset/problem/1181/C
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="阶乘逆元和线性逆元">
+                            <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="阶乘逆元和线性逆元">
                             
                             <span class="card-title">阶乘逆元和线性逆元</span>
                         </div>
@@ -529,7 +529,7 @@ https://codeforces.com/problemset/problem/1181/C
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="容斥定理">
+                            <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="容斥定理">
                             
                             <span class="card-title">容斥定理</span>
                         </div>
@@ -580,7 +580,7 @@ https://codeforces.com/problemset/problem/1181/C
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="C++ STL超全总结">
+                            <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="C++ STL超全总结">
                             
                             <span class="card-title">C++ STL超全总结</span>
                         </div>
@@ -637,7 +637,7 @@ https://codeforces.com/problemset/problem/1181/C
                         <div class="card-image">
                             
                             
-                            <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="2020年度总结">
+                            <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="2020年度总结">
                             
                             <span class="card-title">2020年度总结</span>
                         </div>
@@ -715,7 +715,7 @@ https://codeforces.com/problemset/problem/1181/C
     <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
-            &copy; 2020-2023 行码棋 版权所有
+            &copy; 2020-<span id="CurrentYear"></span> 行码棋 版权所有
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
@@ -833,6 +833,7 @@ https://codeforces.com/problemset/problem/1181/C
         var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
         var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
         document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+        document.getElementById("CurrentYear").innerHTML = todayYear;
     }
     siteTime();
 </script>

@@ -875,9 +875,9 @@
       
         <tags>
             
-            <tag> docker </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> docker </tag>
             
         </tags>
       
@@ -902,9 +902,9 @@
       
         <tags>
             
-            <tag> Linux </tag>
-            
             <tag> git </tag>
+            
+            <tag> Linux </tag>
             
         </tags>
       

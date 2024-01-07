@@ -339,7 +339,7 @@ d">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -1114,7 +1114,7 @@ df <span class="token operator">=</span> pd<span class="token punctuation">.</sp
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="matplotlib画图">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="matplotlib画图">
                         
                         <span class="card-title">matplotlib画图</span>
                     </div>
@@ -1177,7 +1177,7 @@ df <span class="token operator">=</span> pd<span class="token punctuation">.</sp
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="C++11 多线程">
+                        <img src="/medias/featureimages/9.png" class="responsive-img" alt="C++11 多线程">
                         
                         <span class="card-title">C++11 多线程</span>
                     </div>
@@ -1395,7 +1395,7 @@ C++11 左右值引用：https://blog.csdn.net
     <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
-            &copy; 2020-2023 行码棋 版权所有
+            &copy; 2020-<span id="CurrentYear"></span> 行码棋 版权所有
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
@@ -1513,6 +1513,7 @@ C++11 左右值引用：https://blog.csdn.net
         var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
         var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
         document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+        document.getElementById("CurrentYear").innerHTML = todayYear;
     }
     siteTime();
 </script>

@@ -335,7 +335,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.png')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -1128,7 +1128,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="C++ STL总结">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="C++ STL总结">
                         
                         <span class="card-title">C++ STL总结</span>
                     </div>
@@ -1189,7 +1189,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/9.png" class="responsive-img" alt="nginx知识总结">
+                        <img src="/medias/featureimages/3.png" class="responsive-img" alt="nginx知识总结">
                         
                         <span class="card-title">nginx知识总结</span>
                     </div>
@@ -1405,7 +1405,7 @@ nginx配置http块se
     <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
-            &copy; 2020-2023 行码棋 版权所有
+            &copy; 2020-<span id="CurrentYear"></span> 行码棋 版权所有
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
@@ -1523,6 +1523,7 @@ nginx配置http块se
         var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
         var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
         document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+        document.getElementById("CurrentYear").innerHTML = todayYear;
     }
     siteTime();
 </script>

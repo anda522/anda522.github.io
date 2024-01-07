@@ -338,7 +338,7 @@ us">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.png')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -1517,7 +1517,7 @@ T <span class="token function">power</span><span class="token punctuation">(</sp
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="2022牛客多校补题3">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="2022牛客多校补题3">
                         
                         <span class="card-title">2022牛客多校补题3</span>
                     </div>
@@ -1569,7 +1569,7 @@ LCA的权值大于树B上LCA的
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="2022牛客多校2补题">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="2022牛客多校2补题">
                         
                         <span class="card-title">2022牛客多校2补题</span>
                     </div>
@@ -1781,7 +1781,7 @@ LCA的权值大于树B上LCA的
     <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
-            &copy; 2020-2023 行码棋 版权所有
+            &copy; 2020-<span id="CurrentYear"></span> 行码棋 版权所有
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
@@ -1899,6 +1899,7 @@ LCA的权值大于树B上LCA的
         var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
         var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
         document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+        document.getElementById("CurrentYear").innerHTML = todayYear;
     }
     siteTime();
 </script>
