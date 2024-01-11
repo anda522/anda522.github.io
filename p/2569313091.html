@@ -75,9 +75,13 @@
         document.write('<script src="' + src + '" id="sozz"><\/script>');
         })();
     </script>
-<meta name="generator" content="Hexo 7.0.0">
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body>
@@ -86,7 +90,7 @@
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
-                <a href="../index.html" class="waves-effect waves-light">
+                <a href="/" class="waves-effect waves-light">
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
@@ -332,7 +336,7 @@
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
-                location.href = '../index.html';
+                location.href = '/';
             }
         }
     })();
@@ -469,7 +473,7 @@
                     
                     <div class="article-tag">
                         
-                        <a href="../tags/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%93/" target="_blank">
+                        <a href="/tags/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%93/" target="_blank">
                             <span class="chip bg-color">阶段性总结</span>
                         </a>
                         
@@ -481,7 +485,7 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="../categories/%E5%93%B2%E6%80%9D/" class="post-category" target="_blank">
+                        <a href="/categories/%E5%93%B2%E6%80%9D/" class="post-category" target="_blank">
                             哲思
                         </a>
                         
@@ -540,7 +544,9 @@
 <p>从2023-11-20建文件，打完最后一场济南就算正式退了，打完比赛还要立马交一个实训课的证明，还需搞一下，所以先起个草稿，打算写一篇正式的退役记来记录和纪念我这跌跌撞撞、无所成绩的ACM生涯。</p>
 </blockquote>
 <p>对我的生涯总结一句话：在众多ACMer中相对来说可以算是比较失败，但是考虑到零基础和其他的精力分配，也算是不那么惨的。</p>
-<h1 id="大一-初遇ACM"><a href="#大一-初遇ACM" class="headerlink" title="大一-初遇ACM"></a>大一-初遇ACM</h1><h2 id="1-大一上-幸运的眷顾"><a href="#1-大一上-幸运的眷顾" class="headerlink" title="1 大一上-幸运的眷顾"></a>1 大一上-幸运的眷顾</h2><p>作为一个完全没有任何计算机基础的人（大学之前可能在初中和高中上过小于等于10次的微机课），我对计算机的感觉可以说是完全没有。从大学上来不了解ACM，敲键盘还是需要从头开始学起，一个接一个字母看着敲。</p>
+<h1 id="大一-初遇acm"><a class="markdownIt-Anchor" href="#大一-初遇acm"></a> 大一-初遇ACM</h1>
+<h2 id="1-大一上-幸运的眷顾"><a class="markdownIt-Anchor" href="#1-大一上-幸运的眷顾"></a> 1 大一上-幸运的眷顾</h2>
+<p>作为一个完全没有任何计算机基础的人（大学之前可能在初中和高中上过小于等于10次的微机课），我对计算机的感觉可以说是完全没有。从大学上来不了解ACM，敲键盘还是需要从头开始学起，一个接一个字母看着敲。</p>
 <p>大一前的暑假，被某些Python培训班的广告蛊惑了（但没交智商税，毕竟没钱），励志学好Python赚大钱，所以可能暑假跟着他们的试听课照着敲了点Python程序，但是对程序的概念是完全的没有，至此我照模照样的会敲点Python，怀着学技术赚大钱的志向来到了大学。</p>
 <p>来到大学，青涩、无知，我就是从计协社团来寝室宣传才知道ACM的，但是并无概念。他们当时办了新生赛，我当时还对“比赛”这两个字有着崇高的敬意，便和舍友开黑跟着打了四场，至此便算是开端。</p>
 <p>那么大一上我就跟着某个群内学长的意见刷了院OJ前50道题，杭电刷了20道左右的题目，以此就应对12月份的招新赛，最终以5题拿下进入实验室的资格，就在排名边缘，很吓人。（此时想一下，如果没有写出来5道题，我就可能没有现在所有的情况了，庆幸。）</p>
@@ -548,14 +554,16 @@
 <p>在刷题时期，我斗胆投了创新创业某个团队的简历，然后去面试，现在还记得，套了个很花哨的PPT模板，内容写了一大堆，写我会思维导图，记忆宫殿，态度，认几个Python语句，真实好笑。没想到最后竟然进了，至此我认为我的学习生活出现了第一个转折点，我有了学习的工位，同时学姐要求每周进行学习总结然后发到邮箱中，我硬是坚持了好几个学期，我认为真的很重要。（感谢学姐，也感谢我的坚持总结。）没有创新创业团队的入选，没有学姐总结汇报的要求，没有长达几个学期的坚持，就没有今天。</p>
 </blockquote>
 <p>有了进ACM实验室的资格，心惊胆战不敢去实验室，也庆幸有哈爹的某些言语和不拘小节的行事作风让我在ACM实验室能够继续呆下去，距离期末还是有个几周，我实验室工位和北三团队工位交叉去坐，实验室里可能在继续写C语言的入门语法题，没人指导，没人引导，北三工位就学Python的爬虫知识（不知道哪来的网课资源）。期末前直接不去ACM实验室，在北三复习期末。</p>
-<p>那么，大一上基本就要结束了，临近期末，C语言也是没有学到多熟练，C++基本都不会，写题才开始应着学长的要求去照搬C++的输入输出语句去写。</p>
+<p>那么，大一上基本就要结束了，临近期末，C语言也是没有学到多熟练，C<ins>基本都不会，写题才开始应着学长的要求去照搬C</ins>的输入输出语句去写。</p>
 <p>因为是疫情，没有复习周，直接考试，所幸期末竟然没有考的很差，记得排名年级第三，这也为后面各种事情锚定了风向。</p>
-<h2 id="2-大一下-缓慢起步"><a href="#2-大一下-缓慢起步" class="headerlink" title="2 大一下-缓慢起步"></a>2 大一下-缓慢起步</h2><p>大一下，延续了交叉去实验室和北三的惯例，此时算法还没学，一直在写入门的题目，北三事务还比较多，实验室和北三团队交叉去。</p>
+<h2 id="2-大一下-缓慢起步"><a class="markdownIt-Anchor" href="#2-大一下-缓慢起步"></a> 2 大一下-缓慢起步</h2>
+<p>大一下，延续了交叉去实验室和北三的惯例，此时算法还没学，一直在写入门的题目，北三事务还比较多，实验室和北三团队交叉去。</p>
 <p>实验室的招新赛和训练赛我是一场没有落下，不过实验室拉的算法专题我是基本很难进行下去，便去写自己的题了，真后悔当初没有坚持去写算法专题。下学期再强力哈爹的带领下，拿到了ICPC省赛的参赛名额，也很幸运能够拿到银奖，记得当时我只做出了一个微积分求积分的题目（仅仅是因为我高数写题写的多一点，现在已经忘完了）和签到题，其他的基本都由队友操刀，真的太菜了。不过能够见到sw，菜瓜，浩哥齐聚，还是非常有幸的。</p>
 <p>所幸是实验室次数去的比较多，期间一直在刷题，进展缓慢，算法也没学多少，可能还得靠视频去学，所幸去的次数多引起了浩哥的注意，比较幸运当了计协的会长，现在看来，确实算是转折。</p>
 <p>那么本学期，训练的比较多，但是学的很是缓慢。拿了ICPC省银，期末考试前复习同样没去实验室，成绩有所倒退，炸了物理和概率论两门大学分课，学期平均绩点是3.63。</p>
 <p>暑假参加了创新创业团队那报名的比赛，线上参赛，拿了一等奖，可能就正式宣告后来我在该团队的隐退。</p>
-<h1 id="大二-夹杂提升"><a href="#大二-夹杂提升" class="headerlink" title="大二-夹杂提升"></a>大二-夹杂提升</h1><blockquote>
+<h1 id="大二-夹杂提升"><a class="markdownIt-Anchor" href="#大二-夹杂提升"></a> 大二-夹杂提升</h1>
+<blockquote>
 <p>疫情已经让我忘记了很多细节，基本没有留下记忆的事件。</p>
 </blockquote>
 <p>大二上，有幸拿到了ICPC沈阳的参赛资格，线上牛客参赛，但是那时候肯定打铁啊，啥都不会，只做了2个签到，校内倒数。</p>
@@ -566,7 +574,8 @@
 <p>这学期本来是有CCPC省赛参加的，但比赛日临近期末，省内流传出疫情提前放假回家的消息，最终确认这消息是真的，省赛只能推迟。只能说疫情又一次阻隔了进程。</p>
 <p>这学期我提升了很多方面，计协会长和ACM培养了我极大的责任感，计协会长这个职务又极大程度push我学了很多Linux服务器相关的东西（当然没有皮卡丘学长我的推销我是没有今天的），工程能力有了一定的提升，管理思维也发生了很多转变。</p>
 <p>北三创新创业团队那边我正常参加会议，但是由于疫情会是没有开几次，这边几乎所有的团队感觉算是停摆了，这就是疫情的冲击！我也打算慢慢隐退这边的事务了，将中心逐渐向ACM这边移动，两者之间抉择，我毫无疑问地选择ACM。</p>
-<h1 id="大三-时摆时训-或有微光"><a href="#大三-时摆时训-或有微光" class="headerlink" title="大三-时摆时训,或有微光"></a>大三-时摆时训,或有微光</h1><p>刚开学几周内参加了上半年推迟的省赛，只能说这次比赛办的很及时，办完整个省立马进入了封锁状态，然后就是封宿舍到放假的日子。</p>
+<h1 id="大三-时摆时训或有微光"><a class="markdownIt-Anchor" href="#大三-时摆时训或有微光"></a> 大三-时摆时训,或有微光</h1>
+<p>刚开学几周内参加了上半年推迟的省赛，只能说这次比赛办的很及时，办完整个省立马进入了封锁状态，然后就是封宿舍到放假的日子。</p>
 <p>大三上，参加了CCPC广州站，ICPC沈阳，ICPC南京，但是那时候疫情封校，已经封在宿舍里面了，根本打不了，打基本都是队伍里面一个人单挑，然后线上人数一般都是七八百队，只有210队有奖，很难拿奖。</p>
 <p>而且封在宿舍，训练变得越来越少，最后直接摆了。整天都是接受着疫情的各种消息，已经被疫情整焦虑了，整整封在了宿舍一个学期，而且还是提前放假回家。</p>
 <p>一会是富士康的消息，一会又是哪里封城的消息，一会又是哪里bao乱的消息，一会又是哪里火灾的消息，消息声不绝于耳，只能说让人麻木了，更多的只剩下了失望。</p>
@@ -581,20 +590,22 @@
 <p>我感觉已经到了训练的末声了，且打算打完省赛就全力准备推免，之后退役。在CCPC省赛和ICPC省赛中，由于队友强大的助力，都拿了金，队友功不可没，没有队友支持，我没有现在的境况。</p>
 <p>打完比赛，也就完全去进行保研方面的准备了，这学期末真的很是紧张，真的惊心动魄。</p>
 <blockquote>
-<p>有关推免，请移步：<a href="https://wyqz.top/p/2802848655.html">https://wyqz.top/p/2802848655.html</a> </p>
+<p>有关推免，请移步：<a href="https://wyqz.top/p/2802848655.html">https://wyqz.top/p/2802848655.html</a></p>
 </blockquote>
-<h1 id="大四-迟来的终幕"><a href="#大四-迟来的终幕" class="headerlink" title="大四-迟来的终幕"></a>大四-迟来的终幕</h1><p>大三下和大四初全力准备了保研，很幸运能够保到一个理想的学校。保完之后基本就要去找其他事干了，比如找个实习。</p>
+<h1 id="大四-迟来的终幕"><a class="markdownIt-Anchor" href="#大四-迟来的终幕"></a> 大四-迟来的终幕</h1>
+<p>大三下和大四初全力准备了保研，很幸运能够保到一个理想的学校。保完之后基本就要去找其他事干了，比如找个实习。</p>
 <p>本学期本来就要退役去找其他事情干的，基本就算是终幕了。但是有个队伍缺队友找我组队，我就直接答应了，进而给我的ACM生涯带来更长的拖尾。</p>
 <p>第一场ICPC南京站，自认为队友之间的配合太离谱了，最终与奖牌错失了一个罚时，与奖牌失之交臂。</p>
 <p>第二场CCPC深圳站，吸取了第一场的教训，先各自想题，理性讨论。最后顺利拿牌，虽然是个铜吧。</p>
-<p>第三场ICPC济南，怎么会被一个恶心的签到题卡一整场，不然又拿牌了，还有一个题一直被卡常数，一直T，$Nlog^2N$  的复杂度，多了一个log，最后还没有优化掉。</p>
-<p> 打完正式宣告退役，我的ACM生涯进行的并不好，但也不至于太差。也希望这个中肯的评价更加激励我之后的进程，当初选择打ACM可能并不是为了那一个结果，本身过程就艰难曲折，但还是毅然投入，可能就是别人说的瘾吧。</p>
+<p>第三场ICPC济南，怎么会被一个恶心的签到题卡一整场，不然又拿牌了，还有一个题一直被卡常数，一直T，<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mi>l</mi><mi>o</mi><msup><mi>g</mi><mn>2</mn></msup><mi>N</mi></mrow><annotation encoding="application/x-tex">Nlog^2N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.008548em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span></span></span></span>  的复杂度，多了一个log，最后还没有优化掉。</p>
+<p>打完正式宣告退役，我的ACM生涯进行的并不好，但也不至于太差。也希望这个中肯的评价更加激励我之后的进程，当初选择打ACM可能并不是为了那一个结果，本身过程就艰难曲折，但还是毅然投入，可能就是别人说的瘾吧。</p>
 <blockquote>
 <p>没想到三场都在现场见了杜老师，真的很有缘分，一下子把对神的想象拉到了实际中，更振奋更激荡。</p>
 </blockquote>
-<h1 id="一些感受"><a href="#一些感受" class="headerlink" title="一些感受"></a>一些感受</h1><p>我的ACM之旅，基本每年都要换队友，有一个个队友不打了，我还在打。每年的队友都不一样，实力水平和训练意愿都截然不同，所以我能达到这样的结果已经够感到知足且满足了。那么接下来便是总结期间的教训，以防后来继续犯错误。</p>
+<h1 id="一些感受"><a class="markdownIt-Anchor" href="#一些感受"></a> 一些感受</h1>
+<p>我的ACM之旅，基本每年都要换队友，有一个个队友不打了，我还在打。每年的队友都不一样，实力水平和训练意愿都截然不同，所以我能达到这样的结果已经够感到知足且满足了。那么接下来便是总结期间的教训，以防后来继续犯错误。</p>
 <p>只能说，前三年我被疫情耽误的太多了。可能还会有人说，如果没有疫情，你会好到哪去，难道不是因为自己的原因吗？我想，没有疫情起码我不会变得比现在的情况更差，我会更早的了解到关于ACM的学习方式，我可能会懈怠，但疫情是整整把我要走的路硬生生地延长了周期，导致后面能走的路越来越少。</p>
-<p> 计算机零基础搞ACM整个历程真就难受，最后走出来的结果也基本都是不好的，中间有很多次机会放弃ACM，但是还是选择坚持打了下去，可能这就是那一股愚蠢的执念吧。</p>
+<p>计算机零基础搞ACM整个历程真就难受，最后走出来的结果也基本都是不好的，中间有很多次机会放弃ACM，但是还是选择坚持打了下去，可能这就是那一股愚蠢的执念吧。</p>
 
             </div>
             <hr />
@@ -757,7 +768,7 @@
                   property="dct:title" rel="dct:type">
                     《折腾长久，终退役-致我的ACM生涯》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/p/2569313091.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 行码棋
             </a> 采用
@@ -1091,7 +1102,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="360366309.html">
+                <a href="/p/360366309.html">
                     <div class="card-image">
                         
                         
@@ -1103,14 +1114,14 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            C/C++指针操作整理
+                             C/C++指针操作整理
+
 面向曾经学习过指针的人，并非针对究极初学者。
 
-一维指针数据类型存储的地址，指向数据存储的地址，可以使用 &amp;运算符取变量的地址，将其赋给指针变量。
+ 一维指针
+数据类型存储的地址，指向数据存储的地址，可以使用 &amp;运算符取变量的地址，将其赋给指针变量。
 int a = 2;
-int *p = &amp;a;
-
-同
+int *p = &amp;a
                         
                     </div>
                     <div class="publish-info">
@@ -1121,7 +1132,7 @@ int *p = &amp;a;
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/CPP/" class="post-category" target="_blank">
+                            <a href="/categories/CPP/" class="post-category" target="_blank">
                                     CPP
                                 </a>
                             
@@ -1132,7 +1143,7 @@ int *p = &amp;a;
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/CPP/" target="_blank">
+                    <a href="/tags/CPP/" target="_blank">
                         <span class="chip bg-color">CPP</span>
                     </a>
                     
@@ -1147,7 +1158,7 @@ int *p = &amp;a;
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="2589851505.html">
+                <a href="/p/2589851505.html">
                     <div class="card-image">
                         
                         
@@ -1160,11 +1171,11 @@ int *p = &amp;a;
                     <div class="summary block-with-text">
                         
                             
-实验代码记录：https://github.com/anda522/LabCode/tree/main/Mit6.S081 
+实验代码记录：https://github.com/anda522/LabCode/tree/main/Mit6.S081
 课程教材翻译：https://xv6.dgs.zone/ ，对理解感觉很重要
 
-xv6系统为 RISC-V 
-1
+xv6系统为 RISC-V
+ 1 
                         
                     </div>
                     <div class="publish-info">
@@ -1175,7 +1186,7 @@ xv6系统为 RISC-V
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/" class="post-category" target="_blank">
+                            <a href="/categories/%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/" class="post-category" target="_blank">
                                     课程记录
                                 </a>
                             
@@ -1186,7 +1197,7 @@ xv6系统为 RISC-V
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" target="_blank">
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" target="_blank">
                         <span class="chip bg-color">学习总结</span>
                     </a>
                     
@@ -1345,25 +1356,6 @@ xv6系统为 RISC-V
 
 
 
-<script src="https://lib.baomitu.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
-
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-<!-- 代码语言 -->
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-<!-- 代码块复制 -->
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
-<!-- 代码块收缩 -->
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> 
-<!-- 代码块折行 -->
-<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
-
-
     <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
@@ -1371,7 +1363,7 @@ xv6系统为 RISC-V
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">97.2k</span>
+            <span class="white-color">102.5k</span>
             
 
             <br>
@@ -1422,7 +1414,7 @@ xv6系统为 RISC-V
 
 
 
-    <a href="../atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fa fa-rss"></i>
     </a>
 </div>

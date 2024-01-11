@@ -9,10 +9,11 @@
     <meta name="baidu-site-verification" content="code-L7AVcsbU14" />
     <meta name="google-site-verification" content="x4QfrBHn9imI1RhTNCB8RD8Q2Rx6rE_zylSBptBgdZY" />
     <!-- <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" /> -->
-    <meta name="description" content="Tmux命令tmux 是一个终端复用器，可以在一个窗口中运行多个终端会话。
+    <meta name="description" content=" Tmux命令
+tmux 是一个终端复用器，可以在一个窗口中运行多个终端会话。
 一个 tmux 可以包含多个 session ，一个 session 可以包含多个 window ，一个 window 可以包含多个 pane 。
 结构如下：
-tm">
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -74,9 +75,13 @@ tm">
         document.write('<script src="' + src + '" id="sozz"><\/script>');
         })();
     </script>
-<meta name="generator" content="Hexo 7.0.0">
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body>
@@ -85,7 +90,7 @@ tm">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
-                <a href="../index.html" class="waves-effect waves-light">
+                <a href="/" class="waves-effect waves-light">
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
@@ -331,7 +336,7 @@ tm">
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
-                location.href = '../index.html';
+                location.href = '/';
             }
         }
     })();
@@ -468,7 +473,7 @@ tm">
                     
                     <div class="article-tag">
                         
-                        <a href="../tags/Linux/" target="_blank">
+                        <a href="/tags/Linux/" target="_blank">
                             <span class="chip bg-color">Linux</span>
                         </a>
                         
@@ -480,7 +485,7 @@ tm">
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="../categories/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/" class="post-category" target="_blank">
+                        <a href="/categories/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/" class="post-category" target="_blank">
                             开发知识
                         </a>
                         
@@ -511,7 +516,7 @@ tm">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    959
+                    961
                 </div>
                 
 
@@ -534,7 +539,8 @@ tm">
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Tmux命令"><a href="#Tmux命令" class="headerlink" title="Tmux命令"></a>Tmux命令</h1><p><code>tmux</code> 是一个终端复用器，可以在一个窗口中运行多个终端会话。</p>
+                <h1 id="tmux命令"><a class="markdownIt-Anchor" href="#tmux命令"></a> Tmux命令</h1>
+<p><code>tmux</code> 是一个终端复用器，可以在一个窗口中运行多个终端会话。</p>
 <p>一个 <code>tmux</code> 可以包含多个 <code>session</code> ，一个 <code>session</code> 可以包含多个 <code>window</code> ，一个 <code>window</code> 可以包含多个 <code>pane</code> 。</p>
 <p>结构如下：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">tmux:
@@ -549,58 +555,61 @@ tm">
         <span class="token punctuation">..</span>.
     session <span class="token number">1</span>
     session <span class="token number">2</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="1-会话命令-session"><a href="#1-会话命令-session" class="headerlink" title="1 会话命令-session"></a>1 会话命令-session</h2><ul>
+<h2 id="1-会话命令-session"><a class="markdownIt-Anchor" href="#1-会话命令-session"></a> 1 会话命令-session</h2>
+<ul>
 <li>开始新会话</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">tmux<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <ul>
 <li>开始新会话指定会话名称</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">tmux new <span class="token parameter variable">-s</span> <span class="token string">"新名称"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <ul>
 <li>连接现有会话</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">tmux attach <span class="token parameter variable">-t</span> <span class="token string">"名字"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <ul>
 <li>列出所有运行的会话</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">tmux <span class="token function">ls</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <ul>
 <li>结束特定会话</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">tmux kill-session <span class="token parameter variable">-t</span> <span class="token string">"名字"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <ul>
 <li>打开之前挂起的会话</li>
 </ul>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">tmux a<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <ul>
-<li><p>进入会话界面后，切换其他会话：<code>Ctrl + a + s</code> ，之后上下键操作选择即可</p>
+<li>
+<p>进入会话界面后，切换其他会话：<code>Ctrl + a + s</code> ，之后上下键操作选择即可</p>
 </li>
-<li><p>从当前会话中断开连接（挂起，会在后台继续运行）： <code>Ctrl + a + d</code></p>
+<li>
+<p>从当前会话中断开连接（挂起，会在后台继续运行）： <code>Ctrl + a + d</code></p>
 </li>
 </ul>
 <blockquote>
 <p>注意： <code>Ctrl+b</code> 是 <code>tmux</code> 命令的默认前缀键组合。而我修改了配置文件，自定义前缀为 <code>Ctrl+a</code></p>
 </blockquote>
-<h2 id="2-窗口命令-window"><a href="#2-窗口命令-window" class="headerlink" title="2 窗口命令-window"></a>2 窗口命令-window</h2><ul>
-<li><p>创建新窗口： <code>Ctrl + a + c</code></p>
+<h2 id="2-窗口命令-window"><a class="markdownIt-Anchor" href="#2-窗口命令-window"></a> 2 窗口命令-window</h2>
+<ul>
+<li>
+<p>创建新窗口： <code>Ctrl + a + c</code></p>
 </li>
-<li><p>切换到前一个/下一个窗口： <code>Ctrl + a + p/n</code> </p>
+<li>
+<p>切换到前一个/下一个窗口： <code>Ctrl + a + p/n</code></p>
 </li>
-<li><p>切换其他窗口： <code>Ctrl + a + w</code> ，之后上下键操作选择即可</p>
+<li>
+<p>切换其他窗口： <code>Ctrl + a + w</code> ，之后上下键操作选择即可</p>
 </li>
 </ul>
-<h2 id="3-窗格命令-pane"><a href="#3-窗格命令-pane" class="headerlink" title="3 窗格命令-pane"></a>3 窗格命令-pane</h2><ul>
-<li><p>左右分割窗格： <code>Ctrl + a + :</code></p>
+<h2 id="3-窗格命令-pane"><a class="markdownIt-Anchor" href="#3-窗格命令-pane"></a> 3 窗格命令-pane</h2>
+<ul>
+<li>
+<p>左右分割窗格： <code>Ctrl + a + :</code></p>
 </li>
-<li><p>上下分割窗格： <code>Ctrl + a + "</code></p>
+<li>
+<p>上下分割窗格： <code>Ctrl + a + "</code></p>
 </li>
 </ul>
 <blockquote>
@@ -625,16 +634,21 @@ tm">
 <p>同时鼠标可以拖动分割线进行调整大小。</p>
 </blockquote>
 <ul>
-<li><p>将当前窗格全屏/取消全屏： <code>Ctrl + a + z</code></p>
+<li>
+<p>将当前窗格全屏/取消全屏： <code>Ctrl + a + z</code></p>
 </li>
-<li><p>翻阅当前pane内的内容：鼠标滚轮。</p>
+<li>
+<p>翻阅当前pane内的内容：鼠标滚轮。</p>
 </li>
-<li><p><code>tmux</code> 中复制/粘贴文本的通用方式：按下 <code>Ctrl + a</code> 后松开手指，然后按 <code>[</code> ，用鼠标选中文本，被选中的文本会被自动复制到tmux的剪贴板，按下 <code>Ctrl + a</code> 后松开手指，然后按 <code>]</code>，会将剪贴板中的内容粘贴到光标处。</p>
+<li>
+<p><code>tmux</code> 中复制/粘贴文本的通用方式：按下 <code>Ctrl + a</code> 后松开手指，然后按 <code>[</code> ，用鼠标选中文本，被选中的文本会被自动复制到tmux的剪贴板，按下 <code>Ctrl + a</code> 后松开手指，然后按 <code>]</code>，会将剪贴板中的内容粘贴到光标处。</p>
 </li>
 </ul>
-<h1 id="Tmux配置"><a href="#Tmux配置" class="headerlink" title="Tmux配置"></a>Tmux配置</h1><h2 id="1-配置文件"><a href="#1-配置文件" class="headerlink" title="1 配置文件"></a>1 配置文件</h2><p>将 <code>.tmux.conf</code> 文件放置在用户目录下。</p>
+<h1 id="tmux配置"><a class="markdownIt-Anchor" href="#tmux配置"></a> Tmux配置</h1>
+<h2 id="1-配置文件"><a class="markdownIt-Anchor" href="#1-配置文件"></a> 1 配置文件</h2>
+<p>将 <code>.tmux.conf</code> 文件放置在用户目录下。</p>
 <p>我的配置，基本也是从网上整理的：</p>
-<p>也可见：<a href="https://github.com/anda522/config/blob/main/tmux/.tmux.conf">https://github.com/anda522/config/blob/main/tmux/.tmux.conf</a> </p>
+<p>也可见：<a href="https://github.com/anda522/config/blob/main/tmux/.tmux.conf">https://github.com/anda522/config/blob/main/tmux/.tmux.conf</a></p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># Note:</span>
 <span class="token comment"># -1 If the config is not valid, run the command "tmux source-file ~/.tmux.conf", </span>
 <span class="token comment"># then try your config again!</span>
@@ -716,8 +730,8 @@ bind-key <span class="token parameter variable">-n</span> M-h previous-window
 <span class="token builtin class-name">bind</span> <span class="token string">':'</span> split-window <span class="token parameter variable">-hc</span> <span class="token string">"#{pane_current_path}"</span>
 
 <span class="token builtin class-name">bind</span> <span class="token string">'c'</span> new-window <span class="token parameter variable">-c</span> <span class="token string">"#{pane_current_path}"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="2-配置文件不生效"><a href="#2-配置文件不生效" class="headerlink" title="2 配置文件不生效"></a>2 配置文件不生效</h2><p>在根目录下输入这个回车即可</p>
+<h2 id="2-配置文件不生效"><a class="markdownIt-Anchor" href="#2-配置文件不生效"></a> 2 配置文件不生效</h2>
+<p>在根目录下输入这个回车即可</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">tmux source-file ~/.tmux.conf<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
             </div>
@@ -881,7 +895,7 @@ bind-key <span class="token parameter variable">-n</span> M-h previous-window
                   property="dct:title" rel="dct:type">
                     《tmux命令详解及自定义配置》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/p/4190388149.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 行码棋
             </a> 采用
@@ -1215,7 +1229,7 @@ bind-key <span class="token parameter variable">-n</span> M-h previous-window
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="4162491037.html">
+                <a href="/p/4162491037.html">
                     <div class="card-image">
                         
                         
@@ -1230,8 +1244,9 @@ bind-key <span class="token parameter variable">-n</span> M-h previous-window
                             
 记录一些看到的易懂的C++文章
 
-结构体结构体内存对齐： https://www.cnblogs.com/hyacinthLJP/p/16041690.html
-静态绑定和动态绑定：https://www.cnblogs.com/lizh
+ 结构体
+结构体内存对齐： https://www.cnblogs.com/hyacinthLJP/p/16041690.html
+静态绑定和动态绑定：https://www.cnblogs.com/li
                         
                     </div>
                     <div class="publish-info">
@@ -1242,7 +1257,7 @@ bind-key <span class="token parameter variable">-n</span> M-h previous-window
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/CPP/" class="post-category" target="_blank">
+                            <a href="/categories/CPP/" class="post-category" target="_blank">
                                     CPP
                                 </a>
                             
@@ -1253,7 +1268,7 @@ bind-key <span class="token parameter variable">-n</span> M-h previous-window
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/CPP/" target="_blank">
+                    <a href="/tags/CPP/" target="_blank">
                         <span class="chip bg-color">CPP</span>
                     </a>
                     
@@ -1268,7 +1283,7 @@ bind-key <span class="token parameter variable">-n</span> M-h previous-window
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="3211658549.html">
+                <a href="/p/3211658549.html">
                     <div class="card-image">
                         
                         
@@ -1280,9 +1295,10 @@ bind-key <span class="token parameter variable">-n</span> M-h previous-window
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            自建私有git进行项目发布之前尝试过通过建立私有git仓库，来发布自己的hexo静态博客，但是失败了，今天尝试了一下午，算是有了结果。下面记录我的过程。
+                             自建私有git进行项目发布
+之前尝试过通过建立私有git仓库，来发布自己的hexo静态博客，但是失败了，今天尝试了一下午，算是有了结果。下面记录我的过程。
 我的需求：
-我有一个服务器，希望在服务器端建一个git仓库，本地部署时会同时往GitH
+我有一个服务器，希望在服务器端建一个git仓库，本地部署时会同时往Gi
                         
                     </div>
                     <div class="publish-info">
@@ -1293,7 +1309,7 @@ bind-key <span class="token parameter variable">-n</span> M-h previous-window
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/" class="post-category" target="_blank">
+                            <a href="/categories/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/" class="post-category" target="_blank">
                                     开发知识
                                 </a>
                             
@@ -1304,7 +1320,7 @@ bind-key <span class="token parameter variable">-n</span> M-h previous-window
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/git/" target="_blank">
+                    <a href="/tags/git/" target="_blank">
                         <span class="chip bg-color">git</span>
                     </a>
                     
@@ -1463,25 +1479,6 @@ bind-key <span class="token parameter variable">-n</span> M-h previous-window
 
 
 
-<script src="https://lib.baomitu.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
-
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-<!-- 代码语言 -->
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-<!-- 代码块复制 -->
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
-<!-- 代码块收缩 -->
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> 
-<!-- 代码块折行 -->
-<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
-
-
     <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
@@ -1489,7 +1486,7 @@ bind-key <span class="token parameter variable">-n</span> M-h previous-window
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">97.2k</span>
+            <span class="white-color">102.5k</span>
             
 
             <br>
@@ -1540,7 +1537,7 @@ bind-key <span class="token parameter variable">-n</span> M-h previous-window
 
 
 
-    <a href="../atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fa fa-rss"></i>
     </a>
 </div>

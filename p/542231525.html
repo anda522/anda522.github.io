@@ -11,7 +11,10 @@
     <!-- <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" /> -->
     <meta name="description" content="记录个人刷过的算法经典题目（好题），以备复习回顾。
 一级目录参考 OI Wiki 进行设置。
-语言基础1 STL1.1 set
+ 语言基础
+ 1 STL
+ 1.1 set
+
 
 
 知识点
@@ -20,8 +23,8 @@
 
 
 
-multiset插入删除，异或运算性质：相邻元素值异或小于非相邻元素异或
-ABC-">
+
+multiset插入删除，异或运算性质：相邻元素值异或小于非相邻元素">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -83,9 +86,13 @@ ABC-">
         document.write('<script src="' + src + '" id="sozz"><\/script>');
         })();
     </script>
-<meta name="generator" content="Hexo 7.0.0">
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body>
@@ -94,7 +101,7 @@ ABC-">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
-                <a href="../index.html" class="waves-effect waves-light">
+                <a href="/" class="waves-effect waves-light">
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
@@ -340,7 +347,7 @@ ABC-">
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
-                location.href = '../index.html';
+                location.href = '/';
             }
         }
     })();
@@ -477,7 +484,7 @@ ABC-">
                     
                     <div class="article-tag">
                         
-                        <a href="../tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" target="_blank">
+                        <a href="/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" target="_blank">
                             <span class="chip bg-color">学习总结</span>
                         </a>
                         
@@ -489,7 +496,7 @@ ABC-">
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="../categories/ACM/" class="post-category" target="_blank">
+                        <a href="/categories/ACM/" class="post-category" target="_blank">
                             ACM
                         </a>
                         
@@ -520,7 +527,7 @@ ABC-">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    915
+                    925
                 </div>
                 
 
@@ -545,7 +552,10 @@ ABC-">
             <div id="articleContent">
                 <p>记录个人刷过的算法经典题目（好题），以备复习回顾。</p>
 <p>一级目录参考 <a href="https://oi-wiki.org/">OI Wiki</a> 进行设置。</p>
-<h1 id="语言基础"><a href="#语言基础" class="headerlink" title="语言基础"></a>语言基础</h1><h2 id="1-STL"><a href="#1-STL" class="headerlink" title="1 STL"></a>1 STL</h2><h3 id="1-1-set"><a href="#1-1-set" class="headerlink" title="1.1 set"></a>1.1 set</h3><table>
+<h1 id="语言基础"><a class="markdownIt-Anchor" href="#语言基础"></a> 语言基础</h1>
+<h2 id="1-stl"><a class="markdownIt-Anchor" href="#1-stl"></a> 1 STL</h2>
+<h3 id="11-set"><a class="markdownIt-Anchor" href="#11-set"></a> 1.1 set</h3>
+<table>
 <thead>
 <tr>
 <th>知识点</th>
@@ -553,13 +563,17 @@ ABC-">
 <th>来源</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>multiset插入删除，异或运算性质：相邻元素值异或小于非相邻元素异或</td>
 <td>ABC-600-Points</td>
 <td><a href="https://atcoder.jp/contests/abc308/tasks/abc308_g">ABC308G</a></td>
 </tr>
-</tbody></table>
-<h1 id="算法基础"><a href="#算法基础" class="headerlink" title="算法基础"></a>算法基础</h1><h2 id="1-递归-分治"><a href="#1-递归-分治" class="headerlink" title="1 递归&amp;分治"></a>1 递归&amp;分治</h2><p>$nlogn$ 可以试着往分治上面想</p>
+</tbody>
+</table>
+<h1 id="算法基础"><a class="markdownIt-Anchor" href="#算法基础"></a> 算法基础</h1>
+<h2 id="1-递归分治"><a class="markdownIt-Anchor" href="#1-递归分治"></a> 1 递归&amp;分治</h2>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>l</mi><mi>o</mi><mi>g</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">nlogn</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal">n</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">n</span></span></span></span> 可以试着往分治上面想</p>
 <table>
 <thead>
 <tr>
@@ -568,13 +582,16 @@ ABC-">
 <th>来源</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>分治</td>
 <td></td>
 <td>2023CCPC深圳A</td>
 </tr>
-</tbody></table>
-<h2 id="2-贪心"><a href="#2-贪心" class="headerlink" title="2 贪心"></a>2 贪心</h2><table>
+</tbody>
+</table>
+<h2 id="2-贪心"><a class="markdownIt-Anchor" href="#2-贪心"></a> 2 贪心</h2>
+<table>
 <thead>
 <tr>
 <th>知识点</th>
@@ -582,13 +599,16 @@ ABC-">
 <th>来源</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>贪心，排序，优先队列维护</td>
 <td>ABC-500-Points</td>
 <td><a href="https://atcoder.jp/contests/abc308/tasks/abc308_f">ABC308F</a> 23年天大预推免机试题摘自此处</td>
 </tr>
-</tbody></table>
-<h2 id="3-二分"><a href="#3-二分" class="headerlink" title="3 二分"></a>3 二分</h2><table>
+</tbody>
+</table>
+<h2 id="3-二分"><a class="markdownIt-Anchor" href="#3-二分"></a> 3 二分</h2>
+<table>
 <thead>
 <tr>
 <th>知识点</th>
@@ -596,13 +616,16 @@ ABC-">
 <th>来源</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>二分中位数答案</td>
 <td></td>
 <td><a href="https://codeforces.com/gym/104768/problem/M">2023CCPC桂林</a></td>
 </tr>
-</tbody></table>
-<h2 id="4-构造"><a href="#4-构造" class="headerlink" title="4 构造"></a>4 构造</h2><table>
+</tbody>
+</table>
+<h2 id="4-构造"><a class="markdownIt-Anchor" href="#4-构造"></a> 4 构造</h2>
+<table>
 <thead>
 <tr>
 <th>知识点</th>
@@ -610,261 +633,322 @@ ABC-">
 <th>来源</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td><strong>构造-分治</strong>，二进制，二分图，思维</td>
 <td>绿题</td>
 <td><a href="https://www.luogu.com.cn/problem/P9384">LuoGuP9384/THUPC2023决赛</a></td>
 </tr>
-</tbody></table>
-<h1 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h1><h1 id="动态规划"><a href="#动态规划" class="headerlink" title="动态规划"></a>动态规划</h1><h2 id="1-线性DP"><a href="#1-线性DP" class="headerlink" title="1 线性DP"></a>1 线性DP</h2><table>
+</tbody>
+</table>
+<h1 id="搜索"><a class="markdownIt-Anchor" href="#搜索"></a> 搜索</h1>
+<h1 id="动态规划"><a class="markdownIt-Anchor" href="#动态规划"></a> 动态规划</h1>
+<h2 id="1-线性dp"><a class="markdownIt-Anchor" href="#1-线性dp"></a> 1 线性DP</h2>
+<table>
 <thead>
 <tr>
-<th align="left">知识点</th>
+<th style="text-align:left">知识点</th>
 <th>难度</th>
 <th>来源</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">线性DP，前 $i$ 个选 $j$ 个的最优值</td>
+<tbody>
+<tr>
+<td style="text-align:left">线性DP，前 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span> 个选 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi></mrow><annotation encoding="application/x-tex">j</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.05724em;">j</span></span></span></span> 个的最优值</td>
 <td>ABC-475-Points</td>
 <td><a href="https://atcoder.jp/contests/abc327/tasks/abc327_e">ABC327E</a></td>
 </tr>
-</tbody></table>
-<h2 id="2-背包DP"><a href="#2-背包DP" class="headerlink" title="2 背包DP"></a>2 背包DP</h2><h3 id="2-1-01背包"><a href="#2-1-01背包" class="headerlink" title="2.1 01背包"></a>2.1 01背包</h3><table>
+</tbody>
+</table>
+<h2 id="2-背包dp"><a class="markdownIt-Anchor" href="#2-背包dp"></a> 2 背包DP</h2>
+<h3 id="21-01背包"><a class="markdownIt-Anchor" href="#21-01背包"></a> 2.1 01背包</h3>
+<table>
 <thead>
 <tr>
-<th align="left">知识点</th>
+<th style="text-align:left">知识点</th>
 <th>难度</th>
 <th>来源</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">01背包+贪心</td>
+<tbody>
+<tr>
+<td style="text-align:left">01背包+贪心</td>
 <td>easy-medium</td>
 <td><a href="https://qoj.ac/contest/1414">2023ICPC南京G</a></td>
 </tr>
 <tr>
-<td align="left"><strong>bitset优化</strong>，数量上的二进制优化</td>
+<td style="text-align:left"><strong>bitset优化</strong>，数量上的二进制优化</td>
 <td>CF-rating-2700</td>
 <td><a href="https://codeforces.com/contest/1856/problem/E2">CF1856E2</a></td>
 </tr>
 <tr>
-<td align="left">01背包+超大体积和价值，二进制拆分，分组背包思想</td>
+<td style="text-align:left">01背包+超大体积和价值，二进制拆分，分组背包思想</td>
 <td>紫题</td>
 <td><a href="https://www.luogu.com.cn/problem/P3188">LuoGuP3188</a></td>
 </tr>
 <tr>
-<td align="left"><strong>前后缀背包</strong></td>
+<td style="text-align:left"><strong>前后缀背包</strong></td>
 <td></td>
 <td><a href="https://codeforces.com/gym/104090/problem/C">2022ICPC杭州C</a></td>
 </tr>
 <tr>
-<td align="left"><strong>回退背包</strong> ，01背包计数回退</td>
+<td style="text-align:left"><strong>回退背包</strong> ，01背包计数回退</td>
 <td>ABC-525-Points</td>
 <td><a href="https://atcoder.jp/contests/abc321/tasks/abc321_f">ABC321F</a></td>
 </tr>
-</tbody></table>
-<h3 id="2-2-多重背包"><a href="#2-2-多重背包" class="headerlink" title="2.2 多重背包"></a>2.2 多重背包</h3><h2 id="3-区间DP"><a href="#3-区间DP" class="headerlink" title="3 区间DP"></a>3 区间DP</h2><h2 id="4-树形DP"><a href="#4-树形DP" class="headerlink" title="4 树形DP"></a>4 树形DP</h2><table>
+</tbody>
+</table>
+<h3 id="22-多重背包"><a class="markdownIt-Anchor" href="#22-多重背包"></a> 2.2 多重背包</h3>
+<h2 id="3-区间dp"><a class="markdownIt-Anchor" href="#3-区间dp"></a> 3 区间DP</h2>
+<h2 id="4-树形dp"><a class="markdownIt-Anchor" href="#4-树形dp"></a> 4 树形DP</h2>
+<table>
 <thead>
 <tr>
-<th align="left">知识点</th>
+<th style="text-align:left">知识点</th>
 <th>难度</th>
 <th>来源</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">经典换根DP</td>
+<tbody>
+<tr>
+<td style="text-align:left">经典换根DP</td>
 <td>CF-Rating-1900</td>
 <td><a href="https://codeforces.com/contest/1882/problem/D">CF1882D</a></td>
 </tr>
 <tr>
-<td align="left">贪心 + 树形DP</td>
+<td style="text-align:left">贪心 + 树形DP</td>
 <td></td>
 <td><a href="https://codeforces.com/gym/104768/problem/H">2023CCPC桂林H</a></td>
 </tr>
-</tbody></table>
-<h2 id="5-状压DP"><a href="#5-状压DP" class="headerlink" title="5 状压DP"></a>5 状压DP</h2><h2 id="6-数位DP"><a href="#6-数位DP" class="headerlink" title="6 数位DP"></a>6 数位DP</h2><p>参考 <a href="https://zhuanlan.zhihu.com/p/613107701">知乎数位DP总结</a> </p>
+</tbody>
+</table>
+<h2 id="5-状压dp"><a class="markdownIt-Anchor" href="#5-状压dp"></a> 5 状压DP</h2>
+<h2 id="6-数位dp"><a class="markdownIt-Anchor" href="#6-数位dp"></a> 6 数位DP</h2>
+<p>参考 <a href="https://zhuanlan.zhihu.com/p/613107701">知乎数位DP总结</a></p>
 <table>
 <thead>
 <tr>
-<th align="left">知识点</th>
+<th style="text-align:left">知识点</th>
 <th>难度</th>
 <th>来源</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">二进制拆分+组合计数+数位DP</td>
+<tbody>
+<tr>
+<td style="text-align:left">二进制拆分+组合计数+数位DP</td>
 <td>银牌题</td>
 <td><a href="https://codeforces.com/gym/104053/problem/M">2022CCPC广州M</a></td>
 </tr>
 <tr>
-<td align="left">经典数位DP题目，需要注意pos为0时return的顺序，先判cnt，再判pos</td>
+<td style="text-align:left">经典数位DP题目，需要注意pos为0时return的顺序，先判cnt，再判pos</td>
 <td>CF-Rating-1900</td>
 <td><a href="https://codeforces.com/problemset/problem/1036/C">CF1036C</a></td>
 </tr>
-</tbody></table>
-<h1 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h1><h2 id="1-字典树Trie"><a href="#1-字典树Trie" class="headerlink" title="1 字典树Trie"></a>1 字典树Trie</h2><table>
+</tbody>
+</table>
+<h1 id="字符串"><a class="markdownIt-Anchor" href="#字符串"></a> 字符串</h1>
+<h2 id="1-字典树trie"><a class="markdownIt-Anchor" href="#1-字典树trie"></a> 1 字典树Trie</h2>
+<table>
 <thead>
 <tr>
-<th align="left">知识点</th>
+<th style="text-align:left">知识点</th>
 <th>难度</th>
 <th>来源</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">字典树，逆序字符串对统计</td>
+<tbody>
+<tr>
+<td style="text-align:left">字典树，逆序字符串对统计</td>
 <td></td>
 <td><a href="https://codeforces.com/gym/104090/problem/K">2022ICPC杭州K</a></td>
 </tr>
-</tbody></table>
-<h1 id="数学"><a href="#数学" class="headerlink" title="数学"></a>数学</h1><h2 id="1-数论"><a href="#1-数论" class="headerlink" title="1 数论"></a>1 数论</h2><h3 id="1-1-数论分块"><a href="#1-1-数论分块" class="headerlink" title="1.1 数论分块"></a>1.1 数论分块</h3><table>
+</tbody>
+</table>
+<h1 id="数学"><a class="markdownIt-Anchor" href="#数学"></a> 数学</h1>
+<h2 id="1-数论"><a class="markdownIt-Anchor" href="#1-数论"></a> 1 数论</h2>
+<h3 id="11-数论分块"><a class="markdownIt-Anchor" href="#11-数论分块"></a> 1.1 数论分块</h3>
+<table>
 <thead>
 <tr>
-<th align="left">知识点</th>
+<th style="text-align:left">知识点</th>
 <th>难度</th>
 <th>来源</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">数论分块，找到 $l,r$ 很关键</td>
+<tbody>
+<tr>
+<td style="text-align:left">数论分块，找到 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo separator="true">,</mo><mi>r</mi></mrow><annotation encoding="application/x-tex">l,r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span></span></span></span> 很关键</td>
 <td>蓝题</td>
 <td><a href="https://www.luogu.com.cn/problem/P2261">LuoGuP2261</a></td>
 </tr>
 <tr>
-<td align="left">整除分块+莫比乌斯反演</td>
+<td style="text-align:left">整除分块+莫比乌斯反演</td>
 <td>蓝题</td>
 <td><a href="https://www.luogu.com.cn/problem/P3455">LuoGuP3455</a></td>
 </tr>
-</tbody></table>
-<h2 id="2-线性代数"><a href="#2-线性代数" class="headerlink" title="2 线性代数"></a>2 线性代数</h2><h3 id="2-1-线性基"><a href="#2-1-线性基" class="headerlink" title="2.1 线性基"></a>2.1 线性基</h3><p><a href="https://taodaling.github.io/blog/2020/12/25/%E7%BA%BF%E6%80%A7%E5%9F%BA/">常见问题</a> </p>
+</tbody>
+</table>
+<h2 id="2-线性代数"><a class="markdownIt-Anchor" href="#2-线性代数"></a> 2 线性代数</h2>
+<h3 id="21-线性基"><a class="markdownIt-Anchor" href="#21-线性基"></a> 2.1 线性基</h3>
+<p><a href="https://taodaling.github.io/blog/2020/12/25/%E7%BA%BF%E6%80%A7%E5%9F%BA/">常见问题</a></p>
 <table>
 <thead>
 <tr>
-<th align="left">知识点</th>
+<th style="text-align:left">知识点</th>
 <th>难度</th>
 <th>来源</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">线性基</td>
+<tbody>
+<tr>
+<td style="text-align:left">线性基</td>
 <td>紫题</td>
 <td><a href="https://www.luogu.com.cn/problem/P4151">LuoGuP4151</a></td>
 </tr>
 <tr>
-<td align="left">线性基，统计子集异或和为0的所有元素个数之和</td>
+<td style="text-align:left">线性基，统计子集异或和为0的所有元素个数之和</td>
 <td></td>
 <td><a href="https://ac.nowcoder.com/acm/contest/881/H">2019牛客多校1H</a> | <a href="https://blog.nowcoder.net/n/11e3e820640e4bbd8182566d4aa64be4">题解</a></td>
 </tr>
 <tr>
-<td align="left">线性基，预处理因子，统计异或和为 0 和 x 的子集个数</td>
+<td style="text-align:left">线性基，预处理因子，统计异或和为 0 和 x 的子集个数</td>
 <td></td>
 <td><a href="https://codeforces.com/gym/104768/problem/C">2023CCPC桂林C</a></td>
 </tr>
-</tbody></table>
-<h2 id="3-博弈论"><a href="#3-博弈论" class="headerlink" title="3 博弈论"></a>3 博弈论</h2><table>
+</tbody>
+</table>
+<h2 id="3-博弈论"><a class="markdownIt-Anchor" href="#3-博弈论"></a> 3 博弈论</h2>
+<table>
 <thead>
 <tr>
-<th align="left">知识点</th>
+<th style="text-align:left">知识点</th>
 <th>难度</th>
 <th>来源</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">找规律，sg函数，有向图游戏和</td>
+<tbody>
+<tr>
+<td style="text-align:left">找规律，sg函数，有向图游戏和</td>
 <td></td>
 <td><a href="https://codeforces.com/gym/104813/problem/J">2023CCPC哈尔滨J</a></td>
 </tr>
-</tbody></table>
-<h1 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h1><h2 id="1-并查集"><a href="#1-并查集" class="headerlink" title="1 并查集"></a>1 并查集</h2><table>
+</tbody>
+</table>
+<h1 id="数据结构"><a class="markdownIt-Anchor" href="#数据结构"></a> 数据结构</h1>
+<h2 id="1-并查集"><a class="markdownIt-Anchor" href="#1-并查集"></a> 1 并查集</h2>
+<table>
 <thead>
 <tr>
-<th align="left">知识点</th>
+<th style="text-align:left">知识点</th>
 <th>难度</th>
 <th>来源</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">区间合并，并查集判环</td>
+<tbody>
+<tr>
+<td style="text-align:left">区间合并，并查集判环</td>
 <td></td>
 <td><a href="https://codeforces.com/gym/104813/problem/G">2023CCPC哈尔滨G</a></td>
 </tr>
-</tbody></table>
-<h2 id="2-线性数据结构"><a href="#2-线性数据结构" class="headerlink" title="2 线性数据结构"></a>2 线性数据结构</h2><h3 id="2-1-单调栈"><a href="#2-1-单调栈" class="headerlink" title="2.1 单调栈"></a>2.1 单调栈</h3><table>
+</tbody>
+</table>
+<h2 id="2-线性数据结构"><a class="markdownIt-Anchor" href="#2-线性数据结构"></a> 2 线性数据结构</h2>
+<h3 id="21-单调栈"><a class="markdownIt-Anchor" href="#21-单调栈"></a> 2.1 单调栈</h3>
+<table>
 <thead>
 <tr>
-<th align="left">知识点</th>
+<th style="text-align:left">知识点</th>
 <th>难度</th>
 <th>来源</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">单调栈应用：求左（右）边第一个小（大）于 $a[i]$ 的位置<br>启发式分裂，两边都可以枚举统计答案，每次枚举数量较少的一遍</td>
+<tbody>
+<tr>
+<td style="text-align:left">单调栈应用：求左（右）边第一个小（大）于 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">a[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">a</span><span class="mopen">[</span><span class="mord mathnormal">i</span><span class="mclose">]</span></span></span></span> 的位置<br>启发式分裂，两边都可以枚举统计答案，每次枚举数量较少的一遍</td>
 <td>CF-rating-2300</td>
 <td><a href="https://codeforces.com/contest/1849/problem/E">CF1849E</a></td>
 </tr>
-</tbody></table>
-<h2 id="3-树状数组"><a href="#3-树状数组" class="headerlink" title="3 树状数组"></a>3 树状数组</h2><table>
+</tbody>
+</table>
+<h2 id="3-树状数组"><a class="markdownIt-Anchor" href="#3-树状数组"></a> 3 树状数组</h2>
+<table>
 <thead>
 <tr>
-<th align="left">知识点</th>
+<th style="text-align:left">知识点</th>
 <th>难度</th>
 <th>来源</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">树状数组求区间不同颜色数+贪心+数据范围细节</td>
+<tbody>
+<tr>
+<td style="text-align:left">树状数组求区间不同颜色数+贪心+数据范围细节</td>
 <td></td>
 <td><a href="https://codeforces.com/gym/104768/problem/I">2023CCPC桂林I</a></td>
 </tr>
-</tbody></table>
-<h1 id="图论"><a href="#图论" class="headerlink" title="图论"></a>图论</h1><h2 id="1-树上问题"><a href="#1-树上问题" class="headerlink" title="1 树上问题"></a>1 树上问题</h2><h3 id="1-1-树链剖分"><a href="#1-1-树链剖分" class="headerlink" title="1.1 树链剖分"></a>1.1 树链剖分</h3><table>
+</tbody>
+</table>
+<h1 id="图论"><a class="markdownIt-Anchor" href="#图论"></a> 图论</h1>
+<h2 id="1-树上问题"><a class="markdownIt-Anchor" href="#1-树上问题"></a> 1 树上问题</h2>
+<h3 id="11-树链剖分"><a class="markdownIt-Anchor" href="#11-树链剖分"></a> 1.1 树链剖分</h3>
+<table>
 <thead>
 <tr>
-<th align="left">知识点</th>
+<th style="text-align:left">知识点</th>
 <th>难度</th>
 <th>来源</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">长链剖分+贪心</td>
+<tbody>
+<tr>
+<td style="text-align:left">长链剖分+贪心</td>
 <td></td>
 <td><a href="https://codeforces.com/gym/104077/problem/L">2022ICPC西安L</a></td>
 </tr>
 <tr>
-<td align="left">长链剖分优化DP模板题</td>
+<td style="text-align:left">长链剖分优化DP模板题</td>
 <td>CF-Rating-2300</td>
 <td><a href="https://codeforces.com/problemset/problem/1009/F">CF1009F</a></td>
 </tr>
-</tbody></table>
-<h3 id="1-2-树哈希"><a href="#1-2-树哈希" class="headerlink" title="1.2 树哈希"></a>1.2 树哈希</h3><table>
+</tbody>
+</table>
+<h3 id="12-树哈希"><a class="markdownIt-Anchor" href="#12-树哈希"></a> 1.2 树哈希</h3>
+<table>
 <thead>
 <tr>
-<th align="left">知识点</th>
+<th style="text-align:left">知识点</th>
 <th>难度</th>
 <th>来源</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">树同构+树哈希+基环树找环</td>
+<tbody>
+<tr>
+<td style="text-align:left">树同构+树哈希+基环树找环</td>
 <td></td>
 <td><a href="https://codeforces.com/gym/104090/problem/G">2022ICPC杭州G</a> （判断一个图的所有生成树是否同构）</td>
 </tr>
-</tbody></table>
-<h2 id="2-最短路"><a href="#2-最短路" class="headerlink" title="2 最短路"></a>2 最短路</h2><h3 id="2-1-Dijkstra"><a href="#2-1-Dijkstra" class="headerlink" title="2.1 Dijkstra"></a>2.1 Dijkstra</h3><table>
+</tbody>
+</table>
+<h2 id="2-最短路"><a class="markdownIt-Anchor" href="#2-最短路"></a> 2 最短路</h2>
+<h3 id="21-dijkstra"><a class="markdownIt-Anchor" href="#21-dijkstra"></a> 2.1 Dijkstra</h3>
+<table>
 <thead>
 <tr>
-<th align="left">知识点</th>
+<th style="text-align:left">知识点</th>
 <th>难度</th>
 <th>来源</th>
 </tr>
 </thead>
-<tbody><tr>
-<td align="left">最短路径树板题（直接用dijkstra求从根出发的最短路，根到其他节点的最短路就形成一棵树，记一下pre就行）</td>
+<tbody>
+<tr>
+<td style="text-align:left">最短路径树板题（直接用dijkstra求从根出发的最短路，根到其他节点的最短路就形成一棵树，记一下pre就行）</td>
 <td>CF-Rating-2000</td>
 <td><a href="https://codeforces.com/problemset/problem/545/E">CF545E</a></td>
 </tr>
-</tbody></table>
-<h1 id="计算几何"><a href="#计算几何" class="headerlink" title="计算几何"></a>计算几何</h1><h2 id="1-扫描线"><a href="#1-扫描线" class="headerlink" title="1 扫描线"></a>1 扫描线</h2><table>
+</tbody>
+</table>
+<h1 id="计算几何"><a class="markdownIt-Anchor" href="#计算几何"></a> 计算几何</h1>
+<h2 id="1-扫描线"><a class="markdownIt-Anchor" href="#1-扫描线"></a> 1 扫描线</h2>
+<table>
 <thead>
 <tr>
 <th>知识点</th>
@@ -872,13 +956,16 @@ ABC-">
 <th>来源</th>
 </tr>
 </thead>
-<tbody><tr>
+<tbody>
+<tr>
 <td>一维数组上的扫描线</td>
 <td>偏思维，easy</td>
 <td><a href="https://codeforces.com/contest/1884/problem/C">CF1884C</a> <a href="https://atcoder.jp/contests/abc188/tasks/abc188_d">ABC188D</a></td>
 </tr>
-</tbody></table>
-<h1 id="杂项"><a href="#杂项" class="headerlink" title="杂项"></a>杂项</h1>
+</tbody>
+</table>
+<h1 id="杂项"><a class="markdownIt-Anchor" href="#杂项"></a> 杂项</h1>
+
             </div>
             <hr />
 
@@ -1040,7 +1127,7 @@ ABC-">
                   property="dct:title" rel="dct:type">
                     《个人算法题单整理》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/p/542231525.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 行码棋
             </a> 采用
@@ -1374,7 +1461,7 @@ ABC-">
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="3703005386.html">
+                <a href="/p/3703005386.html">
                     <div class="card-image">
                         
                         
@@ -1387,9 +1474,10 @@ ABC-">
                     <div class="summary block-with-text">
                         
                             
-1.需要一个数组或者字符串的目前的元素和前一个元素做相关运算时:直接遍历这个序列，当 i 等于0时不满足条件，只有i 等于 1时才会执行if语句
+1.需要一个数组或者字符串的目前的元素和前一个元素做相关运算时:
+直接遍历这个序列，当 i 等于0时不满足条件，只有i 等于 1时才会执行if语句
 for(int i = 0; i &lt; len; ++i) {
-	if( i &amp;
+	if( i &amp
                         
                     </div>
                     <div class="publish-info">
@@ -1400,7 +1488,7 @@ for(int i = 0; i &lt; len; ++i) {
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/ACM/" class="post-category" target="_blank">
+                            <a href="/categories/ACM/" class="post-category" target="_blank">
                                     ACM
                                 </a>
                             
@@ -1411,7 +1499,7 @@ for(int i = 0; i &lt; len; ++i) {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" target="_blank">
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" target="_blank">
                         <span class="chip bg-color">学习总结</span>
                     </a>
                     
@@ -1426,7 +1514,7 @@ for(int i = 0; i &lt; len; ++i) {
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="2127276366.html">
+                <a href="/p/2127276366.html">
                     <div class="card-image">
                         
                         
@@ -1439,9 +1527,13 @@ for(int i = 0; i &lt; len; ++i) {
                     <div class="summary block-with-text">
                         
                             希望能够使用Google搜索进行精准搜索。
-Google搜索语法1 内容搜索标题相关作用：限定标题内容。
-intitle例：intitle:Google搜索技巧 ，搜索出来的标题会包含 Google搜索技巧 相关内容。
-allintitle
+ Google搜索语法
+ 1 内容搜索
+ 标题相关
+作用：限定标题内容。
+ intitle
+例：intitle:Google搜索技巧 ，搜索出来的标题会包含 Google搜索技巧 相关内容。
+ a
                         
                     </div>
                     <div class="publish-info">
@@ -1452,7 +1544,7 @@ allintitle
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/" class="post-category" target="_blank">
+                            <a href="/categories/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/" class="post-category" target="_blank">
                                     开发知识
                                 </a>
                             
@@ -1463,7 +1555,7 @@ allintitle
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/Google%E6%90%9C%E7%B4%A2/" target="_blank">
+                    <a href="/tags/Google%E6%90%9C%E7%B4%A2/" target="_blank">
                         <span class="chip bg-color">Google搜索</span>
                     </a>
                     
@@ -1622,25 +1714,6 @@ allintitle
 
 
 
-<script src="https://lib.baomitu.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
-
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-<!-- 代码语言 -->
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-<!-- 代码块复制 -->
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
-<!-- 代码块收缩 -->
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> 
-<!-- 代码块折行 -->
-<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
-
-
     <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
@@ -1648,7 +1721,7 @@ allintitle
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">97.2k</span>
+            <span class="white-color">102.5k</span>
             
 
             <br>
@@ -1699,7 +1772,7 @@ allintitle
 
 
 
-    <a href="../atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fa fa-rss"></i>
     </a>
 </div>

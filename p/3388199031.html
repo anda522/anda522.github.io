@@ -9,13 +9,12 @@
     <meta name="baidu-site-verification" content="code-L7AVcsbU14" />
     <meta name="google-site-verification" content="x4QfrBHn9imI1RhTNCB8RD8Q2Rx6rE_zylSBptBgdZY" />
     <!-- <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" /> -->
-    <meta name="description" content="Static Query on Tree下面介绍树链剖分做法（即题解的第二种做法）
+    <meta name="description" content=" Static Query on Tree
+下面介绍树链剖分做法（即题解的第二种做法）
 
 
 题目大意：
-一棵内向树，三个集合A，B，C，每个集合里面有一些点，求特定点的个数，满足从A集合和B集合可以到达该特定点，且可以从该特定点到达C集合。
-
-">
+一棵内向树，三个集合A，B，C，每个集合里面有一些点，求特定点的个数，满足从A集合和B集合可以到达该特定点，且可以从该特定点到达C集合。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -77,9 +76,13 @@
         document.write('<script src="' + src + '" id="sozz"><\/script>');
         })();
     </script>
-<meta name="generator" content="Hexo 7.0.0">
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body>
@@ -88,7 +91,7 @@
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
-                <a href="../index.html" class="waves-effect waves-light">
+                <a href="/" class="waves-effect waves-light">
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
@@ -334,7 +337,7 @@
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
-                location.href = '../index.html';
+                location.href = '/';
             }
         }
     })();
@@ -471,7 +474,7 @@
                     
                     <div class="article-tag">
                         
-                        <a href="../tags/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/" target="_blank">
+                        <a href="/tags/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/" target="_blank">
                             <span class="chip bg-color">树链剖分</span>
                         </a>
                         
@@ -483,7 +486,7 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="../categories/%E5%9B%BE%E8%AE%BA/" class="post-category" target="_blank">
+                        <a href="/categories/%E5%9B%BE%E8%AE%BA/" class="post-category" target="_blank">
                             图论
                         </a>
                         
@@ -537,7 +540,8 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Static-Query-on-Tree"><a href="#Static-Query-on-Tree" class="headerlink" title="Static Query on Tree"></a><a href="http://acm.hdu.edu.cn/showproblem.php?pid=7150">Static Query on Tree</a></h1><p>下面介绍树链剖分做法（即题解的第二种做法）</p>
+                <h1 id="static-query-on-tree"><a class="markdownIt-Anchor" href="#static-query-on-tree"></a> <a href="http://acm.hdu.edu.cn/showproblem.php?pid=7150">Static Query on Tree</a></h1>
+<p>下面介绍树链剖分做法（即题解的第二种做法）</p>
 <p><img src="3388199031/image-20220722223108042.png" alt="题目描述"></p>
 <blockquote>
 <p>题目大意：</p>
@@ -547,12 +551,12 @@
 <p>只需要判断这些打上A和B标记的点能否到达C节点即可，方法也是同样的，将C集合中的每个点和其子树上的点都打上C标记，只要统计树中同时被打上ABC标记的点的个数即可（此时可以用线段树维护标记）。</p>
 <p><strong>线段树记录变量</strong></p>
 <ul>
-<li>$tr[u].cnt[i]$</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mi>r</mi><mo stretchy="false">[</mo><mi>u</mi><mo stretchy="false">]</mo><mi mathvariant="normal">.</mi><mi>c</mi><mi>n</mi><mi>t</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">tr[u].cnt[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mopen">[</span><span class="mord mathnormal">u</span><span class="mclose">]</span><span class="mord">.</span><span class="mord mathnormal">c</span><span class="mord mathnormal">n</span><span class="mord mathnormal">t</span><span class="mopen">[</span><span class="mord mathnormal">i</span><span class="mclose">]</span></span></span></span></li>
 </ul>
-<p>$tr[u].cnt[i]$中的$i$有三个值，0，1，2，分别代表被打上A标记的点，被打上AB标记的点，被打上ABC标记的点。</p>
-<p>则$tr[u].cnt[i]$则共可以表示在对应的线段树节点表示的区间上被打上A标记的点的个数（$i = 0$），被打上AB标记的点的个数（$i = 1$），被打上ABC标记的点的个数（$i = 2$）。</p>
+<p><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mi>r</mi><mo stretchy="false">[</mo><mi>u</mi><mo stretchy="false">]</mo><mi mathvariant="normal">.</mi><mi>c</mi><mi>n</mi><mi>t</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">tr[u].cnt[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mopen">[</span><span class="mord mathnormal">u</span><span class="mclose">]</span><span class="mord">.</span><span class="mord mathnormal">c</span><span class="mord mathnormal">n</span><span class="mord mathnormal">t</span><span class="mopen">[</span><span class="mord mathnormal">i</span><span class="mclose">]</span></span></span></span>中的<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi></mrow><annotation encoding="application/x-tex">i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span></span></span></span>有三个值，0，1，2，分别代表被打上A标记的点，被打上AB标记的点，被打上ABC标记的点。</p>
+<p>则<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mi>r</mi><mo stretchy="false">[</mo><mi>u</mi><mo stretchy="false">]</mo><mi mathvariant="normal">.</mi><mi>c</mi><mi>n</mi><mi>t</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">tr[u].cnt[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mopen">[</span><span class="mord mathnormal">u</span><span class="mclose">]</span><span class="mord">.</span><span class="mord mathnormal">c</span><span class="mord mathnormal">n</span><span class="mord mathnormal">t</span><span class="mopen">[</span><span class="mord mathnormal">i</span><span class="mclose">]</span></span></span></span>则共可以表示在对应的线段树节点表示的区间上被打上A标记的点的个数（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">i = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span>），被打上AB标记的点的个数（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">i = 1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span></span></span></span>），被打上ABC标记的点的个数（<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">i = 2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.65952em;vertical-align:0em;"></span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">2</span></span></span></span>）。</p>
 <ul>
-<li>$tr[u].flag[i]$</li>
+<li><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mi>r</mi><mo stretchy="false">[</mo><mi>u</mi><mo stretchy="false">]</mo><mi mathvariant="normal">.</mi><mi>f</mi><mi>l</mi><mi>a</mi><mi>g</mi><mo stretchy="false">[</mo><mi>i</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">tr[u].flag[i]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">t</span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mopen">[</span><span class="mord mathnormal">u</span><span class="mclose">]</span><span class="mord">.</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">a</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mopen">[</span><span class="mord mathnormal">i</span><span class="mclose">]</span></span></span></span></li>
 </ul>
 <p>共有三个值<code>-1</code>，<code>0</code>， <code>1</code></p>
 <p>初始值等于<code>-1</code>，为<code>0</code>代表对应的区间置为0</p>
@@ -560,16 +564,13 @@
 <p>在下传懒标记A时，因为A是第一次标记，无需其他条件，直接下传，记录一下<code>cnt</code>变量即可。</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">tr<span class="token punctuation">[</span>u <span class="token operator">&lt;&lt;</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>cnt<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> tr<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">.</span>flag<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token punctuation">(</span>mid <span class="token operator">-</span> l <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 tr<span class="token punctuation">[</span>u <span class="token operator">&lt;&lt;</span> <span class="token number">1</span> <span class="token operator">|</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>cnt<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> tr<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">.</span>flag<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token punctuation">(</span>r <span class="token operator">-</span> mid<span class="token punctuation">)</span><span class="token punctuation">;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
 <p>下传懒标记B和C时，就需要有限制条件了，下传懒标记B我们需要有A标记才能求被标记A和B的节点，即被标记AB的节点的数量等于被标记A节点的数量乘对应的懒标记。</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">tr<span class="token punctuation">[</span>u <span class="token operator">&lt;&lt;</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>cnt<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> tr<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">.</span>flag<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*</span> tr<span class="token punctuation">[</span>u <span class="token operator">&lt;&lt;</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>cnt<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 tr<span class="token punctuation">[</span>u <span class="token operator">&lt;&lt;</span> <span class="token number">1</span> <span class="token operator">|</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>cnt<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> tr<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">.</span>flag<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">*</span> tr<span class="token punctuation">[</span>u <span class="token operator">&lt;&lt;</span> <span class="token number">1</span> <span class="token operator">|</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>cnt<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
-
 <p>接下来就是树链剖分的板子了，可以看下面链接</p>
 <p><a href="../shupou1000">树链剖分模板题</a></p>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h&gt;</span></span>
+<h1 id="代码"><a class="markdownIt-Anchor" href="#代码"></a> 代码</h1>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h&gt;</span></span>
 <span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
 <span class="token keyword">using</span> ll <span class="token operator">=</span> <span class="token keyword">long</span> <span class="token keyword">long</span><span class="token punctuation">;</span>
 <span class="token keyword">const</span> <span class="token keyword">int</span> N <span class="token operator">=</span> <span class="token number">2e5</span> <span class="token operator">+</span> <span class="token number">5</span><span class="token punctuation">,</span> M <span class="token operator">=</span> <span class="token number">2</span> <span class="token operator">*</span> N<span class="token punctuation">;</span>
@@ -794,7 +795,6 @@ ll <span class="token function">querySon</span><span class="token punctuation">(
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-
             </div>
             <hr />
 
@@ -956,7 +956,7 @@ ll <span class="token function">querySon</span><span class="token punctuation">(
                   property="dct:title" rel="dct:type">
                     《2022杭电多校2 Static Query on Tree|树链剖分》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/p/3388199031.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 行码棋
             </a> 采用
@@ -1290,7 +1290,7 @@ ll <span class="token function">querySon</span><span class="token punctuation">(
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="3941430957.html">
+                <a href="/p/3941430957.html">
                     <div class="card-image">
                         
                         
@@ -1302,10 +1302,12 @@ ll <span class="token function">querySon</span><span class="token punctuation">(
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1 杂项1.1 __int128和快读inline __int128 read() {
+                             1 杂项
+ 1.1 __int128和快读
+inline __int128 read() {
 	__int128 x = 0; int f = 1;
     char ch; ch = getchar();
-	while(!isdigit(ch)
+	while(!isdigit
                         
                     </div>
                     <div class="publish-info">
@@ -1316,7 +1318,7 @@ ll <span class="token function">querySon</span><span class="token punctuation">(
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/ACM/" class="post-category" target="_blank">
+                            <a href="/categories/ACM/" class="post-category" target="_blank">
                                     ACM
                                 </a>
                             
@@ -1327,7 +1329,7 @@ ll <span class="token function">querySon</span><span class="token punctuation">(
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/%E6%A8%A1%E6%9D%BF/" target="_blank">
+                    <a href="/tags/%E6%A8%A1%E6%9D%BF/" target="_blank">
                         <span class="chip bg-color">模板</span>
                     </a>
                     
@@ -1342,7 +1344,7 @@ ll <span class="token function">querySon</span><span class="token punctuation">(
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="1046407529.html">
+                <a href="/p/1046407529.html">
                     <div class="card-image">
                         
                         
@@ -1354,12 +1356,14 @@ ll <span class="token function">querySon</span><span class="token punctuation">(
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            树链剖分模板题题目链接：
+                             树链剖分模板题
+题目链接：
 https://www.luogu.com.cn/problem/P3384
 
-代码#include&lt;bits/stdc++.h&gt;
+ 代码
+#include&lt;bits/stdc++.h&gt;
 using namespace std;
-using ll = lon
+using ll =
                         
                     </div>
                     <div class="publish-info">
@@ -1370,7 +1374,7 @@ using ll = lon
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/%E5%9B%BE%E8%AE%BA/" class="post-category" target="_blank">
+                            <a href="/categories/%E5%9B%BE%E8%AE%BA/" class="post-category" target="_blank">
                                     图论
                                 </a>
                             
@@ -1381,11 +1385,11 @@ using ll = lon
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/" target="_blank">
+                    <a href="/tags/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/" target="_blank">
                         <span class="chip bg-color">树链剖分</span>
                     </a>
                     
-                    <a href="../tags/DFS/" target="_blank">
+                    <a href="/tags/DFS/" target="_blank">
                         <span class="chip bg-color">DFS</span>
                     </a>
                     
@@ -1544,25 +1548,6 @@ using ll = lon
 
 
 
-<script src="https://lib.baomitu.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
-
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-<!-- 代码语言 -->
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-<!-- 代码块复制 -->
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
-<!-- 代码块收缩 -->
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> 
-<!-- 代码块折行 -->
-<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
-
-
     <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
@@ -1570,7 +1555,7 @@ using ll = lon
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">97.2k</span>
+            <span class="white-color">102.5k</span>
             
 
             <br>
@@ -1621,7 +1606,7 @@ using ll = lon
 
 
 
-    <a href="../atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fa fa-rss"></i>
     </a>
 </div>

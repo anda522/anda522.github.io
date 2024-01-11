@@ -10,11 +10,11 @@
     <meta name="google-site-verification" content="x4QfrBHn9imI1RhTNCB8RD8Q2Rx6rE_zylSBptBgdZY" />
     <!-- <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" /> -->
     <meta name="description" content="
-实验代码记录：https://github.com/anda522/LabCode/tree/main/Mit6.S081 
+实验代码记录：https://github.com/anda522/LabCode/tree/main/Mit6.S081
 课程教材翻译：https://xv6.dgs.zone/ ，对理解感觉很重要
 
-xv6系统为 RISC-V 
-1">
+xv6系统为 RISC-V
+ 1 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -76,9 +76,13 @@ xv6系统为 RISC-V
         document.write('<script src="' + src + '" id="sozz"><\/script>');
         })();
     </script>
-<meta name="generator" content="Hexo 7.0.0">
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body>
@@ -87,7 +91,7 @@ xv6系统为 RISC-V
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
-                <a href="../index.html" class="waves-effect waves-light">
+                <a href="/" class="waves-effect waves-light">
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
@@ -333,7 +337,7 @@ xv6系统为 RISC-V
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
-                location.href = '../index.html';
+                location.href = '/';
             }
         }
     })();
@@ -470,7 +474,7 @@ xv6系统为 RISC-V
                     
                     <div class="article-tag">
                         
-                        <a href="../tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" target="_blank">
+                        <a href="/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" target="_blank">
                             <span class="chip bg-color">学习总结</span>
                         </a>
                         
@@ -482,7 +486,7 @@ xv6系统为 RISC-V
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="../categories/%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/" class="post-category" target="_blank">
+                        <a href="/categories/%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/" class="post-category" target="_blank">
                             课程记录
                         </a>
                         
@@ -513,7 +517,7 @@ xv6系统为 RISC-V
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.2k
+                    2.3k
                 </div>
                 
 
@@ -537,15 +541,19 @@ xv6系统为 RISC-V
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <blockquote>
-<p>实验代码记录：<a href="https://github.com/anda522/LabCode/tree/main/Mit6.S081">https://github.com/anda522/LabCode/tree/main/Mit6.S081</a> </p>
+<p>实验代码记录：<a href="https://github.com/anda522/LabCode/tree/main/Mit6.S081">https://github.com/anda522/LabCode/tree/main/Mit6.S081</a></p>
 <p>课程教材翻译：<a href="https://xv6.dgs.zone/">https://xv6.dgs.zone/</a> ，对理解感觉很重要</p>
 </blockquote>
-<p>xv6系统为 <code>RISC-V</code> </p>
-<h1 id="1-Unix-utilities"><a href="#1-Unix-utilities" class="headerlink" title="1 Unix utilities"></a>1 Unix utilities</h1><h2 id="Knowledge"><a href="#Knowledge" class="headerlink" title="Knowledge"></a>Knowledge</h2><p>操作系统结构：</p>
+<p>xv6系统为 <code>RISC-V</code></p>
+<h1 id="1-unix-utilities"><a class="markdownIt-Anchor" href="#1-unix-utilities"></a> 1 Unix utilities</h1>
+<h2 id="knowledge"><a class="markdownIt-Anchor" href="#knowledge"></a> Knowledge</h2>
+<p>操作系统结构：</p>
 <ul>
-<li><p>用户空间程序：正在运行的程序，他们处于同一个空间</p>
+<li>
+<p>用户空间程序：正在运行的程序，他们处于同一个空间</p>
 </li>
-<li><p>Kernel：Kernel程序只有一个，维护数据管理每一个用户空间进程，维护硬件资源</p>
+<li>
+<p>Kernel：Kernel程序只有一个，维护数据管理每一个用户空间进程，维护硬件资源</p>
 </li>
 </ul>
 <blockquote>
@@ -557,7 +565,8 @@ xv6系统为 RISC-V
 <li>管道具有先进先出(FIFO)的特性。数据写入管道的一端，从管道的另一端读出时是按写入顺序读取的。</li>
 <li>父进程在写入管道后,会通过 read 操作等待子进程的响应。该 read 操作会被阻塞，直到有数据可读。</li>
 </ul>
-<h2 id="Lab"><a href="#Lab" class="headerlink" title="Lab"></a>Lab</h2><p><code>/user</code> 目录为用户区代码，所有用户区相关的函数都在此处。</p>
+<h2 id="lab"><a class="markdownIt-Anchor" href="#lab"></a> Lab</h2>
+<p><code>/user</code> 目录为用户区代码，所有用户区相关的函数都在此处。</p>
 <p><code>/kernel</code> 目录为内核区代码，所有内核区相关的操作都在此处，如系统调用实现，内存映射，中断处理等。</p>
 <p>如要使用 <code>sleep</code> 命令时，需要将 <code>sleep</code> 程序添加进 <code>Makefile</code> 文件的 <code>UPROGS</code> 中，将其纳入编译范围，否则操作系统将不能识别你的命令。后续程序同理。</p>
 <blockquote>
@@ -567,7 +576,10 @@ xv6系统为 RISC-V
 <p>参考：</p>
 <p>[1] <a href="https://blog.rayzhang.top/2022/06/27/mit-6.s081-lab-util/">MIT 6.S081 Lab Util 实验</a></p>
 </blockquote>
-<h1 id="2-System-calls"><a href="#2-System-calls" class="headerlink" title="2 System calls"></a>2 System calls</h1><h2 id="Knowledge-1"><a href="#Knowledge-1" class="headerlink" title="Knowledge"></a>Knowledge</h2><h3 id="系统调用"><a href="#系统调用" class="headerlink" title="系统调用"></a>系统调用</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">// 所有相关的系统调用</span>
+<h1 id="2-system-calls"><a class="markdownIt-Anchor" href="#2-system-calls"></a> 2 System calls</h1>
+<h2 id="knowledge-2"><a class="markdownIt-Anchor" href="#knowledge-2"></a> Knowledge</h2>
+<h3 id="系统调用"><a class="markdownIt-Anchor" href="#系统调用"></a> 系统调用</h3>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">// 所有相关的系统调用</span>
 <span class="token keyword">int</span> <span class="token function">fork</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">int</span> <span class="token function">exit</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token keyword">__attribute__</span><span class="token punctuation">(</span><span class="token punctuation">(</span>noreturn<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">int</span> <span class="token function">wait</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -589,7 +601,6 @@ xv6系统为 RISC-V
 <span class="token keyword">char</span><span class="token operator">*</span> <span class="token function">sbrk</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">int</span> <span class="token function">sleep</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">int</span> <span class="token function">uptime</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>部分系统调用解释：</p>
 <p><code>exit(int)</code> ：导致进程停止执行并释放资源。<code>exit</code>接受一个整数状态参数，通常0表示成功，1表示失败。</p>
 <p><code>fork(void)</code> ：拷贝当前进程的内存，并创建一个新的进程，这里的内存包含了进程的指令和数据。</p>
@@ -607,20 +618,27 @@ xv6系统为 RISC-V
 <blockquote>
 <p>文件描述符是一个小整数(small integer)，表示进程可以读取或写入的由内核管理的对象，进程从文件描述符0读取（标准输入），将输出写入文件描述符1（标准输出），并将错误消息写入文件描述符2（标准错误）</p>
 </blockquote>
-<h3 id="系统调用执行过程"><a href="#系统调用执行过程" class="headerlink" title="系统调用执行过程"></a>系统调用执行过程</h3><p>系统调用在内核区，执行时需要从用户态过渡到核心态，CPU提供一个特殊的指令，将CPU从用户模式切换到管理模式，并在内核指定的入口点进入内核（RISC-V为此提供<code>ecall</code>指令）。</p>
+<h3 id="系统调用执行过程"><a class="markdownIt-Anchor" href="#系统调用执行过程"></a> 系统调用执行过程</h3>
+<p>系统调用在内核区，执行时需要从用户态过渡到核心态，CPU提供一个特殊的指令，将CPU从用户模式切换到管理模式，并在内核指定的入口点进入内核（RISC-V为此提供<code>ecall</code>指令）。</p>
 <p>一个进程可以通过执行RISC-V的<code>ecall</code>指令进行系统调用，该指令提升硬件特权级别，并将程序计数器（PC）更改为内核定义的入口点，入口点的代码切换到内核栈，执行实现系统调用的内核指令，当系统调用完成时，内核切换回用户栈，并通过调用<code>sret</code>指令返回用户空间，该指令降低了硬件特权级别，并在系统调用指令刚结束时恢复执行用户指令。</p>
-<h2 id="Lab-1"><a href="#Lab-1" class="headerlink" title="Lab"></a>Lab</h2><h1 id="3-Page-tables"><a href="#3-Page-tables" class="headerlink" title="3 Page tables"></a>3 Page tables</h1><h2 id="Knowledge-2"><a href="#Knowledge-2" class="headerlink" title="Knowledge"></a>Knowledge</h2><p>Xv6为每个进程维护一个单独的页表，定义了该进程的地址空间。一个进程的虚拟地址空间分布如下。首先是指令，然后是全局变量，然后是栈区，最后是一个堆区域。有许多因素限制了进程地址空间的最大范围： RISC-V上的指针有64位宽；硬件在页表中查找虚拟地址时只使用低39位；xv6只使用这39位中的38位。因此，最大地址是 <code>2^38-1=0x3fffffffff</code> ，即<code>MAXVA</code>（定义在kernel/riscv.h:348）在地址空间的顶部，xv6为<code>trampoline</code>（用于在用户和内核之间切换）和映射进程切换到内核的<code>trapframe</code>分别保留了一个页面。</p>
-<p><img src="https://xv6.dgs.zone/tranlate_books/book-riscv-rev1/images/c2/p2.png"></p>
-<h2 id="Lab-2"><a href="#Lab-2" class="headerlink" title="Lab"></a>Lab</h2><p><code>argaddr()</code> 和 <code>argint()</code> 函数都是从用户栈空间中提取参数。当用户调用系统调用时，需要将参数传给内核。参数通常会放到用户的栈中。</p>
+<h2 id="lab-2"><a class="markdownIt-Anchor" href="#lab-2"></a> Lab</h2>
+<h1 id="3-page-tables"><a class="markdownIt-Anchor" href="#3-page-tables"></a> 3 Page tables</h1>
+<h2 id="knowledge-3"><a class="markdownIt-Anchor" href="#knowledge-3"></a> Knowledge</h2>
+<p>Xv6为每个进程维护一个单独的页表，定义了该进程的地址空间。一个进程的虚拟地址空间分布如下。首先是指令，然后是全局变量，然后是栈区，最后是一个堆区域。有许多因素限制了进程地址空间的最大范围： RISC-V上的指针有64位宽；硬件在页表中查找虚拟地址时只使用低39位；xv6只使用这39位中的38位。因此，最大地址是 <code>2^38-1=0x3fffffffff</code> ，即<code>MAXVA</code>（定义在kernel/riscv.h:348）在地址空间的顶部，xv6为<code>trampoline</code>（用于在用户和内核之间切换）和映射进程切换到内核的<code>trapframe</code>分别保留了一个页面。</p>
+<p><img src="https://xv6.dgs.zone/tranlate_books/book-riscv-rev1/images/c2/p2.png" alt=""></p>
+<h2 id="lab-3"><a class="markdownIt-Anchor" href="#lab-3"></a> Lab</h2>
+<p><code>argaddr()</code> 和 <code>argint()</code> 函数都是从用户栈空间中提取参数。当用户调用系统调用时，需要将参数传给内核。参数通常会放到用户的栈中。</p>
 <p><code>walk</code> 函数在操作系统中通常用于页表的遍历和访问。在虚拟内存管理中，页表是一种数据结构，用于将虚拟地址映射到物理地址。<code>walk</code> 函数的主要作用是在给定的页表中查找特定虚拟地址对应的页表项。</p>
 <p><code>copyout</code> 函数通常用于从内核空间将数据复制到用户空间。</p>
 <p><code>PTE_A</code> 的默认值是第六位</p>
 <blockquote>
 <p>参考：</p>
-<p>[1] <a href="https://zhuanlan.zhihu.com/p/429304672">MIT 6.S081 2021: Lab page tables</a> </p>
+<p>[1] <a href="https://zhuanlan.zhihu.com/p/429304672">MIT 6.S081 2021: Lab page tables</a></p>
 <p>[2] <a href="https://blog.rayzhang.top/2022/07/22/mit-6.s081-lab-pgtbl/">MIT 6.S081 Lab Pgtbl 实验</a> （非常详细）</p>
 </blockquote>
-<h1 id="4-Traps"><a href="#4-Traps" class="headerlink" title="4 Traps"></a>4 Traps</h1><h2 id="Knowledge-3"><a href="#Knowledge-3" class="headerlink" title="Knowledge"></a>Knowledge</h2><p>Trap机制：用户空间和内核空间的切换，目的是实现操作系统的安全和隔离</p>
+<h1 id="4-traps"><a class="markdownIt-Anchor" href="#4-traps"></a> 4 Traps</h1>
+<h2 id="knowledge-4"><a class="markdownIt-Anchor" href="#knowledge-4"></a> Knowledge</h2>
+<p>Trap机制：用户空间和内核空间的切换，目的是实现操作系统的安全和隔离</p>
 <blockquote>
 <p>用户空间和内核空间的切换发生的场景：</p>
 <ul>
@@ -629,24 +647,33 @@ xv6系统为 RISC-V
 <li>触发中断导致程序需要响应内核设备驱动</li>
 </ul>
 </blockquote>
-<h2 id="Lab-3"><a href="#Lab-3" class="headerlink" title="Lab"></a>Lab</h2><p><code>proc</code> 结构体包含了进程中的所有信息，可以通过 <code>myproc()</code> 获取当前运行的进程的结构体。</p>
-<h1 id="5-Copy-on-Write"><a href="#5-Copy-on-Write" class="headerlink" title="5 Copy-on-Write"></a>5 Copy-on-Write</h1><h2 id="Knowledge-4"><a href="#Knowledge-4" class="headerlink" title="Knowledge"></a>Knowledge</h2><h2 id="Lab-4"><a href="#Lab-4" class="headerlink" title="Lab"></a>Lab</h2><ul>
+<h2 id="lab-4"><a class="markdownIt-Anchor" href="#lab-4"></a> Lab</h2>
+<p><code>proc</code> 结构体包含了进程中的所有信息，可以通过 <code>myproc()</code> 获取当前运行的进程的结构体。</p>
+<h1 id="5-copy-on-write"><a class="markdownIt-Anchor" href="#5-copy-on-write"></a> 5 Copy-on-Write</h1>
+<h2 id="knowledge-5"><a class="markdownIt-Anchor" href="#knowledge-5"></a> Knowledge</h2>
+<h2 id="lab-5"><a class="markdownIt-Anchor" href="#lab-5"></a> Lab</h2>
+<ul>
 <li>我们很有可能需要标记当前的 PTE 为 COW 内存页映射，因此我们可以使用 RSW（reserved for software）标识位来实现：</li>
 </ul>
-<p><img src="https://blog.rayzhang.top/2022/10/01/mit-6.s081-lab-cow/rsw-bits.png"></p>
+<p><img src="https://blog.rayzhang.top/2022/10/01/mit-6.s081-lab-cow/rsw-bits.png" alt=""></p>
 <ul>
-<li><p>如果 COW 下的缺页中断产生了，但是也没有足够的物理内存空间，那么进程应当被杀死。</p>
+<li>
+<p>如果 COW 下的缺页中断产生了，但是也没有足够的物理内存空间，那么进程应当被杀死。</p>
 </li>
-<li><p>设置引用计数，将物理内容RAM划分成 <code>(PHYSTOP - KERNBASE) / PGSIZE</code> 个页面，对每个页面设置一个引用计数（代表页面被引用的次数，当引用计数变为0时，就要释放对应的空间）。</p>
+<li>
+<p>设置引用计数，将物理内容RAM划分成 <code>(PHYSTOP - KERNBASE) / PGSIZE</code> 个页面，对每个页面设置一个引用计数（代表页面被引用的次数，当引用计数变为0时，就要释放对应的空间）。</p>
 </li>
 </ul>
-<p><img src="https://blog.rayzhang.top/2022/10/01/mit-6.s081-lab-cow/mem.png"></p>
-<h1 id="6-Multithreading"><a href="#6-Multithreading" class="headerlink" title="6 Multithreading"></a>6 Multithreading</h1><h2 id="Knowledge-5"><a href="#Knowledge-5" class="headerlink" title="Knowledge"></a>Knowledge</h2><p>Xv6有两种类型的锁：自旋锁（spinlocks）和睡眠锁（sleep-locks）。</p>
+<p><img src="https://blog.rayzhang.top/2022/10/01/mit-6.s081-lab-cow/mem.png" alt=""></p>
+<h1 id="6-multithreading"><a class="markdownIt-Anchor" href="#6-multithreading"></a> 6 Multithreading</h1>
+<h2 id="knowledge-6"><a class="markdownIt-Anchor" href="#knowledge-6"></a> Knowledge</h2>
+<p>Xv6有两种类型的锁：自旋锁（spinlocks）和睡眠锁（sleep-locks）。</p>
 <p>自旋锁和中断的交互引发了潜在的危险。假设<code>sys_sleep</code>持有<code>tickslock</code>，并且它的CPU被计时器中断中断。<code>clockintr</code>会尝试获取<code>tickslock</code>，意识到它被持有后等待释放。在这种情况下，<code>tickslock</code>永远不会被释放：只有<code>sys_sleep</code>可以释放它，但是<code>sys_sleep</code>直到<code>clockintr</code>返回前不能继续运行。所以CPU会死锁，任何需要锁的代码也会冻结。</p>
 <p>为了避免这种情况，如果一个自旋锁被中断处理程序所使用，那么CPU必须保证在启用中断的情况下永远不能持有该锁。Xv6更保守：当CPU获取任何锁时，xv6总是禁用该CPU上的中断。中断仍然可能发生在其他CPU上，此时中断的<code>acquire</code>可以等待线程释放自旋锁；由于不在同一CPU上，不会造成死锁。</p>
 <p>自旋锁的另一个缺点是，一个进程在持有自旋锁的同时不能让出（yield）CPU，然而我们希望持有锁的进程等待磁盘I/O的时候其他进程可以使用CPU。</p>
 <p>Xv6以睡眠锁（sleep-locks）的形式提供了这种锁。<code>acquiresleep</code> (<strong>kernel/sleeplock.c</strong>:22) 在等待时让步CPU</p>
-<h2 id="Lab-5"><a href="#Lab-5" class="headerlink" title="Lab"></a>Lab</h2>
+<h2 id="lab-6"><a class="markdownIt-Anchor" href="#lab-6"></a> Lab</h2>
+
             </div>
             <hr />
 
@@ -808,7 +835,7 @@ xv6系统为 RISC-V
                   property="dct:title" rel="dct:type">
                     《【Mit6.s081】课程记录》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/p/2589851505.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 行码棋
             </a> 采用
@@ -1142,7 +1169,7 @@ xv6系统为 RISC-V
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="2569313091.html">
+                <a href="/p/2569313091.html">
                     <div class="card-image">
                         
                         
@@ -1169,7 +1196,7 @@ xv6系统为 RISC-V
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/%E5%93%B2%E6%80%9D/" class="post-category" target="_blank">
+                            <a href="/categories/%E5%93%B2%E6%80%9D/" class="post-category" target="_blank">
                                     哲思
                                 </a>
                             
@@ -1180,7 +1207,7 @@ xv6系统为 RISC-V
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%93/" target="_blank">
+                    <a href="/tags/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%93/" target="_blank">
                         <span class="chip bg-color">阶段性总结</span>
                     </a>
                     
@@ -1195,7 +1222,7 @@ xv6系统为 RISC-V
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="3703005386.html">
+                <a href="/p/3703005386.html">
                     <div class="card-image">
                         
                         
@@ -1208,9 +1235,10 @@ xv6系统为 RISC-V
                     <div class="summary block-with-text">
                         
                             
-1.需要一个数组或者字符串的目前的元素和前一个元素做相关运算时:直接遍历这个序列，当 i 等于0时不满足条件，只有i 等于 1时才会执行if语句
+1.需要一个数组或者字符串的目前的元素和前一个元素做相关运算时:
+直接遍历这个序列，当 i 等于0时不满足条件，只有i 等于 1时才会执行if语句
 for(int i = 0; i &lt; len; ++i) {
-	if( i &amp;
+	if( i &amp
                         
                     </div>
                     <div class="publish-info">
@@ -1221,7 +1249,7 @@ for(int i = 0; i &lt; len; ++i) {
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/ACM/" class="post-category" target="_blank">
+                            <a href="/categories/ACM/" class="post-category" target="_blank">
                                     ACM
                                 </a>
                             
@@ -1232,7 +1260,7 @@ for(int i = 0; i &lt; len; ++i) {
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" target="_blank">
+                    <a href="/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" target="_blank">
                         <span class="chip bg-color">学习总结</span>
                     </a>
                     
@@ -1391,25 +1419,6 @@ for(int i = 0; i &lt; len; ++i) {
 
 
 
-<script src="https://lib.baomitu.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
-
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-<!-- 代码语言 -->
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-<!-- 代码块复制 -->
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
-<!-- 代码块收缩 -->
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> 
-<!-- 代码块折行 -->
-<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
-
-
     <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
@@ -1417,7 +1426,7 @@ for(int i = 0; i &lt; len; ++i) {
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">97.2k</span>
+            <span class="white-color">102.5k</span>
             
 
             <br>
@@ -1468,7 +1477,7 @@ for(int i = 0; i &lt; len; ++i) {
 
 
 
-    <a href="../atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fa fa-rss"></i>
     </a>
 </div>

@@ -75,9 +75,13 @@ sudo usermod -aG docker $USER
         document.write('<script src="' + src + '" id="sozz"><\/script>');
         })();
     </script>
-<meta name="generator" content="Hexo 7.0.0">
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body>
@@ -86,7 +90,7 @@ sudo usermod -aG docker $USER
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
-                <a href="../index.html" class="waves-effect waves-light">
+                <a href="/" class="waves-effect waves-light">
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
@@ -332,7 +336,7 @@ sudo usermod -aG docker $USER
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
-                location.href = '../index.html';
+                location.href = '/';
             }
         }
     })();
@@ -469,11 +473,11 @@ sudo usermod -aG docker $USER
                     
                     <div class="article-tag">
                         
-                        <a href="../tags/docker/" target="_blank">
+                        <a href="/tags/docker/" target="_blank">
                             <span class="chip bg-color">docker</span>
                         </a>
                         
-                        <a href="../tags/Linux/" target="_blank">
+                        <a href="/tags/Linux/" target="_blank">
                             <span class="chip bg-color">Linux</span>
                         </a>
                         
@@ -485,7 +489,7 @@ sudo usermod -aG docker $USER
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="../categories/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/" class="post-category" target="_blank">
+                        <a href="/categories/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/" class="post-category" target="_blank">
                             开发知识
                         </a>
                         
@@ -545,13 +549,15 @@ sudo usermod -aG docker $USER
 <p><code>sudo usermod -aG docker $USER</code></p>
 <p>执行完此操作后，需要退出服务器，再重新登录回来，才可以省去sudo权限。</p>
 </blockquote>
-<h1 id="镜像（images）"><a href="#镜像（images）" class="headerlink" title="镜像（images）"></a>镜像（images）</h1><p><code>docker pull ubuntu:20.04</code>：拉取一个镜像</p>
+<h1 id="镜像images"><a class="markdownIt-Anchor" href="#镜像images"></a> 镜像（images）</h1>
+<p><code>docker pull ubuntu:20.04</code>：拉取一个镜像</p>
 <p><code>docker images</code>：列出本地所有镜像</p>
 <p><code>docker image rm ubuntu:20.04 或 docker rmi ubuntu:20.04</code>：删除镜像ubuntu:20.04</p>
 <p><code>docker [container] commit CONTAINER IMAGE_NAME:TAG</code>：创建某个container的镜像</p>
 <p><code>docker save -o ubuntu_20_04.tar ubuntu:20.04</code>：将镜像ubuntu:20.04导出到本地文件ubuntu_20_04.tar中</p>
 <p><code>docker load -i ubuntu_20_04.tar</code>：将镜像ubuntu:20.04从本地文件ubuntu_20_04.tar中加载出来</p>
-<h1 id="容器（container）"><a href="#容器（container）" class="headerlink" title="容器（container）"></a>容器（container）</h1><p><code>docker [container] create -it ubuntu:20.04</code>：利用镜像ubuntu:20.04创建一个容器。</p>
+<h1 id="容器container"><a class="markdownIt-Anchor" href="#容器container"></a> 容器（container）</h1>
+<p><code>docker [container] create -it ubuntu:20.04</code>：利用镜像ubuntu:20.04创建一个容器。</p>
 <p><code>docker ps -a</code>：查看本地的所有容器</p>
 <p><code>docker [container] start CONTAINER</code>：启动容器</p>
 <p><code>docker [container] stop CONTAINER</code>：停止容器</p>
@@ -565,9 +571,11 @@ sudo usermod -aG docker $USER
 <p><code>docker import xxx.tar image_name:tag</code>：将本地文件xxx.tar导入成镜像，并将镜像命名为image_name:tag</p>
 <p><code>docker export/import</code>与<code>docker save/load</code>的区别：</p>
 <ul>
-<li><p>export/import会丢弃历史记录和元数据信息，仅保存容器当时的快照状态</p>
+<li>
+<p>export/import会丢弃历史记录和元数据信息，仅保存容器当时的快照状态</p>
 </li>
-<li><p>save/load会保存完整记录，体积更大</p>
+<li>
+<p>save/load会保存完整记录，体积更大</p>
 </li>
 </ul>
 <p><code>docker top CONTAINER</code>：查看某个容器内的所有进程</p>
@@ -575,7 +583,8 @@ sudo usermod -aG docker $USER
 <p><code>docker cp xxx CONTAINER:xxx</code> 或 <code>docker cp CONTAINER:xxx xxx</code>：在本地和容器间复制文件</p>
 <p><code>docker rename CONTAINER1 CONTAINER2</code>：重命名容器</p>
 <p><code>docker update CONTAINER --memory 500MB</code>：修改容器限制</p>
-<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">scp</span> docker_1_0.tar server_name  <span class="token comment"># 将镜像上传到自己租的云端服务器</span>
+<h1 id="示例"><a class="markdownIt-Anchor" href="#示例"></a> 示例</h1>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">scp</span> docker_1_0.tar server_name  <span class="token comment"># 将镜像上传到自己租的云端服务器</span>
 
 <span class="token function">ssh</span> server_name  <span class="token comment"># 登录自己的云端服务器</span>
 
@@ -584,29 +593,23 @@ sudo usermod -aG docker $USER
 <span class="token function">docker</span> run <span class="token parameter variable">-p</span> <span class="token number">20000</span>:22 <span class="token parameter variable">--name</span> my_docker_server <span class="token parameter variable">-itd</span> docker:1.0  <span class="token comment"># 创建并运行docker:1.0镜像, 20000端口映射到22</span>
 
 <span class="token function">docker</span> attach my_docker_server  <span class="token comment"># 进入创建的docker容器</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h1 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h1><h2 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> images <span class="token comment"># 列出本地所有镜像</span>
+<h1 id="常用操作"><a class="markdownIt-Anchor" href="#常用操作"></a> 常用操作</h1>
+<h2 id="查询"><a class="markdownIt-Anchor" href="#查询"></a> 查询</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> images <span class="token comment"># 列出本地所有镜像</span>
 <span class="token function">docker</span> <span class="token function">ps</span> <span class="token parameter variable">-a</span> <span class="token comment"># 列出本地所有容器</span>
 <span class="token function">docker</span> <span class="token function">ps</span> <span class="token comment"># 列出运行中的容器</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="镜像操作"><a href="#镜像操作" class="headerlink" title="镜像操作"></a>镜像操作</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> pull ubuntu:20.04 <span class="token comment"># 拉取一个镜像</span>
+<h2 id="镜像操作"><a class="markdownIt-Anchor" href="#镜像操作"></a> 镜像操作</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> pull ubuntu:20.04 <span class="token comment"># 拉取一个镜像</span>
 <span class="token function">docker</span> image <span class="token function">rm</span> ubuntu:20.04 <span class="token comment"># 删除一个镜像</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="容器操作"><a href="#容器操作" class="headerlink" title="容器操作"></a>容器操作</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> container start CONTAINER <span class="token comment">#启动容器</span>
+<h2 id="容器操作"><a class="markdownIt-Anchor" href="#容器操作"></a> 容器操作</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> container start CONTAINER <span class="token comment">#启动容器</span>
 <span class="token function">docker</span> container stop CONTAINER <span class="token comment">#停止容器</span>
 <span class="token function">docker</span> container attach CONTAINER <span class="token comment">#进入容器，先按Ctrl-p，再按Ctrl-q可以挂起容器(容器必须启动才可进入)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="镜像与容器操作"><a href="#镜像与容器操作" class="headerlink" title="镜像与容器操作"></a>镜像与容器操作</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> container create <span class="token parameter variable">-it</span> ubuntu:20.04 name <span class="token comment"># 利用镜像ubuntu:20.04创建一个名为name的容器</span>
+<h2 id="镜像与容器操作"><a class="markdownIt-Anchor" href="#镜像与容器操作"></a> 镜像与容器操作</h2>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> container create <span class="token parameter variable">-it</span> ubuntu:20.04 name <span class="token comment"># 利用镜像ubuntu:20.04创建一个名为name的容器</span>
 <span class="token function">docker</span> container commit CONTAINER IMAGE_NAME:TAG <span class="token comment">#创建某个container的镜像</span>
 <span class="token function">docker</span> run <span class="token parameter variable">-p</span> <span class="token number">20000</span>:22 <span class="token parameter variable">--name</span> NAME <span class="token parameter variable">-itd</span> docker:1.0  <span class="token comment"># 利用docker:1.0镜像创建一个名为NAME的容器并运行容器, 并将主机20000端口映射到容器22</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
 
             </div>
             <hr />
@@ -769,7 +772,7 @@ sudo usermod -aG docker $USER
                   property="dct:title" rel="dct:type">
                     《docker常用命令总结》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/p/1146830909.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 行码棋
             </a> 采用
@@ -1103,7 +1106,7 @@ sudo usermod -aG docker $USER
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="1046407529.html">
+                <a href="/p/1046407529.html">
                     <div class="card-image">
                         
                         
@@ -1115,12 +1118,14 @@ sudo usermod -aG docker $USER
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            树链剖分模板题题目链接：
+                             树链剖分模板题
+题目链接：
 https://www.luogu.com.cn/problem/P3384
 
-代码#include&lt;bits/stdc++.h&gt;
+ 代码
+#include&lt;bits/stdc++.h&gt;
 using namespace std;
-using ll = lon
+using ll =
                         
                     </div>
                     <div class="publish-info">
@@ -1131,7 +1136,7 @@ using ll = lon
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/%E5%9B%BE%E8%AE%BA/" class="post-category" target="_blank">
+                            <a href="/categories/%E5%9B%BE%E8%AE%BA/" class="post-category" target="_blank">
                                     图论
                                 </a>
                             
@@ -1142,11 +1147,11 @@ using ll = lon
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/" target="_blank">
+                    <a href="/tags/%E6%A0%91%E9%93%BE%E5%89%96%E5%88%86/" target="_blank">
                         <span class="chip bg-color">树链剖分</span>
                     </a>
                     
-                    <a href="../tags/DFS/" target="_blank">
+                    <a href="/tags/DFS/" target="_blank">
                         <span class="chip bg-color">DFS</span>
                     </a>
                     
@@ -1161,7 +1166,7 @@ using ll = lon
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="1843856130.html">
+                <a href="/p/1843856130.html">
                     <div class="card-image">
                         
                         
@@ -1173,12 +1178,14 @@ using ll = lon
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Git命令 | 详解概念Git是基于树进行维护的，每一个节点都是一个历史版本，可以进行代码管理。
+                             Git命令 | 详解
+ 概念
+Git是基于树进行维护的，每一个节点都是一个历史版本，可以进行代码管理。
 
 
 工作区（Workspace） ：就是会出现工作目录，即自己要编写的代码
-暂存区（Index / Stage）  
-本地仓库（Reposit
+暂存区（Index / Stage）
+本地仓库（Repos
                         
                     </div>
                     <div class="publish-info">
@@ -1189,7 +1196,7 @@ using ll = lon
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/" class="post-category" target="_blank">
+                            <a href="/categories/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/" class="post-category" target="_blank">
                                     开发知识
                                 </a>
                             
@@ -1200,11 +1207,11 @@ using ll = lon
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/Linux/" target="_blank">
+                    <a href="/tags/Linux/" target="_blank">
                         <span class="chip bg-color">Linux</span>
                     </a>
                     
-                    <a href="../tags/git/" target="_blank">
+                    <a href="/tags/git/" target="_blank">
                         <span class="chip bg-color">git</span>
                     </a>
                     
@@ -1363,25 +1370,6 @@ using ll = lon
 
 
 
-<script src="https://lib.baomitu.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
-
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-<!-- 代码语言 -->
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-<!-- 代码块复制 -->
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
-<!-- 代码块收缩 -->
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> 
-<!-- 代码块折行 -->
-<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
-
-
     <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
@@ -1389,7 +1377,7 @@ using ll = lon
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">97.2k</span>
+            <span class="white-color">102.5k</span>
             
 
             <br>
@@ -1440,7 +1428,7 @@ using ll = lon
 
 
 
-    <a href="../atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fa fa-rss"></i>
     </a>
 </div>

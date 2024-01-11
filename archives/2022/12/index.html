@@ -71,9 +71,13 @@
         document.write('<script src="' + src + '" id="sozz"><\/script>');
         })();
     </script>
-<meta name="generator" content="Hexo 7.0.0">
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body>
@@ -82,7 +86,7 @@
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
-                <a href="../../../index.html" class="waves-effect waves-light">
+                <a href="/" class="waves-effect waves-light">
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
@@ -467,7 +471,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             
             <div class="cd-timeline-img year" data-aos="zoom-in-up">
-                <a href="../../../archives/2022">2022</a>
+                <a href="/archives/2022">2022</a>
             </div>
             
 
@@ -475,7 +479,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             
             
             <div class="cd-timeline-img month" data-aos="zoom-in-up">
-                <a href="../../../archives/2022/12">12</a>
+                <a href="/archives/2022/12">12</a>
             </div>
             
 
@@ -486,7 +490,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             <article class="cd-timeline-content" data-aos="fade-up">
                 <div class="article col s12 m6">
                     <div class="card">
-                        <a href="../../../p/808139430.html">
+                        <a href="/p/808139430.html">
                             <div class="card-image">
                                 
                                 
@@ -498,12 +502,13 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                         <div class="card-content article-content">
                             <div class="summary block-with-text">
                                 
-                                机器学习环境搭建
+                                 机器学习环境搭建
+
+
 一般使用anaconda搭建python虚拟环境（miniconda占的空间应该小一点，这个也可以）
 
-使用工具库一般有科学计算库numpy，数据处理库pandas，绘图matplotlib等，需要了解相关用法
 
-……
+使用工具库一般有科学计算库numpy，数据处理库pandas，绘图matplotlib等，需要了解相关用法
 
 
                                 
@@ -517,7 +522,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                                     
                                     <i class="fa fa-bookmark fa-fw icon-category"></i>
                                     
-                                    <a href="../../../categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category" target="_blank">
+                                    <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category" target="_blank">
                                         人工智能
                                     </a>
                                     
@@ -529,9 +534,9 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                         
                         <div class="card-action article-tags">
                             
-                            <a href="../../../tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"><span class="chip bg-color">学习总结</span></a>
+                            <a href="/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"><span class="chip bg-color">学习总结</span></a>
                             
-                            <a href="../../../tags/MachineLearning/"><span class="chip bg-color">MachineLearning</span></a>
+                            <a href="/tags/MachineLearning/"><span class="chip bg-color">MachineLearning</span></a>
                             
                         </div>
                         
@@ -555,7 +560,7 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
             <article class="cd-timeline-content" data-aos="fade-up">
                 <div class="article col s12 m6">
                     <div class="card">
-                        <a href="../../../p/1888017128.html">
+                        <a href="/p/1888017128.html">
                             <div class="card-image">
                                 
                                 
@@ -567,12 +572,14 @@ $('.bg-cover').css('background-image', 'url(/medias/banner/' + new Date().getDay
                         <div class="card-content article-content">
                             <div class="summary block-with-text">
                                 
-                                Pytorch深度学习入门知识总结GPU相关检查GPU是否工作
+                                 Pytorch深度学习入门知识总结
+ GPU相关
+检查GPU是否工作
 import torch
 torch.cuda.is_available()
-
-Dataset可以继承Dataset来制作自己的数据类
-from torch.utils.dat
+ Dataset
+可以继承Dataset来制作自己的数据类
+from torch.util
                                 
                             </div>
                             <div class="publish-info">
@@ -584,7 +591,7 @@ from torch.utils.dat
                                     
                                     <i class="fa fa-bookmark fa-fw icon-category"></i>
                                     
-                                    <a href="../../../categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category" target="_blank">
+                                    <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category" target="_blank">
                                         人工智能
                                     </a>
                                     
@@ -596,7 +603,7 @@ from torch.utils.dat
                         
                         <div class="card-action article-tags">
                             
-                            <a href="../../../tags/Pytorch/"><span class="chip bg-color">Pytorch</span></a>
+                            <a href="/tags/Pytorch/"><span class="chip bg-color">Pytorch</span></a>
                             
                         </div>
                         
@@ -617,7 +624,7 @@ from torch.utils.dat
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">97.2k</span>
+            <span class="white-color">102.5k</span>
             
 
             <br>
@@ -668,7 +675,7 @@ from torch.utils.dat
 
 
 
-    <a href="../../../atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fa fa-rss"></i>
     </a>
 </div>

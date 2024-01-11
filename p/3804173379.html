@@ -12,13 +12,11 @@
     <meta name="description" content="相关设置：
 如果是在notebook中想使用嵌入式绘图，需添加
 %matplotlib inline
-
 如果想使用交互式绘图，需添加
 %matplotlib notebook
-
-
-
-折线图绘制子图操作figure相当于一张画布，画布中可以添">
+ 折线图绘制
+ 子图操作
+figure相当于一张画布，画布中可以添">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -80,9 +78,13 @@
         document.write('<script src="' + src + '" id="sozz"><\/script>');
         })();
     </script>
-<meta name="generator" content="Hexo 7.0.0">
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body>
@@ -91,7 +93,7 @@
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
-                <a href="../index.html" class="waves-effect waves-light">
+                <a href="/" class="waves-effect waves-light">
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
@@ -337,7 +339,7 @@
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
-                location.href = '../index.html';
+                location.href = '/';
             }
         }
     })();
@@ -474,11 +476,11 @@
                     
                     <div class="article-tag">
                         
-                        <a href="../tags/Python/" target="_blank">
+                        <a href="/tags/Python/" target="_blank">
                             <span class="chip bg-color">Python</span>
                         </a>
                         
-                        <a href="../tags/%E7%94%BB%E5%9B%BE/" target="_blank">
+                        <a href="/tags/%E7%94%BB%E5%9B%BE/" target="_blank">
                             <span class="chip bg-color">画图</span>
                         </a>
                         
@@ -490,11 +492,11 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="../categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category" target="_blank">
+                        <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category" target="_blank">
                             人工智能
                         </a>
                         
-                        <a href="../categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/Python/" class="post-category" target="_blank">
+                        <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/Python/" class="post-category" target="_blank">
                             Python
                         </a>
                         
@@ -551,13 +553,11 @@
                 <p>相关设置：</p>
 <p>如果是在notebook中想使用<strong>嵌入式绘图</strong>，需添加</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">%</span>matplotlib inline<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
 <p>如果想使用<strong>交互式绘图</strong>，需添加</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">%</span>matplotlib notebook<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
-
-<h1 id="折线图绘制"><a href="#折线图绘制" class="headerlink" title="折线图绘制"></a>折线图绘制</h1><h1 id="子图操作"><a href="#子图操作" class="headerlink" title="子图操作"></a>子图操作</h1><p><code>figure</code>相当于一张画布，画布中可以添加子图</p>
+<h1 id="折线图绘制"><a class="markdownIt-Anchor" href="#折线图绘制"></a> 折线图绘制</h1>
+<h1 id="子图操作"><a class="markdownIt-Anchor" href="#子图操作"></a> 子图操作</h1>
+<p><code>figure</code>相当于一张画布，画布中可以添加子图</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
 fig <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token comment"># fig = plt.figure(figsize=(4, 3)) 画的图大小宽4高3</span>
@@ -567,13 +567,12 @@ ax1 <span class="token operator">=</span> fig<span class="token punctuation">.</
 ax2 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
 ax3 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token comment"># 还可以简写参数为224</span>
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># 此时就可以显示出图像了，此时图像具有横纵坐标相关信息</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>对子图分别进行操作</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python">ax1<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token punctuation">)</span>
 ax2<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<h1 id="操作-显示图片"><a href="#操作-显示图片" class="headerlink" title="操作-显示图片"></a>操作-显示图片</h1><p>第一种：使用<code>IPython + PIL</code>进行显示</p>
+<h1 id="操作-显示图片"><a class="markdownIt-Anchor" href="#操作-显示图片"></a> 操作-显示图片</h1>
+<p>第一种：使用<code>IPython + PIL</code>进行显示</p>
 <p>下面代码显示多张图片，多张图片在一列显示，看着可能不美观。</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
 <span class="token keyword">from</span> IPython<span class="token punctuation">.</span>display <span class="token keyword">import</span> display
@@ -584,7 +583,6 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
 	<span class="token comment"># 同时还可以修改显示图片的尺寸 修改成180 * 180</span>
     img<span class="token punctuation">.</span>resize<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">180</span><span class="token punctuation">,</span> <span class="token number">180</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
     display<span class="token punctuation">(</span>img<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>第二种：使用<code>matplotlib</code> 子图功能进行显示</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> cv2
 <span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
@@ -597,7 +595,6 @@ ax1<span class="token punctuation">.</span>imshow<span class="token punctuation"
 ax2 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
 plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>img<span class="token punctuation">)</span> <span class="token comment"># 也可以这样写，默认图像显示到最新子图的位置</span>
 ax3 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token comment"># 还可以简写参数为224</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 
             </div>
             <hr />
@@ -760,7 +757,7 @@ ax3 <span class="token operator">=</span> fig<span class="token punctuation">.</
                   property="dct:title" rel="dct:type">
                     《matplotlib画图》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/p/3804173379.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 行码棋
             </a> 采用
@@ -1094,7 +1091,7 @@ ax3 <span class="token operator">=</span> fig<span class="token punctuation">.</
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="1473860796.html">
+                <a href="/p/1473860796.html">
                     <div class="card-image">
                         
                         
@@ -1117,7 +1114,7 @@ ax3 <span class="token operator">=</span> fig<span class="token punctuation">.</
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/%E8%B5%84%E6%BA%90/" class="post-category" target="_blank">
+                            <a href="/categories/%E8%B5%84%E6%BA%90/" class="post-category" target="_blank">
                                     资源
                                 </a>
                             
@@ -1128,7 +1125,7 @@ ax3 <span class="token operator">=</span> fig<span class="token punctuation">.</
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/%E8%B5%84%E6%BA%90/" target="_blank">
+                    <a href="/tags/%E8%B5%84%E6%BA%90/" target="_blank">
                         <span class="chip bg-color">资源</span>
                     </a>
                     
@@ -1143,7 +1140,7 @@ ax3 <span class="token operator">=</span> fig<span class="token punctuation">.</
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="2946568862.html">
+                <a href="/p/2946568862.html">
                     <div class="card-image">
                         
                         
@@ -1155,11 +1152,13 @@ ax3 <span class="token operator">=</span> fig<span class="token punctuation">.</
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Pandas读取数据import pandas as pd
+                             Pandas
+ 读取数据
+import pandas as pd
 df = pd.read_csv(path) # path为读取数据的路径
-
-查看数据&gt;&gt;&gt; import numpy as np
-&gt;&gt;&gt; mp
+ 查看数据
+&gt;&gt;&gt; import numpy as np
+&gt;&gt;&g
                         
                     </div>
                     <div class="publish-info">
@@ -1170,11 +1169,11 @@ df = pd.read_csv(path) # path为读取数据的路径
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category" target="_blank">
+                            <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category" target="_blank">
                                     人工智能
                                 </a>
                             
-                            <a href="../categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/Python/" class="post-category" target="_blank">
+                            <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/Python/" class="post-category" target="_blank">
                                     Python
                                 </a>
                             
@@ -1185,15 +1184,15 @@ df = pd.read_csv(path) # path为读取数据的路径
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/Pandas/" target="_blank">
+                    <a href="/tags/Pandas/" target="_blank">
                         <span class="chip bg-color">Pandas</span>
                     </a>
                     
-                    <a href="../tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" target="_blank">
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/" target="_blank">
                         <span class="chip bg-color">数据处理</span>
                     </a>
                     
-                    <a href="../tags/Python/" target="_blank">
+                    <a href="/tags/Python/" target="_blank">
                         <span class="chip bg-color">Python</span>
                     </a>
                     
@@ -1352,25 +1351,6 @@ df = pd.read_csv(path) # path为读取数据的路径
 
 
 
-<script src="https://lib.baomitu.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
-
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-<!-- 代码语言 -->
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-<!-- 代码块复制 -->
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
-<!-- 代码块收缩 -->
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> 
-<!-- 代码块折行 -->
-<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
-
-
     <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
@@ -1378,7 +1358,7 @@ df = pd.read_csv(path) # path为读取数据的路径
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">97.2k</span>
+            <span class="white-color">102.5k</span>
             
 
             <br>
@@ -1429,7 +1409,7 @@ df = pd.read_csv(path) # path为读取数据的路径
 
 
 
-    <a href="../atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fa fa-rss"></i>
     </a>
 </div>

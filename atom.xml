@@ -31,7 +31,8 @@
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;记录一些看到的易懂的C++文章&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h1 id=&quot;结构体&quot;&gt;&lt;a href=&quot;#结构体&quot; class=&quot;headerlink&quot; title=&quot;结构体&quot;&gt;&lt;/a&gt;结构体&lt;/h1&gt;&lt;p&gt;结构体内存对齐： &lt;a</summary>
+&lt;h1 id=&quot;结构体&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#结构体&quot;&gt;&lt;/a&gt; 结构体&lt;/h1&gt;
+&lt;p&gt;结构体内存对齐： &lt;a</summary>
         
       
     
@@ -56,7 +57,9 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Tmux命令&quot;&gt;&lt;a href=&quot;#Tmux命令&quot; class=&quot;headerlink&quot; title=&quot;Tmux命令&quot;&gt;&lt;/a&gt;Tmux命令&lt;/h1&gt;&lt;p&gt;&lt;code&gt;tmux&lt;/code&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;tmux命令&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#tmux命令&quot;&gt;&lt;/a&gt; Tmux命令&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;tmux&lt;/code&gt; 是一个终端复用器，可以在一个窗口中运行多个终端会话。&lt;/p&gt;
+&lt;p&gt;一个</summary>
         
       
     
@@ -81,7 +84,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;自建私有git进行项目发布&quot;&gt;&lt;a href=&quot;#自建私有git进行项目发布&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;自建私有git进行项目发布&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#自建私有git进行项目发布&quot;&gt;&lt;/a&gt;</summary>
         
       
     
@@ -106,7 +109,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;2023年度总结&quot;&gt;&lt;a href=&quot;#2023年度总结&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;2023年度总结&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#2023年度总结&quot;&gt;&lt;/a&gt;</summary>
         
       
     
@@ -131,7 +134,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;C-C-指针操作整理&quot;&gt;&lt;a href=&quot;#C-C-指针操作整理&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;cc指针操作整理&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#cc指针操作整理&quot;&gt;&lt;/a&gt;</summary>
         
       
     
@@ -210,7 +213,8 @@
         
         
     <summary type="html">&lt;hr&gt;
-&lt;p&gt;1.需要一个数组或者字符串的目前的元素和前一个元素做相关运算时:&lt;br&gt;&lt;strong&gt;直接遍历这个序列，当 i 等于0时不满足条件，只有i 等于 1时才会执行if语句&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1.需要一个数组或者字符串的目前的元素和前一个元素做相关运算时:&lt;br&gt;
+&lt;strong&gt;直接遍历这个序列，当 i 等于0时不满足条件，只有i 等于 1时才会执行if语句&lt;/strong&gt;&lt;/p&gt;
 &lt;pre class=&quot;line-numbers</summary>
         
       
@@ -238,7 +242,7 @@
         
     <summary type="html">&lt;p&gt;记录个人刷过的算法经典题目（好题），以备复习回顾。&lt;/p&gt;
 &lt;p&gt;一级目录参考 &lt;a href=&quot;https://oi-wiki.org/&quot;&gt;OI Wiki&lt;/a&gt; 进行设置。&lt;/p&gt;
-&lt;h1 id=&quot;语言基础&quot;&gt;&lt;a href=&quot;#语言基础&quot;</summary>
+&lt;h1 id=&quot;语言基础&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
         
       
     
@@ -264,7 +268,8 @@
         
         
     <summary type="html">&lt;p&gt;希望能够使用Google搜索进行精准搜索。&lt;/p&gt;
-&lt;h1 id=&quot;Google搜索语法&quot;&gt;&lt;a href=&quot;#Google搜索语法&quot; class=&quot;headerlink&quot; title=&quot;Google搜索语法&quot;&gt;&lt;/a&gt;Google搜索语法&lt;/h1&gt;&lt;h1</summary>
+&lt;h1 id=&quot;google搜索语法&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#google搜索语法&quot;&gt;&lt;/a&gt; Google搜索语法&lt;/h1&gt;
+&lt;h1 id=&quot;1-内容搜索&quot;&gt;&lt;a</summary>
         
       
     
@@ -292,7 +297,7 @@
     <summary type="html">&lt;p&gt;平生第一次搞推免，也是最后一次。错失了一些机会，也有幸获得了一些机会，值得祝庆，也值得反思。&lt;/p&gt;
 &lt;p&gt;以下记录为个人流水账。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&quot;个人背景&quot;&gt;&lt;a href=&quot;#个人背景&quot; class=&quot;headerlink&quot;</summary>
+&lt;h1 id=&quot;个人背景&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#个人背景&quot;&gt;&lt;/a&gt;</summary>
         
       
     
@@ -377,7 +382,8 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Pandas&quot;&gt;&lt;a href=&quot;#Pandas&quot; class=&quot;headerlink&quot; title=&quot;Pandas&quot;&gt;&lt;/a&gt;Pandas&lt;/h1&gt;&lt;h1 id=&quot;读取数据&quot;&gt;&lt;a href=&quot;#读取数据&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;pandas&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#pandas&quot;&gt;&lt;/a&gt; Pandas&lt;/h1&gt;
+&lt;h1 id=&quot;读取数据&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#读取数据&quot;&gt;&lt;/a&gt;</summary>
         
       
     
@@ -408,7 +414,8 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;C-11-多线程&quot;&gt;&lt;a href=&quot;#C-11-多线程&quot; class=&quot;headerlink&quot; title=&quot;C++11 多线程&quot;&gt;&lt;/a&gt;C++11 多线程&lt;/h1&gt;&lt;blockquote&gt;
+    <summary type="html">&lt;h1 id=&quot;c11-多线程&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#c11-多线程&quot;&gt;&lt;/a&gt; C++11 多线程&lt;/h1&gt;
+&lt;blockquote&gt;
 &lt;p&gt;参考：&lt;/p&gt;
 &lt;p&gt;C++11 thread多线程：&lt;a</summary>
         
@@ -437,7 +444,7 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Latex语法&quot;&gt;&lt;a href=&quot;#Latex语法&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;latex语法&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#latex语法&quot;&gt;&lt;/a&gt;</summary>
         
       
     
@@ -464,7 +471,8 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;组合数学常用公式&quot;&gt;&lt;a href=&quot;#组合数学常用公式&quot; class=&quot;headerlink&quot; title=&quot;组合数学常用公式&quot;&gt;&lt;/a&gt;组合数学常用公式&lt;/h1&gt;&lt;h2 id=&quot;二项式定理&quot;&gt;&lt;a href=&quot;#二项式定理&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;组合数学常用公式&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#组合数学常用公式&quot;&gt;&lt;/a&gt; 组合数学常用公式&lt;/h1&gt;
+&lt;h2 id=&quot;二项式定理&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
         
       
     
@@ -490,7 +498,7 @@
         
         
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt; 本笔记主要参考&lt;a href=&quot;https://zh-v2.d2l.ai/index.html&quot;&gt;《动手学深度学习》&lt;/a&gt; 进行学习记录，不做无意义的书本内容摘抄。&lt;/p&gt;
+&lt;p&gt;本笔记主要参考&lt;a href=&quot;https://zh-v2.d2l.ai/index.html&quot;&gt;《动手学深度学习》&lt;/a&gt; 进行学习记录，不做无意义的书本内容摘抄。&lt;/p&gt;
 &lt;p&gt;课程网址：&lt;a</summary>
         
       
@@ -541,14 +549,14 @@
     <link href="http://wyqz.top/p/808139430.html"/>
     <id>http://wyqz.top/p/808139430.html</id>
     <published>2022-12-27T09:04:31.000Z</published>
-    <updated>2024-01-11T10:52:56.529Z</updated>
+    <updated>2024-01-11T11:52:16.749Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;机器学习环境搭建&quot;&gt;&lt;a href=&quot;#机器学习环境搭建&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1 id=&quot;机器学习环境搭建&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#机器学习环境搭建&quot;&gt;&lt;/a&gt;</summary>
         
       
     

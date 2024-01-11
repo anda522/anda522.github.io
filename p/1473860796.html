@@ -80,9 +80,13 @@
         document.write('<script src="' + src + '" id="sozz"><\/script>');
         })();
     </script>
-<meta name="generator" content="Hexo 7.0.0">
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body>
@@ -91,7 +95,7 @@
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
-                <a href="../index.html" class="waves-effect waves-light">
+                <a href="/" class="waves-effect waves-light">
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
@@ -337,7 +341,7 @@
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
-                location.href = '../index.html';
+                location.href = '/';
             }
         }
     })();
@@ -474,7 +478,7 @@
                     
                     <div class="article-tag">
                         
-                        <a href="../tags/%E8%B5%84%E6%BA%90/" target="_blank">
+                        <a href="/tags/%E8%B5%84%E6%BA%90/" target="_blank">
                             <span class="chip bg-color">资源</span>
                         </a>
                         
@@ -486,7 +490,7 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="../categories/%E8%B5%84%E6%BA%90/" class="post-category" target="_blank">
+                        <a href="/categories/%E8%B5%84%E6%BA%90/" class="post-category" target="_blank">
                             资源
                         </a>
                         
@@ -517,7 +521,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    925
+                    926
                 </div>
                 
 
@@ -551,14 +555,19 @@
 <blockquote>
 <p>资源失效时，及时在本文最后或公众号【行码棋】回复，看到后我会立马更新。</p>
 </blockquote>
-<h1 id="技术类"><a href="#技术类" class="headerlink" title="技术类"></a>技术类</h1><h2 id="1-编程语言"><a href="#1-编程语言" class="headerlink" title="1 编程语言"></a>1 编程语言</h2><ul>
+<h1 id="技术类"><a class="markdownIt-Anchor" href="#技术类"></a> 技术类</h1>
+<h2 id="1-编程语言"><a class="markdownIt-Anchor" href="#1-编程语言"></a> 1 编程语言</h2>
+<ul>
 <li>Python基础知识 学习视频，公众号【行码棋】回复【python资料】获取（内容可能已过时，谨慎选择）</li>
 <li>大量算法相关的电子书，公众号【行码棋】回复【算法书籍】获取</li>
 </ul>
-<h2 id="2-专业知识"><a href="#2-专业知识" class="headerlink" title="2 专业知识"></a>2 专业知识</h2><ul>
+<h2 id="2-专业知识"><a class="markdownIt-Anchor" href="#2-专业知识"></a> 2 专业知识</h2>
+<ul>
 <li>算法yxc基础提高课，公众号【行码棋】私聊我询问</li>
 </ul>
-<h1 id="AI类"><a href="#AI类" class="headerlink" title="AI类"></a>AI类</h1><h2 id="1-AI工具"><a href="#1-AI工具" class="headerlink" title="1 AI工具"></a>1 AI工具</h2><ul>
+<h1 id="ai类"><a class="markdownIt-Anchor" href="#ai类"></a> AI类</h1>
+<h2 id="1-ai工具"><a class="markdownIt-Anchor" href="#1-ai工具"></a> 1 AI工具</h2>
+<ul>
 <li>Meta SAM图像分割demo，分割一切</li>
 </ul>
 <p>链接：<a href="https://segment-anything.com/demo">https://segment-anything.com/demo</a></p>
@@ -574,40 +583,55 @@
 </ul>
 <p>链接：<a href="https://designtools.ai/">https://designtools.ai/</a></p>
 <p>专门收集设计师需要使用的ai工具的网站，工具是否收费已标明。</p>
-<h2 id="2-AI教程"><a href="#2-AI教程" class="headerlink" title="2 AI教程"></a>2 AI教程</h2><ul>
+<h2 id="2-ai教程"><a class="markdownIt-Anchor" href="#2-ai教程"></a> 2 AI教程</h2>
+<ul>
 <li>Midjourney教程</li>
 </ul>
 <p>链接：<a href="https://learningprompt.wiki/docs/midjourney-learning-path">https://learningprompt.wiki/docs/midjourney-learning-path</a></p>
-<h2 id="3-chatgpt"><a href="#3-chatgpt" class="headerlink" title="3 chatgpt"></a>3 chatgpt</h2><blockquote>
+<h2 id="3-chatgpt"><a class="markdownIt-Anchor" href="#3-chatgpt"></a> 3 chatgpt</h2>
+<blockquote>
 <p>2023-11-08近期ChatGPT发展较快，链接可能失效，内容可能过时，且近期我关注较少，之后有时间再整理。</p>
 </blockquote>
-<h3 id="3-1-站点"><a href="#3-1-站点" class="headerlink" title="3.1 站点"></a>3.1 站点</h3><ul>
-<li><p>Poe ChatGPT集成站 链接：<a href="https://poe.com/">https://poe.com</a></p>
+<h3 id="31-站点"><a class="markdownIt-Anchor" href="#31-站点"></a> 3.1 站点</h3>
+<ul>
+<li>
+<p>Poe ChatGPT集成站 链接：<a href="https://poe.com">https://poe.com</a></p>
 </li>
-<li><p>Claude 链接：<a href="https://claude.ai/chats">https://claude.ai/chats</a></p>
+<li>
+<p>Claude 链接：<a href="https://claude.ai/chats">https://claude.ai/chats</a></p>
 </li>
-<li><p>可用站点（可能无效）</p>
+<li>
+<p>可用站点（可能无效）</p>
 <ul>
 <li><a href="https://theb.ai/">https://theb.ai/</a></li>
 <li><a href="https://dev.yqcloud.top/">https://dev.yqcloud.top/</a></li>
 </ul>
 </li>
-<li><p><a href="https://1lib.ink/">https://1lib.ink/</a> （重定向至ChatGPT汇总站）</p>
+<li>
+<p><a href="https://1lib.ink/">https://1lib.ink/</a> （重定向至ChatGPT汇总站）</p>
 </li>
 </ul>
-<h3 id="3-2-资料"><a href="#3-2-资料" class="headerlink" title="3.2 资料"></a>3.2 资料</h3><ul>
-<li><p>ChatGPT 提示语大全 地址：<a href="https://prompts.fresns.cn/">https://prompts.fresns.cn/</a></p>
+<h3 id="32-资料"><a class="markdownIt-Anchor" href="#32-资料"></a> 3.2 资料</h3>
+<ul>
+<li>
+<p>ChatGPT 提示语大全 地址：<a href="https://prompts.fresns.cn/">https://prompts.fresns.cn/</a></p>
 </li>
-<li><p>ChatGPT 提示创建分享 地址：<a href="https://openprompt.co/">https://openprompt.co/</a></p>
+<li>
+<p>ChatGPT 提示创建分享 地址：<a href="https://openprompt.co/">https://openprompt.co/</a></p>
 </li>
-<li><p>ChatGPT提示词Prompt ChatGPT Shortcut：<a href="https://www.aishort.top/">https://www.aishort.top/</a></p>
+<li>
+<p>ChatGPT提示词Prompt ChatGPT Shortcut：<a href="https://www.aishort.top/">https://www.aishort.top/</a></p>
 </li>
-<li><p>ChatGPT资料汇总 地址：<a href="https://github.com/dalinvip/Awesome-ChatGPT">https://github.com/dalinvip/Awesome-ChatGPT</a></p>
+<li>
+<p>ChatGPT资料汇总 地址：<a href="https://github.com/dalinvip/Awesome-ChatGPT">https://github.com/dalinvip/Awesome-ChatGPT</a></p>
 </li>
-<li><p>ChatGPT知识库网站 地址：<a href="https://chatgpt.moyucm.xyz/">https://chatgpt.moyucm.xyz/</a></p>
+<li>
+<p>ChatGPT知识库网站 地址：<a href="https://chatgpt.moyucm.xyz/">https://chatgpt.moyucm.xyz/</a></p>
 </li>
 </ul>
-<h1 id="素材类"><a href="#素材类" class="headerlink" title="素材类"></a>素材类</h1><h2 id="1-素材制作"><a href="#1-素材制作" class="headerlink" title="1 素材制作"></a>1 素材制作</h2><ul>
+<h1 id="素材类"><a class="markdownIt-Anchor" href="#素材类"></a> 素材类</h1>
+<h2 id="1-素材制作"><a class="markdownIt-Anchor" href="#1-素材制作"></a> 1 素材制作</h2>
+<ul>
 <li>AI制作PPT（似乎效果不太好，而且不知道怎么获得PPT）</li>
 </ul>
 <p>链接：<a href="https://gamma.app/">https://gamma.app/</a></p>
@@ -616,44 +640,58 @@
 </ul>
 <p>链接：<a href="https://vectorizer.ai/">https://vectorizer.ai/</a></p>
 <p>利用人工智能将 JPG、PNG 等位图转成矢量 SVG 格式。先用 MidJourney 生成插图，再用这个工具转成矢量略加修改，岂不美哉。</p>
-<h2 id="2-素材资源"><a href="#2-素材资源" class="headerlink" title="2 素材资源"></a>2 素材资源</h2><ul>
+<h2 id="2-素材资源"><a class="markdownIt-Anchor" href="#2-素材资源"></a> 2 素材资源</h2>
+<ul>
 <li>免费PPT模板 链接：<a href="https://www.1ppt.com/">https://www.1ppt.com/</a></li>
 <li><strong>两万套PPT模板</strong>，公众号【行码棋】回复【两万套PPT模板】获取</li>
 </ul>
-<h1 id="前后端类"><a href="#前后端类" class="headerlink" title="前后端类"></a>前后端类</h1><h2 id="前端"><a href="#前端" class="headerlink" title="前端"></a>前端</h2><ul>
+<h1 id="前后端类"><a class="markdownIt-Anchor" href="#前后端类"></a> 前后端类</h1>
+<h2 id="前端"><a class="markdownIt-Anchor" href="#前端"></a> 前端</h2>
+<ul>
 <li>静态资源JS、CSS开源库</li>
 </ul>
 <p>链接1：<a href="https://cdn.baomitu.com/">https://cdn.baomitu.com/</a></p>
 <p>链接2：<a href="https://www.bootcdn.cn/">https://www.bootcdn.cn/</a></p>
 <p>极好用的CDN，可以用在个人静态博客界面上，减轻访问压力。</p>
 <ul>
-<li><p>某CDN 链接：<a href="https://unpkg.com/">https://unpkg.com/</a></p>
+<li>
+<p>某CDN 链接：<a href="https://unpkg.com/">https://unpkg.com/</a></p>
 </li>
-<li><p>博客：分享9个可免费使用的网站CDN加速服务 <a href="https://www.vvhan.com/cdn-web.html">https://www.vvhan.com/cdn-web.html</a></p>
-</li>
-</ul>
-<h1 id="软件类"><a href="#软件类" class="headerlink" title="软件类"></a>软件类</h1><h2 id="1-编辑类"><a href="#1-编辑类" class="headerlink" title="1 编辑类"></a>1 编辑类</h2><ul>
-<li><p>Typora 1.5.10（破解版） 公众号【行码棋】回复【0001】获取</p>
-</li>
-<li><p>Sublime Text（破解版）  公众号【行码棋】回复【0002】获取</p>
-</li>
-<li><p>Notion，可以多端同步，一款笔记软件，目前正在尝试，之前的有道云笔记感觉不是太好用，一直没有找到新的可用的笔记软件。</p>
+<li>
+<p>博客：分享9个可免费使用的网站CDN加速服务 <a href="https://www.vvhan.com/cdn-web.html">https://www.vvhan.com/cdn-web.html</a></p>
 </li>
 </ul>
-<h2 id="2-视频图像类"><a href="#2-视频图像类" class="headerlink" title="2 视频图像类"></a>2 视频图像类</h2><ul>
-<li><p>当贝播放器TV版（电视播放阿里云盘视频） 链接：<a href="https://pan.lanzoub.com/b0ahxs82j">https://pan.lanzoub.com/b0ahxs82j</a></p>
+<h1 id="软件类"><a class="markdownIt-Anchor" href="#软件类"></a> 软件类</h1>
+<h2 id="1-编辑类"><a class="markdownIt-Anchor" href="#1-编辑类"></a> 1 编辑类</h2>
+<ul>
+<li>
+<p>Typora 1.5.10（破解版） 公众号【行码棋】回复【0001】获取</p>
 </li>
-<li><p>【Android】Wallcandy1.10.52 移动端壁纸软件 破解版  公众号【行码棋】回复【0003】获取</p>
+<li>
+<p>Sublime Text（破解版）  公众号【行码棋】回复【0002】获取</p>
+</li>
+<li>
+<p>Notion，可以多端同步，一款笔记软件，目前正在尝试，之前的有道云笔记感觉不是太好用，一直没有找到新的可用的笔记软件。</p>
 </li>
 </ul>
-<h2 id="3-网络类"><a href="#3-网络类" class="headerlink" title="3 网络类"></a>3 网络类</h2><ul>
-<li><del>clash for Windows <a href="https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.15/Clash.for.Windows-0.20.15-win.7z">点击下载</a></del></li>
+<h2 id="2-视频图像类"><a class="markdownIt-Anchor" href="#2-视频图像类"></a> 2 视频图像类</h2>
+<ul>
+<li>
+<p>当贝播放器TV版（电视播放阿里云盘视频） 链接：<a href="https://pan.lanzoub.com/b0ahxs82j">https://pan.lanzoub.com/b0ahxs82j</a></p>
+</li>
+<li>
+<p>【Android】Wallcandy1.10.52 移动端壁纸软件 破解版  公众号【行码棋】回复【0003】获取</p>
+</li>
+</ul>
+<h2 id="3-网络类"><a class="markdownIt-Anchor" href="#3-网络类"></a> 3 网络类</h2>
+<ul>
+<li><s>clash for Windows <a href="https://github.com/Fndroid/clash_for_windows_pkg/releases/download/0.20.15/Clash.for.Windows-0.20.15-win.7z">点击下载</a></s></li>
 </ul>
 <hr>
 <blockquote>
 <p>如有获取资源需求，请关注个人公众号【行码棋】，抱歉了大家😭😭😭。</p>
 </blockquote>
-<p><img src="https://wyqz.top/medias/gzh.jpg"></p>
+<p><img src="https://wyqz.top/medias/gzh.jpg" alt=""></p>
 
             </div>
             <hr />
@@ -816,7 +854,7 @@
                   property="dct:title" rel="dct:type">
                     《资源停靠站》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/p/1473860796.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 行码棋
             </a> 采用
@@ -1150,7 +1188,7 @@
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="2802848655.html">
+                <a href="/p/2802848655.html">
                     <div class="card-image">
                         
                         
@@ -1165,11 +1203,14 @@
                             平生第一次搞推免，也是最后一次。错失了一些机会，也有幸获得了一些机会，值得祝庆，也值得反思。
 以下记录为个人流水账。
 
-个人背景我的背景可以算不是非常好了，况且今年211受歧视比较严重。
+ 个人背景
+我的背景可以算不是非常好了，况且今年211受歧视比较严重。
+
 
 学校：211，zzu，物联网工程
 
-排名：夏令营时
+
+排名：
                         
                     </div>
                     <div class="publish-info">
@@ -1180,7 +1221,7 @@
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/%E5%93%B2%E6%80%9D/" class="post-category" target="_blank">
+                            <a href="/categories/%E5%93%B2%E6%80%9D/" class="post-category" target="_blank">
                                     哲思
                                 </a>
                             
@@ -1191,7 +1232,7 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%93/" target="_blank">
+                    <a href="/tags/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%93/" target="_blank">
                         <span class="chip bg-color">阶段性总结</span>
                     </a>
                     
@@ -1206,7 +1247,7 @@
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="3804173379.html">
+                <a href="/p/3804173379.html">
                     <div class="card-image">
                         
                         
@@ -1221,13 +1262,11 @@
                             相关设置：
 如果是在notebook中想使用嵌入式绘图，需添加
 %matplotlib inline
-
 如果想使用交互式绘图，需添加
 %matplotlib notebook
-
-
-
-折线图绘制子图操作figure相当于一张画布，画布中可以添
+ 折线图绘制
+ 子图操作
+figure相当于一张画布，画布中可以添
                         
                     </div>
                     <div class="publish-info">
@@ -1238,11 +1277,11 @@
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="../categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category" target="_blank">
+                            <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category" target="_blank">
                                     人工智能
                                 </a>
                             
-                            <a href="../categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/Python/" class="post-category" target="_blank">
+                            <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/Python/" class="post-category" target="_blank">
                                     Python
                                 </a>
                             
@@ -1253,11 +1292,11 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="../tags/Python/" target="_blank">
+                    <a href="/tags/Python/" target="_blank">
                         <span class="chip bg-color">Python</span>
                     </a>
                     
-                    <a href="../tags/%E7%94%BB%E5%9B%BE/" target="_blank">
+                    <a href="/tags/%E7%94%BB%E5%9B%BE/" target="_blank">
                         <span class="chip bg-color">画图</span>
                     </a>
                     
@@ -1416,25 +1455,6 @@
 
 
 
-<script src="https://lib.baomitu.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
-    });
-</script>
-
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-<!-- 代码语言 -->
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-<!-- 代码块复制 -->
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js"></script>
-<!-- 代码块收缩 -->
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script> 
-<!-- 代码块折行 -->
-<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
-
-
     <footer class="page-footer bg-color">
     <div class="container row center-align">
         <div class="col s12 m8 l8 copy-right">
@@ -1442,7 +1462,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">97.2k</span>
+            <span class="white-color">102.5k</span>
             
 
             <br>
@@ -1493,7 +1513,7 @@
 
 
 
-    <a href="../atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fa fa-rss"></i>
     </a>
 </div>
