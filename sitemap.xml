@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wyqz.top/friends/index.html</loc>
+    
+    <lastmod>2024-01-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://wyqz.top/p/808139430.html</loc>
     
     <lastmod>2024-01-11</lastmod>
@@ -11,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://wyqz.top/friends/index.html</loc>
+    <loc>http://wyqz.top/p/4188452413.html</loc>
     
     <lastmod>2024-01-11</lastmod>
     
@@ -156,15 +165,6 @@
   
   <url>
     <loc>http://wyqz.top/p/4190388149.html</loc>
-    
-    <lastmod>2023-12-19</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://wyqz.top/p/4188452413.html</loc>
     
     <lastmod>2023-12-19</lastmod>
     
@@ -487,20 +487,6 @@
   </url>
   
   <url>
-    <loc>http://wyqz.top/tags/%E6%A8%A1%E6%9D%BF/</loc>
-    <lastmod>2024-01-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://wyqz.top/tags/%E6%95%B0%E8%AE%BA/</loc>
-    <lastmod>2024-01-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://wyqz.top/tags/DFS/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -516,6 +502,20 @@
   
   <url>
     <loc>http://wyqz.top/tags/CF/</loc>
+    <lastmod>2024-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://wyqz.top/tags/%E6%95%B0%E8%AE%BA/</loc>
+    <lastmod>2024-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://wyqz.top/tags/%E6%A8%A1%E6%9D%BF/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -543,13 +543,6 @@
   </url>
   
   <url>
-    <loc>http://wyqz.top/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
-    <lastmod>2024-01-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://wyqz.top/tags/Google%E6%90%9C%E7%B4%A2/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -558,6 +551,13 @@
   
   <url>
     <loc>http://wyqz.top/tags/Latex/</loc>
+    <lastmod>2024-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://wyqz.top/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -706,7 +706,7 @@
   </url>
   
   <url>
-    <loc>http://wyqz.top/categories/ACM/</loc>
+    <loc>http://wyqz.top/categories/%E6%A0%91/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -720,7 +720,7 @@
   </url>
   
   <url>
-    <loc>http://wyqz.top/categories/%E6%A0%91/</loc>
+    <loc>http://wyqz.top/categories/ACM/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

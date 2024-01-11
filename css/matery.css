@@ -102,7 +102,7 @@ blockquote {
 }
 
 .line-numbers {
-    padding: 1.5rem 1.5rem 1.5rem 3.2rem !important;
+    padding: 1.5rem 1.5rem 1.5rem 3rem !important;
     margin: 1rem 0 !important;
     background: #272822;
     overflow: auto;
