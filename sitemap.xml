@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wyqz.top/friends/index.html</loc>
+    
+    <lastmod>2024-01-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://wyqz.top/p/1292892888.html</loc>
     
     <lastmod>2024-01-11</lastmod>
@@ -122,15 +131,6 @@
     <loc>http://wyqz.top/p/360366309.html</loc>
     
     <lastmod>2023-12-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://wyqz.top/friends/index.html</loc>
-    
-    <lastmod>2023-12-20</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -501,6 +501,20 @@
   </url>
   
   <url>
+    <loc>http://wyqz.top/tags/CPP/</loc>
+    <lastmod>2024-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://wyqz.top/tags/STL/</loc>
+    <lastmod>2024-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://wyqz.top/tags/DFS/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -529,28 +543,7 @@
   </url>
   
   <url>
-    <loc>http://wyqz.top/tags/CPP/</loc>
-    <lastmod>2024-01-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://wyqz.top/tags/STL/</loc>
-    <lastmod>2024-01-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://wyqz.top/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</loc>
-    <lastmod>2024-01-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://wyqz.top/tags/Latex/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -564,7 +557,7 @@
   </url>
   
   <url>
-    <loc>http://wyqz.top/tags/Pytorch/</loc>
+    <loc>http://wyqz.top/tags/Latex/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -592,6 +585,13 @@
   </url>
   
   <url>
+    <loc>http://wyqz.top/tags/Pytorch/</loc>
+    <lastmod>2024-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://wyqz.top/tags/docker/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -600,13 +600,6 @@
   
   <url>
     <loc>http://wyqz.top/tags/Linux/</loc>
-    <lastmod>2024-01-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://wyqz.top/tags/%E7%94%BB%E5%9B%BE/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -634,6 +627,20 @@
   </url>
   
   <url>
+    <loc>http://wyqz.top/tags/%E7%94%BB%E5%9B%BE/</loc>
+    <lastmod>2024-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://wyqz.top/tags/MachineLearning/</loc>
+    <lastmod>2024-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://wyqz.top/tags/%E6%A0%91%E5%BD%A2DP/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -648,13 +655,6 @@
   </url>
   
   <url>
-    <loc>http://wyqz.top/tags/%E8%B5%84%E6%BA%90/</loc>
-    <lastmod>2024-01-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://wyqz.top/tags/%E9%80%86%E5%85%83/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -662,7 +662,7 @@
   </url>
   
   <url>
-    <loc>http://wyqz.top/tags/MachineLearning/</loc>
+    <loc>http://wyqz.top/tags/%E8%B5%84%E6%BA%90/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -720,6 +720,13 @@
   </url>
   
   <url>
+    <loc>http://wyqz.top/categories/CPP/</loc>
+    <lastmod>2024-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://wyqz.top/categories/%E6%A0%91/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -734,7 +741,7 @@
   </url>
   
   <url>
-    <loc>http://wyqz.top/categories/CPP/</loc>
+    <loc>http://wyqz.top/categories/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -742,13 +749,6 @@
   
   <url>
     <loc>http://wyqz.top/categories/%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99/</loc>
-    <lastmod>2024-01-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://wyqz.top/categories/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
