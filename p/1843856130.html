@@ -3,7 +3,7 @@
 
 
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="Git|详解|命令, ZZU 行码棋">
     <!-- 百度和谷歌统计验证 -->
     <meta name="baidu-site-verification" content="code-L7AVcsbU14" />
@@ -13,8 +13,8 @@
 
 
 工作区（Workspace） ：就是会出现工作目录，即自己要编写的代码
-暂存区（Index &amp;#x2F; Stage）  
-本地仓库（Re">
+暂存区（Index / Stage）  
+本地仓库（Reposit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -76,13 +76,14 @@
         document.write('<script src="' + src + '" id="sozz"><\/script>');
         })();
     </script>
-<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<meta name="generator" content="Hexo 7.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
 
 <body>
 
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -543,7 +544,7 @@
 <p><img src="/1843856130/webp.webp" alt="Git图示"></p>
 <blockquote>
 <p>工作区（Workspace） ：就是会出现工作目录，即自己要编写的代码</p>
-<p>暂存区（Index &#x2F; Stage）  </p>
+<p>暂存区（Index / Stage）  </p>
 <p>本地仓库（Repository）  </p>
 <p>远程仓库（Remote）</p>
 </blockquote>
@@ -568,7 +569,7 @@
 </blockquote>
 <h1 id="暂存区"><a href="#暂存区" class="headerlink" title="暂存区"></a>暂存区</h1><p><code>git rm --cached XX</code>：将文件XX从暂存区中删掉，停止追踪指定文件，但该文件会保留在工作区</p>
 <p><code>git restore --staged XXX</code> ： 将<strong>暂存区</strong>的XXX清空，工作区<strong>不变</strong></p>
-<p><code>git commit -m &quot;给自己看的备注信息&quot;</code>：将<strong>暂存区</strong>的内容提交到当前分支（可持久化）</p>
+<p><code>git commit -m "给自己看的备注信息"</code>：将<strong>暂存区</strong>的内容提交到当前分支（可持久化）</p>
 <p><code>git checkout [file] </code>: 恢复暂存区的指定文件到工作区（工作区文件发生改变）</p>
 <p><code>git reset [file]</code> : 重置暂存区的指定文件，与上一次commit保持一致，但工作区不变</p>
 <blockquote>
@@ -624,7 +625,7 @@
 <p><code>git diff --cached [file]</code> : 显示暂存区和上一个commit的差异</p>
 <p><code>git diff HEAD </code>: 显示工作区与当前分支最新commit之间的差异</p>
 <p><code>git diff [first-branch]...[second-branch] </code>: 显示两次提交之间的差异</p>
-<p><code>git diff --shortstat &quot;@&#123;0 day ago&#125;&quot;</code> : 显示今天你写了多少行代码</p>
+<p><code>git diff --shortstat "@{0 day ago}"</code> : 显示今天你写了多少行代码</p>
 <p><code>git show [commit]</code> : 显示某次提交的元数据和内容变化</p>
 <p><code>git show --name-only [commit] </code>: 显示某次提交发生变化的文件</p>
 <p><code>git show [commit]:[filename]</code> : 显示某次提交时，某个文件的内容</p>
@@ -666,7 +667,9 @@
 <p><code>git reset --hard [commit]</code> : 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致</p>
 <p><code>git reset --keep [commit]</code> : 重置当前HEAD为指定commit，但保持暂存区和工作区不变</p>
 <p><code>git revert [commit]</code> : 新建一个commit，用来撤销指定commit，后者的所有变化都将被前者抵消，并且应用到当前分支</p>
-<h1 id="序列化操作"><a href="#序列化操作" class="headerlink" title="序列化操作"></a>序列化操作</h1><h2 id="1-基础上传操作"><a href="#1-基础上传操作" class="headerlink" title="1 基础上传操作"></a>1 基础上传操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;备注信息&quot;</span></span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<h1 id="序列化操作"><a href="#序列化操作" class="headerlink" title="序列化操作"></a>序列化操作</h1><h2 id="1-基础上传操作"><a href="#1-基础上传操作" class="headerlink" title="1 基础上传操作"></a>1 基础上传操作</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"备注信息"</span>
+<span class="token function">git</span> push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="2-新建仓库的初始化操作"><a href="#2-新建仓库的初始化操作" class="headerlink" title="2 新建仓库的初始化操作"></a>2 新建仓库的初始化操作</h2><ol>
 <li>远程新建仓库，默认不添加<code>README.md</code>文件</li>
@@ -676,56 +679,69 @@
 <li>关联远程仓库，例如<code>git remote add origin https://github.com/anda522/bot.git</code></li>
 <li>上传的操作：</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;提交代码的备注信息&quot;</span></span><br><span class="line">git push <span class="comment">#（此代码一般会报错）</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
+<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"提交代码的备注信息"</span>
+<span class="token function">git</span> push <span class="token comment">#（此代码一般会报错）</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <blockquote>
 <p>报错原因：新建仓库时默认仓库为空，此时没有任何分支，如果本地有分支需要上传到远程的相同的分支上，需要将远程新建一个分支进行push操作。</p>
 <p>故代码可更新为：<code>git push --set-upstream origin main</code> 或 <code>git push origin main:main</code> </p>
 </blockquote>
-<h2 id="3-新建dev分支并上传"><a href="#3-新建dev分支并上传" class="headerlink" title="3 新建dev分支并上传"></a>3 新建dev分支并上传</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git checkout -b dev <span class="comment"># 本地新建一个dev分支，并且切换到dev分支</span></span><br><span class="line">git push --set-upstream origin dev <span class="comment"># 本地在dev分支；需要上传在dev分支的操作；默认远端没有dev分支，远端将创建一个dev分支并进行push操作</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-新建dev分支并上传"><a href="#3-新建dev分支并上传" class="headerlink" title="3 新建dev分支并上传"></a>3 新建dev分支并上传</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> checkout <span class="token parameter variable">-b</span> dev <span class="token comment"># 本地新建一个dev分支，并且切换到dev分支</span>
+<span class="token function">git</span> push --set-upstream origin dev <span class="token comment"># 本地在dev分支；需要上传在dev分支的操作；默认远端没有dev分支，远端将创建一个dev分支并进行push操作</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <h2 id="4-删除久远的未被追踪的分支"><a href="#4-删除久远的未被追踪的分支" class="headerlink" title="4 删除久远的未被追踪的分支"></a>4 删除久远的未被追踪的分支</h2><p>有时候分支已经从远程分支中删除，但是本地分支并不知道当前这几个远程分支是否被删除，可以使用<code>git remote show origin</code>命令查看</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote show origin <span class="comment">#  会出现stale (use &#x27;git remote prune&#x27; to remove)字样</span></span><br><span class="line"><span class="comment"># git branch -a 这个可以看到远程不存在的分支还能显示出来</span></span><br><span class="line">git remote prune origin <span class="comment"># 删除未被追踪的分支</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> remote show origin <span class="token comment">#  会出现stale (use 'git remote prune' to remove)字样</span>
+<span class="token comment"># git branch -a 这个可以看到远程不存在的分支还能显示出来</span>
+<span class="token function">git</span> remote prune origin <span class="token comment"># 删除未被追踪的分支</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="5-打tag"><a href="#5-打tag" class="headerlink" title="5 打tag"></a>5 打tag</h2><ul>
 <li>以本地最后一个<code>commit</code>创建tag</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git tag &lt;tagName&gt; <span class="comment"># 基于本地最后一个commit创建一个tag</span></span><br><span class="line">git push origin &lt;tagName&gt; <span class="comment"># 将tag推送到远程仓库</span></span><br><span class="line">git push origin --tags <span class="comment"># 将所有tag推送到远程仓库</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> tag <span class="token operator">&lt;</span>tagName<span class="token operator">&gt;</span> <span class="token comment"># 基于本地最后一个commit创建一个tag</span>
+<span class="token function">git</span> push origin <span class="token operator">&lt;</span>tagName<span class="token operator">&gt;</span> <span class="token comment"># 将tag推送到远程仓库</span>
+<span class="token function">git</span> push origin <span class="token parameter variable">--tags</span> <span class="token comment"># 将所有tag推送到远程仓库</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>以特定的提交为tag</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span> --pretty=oneline <span class="comment"># 查看当前分支的提交历史 里面包含 commit id</span></span><br><span class="line">git tag -a &lt;tagName&gt; &lt;commitId&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> log <span class="token parameter variable">--pretty</span><span class="token operator">=</span>oneline <span class="token comment"># 查看当前分支的提交历史 里面包含 commit id</span>
+<span class="token function">git</span> tag <span class="token parameter variable">-a</span> <span class="token operator">&lt;</span>tagName<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>commitId<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <ul>
 <li>查看信息</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git show &lt;tagName&gt; <span class="comment"># 查看tag的详细信息</span></span><br><span class="line">git tag <span class="comment"># 查看本地所有tag</span></span><br><span class="line">git ls-remote --tag origin <span class="comment"># 查看远程tag</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> show <span class="token operator">&lt;</span>tagName<span class="token operator">&gt;</span> <span class="token comment"># 查看tag的详细信息</span>
+<span class="token function">git</span> tag <span class="token comment"># 查看本地所有tag</span>
+<span class="token function">git</span> ls-remote <span class="token parameter variable">--tag</span> origin <span class="token comment"># 查看远程tag</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>删除tag</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git tag -d &lt;tagName&gt; <span class="comment"># 删除本地tag</span></span><br><span class="line">git push origin :refs/tags/&lt;tagName&gt; <span class="comment"># 删除远程tag</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> tag <span class="token parameter variable">-d</span> <span class="token operator">&lt;</span>tagName<span class="token operator">&gt;</span> <span class="token comment"># 删除本地tag</span>
+<span class="token function">git</span> push origin :refs/tags/<span class="token operator">&lt;</span>tagName<span class="token operator">&gt;</span> <span class="token comment"># 删除远程tag</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <ul>
 <li>其他</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git tag -a &lt;tagname&gt; -m <span class="string">&quot;XXX...&quot;</span> <span class="comment"># 指定标签信息</span></span><br><span class="line">git tag -a v1.0 -m <span class="string">&quot;release 0.1.0 version&quot;</span>  <span class="comment"># 创建附注标签</span></span><br><span class="line">git checkout [tagname] <span class="comment"># 切换标签</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> tag <span class="token parameter variable">-a</span> <span class="token operator">&lt;</span>tagname<span class="token operator">&gt;</span> <span class="token parameter variable">-m</span> <span class="token string">"XXX..."</span> <span class="token comment"># 指定标签信息</span>
+<span class="token function">git</span> tag <span class="token parameter variable">-a</span> v1.0 <span class="token parameter variable">-m</span> <span class="token string">"release 0.1.0 version"</span>  <span class="token comment"># 创建附注标签</span>
+<span class="token function">git</span> checkout <span class="token punctuation">[</span>tagname<span class="token punctuation">]</span> <span class="token comment"># 切换标签</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="6-git-fetch和git-pull对比"><a href="#6-git-fetch和git-pull对比" class="headerlink" title="6 git fetch和git pull对比"></a>6 git fetch和git pull对比</h2><ul>
 <li><code>git fetch</code>：将远程更新信息全部取回本地</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git fetch &lt;远程主机名&gt; //这个命令将某个远程主机的更新全部取回本地</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> fetch <span class="token operator">&lt;</span>远程主机名<span class="token operator">&gt;</span> //这个命令将某个远程主机的更新全部取回本地<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>如果只想取回特定分支，可以指定分支名</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git fetch &lt;远程主机名&gt; &lt;分支名&gt; //注意之间有空格</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> fetch <span class="token operator">&lt;</span>远程主机名<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>分支名<span class="token operator">&gt;</span> //注意之间有空格<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>常见命令：</p>
 <p>取回<code>origin</code> 主机的<code>master</code> 分支：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git fetch origin master</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> fetch origin master<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>取回更新后会返回一个<code>FETCH_HEAD</code> ，指的是某个branch在服务器上的最新状态，我们可以在本地通过它查看刚取回的更新信息：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">log</span> -p FETCH_HEAD</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> log <span class="token parameter variable">-p</span> FETCH_HEAD<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>可以看到返回的信息包括更新的文件名，更新的作者和时间，以及更新的代码。我们可以通过这些信息来判断是否产生冲突，以确定是否将更新merge到当前分支。 </p>
 <hr>
@@ -733,26 +749,32 @@
 <li><code>git pull</code>：拉取并合并</li>
 </ul>
 <p>可以理解为两个过程：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git fetch origin master //从远程主机的master分支拉取最新内容 </span><br><span class="line">git merge FETCH_HEAD    //将拉取下来的最新内容合并到当前所在的分支中</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> fetch origin master //从远程主机的master分支拉取最新内容 
+<span class="token function">git</span> merge FETCH_HEAD    //将拉取下来的最新内容合并到当前所在的分支中<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>完整命令：将远程主机的某个分支的更新取回，并与本地指定的分支合并</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull &lt;远程主机名&gt; &lt;远程分支名&gt;:&lt;本地分支名&gt;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> pull <span class="token operator">&lt;</span>远程主机名<span class="token operator">&gt;</span> <span class="token operator">&lt;</span>远程分支名<span class="token operator">&gt;</span>:<span class="token operator">&lt;</span>本地分支名<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>如果是与当前分支合并，则冒号后面的可以省略，例如：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> pull origin master<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <h2 id="7-远程仓库名改动"><a href="#7-远程仓库名改动" class="headerlink" title="7 远程仓库名改动"></a>7 远程仓库名改动</h2><p>需要进行仓库名改动，先改动了远程仓库名，本地目录名不变就行。</p>
 <p>之后就要进行重新关联远程仓库，因为远程仓库名发生变化，仓库地址也就发生了变化。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git remote -v // 可以先查看与远程仓库的关联</span><br><span class="line">git remote remove origin // 然后删除与远程仓库的关联</span><br><span class="line">git remote add origin git@github.com:xxx/XXX.git // 将本地仓库关联到远程仓库</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> remote <span class="token parameter variable">-v</span> // 可以先查看与远程仓库的关联
+<span class="token function">git</span> remote remove origin // 然后删除与远程仓库的关联
+<span class="token function">git</span> remote <span class="token function">add</span> origin git@github.com:xxx/XXX.git // 将本地仓库关联到远程仓库<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="8-设置不同的fetch和push源"><a href="#8-设置不同的fetch和push源" class="headerlink" title="8 设置不同的fetch和push源"></a>8 设置不同的fetch和push源</h2><p>我希望拉取公共的大项目代码，然后自己进行修改，上传到我的个人仓库中。所以fetch源需要是非个人源，push源为个人仓库的源。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git remote set-url origin  git://g.csail.mit.edu/xv6-labs-2021</span><br><span class="line">git remote set-url --add --push origin git@github.com:anda522/XV6-LAB.git</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> remote set-url origin  git://g.csail.mit.edu/xv6-labs-2021
+<span class="token function">git</span> remote set-url <span class="token parameter variable">--add</span> <span class="token parameter variable">--push</span> origin git@github.com:anda522/XV6-LAB.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>再用 <code>git remote -v</code> 命令可以查看已经修改完成。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">origin git://g.csail.mit.edu/xv6-labs-2021 (push)</span><br><span class="line">origin git@github.com:anda522/XV6-LAB.git (fetch)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">origin git://g.csail.mit.edu/xv6-labs-2021 <span class="token punctuation">(</span>push<span class="token punctuation">)</span>
+origin git@github.com:anda522/XV6-LAB.git <span class="token punctuation">(</span>fetch<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p>然后就可以用下面代码进行操作了</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git fetch</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> fetch
+<span class="token function">git</span> push<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 
 
@@ -1532,7 +1554,7 @@ sudo usermod -aG docker $USER
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">100.4k</span>
+            <span class="white-color">97.2k</span>
             
 
             <br>
@@ -1721,7 +1743,7 @@ $(function () {
     <!-- 不蒜子统计修改网页请求头 -->
     
     <script async src="https://lib.baomitu.com/busuanzi/latest/bsz.pure.mini.js"></script>
-    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="referrer" content="no-referrer-when-downgrade"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
     
     

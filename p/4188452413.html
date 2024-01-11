@@ -3,7 +3,7 @@
 
 
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="【裴蜀定理】CF1055C Lucky Days, ZZU 行码棋">
     <!-- 百度和谷歌统计验证 -->
     <meta name="baidu-site-verification" content="code-L7AVcsbU14" />
@@ -72,13 +72,14 @@
         document.write('<script src="' + src + '" id="sozz"><\/script>');
         })();
     </script>
-<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<meta name="generator" content="Hexo 7.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
 
 <body>
 
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -508,7 +509,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    990
                 </div>
                 
 
@@ -535,14 +536,16 @@
 <p>给定 $l_a,r_a,t_a,l_b,r_b,t_b$，对于所有的非负整数 $k$，将区间 $[l_a+kt_a,r_a+kt_a]$ 打上标记 $1$，将区间 $[l_b+kt_b,r_b+kt_b]$ 打上标记 $2$。求出最长的连续区间使得该区间中的所有位置都被同时打上的 $1,2$ 标记。</p>
 </blockquote>
 <p>样例一</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">0 2 5</span><br><span class="line">1 3 5</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">0 2 5
+1 3 5<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">2</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">2<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>样例二</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">0 1 3</span><br><span class="line">2 3 6</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">0 1 3
+2 3 6<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">1</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
@@ -551,26 +554,26 @@
 <hr>
 <h1 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h1><p>题目要求两个区间的重合度最大的长度。</p>
 <p>首先第一个点我们要想到：要想使两个区间的重合度最高，需要让两个区间尽可能逼近。最优的情况就是两个区间的<strong>左端点尽可能相等</strong>，这样重合度是最大的。</p>
-<p>即使 $la + x * ta &#x3D; lb + y * tb$</p>
-<p>将式子进行移项得 $x * ta - y * tb &#x3D; lb - la$ （此时我们假设$la &lt; lb$，代码中已做相关的操作，这样只是为了方便）</p>
+<p>即使 $la + x * ta = lb + y * tb$</p>
+<p>将式子进行移项得 $x * ta - y * tb = lb - la$ （此时我们假设$la &lt; lb$，代码中已做相关的操作，这样只是为了方便）</p>
 <p>我们需要看式子是否有解，式子结构和<strong>裴蜀定理</strong>比较像，拿出来进行对比。</p>
-<p>裴蜀定理 ： 存在整数 $x, y$，满足$a * x + b * y &#x3D; gcd(a,b)$</p>
-<p> 该式子进行$y$符号变为正，表示$y$是整数，则 $x * ta + y * tb &#x3D; lb - la$</p>
-<p>我们令$d &#x3D; gcd(ta, tb)$</p>
+<p>裴蜀定理 ： 存在整数 $x, y$，满足$a * x + b * y = gcd(a,b)$</p>
+<p> 该式子进行$y$符号变为正，表示$y$是整数，则 $x * ta + y * tb = lb - la$</p>
+<p>我们令$d = gcd(ta, tb)$</p>
 <p>那么可以发现如果$d | (lb - la)$，则该式子有解，左端点可以重合。</p>
 <hr>
 <p>但是如果左端点不能重合怎么办，尽可能逼近就行。</p>
-<p>此时别忘了式子右边的$lb-la$代表的是什么，是 <strong>区间a左端点移动的距离</strong>，那么因为$x * ta + y * tb &#x3D; d$是存在解的，则<strong>区间a移动的距离可进一步变为</strong> $d$ 。</p>
+<p>此时别忘了式子右边的$lb-la$代表的是什么，是 <strong>区间a左端点移动的距离</strong>，那么因为$x * ta + y * tb = d$是存在解的，则<strong>区间a移动的距离可进一步变为</strong> $d$ 。</p>
 <blockquote>
 <p> 注意：我说的区间a可以移动，是指的一定存在某种状态，上下两个人有两个区间的距离发生了变化，叫为区间移动更容易理解。如</p>
-<p>$ta &#x3D; 3,[1,4]-&gt;[4,7]-&gt;[7,10]-&gt;[10,13]$</p>
-<p>$tb &#x3D; 4,[3,5]-&gt;[7,9]-&gt;[11,13]$</p>
-<p>$[1,4][3,5]$左端点相差$2$，这是一种区间状态，通过移动，会出现另一种区间状态$[10,13][11,13]$左端点相差$1$。移动了一步（$d &#x3D; gcd(3,4) &#x3D; 1$）</p>
+<p>$ta = 3,[1,4]-&gt;[4,7]-&gt;[7,10]-&gt;[10,13]$</p>
+<p>$tb = 4,[3,5]-&gt;[7,9]-&gt;[11,13]$</p>
+<p>$[1,4][3,5]$左端点相差$2$，这是一种区间状态，通过移动，会出现另一种区间状态$[10,13][11,13]$左端点相差$1$。移动了一步（$d = gcd(3,4) = 1$）</p>
 </blockquote>
 <p>左端点不重合就尽可能逼近。</p>
 <p>有两种状态可能是合适的。</p>
 <blockquote>
-<p>$dis$代表a区间左端点与b区间左端点相差的最小距离（a区间左端点我认为小于等于b区间左端点），即$dis &#x3D; (lb - la) % d$</p>
+<p>$dis$代表a区间左端点与b区间左端点相差的最小距离（a区间左端点我认为小于等于b区间左端点），即$dis = (lb - la) % d$</p>
 </blockquote>
 <ul>
 <li><p>区间a左端点移动到和区间b左端点相差$(lb-la) % d$，可能是距离最近的</p>
@@ -580,7 +583,7 @@
 </li>
 <li><p>然后是上面的情况在往后移一步，即区间a左端点超过区间b左端点$d-(lb-la)%d$</p>
 <ul>
-<li>$dis &#x3D; d - dis$ </li>
+<li>$dis = d - dis$ </li>
 <li>$min(ra - la + 1, rb - lb + 1 - dis)$</li>
 </ul>
 </li>
@@ -589,7 +592,55 @@
 <p>两个计算请画图领悟计算方法。</p>
 <p>计算：左端点重合的情况可以合并在左端点能合并的代码里面，即左端点合并是左端点不合并的特殊情况。</p>
 </blockquote>
-<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"><span class="keyword">using</span> pii = pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1e5</span> + <span class="number">5</span>, mod = <span class="number">1e9</span> + <span class="number">7</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// [l[a] + k * ta, r[a] + k * ta]</span></span><br><span class="line"><span class="comment">// 3 [1, 4] [4, 7] [7, 10] [10, 13] [13, 16] ---</span></span><br><span class="line"><span class="comment">// 4 [3, 5] [7, 9] [11, 13]         [15, 17] ---</span></span><br><span class="line"><span class="comment">// 起点尽可能相同</span></span><br><span class="line"><span class="comment">// 裴蜀定理：存在x,y 使 ax + by = gcd(a, b)</span></span><br><span class="line"><span class="comment">// la + x * ta = lb + y * tb</span></span><br><span class="line"><span class="comment">// x * ta - y * tb = lb - la</span></span><br><span class="line"><span class="comment">// gcd(ta, tb) | (lb - la)有解</span></span><br><span class="line"><span class="comment">// d = gcd(ta, tb) 看成相对移动的距离</span></span><br><span class="line"><span class="comment">// la -&gt; la + d -&gt; la + k * d    lb</span></span><br><span class="line"><span class="comment">// 差 = lb - la </span></span><br><span class="line"><span class="comment">// dis = (lb - la) % d</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> la, ra, ta, lb, rb, tb;</span><br><span class="line">	cin &gt;&gt; la &gt;&gt; ra &gt;&gt; ta &gt;&gt; lb &gt;&gt; rb &gt;&gt; tb;</span><br><span class="line">	<span class="keyword">if</span>(la &gt; lb)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">swap</span>(la, lb);</span><br><span class="line">		<span class="built_in">swap</span>(ra, rb);</span><br><span class="line">		<span class="built_in">swap</span>(ta, tb);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="type">int</span> d = __gcd(ta, tb);</span><br><span class="line">	<span class="type">int</span> dis = (lb - la) % d; <span class="comment">// 左端点的差</span></span><br><span class="line">	<span class="type">int</span> ans = <span class="number">0</span>;</span><br><span class="line">	ans = <span class="built_in">max</span>(ans, <span class="built_in">min</span>(rb - lb + <span class="number">1</span>, ra - la + <span class="number">1</span> - dis));</span><br><span class="line">	dis = d - dis; <span class="comment">// 向右移动一步</span></span><br><span class="line">	ans = <span class="built_in">max</span>(ans, <span class="built_in">min</span>(ra - la + <span class="number">1</span>, rb - lb + <span class="number">1</span> - dis));</span><br><span class="line">	cout &lt;&lt; ans &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">	cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> t;</span><br><span class="line">	<span class="comment">// cin &gt;&gt; t;</span></span><br><span class="line">	t = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(t--)</span><br><span class="line">		<span class="built_in">solve</span>();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h1><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">using</span> ll <span class="token operator">=</span> <span class="token keyword">long</span> <span class="token keyword">long</span><span class="token punctuation">;</span>
+<span class="token keyword">using</span> pii <span class="token operator">=</span> pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> N <span class="token operator">=</span> <span class="token number">1e5</span> <span class="token operator">+</span> <span class="token number">5</span><span class="token punctuation">,</span> mod <span class="token operator">=</span> <span class="token number">1e9</span> <span class="token operator">+</span> <span class="token number">7</span><span class="token punctuation">;</span>
+
+<span class="token comment">// [l[a] + k * ta, r[a] + k * ta]</span>
+<span class="token comment">// 3 [1, 4] [4, 7] [7, 10] [10, 13] [13, 16] ---</span>
+<span class="token comment">// 4 [3, 5] [7, 9] [11, 13]         [15, 17] ---</span>
+<span class="token comment">// 起点尽可能相同</span>
+<span class="token comment">// 裴蜀定理：存在x,y 使 ax + by = gcd(a, b)</span>
+<span class="token comment">// la + x * ta = lb + y * tb</span>
+<span class="token comment">// x * ta - y * tb = lb - la</span>
+<span class="token comment">// gcd(ta, tb) | (lb - la)有解</span>
+<span class="token comment">// d = gcd(ta, tb) 看成相对移动的距离</span>
+<span class="token comment">// la -&gt; la + d -&gt; la + k * d    lb</span>
+<span class="token comment">// 差 = lb - la </span>
+<span class="token comment">// dis = (lb - la) % d</span>
+
+<span class="token keyword">void</span> <span class="token function">solve</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">int</span> la<span class="token punctuation">,</span> ra<span class="token punctuation">,</span> ta<span class="token punctuation">,</span> lb<span class="token punctuation">,</span> rb<span class="token punctuation">,</span> tb<span class="token punctuation">;</span>
+	cin <span class="token operator">&gt;&gt;</span> la <span class="token operator">&gt;&gt;</span> ra <span class="token operator">&gt;&gt;</span> ta <span class="token operator">&gt;&gt;</span> lb <span class="token operator">&gt;&gt;</span> rb <span class="token operator">&gt;&gt;</span> tb<span class="token punctuation">;</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>la <span class="token operator">&gt;</span> lb<span class="token punctuation">)</span>
+	<span class="token punctuation">{</span>
+		<span class="token function">swap</span><span class="token punctuation">(</span>la<span class="token punctuation">,</span> lb<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token function">swap</span><span class="token punctuation">(</span>ra<span class="token punctuation">,</span> rb<span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token function">swap</span><span class="token punctuation">(</span>ta<span class="token punctuation">,</span> tb<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">int</span> d <span class="token operator">=</span> <span class="token function">__gcd</span><span class="token punctuation">(</span>ta<span class="token punctuation">,</span> tb<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">int</span> dis <span class="token operator">=</span> <span class="token punctuation">(</span>lb <span class="token operator">-</span> la<span class="token punctuation">)</span> <span class="token operator">%</span> d<span class="token punctuation">;</span> <span class="token comment">// 左端点的差</span>
+	<span class="token keyword">int</span> ans <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+	ans <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>ans<span class="token punctuation">,</span> <span class="token function">min</span><span class="token punctuation">(</span>rb <span class="token operator">-</span> lb <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> ra <span class="token operator">-</span> la <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">-</span> dis<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	dis <span class="token operator">=</span> d <span class="token operator">-</span> dis<span class="token punctuation">;</span> <span class="token comment">// 向右移动一步</span>
+	ans <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>ans<span class="token punctuation">,</span> <span class="token function">min</span><span class="token punctuation">(</span>ra <span class="token operator">-</span> la <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> rb <span class="token operator">-</span> lb <span class="token operator">+</span> <span class="token number">1</span> <span class="token operator">-</span> dis<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	cout <span class="token operator">&lt;&lt;</span> ans <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	ios<span class="token double-colon punctuation">::</span><span class="token function">sync_with_stdio</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	cin<span class="token punctuation">.</span><span class="token function">tie</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">int</span> t<span class="token punctuation">;</span>
+	<span class="token comment">// cin &gt;&gt; t;</span>
+	t <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token keyword">while</span><span class="token punctuation">(</span>t<span class="token operator">--</span><span class="token punctuation">)</span>
+		<span class="token function">solve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
             </div>
@@ -1380,7 +1431,7 @@ nginx配
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">100.4k</span>
+            <span class="white-color">97.2k</span>
             
 
             <br>
@@ -1569,7 +1620,7 @@ $(function () {
     <!-- 不蒜子统计修改网页请求头 -->
     
     <script async src="https://lib.baomitu.com/busuanzi/latest/bsz.pure.mini.js"></script>
-    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="referrer" content="no-referrer-when-downgrade"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
     
     

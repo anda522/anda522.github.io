@@ -3,7 +3,7 @@
 
 
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="matplotlib画图, ZZU 行码棋">
     <!-- 百度和谷歌统计验证 -->
     <meta name="baidu-site-verification" content="code-L7AVcsbU14" />
@@ -80,13 +80,14 @@
         document.write('<script src="' + src + '" id="sozz"><\/script>');
         })();
     </script>
-<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<meta name="generator" content="Hexo 7.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
 
 <body>
 
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -524,7 +525,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    382
+                    385
                 </div>
                 
 
@@ -549,25 +550,53 @@
             <div id="articleContent">
                 <p>相关设置：</p>
 <p>如果是在notebook中想使用<strong>嵌入式绘图</strong>，需添加</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%matplotlib inline</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">%</span>matplotlib inline<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>如果想使用<strong>交互式绘图</strong>，需添加</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">%matplotlib notebook</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token operator">%</span>matplotlib notebook<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
 <h1 id="折线图绘制"><a href="#折线图绘制" class="headerlink" title="折线图绘制"></a>折线图绘制</h1><h1 id="子图操作"><a href="#子图操作" class="headerlink" title="子图操作"></a>子图操作</h1><p><code>figure</code>相当于一张画布，画布中可以添加子图</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">fig = plt.figure()</span><br><span class="line"><span class="comment"># fig = plt.figure(figsize=(4, 3)) 画的图大小宽4高3</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 在 2*2 方格中（假设画布被分成了4个网格） 显示在第1,2,4个位置(从1开始)</span></span><br><span class="line">ax1 = fig.add_subplot(<span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line">ax2 = fig.add_subplot(<span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line">ax3 = fig.add_subplot(<span class="number">2</span>, <span class="number">2</span>, <span class="number">4</span>) <span class="comment"># 还可以简写参数为224</span></span><br><span class="line">plt.show() <span class="comment"># 此时就可以显示出图像了，此时图像具有横纵坐标相关信息</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+fig <span class="token operator">=</span> plt<span class="token punctuation">.</span>figure<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># fig = plt.figure(figsize=(4, 3)) 画的图大小宽4高3</span>
+
+<span class="token comment"># 在 2*2 方格中（假设画布被分成了4个网格） 显示在第1,2,4个位置(从1开始)</span>
+ax1 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+ax2 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+ax3 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token comment"># 还可以简写参数为224</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># 此时就可以显示出图像了，此时图像具有横纵坐标相关信息</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>对子图分别进行操作</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">ax1.plot()</span><br><span class="line">ax2.plot()</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">ax1<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token punctuation">)</span>
+ax2<span class="token punctuation">.</span>plot<span class="token punctuation">(</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h1 id="操作-显示图片"><a href="#操作-显示图片" class="headerlink" title="操作-显示图片"></a>操作-显示图片</h1><p>第一种：使用<code>IPython + PIL</code>进行显示</p>
 <p>下面代码显示多张图片，多张图片在一列显示，看着可能不美观。</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> IPython.display <span class="keyword">import</span> display</span><br><span class="line"></span><br><span class="line"><span class="comment"># 显示多张图像</span></span><br><span class="line"><span class="keyword">for</span> file_path <span class="keyword">in</span> file_list:</span><br><span class="line">    img = Image.<span class="built_in">open</span>(file_path)</span><br><span class="line">	<span class="comment"># 同时还可以修改显示图片的尺寸 修改成180 * 180</span></span><br><span class="line">    img.resize((<span class="number">180</span>, <span class="number">180</span>))</span><br><span class="line">    display(img)</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> PIL <span class="token keyword">import</span> Image
+<span class="token keyword">from</span> IPython<span class="token punctuation">.</span>display <span class="token keyword">import</span> display
+
+<span class="token comment"># 显示多张图像</span>
+<span class="token keyword">for</span> file_path <span class="token keyword">in</span> file_list<span class="token punctuation">:</span>
+    img <span class="token operator">=</span> Image<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span>file_path<span class="token punctuation">)</span>
+	<span class="token comment"># 同时还可以修改显示图片的尺寸 修改成180 * 180</span>
+    img<span class="token punctuation">.</span>resize<span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token number">180</span><span class="token punctuation">,</span> <span class="token number">180</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    display<span class="token punctuation">(</span>img<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>第二种：使用<code>matplotlib</code> 子图功能进行显示</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> cv2</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line">path = <span class="string">&#x27;&#x27;</span></span><br><span class="line">img = cv2.imread(path)</span><br><span class="line">ax1 = fig.add_subplot(<span class="number">2</span>, <span class="number">2</span>, <span class="number">1</span>)</span><br><span class="line">ax1.imshow(img) <span class="comment"># 此时第一个位置就显示出对应路径的图像了，此时具有坐标轴信息</span></span><br><span class="line"></span><br><span class="line">ax2 = fig.add_subplot(<span class="number">2</span>, <span class="number">2</span>, <span class="number">2</span>)</span><br><span class="line">plt.imshow(img) <span class="comment"># 也可以这样写，默认图像显示到最新子图的位置</span></span><br><span class="line">ax3 = fig.add_subplot(<span class="number">2</span>, <span class="number">2</span>, <span class="number">4</span>) <span class="comment"># 还可以简写参数为224</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> cv2
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+
+path <span class="token operator">=</span> <span class="token string">''</span>
+img <span class="token operator">=</span> cv2<span class="token punctuation">.</span>imread<span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+ax1 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+ax1<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>img<span class="token punctuation">)</span> <span class="token comment"># 此时第一个位置就显示出对应路径的图像了，此时具有坐标轴信息</span>
+
+ax2 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>img<span class="token punctuation">)</span> <span class="token comment"># 也可以这样写，默认图像显示到最新子图的位置</span>
+ax3 <span class="token operator">=</span> fig<span class="token punctuation">.</span>add_subplot<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span> <span class="token comment"># 还可以简写参数为224</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
             </div>
@@ -1126,9 +1155,11 @@
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Pandas读取数据import pandas as pddf = pd.read_csv(path) # path为读取数据的路径
+                            Pandas读取数据import pandas as pd
+df = pd.read_csv(path) # path为读取数据的路径
 
-查看数据&gt;&gt;&gt; import numpy as np&gt;&gt;&gt; mpor
+查看数据&gt;&gt;&gt; import numpy as np
+&gt;&gt;&gt; mp
                         
                     </div>
                     <div class="publish-info">
@@ -1347,7 +1378,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">100.4k</span>
+            <span class="white-color">97.2k</span>
             
 
             <br>
@@ -1536,7 +1567,7 @@ $(function () {
     <!-- 不蒜子统计修改网页请求头 -->
     
     <script async src="https://lib.baomitu.com/busuanzi/latest/bsz.pure.mini.js"></script>
-    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="referrer" content="no-referrer-when-downgrade"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
     
     

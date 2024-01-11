@@ -3,7 +3,7 @@
 
 
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="阶乘逆元和线性逆元, ZZU 行码棋">
     <!-- 百度和谷歌统计验证 -->
     <meta name="baidu-site-verification" content="code-L7AVcsbU14" />
@@ -75,13 +75,14 @@
         document.write('<script src="' + src + '" id="sozz"><\/script>');
         })();
     </script>
-<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<meta name="generator" content="Hexo 7.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
 
 <body>
 
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -501,7 +502,7 @@
                 <!-- 显示更新日期 -->
                 <div class="post-update-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-12-31
+                    2024-01-11
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -515,7 +516,7 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    991
                 </div>
                 
 
@@ -544,54 +545,132 @@
 <p>通过费马小定理求逆元：</p>
 <p>当<code>p</code>为素数，并且<code>gcd(a,p)=1</code>时，我们有$a^{p−1}≡1(mod\ p)$。那么就有$a^{p−2}×a≡1(mod\ p)$，则<code>a</code>的逆元就是$a^{p−2}$</p>
 <p>下面<code>ksm</code>函数为快速幂</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">fact[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt; N; i++)</span><br><span class="line">&#123;</span><br><span class="line">	fact[i] = fact[i - <span class="number">1</span>] * i % mod;</span><br><span class="line">	inv[i] = <span class="built_in">ksm</span>(fact[i], mod - <span class="number">2</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">fact<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> N<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	fact<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> fact<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">*</span> i <span class="token operator">%</span> mod<span class="token punctuation">;</span>
+	inv<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">ksm</span><span class="token punctuation">(</span>fact<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> mod <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <hr>
 <p><strong>方式二：</strong></p>
-<p>通过式子$\frac{1}{(n+1)!}\times (n+1)&#x3D;\frac{1}{n!}$倒推接近线性求阶乘逆元</p>
+<p>通过式子$\frac{1}{(n+1)!}\times (n+1)=\frac{1}{n!}$倒推接近线性求阶乘逆元</p>
 <p>$\frac{1}{(n+1)!}$其实就可以看作${(n+1)!}$的逆元</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">	fact[i] = fact[i - <span class="number">1</span>] * i % mod;</span><br><span class="line">inv[n] = <span class="built_in">ksm</span>(fact[n], mod - <span class="number">2</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = n - <span class="number">1</span>; i &gt;= <span class="number">1</span>; i--)</span><br><span class="line">	inv[i] = inv[i + <span class="number">1</span>] * (i + <span class="number">1</span>) % mod;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+	fact<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> fact<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">*</span> i <span class="token operator">%</span> mod<span class="token punctuation">;</span>
+inv<span class="token punctuation">[</span>n<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">ksm</span><span class="token punctuation">(</span>fact<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token punctuation">,</span> mod <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&gt;=</span> <span class="token number">1</span><span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span>
+	inv<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> inv<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">%</span> mod<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <hr>
 <h1 id="线性求逆元"><a href="#线性求逆元" class="headerlink" title="线性求逆元"></a>线性求逆元</h1><p>求$[1,N-1]$关于<code>mod</code>的逆元时，可以做到在$O(N)$时间内解决</p>
 <p>设模数为<code>p</code></p>
-<p>对于当前的<code>i</code>，设$p&#x3D;k×i+r$，则</p>
-<p>$\begin{aligned}<br>k \times i + r &amp; \equiv   0  &amp;,,(mod ,, p) \<br>k \times i \times ( i^{-1} \times r ^{-1}) + r \times (i^{-1} \times r^{-1}) &amp;\equiv 0 &amp;,,( mod ,, p) \<br>k \times r^{-1} + i ^ {-1} &amp; \equiv 0 &amp;,, (mod ,, p)\<br>i^{-1} &amp; \equiv -k \times r^{-1} &amp;,, (mod ,, p) \<br>i^{-1} &amp; \equiv - \left \lfloor \frac{p}{i}\right \rfloor \times r^{-1} &amp;,,(mod,,p)<br>\end{aligned}$</p>
+<p>对于当前的<code>i</code>，设 $p=k \times i+r$，则</p>
+<p>$$<br>\begin{aligned}<br>k \times i + r &amp; \equiv   0  &amp; \pmod   p \\<br>k \times i \times ( i^{-1} \times r ^{-1}) + r \times (i^{-1} \times r^{-1}) &amp;\equiv 0 &amp; \pmod p \\<br>k \times r^{-1} + i ^ {-1} &amp; \equiv 0 &amp; \pmod p \\<br>i^{-1} &amp; \equiv -k \times r^{-1} &amp; \pmod p \\<br>i^{-1} &amp; \equiv - \left \lfloor \frac{p}{i}\right \rfloor \times r^{-1} &amp; \pmod p<br>\end{aligned}<br>$$</p>
 <p>注意：</p>
 <p>$inv[1]$一定要初始化为1，需要从2开始递推，不能从1开始递推</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">inv[<span class="number">0</span>] = inv[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">2</span>; i &lt; N; i++)</span><br><span class="line">	inv[i] = inv[mod % i] * (mod - mod / i) % mod;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">inv<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> inv<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> N<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+	inv<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> inv<span class="token punctuation">[</span>mod <span class="token operator">%</span> i<span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token punctuation">(</span>mod <span class="token operator">-</span> mod <span class="token operator">/</span> i<span class="token punctuation">)</span> <span class="token operator">%</span> mod<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>同时可以通过线性求逆元求<strong>阶乘逆元</strong>：</p>
 <p>只需要再将逆元用类似阶乘的形式乘起来即可，求得的<code>inv[i]</code>即为$i!$的逆元</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">2</span>; i &lt; N; i++)</span><br><span class="line">	inv[i] = inv[i - <span class="number">1</span>] * inv[i] % mod;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> N<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+	inv<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> inv<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">*</span> inv<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">%</span> mod<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <hr>
 <h1 id="组合数计算"><a href="#组合数计算" class="headerlink" title="组合数计算"></a>组合数计算</h1><p>$C_n^m$计算</p>
 <ul>
-<li>方式一：公式计算<br>计算都是在逆元或者阶乘基础上计算的<br>$C_n^m &#x3D; \frac{n!}{m!*(n-m)!}$</li>
+<li>方式一：公式计算<br>计算都是在逆元或者阶乘基础上计算的<br>$C_n^m = \frac{n!}{m!*(n-m)!}$</li>
 </ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="function">ll <span class="title">C</span><span class="params">(ll n, ll m)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(n &lt; m) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">return</span> fact[n] * inv[m] % mod * inv[n - m] % mod;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">ll <span class="token function">C</span><span class="token punctuation">(</span>ll n<span class="token punctuation">,</span> ll m<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>n <span class="token operator">&lt;</span> m<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> fact<span class="token punctuation">[</span>n<span class="token punctuation">]</span> <span class="token operator">*</span> inv<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">%</span> mod <span class="token operator">*</span> inv<span class="token punctuation">[</span>n <span class="token operator">-</span> m<span class="token punctuation">]</span> <span class="token operator">%</span> mod<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
-<li>方式二：递推方式<br>需要建表,所以如果计算范围比较大时需要的空间也大<br>递推公式 ： $C_n^m &#x3D; C_{n-1}^{m} + C_{n-1}^{m-1}$</li>
+<li>方式二：递推方式<br>需要建表,所以如果计算范围比较大时需要的空间也大<br>递推公式 ： $C_n^m = C_{n-1}^{m} + C_{n-1}^{m-1}$</li>
 </ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">0</span>; j &lt;= i; j++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(i == j || j == <span class="number">0</span>) c[i][j] = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">else</span> c[i][j] = c[i - <span class="number">1</span>][j - <span class="number">1</span>] + c[i - <span class="number">1</span>][j];</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> j <span class="token operator">&lt;=</span> i<span class="token punctuation">;</span> j<span class="token operator">++</span><span class="token punctuation">)</span>
+	<span class="token punctuation">{</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>i <span class="token operator">==</span> j <span class="token operator">||</span> j <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> c<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+		<span class="token keyword">else</span> c<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> c<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span> c<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <hr>
 <h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><p>链接：<a href="https://ac.nowcoder.com/acm/contest/23481/J">https://ac.nowcoder.com/acm/contest/23481/J</a></p>
-<p>题目描述：求<br>$$<br>\sum \limits_{i_1 &#x3D; 1}^n \sum \limits_{i_2 &#x3D; i_1 + 1}^n \cdots \sum \limits_{i_k &#x3D; i_{k - 1} + 1}^n a_{i_1} \times a_{i_2} \times \cdots \times a_{i_k}<br>$$</p>
+<p>题目描述：求<br>$$<br>\sum \limits_{i_1 = 1}^n \sum \limits_{i_2 = i_1 + 1}^n \cdots \sum \limits_{i_k = i_{k - 1} + 1}^n a_{i_1} \times a_{i_2} \times \cdots \times a_{i_k}<br>$$</p>
 <blockquote>
 <p>就是在数组中选中k个值相乘，最后把结果相加即可</p>
 </blockquote>
 <hr>
 <p>因为数组中的数大小只有三种情况。所以可以根据这个进行切入口。</p>
 <p>首先$0$可以不用考虑，接下考虑有$n$个$1$和$m$个$2$，如果上述和式中$1$出现了$i$个，那么$2$需要出现$k-i$个，于是答案为</p>
-<p>$$<br>\sum \limits_{i&#x3D;0}^k C_n^i C_m^{k-i}2^{k-i}<br>$$</p>
+<p>$$<br>\sum \limits_{i=0}^k C_n^i C_m^{k-i}2^{k-i}<br>$$</p>
 <hr>
 <p>代码中注意各种初始化<br>线性求逆元中初始化：<code>inv[1] = 1</code></p>
 <p><code>fac[i]</code>:$2^i$</p>
 <p><code>fact[i]</code>:$i!$</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1e7</span> + <span class="number">5</span>, mod = <span class="number">998244353</span>;</span><br><span class="line"></span><br><span class="line">ll fac[N], fact[N], inv[N];</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">C</span><span class="params">(ll n, ll m)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(n &lt; m) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">return</span> fact[n] * inv[m] % mod * inv[n - m] % mod;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">solve</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	fac[<span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line">	fac[<span class="number">0</span>] = fact[<span class="number">0</span>] = fact[<span class="number">1</span>] = inv[<span class="number">0</span>] = inv[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">2</span>; i &lt; N; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		fac[i] = fac[i - <span class="number">1</span>] * <span class="number">2</span> % mod;</span><br><span class="line">		fact[i] = fact[i - <span class="number">1</span>] * i % mod;</span><br><span class="line">		inv[i] = inv[mod % i] * (mod - mod / i) % mod; </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">2</span>; i &lt; N; i++)</span><br><span class="line">		inv[i] = inv[i - <span class="number">1</span>] * inv[i] % mod;</span><br><span class="line">		</span><br><span class="line">	<span class="type">int</span> n, k;</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; k;</span><br><span class="line">	<span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">a</span><span class="params">(n)</span></span>;</span><br><span class="line">	<span class="type">int</span> o = <span class="number">0</span>, t = <span class="number">0</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++) </span><br><span class="line">	&#123;</span><br><span class="line">		cin &gt;&gt; a[i];</span><br><span class="line">		<span class="keyword">if</span>(a[i] == <span class="number">1</span>) o ++;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(a[i] == <span class="number">2</span>) t ++;</span><br><span class="line">	&#125;	</span><br><span class="line">	ll res = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt;= k; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		res += <span class="built_in">C</span>(o, i) * <span class="built_in">C</span>(t, k - i) % mod * fac[k - i] % mod;</span><br><span class="line">		res %= mod;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; res &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">	cin.<span class="built_in">tie</span>(<span class="literal">nullptr</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="type">int</span> t;</span><br><span class="line"><span class="comment">//	cin &gt;&gt; t;</span></span><br><span class="line">	t = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(t--) <span class="built_in">solve</span>();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+
+<span class="token keyword">using</span> ll <span class="token operator">=</span> <span class="token keyword">long</span> <span class="token keyword">long</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> N <span class="token operator">=</span> <span class="token number">1e7</span> <span class="token operator">+</span> <span class="token number">5</span><span class="token punctuation">,</span> mod <span class="token operator">=</span> <span class="token number">998244353</span><span class="token punctuation">;</span>
+
+ll fac<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span> fact<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">,</span> inv<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+ll <span class="token function">C</span><span class="token punctuation">(</span>ll n<span class="token punctuation">,</span> ll m<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>n <span class="token operator">&lt;</span> m<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> fact<span class="token punctuation">[</span>n<span class="token punctuation">]</span> <span class="token operator">*</span> inv<span class="token punctuation">[</span>m<span class="token punctuation">]</span> <span class="token operator">%</span> mod <span class="token operator">*</span> inv<span class="token punctuation">[</span>n <span class="token operator">-</span> m<span class="token punctuation">]</span> <span class="token operator">%</span> mod<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">void</span> <span class="token function">solve</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	fac<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+	fac<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> fact<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> fact<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> inv<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> inv<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> N<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+	<span class="token punctuation">{</span>
+		fac<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> fac<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">%</span> mod<span class="token punctuation">;</span>
+		fact<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> fact<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">*</span> i <span class="token operator">%</span> mod<span class="token punctuation">;</span>
+		inv<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> inv<span class="token punctuation">[</span>mod <span class="token operator">%</span> i<span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token punctuation">(</span>mod <span class="token operator">-</span> mod <span class="token operator">/</span> i<span class="token punctuation">)</span> <span class="token operator">%</span> mod<span class="token punctuation">;</span> 
+	<span class="token punctuation">}</span>
+	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> N<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+		inv<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> inv<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">*</span> inv<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">%</span> mod<span class="token punctuation">;</span>
+		
+	<span class="token keyword">int</span> n<span class="token punctuation">,</span> k<span class="token punctuation">;</span>
+	cin <span class="token operator">&gt;&gt;</span> n <span class="token operator">&gt;&gt;</span> k<span class="token punctuation">;</span>
+	vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> <span class="token function">a</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">int</span> o <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> t <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+	
+	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> 
+	<span class="token punctuation">{</span>
+		cin <span class="token operator">&gt;&gt;</span> a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> o <span class="token operator">++</span><span class="token punctuation">;</span>
+		<span class="token keyword">else</span> <span class="token keyword">if</span><span class="token punctuation">(</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">2</span><span class="token punctuation">)</span> t <span class="token operator">++</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>	
+	ll res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> k<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+	<span class="token punctuation">{</span>
+		res <span class="token operator">+=</span> <span class="token function">C</span><span class="token punctuation">(</span>o<span class="token punctuation">,</span> i<span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token function">C</span><span class="token punctuation">(</span>t<span class="token punctuation">,</span> k <span class="token operator">-</span> i<span class="token punctuation">)</span> <span class="token operator">%</span> mod <span class="token operator">*</span> fac<span class="token punctuation">[</span>k <span class="token operator">-</span> i<span class="token punctuation">]</span> <span class="token operator">%</span> mod<span class="token punctuation">;</span>
+		res <span class="token operator">%=</span> mod<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	cout <span class="token operator">&lt;&lt;</span> res <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	ios<span class="token double-colon punctuation">::</span><span class="token function">sync_with_stdio</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	cin<span class="token punctuation">.</span><span class="token function">tie</span><span class="token punctuation">(</span><span class="token keyword">nullptr</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	<span class="token keyword">int</span> t<span class="token punctuation">;</span>
+<span class="token comment">//	cin &gt;&gt; t;</span>
+	t <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token keyword">while</span><span class="token punctuation">(</span>t<span class="token operator">--</span><span class="token punctuation">)</span> <span class="token function">solve</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -1160,7 +1239,8 @@ https://codeforces.com/problemset/problem/1181/C
                             ﻿﻿# 容斥定理
 基本描述
 对于上述图片，求$|A\cup B \cup C|$
-结果为$|A\cup B\cup C|&#x3D;|A|+|B|+|C|-|A\cap B|-|B\cap C|-|C\cap A|+|A\cap B\cap
+结果为$|A\cup B\cup C|=|A|+|B|+|C|-|A\cap B|-|B\cap C|-|C\cap A|+|A\cap B\cap C|$
+
                         
                     </div>
                     <div class="publish-info">
@@ -1367,7 +1447,7 @@ https://codeforces.com/problemset/problem/1181/C
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">100.4k</span>
+            <span class="white-color">97.2k</span>
             
 
             <br>
@@ -1556,7 +1636,7 @@ $(function () {
     <!-- 不蒜子统计修改网页请求头 -->
     
     <script async src="https://lib.baomitu.com/busuanzi/latest/bsz.pure.mini.js"></script>
-    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="referrer" content="no-referrer-when-downgrade"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
     
     

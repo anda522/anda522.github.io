@@ -3,7 +3,7 @@
 
 
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="nginx知识总结, ZZU 行码棋">
     <!-- 百度和谷歌统计验证 -->
     <meta name="baidu-site-verification" content="code-L7AVcsbU14" />
@@ -84,13 +84,14 @@ nginx配">
         document.write('<script src="' + src + '" id="sozz"><\/script>');
         })();
     </script>
-<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<meta name="generator" content="Hexo 7.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
 
 <body>
 
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -520,14 +521,14 @@ nginx配">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    479
+                    457
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    1 分
                 </div>
                 
                 
@@ -545,10 +546,10 @@ nginx配">
             <div id="articleContent">
                 <h1 id="开关nginx"><a href="#开关nginx" class="headerlink" title="开关nginx"></a>开关nginx</h1><p><code>Ubuntu</code>下：</p>
 <p>打开<code>nginx</code>服务，需要在root权限下（docker容器下也可以用）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/init.d/nginx start</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">/etc/init.d/nginx start<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>重启nginx</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/sbin/nginx -s reload</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">/sbin/nginx <span class="token parameter variable">-s</span> reload<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
@@ -560,25 +561,75 @@ nginx配">
 <ul>
 <li>访问80端口，即浏览器直接输入地址，访问网页，内容位于<code>/home/hexo/blog</code>处</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http&#123;</span><br><span class="line">    server&#123;</span><br><span class="line">        listen 80; <span class="comment"># 监听80端口</span></span><br><span class="line">        server_name 101.35.203.216; <span class="comment">#访问输的地址，可以填域名</span></span><br><span class="line">        root /home/hexo/blog; <span class="comment"># 访问文件的目录</span></span><br><span class="line">        location / &#123;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">http<span class="token punctuation">{</span>
+    server<span class="token punctuation">{</span>
+        listen <span class="token number">80</span><span class="token punctuation">;</span> <span class="token comment"># 监听80端口</span>
+        server_name <span class="token number">101.35</span>.203.216<span class="token punctuation">;</span> <span class="token comment">#访问输的地址，可以填域名</span>
+        root /home/hexo/blog<span class="token punctuation">;</span> <span class="token comment"># 访问文件的目录</span>
+        location / <span class="token punctuation">{</span>
+
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>域名转发，即访问<code>game.wyqz.top</code>域名，转发到本地<code>10000</code>端口。</li>
 </ul>
 <p><code>game.wyqz.top</code>域名解析到的是服务器IP地址，等于说访问的还是80端口，我们通过域名匹配，将其转发到域名对应的端口处。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http&#123;</span><br><span class="line">    server</span><br><span class="line">    &#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        server_name game.wyqz.top;</span><br><span class="line"></span><br><span class="line">        location / &#123;</span><br><span class="line">        proxy_pass  http://127.0.0.1:10000; <span class="comment"># 转发规则</span></span><br><span class="line">        proxy_set_header Host <span class="variable">$proxy_host</span>; <span class="comment"># 修改转发请求头，让10000端口的应用可以受到真实的请求</span></span><br><span class="line">        proxy_set_header X-Real-IP <span class="variable">$remote_addr</span>;</span><br><span class="line">        proxy_set_header X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        access_log  /www/wwwlogs/access.log;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">http<span class="token punctuation">{</span>
+    server
+    <span class="token punctuation">{</span>
+        listen <span class="token number">80</span><span class="token punctuation">;</span>
+        server_name game.wyqz.top<span class="token punctuation">;</span>
+
+        location / <span class="token punctuation">{</span>
+        proxy_pass  http://127.0.0.1:10000<span class="token punctuation">;</span> <span class="token comment"># 转发规则</span>
+        proxy_set_header Host <span class="token variable">$proxy_host</span><span class="token punctuation">;</span> <span class="token comment"># 修改转发请求头，让10000端口的应用可以受到真实的请求</span>
+        proxy_set_header X-Real-IP <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
+        proxy_set_header X-Forwarded-For <span class="token variable">$proxy_add_x_forwarded_for</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        access_log  /www/wwwlogs/access.log<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>重定向，即通过80端口访问<code>vj.wyqz.top</code>域名（80端口是http访问），直接return一个地址，即对应的<strong>https</strong>地址，实现<strong>https</strong>访问。</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">http&#123;</span><br><span class="line">    server&#123;</span><br><span class="line">        listen 80;</span><br><span class="line">        server_name vj.wyqz.top;</span><br><span class="line">        <span class="built_in">return</span>  301 https://$host<span class="variable">$request_uri</span>; <span class="comment">#重定向至https访问。</span></span><br><span class="line">        location / &#123;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">http<span class="token punctuation">{</span>
+    server<span class="token punctuation">{</span>
+        listen <span class="token number">80</span><span class="token punctuation">;</span>
+        server_name vj.wyqz.top<span class="token punctuation">;</span>
+        <span class="token builtin class-name">return</span>  <span class="token number">301</span> https://<span class="token variable">$host</span><span class="token variable">$request_uri</span><span class="token punctuation">;</span> <span class="token comment">#重定向至https访问。</span>
+        location / <span class="token punctuation">{</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
 <ul>
 <li>https配置</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    <span class="comment"># 服务器端口使用443，开启ssl, 这里ssl就是上面安装的ssl模块</span></span><br><span class="line">    listen       443 ssl;</span><br><span class="line">    root /home/hexo/blog;</span><br><span class="line">    <span class="comment"># 域名，多个以空格分开</span></span><br><span class="line">    server_name  wyqz.top www.wyqz.top;</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># ssl证书地址</span></span><br><span class="line">    ssl_certificate     /etc/nginx/ssl.pem;  <span class="comment"># pem文件的路径</span></span><br><span class="line">    ssl_certificate_key  /etc/nginx/ssl.key; <span class="comment"># key文件的路径</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># ssl验证相关配置</span></span><br><span class="line">    ssl_session_timeout  5m;    <span class="comment">#缓存有效期</span></span><br><span class="line">    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;    <span class="comment">#加密算法</span></span><br><span class="line">    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;    <span class="comment">#安全链接可选的加密协议</span></span><br><span class="line">    ssl_prefer_server_ciphers on;   <span class="comment">#使用服务器端的首选算法</span></span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">server <span class="token punctuation">{</span>
+    <span class="token comment"># 服务器端口使用443，开启ssl, 这里ssl就是上面安装的ssl模块</span>
+    listen       <span class="token number">443</span> ssl<span class="token punctuation">;</span>
+    root /home/hexo/blog<span class="token punctuation">;</span>
+    <span class="token comment"># 域名，多个以空格分开</span>
+    server_name  wyqz.top www.wyqz.top<span class="token punctuation">;</span>
+    
+    <span class="token comment"># ssl证书地址</span>
+    ssl_certificate     /etc/nginx/ssl.pem<span class="token punctuation">;</span>  <span class="token comment"># pem文件的路径</span>
+    ssl_certificate_key  /etc/nginx/ssl.key<span class="token punctuation">;</span> <span class="token comment"># key文件的路径</span>
+    
+    <span class="token comment"># ssl验证相关配置</span>
+    ssl_session_timeout  5m<span class="token punctuation">;</span>    <span class="token comment">#缓存有效期</span>
+    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:<span class="token operator">!</span>NULL:<span class="token operator">!</span>aNULL:<span class="token operator">!</span>MD5:<span class="token operator">!</span>ADH:<span class="token operator">!</span>RC4<span class="token punctuation">;</span>    <span class="token comment">#加密算法</span>
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2<span class="token punctuation">;</span>    <span class="token comment">#安全链接可选的加密协议</span>
+    ssl_prefer_server_ciphers on<span class="token punctuation">;</span>   <span class="token comment">#使用服务器端的首选算法</span>
+
+    location / <span class="token punctuation">{</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
@@ -1366,7 +1417,7 @@ $x$节点的$k$级
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">100.4k</span>
+            <span class="white-color">97.2k</span>
             
 
             <br>
@@ -1555,7 +1606,7 @@ $(function () {
     <!-- 不蒜子统计修改网页请求头 -->
     
     <script async src="https://lib.baomitu.com/busuanzi/latest/bsz.pure.mini.js"></script>
-    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="referrer" content="no-referrer-when-downgrade"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
     
     

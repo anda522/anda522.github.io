@@ -211,7 +211,7 @@
         
     <summary type="html">&lt;hr&gt;
 &lt;p&gt;1.需要一个数组或者字符串的目前的元素和前一个元素做相关运算时:&lt;br&gt;&lt;strong&gt;直接遍历这个序列，当 i 等于0时不满足条件，只有i 等于 1时才会执行if语句&lt;/strong&gt;&lt;/p&gt;
-&lt;figure class=&quot;highlight</summary>
+&lt;pre class=&quot;line-numbers</summary>
         
       
     
@@ -310,7 +310,7 @@
     <link href="http://wyqz.top/p/1473860796.html"/>
     <id>http://wyqz.top/p/1473860796.html</id>
     <published>2023-04-11T11:47:10.000Z</published>
-    <updated>2023-12-23T04:38:27.295Z</updated>
+    <updated>2024-01-11T03:57:23.189Z</updated>
     
     
       
@@ -348,7 +348,7 @@
         
     <summary type="html">&lt;p&gt;相关设置：&lt;/p&gt;
 &lt;p&gt;如果是在notebook中想使用&lt;strong&gt;嵌入式绘图&lt;/strong&gt;，需添加&lt;/p&gt;
-&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span</summary>
+&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code</summary>
         
       
     
@@ -541,7 +541,7 @@
     <link href="http://wyqz.top/p/808139430.html"/>
     <id>http://wyqz.top/p/808139430.html</id>
     <published>2022-12-27T09:04:31.000Z</published>
-    <updated>2023-11-09T05:43:40.417Z</updated>
+    <updated>2024-01-11T03:50:58.009Z</updated>
     
     
       

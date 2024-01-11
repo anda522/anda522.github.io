@@ -3,7 +3,7 @@
 
 
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="【Mit6.s081】课程记录, ZZU 行码棋">
     <!-- 百度和谷歌统计验证 -->
     <meta name="baidu-site-verification" content="code-L7AVcsbU14" />
@@ -76,13 +76,14 @@ xv6系统为 RISC-V
         document.write('<script src="' + src + '" id="sozz"><\/script>');
         })();
     </script>
-<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<meta name="generator" content="Hexo 7.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
 
 <body>
 
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -566,7 +567,28 @@ xv6系统为 RISC-V
 <p>参考：</p>
 <p>[1] <a href="https://blog.rayzhang.top/2022/06/27/mit-6.s081-lab-util/">MIT 6.S081 Lab Util 实验</a></p>
 </blockquote>
-<h1 id="2-System-calls"><a href="#2-System-calls" class="headerlink" title="2 System calls"></a>2 System calls</h1><h2 id="Knowledge-1"><a href="#Knowledge-1" class="headerlink" title="Knowledge"></a>Knowledge</h2><h3 id="系统调用"><a href="#系统调用" class="headerlink" title="系统调用"></a>系统调用</h3><figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 所有相关的系统调用</span></span><br><span class="line"><span class="type">int</span> <span class="title function_">fork</span><span class="params">(<span class="type">void</span>)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">exit</span><span class="params">(<span class="type">int</span>)</span> __<span class="title function_">attribute__</span><span class="params">((<span class="keyword">noreturn</span>))</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">wait</span><span class="params">(<span class="type">int</span>*)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">pipe</span><span class="params">(<span class="type">int</span>*)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">write</span><span class="params">(<span class="type">int</span>, <span class="type">const</span> <span class="type">void</span>*, <span class="type">int</span>)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">read</span><span class="params">(<span class="type">int</span>, <span class="type">void</span>*, <span class="type">int</span>)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">close</span><span class="params">(<span class="type">int</span>)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">kill</span><span class="params">(<span class="type">int</span>)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">exec</span><span class="params">(<span class="type">char</span>*, <span class="type">char</span>**)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">open</span><span class="params">(<span class="type">const</span> <span class="type">char</span>*, <span class="type">int</span>)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">mknod</span><span class="params">(<span class="type">const</span> <span class="type">char</span>*, <span class="type">short</span>, <span class="type">short</span>)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">unlink</span><span class="params">(<span class="type">const</span> <span class="type">char</span>*)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">fstat</span><span class="params">(<span class="type">int</span> fd, <span class="keyword">struct</span> stat*)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">link</span><span class="params">(<span class="type">const</span> <span class="type">char</span>*, <span class="type">const</span> <span class="type">char</span>*)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">mkdir</span><span class="params">(<span class="type">const</span> <span class="type">char</span>*)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">chdir</span><span class="params">(<span class="type">const</span> <span class="type">char</span>*)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">dup</span><span class="params">(<span class="type">int</span>)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">getpid</span><span class="params">(<span class="type">void</span>)</span>;</span><br><span class="line"><span class="type">char</span>* <span class="title function_">sbrk</span><span class="params">(<span class="type">int</span>)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">sleep</span><span class="params">(<span class="type">int</span>)</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">uptime</span><span class="params">(<span class="type">void</span>)</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="2-System-calls"><a href="#2-System-calls" class="headerlink" title="2 System calls"></a>2 System calls</h1><h2 id="Knowledge-1"><a href="#Knowledge-1" class="headerlink" title="Knowledge"></a>Knowledge</h2><h3 id="系统调用"><a href="#系统调用" class="headerlink" title="系统调用"></a>系统调用</h3><pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">// 所有相关的系统调用</span>
+<span class="token keyword">int</span> <span class="token function">fork</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">exit</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token keyword">__attribute__</span><span class="token punctuation">(</span><span class="token punctuation">(</span>noreturn<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">wait</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">pipe</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">write</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">void</span><span class="token operator">*</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">void</span><span class="token operator">*</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">close</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">kill</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">exec</span><span class="token punctuation">(</span><span class="token keyword">char</span><span class="token operator">*</span><span class="token punctuation">,</span> <span class="token keyword">char</span><span class="token operator">*</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">open</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">mknod</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span><span class="token punctuation">,</span> <span class="token keyword">short</span><span class="token punctuation">,</span> <span class="token keyword">short</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">unlink</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">fstat</span><span class="token punctuation">(</span><span class="token keyword">int</span> fd<span class="token punctuation">,</span> <span class="token keyword">struct</span> <span class="token class-name">stat</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">link</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span><span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">mkdir</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">chdir</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">dup</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">getpid</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">char</span><span class="token operator">*</span> <span class="token function">sbrk</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">sleep</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">uptime</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>部分系统调用解释：</p>
 <p><code>exit(int)</code> ：导致进程停止执行并释放资源。<code>exit</code>接受一个整数状态参数，通常0表示成功，1表示失败。</p>
@@ -587,7 +609,7 @@ xv6系统为 RISC-V
 </blockquote>
 <h3 id="系统调用执行过程"><a href="#系统调用执行过程" class="headerlink" title="系统调用执行过程"></a>系统调用执行过程</h3><p>系统调用在内核区，执行时需要从用户态过渡到核心态，CPU提供一个特殊的指令，将CPU从用户模式切换到管理模式，并在内核指定的入口点进入内核（RISC-V为此提供<code>ecall</code>指令）。</p>
 <p>一个进程可以通过执行RISC-V的<code>ecall</code>指令进行系统调用，该指令提升硬件特权级别，并将程序计数器（PC）更改为内核定义的入口点，入口点的代码切换到内核栈，执行实现系统调用的内核指令，当系统调用完成时，内核切换回用户栈，并通过调用<code>sret</code>指令返回用户空间，该指令降低了硬件特权级别，并在系统调用指令刚结束时恢复执行用户指令。</p>
-<h2 id="Lab-1"><a href="#Lab-1" class="headerlink" title="Lab"></a>Lab</h2><h1 id="3-Page-tables"><a href="#3-Page-tables" class="headerlink" title="3 Page tables"></a>3 Page tables</h1><h2 id="Knowledge-2"><a href="#Knowledge-2" class="headerlink" title="Knowledge"></a>Knowledge</h2><p>Xv6为每个进程维护一个单独的页表，定义了该进程的地址空间。一个进程的虚拟地址空间分布如下。首先是指令，然后是全局变量，然后是栈区，最后是一个堆区域。有许多因素限制了进程地址空间的最大范围： RISC-V上的指针有64位宽；硬件在页表中查找虚拟地址时只使用低39位；xv6只使用这39位中的38位。因此，最大地址是 <code>2^38-1=0x3fffffffff</code> ，即<code>MAXVA</code>（定义在kernel&#x2F;riscv.h:348）在地址空间的顶部，xv6为<code>trampoline</code>（用于在用户和内核之间切换）和映射进程切换到内核的<code>trapframe</code>分别保留了一个页面。</p>
+<h2 id="Lab-1"><a href="#Lab-1" class="headerlink" title="Lab"></a>Lab</h2><h1 id="3-Page-tables"><a href="#3-Page-tables" class="headerlink" title="3 Page tables"></a>3 Page tables</h1><h2 id="Knowledge-2"><a href="#Knowledge-2" class="headerlink" title="Knowledge"></a>Knowledge</h2><p>Xv6为每个进程维护一个单独的页表，定义了该进程的地址空间。一个进程的虚拟地址空间分布如下。首先是指令，然后是全局变量，然后是栈区，最后是一个堆区域。有许多因素限制了进程地址空间的最大范围： RISC-V上的指针有64位宽；硬件在页表中查找虚拟地址时只使用低39位；xv6只使用这39位中的38位。因此，最大地址是 <code>2^38-1=0x3fffffffff</code> ，即<code>MAXVA</code>（定义在kernel/riscv.h:348）在地址空间的顶部，xv6为<code>trampoline</code>（用于在用户和内核之间切换）和映射进程切换到内核的<code>trapframe</code>分别保留了一个页面。</p>
 <p><img src="https://xv6.dgs.zone/tranlate_books/book-riscv-rev1/images/c2/p2.png"></p>
 <h2 id="Lab-2"><a href="#Lab-2" class="headerlink" title="Lab"></a>Lab</h2><p><code>argaddr()</code> 和 <code>argint()</code> 函数都是从用户栈空间中提取参数。当用户调用系统调用时，需要将参数传给内核。参数通常会放到用户的栈中。</p>
 <p><code>walk</code> 函数在操作系统中通常用于页表的遍历和访问。在虚拟内存管理中，页表是一种数据结构，用于将虚拟地址映射到物理地址。<code>walk</code> 函数的主要作用是在给定的页表中查找特定虚拟地址对应的页表项。</p>
@@ -622,8 +644,8 @@ xv6系统为 RISC-V
 <h1 id="6-Multithreading"><a href="#6-Multithreading" class="headerlink" title="6 Multithreading"></a>6 Multithreading</h1><h2 id="Knowledge-5"><a href="#Knowledge-5" class="headerlink" title="Knowledge"></a>Knowledge</h2><p>Xv6有两种类型的锁：自旋锁（spinlocks）和睡眠锁（sleep-locks）。</p>
 <p>自旋锁和中断的交互引发了潜在的危险。假设<code>sys_sleep</code>持有<code>tickslock</code>，并且它的CPU被计时器中断中断。<code>clockintr</code>会尝试获取<code>tickslock</code>，意识到它被持有后等待释放。在这种情况下，<code>tickslock</code>永远不会被释放：只有<code>sys_sleep</code>可以释放它，但是<code>sys_sleep</code>直到<code>clockintr</code>返回前不能继续运行。所以CPU会死锁，任何需要锁的代码也会冻结。</p>
 <p>为了避免这种情况，如果一个自旋锁被中断处理程序所使用，那么CPU必须保证在启用中断的情况下永远不能持有该锁。Xv6更保守：当CPU获取任何锁时，xv6总是禁用该CPU上的中断。中断仍然可能发生在其他CPU上，此时中断的<code>acquire</code>可以等待线程释放自旋锁；由于不在同一CPU上，不会造成死锁。</p>
-<p>自旋锁的另一个缺点是，一个进程在持有自旋锁的同时不能让出（yield）CPU，然而我们希望持有锁的进程等待磁盘I&#x2F;O的时候其他进程可以使用CPU。</p>
-<p>Xv6以睡眠锁（sleep-locks）的形式提供了这种锁。<code>acquiresleep</code> (<strong>kernel&#x2F;sleeplock.c</strong>:22) 在等待时让步CPU</p>
+<p>自旋锁的另一个缺点是，一个进程在持有自旋锁的同时不能让出（yield）CPU，然而我们希望持有锁的进程等待磁盘I/O的时候其他进程可以使用CPU。</p>
+<p>Xv6以睡眠锁（sleep-locks）的形式提供了这种锁。<code>acquiresleep</code> (<strong>kernel/sleeplock.c</strong>:22) 在等待时让步CPU</p>
 <h2 id="Lab-5"><a href="#Lab-5" class="headerlink" title="Lab"></a>Lab</h2>
             </div>
             <hr />
@@ -1187,7 +1209,8 @@ xv6系统为 RISC-V
                         
                             
 1.需要一个数组或者字符串的目前的元素和前一个元素做相关运算时:直接遍历这个序列，当 i 等于0时不满足条件，只有i 等于 1时才会执行if语句
-for(int i = 0; i &lt; len; ++i) &#123;	if( i &
+for(int i = 0; i &lt; len; ++i) {
+	if( i &amp;
                         
                     </div>
                     <div class="publish-info">
@@ -1394,7 +1417,7 @@ for(int i = 0; i &lt; len; ++i) &#123;	if( i &
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">100.4k</span>
+            <span class="white-color">97.2k</span>
             
 
             <br>
@@ -1583,7 +1606,7 @@ $(function () {
     <!-- 不蒜子统计修改网页请求头 -->
     
     <script async src="https://lib.baomitu.com/busuanzi/latest/bsz.pure.mini.js"></script>
-    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="referrer" content="no-referrer-when-downgrade"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
     
     

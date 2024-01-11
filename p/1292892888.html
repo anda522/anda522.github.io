@@ -3,7 +3,7 @@
 
 
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="容斥定理, ZZU 行码棋">
     <!-- 百度和谷歌统计验证 -->
     <meta name="baidu-site-verification" content="code-L7AVcsbU14" />
@@ -12,7 +12,8 @@
     <meta name="description" content="﻿﻿# 容斥定理
 基本描述
 对于上述图片，求$|A\cup B \cup C|$
-结果为$|A\cup B\cup C|&amp;#x3D;|A|+|B|+|C|-|A\cap B|-|B\cap C|-|C\cap A|+|A\cap B\cap">
+结果为$|A\cup B\cup C|=|A|+|B|+|C|-|A\cap B|-|B\cap C|-|C\cap A|+|A\cap B\cap C|$
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -74,13 +75,14 @@
         document.write('<script src="' + src + '" id="sozz"><\/script>');
         })();
     </script>
-<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<meta name="generator" content="Hexo 7.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
 
 <body>
 
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -496,7 +498,7 @@
                 <!-- 显示更新日期 -->
                 <div class="post-update-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-12-31
+                    2024-01-11
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -536,12 +538,12 @@
                 <p>﻿﻿# 容斥定理</p>
 <h2 id="基本描述"><a href="#基本描述" class="headerlink" title="基本描述"></a>基本描述</h2><p><img src="https://oi-wiki.org/math/combinatorics/images/incexcp.png" alt="简单版本"></p>
 <p>对于上述图片，求$|A\cup B \cup C|$</p>
-<p>结果为$|A\cup B\cup C|&#x3D;|A|+|B|+|C|-|A\cap B|-|B\cap C|-|C\cap A|+|A\cap B\cap C|$</p>
-<h2 id="一般描述"><a href="#一般描述" class="headerlink" title="一般描述"></a>一般描述</h2><p>公式：$\left|\bigcup_{i&#x3D;1}^{n}S_i\right|&#x3D;\sum_{m&#x3D;1}^n(-1)^{m-1}\sum_{a_i&lt;a_{i+1} }\left|\bigcap_{i&#x3D;1}^mS_{a_i}\right|$</p>
+<p>结果为$|A\cup B\cup C|=|A|+|B|+|C|-|A\cap B|-|B\cap C|-|C\cap A|+|A\cap B\cap C|$</p>
+<h2 id="一般描述"><a href="#一般描述" class="headerlink" title="一般描述"></a>一般描述</h2><p>公式：<br>$$<br>\left|\bigcup_{i=1}^{n}S_i\right|=\sum_{m=1}^n(-1)^{m-1}\sum_{a_i&lt;a_{i+1} }\left|\bigcap_{i=1}^mS_{a_i}\right|<br>$$</p>
 <p>大家应该是看不懂吧，反正我是看不懂</p>
 <p>我理解的通俗的意思就是：</p>
 <p><code>n</code>个集合的并集<strong>等于</strong><code>n</code>个集合选择一个的情况中所有情况的交-<code>n</code>个集合中选择两个所有情况中两两的交+<code>n</code>个集合中选择三个中所有情况三个的交-选择四种的交+选择五种的交-……</p>
-<p>稍微用公式表示一下：<br>$|A_1\cup…\cup A_n| &#x3D; \<br>|A_1|+|A_2|+…+|A_n|\<br>-(|A_1 \cap A_2|+…+|A_i \cap A_j|)\<br>+(|A_1 \cap A_2 \cap A_3|+…+|A_i \cap A_j \cap A_k|)\<br>-(四个之间的交)\<br>+(五个之间的交)\<br>……$</p>
+<p>稍微用公式表示一下：<br>$$<br>|A_1\cup…\cup A_n| = \\<br>|A_1|+|A_2|+…+|A_n|\\<br>-(|A_1 \cap A_2|+…+|A_i \cap A_j|)\\<br>+(|A_1 \cap A_2 \cap A_3|+…+|A_i \cap A_j \cap A_k|)\\<br>-(四个之间的交)\\<br>+(五个之间的交)\\<br>……<br>$$</p>
 <p>大概就是这个意思。</p>
 <ul>
 <li>选择的个数为偶数次，前面符号为负</li>
@@ -565,7 +567,45 @@
 <blockquote>
 <p>枚举所有的集合：<br>我们采用二进制的方法，枚举$[1,2^{m}-1]$,统计其中<code>1</code>的个数即可</p>
 </blockquote>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">20</span>;</span><br><span class="line"><span class="type">int</span> p[N];</span><br><span class="line"><span class="type">int</span> n,m;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	cin&gt;&gt;n&gt;&gt;m;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;m;i++) cin&gt;&gt;p[i];</span><br><span class="line">	</span><br><span class="line">	ll res = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt; <span class="number">1</span>&lt;&lt;m ;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">		ll t = <span class="number">1</span>;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;m;j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>( i&gt;&gt;j &amp; <span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				cnt ++ ;<span class="comment">//统计选中的个数</span></span><br><span class="line">				<span class="keyword">if</span>(t * p[j] &gt; n)<span class="comment">//不满足条件，因为大于n了</span></span><br><span class="line">				&#123;</span><br><span class="line">					t = <span class="number">-1</span>;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				t *= p[j];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span>(t!=<span class="number">-1</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(cnt%<span class="number">2</span>) res += n/t;</span><br><span class="line">			<span class="keyword">else</span> res -= n/t; </span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout &lt;&lt; res &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> <span class="token keyword">long</span> <span class="token keyword">long</span> ll<span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> N <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> p<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> n<span class="token punctuation">,</span>m<span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	cin<span class="token operator">&gt;&gt;</span>n<span class="token operator">&gt;&gt;</span>m<span class="token punctuation">;</span>
+	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>m<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> cin<span class="token operator">&gt;&gt;</span>p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+	
+	ll res <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span> <span class="token number">1</span><span class="token operator">&lt;&lt;</span>m <span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+	<span class="token punctuation">{</span>
+		<span class="token keyword">int</span> cnt <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+		ll t <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+		<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span>m<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span>
+		<span class="token punctuation">{</span>
+			<span class="token keyword">if</span><span class="token punctuation">(</span> i<span class="token operator">&gt;&gt;</span>j <span class="token operator">&amp;</span> <span class="token number">1</span><span class="token punctuation">)</span>
+			<span class="token punctuation">{</span>
+				cnt <span class="token operator">++</span> <span class="token punctuation">;</span><span class="token comment">//统计选中的个数</span>
+				<span class="token keyword">if</span><span class="token punctuation">(</span>t <span class="token operator">*</span> p<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&gt;</span> n<span class="token punctuation">)</span><span class="token comment">//不满足条件，因为大于n了</span>
+				<span class="token punctuation">{</span>
+					t <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+					<span class="token keyword">break</span><span class="token punctuation">;</span>
+				<span class="token punctuation">}</span>
+				t <span class="token operator">*=</span> p<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>t<span class="token operator">!=</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+		<span class="token punctuation">{</span>
+			<span class="token keyword">if</span><span class="token punctuation">(</span>cnt<span class="token operator">%</span><span class="token number">2</span><span class="token punctuation">)</span> res <span class="token operator">+=</span> n<span class="token operator">/</span>t<span class="token punctuation">;</span>
+			<span class="token keyword">else</span> res <span class="token operator">-=</span> n<span class="token operator">/</span>t<span class="token punctuation">;</span> 
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	cout <span class="token operator">&lt;&lt;</span> res <span class="token operator">&lt;&lt;</span> endl<span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <hr>
 <h2 id="例题2"><a href="#例题2" class="headerlink" title="例题2"></a>例题2</h2><p>题目链接：<a href="https://www.acwing.com/problem/content/216/">https://www.acwing.com/problem/content/216/</a></p>
@@ -578,26 +618,82 @@
 <li>理想情况</li>
 </ul>
 <p>首先去掉限制考虑理想情况，即每个盒子的花的个数有无限个，设第$i$个盒子取出$x_i$朵花</p>
-<p>则$x_1+x_2+x_3+…+x_n&#x3D;  m,x_i \geq 0$,总方案数为$C_{n+m-1}^{n-1}$种</p>
+<p>则$x_1+x_2+x_3+…+x_n=  m,x_i \geq 0$,总方案数为$C_{n+m-1}^{n-1}$种</p>
 <p>可以参考链接查看如何计算 :<br><a href="https://oi-wiki.org/math/combinatorics/inclusion-exclusion-principle/">https://oi-wiki.org/math/combinatorics/inclusion-exclusion-principle/</a></p>
 <hr>
 <ul>
 <li>有限制的情况</li>
 </ul>
-<p>限制条件下：<br>$x_1+x_2+x_3+…+x_n&#x3D;  m,x_1&lt;&#x3D;A_1,x_2&lt;&#x3D;A_2,x_3&lt;&#x3D;A_3……x_n&lt;&#x3D;A_n$</p>
+<p>限制条件下：<br>$x_1+x_2+x_3+…+x_n=  m,x_1&lt;=A_1,x_2&lt;=A_2,x_3&lt;=A_3……x_n&lt;=A_n$</p>
 <p>$x_1,x_2,…,x_n$同时满足限制条件才可，我们考虑从补集去求（总情况数减去相反的情况）</p>
 <p>补集情况下：</p>
-<p>$x_1+x_2+x_3+…+x_n&#x3D;  m,x_1&gt;A_1,x_2&gt;A_2,x_3&gt;A_3……x_n&gt;A_n$<br>第<code>i</code>个限制（$x_i&gt;A_i$）的情况满足个数我们当作一个集合$s_i$</p>
+<p>$x_1+x_2+x_3+…+x_n=  m,x_1&gt;A_1,x_2&gt;A_2,x_3&gt;A_3……x_n&gt;A_n$<br>第<code>i</code>个限制（$x_i&gt;A_i$）的情况满足个数我们当作一个集合$s_i$</p>
 <ul>
 <li>总数：$C_{n+m-1}^{n-1}$</li>
 <li>题目的补集：$|s_1\bigcup s_2\bigcup s_3……\bigcup s_n|$</li>
 <li>结果为：$C_{m+n-1}^{n-1}-|s_1\bigcup s_2\bigcup s_3……\bigcup s_n|$</li>
 </ul>
-<p>考虑求满足$s_1$的情况数<br>即第一个必须取至少$A_i+1$支花，那么接下来就化为从<code>n</code>组里面选花，$x_1&gt;&#x3D;A_1+1,x_2&gt;&#x3D;0,x_3&gt;&#x3D;0,…,x_n&gt;&#x3D;0$的情况，可以直接取出$A_i+1$支花放在第一组，那么总数就变成$m-(A_1+1)$支花，就化为<strong>理想情况</strong>(见上文)下的问题了，总数为$C_{m+n-1-(A_1+1)}^{n-1}$</p>
+<p>考虑求满足$s_1$的情况数<br>即第一个必须取至少$A_i+1$支花，那么接下来就化为从<code>n</code>组里面选花，$x_1&gt;=A_1+1,x_2&gt;=0,x_3&gt;=0,…,x_n&gt;=0$的情况，可以直接取出$A_i+1$支花放在第一组，那么总数就变成$m-(A_1+1)$支花，就化为<strong>理想情况</strong>(见上文)下的问题了，总数为$C_{m+n-1-(A_1+1)}^{n-1}$</p>
 <p>$s_1\cap s_2$同理<br>答案为$C_{m+n-1-(A_1+1)-(A_2+1)}^{n-1}$</p>
 <p>最后枚举所有的情况数，使用二进制方法进行枚举，枚举$[0,2^n-1]$,统计二进制位<code>1</code>的个数</p>
 <p>奇数个<code>1</code>符号为负<br>偶数个<code>1</code>符号位正</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="type">long</span> <span class="type">long</span> ll;</span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">20</span>,mod = <span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line"></span><br><span class="line">ll a[N];</span><br><span class="line">ll d = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">fast</span><span class="params">(ll a,ll b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ll res = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">while</span>(b)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(b&amp;<span class="number">1</span>) res = res * a % mod;</span><br><span class="line">		a = a * a % mod;</span><br><span class="line">		b &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">C</span><span class="params">(ll x,ll y)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span>(x &lt; y) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	ll u = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(ll i = x;i&gt;x-y;i--) u = i % mod * u % mod;</span><br><span class="line">	<span class="keyword">return</span> u * d % mod;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ll n,m;</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">	<span class="keyword">for</span> ( <span class="type">int</span> i=<span class="number">0</span>;i&lt;n;i++) cin&gt;&gt;a[i];</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">for</span>(ll i=<span class="number">1</span>;i&lt;=n<span class="number">-1</span>;i++) d = d * i % mod;</span><br><span class="line">	d = <span class="built_in">fast</span>(d,mod<span class="number">-2</span>);</span><br><span class="line">	</span><br><span class="line">	ll res = <span class="number">0</span> ;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>; i&lt; <span class="number">1</span>&lt;&lt;n;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">//组合数的下角标   上角标</span></span><br><span class="line">		ll down = n + m <span class="number">-1</span>,up = n<span class="number">-1</span>;</span><br><span class="line">		<span class="type">int</span> sign = <span class="number">1</span>;<span class="comment">//标记的符号位</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">0</span>;j&lt;n;j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(i&gt;&gt;j&amp;<span class="number">1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				down -= a[j]+<span class="number">1</span>;<span class="comment">//下角标减去对应的个数</span></span><br><span class="line">				sign *= <span class="number">-1</span>;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		res = (res + <span class="built_in">C</span>(down,up) * sign)%mod; <span class="comment">//计算组合数，统计答案</span></span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt;(res + mod) % mod&lt;&lt;endl; </span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h&gt;</span></span>
+<span class="token keyword">typedef</span> <span class="token keyword">long</span> <span class="token keyword">long</span> ll<span class="token punctuation">;</span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> N <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">,</span>mod <span class="token operator">=</span> <span class="token number">1e9</span><span class="token operator">+</span><span class="token number">7</span><span class="token punctuation">;</span>
+
+ll a<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
+ll d <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+
+ll <span class="token function">fast</span><span class="token punctuation">(</span>ll a<span class="token punctuation">,</span>ll b<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	ll res <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token keyword">while</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span>
+	<span class="token punctuation">{</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span>b<span class="token operator">&amp;</span><span class="token number">1</span><span class="token punctuation">)</span> res <span class="token operator">=</span> res <span class="token operator">*</span> a <span class="token operator">%</span> mod<span class="token punctuation">;</span>
+		a <span class="token operator">=</span> a <span class="token operator">*</span> a <span class="token operator">%</span> mod<span class="token punctuation">;</span>
+		b <span class="token operator">&gt;&gt;=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">return</span> res<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+ll <span class="token function">C</span><span class="token punctuation">(</span>ll x<span class="token punctuation">,</span>ll y<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span>x <span class="token operator">&lt;</span> y<span class="token punctuation">)</span> <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+	ll u <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+	<span class="token keyword">for</span><span class="token punctuation">(</span>ll i <span class="token operator">=</span> x<span class="token punctuation">;</span>i<span class="token operator">&gt;</span>x<span class="token operator">-</span>y<span class="token punctuation">;</span>i<span class="token operator">--</span><span class="token punctuation">)</span> u <span class="token operator">=</span> i <span class="token operator">%</span> mod <span class="token operator">*</span> u <span class="token operator">%</span> mod<span class="token punctuation">;</span>
+	<span class="token keyword">return</span> u <span class="token operator">*</span> d <span class="token operator">%</span> mod<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+	ll n<span class="token punctuation">,</span>m<span class="token punctuation">;</span>
+	cin <span class="token operator">&gt;&gt;</span> n <span class="token operator">&gt;&gt;</span> m<span class="token punctuation">;</span>
+	<span class="token keyword">for</span> <span class="token punctuation">(</span> <span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> cin<span class="token operator">&gt;&gt;</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+	
+	<span class="token keyword">for</span><span class="token punctuation">(</span>ll i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span> d <span class="token operator">=</span> d <span class="token operator">*</span> i <span class="token operator">%</span> mod<span class="token punctuation">;</span>
+	d <span class="token operator">=</span> <span class="token function">fast</span><span class="token punctuation">(</span>d<span class="token punctuation">,</span>mod<span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	
+	ll res <span class="token operator">=</span> <span class="token number">0</span> <span class="token punctuation">;</span>
+	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span> <span class="token number">1</span><span class="token operator">&lt;&lt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+	<span class="token punctuation">{</span>
+		<span class="token comment">//组合数的下角标   上角标</span>
+		ll down <span class="token operator">=</span> n <span class="token operator">+</span> m <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>up <span class="token operator">=</span> n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+		<span class="token keyword">int</span> sign <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span><span class="token comment">//标记的符号位</span>
+		<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span>
+		<span class="token punctuation">{</span>
+			<span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">&gt;&gt;</span>j<span class="token operator">&amp;</span><span class="token number">1</span><span class="token punctuation">)</span>
+			<span class="token punctuation">{</span>
+				down <span class="token operator">-=</span> a<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span><span class="token comment">//下角标减去对应的个数</span>
+				sign <span class="token operator">*=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
+			<span class="token punctuation">}</span>
+		<span class="token punctuation">}</span>
+		res <span class="token operator">=</span> <span class="token punctuation">(</span>res <span class="token operator">+</span> <span class="token function">C</span><span class="token punctuation">(</span>down<span class="token punctuation">,</span>up<span class="token punctuation">)</span> <span class="token operator">*</span> sign<span class="token punctuation">)</span><span class="token operator">%</span>mod<span class="token punctuation">;</span> <span class="token comment">//计算组合数，统计答案</span>
+	<span class="token punctuation">}</span>
+	cout<span class="token operator">&lt;&lt;</span><span class="token punctuation">(</span>res <span class="token operator">+</span> mod<span class="token punctuation">)</span> <span class="token operator">%</span> mod<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span> 
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="例题3-ABC-297-F-Minimum-Bounding-Box-2"><a href="#例题3-ABC-297-F-Minimum-Bounding-Box-2" class="headerlink" title="例题3 ABC 297 F Minimum Bounding Box 2"></a>例题3 ABC 297 F Minimum Bounding Box 2</h2><p><a href="https://atcoder.jp/contests/abc297/tasks/abc297_f">AtCoder Beginner Contest 297 F Minimum Bounding Box 2</a></p>
 <p><img src="https://img-blog.csdnimg.cn/5f1ff6e83b1140129786c6cbf187c9e3.png" alt="方法描述"></p>
@@ -607,7 +703,65 @@
 <p>注意容斥变量s是从0开始，0刚好对应总的情况数，所以不用额外计算总的情况数</p>
 </blockquote>
 <p>最后再除以总的情况数 $C_{h * w} ^ k$ 即可</p>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">const</span> <span class="type">int</span> mod = <span class="number">998244353</span>;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> N = <span class="number">1e6</span>;</span><br><span class="line"></span><br><span class="line"><span class="function">ll <span class="title">ksm</span><span class="params">(ll a, ll b)</span> </span>&#123;</span><br><span class="line">	ll res = <span class="number">1</span>;</span><br><span class="line">	a %= mod;</span><br><span class="line">	<span class="keyword">while</span>(b) &#123;</span><br><span class="line">		<span class="keyword">if</span>(b &amp; <span class="number">1</span>) res = res * a % mod;</span><br><span class="line">		b &gt;&gt;= <span class="number">1</span>;</span><br><span class="line">		a = a * a % mod;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">	cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> h, w, k;</span><br><span class="line">	cin &gt;&gt; h &gt;&gt; w &gt;&gt; k;</span><br><span class="line"></span><br><span class="line">	<span class="function">vector&lt;ll&gt; <span class="title">fac</span><span class="params">(N + <span class="number">1</span>)</span>, <span class="title">inv</span><span class="params">(N + <span class="number">1</span>)</span></span>;</span><br><span class="line">	fac[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= N; i++) &#123;</span><br><span class="line">		fac[i] = fac[i - <span class="number">1</span>] * i % mod;</span><br><span class="line">	&#125;</span><br><span class="line">	inv[N] = <span class="built_in">ksm</span>(fac[N], mod - <span class="number">2</span>);</span><br><span class="line">	inv[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = N - <span class="number">1</span>; i &gt;= <span class="number">1</span>; i--) &#123;</span><br><span class="line">		inv[i] = inv[i + <span class="number">1</span>] * (i + <span class="number">1</span>) % mod;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">auto</span> C = [&amp;](ll n, ll m) -&gt; ll &#123;</span><br><span class="line">		<span class="keyword">if</span>(n &lt; m || m &lt; <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">		<span class="keyword">return</span> fac[n] * inv[m] % mod * inv[n - m] % mod;</span><br><span class="line">	&#125;;</span><br><span class="line"></span><br><span class="line">	ll ans = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= h; i++) &#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> j = <span class="number">1</span>; j &lt;= w; j++) &#123;</span><br><span class="line">			ll res = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">for</span>(<span class="type">int</span> s = <span class="number">0</span>; s &lt; <span class="number">16</span>; s++) &#123;</span><br><span class="line">				<span class="type">int</span> u = __builtin_popcount(s &amp; <span class="number">3</span>);</span><br><span class="line">				<span class="type">int</span> v = __builtin_popcount(s &amp; <span class="number">12</span>);</span><br><span class="line">				res += ((u + v) &amp; <span class="number">1</span> ? <span class="number">-1</span> : <span class="number">1</span>) * <span class="built_in">C</span>(<span class="built_in">max</span>(<span class="number">0</span>, i - u) * <span class="built_in">max</span>(<span class="number">0</span>, j - v), k) % mod;</span><br><span class="line">				res %= mod;</span><br><span class="line">			&#125;</span><br><span class="line">			ans += res * (h - i + <span class="number">1</span>) % mod * (w - j + <span class="number">1</span>) % mod * i % mod * j % mod;</span><br><span class="line">			ans %= mod;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	ans *= <span class="built_in">ksm</span>(<span class="built_in">C</span>(h * w, k), mod - <span class="number">2</span>);</span><br><span class="line">	ans %= mod;</span><br><span class="line">	cout &lt;&lt; (ans + mod) % mod &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+using ll = long long;
+
+const int mod = 998244353;
+const int N = 1e6;
+
+ll ksm(ll a, ll b) {
+	ll res = 1;
+	a %= mod;
+	while(b) {
+		if(b &amp; 1) res = res * a % mod;
+		b &gt;&gt;= 1;
+		a = a * a % mod;
+	}
+	return res;
+}
+int main() {
+	ios::sync_with_stdio(false);
+	cin.tie(0);
+
+	int h, w, k;
+	cin &gt;&gt; h &gt;&gt; w &gt;&gt; k;
+
+	vector&lt;ll&gt; fac(N + 1), inv(N + 1);
+	fac[0] = 1;
+	for(int i = 1; i &lt;= N; i++) {
+		fac[i] = fac[i - 1] * i % mod;
+	}
+	inv[N] = ksm(fac[N], mod - 2);
+	inv[0] = 1;
+	for(int i = N - 1; i &gt;= 1; i--) {
+		inv[i] = inv[i + 1] * (i + 1) % mod;
+	}
+
+	auto C = [&amp;](ll n, ll m) -&gt; ll {
+		if(n &lt; m || m &lt; 0) return 0;
+		return fac[n] * inv[m] % mod * inv[n - m] % mod;
+	};
+
+	ll ans = 0;
+	for(int i = 1; i &lt;= h; i++) {
+		for(int j = 1; j &lt;= w; j++) {
+			ll res = 0;
+			for(int s = 0; s &lt; 16; s++) {
+				int u = __builtin_popcount(s &amp; 3);
+				int v = __builtin_popcount(s &amp; 12);
+				res += ((u + v) &amp; 1 ? -1 : 1) * C(max(0, i - u) * max(0, j - v), k) % mod;
+				res %= mod;
+			}
+			ans += res * (h - i + 1) % mod * (w - j + 1) % mod * i % mod * j % mod;
+			ans %= mod;
+		}
+	}
+	ans *= ksm(C(h * w, k), mod - 2);
+	ans %= mod;
+	cout &lt;&lt; (ans + mod) % mod &lt;&lt; "\n";
+	return 0;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
             </div>
@@ -1391,7 +1545,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">100.4k</span>
+            <span class="white-color">97.2k</span>
             
 
             <br>
@@ -1580,7 +1734,7 @@ $(function () {
     <!-- 不蒜子统计修改网页请求头 -->
     
     <script async src="https://lib.baomitu.com/busuanzi/latest/bsz.pure.mini.js"></script>
-    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="referrer" content="no-referrer-when-downgrade"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
     
     

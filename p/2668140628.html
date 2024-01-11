@@ -3,7 +3,7 @@
 
 
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="C++11 多线程, ZZU 行码棋">
     <!-- 百度和谷歌统计验证 -->
     <meta name="baidu-site-verification" content="code-L7AVcsbU14" />
@@ -74,13 +74,14 @@ C++11 左右值引用：https://blog.csdn.net">
         document.write('<script src="' + src + '" id="sozz"><\/script>');
         })();
     </script>
-<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<meta name="generator" content="Hexo 7.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
 
 <body>
 
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -521,7 +522,7 @@ C++11 左右值引用：https://blog.csdn.net">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    9 分
+                    8 分
                 </div>
                 
                 
@@ -611,7 +612,24 @@ C++11 左右值引用：https://blog.csdn.net">
 <h2 id="2-示例"><a href="#2-示例" class="headerlink" title="2 示例"></a>2 示例</h2><ul>
 <li><code>lambda</code>表达式传参</li>
 </ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;thread&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	std::cout &lt;&lt; <span class="string">&quot;HiHiHi&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="function">std::thread <span class="title">td1</span><span class="params">([] &#123;</span></span></span><br><span class="line"><span class="params"><span class="function">		std::cout &lt;&lt; <span class="string">&quot;Hello,&quot;</span>;</span></span></span><br><span class="line"><span class="params"><span class="function">	&#125;)</span>, <span class="title">td2</span><span class="params">([] &#123;</span></span></span><br><span class="line"><span class="params"><span class="function">		std::cout &lt;&lt; <span class="string">&quot;World!&quot;</span>;</span></span></span><br><span class="line"><span class="params"><span class="function">	&#125;)</span>, <span class="title">td3</span><span class="params">(func)</span></span>;</span><br><span class="line"></span><br><span class="line">	td1.<span class="built_in">join</span>();</span><br><span class="line">	td2.<span class="built_in">join</span>();</span><br><span class="line">	td3.<span class="built_in">join</span>();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;thread&gt;</span></span>
+
+<span class="token keyword">void</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"HiHiHi"</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	std<span class="token double-colon punctuation">::</span>thread <span class="token function">td1</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span>
+		std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Hello,"</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">td2</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token punctuation">{</span>
+		std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"World!"</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token function">td3</span><span class="token punctuation">(</span>func<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	td1<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	td2<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	td3<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>多线程运行时是以异步方式执行的，异步方式可以同时执行多条语句。</p>
 <p>在上面的例子中，我们定义了3个thread，这3个thread在执行时并不会按照一定的顺序。</p>
@@ -619,7 +637,18 @@ C++11 左右值引用：https://blog.csdn.net">
 <ul>
 <li>传入的函数带参数</li>
 </ul>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;thread&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">func</span><span class="params">(<span class="type">int</span> a, <span class="type">int</span> b)</span> </span>&#123;</span><br><span class="line">	std::cout &lt;&lt; <span class="string">&quot;Answer: &quot;</span> &lt;&lt; a + b;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="function">std::thread <span class="title">td3</span><span class="params">(func, <span class="number">1</span>, <span class="number">2</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">	td3.<span class="built_in">join</span>();</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;thread&gt;</span></span>
+
+<span class="token keyword">void</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"Answer: "</span> <span class="token operator">&lt;&lt;</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	std<span class="token double-colon punctuation">::</span>thread <span class="token function">td3</span><span class="token punctuation">(</span>func<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+	td3<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <ul>
 <li>执行带引用参数的函数</li>
@@ -628,7 +657,29 @@ C++11 左右值引用：https://blog.csdn.net">
 <p>很明显的右值引用，那么我们该如何传递一个左值呢？<code>std::ref</code>和<code>std::cref</code>很好地解决了这个问题。</p>
 <p><code>std::ref</code> 可以包装按引用传递的值。</p>
 <p><code>std::cref</code> 可以包装按<code>const</code>引用传递的值。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;thread&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">changeValue</span><span class="params">(T&amp; x, T val)</span> </span>&#123;</span><br><span class="line">	x = val;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	std::thread t[<span class="number">20</span>];</span><br><span class="line">	<span class="type">int</span> nums[<span class="number">20</span>];</span><br><span class="line"></span><br><span class="line">	<span class="comment">// 调用构造函数</span></span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">20</span>; i++) &#123;</span><br><span class="line">		t[i] = std::<span class="built_in">thread</span>(changeValue&lt;<span class="type">int</span>&gt;, std::<span class="built_in">ref</span>(nums[i]), i + <span class="number">1</span>);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">20</span>; i++) &#123;</span><br><span class="line">		t[i].<span class="built_in">join</span>();</span><br><span class="line">		std::cout &lt;&lt; nums[i] &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;thread&gt;</span></span>
+
+<span class="token keyword">template</span><span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token class-name">T</span><span class="token operator">&gt;</span>
+<span class="token keyword">void</span> <span class="token function">changeValue</span><span class="token punctuation">(</span>T<span class="token operator">&amp;</span> x<span class="token punctuation">,</span> T val<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	x <span class="token operator">=</span> val<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	std<span class="token double-colon punctuation">::</span>thread t<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+	<span class="token keyword">int</span> nums<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+	<span class="token comment">// 调用构造函数</span>
+	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">20</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		t<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span><span class="token function">thread</span><span class="token punctuation">(</span>changeValue<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> std<span class="token double-colon punctuation">::</span><span class="token function">ref</span><span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">,</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+
+	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">20</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		t<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="3-注意"><a href="#3-注意" class="headerlink" title="3 注意"></a>3 注意</h2><ul>
 <li>线程是在thread对象被定义的时候开始执行的，而不是在调用join函数时才执行的，调用join函数只是阻塞等待线程结束并回收资源。</li>
@@ -642,7 +693,28 @@ C++11 左右值引用：https://blog.csdn.net">
 <li><strong>没有执行<code>join</code>或<code>detach</code>的线程在程序结束时会引发异常</strong></li>
 </ul>
 <h1 id="C-11-std-mutex与std-atomic"><a href="#C-11-std-mutex与std-atomic" class="headerlink" title="C++11 std::mutex与std::atomic"></a>C++11 std::mutex与std::atomic</h1><h2 id="1-std-mutex"><a href="#1-std-mutex" class="headerlink" title="1 std::mutex"></a>1 std::mutex</h2><p>多线程操作同一变量</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;thread&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> val = <span class="number">0</span>;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">increase</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">100000</span>; i++) &#123;</span><br><span class="line">		val++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	std::thread t[<span class="number">20</span>];</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">20</span>; i++) &#123;</span><br><span class="line">		t[i] = std::<span class="built_in">thread</span>(increase);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">20</span>; i++) &#123;</span><br><span class="line">		t[i].<span class="built_in">join</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	std::cout &lt;&lt; val &lt;&lt; <span class="string">&quot;\n&quot;</span>;	</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;thread&gt;</span></span>
+
+<span class="token keyword">int</span> val <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token keyword">void</span> <span class="token function">increase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">100000</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		val<span class="token operator">++</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	std<span class="token double-colon punctuation">::</span>thread t<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">20</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		t<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span><span class="token function">thread</span><span class="token punctuation">(</span>increase<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">20</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		t<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> val <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>	
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>可以发现此代码输出并不是正常情况下的<code>2000000</code>，原因就是多线程访问并修改一个变量时造成了冲突，所以mutex派上用场</p>
 <table>
@@ -654,7 +726,7 @@ C++11 左右值引用：https://blog.csdn.net">
 </thead>
 <tbody><tr>
 <td align="center"><code>void lock()</code></td>
-<td align="center">将mutex上锁。 <br />如果mutex已经被其它线程上锁， 那么会阻塞，直到解锁；<br /> 如果mutex已经被同一个线程锁住， 那么会产生死锁。</td>
+<td align="center">将mutex上锁。 <br>如果mutex已经被其它线程上锁， 那么会阻塞，直到解锁；<br> 如果mutex已经被同一个线程锁住， 那么会产生死锁。</td>
 </tr>
 <tr>
 <td align="center"><code>void unlock()</code></td>
@@ -662,14 +734,63 @@ C++11 左右值引用：https://blog.csdn.net">
 </tr>
 <tr>
 <td align="center"><code>bool try_lock()</code></td>
-<td align="center">尝试将mutex上锁。 如果mutex未被上锁，则将其上锁并返回true； <br />如果mutex已被锁则返回false。</td>
+<td align="center">尝试将mutex上锁。 如果mutex未被上锁，则将其上锁并返回true； <br>如果mutex已被锁则返回false。</td>
 </tr>
 </tbody></table>
 <p>可以利用mutex进行改进：</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;thread&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;mutex&gt;</span></span></span><br><span class="line"></span><br><span class="line">std::mutex mtx;</span><br><span class="line"><span class="type">int</span> val = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">increase</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">100000</span>; i++) &#123;</span><br><span class="line">		mtx.<span class="built_in">lock</span>();</span><br><span class="line">		val++;</span><br><span class="line">		mtx.<span class="built_in">unlock</span>();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	std::thread t[<span class="number">20</span>];</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">20</span>; i++) &#123;</span><br><span class="line">		t[i] = std::<span class="built_in">thread</span>(increase);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">20</span>; i++) &#123;</span><br><span class="line">		t[i].<span class="built_in">join</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	std::cout &lt;&lt; val &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;thread&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;mutex&gt;</span></span>
+
+std<span class="token double-colon punctuation">::</span>mutex mtx<span class="token punctuation">;</span>
+<span class="token keyword">int</span> val <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">increase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">100000</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		mtx<span class="token punctuation">.</span><span class="token function">lock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		val<span class="token operator">++</span><span class="token punctuation">;</span>
+		mtx<span class="token punctuation">.</span><span class="token function">unlock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	std<span class="token double-colon punctuation">::</span>thread t<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">20</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		t<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span><span class="token function">thread</span><span class="token punctuation">(</span>increase<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">20</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		t<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> val <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="2-std-atomic"><a href="#2-std-atomic" class="headerlink" title="2 std::atomic"></a>2 std::atomic</h2><p>mutex每次循环都要加锁解锁，比较慢，而atomic比较快。将上述代码改成下面代码同样也可。</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;thread&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;atomic&gt;</span></span></span><br><span class="line"></span><br><span class="line">std::atomic_int val = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">increase</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= <span class="number">100000</span>; i++) &#123;</span><br><span class="line">		val++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	std::thread t[<span class="number">20</span>];</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">20</span>; i++) &#123;</span><br><span class="line">		t[i] = std::<span class="built_in">thread</span>(increase);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">20</span>; i++) &#123;</span><br><span class="line">		t[i].<span class="built_in">join</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	std::cout &lt;&lt; val &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;thread&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;atomic&gt;</span></span>
+
+std<span class="token double-colon punctuation">::</span>atomic_int val <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token keyword">void</span> <span class="token function">increase</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> <span class="token number">100000</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		val<span class="token operator">++</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	std<span class="token double-colon punctuation">::</span>thread t<span class="token punctuation">[</span><span class="token number">20</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">20</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		t<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span><span class="token function">thread</span><span class="token punctuation">(</span>increase<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token number">20</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		t<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> val <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p><code>std::atomic_int</code>只是<code>std::atomic&lt;int&gt;</code>的别名。</p>
 <p>即使是多线程，也要像同步进行一样<strong>同步操作</strong>atomic对象，从而省去了mutex上锁、解锁的时间消耗。</p>
@@ -710,11 +831,11 @@ C++11 左右值引用：https://blog.csdn.net">
 </tr>
 </thead>
 <tbody><tr>
-<td>template &lt;class Fn, class… Args&gt; <br />future&lt;typename result_of&lt;Fn(Args…)&gt;::type&gt;  <br /><code>async (Fn&amp;&amp; fn, Args&amp;&amp;… args)</code></td>
-<td>异步或同步（根据操作系统而定）以args为参数执行fn<br/>同样地，传递引用参数需要<code>std::ref</code>或<code>std::cref</code></td>
+<td>template &lt;class Fn, class… Args&gt; <br>future&lt;typename result_of&lt;Fn(Args…)&gt;::type&gt;  <br><code>async (Fn&amp;&amp; fn, Args&amp;&amp;… args)</code></td>
+<td>异步或同步（根据操作系统而定）以args为参数执行fn<br>同样地，传递引用参数需要<code>std::ref</code>或<code>std::cref</code></td>
 </tr>
 <tr>
-<td>template &lt;class Fn, class… Args&gt;<br/> future&lt;typename result_of&lt;Fn(Args…)&gt;::type&gt;<br/>  <code>async (launch policy, Fn&amp;&amp; fn, Args&amp;&amp;… args);</code></td>
+<td>template &lt;class Fn, class… Args&gt;<br> future&lt;typename result_of&lt;Fn(Args…)&gt;::type&gt;<br>  <code>async (launch policy, Fn&amp;&amp; fn, Args&amp;&amp;… args);</code></td>
 <td>异步或同步（根据<code>policy</code>参数而定（见下文））以args为参数执行fn，引用参数同上</td>
 </tr>
 </tbody></table>
@@ -743,14 +864,37 @@ C++11 左右值引用：https://blog.csdn.net">
 <td>同步或异步，根据操作系统而定</td>
 </tr>
 </tbody></table>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;thread&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;future&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	std::<span class="built_in">async</span>(std::launch::async, [](<span class="type">const</span> <span class="type">char</span>* message) &#123;</span><br><span class="line">		std::cout &lt;&lt; message;</span><br><span class="line">	&#125;, <span class="string">&quot;Hello, &quot;</span>);</span><br><span class="line">	std::cout &lt;&lt; <span class="string">&quot;World\n&quot;</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;thread&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;future&gt;</span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	std<span class="token double-colon punctuation">::</span><span class="token function">async</span><span class="token punctuation">(</span>std<span class="token double-colon punctuation">::</span>launch<span class="token double-colon punctuation">::</span>async<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">char</span><span class="token operator">*</span> message<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> message<span class="token punctuation">;</span>
+	<span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">"Hello, "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"World\n"</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>编译器可能会有警告，因为编译器不想让你丢弃async的返回值std::future，不过在这个例子中不需要它，忽略这个警告就行了。</p>
 <h2 id="3-std-future"><a href="#3-std-future" class="headerlink" title="3 std::future"></a>3 std::future</h2><p>使用它获取函数返回值</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;thread&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;future&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">template</span>&lt;<span class="keyword">class</span>... Args&gt;</span></span><br><span class="line"><span class="function"><span class="keyword">decltype</span>(<span class="keyword">auto</span>) <span class="title">sum</span><span class="params">(Args&amp;&amp;... args)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">return</span> (<span class="number">0</span> + ... + args);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	std::future&lt;<span class="type">int</span>&gt; val = std::<span class="built_in">async</span>(std::launch::async, sum&lt;<span class="type">int</span>, <span class="type">int</span>, <span class="type">int</span>&gt;, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>);</span><br><span class="line">	std::cout &lt;&lt; val.<span class="built_in">get</span>() &lt;&lt; <span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;thread&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span><span class="token string">&lt;future&gt;</span></span>
+
+<span class="token keyword">template</span><span class="token operator">&lt;</span><span class="token keyword">class</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> Args<span class="token operator">&gt;</span>
+<span class="token keyword">decltype</span><span class="token punctuation">(</span><span class="token keyword">auto</span><span class="token punctuation">)</span> <span class="token function">sum</span><span class="token punctuation">(</span>Args<span class="token operator">&amp;&amp;</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> args<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token number">0</span> <span class="token operator">+</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token operator">+</span> args<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	std<span class="token double-colon punctuation">::</span>future<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> val <span class="token operator">=</span> std<span class="token double-colon punctuation">::</span><span class="token function">async</span><span class="token punctuation">(</span>std<span class="token double-colon punctuation">::</span>launch<span class="token double-colon punctuation">::</span>async<span class="token punctuation">,</span> sum<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> val<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>输出</p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="number">6</span></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token number">6</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 
@@ -1264,9 +1408,11 @@ C++11 左右值引用：https://blog.csdn.net">
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Pandas读取数据import pandas as pddf = pd.read_csv(path) # path为读取数据的路径
+                            Pandas读取数据import pandas as pd
+df = pd.read_csv(path) # path为读取数据的路径
 
-查看数据&gt;&gt;&gt; import numpy as np&gt;&gt;&gt; mpor
+查看数据&gt;&gt;&gt; import numpy as np
+&gt;&gt;&gt; mp
                         
                     </div>
                     <div class="publish-info">
@@ -1327,10 +1473,10 @@ C++11 左右值引用：https://blog.csdn.net">
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Latex语法在begin&#123;document&#125;和end&#123;document&#125;之间的就是正文区，而在这之前的就是导言区。
-1 宏包导入\usepackage&#123;宏包1, 宏包2&#125;
+                            Latex语法在begin{document}和end{document}之间的就是正文区，而在这之前的就是导言区。
+1 宏包导入\usepackage{宏包1, 宏包2}
 
-2 
+2 中文支持无论是在线工具还是本地工具，LaTeX默认都是不支持
                         
                     </div>
                     <div class="publish-info">
@@ -1541,7 +1687,7 @@ C++11 左右值引用：https://blog.csdn.net">
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">100.4k</span>
+            <span class="white-color">97.2k</span>
             
 
             <br>
@@ -1730,7 +1876,7 @@ $(function () {
     <!-- 不蒜子统计修改网页请求头 -->
     
     <script async src="https://lib.baomitu.com/busuanzi/latest/bsz.pure.mini.js"></script>
-    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="referrer" content="no-referrer-when-downgrade"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
     
     

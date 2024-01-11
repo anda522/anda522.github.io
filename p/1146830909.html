@@ -3,7 +3,7 @@
 
 
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="docker常用命令总结, ZZU 行码棋">
     <!-- 百度和谷歌统计验证 -->
     <meta name="baidu-site-verification" content="code-L7AVcsbU14" />
@@ -75,13 +75,14 @@ sudo usermod -aG docker $USER
         document.write('<script src="' + src + '" id="sozz"><\/script>');
         })();
     </script>
-<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml">
-<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
-<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<meta name="generator" content="Hexo 7.0.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
 
 <body>
 
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -515,7 +516,7 @@ sudo usermod -aG docker $USER
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    791
+                    792
                 </div>
                 
 
@@ -564,9 +565,9 @@ sudo usermod -aG docker $USER
 <p><code>docker import xxx.tar image_name:tag</code>：将本地文件xxx.tar导入成镜像，并将镜像命名为image_name:tag</p>
 <p><code>docker export/import</code>与<code>docker save/load</code>的区别：</p>
 <ul>
-<li><p>export&#x2F;import会丢弃历史记录和元数据信息，仅保存容器当时的快照状态</p>
+<li><p>export/import会丢弃历史记录和元数据信息，仅保存容器当时的快照状态</p>
 </li>
-<li><p>save&#x2F;load会保存完整记录，体积更大</p>
+<li><p>save/load会保存完整记录，体积更大</p>
 </li>
 </ul>
 <p><code>docker top CONTAINER</code>：查看某个容器内的所有进程</p>
@@ -574,21 +575,37 @@ sudo usermod -aG docker $USER
 <p><code>docker cp xxx CONTAINER:xxx</code> 或 <code>docker cp CONTAINER:xxx xxx</code>：在本地和容器间复制文件</p>
 <p><code>docker rename CONTAINER1 CONTAINER2</code>：重命名容器</p>
 <p><code>docker update CONTAINER --memory 500MB</code>：修改容器限制</p>
-<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">scp docker_1_0.tar server_name  <span class="comment"># 将镜像上传到自己租的云端服务器</span></span><br><span class="line"></span><br><span class="line">ssh server_name  <span class="comment"># 登录自己的云端服务器</span></span><br><span class="line"></span><br><span class="line">docker load -i docker_1_0.tar  <span class="comment"># 将镜像加载到本地</span></span><br><span class="line"></span><br><span class="line">docker run -p 20000:22 --name my_docker_server -itd docker:1.0  <span class="comment"># 创建并运行docker:1.0镜像, 20000端口映射到22</span></span><br><span class="line"></span><br><span class="line">docker attach my_docker_server  <span class="comment"># 进入创建的docker容器</span></span><br></pre></td></tr></table></figure>
+<h1 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h1><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">scp</span> docker_1_0.tar server_name  <span class="token comment"># 将镜像上传到自己租的云端服务器</span>
+
+<span class="token function">ssh</span> server_name  <span class="token comment"># 登录自己的云端服务器</span>
+
+<span class="token function">docker</span> load <span class="token parameter variable">-i</span> docker_1_0.tar  <span class="token comment"># 将镜像加载到本地</span>
+
+<span class="token function">docker</span> run <span class="token parameter variable">-p</span> <span class="token number">20000</span>:22 <span class="token parameter variable">--name</span> my_docker_server <span class="token parameter variable">-itd</span> docker:1.0  <span class="token comment"># 创建并运行docker:1.0镜像, 20000端口映射到22</span>
+
+<span class="token function">docker</span> attach my_docker_server  <span class="token comment"># 进入创建的docker容器</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 
 
-<h1 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h1><h2 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker images <span class="comment"># 列出本地所有镜像</span></span><br><span class="line">docker ps -a <span class="comment"># 列出本地所有容器</span></span><br><span class="line">docker ps <span class="comment"># 列出运行中的容器</span></span><br></pre></td></tr></table></figure>
+<h1 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h1><h2 id="查询"><a href="#查询" class="headerlink" title="查询"></a>查询</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> images <span class="token comment"># 列出本地所有镜像</span>
+<span class="token function">docker</span> <span class="token function">ps</span> <span class="token parameter variable">-a</span> <span class="token comment"># 列出本地所有容器</span>
+<span class="token function">docker</span> <span class="token function">ps</span> <span class="token comment"># 列出运行中的容器</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="镜像操作"><a href="#镜像操作" class="headerlink" title="镜像操作"></a>镜像操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker pull ubuntu:20.04 <span class="comment"># 拉取一个镜像</span></span><br><span class="line">docker image <span class="built_in">rm</span> ubuntu:20.04 <span class="comment"># 删除一个镜像</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="镜像操作"><a href="#镜像操作" class="headerlink" title="镜像操作"></a>镜像操作</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> pull ubuntu:20.04 <span class="token comment"># 拉取一个镜像</span>
+<span class="token function">docker</span> image <span class="token function">rm</span> ubuntu:20.04 <span class="token comment"># 删除一个镜像</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 
 
-<h2 id="容器操作"><a href="#容器操作" class="headerlink" title="容器操作"></a>容器操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker container start CONTAINER <span class="comment">#启动容器</span></span><br><span class="line">docker container stop CONTAINER <span class="comment">#停止容器</span></span><br><span class="line">docker container attach CONTAINER <span class="comment">#进入容器，先按Ctrl-p，再按Ctrl-q可以挂起容器(容器必须启动才可进入)</span></span><br></pre></td></tr></table></figure>
+<h2 id="容器操作"><a href="#容器操作" class="headerlink" title="容器操作"></a>容器操作</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> container start CONTAINER <span class="token comment">#启动容器</span>
+<span class="token function">docker</span> container stop CONTAINER <span class="token comment">#停止容器</span>
+<span class="token function">docker</span> container attach CONTAINER <span class="token comment">#进入容器，先按Ctrl-p，再按Ctrl-q可以挂起容器(容器必须启动才可进入)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 
 
-<h2 id="镜像与容器操作"><a href="#镜像与容器操作" class="headerlink" title="镜像与容器操作"></a>镜像与容器操作</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker container create -it ubuntu:20.04 name <span class="comment"># 利用镜像ubuntu:20.04创建一个名为name的容器</span></span><br><span class="line">docker container commit CONTAINER IMAGE_NAME:TAG <span class="comment">#创建某个container的镜像</span></span><br><span class="line">docker run -p 20000:22 --name NAME -itd docker:1.0  <span class="comment"># 利用docker:1.0镜像创建一个名为NAME的容器并运行容器, 并将主机20000端口映射到容器22</span></span><br></pre></td></tr></table></figure>
+<h2 id="镜像与容器操作"><a href="#镜像与容器操作" class="headerlink" title="镜像与容器操作"></a>镜像与容器操作</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">docker</span> container create <span class="token parameter variable">-it</span> ubuntu:20.04 name <span class="token comment"># 利用镜像ubuntu:20.04创建一个名为name的容器</span>
+<span class="token function">docker</span> container commit CONTAINER IMAGE_NAME:TAG <span class="token comment">#创建某个container的镜像</span>
+<span class="token function">docker</span> run <span class="token parameter variable">-p</span> <span class="token number">20000</span>:22 <span class="token parameter variable">--name</span> NAME <span class="token parameter variable">-itd</span> docker:1.0  <span class="token comment"># 利用docker:1.0镜像创建一个名为NAME的容器并运行容器, 并将主机20000端口映射到容器22</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 
             </div>
@@ -1101,7 +1118,9 @@ sudo usermod -aG docker $USER
                             树链剖分模板题题目链接：
 https://www.luogu.com.cn/problem/P3384
 
-代码#include&lt;bits/stdc++.h&gt;using namespace std;using ll = long 
+代码#include&lt;bits/stdc++.h&gt;
+using namespace std;
+using ll = lon
                         
                     </div>
                     <div class="publish-info">
@@ -1158,8 +1177,8 @@ https://www.luogu.com.cn/problem/P3384
 
 
 工作区（Workspace） ：就是会出现工作目录，即自己要编写的代码
-暂存区（Index &#x2F; Stage）  
-本地仓库（Re
+暂存区（Index / Stage）  
+本地仓库（Reposit
                         
                     </div>
                     <div class="publish-info">
@@ -1370,7 +1389,7 @@ https://www.luogu.com.cn/problem/P3384
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">100.4k</span>
+            <span class="white-color">97.2k</span>
             
 
             <br>
@@ -1559,7 +1578,7 @@ $(function () {
     <!-- 不蒜子统计修改网页请求头 -->
     
     <script async src="https://lib.baomitu.com/busuanzi/latest/bsz.pure.mini.js"></script>
-    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="referrer" content="no-referrer-when-downgrade"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
     
     
