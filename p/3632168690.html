@@ -2,12 +2,12 @@
 <html lang="zh-CN">
 
 
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     <meta charset="utf-8">
     <meta name="keywords" content="CF1076E.Vasya and a Tree|树上差分, ZZU 行码棋">
     <!-- 百度和谷歌统计验证 -->
-    <meta name="baidu-site-verification" content="code-L7AVcsbU14">
-    <meta name="google-site-verification" content="x4QfrBHn9imI1RhTNCB8RD8Q2Rx6rE_zylSBptBgdZY">
+    <meta name="baidu-site-verification" content="code-L7AVcsbU14" />
+    <meta name="google-site-verification" content="x4QfrBHn9imI1RhTNCB8RD8Q2Rx6rE_zylSBptBgdZY" />
     <!-- <meta name="360-site-verification" content="b7c11a830ef90fd1464ad6206bb7b6e7" /> -->
     <meta name="description" content="CF 1076E. Vasya and a Tree|树上差分题意
 一棵树，它有n个节点，1号节点为根节点，初始所有点的权值为0。
@@ -49,7 +49,8 @@ $x$节点的$k$级">
       s.parentNode.insertBefore(hm, s);
     })();
     </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5396110595574182" crossorigin="anonymous">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5396110595574182"
+     crossorigin="anonymous">
     </script>
             
     <!-- 百度推送 -->
@@ -76,6 +77,7 @@ $x$节点的$k$级">
         document.write('<script src="' + src + '" id="sozz"><\/script>');
         })();
     </script>
+<meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css">
 <link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
 
@@ -340,7 +342,7 @@ $x$节点的$k$级">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/27.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -472,7 +474,7 @@ $x$节点的$k$级">
                             <span class="chip bg-color">DFS</span>
                         </a>
                         
-                        <a href="/tags/树/" target="_blank">
+                        <a href="/tags/%E6%A0%91/" target="_blank">
                             <span class="chip bg-color">树</span>
                         </a>
                         
@@ -488,7 +490,7 @@ $x$节点的$k$级">
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/树/" class="post-category" target="_blank">
+                        <a href="/categories/%E6%A0%91/" class="post-category" target="_blank">
                             树
                         </a>
                         
@@ -519,7 +521,7 @@ $x$节点的$k$级">
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    788
+                    845
                 </div>
                 
 
@@ -559,14 +561,8 @@ $x$节点的$k$级">
 </blockquote>
 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>题目要求对一段深度的某节点的子树进行加和操作，这种操作类似单纯的一维前缀和差分操作，所以可以在树上进行差分操作。</p>
 <p>首先就是将所有的操作离线下来，将所有操作挂在节点上。对应下面的代码</p>
-<pre class="line-numbers language-cpp"><code class="language-cpp">vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span>pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">>></span><span class="token operator">></span> <span class="token function">q</span><span class="token punctuation">(</span>n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line">vector&lt;vector&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;&gt;&gt; <span class="built_in">q</span>(n + <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= m; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="type">int</span> u, d, v;</span><br><span class="line">    cin &gt;&gt; u &gt;&gt; d &gt;&gt; v;</span><br><span class="line">    q[u].<span class="built_in">push_back</span>(&#123;d, v&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> m<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">int</span> u<span class="token punctuation">,</span> d<span class="token punctuation">,</span> v<span class="token punctuation">;</span>
-    cin <span class="token operator">>></span> u <span class="token operator">>></span> d <span class="token operator">>></span> v<span class="token punctuation">;</span>
-    q<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token punctuation">{</span>d<span class="token punctuation">,</span> v<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <hr>
 <p>接下来的关键点就是如何在树上进行差分操作（对应一维差分 区间左端点的加 和 区间右端点的减）。</p>
 <p>因为树中的遍历是基于DFS序的，<strong>访问一个子树过后才会访问到另一棵子树</strong>。</p>
@@ -576,81 +572,15 @@ $x$节点的$k$级">
 <p>$b[i]$ : 代表深度为$i$的节点的标记值</p>
 </blockquote>
 <p>标记：</p>
-<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">if</span><span class="token punctuation">(</span>dep<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> d <span class="token operator">&lt;</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
-    b<span class="token punctuation">[</span>dep<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> d <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span><span class="token operator">=</span> v<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//mark</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span>(dep[u] + d &lt; n - <span class="number">1</span>)</span><br><span class="line">    b[dep[u] + d + <span class="number">1</span>] -= v;<span class="comment">//mark</span></span><br></pre></td></tr></table></figure>
+
 <p>删除标记：</p>
-<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">auto</span> <span class="token punctuation">[</span>d<span class="token punctuation">,</span> v<span class="token punctuation">]</span> <span class="token operator">:</span> q<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    <span class="token keyword">if</span><span class="token punctuation">(</span>dep<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> d <span class="token operator">&lt;</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
-        b<span class="token punctuation">[</span>dep<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> d <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span><span class="token operator">=</span> v<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;bits/stdc++.h></span></span>
-<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
-<span class="token keyword">using</span> ll <span class="token operator">=</span> <span class="token keyword">long</span> <span class="token keyword">long</span><span class="token punctuation">;</span>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">auto</span> [d, v] : q[u])</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span>(dep[u] + d &lt; n - <span class="number">1</span>)</span><br><span class="line">        b[dep[u] + d + <span class="number">1</span>] += v;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-    ios<span class="token operator">::</span><span class="token function">sync_with_stdio</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    cin<span class="token punctuation">.</span><span class="token function">tie</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 
-    <span class="token keyword">int</span> n<span class="token punctuation">;</span>
-    cin <span class="token operator">>></span> n<span class="token punctuation">;</span>
 
-    vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">>></span> <span class="token function">g</span><span class="token punctuation">(</span>n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> <span class="token function">dep</span><span class="token punctuation">(</span>n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="keyword">using</span> ll = <span class="type">long</span> <span class="type">long</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ios::<span class="built_in">sync_with_stdio</span>(<span class="literal">false</span>);</span><br><span class="line">	cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="type">int</span> n;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line"></span><br><span class="line">	vector&lt;vector&lt;<span class="type">int</span>&gt;&gt; <span class="built_in">g</span>(n + <span class="number">1</span>);</span><br><span class="line">	<span class="function">vector&lt;<span class="type">int</span>&gt; <span class="title">dep</span><span class="params">(n + <span class="number">1</span>)</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> u, v;</span><br><span class="line">		cin &gt;&gt; u &gt;&gt; v;</span><br><span class="line">		g[u].<span class="built_in">push_back</span>(v);</span><br><span class="line">		g[v].<span class="built_in">push_back</span>(u);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> m;</span><br><span class="line">	cin &gt;&gt; m;</span><br><span class="line"></span><br><span class="line">	vector&lt;vector&lt;pair&lt;<span class="type">int</span>, <span class="type">int</span>&gt;&gt;&gt; <span class="built_in">q</span>(n + <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= m; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="type">int</span> u, d, v;</span><br><span class="line">		cin &gt;&gt; u &gt;&gt; d &gt;&gt; v;</span><br><span class="line">		q[u].<span class="built_in">push_back</span>(&#123;d, v&#125;);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="function">vector&lt;ll&gt; <span class="title">b</span><span class="params">(<span class="number">3e5</span> + <span class="number">1</span>)</span></span>;</span><br><span class="line">	<span class="function">vector&lt;ll&gt; <span class="title">ans</span><span class="params">(n + <span class="number">1</span>)</span></span>;</span><br><span class="line">	function&lt;<span class="type">void</span>(<span class="type">int</span>, <span class="type">int</span>, ll)&gt; dfs = [&amp;](<span class="type">int</span> u, <span class="type">int</span> fa, ll sum)</span><br><span class="line">	&#123;</span><br><span class="line">        <span class="comment">// 加上标记值</span></span><br><span class="line">		sum += b[dep[u]]; <span class="comment">// minus</span></span><br><span class="line">        <span class="comment">// 枚举节点操作</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">auto</span> [d, v] : q[u])</span><br><span class="line">		&#123;</span><br><span class="line">			sum += v;<span class="comment">//累加</span></span><br><span class="line">			<span class="keyword">if</span>(dep[u] + d &lt; n - <span class="number">1</span>)</span><br><span class="line">				b[dep[u] + d + <span class="number">1</span>] -= v;<span class="comment">//mark</span></span><br><span class="line">		&#125;</span><br><span class="line">		ans[u] = sum;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">auto</span> v : g[u])</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(v == fa) <span class="keyword">continue</span>;</span><br><span class="line">			dep[v] = dep[u] + <span class="number">1</span>;</span><br><span class="line">			<span class="built_in">dfs</span>(v, u, sum);</span><br><span class="line">		&#125;</span><br><span class="line">        <span class="comment">// 删除标记</span></span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">auto</span> [d, v] : q[u])</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span>(dep[u] + d &lt; n - <span class="number">1</span>)</span><br><span class="line">				b[dep[u] + d + <span class="number">1</span>] += v;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;;</span><br><span class="line">	<span class="built_in">dfs</span>(<span class="number">1</span>, <span class="number">-1</span>, <span class="number">0</span>);</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		cout &lt;&lt; ans[i] &lt;&lt; <span class="string">&quot; \n&quot;</span>[i == n];</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> u<span class="token punctuation">,</span> v<span class="token punctuation">;</span>
-        cin <span class="token operator">>></span> u <span class="token operator">>></span> v<span class="token punctuation">;</span>
-        g<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>v<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        g<span class="token punctuation">[</span>v<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>u<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    <span class="token keyword">int</span> m<span class="token punctuation">;</span>
-    cin <span class="token operator">>></span> m<span class="token punctuation">;</span>
-
-    vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span>pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">>></span><span class="token operator">></span> <span class="token function">q</span><span class="token punctuation">(</span>n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> m<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token keyword">int</span> u<span class="token punctuation">,</span> d<span class="token punctuation">,</span> v<span class="token punctuation">;</span>
-        cin <span class="token operator">>></span> u <span class="token operator">>></span> d <span class="token operator">>></span> v<span class="token punctuation">;</span>
-        q<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span><span class="token punctuation">{</span>d<span class="token punctuation">,</span> v<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-
-    vector<span class="token operator">&lt;</span>ll<span class="token operator">></span> <span class="token function">b</span><span class="token punctuation">(</span><span class="token number">3e5</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    vector<span class="token operator">&lt;</span>ll<span class="token operator">></span> <span class="token function">ans</span><span class="token punctuation">(</span>n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    function<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">,</span> ll<span class="token punctuation">)</span><span class="token operator">></span> dfs <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">&amp;</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">int</span> u<span class="token punctuation">,</span> <span class="token keyword">int</span> fa<span class="token punctuation">,</span> ll sum<span class="token punctuation">)</span>
-    <span class="token punctuation">{</span>
-        <span class="token comment" spellcheck="true">// 加上标记值</span>
-        sum <span class="token operator">+</span><span class="token operator">=</span> b<span class="token punctuation">[</span>dep<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// minus</span>
-        <span class="token comment" spellcheck="true">// 枚举节点操作</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">auto</span> <span class="token punctuation">[</span>d<span class="token punctuation">,</span> v<span class="token punctuation">]</span> <span class="token operator">:</span> q<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            sum <span class="token operator">+</span><span class="token operator">=</span> v<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//累加</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>dep<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> d <span class="token operator">&lt;</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
-                b<span class="token punctuation">[</span>dep<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> d <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">-</span><span class="token operator">=</span> v<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//mark</span>
-        <span class="token punctuation">}</span>
-        ans<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">=</span> sum<span class="token punctuation">;</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">auto</span> v <span class="token operator">:</span> g<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>v <span class="token operator">==</span> fa<span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
-            dep<span class="token punctuation">[</span>v<span class="token punctuation">]</span> <span class="token operator">=</span> dep<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">;</span>
-            <span class="token function">dfs</span><span class="token punctuation">(</span>v<span class="token punctuation">,</span> u<span class="token punctuation">,</span> sum<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-        <span class="token comment" spellcheck="true">// 删除标记</span>
-        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">auto</span> <span class="token punctuation">[</span>d<span class="token punctuation">,</span> v<span class="token punctuation">]</span> <span class="token operator">:</span> q<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>dep<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> d <span class="token operator">&lt;</span> n <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
-                b<span class="token punctuation">[</span>dep<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> d <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">+</span><span class="token operator">=</span> v<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
-    <span class="token function">dfs</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
-        cout <span class="token operator">&lt;&lt;</span> ans<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;&lt;</span> <span class="token string">" \n"</span><span class="token punctuation">[</span>i <span class="token operator">==</span> n<span class="token punctuation">]</span><span class="token punctuation">;</span>
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -1151,7 +1081,7 @@ $x$节点的$k$级">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.png" class="responsive-img" alt="nginx知识总结">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="nginx知识总结">
                         
                         <span class="card-title">nginx知识总结</span>
                     </div>
@@ -1162,9 +1092,17 @@ $x$节点的$k$级">
                             开关nginxUbuntu下：
 打开nginx服务，需要在root权限下（docker容器下也可以用）
 /etc/init.d/nginx start
+
 重启nginx
 /sbin/nginx -s reload
-nginx配置http块se
+
+
+
+
+
+
+
+nginx配
                         
                     </div>
                     <div class="publish-info">
@@ -1175,7 +1113,7 @@ nginx配置http块se
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/开发知识/" class="post-category" target="_blank">
+                            <a href="/categories/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/" class="post-category" target="_blank">
                                     开发知识
                                 </a>
                             
@@ -1205,7 +1143,7 @@ nginx配置http块se
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="ACM模板">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="ACM模板">
                         
                         <span class="card-title">ACM模板</span>
                     </div>
@@ -1213,10 +1151,7 @@ nginx配置http块se
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            1 杂项1.1 __int128和快读inline __int128 read() {
-    __int128 x = 0; int f = 1;
-    char ch; ch = getchar();
-    while(!isdig
+                            1 杂项1.1 __int128和快读inline __int128 read() &#123;	__int128 x = 0; int f = 1;    char ch; ch = getchar();	while(!isdigit(c
                         
                     </div>
                     <div class="publish-info">
@@ -1238,7 +1173,7 @@ nginx配置http块se
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/模板/" target="_blank">
+                    <a href="/tags/%E6%A8%A1%E6%9D%BF/" target="_blank">
                         <span class="chip bg-color">模板</span>
                     </a>
                     
@@ -1423,7 +1358,7 @@ nginx配置http块se
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">95.4k</span>
+            <span class="white-color">100.4k</span>
             
 
             <br>
