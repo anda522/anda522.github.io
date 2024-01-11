@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://wyqz.top/p/808139430.html</loc>
+    
+    <lastmod>2024-01-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://wyqz.top/friends/index.html</loc>
     
     <lastmod>2024-01-11</lastmod>
@@ -21,15 +30,6 @@
   
   <url>
     <loc>http://wyqz.top/p/1473860796.html</loc>
-    
-    <lastmod>2024-01-11</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://wyqz.top/p/808139430.html</loc>
     
     <lastmod>2024-01-11</lastmod>
     
@@ -501,20 +501,6 @@
   </url>
   
   <url>
-    <loc>http://wyqz.top/tags/CPP/</loc>
-    <lastmod>2024-01-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://wyqz.top/tags/STL/</loc>
-    <lastmod>2024-01-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://wyqz.top/tags/DFS/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -537,6 +523,20 @@
   
   <url>
     <loc>http://wyqz.top/tags/DP/</loc>
+    <lastmod>2024-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://wyqz.top/tags/CPP/</loc>
+    <lastmod>2024-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://wyqz.top/tags/STL/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -585,13 +585,6 @@
   </url>
   
   <url>
-    <loc>http://wyqz.top/tags/Pytorch/</loc>
-    <lastmod>2024-01-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://wyqz.top/tags/docker/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -606,7 +599,21 @@
   </url>
   
   <url>
+    <loc>http://wyqz.top/tags/Pytorch/</loc>
+    <lastmod>2024-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://wyqz.top/tags/git/</loc>
+    <lastmod>2024-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://wyqz.top/tags/%E7%94%BB%E5%9B%BE/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -621,13 +628,6 @@
   
   <url>
     <loc>http://wyqz.top/tags/DeepLearning/</loc>
-    <lastmod>2024-01-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://wyqz.top/tags/%E7%94%BB%E5%9B%BE/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -655,14 +655,14 @@
   </url>
   
   <url>
-    <loc>http://wyqz.top/tags/%E9%80%86%E5%85%83/</loc>
+    <loc>http://wyqz.top/tags/%E8%B5%84%E6%BA%90/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://wyqz.top/tags/%E8%B5%84%E6%BA%90/</loc>
+    <loc>http://wyqz.top/tags/%E9%80%86%E5%85%83/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -720,13 +720,6 @@
   </url>
   
   <url>
-    <loc>http://wyqz.top/categories/CPP/</loc>
-    <lastmod>2024-01-11</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://wyqz.top/categories/%E6%A0%91/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
@@ -735,6 +728,13 @@
   
   <url>
     <loc>http://wyqz.top/categories/DP/</loc>
+    <lastmod>2024-01-11</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://wyqz.top/categories/CPP/</loc>
     <lastmod>2024-01-11</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>

@@ -80,7 +80,7 @@
     </script>
 <meta name="generator" content="Hexo 7.0.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<link rel="alternate" href="atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 
 <body>
@@ -89,7 +89,7 @@
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
-                <a href="/" class="waves-effect waves-light">
+                <a href="../index.html" class="waves-effect waves-light">
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
@@ -335,7 +335,7 @@
         if (pwd && pwd.length > 0) {
             if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
                 alert('密码错误，将返回主页！');
-                location.href = '/';
+                location.href = '../index.html';
             }
         }
     })();
@@ -472,11 +472,11 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" target="_blank">
+                        <a href="../tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" target="_blank">
                             <span class="chip bg-color">学习总结</span>
                         </a>
                         
-                        <a href="/tags/MachineLearning/" target="_blank">
+                        <a href="../tags/MachineLearning/" target="_blank">
                             <span class="chip bg-color">MachineLearning</span>
                         </a>
                         
@@ -488,7 +488,7 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category" target="_blank">
+                        <a href="../categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category" target="_blank">
                             人工智能
                         </a>
                         
@@ -553,7 +553,7 @@
 <h1 id="线性回归-Linear-Regression"><a href="#线性回归-Linear-Regression" class="headerlink" title="线性回归 Linear Regression"></a>线性回归 Linear Regression</h1><h2 id="1-概述"><a href="#1-概述" class="headerlink" title="1 概述"></a>1 概述</h2><p>线性回归类似高中的<strong>线性规划</strong>题目。线性回归要做的是就是找到一个数学公式能相对较完美地把所有自变量组合（加减乘除）起来，得到的结果和目标接近。</p>
 <p>线性回归分为一元线性回归和多元线性回归。</p>
 <h2 id="2-一元线性回归"><a href="#2-一元线性回归" class="headerlink" title="2 一元线性回归"></a>2 一元线性回归</h2><h3 id="2-1-构造回归方程"><a href="#2-1-构造回归方程" class="headerlink" title="2.1 构造回归方程"></a>2.1 构造回归方程</h3><p>有n组数据，自变量（特征值） $x(x_1,x_2,…,x_n)$ 与因变量（目标值） $y(y_1,y_2,…,y_n)$ ，我们需要找到一个线性关系，使他们之间尽可能满足： $f(x) =ax+b$ ，这个就是构建的一元线性方程。</p>
-<p><img src="/808139430/1.jpg" alt="一元线性回归"></p>
+<p><img src="808139430/1.jpg" alt="一元线性回归"></p>
 <p>线性回归的目标就是让 $f(X)$ 与 $y$ 之间的差距最小，也就是权重$a$和偏置$b$取什么值的时候$f(X)$和$y$最接近。</p>
 <h3 id="2-2-构造损失函数"><a href="#2-2-构造损失函数" class="headerlink" title="2.2 构造损失函数"></a>2.2 构造损失函数</h3><p>损失函数是来度量模型预测值与真实值不一样的程度的，或者说度量预测错误的程度，损失函数值越小，模型就越好。</p>
 <p>在回归问题中，误差平方和是回归任务中最常用的性能度量。这里就可以令损失函数$L(a,b)$等于误差平方和（均方误差）。</p>
@@ -574,7 +574,7 @@
 <p>其实由损失函数也可以得到同样的式子：</p>
 <p>对于 $y = \theta x + b$ ， $\theta$ 将 $b$ 也吸入进入得到 $\hat \theta = (\theta, b)$ ，$X$代表所有的样本数据，最后一个元素置1，最后要和 $\hat\theta$ 相乘，最后求偏导也是一样的结果。<br>$$<br>L = \sum \limits_{ i = 1 } ^ n ( y_i - f(x_i)) ^ 2 = (y - X \hat \theta)^T (y - X \hat\theta) \\<br>X = \begin{pmatrix}<br>x_{11} &amp; x_{12} &amp; \cdots &amp; x_{1d} &amp; 1 \\<br>x_{11} &amp; x_{12} &amp; \cdots &amp; x_{1d} &amp; 1 \\<br>\vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \\<br>x_{m1} &amp; x_{m2} &amp; \cdots &amp; x_{md} &amp; 1<br>\end{pmatrix} =<br>\begin{pmatrix}<br>x_1^T &amp; 1 \\<br>x_2^T &amp; 1 \\<br>\vdots &amp; \vdots \\<br>x_m^T &amp; 1<br>\end{pmatrix}<br>$$</p>
 </blockquote>
-<p><img src="/808139430/image-20221227173603912.png" alt="最小二乘法分析"></p>
+<p><img src="808139430/image-20221227173603912.png" alt="最小二乘法分析"></p>
 <blockquote>
 <p>矩阵求导参考：</p>
 <ul>
@@ -582,7 +582,7 @@
 <li><a href="https://zhuanlan.zhihu.com/p/273729929">https://zhuanlan.zhihu.com/p/273729929</a> （公式篇）</li>
 </ul>
 </blockquote>
-<p><img src="/808139430/image-20221227173755095.png" alt="评估方法"></p>
+<p><img src="808139430/image-20221227173755095.png" alt="评估方法"></p>
 <h2 id="4-梯度下降"><a href="#4-梯度下降" class="headerlink" title="4 梯度下降"></a>4 梯度下降</h2><p>梯度下降法（gradient descent）是一种常用的一阶（first-order）优化方法。主要解决求最小值问题，其基本思想在于不断地逼近最优点，每一步的优化方向就是梯度的方向。</p>
 <h3 id="4-1-梯度下降方法"><a href="#4-1-梯度下降方法" class="headerlink" title="4.1 梯度下降方法"></a>4.1 梯度下降方法</h3><ul>
 <li>批量梯度下降</li>
@@ -599,25 +599,25 @@
 <h3 id="4-2-其他参数"><a href="#4-2-其他参数" class="headerlink" title="4.2 其他参数"></a>4.2 其他参数</h3><ul>
 <li>学习率：更新的步长</li>
 </ul>
-<p><img src="/808139430/image-20221228161134519.png" alt="学习率的影响"></p>
+<p><img src="808139430/image-20221228161134519.png" alt="学习率的影响"></p>
 <ul>
 <li>批处理数量</li>
 </ul>
 <p>一般<code>batch_size</code>选择32，64，128等，有时候会考虑内存和效率。</p>
 <h1 id="逻辑回归"><a href="#逻辑回归" class="headerlink" title="逻辑回归"></a>逻辑回归</h1><p>逻辑回归是一个经典的二分类算法。</p>
 <h2 id="1-sigmoid函数"><a href="#1-sigmoid函数" class="headerlink" title="1 sigmoid函数"></a>1 sigmoid函数</h2><p>$$<br>g(z) = \frac{1}{1 + e ^ {-z}}, z \in R<br>$$</p>
-<p><img src="/808139430/image-20221228161724190.png" alt="sigmoid函数图像"></p>
+<p><img src="808139430/image-20221228161724190.png" alt="sigmoid函数图像"></p>
 <blockquote>
 <p>将任意的输入映射到了$[0, 1]$区间中，在线性回归中可以得到一个预测值，再将该值映射到sigmoid函数中，这样就可以完成由值到概率的转换，这就是分类任务。</p>
 </blockquote>
 <h2 id="2-逻辑回归求解"><a href="#2-逻辑回归求解" class="headerlink" title="2 逻辑回归求解"></a>2 逻辑回归求解</h2><p>预测函数：<br>$$<br>h_{\theta}(x) = g(\theta ^ T x) = \frac{1}{1 + e ^ {-\theta^T x}} \<br>其中 \theta_0 + \theta_1 x_1 + … + \theta_n x_n = \sum \limits_{i = 1}^n \theta_i x_i = \theta ^ T x<br>$$<br>分类任务：<br>$$<br>\begin{cases}<br>P(y = 1|x; \theta) = h_\theta(x) \<br>P(y = 0|x; \theta) = 1 - h_\theta(x)<br>\end{cases}<br>\Rightarrow<br>P(y | x; \theta) = (h_\theta(x)) ^ y (1 - h_\theta(x)) ^ {1 - y}<br>$$<br>对于二分类任务（0， 1），整合后，<code>y</code>取0只保留$(1 - h_\theta(x)) ^ {1 - y}$ ，<code>y</code>取1只保留 $(h_\theta(x)) ^ y$ 。</p>
-<p>似然函数：<br>$$<br>L(\theta) = \prod \limits_{i = 1}^m P(y_i | x_i; \theta) = \prod \limits_{i = 1}^m (h_\theta(x_i)) ^ y_i (1 - h_\theta(x_i)) ^ {1 - y_i}<br>$$<br>对数似然法，即求$l(\theta)$ 的最大值：<br>$$<br>l(\theta) = logL(\theta) = \sum \limits_{i = 1} ^m (y_i log h_\theta(x_i) + (1 - y_i) log (1 - h_\theta(x_i)))<br>$$<br>将上述函数转化为求最小值，同时系数乘上一个常数，即求$J(\theta) = -\frac{1}{m}l(\theta)$ 的最小值，转化为梯度下降问题：<br>$$<br>J(\theta) = -\frac{1}{m}l(\theta)<br>$$<br><img src="/808139430/image-20221228164952743.png" alt="求导过程"></p>
+<p>似然函数：<br>$$<br>L(\theta) = \prod \limits_{i = 1}^m P(y_i | x_i; \theta) = \prod \limits_{i = 1}^m (h_\theta(x_i)) ^ y_i (1 - h_\theta(x_i)) ^ {1 - y_i}<br>$$<br>对数似然法，即求$l(\theta)$ 的最大值：<br>$$<br>l(\theta) = logL(\theta) = \sum \limits_{i = 1} ^m (y_i log h_\theta(x_i) + (1 - y_i) log (1 - h_\theta(x_i)))<br>$$<br>将上述函数转化为求最小值，同时系数乘上一个常数，即求$J(\theta) = -\frac{1}{m}l(\theta)$ 的最小值，转化为梯度下降问题：<br>$$<br>J(\theta) = -\frac{1}{m}l(\theta)<br>$$<br><img src="808139430/image-20221228164952743.png" alt="求导过程"></p>
 <p>上述过程即求出了偏导的方向，有了更新方向就可以进行参数更新： $\alpha$代表学习率<br>$$<br>\theta_j = \theta_j - \alpha \frac{1}{m} \sum \limits_{i = 1} ^ m (h_\theta(x_i) - y_i)x_i^j<br>$$</p>
 <blockquote>
 <p>减法是代表用的梯度下降，整体除以<code>m</code>是考虑了所有的m个样本。</p>
 </blockquote>
 <p>多分类问题：</p>
-<p><img src="/808139430/image-20221228171310763.png" alt="多分类"></p>
+<p><img src="808139430/image-20221228171310763.png" alt="多分类"></p>
 <blockquote>
 <p>Softmax回归是逻辑回归的一般化，相关对比参考 <a href="https://zhuanlan.zhihu.com/p/98061179">https://zhuanlan.zhihu.com/p/98061179</a></p>
 </blockquote>
@@ -670,9 +670,9 @@
 <p>FP：预测错误，预测成1</p>
 <p>FN：预测错误，预测成0</p>
 </blockquote>
-<p><img src="/808139430/image-20221230142020907.png" alt="混淆矩阵"></p>
+<p><img src="808139430/image-20221230142020907.png" alt="混淆矩阵"></p>
 <p>可以通过上面四个值计算相应的评估值，见下图。</p>
-<p><img src="/808139430/image-20221230143921870.png" alt="混淆矩阵计算评估指标"></p>
+<p><img src="808139430/image-20221230143921870.png" alt="混淆矩阵计算评估指标"></p>
 <blockquote>
 <ul>
 <li>准确率：预测正确的比例</li>
@@ -687,7 +687,7 @@
 <ul>
 <li>下采样：</li>
 </ul>
-<p><img src="/808139430/2.png" alt="img"></p>
+<p><img src="808139430/2.png" alt="img"></p>
 <ul>
 <li>上采样：SMOTE算法</li>
 </ul>
@@ -698,7 +698,7 @@
 <blockquote>
 <p>$(\widetilde x - x)$ 相当于距离 $d_i$ （欧几里得距离），那么每个 $d_i$ 都可以生成一个新的数据。</p>
 </blockquote>
-<p><img src="/808139430/image-20221230161807567.png" alt="SMOTE算法原理图"></p>
+<p><img src="808139430/image-20221230161807567.png" alt="SMOTE算法原理图"></p>
 <h2 id="2-正则化惩罚"><a href="#2-正则化惩罚" class="headerlink" title="2 正则化惩罚"></a>2 正则化惩罚</h2><p>加上了正则化项能在一定程度上避免过拟合</p>
 <h1 id="决策树"><a href="#决策树" class="headerlink" title="决策树"></a>决策树</h1><h2 id="1-概述-1"><a href="#1-概述-1" class="headerlink" title="1 概述"></a>1 概述</h2><h3 id="1-1-定义"><a href="#1-1-定义" class="headerlink" title="1.1 定义"></a>1.1 定义</h3><p>决策树是一种解决分类问题的算法，决策树算法采用树形结构，使用层层推理来实现最终的分类。</p>
 <p>决策树即可以做分类，也可以做回归。它主要分为两种：<strong>分类树</strong> 和 <strong>回归树</strong>。</p>
@@ -715,7 +715,7 @@
 <li>内部节点：对应特征属性测试</li>
 <li>叶节点：代表决策的结果</li>
 </ul>
-<p><img src="/808139430/image-20221230164038527.png" alt="决策树结构"></p>
+<p><img src="808139430/image-20221230164038527.png" alt="决策树结构"></p>
 <p>决策树学习的<strong>目的</strong>是为了产生一棵泛化能力强的决策树</p>
 <h2 id="2-决策树构建"><a href="#2-决策树构建" class="headerlink" title="2 决策树构建"></a>2 决策树构建</h2><h3 id="2-1-构建过程"><a href="#2-1-构建过程" class="headerlink" title="2.1 构建过程"></a>2.1 构建过程</h3><p>整体策略：自上而下分而治之</p>
 <p>决策树的构建过程就是一个<strong>自根至叶的递归过程</strong>， 在每个中间结点寻找一个<strong>划分</strong>属性。</p>
@@ -743,8 +743,8 @@
 <p>信息增益越大，表示特征a来划分所减少的熵最大，即提升最大，应当作为根节点。</p>
 <h2 id="3-决策树算法"><a href="#3-决策树算法" class="headerlink" title="3 决策树算法"></a>3 决策树算法</h2><h3 id="3-1-ID3（信息增益）"><a href="#3-1-ID3（信息增益）" class="headerlink" title="3.1 ID3（信息增益）"></a>3.1 ID3（信息增益）</h3><p>下面是基于信息增益的ID3算法的实例：</p>
 <p>我们有14天的数据，4个特征条件：<strong>天气，温度，湿度，是否有风</strong>。最终结果是去玩不玩。</p>
-<p><img src="/808139430/image-20221231110826312.png" alt="数据"></p>
-<p><img src="/808139430/image-20221231110929844.png" alt="划分方式"></p>
+<p><img src="808139430/image-20221231110826312.png" alt="数据"></p>
+<p><img src="808139430/image-20221231110929844.png" alt="划分方式"></p>
 <p>上面有四种划分方式，我们需要判断谁来当根节点，根据的主要就是信息增益这个指标。下面计算信息增益来判断根节点。</p>
 <p>本例暂且以<code>ent(a, b)</code>代表以下含义：（只有两种结果的时候的熵值计算）</p>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> math <span class="token keyword">import</span> log2
@@ -807,7 +807,7 @@
 </ul>
 <p>故选择humidy或wind划分</p>
 <p>剩下的划分同理，最终决策树为</p>
-<p><img src="/808139430/image-20230208111655893.png" alt="最终决策树"></p>
+<p><img src="808139430/image-20230208111655893.png" alt="最终决策树"></p>
 <h3 id="3-2-C4-5（信息增益率）"><a href="#3-2-C4-5（信息增益率）" class="headerlink" title="3.2 C4.5（信息增益率）"></a>3.2 C4.5（信息增益率）</h3><blockquote>
 <p>基于信息增益的决策树算法会有哪些问题：</p>
 <p>如果有一个特征：id，代表样本的编号，以上述数据为例，id为从1到14，如果计算id特征的根节点，发现信息增益是最大的，因为每一个子节点的信息熵值都为0。</p>
@@ -921,21 +921,21 @@ alphabet <span class="token operator">=</span> <span class="token string">'abcde
 <h2 id="1-3-新闻分类"><a href="#1-3-新闻分类" class="headerlink" title="1.3 新闻分类"></a>1.3 新闻分类</h2><p>之后用到了再补，短时间不会写。</p>
 <h1 id="SVM支持向量机"><a href="#SVM支持向量机" class="headerlink" title="SVM支持向量机"></a>SVM支持向量机</h1><h2 id="1-概述-3"><a href="#1-概述-3" class="headerlink" title="1 概述"></a>1 概述</h2><p>Support Vector Machine是一种二分类模型，它的基本模型是定义在特征空间上的<strong>间隔最大的线性分类器</strong></p>
 <p>SVM学习的基本想法是求解能够正确划分训练数据集并且几何间隔最大的分离超平面。如下图所示， $wx+b=0$ 即为分离超平面，对于线性可分的数据集来说，这样的超平面有无穷多个（即感知机），但是几何间隔最大的分离超平面却是唯一的。</p>
-<p><img src="/808139430/image-20230102144808362.png" alt="支持向量机"></p>
+<p><img src="808139430/image-20230102144808362.png" alt="支持向量机"></p>
 <h2 id="2-推导"><a href="#2-推导" class="headerlink" title="2 推导"></a>2 推导</h2><h3 id="2-1-距离"><a href="#2-1-距离" class="headerlink" title="2.1 距离"></a>2.1 距离</h3><p>正常三维条件下点$(x_0, y_0, z_0)$到平面$Ax + By + Cz + D = 0$的距离公式（高中知识）：<br>$$<br>\frac{\vert Ax_0 + By_0 + Cz_0 + D \vert}{\sqrt{A^2 + B^2 + C^2}}<br>$$<br>推导分析过程：</p>
 <p>平面方程： $ax + by + cz = d$ ，平面外一点$P(x_0, y_0, z_0)$</p>
-<p><img src="/808139430/image-20230102153203878.png" alt="示意图"></p>
+<p><img src="808139430/image-20230102153203878.png" alt="示意图"></p>
 <p>PQ垂直平面，即为求PQ的长度，但不知Q点的具体数据。</p>
 <p>故构造一个平面上的点$P^{‘}(x_1, y_1, z_1)$，问题即转化为求$\overrightarrow {P^{‘}P}$ 在法向量N上面的分量，即$\overrightarrow {P^{‘}P}$ 与N相同方向的单位向量的点积。</p>
-<p><img src="/808139430/image-20230102153230935.png" alt="示意图"></p>
+<p><img src="808139430/image-20230102153230935.png" alt="示意图"></p>
 <p>设距离为D。</p>
-<p><img src="/808139430/1203675-20180109152428254-718844217.png" alt="距离公式推导"></p>
+<p><img src="808139430/1203675-20180109152428254-718844217.png" alt="距离公式推导"></p>
 <p>现在考虑一般情况：</p>
 <p>求平面外一点 $x$ 到平面$w^T x + b = 0$ 的距离：</p>
 <blockquote>
 <p>结论：平面$Ax + By + Cz + D = 0$的法向量为$(A, B, C)$</p>
 </blockquote>
-<p><img src="/808139430/image-20230102154354917.png" alt="示意图"></p>
+<p><img src="808139430/image-20230102154354917.png" alt="示意图"></p>
 <p>同上述原理：</p>
 <p>距离就为<br>$$<br>distance(x, b, w) = \vert \frac{w^T}{\vert \vert w \vert \vert}(x - x^{‘}) \vert = \frac{1}{\vert \vert w \vert \vert} \vert w^Tx + b \vert<br>$$</p>
 <blockquote>
@@ -970,16 +970,16 @@ alphabet <span class="token operator">=</span> <span class="token string">'abcde
 <p>推导可参考：<a href="https://blog.csdn.net/v_july_v/article/details/7624837">https://blog.csdn.net/v_july_v/article/details/7624837</a> </p>
 <p>原理可参考：<a href="https://zhuanlan.zhihu.com/p/31886934">https://zhuanlan.zhihu.com/p/31886934</a> </p>
 </blockquote>
-<p><img src="/808139430/image-20230102224841617.png" alt="求解过程"></p>
-<p><img src="/808139430/image-20230102225344026.png" alt="求解过程"></p>
-<p><img src="/808139430/image-20230102225422893.png" alt="求解过程"></p>
+<p><img src="808139430/image-20230102224841617.png" alt="求解过程"></p>
+<p><img src="808139430/image-20230102225344026.png" alt="求解过程"></p>
+<p><img src="808139430/image-20230102225422893.png" alt="求解过程"></p>
 <h2 id="3-SVM实例"><a href="#3-SVM实例" class="headerlink" title="3 SVM实例"></a>3 SVM实例</h2><p>有三个数据：3个点，正例$x_1(3, 3), x_2(4, 3)$， 负例$x_3(1, 1)$，（数据是二维数据）对其进行二分类。</p>
 <p>首先需要求解下式的最小值：<br>$$<br>\frac{1}{2}\sum \limits_{i = 1}^n \sum \limits <em>{j = 1}^n \alpha_i \alpha_j y_i y_j (x_i \cdot x_j) - \sum \limits</em>{i = 1}^n\alpha_i \hspace{3em} (1)<br>$$</p>
 <blockquote>
 <p>注意：$x_i \cdot x_j$ 的运算是点积运算。</p>
 <p>约束条件：<br>$$<br>\alpha_1 + \alpha_2 - \alpha_3 = 0 \<br>\alpha_i \geq 0, \hspace{2em} i = 1, 2, 3<br>$$</p>
 </blockquote>
-<p><img src="/808139430/image-20230103144319179.png" alt="图像示意"></p>
+<p><img src="808139430/image-20230103144319179.png" alt="图像示意"></p>
 <p>将对应的数据带入（1）式，得：<br>$$<br>\frac{1}{2} \Big( 18 \alpha_1^2 + 25\alpha_2^2 + 2 \alpha_3^2 + 42\alpha_1\alpha_2 - 12\alpha_1\alpha_3 - 14\alpha_2\alpha_3 \Big) - \alpha_1 - \alpha_2 - \alpha_3<br>$$<br>由于$\alpha_1 + \alpha_2 = \alpha_3$，化简得：<br>$$<br>4 \alpha_1 ^ 2 + \frac{13}{2} \alpha_2^2 + 10\alpha_1\alpha_2 - 2\alpha_1 - 2\alpha_2<br>$$<br>分别对$\alpha_1,\alpha_2$求偏导，偏导等于0得<br>$$<br>\begin{cases}<br>\alpha_1 = 1.5 \<br>\alpha_2 = -1<br>\end{cases}<br>$$<br>发现不满足约束条件$\alpha_i \geq 0$，故解应在边界上。分别让两个值等于0求解<br>$$<br>\begin{cases}<br>\alpha_1 = 0 \<br>\alpha_2 = -\frac{2}{13}<br>\end{cases}<br>(\times)<br>\hspace{4em}<br>\begin{cases}<br>\alpha_1 = 0.25 \<br>\alpha_2 = 0<br>\end{cases}<br>(\checkmark)<br>$$<br>第一组解不满足，故最小值在$(0.25, 0, 0.25)$处取得。</p>
 <p>将$\alpha$结果带求解$w = \sum \limits_{i = 1}^n \alpha_i y_i \Phi(x_i)$，$\Phi(x_i)$以$x_i$来代替<br>$$<br>w = \frac{1}{4} \times 1 \times (3,3) + \frac{1}{4} \times (-1) \times(1,1) = (\frac{1}{2}, \frac{1}{2})<br>\<br>b = y_i - \sum \limits_{i = 1}^n a_i y_i (x_i x_j) = 1 - (\frac{1}{4} \times 1 \times 18  + \frac{1}{4} \times (-1) \times 6) = -2<br>$$<br>故平面方程为：<br>$$<br>0.5 x_1 + 0.5 x_2 - 2 = 0<br>$$</p>
 <blockquote>
@@ -997,7 +997,7 @@ alphabet <span class="token operator">=</span> <span class="token string">'abcde
 <p>当C趋近于很小时：意味着可以由更大的错误容忍</p>
 </blockquote>
 <p>解法基本一样：</p>
-<p><img src="/808139430/image-20230103153918323.png" alt="解法"></p>
+<p><img src="808139430/image-20230103153918323.png" alt="解法"></p>
 <h2 id="5-SVM核变换"><a href="#5-SVM核变换" class="headerlink" title="5 SVM核变换"></a>5 SVM核变换</h2><p>将低维不可分映射到高维，找到一种变换方法，即为$\phi(x)$</p>
 <p>高斯核函数：<br>$$<br>K(X, Y) =  exp \bigg{ -\frac{||X-Y||^2}{2\sigma^2} \bigg}<br>$$</p>
 <h2 id="6-基于sklearn求解SVM"><a href="#6-基于sklearn求解SVM" class="headerlink" title="6 基于sklearn求解SVM"></a>6 基于sklearn求解SVM</h2><p>参考 <a href="https://blog.csdn.net/weixin_42600072/article/details/88644229">https://blog.csdn.net/weixin_42600072/article/details/88644229</a></p>
@@ -1399,7 +1399,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                   property="dct:title" rel="dct:type">
                     《机器学习常见算法总结》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/p/808139430.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="" property="cc:attributionName"
                rel="cc:attributionURL">
                 行码棋
             </a> 采用
@@ -1733,7 +1733,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/p/1646942053.html">
+                <a href="1646942053.html">
                     <div class="card-image">
                         
                         
@@ -1761,7 +1761,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%93%B2%E6%80%9D/" class="post-category" target="_blank">
+                            <a href="../categories/%E5%93%B2%E6%80%9D/" class="post-category" target="_blank">
                                     哲思
                                 </a>
                             
@@ -1772,7 +1772,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%93/" target="_blank">
+                    <a href="../tags/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%93/" target="_blank">
                         <span class="chip bg-color">阶段性总结</span>
                     </a>
                     
@@ -1787,7 +1787,7 @@ plt<span class="token punctuation">.</span>show<span class="token punctuation">(
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/p/1888017128.html">
+                <a href="1888017128.html">
                     <div class="card-image">
                         
                         
@@ -1815,7 +1815,7 @@ from torch.utils.dat
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category" target="_blank">
+                            <a href="../categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/" class="post-category" target="_blank">
                                     人工智能
                                 </a>
                             
@@ -1826,7 +1826,7 @@ from torch.utils.dat
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Pytorch/" target="_blank">
+                    <a href="../tags/Pytorch/" target="_blank">
                         <span class="chip bg-color">Pytorch</span>
                     </a>
                     
@@ -2062,7 +2062,7 @@ from torch.utils.dat
 
 
 
-    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+    <a href="../atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
         <i class="fa fa-rss"></i>
     </a>
 </div>
