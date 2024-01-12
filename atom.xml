@@ -6,7 +6,7 @@
   <link href="http://wyqz.top/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2023-12-27T11:19:46.032Z</updated>
+  <updated>2024-01-12T04:39:14.000Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo踩坑实记</title>
+    <link href="http://wyqz.top/p/3418896117.html"/>
+    <id>http://wyqz.top/p/3418896117.html</id>
+    <published>2024-01-12T04:39:14.000Z</published>
+    <updated>2024-01-12T04:39:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;hexo踩坑实记&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#hexo踩坑实记&quot;&gt;&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="前端" scheme="http://wyqz.top/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="Hexo" scheme="http://wyqz.top/tags/Hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>CPP易懂文章记录</title>
@@ -541,33 +566,6 @@
     
     
     <category term="阶段性总结" scheme="http://wyqz.top/tags/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习常见算法总结</title>
-    <link href="http://wyqz.top/p/808139430.html"/>
-    <id>http://wyqz.top/p/808139430.html</id>
-    <published>2022-12-27T09:04:31.000Z</published>
-    <updated>2024-01-11T12:20:26.973Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;机器学习环境搭建&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#机器学习环境搭建&quot;&gt;&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="人工智能" scheme="http://wyqz.top/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
-    
-    
-    <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
-    
-    <category term="MachineLearning" scheme="http://wyqz.top/tags/MachineLearning/"/>
     
   </entry>
   
