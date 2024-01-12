@@ -37,7 +37,7 @@ figure相当于一张画布，画布中可以添">
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
     <link rel="stylesheet" type="text/css" href="/libs/prism/prism.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/prism/9000.0.1/plugins/line-numbers/prism-line-numbers.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.css">
 
     <!-- 调用今日诗词API -->
     <script src="https://lib.baomitu.com/jquery/2.2.0/jquery.min.js"></script>
@@ -350,7 +350,7 @@ figure相当于一张画布，画布中可以添">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -389,21 +389,21 @@ figure相当于一张画布，画布中可以添">
     }
 
     .toc-fixed {
-        position: fixed;
+        position: fixed !important;
         top: 64px;
     }
-    .toc-widget.hidden {
-        display: none;
-    }
+
     /* 目录背景白框 */
     .toc-widget {
+        width: 340px;
         padding-left: 20px;
-        background-color: white;
-        padding: 10px;
-        position: fixed;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        background-color: rgb(255, 255, 255, 0.9);
         border-radius: 10px;
-        width: 16%;
-        margin-top: 20px;
+        max-height: 70vh;
+        overflow-y: auto;
+        box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
     }
 
     .toc-widget .toc-title {
@@ -1097,7 +1097,7 @@ ax3 <span class="token operator">=</span> fig<span class="token punctuation">.</
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="资源停靠站">
+                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="资源停靠站">
                         
                         <span class="card-title">资源停靠站</span>
                     </div>
@@ -1146,7 +1146,7 @@ ax3 <span class="token operator">=</span> fig<span class="token punctuation">.</
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="Pandas数据处理">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="Pandas数据处理">
                         
                         <span class="card-title">Pandas数据处理</span>
                     </div>
@@ -1290,7 +1290,6 @@ df = pd.read_csv(path) # path为读取数据的路径
         // Set scroll toc fixed.
         let tocHeight = parseInt($(window).height() * 0.4 - 64);
         let $tocWidget = $('.toc-widget');
-        let commentsSectionPosition = $('#gitalk-container').offset().top; 
 
         $(window).scroll(function () {
             let scroll = $(window).scrollTop();
@@ -1299,12 +1298,6 @@ df = pd.read_csv(path) # path为读取数据的路径
                 $tocWidget.addClass('toc-fixed');
             } else {
                 $tocWidget.removeClass('toc-fixed');
-            }
-            // 滚动至gitalk界面隐藏目录
-            if (scroll > commentsSectionPosition) {
-                $tocWidget.addClass('hidden');
-            } else {
-                $tocWidget.removeClass('hidden');
             }
         });
 
@@ -1366,7 +1359,7 @@ df = pd.read_csv(path) # path为读取数据的路径
 <style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
 
 <script src="/libs/prism/prism.js"></script>
-<script src="https://cdn.bootcdn.net/ajax/libs/prism/9000.0.1/plugins/line-numbers/prism-line-numbers.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.js"></script>
 
     <footer class="page-footer bg-color">
     <div class="container row center-align">

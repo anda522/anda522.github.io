@@ -38,7 +38,7 @@
     <link rel="stylesheet" type="text/css" href="/css/matery.css">
     <link rel="stylesheet" type="text/css" href="/css/my.css">
     <link rel="stylesheet" type="text/css" href="/libs/prism/prism.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/prism/9000.0.1/plugins/line-numbers/prism-line-numbers.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.css">
 
     <!-- 调用今日诗词API -->
     <script src="https://lib.baomitu.com/jquery/2.2.0/jquery.min.js"></script>
@@ -351,7 +351,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/27.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -390,21 +390,21 @@
     }
 
     .toc-fixed {
-        position: fixed;
+        position: fixed !important;
         top: 64px;
     }
-    .toc-widget.hidden {
-        display: none;
-    }
+
     /* 目录背景白框 */
     .toc-widget {
+        width: 340px;
         padding-left: 20px;
-        background-color: white;
-        padding: 10px;
-        position: fixed;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        background-color: rgb(255, 255, 255, 0.9);
         border-radius: 10px;
-        width: 16%;
-        margin-top: 20px;
+        max-height: 70vh;
+        overflow-y: auto;
+        box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
     }
 
     .toc-widget .toc-title {
@@ -2469,7 +2469,7 @@ M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="2022年度总结">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="2022年度总结">
                         
                         <span class="card-title">2022年度总结</span>
                     </div>
@@ -2523,7 +2523,7 @@ M834 80h400000v40h-400000z"></path></svg></span></span></span><span class="vlist
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Pytorch入门知识总结">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Pytorch入门知识总结">
                         
                         <span class="card-title">Pytorch入门知识总结</span>
                     </div>
@@ -2656,7 +2656,6 @@ from torch.util
         // Set scroll toc fixed.
         let tocHeight = parseInt($(window).height() * 0.4 - 64);
         let $tocWidget = $('.toc-widget');
-        let commentsSectionPosition = $('#gitalk-container').offset().top; 
 
         $(window).scroll(function () {
             let scroll = $(window).scrollTop();
@@ -2665,12 +2664,6 @@ from torch.util
                 $tocWidget.addClass('toc-fixed');
             } else {
                 $tocWidget.removeClass('toc-fixed');
-            }
-            // 滚动至gitalk界面隐藏目录
-            if (scroll > commentsSectionPosition) {
-                $tocWidget.addClass('hidden');
-            } else {
-                $tocWidget.removeClass('hidden');
             }
         });
 
@@ -2732,7 +2725,7 @@ from torch.util
 <style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
 
 <script src="/libs/prism/prism.js"></script>
-<script src="https://cdn.bootcdn.net/ajax/libs/prism/9000.0.1/plugins/line-numbers/prism-line-numbers.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.js"></script>
 
     <footer class="page-footer bg-color">
     <div class="container row center-align">
