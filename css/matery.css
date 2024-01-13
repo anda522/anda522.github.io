@@ -801,12 +801,26 @@ article .article-content .summary {
     margin-bottom: 6px;
     word-break: break-all;
 }
-
-article .article-content .publish-author {
+/* 设置了flex属性，此属性不生效 */
+/* article .article-content .publish-author {
     float: right;
+} */
+
+.publish-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.publish-info .time-section {
+    display: flex;
+    flex-direction: column;
 }
 
 .publish-date .icon-date {
+    padding-right: 5px;
+}
+
+.update-date .icon-date {
     padding-right: 5px;
 }
 
