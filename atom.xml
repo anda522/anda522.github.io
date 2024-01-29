@@ -6,7 +6,7 @@
   <link href="http://wyqz.top/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2024-01-14T03:03:15.772Z</updated>
+  <updated>2024-01-29T08:12:52.365Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python实用库记录</title>
+    <link href="http://wyqz.top/p/7384120.html"/>
+    <id>http://wyqz.top/p/7384120.html</id>
+    <published>2024-01-29T08:08:30.000Z</published>
+    <updated>2024-01-29T08:12:52.365Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;tqdm&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#tqdm&quot;&gt;&lt;/a&gt; tqdm&lt;/h1&gt;
+&lt;p&gt;作用：实时显示迭代、循环的执行的进度条&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;trange(i)&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="Python" scheme="http://wyqz.top/categories/Python/"/>
+    
+    
+    <category term="Python" scheme="http://wyqz.top/tags/Python/"/>
+    
+  </entry>
   
   <entry>
     <title>Hexo踩坑实记</title>
@@ -536,36 +563,6 @@
     <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
     
     <category term="DeepLearning" scheme="http://wyqz.top/tags/DeepLearning/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2022年度总结</title>
-    <link href="http://wyqz.top/p/1646942053.html"/>
-    <id>http://wyqz.top/p/1646942053.html</id>
-    <published>2023-01-01T02:38:55.000Z</published>
-    <updated>2023-03-24T06:08:45.801Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;希望2023健康，发论文，比赛拿牌，成功上岸。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;今天是2023年1月1日，2022有许多不顺心的事，也有一些值得记忆的事，希望通过下面的片段来回顾这年不易的时光。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;能</summary>
-        
-      
-    
-    
-    
-    <category term="哲思" scheme="http://wyqz.top/categories/%E5%93%B2%E6%80%9D/"/>
-    
-    
-    <category term="阶段性总结" scheme="http://wyqz.top/tags/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   

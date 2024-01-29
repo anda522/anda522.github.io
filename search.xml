@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Python实用库记录</title>
+      <link href="/p/7384120.html"/>
+      <url>/p/7384120.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="tqdm"><a class="markdownIt-Anchor" href="#tqdm"></a> tqdm</h1><p>作用：实时显示迭代、循环的执行的进度条</p><p><code>trange(i)</code> 是对<code>tqdm(range(i))</code> 特殊优化过的实例：</p><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> tqdm <span class="token keyword">import</span> tqdm<span class="token punctuation">,</span> trangeans <span class="token operator">=</span> <span class="token number">0</span><span class="token keyword">for</span> i <span class="token keyword">in</span> tqdm<span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">20000</span><span class="token punctuation">)</span><span class="token punctuation">:</span>        ans <span class="token operator">+=</span> <span class="token number">1</span><span class="token keyword">for</span> i <span class="token keyword">in</span> trange<span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">:</span>    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">20000</span><span class="token punctuation">)</span><span class="token punctuation">:</span>        ans <span class="token operator">+=</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo踩坑实记</title>
       <link href="/p/3418896117.html"/>
       <url>/p/3418896117.html</url>

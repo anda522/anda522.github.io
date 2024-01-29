@@ -4,14 +4,16 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="自建私有git发布博客, ZZU 行码棋">
+    <meta name="keywords" content="Python实用库记录, ZZU 行码棋">
     <!-- 百度和谷歌统计验证 -->
     <meta name="baidu-site-verification" content="code-L7AVcsbU14" />
     <meta name="google-site-verification" content="x4QfrBHn9imI1RhTNCB8RD8Q2Rx6rE_zylSBptBgdZY" />
-    <meta name="description" content=" 自建私有git进行项目发布
-之前尝试过通过建立私有git仓库，来发布自己的hexo静态博客，但是失败了，今天尝试了一下午，算是有了结果。下面记录我的过程。
-我的需求：
-我有一个服务器，希望在服务器端建一个git仓库，本地部署时会同时往Gi">
+    <meta name="description" content=" tqdm
+作用：实时显示迭代、循环的执行的进度条
+trange(i) 是对tqdm(range(i)) 特殊优化过的实例：
+from tqdm import tqdm, trange
+ans = 0
+for i in tqdm(range">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +21,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>自建私有git发布博客 | 行码棋</title>
+    <title>Python实用库记录 | 行码棋</title>
     <link rel="icon" type="image/png" href="/medias/logo.png" defer>
 
     <link rel="stylesheey" type="text/css" href="//at.alicdn.com/t/c/font_3948353_97hiukrvyh.css" defer>
@@ -324,13 +326,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        自建私有git发布博客
+                        Python实用库记录
                     </div>
                 </div>
             </div>
@@ -452,8 +454,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/git/" target="_blank">
-                            <span class="chip bg-color">git</span>
+                        <a href="/tags/Python/" target="_blank">
+                            <span class="chip bg-color">Python</span>
                         </a>
                         
                     </div>
@@ -464,8 +466,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/" class="post-category" target="_blank">
-                            开发知识
+                        <a href="/categories/Python/" class="post-category" target="_blank">
+                            Python
                         </a>
                         
                     </div>
@@ -476,12 +478,12 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-12-16
+                    2024-01-29
                 </div>
                 <!-- 显示更新日期 -->
                 <div class="post-update-date info-break-policy">
                     <i class="fa fa-history fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-12-17
+                    2024-01-29
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -495,14 +497,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    65
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    1 分
                 </div>
                 
                 
@@ -518,105 +520,17 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="自建私有git进行项目发布"><a class="markdownIt-Anchor" href="#自建私有git进行项目发布"></a> 自建私有git进行项目发布</h1>
-<p>之前尝试过通过建立私有git仓库，来发布自己的hexo静态博客，但是失败了，今天尝试了一下午，算是有了结果。下面记录我的过程。</p>
-<p>我的需求：</p>
-<p>我有一个服务器，希望在服务器端建一个<code>git</code>仓库，本地部署时会同时往GitHub，服务器多个地方部署，但是主要的访问是通过服务器端的 <code>nginx</code> 。</p>
-<p>即本地 <code>hexo d</code> 命令能够往服务器 <code>git</code> 的进行部署，同时在 <code>github</code> 留有备份。服务器中 <code>nginx</code> 会设置网站根目录为指定的某个目录。</p>
-<h1 id="整体思路"><a class="markdownIt-Anchor" href="#整体思路"></a> 整体思路</h1>
-<p>本地项目通过<code>git</code> 上传至服务器端建立的 裸仓库<code>git</code> ，<code>push</code> 操作会触发 <code>git</code> 的钩子函数， 钩子函数进入在我们的项目目标目录，执行 <code>pull</code> 操作，将所有的改变拉取到项目目录并合并。</p>
-<p><code>nginx</code> 会将网站根目录设置为项目目录，就可以正常访问了。</p>
-<h1 id="服务器端"><a class="markdownIt-Anchor" href="#服务器端"></a> 服务器端</h1>
-<p>建议使用有 <code>sudo</code> 权限的用户新建 <code>git</code> 用户，而不是 <code>root</code> 用户。</p>
-<h2 id="1-新建一个git用户"><a class="markdownIt-Anchor" href="#1-新建一个git用户"></a> 1 新建一个Git用户</h2>
-<blockquote>
-<p>首先需要安装 <code>git</code> ，具体方法根据自己系统搜索进行安装。</p>
-</blockquote>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">useradd</span> <span class="token function">git</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="2-配置访问权限"><a class="markdownIt-Anchor" href="#2-配置访问权限"></a> 2 配置访问权限</h2>
-<p>我们需要无需密码验证登录 <code>git</code> 账户，需要将本机的公钥文件内容 <code>C:\Users\用户名\.ssh\id_rsa.pub</code> 复制到 <code>/home/git/.ssh/authorized_keys</code> 中。</p>
-<p>这样就能无密码登录 <code>git</code> 用户，可以使用 <code> ssh -T git@101.35.203.216</code> 命令进行验证。</p>
-<h2 id="3-建立裸仓库"><a class="markdownIt-Anchor" href="#3-建立裸仓库"></a> 3 建立裸仓库</h2>
-<p>选定目录建立裸仓库，我的是 <code>/home/git/blog.git</code> ，在 <code>/home/git</code> 目录下执行命令：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">git</span> init <span class="token parameter variable">--bare</span> blog.git
-<span class="token comment"># 同时还要将仓库所属用户修改为git</span>
-<span class="token function">sudo</span> <span class="token function">chown</span> <span class="token parameter variable">-R</span> git:git blog.git<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p>裸仓库没有工作区，也就是你根本没法看到上传上来的文件。之后我所有的静态博客文件即 <code>public</code> 目录下的文件都会上传到裸仓库。那如何拿到文件呢？</p>
-<p>我采用 <code>git</code> 钩子函数的特性，当有本地有 <code>push</code> 代码到裸仓库的操作时，便自动执行一个脚本，把仓库中的文件拉取到我的项目目录 <code>/home/git/public</code> 中，这样我就可以正常的用 <code>nginx</code> 访问我的博客项目了。</p>
-</blockquote>
-<h2 id="4-添加钩子函数"><a class="markdownIt-Anchor" href="#4-添加钩子函数"></a> 4 添加钩子函数</h2>
-<p>在裸仓库 <code>/home/git/blog.git/hooks</code> 目录中，新建 <code>post-receive</code> 文件</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">vim</span> post-receive <span class="token comment"># 新建文件</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>输入内容</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
-<span class="token builtin class-name">unset</span> GIT_DIR <span class="token comment"># 似乎挺重要的，可能与环境变量有关</span>
-<span class="token assign-left variable">DIR</span><span class="token operator">=</span>/home/git/public <span class="token comment"># 项目目录</span>
-<span class="token builtin class-name">echo</span> <span class="token string">"Starting Upadte!"</span> <span class="token comment"># 调试用的</span>
-<span class="token function">git</span> config <span class="token parameter variable">--global</span> <span class="token parameter variable">--add</span> safe.directory /home/git/public <span class="token comment"># 中途代码提示建议我添加的，我就加上了</span>
-<span class="token builtin class-name">cd</span> <span class="token variable">$DIR</span> <span class="token comment"># 进入项目目录</span>
-<span class="token function">git</span> pull /home/git/blog.git main <span class="token comment"># 拉取裸仓库并与本地分支合并</span>
-<span class="token builtin class-name">echo</span> <span class="token string">"Update Sucess!"</span> <span class="token comment"># 调试用的</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p>其实这里大部分操作和 <code>git</code> 命令和 <code>bash</code> 环境相关，看来还是需要去学习下了。</p>
-</blockquote>
-<p>注意还要将 <code>post-receive</code> 文件所属用户改为 <code>git</code> ，且添加执行权限，不然无权访问。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">chown</span> <span class="token parameter variable">-R</span> git:git post-receive
-<span class="token function">sudo</span> <span class="token function">chmod</span> +x post-receive<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h2 id="5-禁止git用户登录shell"><a class="markdownIt-Anchor" href="#5-禁止git用户登录shell"></a> 5 禁止Git用户登录Shell</h2>
-<p>编辑 <code>/etc/passwd</code> 文件，找到下面类似内容：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">git:x:1009:1009:git daemon user:/:/bin/bash<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>修改为：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">git:x:1009:1009::/home/git:/usr/bin/git-shell<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>这样 <code>git</code> 用户就无法登录shell了。</p>
-<h2 id="6-添加项目目录"><a class="markdownIt-Anchor" href="#6-添加项目目录"></a> 6 添加项目目录</h2>
-<p>在自己想要的地方添加项目目录，我的是 <code>/home/git/public</code> ， 在目录中需要进行仓库初始化，因为这个目录之后要执行 <code>pull</code> 操作</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> init <span class="token comment"># 初始化仓库</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<blockquote>
-<p>还要注意，这个项目文件要让 git 用户有权限访问</p>
-</blockquote>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">sudo</span> <span class="token function">chown</span> <span class="token parameter variable">-R</span> git:git /home/git/public <span class="token comment"># 让git所有</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h1 id="本地客户端"><a class="markdownIt-Anchor" href="#本地客户端"></a> 本地客户端</h1>
-<h2 id="1-本地调试"><a class="markdownIt-Anchor" href="#1-本地调试"></a> 1 本地调试</h2>
-<p>本地可以新建一个文件夹进行调试。</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> init
-<span class="token function">git</span> remote <span class="token function">add</span> origin git@101.35.203.216:/home/git/blog.git
-<span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
-<span class="token function">git</span> commit <span class="token parameter variable">-m</span> <span class="token string">"test"</span>
-<span class="token function">git</span> push <span class="token parameter variable">-u</span> origin main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p>注意调试之后还要让服务器端的项目commit记录为空，因为正式使用时会有 git 记录不一致的情况。</p>
-<p>当然如果 <code>git</code> 操作一流，能够处理此种情况，算我没说。</p>
-</blockquote>
-<h2 id="2-博客配置"><a class="markdownIt-Anchor" href="#2-博客配置"></a> 2 博客配置</h2>
-<p>本地Hexo博客项目配置文件 <code>_config.yml</code> 中我进行了修改：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">deploy:
-- type: <span class="token function">git</span>
-  repository:
-    github: git@github.com:anda522/anda522.github.io.git
-    gitee: git@gitee.com:wyqz/wyqz.git
-  branch: master
-- type: <span class="token function">git</span>
-  repository: git@101.35.203.216:/home/git/blog.git
-  branch: main<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>执行 <code>hexo d</code> 命令后，就会将生成的前端文件上传至自建的裸仓库。</p>
-<h1 id="注意点"><a class="markdownIt-Anchor" href="#注意点"></a> 注意点</h1>
-<ul>
-<li>各种权限问题，登录账户为 <code>git</code> ，需要时刻注意某些文件能不能用 <code>git</code> 用户访问</li>
-<li><code>git</code> 的各种命令的理解， <code>pull push</code> 等，需要了解</li>
-<li><code>bash</code> 的环境变量问题，没有了解过很容易出问题</li>
-</ul>
-<blockquote>
-<p>参考：</p>
-<ul>
-<li>
-<p><a href="https://52gvim.com/post/git-server">https://52gvim.com/post/git-server</a></p>
-</li>
-<li>
-<p><a href="https://blog.csdn.net/Shen_Junxiao/article/details/85245390">https://blog.csdn.net/Shen_Junxiao/article/details/85245390</a></p>
-</li>
-</ul>
-</blockquote>
+                <h1 id="tqdm"><a class="markdownIt-Anchor" href="#tqdm"></a> tqdm</h1>
+<p>作用：实时显示迭代、循环的执行的进度条</p>
+<p><code>trange(i)</code> 是对<code>tqdm(range(i))</code> 特殊优化过的实例：</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> tqdm <span class="token keyword">import</span> tqdm<span class="token punctuation">,</span> trange
+ans <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> tqdm<span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+	<span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">20000</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        ans <span class="token operator">+=</span> <span class="token number">1</span>
+<span class="token keyword">for</span> i <span class="token keyword">in</span> trange<span class="token punctuation">(</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">20000</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        ans <span class="token operator">+=</span> <span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
             </div>
             <hr />
@@ -777,9 +691,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《自建私有git发布博客》
+                    《Python实用库记录》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/p/3211658549.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/p/7384120.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 行码棋
             </a> 采用
@@ -821,7 +735,7 @@
         repo: 'anda522.github.io',
         owner: 'anda522',
         admin: "anda522",
-        id: 'p/3211658549.html',  // 使用页面路径生成gitalk id
+        id: 'p/7384120.html',  // 使用页面路径生成gitalk id
         
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
@@ -1109,55 +1023,58 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/p/4190388149.html">
+                <a href="/p/7384120.html">
                     <div class="card-image">
                         
                         
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/1.jpg" class="responsive-img" alt="tmux命令详解及自定义配置">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/15.jpg" class="responsive-img" alt="Python实用库记录">
                         
-                        <span class="card-title">tmux命令详解及自定义配置</span>
+                        <span class="card-title">Python实用库记录</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                             Tmux命令
-tmux 是一个终端复用器，可以在一个窗口中运行多个终端会话。
-一个 tmux 可以包含多个 session ，一个 session 可以包含多个 window ，一个 window 可以包含多个 pane 。
-结构如下：
-
+                             tqdm
+作用：实时显示迭代、循环的执行的进度条
+trange(i) 是对tqdm(range(i)) 特殊优化过的实例：
+from tqdm import tqdm, trange
+ans = 0
+for i in tqdm(range
                         
                     </div>
                     <div class="publish-info">
                         <div class="time-section">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-12-19
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2024-01-29
                             </span>
                             <span class="update-date">
-                                <i class="fa fa-history fa-fw icon-date"></i>2024-01-26
+                                <i class="fa fa-history fa-fw icon-date"></i>2024-01-29
                             </span>
                         </div>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/" class="post-category" target="_blank">
-                                    开发知识
+                            <a href="/categories/Python/" class="post-category" target="_blank">
+                                    Python
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/" target="_blank">
-                        <span class="chip bg-color">Linux</span>
+                    <a href="/tags/Python/" target="_blank">
+                        <span class="chip bg-color">Python</span>
                     </a>
                     
                 </div>
@@ -1171,41 +1088,40 @@ tmux 是一个终端复用器，可以在一个窗口中运行多个终端会话
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/p/3216805600.html">
+                <a href="/p/3418896117.html">
                     <div class="card-image">
                         
                         
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/2.jpg" class="responsive-img" alt="2023年度总结">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/3.png" class="responsive-img" alt="Hexo踩坑实记">
                         
-                        <span class="card-title">2023年度总结</span>
+                        <span class="card-title">Hexo踩坑实记</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                             2023年度总结
-
-2023马上结束，为了继承惯例，特拟总结，以备回顾。
-
-一年就这样过去了，发现自己能记住的不是很多，大量且冗杂的信息让我的记忆不堪重负，我不得不翻开我的日程表去回顾匆匆离去的一年。
-这篇文章打算以类别划分来整合整年的碎
+                             Hexo踩坑实记
+自从使用了Hexo框架搭建博客，我就经历了诸多苦难，很多需要修改的地方，一步步踩坑过来，今天希望一一进行记录。
+ 主题自定义修改
+ 1 代码块修改
+由于我Hexo最近升级到了 7.0 版本，新版本自带了 prismjs 
                         
                     </div>
                     <div class="publish-info">
                         <div class="time-section">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-12-16
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2024-01-12
                             </span>
                             <span class="update-date">
-                                <i class="fa fa-history fa-fw icon-date"></i>2023-12-31
+                                <i class="fa fa-history fa-fw icon-date"></i>2024-01-14
                             </span>
                         </div>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E5%93%B2%E6%80%9D/" class="post-category" target="_blank">
-                                    哲思
+                            <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category" target="_blank">
+                                    前端
                                 </a>
                             
                             
@@ -1215,8 +1131,8 @@ tmux 是一个终端复用器，可以在一个窗口中运行多个终端会话
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%93/" target="_blank">
-                        <span class="chip bg-color">阶段性总结</span>
+                    <a href="/tags/Hexo/" target="_blank">
+                        <span class="chip bg-color">Hexo</span>
                     </a>
                     
                 </div>
