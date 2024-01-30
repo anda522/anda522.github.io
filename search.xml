@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Linux知识收集</title>
+      <link href="/p/150241679.html"/>
+      <url>/p/150241679.html</url>
+      
+        <content type="html"><![CDATA[<blockquote><p>本文记录一些Linux相关的知识点，用来精进自己的Linux操作。</p></blockquote><h1 id="shell输出输入重定向"><a class="markdownIt-Anchor" href="#shell输出输入重定向"></a> Shell输出输入重定向</h1><p>默认情况下，总是有三个文件处于打开状态，标准输入(键盘输入)、标准输出（输出到屏幕）、标准错误（也是输出到屏幕），它们分别对应的<strong>文件描述符</strong>是0，1，2 。</p><h2 id="重定向stderr到stdout"><a class="markdownIt-Anchor" href="#重定向stderr到stdout"></a> 重定向stderr到stdout</h2><p>能够实现正确输出和错误输出都输出到文件中去，可以使用 <code>command &gt; file 2&gt;&amp;1</code> 命令。</p><p>重定向stderr到stdout的另一种方法是使用 <code>&amp;&gt;</code> 构造，它具备 <code>2&gt;&amp;1</code> 的含义。</p><p>即 <code>command &amp;&gt; file</code>。</p><blockquote><p>参考：</p><ul><li><p>Shell重定向<a href="https://blog.csdn.net/u011630575/article/details/52151995">https://blog.csdn.net/u011630575/article/details/52151995</a></p></li><li><p>鸟哥私房菜重定向：<a href="https://blog.csdn.net/kevinhanser/article/details/60983539">https://blog.csdn.net/kevinhanser/article/details/60983539</a></p></li></ul></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 开发知识 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Python实用库记录</title>
       <link href="/p/7384120.html"/>
       <url>/p/7384120.html</url>
@@ -925,9 +950,9 @@
       
         <tags>
             
-            <tag> docker </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> docker </tag>
             
         </tags>
       

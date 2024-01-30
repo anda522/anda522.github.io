@@ -6,7 +6,7 @@
   <link href="http://wyqz.top/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2024-01-29T08:14:04.991Z</updated>
+  <updated>2024-01-30T01:10:02.608Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux知识收集</title>
+    <link href="http://wyqz.top/p/150241679.html"/>
+    <id>http://wyqz.top/p/150241679.html</id>
+    <published>2024-01-30T00:52:06.000Z</published>
+    <updated>2024-01-30T01:10:02.608Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本文记录一些Linux相关的知识点，用来精进自己的Linux操作。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;shell输出输入重定向&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="开发知识" scheme="http://wyqz.top/categories/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/"/>
+    
+    
+    <category term="Linux" scheme="http://wyqz.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Python实用库记录</title>
@@ -534,35 +562,6 @@
     
     
     <category term="组合数学" scheme="http://wyqz.top/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《动手学深度学习》笔记</title>
-    <link href="http://wyqz.top/p/1060509989.html"/>
-    <id>http://wyqz.top/p/1060509989.html</id>
-    <published>2023-01-15T11:36:00.000Z</published>
-    <updated>2023-03-24T05:54:22.698Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;本笔记主要参考&lt;a href=&quot;https://zh-v2.d2l.ai/index.html&quot;&gt;《动手学深度学习》&lt;/a&gt; 进行学习记录，不做无意义的书本内容摘抄。&lt;/p&gt;
-&lt;p&gt;课程网址：&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="人工智能" scheme="http://wyqz.top/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
-    
-    
-    <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
-    
-    <category term="DeepLearning" scheme="http://wyqz.top/tags/DeepLearning/"/>
     
   </entry>
   
