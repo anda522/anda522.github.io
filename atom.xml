@@ -6,7 +6,7 @@
   <link href="http://wyqz.top/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2024-01-30T01:10:02.608Z</updated>
+  <updated>2024-02-08T07:03:14.565Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CMake命令总结</title>
+    <link href="http://wyqz.top/p/1592556892.html"/>
+    <id>http://wyqz.top/p/1592556892.html</id>
+    <published>2024-02-08T06:58:33.000Z</published>
+    <updated>2024-02-08T07:03:14.565Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;cmake知识记录&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#cmake知识记录&quot;&gt;&lt;/a&gt; CMake知识记录&lt;/h1&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="CPP" scheme="http://wyqz.top/categories/CPP/"/>
+    
+    
+    <category term="CPP" scheme="http://wyqz.top/tags/CPP/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux知识收集</title>
     <link href="http://wyqz.top/p/150241679.html"/>
     <id>http://wyqz.top/p/150241679.html</id>
     <published>2024-01-30T00:52:06.000Z</published>
-    <updated>2024-01-30T01:10:02.608Z</updated>
+    <updated>2024-01-30T01:11:20.367Z</updated>
     
     
       
@@ -49,7 +75,7 @@
     <link href="http://wyqz.top/p/7384120.html"/>
     <id>http://wyqz.top/p/7384120.html</id>
     <published>2024-01-29T08:08:30.000Z</published>
-    <updated>2024-01-29T08:14:04.991Z</updated>
+    <updated>2024-01-30T04:37:02.952Z</updated>
     
     
       
@@ -424,7 +450,7 @@
     <link href="http://wyqz.top/p/3804173379.html"/>
     <id>http://wyqz.top/p/3804173379.html</id>
     <published>2023-03-26T02:51:42.000Z</published>
-    <updated>2023-07-18T14:09:51.822Z</updated>
+    <updated>2024-02-01T10:42:13.950Z</updated>
     
     
       
@@ -439,9 +465,7 @@
     
     
     
-    <category term="人工智能" scheme="http://wyqz.top/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
-    
-    <category term="Python" scheme="http://wyqz.top/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/Python/"/>
+    <category term="Python" scheme="http://wyqz.top/categories/Python/"/>
     
     
     <category term="Python" scheme="http://wyqz.top/tags/Python/"/>
@@ -455,7 +479,7 @@
     <link href="http://wyqz.top/p/2946568862.html"/>
     <id>http://wyqz.top/p/2946568862.html</id>
     <published>2023-03-24T08:29:49.000Z</published>
-    <updated>2023-04-14T03:13:17.846Z</updated>
+    <updated>2024-02-01T10:42:24.382Z</updated>
     
     
       
@@ -469,9 +493,7 @@
     
     
     
-    <category term="人工智能" scheme="http://wyqz.top/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
-    
-    <category term="Python" scheme="http://wyqz.top/categories/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/Python/"/>
+    <category term="Python" scheme="http://wyqz.top/categories/Python/"/>
     
     
     <category term="Pandas" scheme="http://wyqz.top/tags/Pandas/"/>
@@ -536,32 +558,6 @@
     <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
     
     <category term="Latex" scheme="http://wyqz.top/tags/Latex/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>组合数学常用公式</title>
-    <link href="http://wyqz.top/p/3821341893.html"/>
-    <id>http://wyqz.top/p/3821341893.html</id>
-    <published>2023-02-09T03:58:11.000Z</published>
-    <updated>2023-12-31T04:53:07.805Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;组合数学常用公式&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#组合数学常用公式&quot;&gt;&lt;/a&gt; 组合数学常用公式&lt;/h1&gt;
-&lt;h2 id=&quot;二项式定理&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="数论" scheme="http://wyqz.top/categories/%E6%95%B0%E8%AE%BA/"/>
-    
-    
-    <category term="组合数学" scheme="http://wyqz.top/tags/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   

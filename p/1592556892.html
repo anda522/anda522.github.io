@@ -4,15 +4,16 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="Hexo踩坑实记, ZZU 行码棋">
+    <meta name="keywords" content="CMake命令总结, ZZU 行码棋">
     <!-- 百度和谷歌统计验证 -->
     <meta name="baidu-site-verification" content="code-L7AVcsbU14" />
     <meta name="google-site-verification" content="x4QfrBHn9imI1RhTNCB8RD8Q2Rx6rE_zylSBptBgdZY" />
-    <meta name="description" content=" Hexo踩坑实记
-自从使用了Hexo框架搭建博客，我就经历了诸多苦难，很多需要修改的地方，一步步踩坑过来，今天希望一一进行记录。
- 主题自定义修改
- 1 代码块修改
-由于我Hexo最近升级到了 7.0 版本，新版本自带了 prismjs ">
+    <meta name="description" content=" CMake知识记录
+
+ 不同环境下
+ 1 Windows MinGW + CMake
+Windows默认使用nmake编译，如果我们要使用 MinGW 来编译需要指定命令行参数。
+cmake -G &#34;MinGW Makefiles&#34; ..">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -20,7 +21,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hexo踩坑实记 | 行码棋</title>
+    <title>CMake命令总结 | 行码棋</title>
     <link rel="icon" type="image/png" href="/medias/logo.png" defer>
 
     <link rel="stylesheey" type="text/css" href="//at.alicdn.com/t/c/font_3948353_97hiukrvyh.css" defer>
@@ -325,13 +326,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/24.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        Hexo踩坑实记
+                        CMake命令总结
                     </div>
                 </div>
             </div>
@@ -453,8 +454,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/Hexo/" target="_blank">
-                            <span class="chip bg-color">Hexo</span>
+                        <a href="/tags/CPP/" target="_blank">
+                            <span class="chip bg-color">CPP</span>
                         </a>
                         
                     </div>
@@ -465,8 +466,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/%E5%89%8D%E7%AB%AF/" class="post-category" target="_blank">
-                            前端
+                        <a href="/categories/CPP/" class="post-category" target="_blank">
+                            CPP
                         </a>
                         
                     </div>
@@ -477,12 +478,12 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-01-12
+                    2024-02-08
                 </div>
                 <!-- 显示更新日期 -->
                 <div class="post-update-date info-break-policy">
                     <i class="fa fa-history fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-14
+                    2024-02-08
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -496,14 +497,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2k
+                    2.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    10 分
                 </div>
                 
                 
@@ -519,180 +520,306 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="hexo踩坑实记"><a class="markdownIt-Anchor" href="#hexo踩坑实记"></a> Hexo踩坑实记</h1>
-<p>自从使用了Hexo框架搭建博客，我就经历了诸多苦难，很多需要修改的地方，一步步踩坑过来，今天希望一一进行记录。</p>
-<h1 id="主题自定义修改"><a class="markdownIt-Anchor" href="#主题自定义修改"></a> 主题自定义修改</h1>
-<h2 id="1-代码块修改"><a class="markdownIt-Anchor" href="#1-代码块修改"></a> 1 代码块修改</h2>
-<p>由于我Hexo最近升级到了 <code>7.0</code> 版本，新版本自带了 <code>prismjs</code> 插件，所以对此进行修改。我希望进行代码高亮显示，不适用自带的 <code>highlight</code> 。</p>
-<p>首先需要卸载掉 <code>hexo-prismjs-plugin</code> 插件</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> uninstall hexo-prism-plugin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>然后修改博客根目录下的配置文件</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">syntax_highlighter</span><span class="token punctuation">:</span> prismjs
-<span class="token comment"># highlight 不启用, 使用prismjs</span>
-<span class="token comment"># highlight:</span>
-<span class="token comment">#   auto_detect: false</span>
-<span class="token comment">#   line_number: false</span>
-<span class="token comment">#   line_threshold: 0</span>
-<span class="token comment">#   tab_replace: ''</span>
-<span class="token comment">#   exclude_languages:</span>
-<span class="token comment">#     - example</span>
-<span class="token comment">#   wrap: true</span>
-<span class="token comment">#   hljs: false</span>
-<span class="token key atrule">prismjs</span><span class="token punctuation">:</span>
-  <span class="token key atrule">preprocess</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-  <span class="token key atrule">line_number</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-  <span class="token key atrule">line_threshold</span><span class="token punctuation">:</span> <span class="token number">0</span>
-  <span class="token key atrule">tab_replace</span><span class="token punctuation">:</span> <span class="token string">''</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>然后再引入对应的 <code>js</code> 和 <code>css</code> 文件即可，我下载了我看着不错的对应的主题，在 <a href="https://prismjs.com/download.html">prismjs官网</a> 下载两个文件，我将其放置在了 <code>source/libs/prism</code> 文件夹下了，然后还要在主题配置文件夹下配置路径：</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">libs</span><span class="token punctuation">:</span>
-	<span class="token key atrule">css</span><span class="token punctuation">:</span>
-		<span class="token key atrule">prism</span><span class="token punctuation">:</span>  /libs/prism/prism.css
-	<span class="token key atrule">js</span><span class="token punctuation">:</span>
-		<span class="token key atrule">prism</span><span class="token punctuation">:</span> /libs/prism/prism.js<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><code>post.ejs</code> 文件末尾加入：</p>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>&lt;%- theme.libs.js.prism %&gt;<span class="token punctuation">"</span></span> <span class="token attr-name">defer</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.bootcdn.net/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.js<span class="token punctuation">"</span></span> <span class="token attr-name">defer</span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<p><code>head.ejs</code> 文件中加入 <code>css</code> ：</p>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>&lt;%- theme.libs.css.prism %&gt;<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://cdn.bootcdn.net/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<blockquote>
-<p>可以参考 <a href="https://hexo.io/zh-cn/docs/syntax-highlight#preprocess">官方文档</a></p>
-</blockquote>
-<h2 id="2-目录添加背景框和滚动条"><a class="markdownIt-Anchor" href="#2-目录添加背景框和滚动条"></a> 2 目录添加背景框和滚动条</h2>
-<p>在 <code>post-detail-toc.ejs</code> 文件下修改对应代码：</p>
-<p>最主要的两个属性：最大高度和纵向溢出，需要修改好。</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">.toc-widget</span> <span class="token punctuation">{</span>
-    <span class="token property">width</span><span class="token punctuation">:</span> 340px<span class="token punctuation">;</span>
-    <span class="token property">padding-left</span><span class="token punctuation">:</span> 20px<span class="token punctuation">;</span>
-    <span class="token property">padding-bottom</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
-    <span class="token property">padding-top</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
-    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>255<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> 0.9<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token property">border-radius</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
-    <span class="token property">max-height</span><span class="token punctuation">:</span> 70vh<span class="token punctuation">;</span>
-    <span class="token property">overflow-y</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
-    <span class="token property">box-shadow</span><span class="token punctuation">:</span> 0 10px 35px 2px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> .15<span class="token punctuation">)</span><span class="token punctuation">,</span> 0 5px 15px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> .07<span class="token punctuation">)</span><span class="token punctuation">,</span> 0 2px 5px -5px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> 0<span class="token punctuation">,</span> .1<span class="token punctuation">)</span> <span class="token important">!important</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="3-添加文章更新日期"><a class="markdownIt-Anchor" href="#3-添加文章更新日期"></a> 3 添加文章更新日期</h2>
-<p>在 <code>post-detail.ejs</code> 文件下找到对应位置添加</p>
-<pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>post-date info-break-policy<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fa fa-calendar-minus-o fa-fw<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> <span class="token function">__</span><span class="token punctuation">(</span><span class="token string">'publishDate'</span><span class="token punctuation">)</span> </span><span class="token delimiter punctuation">%&gt;</span></span>:<span class="token entity named-entity" title="&nbsp;">&amp;nbsp;</span><span class="token entity named-entity" title="&nbsp;">&amp;nbsp;</span>
-    <span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> <span class="token function">date</span><span class="token punctuation">(</span>page<span class="token punctuation">.</span>date<span class="token punctuation">,</span> <span class="token string">'YYYY-MM-DD'</span><span class="token punctuation">)</span> </span><span class="token delimiter punctuation">%&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
-<span class="token comment">&lt;!-- 显示更新日期 --&gt;</span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>post-update-date info-break-policy<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fa fa-history fa-fw<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> <span class="token function">__</span><span class="token punctuation">(</span><span class="token string">'updated'</span><span class="token punctuation">)</span> </span><span class="token delimiter punctuation">%&gt;</span></span>:<span class="token entity named-entity" title="&nbsp;">&amp;nbsp;</span><span class="token entity named-entity" title="&nbsp;">&amp;nbsp;</span>
-    <span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> <span class="token function">date</span><span class="token punctuation">(</span>page<span class="token punctuation">.</span>updated<span class="token punctuation">,</span> <span class="token string">'YYYY-MM-DD'</span><span class="token punctuation">)</span> </span><span class="token delimiter punctuation">%&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>我因为使用了 <code>updated</code> 解释，所以要在 <code>themes/matery/languages/zh-CN.yml</code> 中添加</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">updated</span><span class="token punctuation">:</span> 更新日期<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h2 id="4-markdown数学公式支持"><a class="markdownIt-Anchor" href="#4-markdown数学公式支持"></a> 4 Markdown数学公式支持</h2>
-<p>由于原有的 <code>Mathjax</code> 加载太慢，且对于繁杂的公式无法渲染，我果断更换。</p>
-<ul>
-<li>卸载原来的 <code>hexo-renderer-marked</code></li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> uninstall hexo-renderer-marked <span class="token parameter variable">--save</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ul>
-<li>安装 <code>hexo-renderer-markdown-it-plus</code></li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-renderer-markdown-it-plus <span class="token parameter variable">--save</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<ul>
-<li>最后安装hexo-math，否则会出现公式渲染下还有公式的情况。</li>
-</ul>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-math <span class="token parameter variable">--save</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>会发现，公式中的换行<code>//</code> 终于可以渲染了。</p>
-<blockquote>
-<p>参考：<a href="https://blog.csdn.net/subtitle_/article/details/130004464">Markdown数学公式支持</a></p>
-</blockquote>
-<h2 id="5-valine评论系统"><a class="markdownIt-Anchor" href="#5-valine评论系统"></a> 5 valine评论系统</h2>
-<h2 id="6-添加阅读背景图"><a class="markdownIt-Anchor" href="#6-添加阅读背景图"></a> 6 添加阅读背景图</h2>
-<h2 id="7-文章永久链接"><a class="markdownIt-Anchor" href="#7-文章永久链接"></a> 7 文章永久链接</h2>
-<h2 id="8-添加google广告"><a class="markdownIt-Anchor" href="#8-添加google广告"></a> 8 添加Google广告</h2>
-<h2 id="9-主页文章卡片栏添加更新时间"><a class="markdownIt-Anchor" href="#9-主页文章卡片栏添加更新时间"></a> 9 主页文章卡片栏添加更新时间</h2>
-<p>我想要在主页文章的整体浏览上添加文章的更新时间，而不是只显示创建时间，因此进行修改。</p>
-<p>我发现每个文章卡片在一个 <code>&lt;div class='card'&gt;&lt;/div&gt;</code> 标签下，而文章的创建日期和对应分类的信息在 <code>&lt;div class="publish-info"&gt;&lt;/div&gt;</code> 标签下，因此需要对该标签进行修改。</p>
-<p>原内容为：</p>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>publish-date<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fa fa-clock-o fa-fw icon-date<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>&lt;%= date(post.date, config.date_format) %&gt;
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>我需要再添加一个更新日期，同时还要进行一番排版。我让发布日期和更新日期纵向排列，同时日期栏和分类信息栏横向排列，所以我采用 <code>flex</code> 布局，将时间放在 <code>time-section</code> 的 <code>div</code> 标签中，同时需要对 <code>css</code> 文件进行修改。</p>
-<p><code>index.ejs</code> 文件进行修改：</p>
-<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>time-section<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>publish-date<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fa fa-clock-o fa-fw icon-date<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>&lt;%= date(post.date, config.date_format) %&gt;
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>update-date<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fa fa-history fa-fw icon-date<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>&lt;%= date(post.updated, config.date_format) %&gt;
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><code>matery.css</code> 文件修改如下：</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/* 日期和分类信息横向排列 */</span>
-<span class="token selector">.publish-info</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
-    <span class="token property">justify-content</span><span class="token punctuation">:</span> space-between<span class="token punctuation">;</span> <span class="token comment">/* 空白只在子元素之间均匀分配,两端不分配 */</span>
+                <h1 id="cmake知识记录"><a class="markdownIt-Anchor" href="#cmake知识记录"></a> CMake知识记录</h1>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://subingwen.cn/cmake/CMake-primer/image-20230309130644912.png" alt="CMake和Make的关系"></p>
+<h1 id="不同环境下"><a class="markdownIt-Anchor" href="#不同环境下"></a> 不同环境下</h1>
+<h2 id="1-windows-mingw-cmake"><a class="markdownIt-Anchor" href="#1-windows-mingw-cmake"></a> 1 Windows MinGW + CMake</h2>
+<p>Windows默认使用nmake编译，如果我们要使用 <code>MinGW</code> 来编译需要指定命令行参数。</p>
+<pre class="line-numbers language-none"><code class="language-none">cmake -G "MinGW Makefiles" ..<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>如果需要在 <code>cmake</code> 生成makefile文件的基础上构建项目，我们需要使用 <code>make</code> 命令，可以在 <code>MinGW</code> 编译器的 <code>bin</code> 文件夹下找到 <code>mingw32-make.exe</code> 文件，复制一份将名称重命名为 <code>make.exe</code> 。注意你也需要保证 <code>MinGW</code> 已经配置在环境变量中。</p>
+<p>然后你就可以正常使用<code>cmake</code> 生成makefile文件和并且使用 <code>make</code> 来构建项目了。</p>
+<p>一键命令，需要在Windows下，使用MinGW编译器，且命令行窗口为cmd：</p>
+<pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">cd 项目根目录
+rmdir /s/q build &amp;&amp; mkdir build &amp;&amp; cd build &amp;&amp; cmake -G "MinGW Makefiles" .. &amp;&amp; make<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="2-linux"><a class="markdownIt-Anchor" href="#2-linux"></a> 2 Linux</h2>
+<p>待补</p>
+<h1 id="一个简单的构建例子"><a class="markdownIt-Anchor" href="#一个简单的构建例子"></a> 一个简单的构建例子</h1>
+<p>在 <code>Demo</code> 文件夹下的目录树：</p>
+<pre class="line-numbers language-none"><code class="language-none">|─ CMakeLists.txt
+|─ main.cpp
+|─ utils.cpp
+|─ utils.hpp
+|─ build<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>utils.hpp：头文件，hpp是C++头文件的一种写法，此文件中不仅可以定义，也可以进行对应实现，不过下面没有体现。</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">sub</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">mul</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">double</span> <span class="token function">divd</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>utils.cpp</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">return</span> a <span class="token operator">+</span> b<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-<span class="token comment">/* 发布日期和更新日期纵向排列 */</span>
-<span class="token selector">.publish-info .time-section</span> <span class="token punctuation">{</span>
-    <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
-    <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>同时因为我加了新的图标，原来的<strong>发布图标</strong>有内间距描述，我仿照它添加我的新图标的间距描述，用来对齐。</p>
-<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/* 已有的间距描述 */</span>
-<span class="token selector">.publish-date .icon-date</span> <span class="token punctuation">{</span>
-    <span class="token property">padding-right</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">sub</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">return</span> a <span class="token operator">-</span> b<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-<span class="token comment">/* 新加的间距描述 */</span>
-<span class="token selector">.update-date .icon-date</span> <span class="token punctuation">{</span>
-    <span class="token property">padding-right</span><span class="token punctuation">:</span> 5px<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token keyword">int</span> <span class="token function">mul</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">return</span> a <span class="token operator">*</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">double</span> <span class="token function">divd</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">return</span> <span class="token punctuation">(</span><span class="token keyword">double</span><span class="token punctuation">)</span>a <span class="token operator">/</span> b<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>main.cpp</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"utils.hpp"</span></span>
+
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">int</span> a<span class="token punctuation">,</span> b<span class="token punctuation">;</span>
+	std<span class="token double-colon punctuation">::</span>cin <span class="token operator">&gt;&gt;</span> a <span class="token operator">&gt;&gt;</span> b<span class="token punctuation">;</span>
+	std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token function">add</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
+	std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token function">sub</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
+	std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token function">mul</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
+	std<span class="token double-colon punctuation">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token function">divd</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token string">"\n"</span><span class="token punctuation">;</span>
+	<span class="token function">system</span><span class="token punctuation">(</span><span class="token string">"pause"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>CMakeLists.txt</p>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token comment"># 最小版本</span>
+<span class="token keyword">cmake_minimum_required</span><span class="token punctuation">(</span><span class="token property">VERSION</span> <span class="token number">3.0</span><span class="token punctuation">)</span>
+<span class="token comment"># 声明一个工程</span>
+<span class="token keyword">project</span><span class="token punctuation">(</span>Demo<span class="token punctuation">)</span>
+<span class="token comment"># 定义工程会生成一个可执行程序</span>
+<span class="token keyword">add_executable</span><span class="token punctuation">(</span>app main.cpp utils.cpp<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>一般我们会让cmake的结果存在另外一个新建的build目录，防止生成内容和已有项目产生混乱。在build目录中执行命令：（此时采用的是Windows MinGW编译器）</p>
+<pre class="line-numbers language-none"><code class="language-none">cmake -G "MinGW Makefiles" ..<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>然后在build文件夹中执行 <code>make</code> 命令即可构建可执行程序完成。</p>
+<h1 id="命令介绍"><a class="markdownIt-Anchor" href="#命令介绍"></a> 命令介绍</h1>
+<h2 id="1-cmake_minimum_required"><a class="markdownIt-Anchor" href="#1-cmake_minimum_required"></a> 1 cmake_minimum_required</h2>
+<p>作用：指定使用的 cmake 的最低版本</p>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token keyword">cmake_minimum_required</span><span class="token punctuation">(</span><span class="token number">3.5</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="2-project"><a class="markdownIt-Anchor" href="#2-project"></a> 2 project</h2>
+<p>作用：定义工程名称，并可指定工程的版本、工程描述、web主页地址、支持的语言（默认情况支持所有语言），如果不需要这些都是可以忽略的，只需要指定出工程名字即可。</p>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token comment"># PROJECT 指令的语法是：</span>
+<span class="token keyword">project</span><span class="token punctuation">(</span>&lt;PROJECT-<span class="token property">NAME</span><span class="token punctuation">&gt;</span> [&lt;language-name<span class="token punctuation">&gt;</span>...]<span class="token punctuation">)</span>
+<span class="token keyword">project</span><span class="token punctuation">(</span>&lt;PROJECT-<span class="token property">NAME</span><span class="token punctuation">&gt;</span>
+       [<span class="token property">VERSION</span> &lt;major<span class="token punctuation">&gt;</span>[.&lt;minor<span class="token punctuation">&gt;</span>[.&lt;patch<span class="token punctuation">&gt;</span>[.&lt;tweak<span class="token punctuation">&gt;</span>]]]]
+       [DESCRIPTION &lt;project-description-string<span class="token punctuation">&gt;</span>]
+       [HOMEPAGE_URL &lt;url-string<span class="token punctuation">&gt;</span>]
+       [LANGUAGES &lt;language-name<span class="token punctuation">&gt;</span>...]<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>如：</p>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token comment"># 项目名称为Demo</span>
+<span class="token keyword">project</span><span class="token punctuation">(</span>Demo<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="3-add_executable"><a class="markdownIt-Anchor" href="#3-add_executable"></a> 3 add_executable</h2>
+<p>作用：添加可执行程序名称和源文件</p>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token keyword">add_executable</span><span class="token punctuation">(</span>可执行程序名 源文件名称<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>这样生成的可执行程序的名称就为指定的名称，源文件为 <code>.c .cpp</code> 文件，可以为多个，多个文件用空格或者 <code>;</code> 隔开。</p>
+<h2 id="4-set"><a class="markdownIt-Anchor" href="#4-set"></a> 4 set</h2>
+<p>作用：定义变量</p>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token comment"># SET 指令的语法是：</span>
+<span class="token comment"># [] 中的参数为可选项, 如不需要可以不写</span>
+<span class="token function">SET</span><span class="token punctuation">(</span><span class="token property">NAME</span> [<span class="token property">VALUE</span>] [<span class="token variable">CACHE</span> <span class="token property">TYPE</span> DOCSTRING [FORCE]]<span class="token punctuation">)</span>
+<span class="token comment"># NAME：变量名   VALUE：变量值</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>定义之后就可以使用 <code>${}</code> 使用变量了。</p>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token keyword">set</span><span class="token punctuation">(</span>SRC_LIST utils.cpp main.cpp<span class="token punctuation">)</span>
+<span class="token keyword">add_executable</span><span class="token punctuation">(</span>app <span class="token punctuation">${</span>SRC_LIST<span class="token punctuation">}</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="5-搜索文件"><a class="markdownIt-Anchor" href="#5-搜索文件"></a> 5 搜索文件</h2>
+<h3 id="51-aux_source_directory"><a class="markdownIt-Anchor" href="#51-aux_source_directory"></a> 5.1 aux_source_directory</h3>
+<p>作用：查找某个路径下的所有源文件</p>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token comment"># dir: 要搜索的目录</span>
+<span class="token comment"># variable: 将搜索到的源文件列表存在variable变量中</span>
+<span class="token keyword">aux_source_directory</span><span class="token punctuation">(</span>&lt;dir<span class="token punctuation">&gt;</span> &lt;variable<span class="token punctuation">&gt;</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h3 id="52-file"><a class="markdownIt-Anchor" href="#52-file"></a> 5.2 file</h3>
+<p>作用：搜索文件</p>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token keyword">file</span><span class="token punctuation">(</span>GLOB/GLOB_RECURSE 变量名 要搜索的文件路径和文件类型<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <blockquote>
-<p>注意：由于很多页面都有文章卡片的展示，所以也要同样对相应位置进行修改，其他出现文章卡片的位置：标签页、分类页、归档页、文章底部的前一篇和后一篇。</p>
+<p>注意：通过file搜索出来的都是绝对路径</p>
 </blockquote>
-<h1 id="踩坑填坑"><a class="markdownIt-Anchor" href="#踩坑填坑"></a> 踩坑填坑</h1>
-<h2 id="1-不蒜子计数文章阅读次数出错"><a class="markdownIt-Anchor" href="#1-不蒜子计数文章阅读次数出错"></a> 1 不蒜子计数文章阅读次数出错</h2>
-<p>发现是请求头的问题，在对应地方，添加 <code>&lt;meta name="referrer" content="no-referrer-when-downgrade"&gt;</code> 代码</p>
-<pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%</span><span class="token language-javascript"> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>busuanziStatistics <span class="token operator">&amp;&amp;</span> theme<span class="token punctuation">.</span>busuanziStatistics<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> </span><span class="token delimiter punctuation">%&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">async</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> theme<span class="token punctuation">.</span>libs<span class="token punctuation">.</span>js<span class="token punctuation">.</span>busuanzi </span><span class="token delimiter punctuation">%&gt;</span></span><span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>referrer<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>no-referrer-when-downgrade<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
-<span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%</span><span class="token language-javascript"> <span class="token punctuation">}</span> </span><span class="token delimiter punctuation">%&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>此处可以选两个参数：</p>
+<ul>
+<li>GLOB：将指定目录下搜索到的满足条件的所有文件名生成一个列表，并将其存储到变量中。</li>
+<li>GLOB_RECURSE：递归搜索指定目录，将搜索到的满足条件的文件名生成一个列表，并将其存储到变量中。</li>
+</ul>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token keyword">file</span><span class="token punctuation">(</span>GLOB MAIN_SRC <span class="token punctuation">${</span><span class="token variable">CMAKE_CURRENT_SOURCE_DIR</span><span class="token punctuation">}</span>/src/*.cpp<span class="token punctuation">)</span>
+<span class="token keyword">file</span><span class="token punctuation">(</span>GLOB MAIN_HEAD <span class="token punctuation">${</span><span class="token variable">CMAKE_CURRENT_SOURCE_DIR</span><span class="token punctuation">}</span>/include/*.h<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="6-include_directories"><a class="markdownIt-Anchor" href="#6-include_directories"></a> 6 include_directories</h2>
+<p>作用：包含头文件，指定头文件路径，便可包含此路径下的头文件</p>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token keyword">include_directories</span><span class="token punctuation">(</span>headpath<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="7-add_library"><a class="markdownIt-Anchor" href="#7-add_library"></a> 7 add_library</h2>
+<p>有些源代码我们不需要将其编译成可执行程序，而是制作成静态库或动态库文件让第三方使用。</p>
+<h3 id="71-制作动态库"><a class="markdownIt-Anchor" href="#71-制作动态库"></a> 7.1 制作动态库</h3>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token keyword">add_library</span><span class="token punctuation">(</span>库名 <span class="token namespace">SHARED</span> 源文件<span class="token number">1</span> [源文件<span class="token number">2</span>] ...<span class="token punctuation">)</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>动态库的最终库名分为三部分：<code>lib</code> + <code>库名</code> + <code>.so</code> ，我们只需要指定库名即可。</p>
+<h3 id="72-制作静态库"><a class="markdownIt-Anchor" href="#72-制作静态库"></a> 7.2 制作静态库</h3>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token keyword">add_library</span><span class="token punctuation">(</span>库名 <span class="token namespace">STATIC</span> 源文件<span class="token number">1</span> [源文件<span class="token number">2</span>] ...<span class="token punctuation">)</span> <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>静态库的最终库名分为三部分：<code>lib</code> + <code>库名</code> + <code>.a</code> ，我们只需要指定库名即可。</p>
+<h2 id="8-加载库文件"><a class="markdownIt-Anchor" href="#8-加载库文件"></a> 8 加载库文件</h2>
+<p>动态库和静态库的区别：</p>
+<ul>
+<li>静态库会在生成可执行程序的链接阶段被打包到可执行程序中，所以可执行程序启动，静态库就被加载到内存中了。</li>
+<li>动态库在生成可执行程序的链接阶段不会被打包到可执行程序中，当可执行程序被启动并且调用了动态库中的函数的时候，动态库才会被加载到内存。所以在cmake中，<strong>需要将动态库链接的命令写在生成了可执行文件（即add_executable）之后</strong></li>
+</ul>
+<h3 id="81-link_libraries-加载静态库"><a class="markdownIt-Anchor" href="#81-link_libraries-加载静态库"></a> 8.1 link_libraries 加载静态库</h3>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token comment"># 静态库如果不是系统的，需要包含静态库路径</span>
+<span class="token keyword">link_directories</span><span class="token punctuation">(</span>&lt;lib path<span class="token punctuation">&gt;</span><span class="token punctuation">)</span>
+<span class="token comment"># 链接静态库</span>
+<span class="token keyword">link_libraries</span><span class="token punctuation">(</span>&lt;static lib<span class="token punctuation">&gt;</span> [&lt;static lib<span class="token punctuation">&gt;</span>...]<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>
+<p>参数1：指定出要链接的静态库的名字</p>
+<ul>
+<li>可以是全名 <code>libxxx.a</code></li>
+<li>也可以是掐头（<code>lib</code>）去尾（<code>.a</code>）之后的名字 <code>xxx</code></li>
+</ul>
+</li>
+<li>
+<p>参数2-N：要链接的其它静态库的名字</p>
+</li>
+</ul>
+<h3 id="82-target_link_libraries-加载动态库"><a class="markdownIt-Anchor" href="#82-target_link_libraries-加载动态库"></a> 8.2 target_link_libraries 加载动态库</h3>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token comment"># 动态库如果不是系统的，需要包含动态库路径，也是这个命令</span>
+<span class="token keyword">link_directories</span><span class="token punctuation">(</span>&lt;lib path<span class="token punctuation">&gt;</span><span class="token punctuation">)</span>
+<span class="token comment"># 链接动态库</span>
+<span class="token keyword">target_link_libraries</span><span class="token punctuation">(</span>
+    &lt;target<span class="token punctuation">&gt;</span> 
+    &lt;<span class="token namespace">PRIVATE</span>|<span class="token namespace">PUBLIC</span>|<span class="token namespace">INTERFACE</span><span class="token punctuation">&gt;</span> &lt;item<span class="token punctuation">&gt;</span>... 
+    [&lt;<span class="token namespace">PRIVATE</span>|<span class="token namespace">PUBLIC</span>|<span class="token namespace">INTERFACE</span><span class="token punctuation">&gt;</span> &lt;item<span class="token punctuation">&gt;</span>...]...<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
-<p>参考：<a href="https://jdhao.github.io/2020/10/31/busuanzi_pv_count_error/">解决不蒜子 (busuanzi) 文章计数出错问题</a></p>
+<p><code>target_link_libraries</code> 既可以链接动态库文件，也可以链接静态库文件。</p>
 </blockquote>
-<h1 id="网站加速优化"><a class="markdownIt-Anchor" href="#网站加速优化"></a> 网站加速优化</h1>
-<h2 id="1-图片压缩"><a class="markdownIt-Anchor" href="#1-图片压缩"></a> 1 图片压缩</h2>
-<h2 id="2-cdn优化"><a class="markdownIt-Anchor" href="#2-cdn优化"></a> 2 CDN优化</h2>
-<p>采用第三方CDN对 <code>js</code> 和 <code>css</code> 文件进行优化。如</p>
+<h2 id="9-message"><a class="markdownIt-Anchor" href="#9-message"></a> 9 message</h2>
+<p>作用：打日志信息。</p>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token keyword">message</span><span class="token punctuation">(</span>[STATUS|WARNING|AUTHOR_WARNING|FATAL_ERROR|SEND_ERROR] <span class="token string">"message to display"</span> ...<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <ul>
-<li><a href="https://www.bootcdn.cn/">https://www.bootcdn.cn/</a></li>
+<li>(无) ：重要消息</li>
+<li>STATUS ：非重要消息</li>
+<li>WARNING：CMake 警告, 会继续执行</li>
+<li>AUTHOR_WARNING：CMake 警告 (dev), 会继续执行</li>
+<li>SEND_ERROR：CMake 错误, 继续执行，但是会跳过生成的步骤</li>
+<li>FATAL_ERROR：CMake 错误, 终止所有处理过程</li>
 </ul>
-<h1 id="更新日志"><a class="markdownIt-Anchor" href="#更新日志"></a> 更新日志</h1>
-<p>2022-06-23：搭建该博客网站，采用Hexo博客框架，使用Github Page作为服务端</p>
-<p>2022-06-24：采用Matery主题</p>
-<p>2022-06-25：网站域名更新，变为<a href="https://wyqz.top">https://wyqz.top</a></p>
-<p>2022-06-25：添加百度统计，统计网站流量</p>
-<p>2022-06-30：记录更新日志内容（前面都是凭的记忆写的）</p>
-<p>2022-07-02：添加鼠标指针特效，修改菜单栏文字显示</p>
-<p>2022-07-04：添加动态线条背景，valine评论request失败bug修复（js版本过低）</p>
-<p>2022-07-26：项目所有代码同步至GitHub</p>
-<p>2022-08-02：网站添加背景图</p>
-<p>2022-08-03：添加备案号，准备更新域名</p>
-<p>2022-08-04：优化网站打开速度，压缩各种图片，网站链接更新为永久链接</p>
-<p>2023-01-02：添加valine评论邮件通知系统，评论时必填邮箱</p>
-<p>2023-01-23：修改网站字体，添加自定义js/css文件</p>
-<p>2023-03-14：网站所有JS/CSS添加CDN加速，网站图片也添加CDN加速（jsdeliver加速）</p>
-<p>2023-04-12：网站CSS、JS全部使用开源资源CDN加速，网站打开速度步上新台阶（jsdeliver全部转为本地存取）</p>
-<p>2023-04-13：目录框添加白色背景，样式适配其他卡片样式（GPT真的太强了，没它我还真不一定会加这个功能）</p>
-<p>2023-04-14：修改部分feature图片，将200-400k的图片进行了替换，压缩访问资源大小</p>
-<p>2023-11-14：修改部分feature图片，提高观感，进一步压缩图片大小</p>
-<p>2023-12-16：自建私有git服务，使用私有git进行项目部署，添加底部音乐栏，4首320K音质</p>
-<p>2023-12-17：解决文章阅读次数统计问题，referrer头问题，在js引入处增加限制即可</p>
-<p>2023-12-20：文章添加更新时间 &amp; 鼠标移至评论区目录隐藏</p>
-<p>2024-01-11：更新Hexo至7.0，出现诸多兼容性问题，已修复代码显示、图片显示、代码高亮、行号显示问题</p>
-<p>2024-01-12：添加代码行号分隔线，添加目录滚动条，移除目录隐藏功能</p>
-<p>2024-01-13：增加异步请求，优化博客访问速度，增加图片懒加载功能，文章卡片添加更新时间</p>
-<h1 id="参考博客"><a class="markdownIt-Anchor" href="#参考博客"></a> ⭐ 参考博客 ⭐</h1>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token comment"># 输出一般日志信息</span>
+<span class="token keyword">message</span><span class="token punctuation">(</span>STATUS <span class="token string">"source path: <span class="token interpolation"><span class="token punctuation">${</span><span class="token variable">PROJECT_SOURCE_DIR</span><span class="token punctuation">}</span></span>"</span><span class="token punctuation">)</span>
+<span class="token comment"># 输出警告信息</span>
+<span class="token keyword">message</span><span class="token punctuation">(</span>WARNING <span class="token string">"source path: <span class="token interpolation"><span class="token punctuation">${</span><span class="token variable">PROJECT_SOURCE_DIR</span><span class="token punctuation">}</span></span>"</span><span class="token punctuation">)</span>
+<span class="token comment"># 输出错误信息</span>
+<span class="token keyword">message</span><span class="token punctuation">(</span>FATAL_ERROR <span class="token string">"source path: <span class="token interpolation"><span class="token punctuation">${</span><span class="token variable">PROJECT_SOURCE_DIR</span><span class="token punctuation">}</span></span>"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="10-list"><a class="markdownIt-Anchor" href="#10-list"></a> 10 list</h2>
+<h3 id="101-append拼接"><a class="markdownIt-Anchor" href="#101-append拼接"></a> 10.1 append拼接</h3>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token keyword">list</span><span class="token punctuation">(</span>APPEND &lt;list<span class="token punctuation">&gt;</span> [&lt;element<span class="token punctuation">&gt;</span> ...]<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><code>APPEND</code> 表示数据追加，把 <code>element</code> 追加到 <code>list</code> 中。</p>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token keyword">cmake_minimum_required</span><span class="token punctuation">(</span><span class="token property">VERSION</span> <span class="token number">3.0</span><span class="token punctuation">)</span>
+<span class="token keyword">project</span><span class="token punctuation">(</span>TEST<span class="token punctuation">)</span>
+<span class="token keyword">set</span><span class="token punctuation">(</span>TEMP <span class="token string">"hello,world"</span><span class="token punctuation">)</span>
+<span class="token keyword">file</span><span class="token punctuation">(</span>GLOB SRC_1 <span class="token punctuation">${</span><span class="token variable">PROJECT_SOURCE_DIR</span><span class="token punctuation">}</span>/src1/*.cpp<span class="token punctuation">)</span>
+<span class="token keyword">file</span><span class="token punctuation">(</span>GLOB SRC_2 <span class="token punctuation">${</span><span class="token variable">PROJECT_SOURCE_DIR</span><span class="token punctuation">}</span>/src2/*.cpp<span class="token punctuation">)</span>
+<span class="token comment"># 追加(拼接)</span>
+<span class="token keyword">list</span><span class="token punctuation">(</span>APPEND SRC_1 <span class="token punctuation">${</span>SRC_1<span class="token punctuation">}</span> <span class="token punctuation">${</span>SRC_2<span class="token punctuation">}</span> <span class="token punctuation">${</span>TEMP<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">message</span><span class="token punctuation">(</span>STATUS <span class="token string">"message: <span class="token interpolation"><span class="token punctuation">${</span><span class="token variable">SRC_1</span><span class="token punctuation">}</span></span>"</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="102-remove_item移除"><a class="markdownIt-Anchor" href="#102-remove_item移除"></a> 10.2 remove_item移除</h3>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token keyword">list</span><span class="token punctuation">(</span>REMOVE_ITEM &lt;list<span class="token punctuation">&gt;</span> &lt;value<span class="token punctuation">&gt;</span> [&lt;value<span class="token punctuation">&gt;</span> ...]<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="11-add_definitions"><a class="markdownIt-Anchor" href="#11-add_definitions"></a> 11 add_definitions</h2>
+<p>作用：添加宏定义</p>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token keyword">add_definitions</span><span class="token punctuation">(</span>-D宏名称<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token keyword">cmake_minimum_required</span><span class="token punctuation">(</span><span class="token property">VERSION</span> <span class="token number">3.0</span><span class="token punctuation">)</span>
+<span class="token keyword">project</span><span class="token punctuation">(</span>TEST<span class="token punctuation">)</span>
+<span class="token comment"># 自定义 DEBUG 宏</span>
+<span class="token keyword">add_definitions</span><span class="token punctuation">(</span>-DDEBUG<span class="token punctuation">)</span>
+<span class="token keyword">add_executable</span><span class="token punctuation">(</span>app ./test.c<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="嵌套cmake"><a class="markdownIt-Anchor" href="#嵌套cmake"></a> 嵌套CMake</h1>
+<p>在通过CMake管理项目的时候如果只使用一个CMakeLists.txt，那么这个文件相对会比较复杂，有一种化繁为简的方式就是给每个源码目录都添加一个CMakeLists.txt文件。</p>
+<p>嵌套的 CMake 是一个树状结构，最顶层的 CMakeLists.txt 是根节点，其次都是子节点。以下是关于 CMakeLists.txt 文件变量作用域的一些信息：</p>
 <ul>
-<li><a href="https://v20blog.17lai.site/posts/40300608/">夜法之书</a></li>
+<li>根节点<code>CMakeLists.txt</code>中的变量全局有效</li>
+<li>父节点<code>CMakeLists.txt</code>中的变量可以在子节点中使用</li>
+<li>子节点<code>CMakeLists.txt</code>中的变量只能在当前节点中使用</li>
 </ul>
+<h1 id="流程控制语句"><a class="markdownIt-Anchor" href="#流程控制语句"></a> 流程控制语句</h1>
+<h2 id="1-条件判断"><a class="markdownIt-Anchor" href="#1-条件判断"></a> 1 条件判断</h2>
+<p>判断语句结构如下：</p>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token keyword">if</span><span class="token punctuation">(</span>&lt;condition<span class="token punctuation">&gt;</span><span class="token punctuation">)</span>
+  &lt;commands<span class="token punctuation">&gt;</span>
+<span class="token keyword">elseif</span><span class="token punctuation">(</span>&lt;condition<span class="token punctuation">&gt;</span><span class="token punctuation">)</span> <span class="token comment"># 可选块, 可以重复</span>
+  &lt;commands<span class="token punctuation">&gt;</span>
+<span class="token keyword">else</span><span class="token punctuation">(</span><span class="token punctuation">)</span>              <span class="token comment"># 可选块</span>
+  &lt;commands<span class="token punctuation">&gt;</span>
+<span class="token keyword">endif</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>条件判断方面：</p>
+<ul>
+<li>有 <code>NOT, AND, OR</code> 逻辑运算符</li>
+<li>有 <code>LESS, GREATER, EQUAL, LESS_EQUAL, GREATER_EQUAL</code> 数值比较运算符</li>
+<li>还有文件相关的判断
+<ul>
+<li><code>EXISTS path</code> ：判断 <code>path</code> 路径对应的文件或目录是否存在</li>
+<li><code>IS_DIRECTORY path</code> ：判断是不是目录，<code>path</code> 需要为绝对路径</li>
+<li><code>IS_ABSOLUTE path</code> ：判断是不是绝对路径</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-循环"><a class="markdownIt-Anchor" href="#2-循环"></a> 2 循环</h2>
+<h3 id="21-foreach"><a class="markdownIt-Anchor" href="#21-foreach"></a> 2.1 foreach</h3>
+<p>结构：</p>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token keyword">foreach</span><span class="token punctuation">(</span>&lt;loop_var<span class="token punctuation">&gt;</span> &lt;items<span class="token punctuation">&gt;</span><span class="token punctuation">)</span>
+    &lt;commands<span class="token punctuation">&gt;</span>
+<span class="token keyword">endforeach</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li><code>foreach(var RANGE stop)</code> ：取值范围为 <code>[0, stop]</code> ，每次取值都会将值放到变量 <code>var</code> 中。</li>
+<li><code>foreach(var RANGE start stop step)</code> ：取值范围为 <code>[start, stop]</code>，每次取值都会将值放到变量 <code>var</code> 中，步长为 <code>step</code> 。</li>
+<li><code>foreach(var IN lists)</code> ：每次取<code>lists</code>中的值放到 <code>var</code> 中，<code>lists</code> 可以为多个。</li>
+</ul>
+<h3 id="22-while"><a class="markdownIt-Anchor" href="#22-while"></a> 2.2 while</h3>
+<p>结构：</p>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token keyword">while</span><span class="token punctuation">(</span>&lt;condition<span class="token punctuation">&gt;</span><span class="token punctuation">)</span>
+    &lt;commands<span class="token punctuation">&gt;</span>
+<span class="token keyword">endwhile</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<h1 id="宏"><a class="markdownIt-Anchor" href="#宏"></a> 宏</h1>
+<h2 id="1-预定义宏"><a class="markdownIt-Anchor" href="#1-预定义宏"></a> 1 预定义宏</h2>
+<p>列举cmake自带的宏，可以对宏进行指定变量，按照我们的意图去进行相关操作。</p>
+<table>
+<thead>
+<tr>
+<th>宏</th>
+<th>介绍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PROJECT_SOURCE_DIR</td>
+<td>使用cmake命令时，后面紧跟的目录，一般是工程的根目录</td>
+</tr>
+<tr>
+<td>PROJECT_BINARY_DIR</td>
+<td>执行cmake命令时的目录</td>
+</tr>
+<tr>
+<td>CMAKE_CURRENT_SOURCE_DIR</td>
+<td>当前处理的CMakeLists.txt所在的路径</td>
+</tr>
+<tr>
+<td>CMAKE_CURRENT_BINARY_DIR</td>
+<td>target 编译目录</td>
+</tr>
+<tr>
+<td>EXECUTABLE_OUTPUT_PATH</td>
+<td>重新定义目标二进制可执行文件的存放位置，可以指定动态库生成路径</td>
+</tr>
+<tr>
+<td>LIBRARY_OUTPUT_PATH</td>
+<td>重新定义目标链接库文件的存放位置，可以指定静态库和动态库生成路径</td>
+</tr>
+<tr>
+<td>PROJECT_NAME</td>
+<td>返回通过PROJECT指令定义的项目名称</td>
+</tr>
+<tr>
+<td>CMAKE_BINARY_DIR</td>
+<td>项目实际构建路径，假设在 <code>build</code> 目录进行的构建，那么得到的就是这个目录的路径</td>
+</tr>
+</tbody>
+</table>
+<p>也可以自定义指定上述宏的路径，如</p>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token keyword">set</span><span class="token punctuation">(</span>HOME /home/wyq/Demo<span class="token punctuation">)</span>
+<span class="token keyword">set</span><span class="token punctuation">(</span><span class="token variable">EXECUTABLE_OUTPUT_PATH</span> <span class="token punctuation">${</span>HOME<span class="token punctuation">}</span>/bin<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h2 id="2-其他宏"><a class="markdownIt-Anchor" href="#2-其他宏"></a> 2 其他宏</h2>
+<ul>
+<li>CMAKE_CXX_STANDARD</li>
+</ul>
+<p>项目编译的语言标准，可以进行指定</p>
+<pre class="line-numbers language-cmake" data-language="cmake"><code class="language-cmake"><span class="token comment"># 指定C++20标准</span>
+<span class="token keyword">set</span><span class="token punctuation">(</span><span class="token variable">CMAKE_CXX_STANDARD</span> <span class="token number">20</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>参考文章：</p>
+<p>[1] CMake保姆级教程（上）<a href="https://subingwen.cn/cmake/CMake-primer/index.html">https://subingwen.cn/cmake/CMake-primer/index.html</a></p>
+<p>[2] CMake保姆级教程（下）<a href="https://subingwen.cn/cmake/CMake-advanced/">https://subingwen.cn/cmake/CMake-advanced/</a></p>
 
             </div>
             <hr />
@@ -853,9 +980,9 @@
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《Hexo踩坑实记》
+                    《CMake命令总结》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/p/3418896117.html" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/p/1592556892.html" property="cc:attributionName"
                rel="cc:attributionURL">
                 行码棋
             </a> 采用
@@ -897,7 +1024,7 @@
         repo: 'anda522.github.io',
         owner: 'anda522',
         admin: "anda522",
-        id: 'p/3418896117.html',  // 使用页面路径生成gitalk id
+        id: 'p/1592556892.html',  // 使用页面路径生成gitalk id
         
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
@@ -1185,98 +1312,38 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/p/7384120.html">
+                <a href="/p/1592556892.html">
                     <div class="card-image">
                         
                         
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/18.jpg" class="responsive-img" alt="Python实用库记录">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/24.jpg" class="responsive-img" alt="CMake命令总结">
                         
-                        <span class="card-title">Python实用库记录</span>
+                        <span class="card-title">CMake命令总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                             tqdm
-作用：实时显示迭代、循环的执行的进度条
-trange(i) 是对tqdm(range(i)) 特殊优化过的实例：
-from tqdm import tqdm, trange
-ans = 0
-for i in tqdm(range
+                             CMake知识记录
+
+ 不同环境下
+ 1 Windows MinGW + CMake
+Windows默认使用nmake编译，如果我们要使用 MinGW 来编译需要指定命令行参数。
+cmake -G "MinGW Makefiles" ..
                         
                     </div>
                     <div class="publish-info">
                         <div class="time-section">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2024-01-29
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2024-02-08
                             </span>
                             <span class="update-date">
-                                <i class="fa fa-history fa-fw icon-date"></i>2024-01-30
-                            </span>
-                        </div>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Python/" class="post-category" target="_blank">
-                                    Python
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Python/" target="_blank">
-                        <span class="chip bg-color">Python</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/p/4162491037.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/24.jpg" class="responsive-img" alt="CPP易懂文章记录">
-                        
-                        <span class="card-title">CPP易懂文章记录</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-记录一些看到的易懂的C++文章
-
- 编译相关
-Cmake：https://zhuanlan.zhihu.com/p/534439206
-CMake保姆教程：
-
-上：https://subingwen.cn/cmake/CMake-prim
-                        
-                    </div>
-                    <div class="publish-info">
-                        <div class="time-section">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2023-12-19
-                            </span>
-                            <span class="update-date">
-                                <i class="fa fa-history fa-fw icon-date"></i>2024-01-25
+                                <i class="fa fa-history fa-fw icon-date"></i>2024-02-08
                             </span>
                         </div>
                         <span class="publish-author">
@@ -1291,11 +1358,70 @@ CMake保姆教程：
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
                     <a href="/tags/CPP/" target="_blank">
                         <span class="chip bg-color">CPP</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/p/150241679.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/17.jpg" class="responsive-img" alt="Linux知识收集">
+                        
+                        <span class="card-title">Linux知识收集</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+本文记录一些Linux相关的知识点，用来精进自己的Linux操作。
+
+ Shell输出输入重定向
+默认情况下，总是有三个文件处于打开状态，标准输入(键盘输入)、标准输出（输出到屏幕）、标准错误（也是输出到屏幕），它们分别对应的文件描述符是
+                        
+                    </div>
+                    <div class="publish-info">
+                        <div class="time-section">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2024-01-30
+                            </span>
+                            <span class="update-date">
+                                <i class="fa fa-history fa-fw icon-date"></i>2024-01-30
+                            </span>
+                        </div>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/" class="post-category" target="_blank">
+                                    开发知识
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/" target="_blank">
+                        <span class="chip bg-color">Linux</span>
                     </a>
                     
                 </div>
