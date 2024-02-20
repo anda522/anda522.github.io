@@ -6,7 +6,7 @@
   <link href="http://wyqz.top/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2024-02-08T07:03:14.565Z</updated>
+  <updated>2024-02-20T13:07:49.661Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://wyqz.top/p/1592556892.html"/>
     <id>http://wyqz.top/p/1592556892.html</id>
     <published>2024-02-08T06:58:33.000Z</published>
-    <updated>2024-02-08T07:03:14.565Z</updated>
+    <updated>2024-02-20T13:07:49.661Z</updated>
     
     
       
@@ -47,7 +47,7 @@
     <link href="http://wyqz.top/p/150241679.html"/>
     <id>http://wyqz.top/p/150241679.html</id>
     <published>2024-01-30T00:52:06.000Z</published>
-    <updated>2024-01-30T01:11:20.367Z</updated>
+    <updated>2024-02-20T13:07:49.665Z</updated>
     
     
       
@@ -75,16 +75,17 @@
     <link href="http://wyqz.top/p/7384120.html"/>
     <id>http://wyqz.top/p/7384120.html</id>
     <published>2024-01-29T08:08:30.000Z</published>
-    <updated>2024-01-30T04:37:02.952Z</updated>
+    <updated>2024-02-20T13:07:49.666Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;tqdm&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#tqdm&quot;&gt;&lt;/a&gt; tqdm&lt;/h1&gt;
-&lt;p&gt;作用：实时显示迭代、循环的执行的进度条&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;trange(i)&lt;/code&gt;</summary>
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本文主要记录一些自己遇到的一些实用的Python库，今日开文，后面会不断积累&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;关于Python内置知识的记录可点击 &lt;a</summary>
         
       
     
@@ -102,7 +103,7 @@
     <link href="http://wyqz.top/p/3418896117.html"/>
     <id>http://wyqz.top/p/3418896117.html</id>
     <published>2024-01-12T04:39:14.000Z</published>
-    <updated>2024-01-14T03:03:15.772Z</updated>
+    <updated>2024-02-20T13:07:49.664Z</updated>
     
     
       
@@ -127,7 +128,7 @@
     <link href="http://wyqz.top/p/4162491037.html"/>
     <id>http://wyqz.top/p/4162491037.html</id>
     <published>2023-12-19T13:14:37.000Z</published>
-    <updated>2024-01-25T02:18:52.795Z</updated>
+    <updated>2024-02-20T13:07:49.663Z</updated>
     
     
       
@@ -156,7 +157,7 @@
     <link href="http://wyqz.top/p/4190388149.html"/>
     <id>http://wyqz.top/p/4190388149.html</id>
     <published>2023-12-19T09:37:21.000Z</published>
-    <updated>2024-01-26T11:29:13.835Z</updated>
+    <updated>2024-02-20T13:07:49.670Z</updated>
     
     
       
@@ -183,7 +184,7 @@
     <link href="http://wyqz.top/p/3211658549.html"/>
     <id>http://wyqz.top/p/3211658549.html</id>
     <published>2023-12-16T10:41:02.000Z</published>
-    <updated>2023-12-17T05:18:05.588Z</updated>
+    <updated>2024-02-20T13:07:49.724Z</updated>
     
     
       
@@ -208,7 +209,7 @@
     <link href="http://wyqz.top/p/3216805600.html"/>
     <id>http://wyqz.top/p/3216805600.html</id>
     <published>2023-12-16T04:49:15.000Z</published>
-    <updated>2023-12-31T05:04:11.654Z</updated>
+    <updated>2024-02-20T13:07:49.654Z</updated>
     
     
       
@@ -233,7 +234,7 @@
     <link href="http://wyqz.top/p/360366309.html"/>
     <id>http://wyqz.top/p/360366309.html</id>
     <published>2023-12-08T10:42:58.000Z</published>
-    <updated>2023-12-24T09:20:31.177Z</updated>
+    <updated>2024-02-20T13:07:49.663Z</updated>
     
     
       
@@ -258,7 +259,7 @@
     <link href="http://wyqz.top/p/2569313091.html"/>
     <id>http://wyqz.top/p/2569313091.html</id>
     <published>2023-11-22T13:41:06.000Z</published>
-    <updated>2023-12-16T13:23:50.427Z</updated>
+    <updated>2024-02-20T13:07:49.659Z</updated>
     
     
       
@@ -285,7 +286,7 @@
     <link href="http://wyqz.top/p/2589851505.html"/>
     <id>http://wyqz.top/p/2589851505.html</id>
     <published>2023-11-14T12:28:19.000Z</published>
-    <updated>2023-12-26T09:12:59.794Z</updated>
+    <updated>2024-02-20T13:07:49.666Z</updated>
     
     
       
@@ -311,7 +312,7 @@
     <link href="http://wyqz.top/p/3703005386.html"/>
     <id>http://wyqz.top/p/3703005386.html</id>
     <published>2023-11-06T08:39:35.000Z</published>
-    <updated>2023-11-06T08:46:36.795Z</updated>
+    <updated>2024-02-20T13:07:49.671Z</updated>
     
     
       
@@ -339,7 +340,7 @@
     <link href="http://wyqz.top/p/542231525.html"/>
     <id>http://wyqz.top/p/542231525.html</id>
     <published>2023-11-06T06:04:56.000Z</published>
-    <updated>2023-11-29T07:43:42.498Z</updated>
+    <updated>2024-02-20T13:07:49.671Z</updated>
     
     
       
@@ -366,7 +367,7 @@
     <link href="http://wyqz.top/p/2127276366.html"/>
     <id>http://wyqz.top/p/2127276366.html</id>
     <published>2023-10-26T11:14:19.000Z</published>
-    <updated>2023-11-14T12:33:36.549Z</updated>
+    <updated>2024-02-20T13:07:49.664Z</updated>
     
     
       
@@ -393,7 +394,7 @@
     <link href="http://wyqz.top/p/2802848655.html"/>
     <id>http://wyqz.top/p/2802848655.html</id>
     <published>2023-10-02T11:21:13.000Z</published>
-    <updated>2023-12-14T08:35:42.333Z</updated>
+    <updated>2024-02-20T13:07:49.657Z</updated>
     
     
       
@@ -421,7 +422,7 @@
     <link href="http://wyqz.top/p/1473860796.html"/>
     <id>http://wyqz.top/p/1473860796.html</id>
     <published>2023-04-11T11:47:10.000Z</published>
-    <updated>2024-01-11T03:57:23.189Z</updated>
+    <updated>2024-02-20T13:07:49.724Z</updated>
     
     
       
@@ -450,7 +451,7 @@
     <link href="http://wyqz.top/p/3804173379.html"/>
     <id>http://wyqz.top/p/3804173379.html</id>
     <published>2023-03-26T02:51:42.000Z</published>
-    <updated>2024-02-01T10:42:13.950Z</updated>
+    <updated>2024-02-20T13:07:49.669Z</updated>
     
     
       
@@ -479,7 +480,7 @@
     <link href="http://wyqz.top/p/2946568862.html"/>
     <id>http://wyqz.top/p/2946568862.html</id>
     <published>2023-03-24T08:29:49.000Z</published>
-    <updated>2024-02-01T10:42:24.382Z</updated>
+    <updated>2024-02-20T13:07:49.666Z</updated>
     
     
       
@@ -509,7 +510,7 @@
     <link href="http://wyqz.top/p/2668140628.html"/>
     <id>http://wyqz.top/p/2668140628.html</id>
     <published>2023-03-18T01:57:44.000Z</published>
-    <updated>2023-12-19T13:17:32.251Z</updated>
+    <updated>2024-02-20T13:07:49.663Z</updated>
     
     
       
@@ -539,7 +540,7 @@
     <link href="http://wyqz.top/p/917541138.html"/>
     <id>http://wyqz.top/p/917541138.html</id>
     <published>2023-03-09T09:48:41.000Z</published>
-    <updated>2023-03-24T05:53:06.689Z</updated>
+    <updated>2024-02-20T13:07:49.665Z</updated>
     
     
       
