@@ -9,11 +9,15 @@
     <meta name="baidu-site-verification" content="code-L7AVcsbU14" />
     <meta name="google-site-verification" content="x4QfrBHn9imI1RhTNCB8RD8Q2Rx6rE_zylSBptBgdZY" />
     <meta name="description" content="
-实验代码记录：https://github.com/anda522/LabCode/tree/main/Mit6.S081
+实验代码记录：https://github.com/anda522/XV6-LAB/tree/main
 课程教材翻译：https://xv6.dgs.zone/ ，对理解感觉很重要
 
 xv6系统为 RISC-V
- 1 ">
+ 知识记录
+
+编译操作
+
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -326,7 +330,7 @@ xv6系统为 RISC-V
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -483,7 +487,7 @@ xv6系统为 RISC-V
                 <!-- 显示更新日期 -->
                 <div class="post-update-date info-break-policy">
                     <i class="fa fa-history fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-02-20
+                    2024-06-06
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -497,14 +501,14 @@ xv6系统为 RISC-V
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.3k
+                    3.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    12 分
                 </div>
                 
                 
@@ -521,10 +525,26 @@ xv6系统为 RISC-V
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <blockquote>
-<p>实验代码记录：<a href="https://github.com/anda522/LabCode/tree/main/Mit6.S081">https://github.com/anda522/LabCode/tree/main/Mit6.S081</a></p>
+<p>实验代码记录：<a href="https://github.com/anda522/XV6-LAB/tree/main">https://github.com/anda522/XV6-LAB/tree/main</a></p>
 <p>课程教材翻译：<a href="https://xv6.dgs.zone/">https://xv6.dgs.zone/</a> ，对理解感觉很重要</p>
 </blockquote>
 <p>xv6系统为 <code>RISC-V</code></p>
+<h1 id="知识记录"><a class="markdownIt-Anchor" href="#知识记录"></a> 知识记录</h1>
+<ul>
+<li>编译操作</li>
+</ul>
+<p><code>make qemu</code> ：编译</p>
+<p><code>./grade-lab-util sleep</code> ： 测试是否通过（在本地用户目录测试）</p>
+<ul>
+<li>argc指的是什么 <code>int main(int argc, char **argv)</code></li>
+</ul>
+<p>在程序入口中，argc指的是命令行中提供的参数（包括程序本身的名称）</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token punctuation">.</span><span class="token operator">/</span>program arg1 arg2 arg3<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>上述命令执行后：</p>
+<p><code>argc = 4, argv = ["./program", "arg1", "arg2", "arg3"]</code></p>
+<ul>
+<li>退出qemu：<strong>Ctrl-a  + x</strong></li>
+</ul>
 <h1 id="1-unix-utilities"><a class="markdownIt-Anchor" href="#1-unix-utilities"></a> 1 Unix utilities</h1>
 <h2 id="knowledge"><a class="markdownIt-Anchor" href="#knowledge"></a> Knowledge</h2>
 <p>操作系统结构：</p>
@@ -648,11 +668,81 @@ xv6系统为 RISC-V
 <h1 id="6-multithreading"><a class="markdownIt-Anchor" href="#6-multithreading"></a> 6 Multithreading</h1>
 <h2 id="knowledge-6"><a class="markdownIt-Anchor" href="#knowledge-6"></a> Knowledge</h2>
 <p>Xv6有两种类型的锁：自旋锁（spinlocks）和睡眠锁（sleep-locks）。</p>
-<p>自旋锁和中断的交互引发了潜在的危险。假设<code>sys_sleep</code>持有<code>tickslock</code>，并且它的CPU被计时器中断中断。<code>clockintr</code>会尝试获取<code>tickslock</code>，意识到它被持有后等待释放。在这种情况下，<code>tickslock</code>永远不会被释放：只有<code>sys_sleep</code>可以释放它，但是<code>sys_sleep</code>直到<code>clockintr</code>返回前不能继续运行。所以CPU会死锁，任何需要锁的代码也会冻结。</p>
-<p>为了避免这种情况，如果一个自旋锁被中断处理程序所使用，那么CPU必须保证在启用中断的情况下永远不能持有该锁。Xv6更保守：当CPU获取任何锁时，xv6总是禁用该CPU上的中断。中断仍然可能发生在其他CPU上，此时中断的<code>acquire</code>可以等待线程释放自旋锁；由于不在同一CPU上，不会造成死锁。</p>
-<p>自旋锁的另一个缺点是，一个进程在持有自旋锁的同时不能让出（yield）CPU，然而我们希望持有锁的进程等待磁盘I/O的时候其他进程可以使用CPU。</p>
-<p>Xv6以睡眠锁（sleep-locks）的形式提供了这种锁。<code>acquiresleep</code> (<strong>kernel/sleeplock.c</strong>:22) 在等待时让步CPU</p>
+<p>自旋锁是一种锁机制，当一个线程（或CPU核心）尝试获取一个已经被其他线程持有的锁时，它不会立即阻塞，而是在当前位置“自旋”（即忙碌等待），直到锁被释放。</p>
+<p>自旋锁的一个缺点是，一个持有自旋锁的进程 <strong>不能让出（yield）CPU</strong>， 然而我们希望持有锁的进程等待磁盘I/O的时候其他进程可以使用CPU。</p>
+<p>Xv6以睡眠锁（sleep-locks）的形式提供了这种锁。<code>acquiresleep</code> (<strong>kernel/sleeplock.c</strong>:22) 在等待时让步CPU， 让线程进入睡眠状态，而不是让线程在CPU上空转。</p>
 <h2 id="lab-6"><a class="markdownIt-Anchor" href="#lab-6"></a> Lab</h2>
+<h3 id="线程切换实现"><a class="markdownIt-Anchor" href="#线程切换实现"></a> 线程切换实现</h3>
+<ul>
+<li>切换线程时需要先保存现有线程的上下文信息（函数调用后返回的地址 <code>ra</code> 是下一条指令的地址 ，栈顶指针 <code>sp</code> ，各个参数）以及调用栈。</li>
+</ul>
+<p>线程结构体中需要声明一个上下文，以满足线程切换需要。</p>
+<p>切换前，保存寄存器信息至上下文结构体中；新切换的线程需要将上下文信息加载到寄存器中。</p>
+<ul>
+<li><code>a0</code> 通常用于传递第一个参数</li>
+</ul>
+<p>在 <code>thread_switch</code> 汇编代码中，该函数有两个参数</p>
+<p>第一个参数：<code>(uint64)&amp;t-&gt;context</code> ，为上下文地址，存于 <code>a0</code> 寄存器中</p>
+<p>第一个参数：<code>(uint64)&amp;next_thread-&gt;context</code> ，为上下文地址，存于 <code>a1</code> 寄存器中</p>
+<p>汇编最后的 <code>ret</code> 指的是返回到 <code>ra</code> 对应的地址</p>
+<ul>
+<li><code>exit(0)</code> 一般代表正常退出， <code>exit(-1)</code> 一般代表异常退出</li>
+</ul>
+<h3 id="c语言多线程"><a class="markdownIt-Anchor" href="#c语言多线程"></a> C语言多线程</h3>
+<p>此时使用C语言的pthread来实现多线程。</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;pthread.h&gt;</span></span>
+<span class="token class-name">pthread_mutex_t</span> lock<span class="token punctuation">;</span>            <span class="token comment">// declare a lock</span>
+<span class="token function">pthread_mutex_init</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>lock<span class="token punctuation">,</span> <span class="token constant">NULL</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// initialize the lock</span>
+<span class="token function">pthread_mutex_lock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>lock<span class="token punctuation">)</span><span class="token punctuation">;</span>       <span class="token comment">// acquire lock</span>
+<span class="token function">pthread_mutex_unlock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>lock<span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// release lock</span>
+
+<span class="token function">pthread_create</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 创建一个线程</span>
+<span class="token function">pthread_join</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 等待线程执行完成</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>多线程哈希表实现安全存取：此例子先进行多线程存储，存储完毕后再进行取值操作。</p>
+<p>加锁方式：直接对存储操作加锁，哈希冲突时用的是拉链法，存储时是使用的头插法，当有相同的key同时进行存储操作时，next的更新可能就只有最后一个生效，从而漏掉一个值。<strong>所以对每个桶加锁，put操作时获取到对应的哈希值后，直接对该哈希值对应的桶加锁。</strong></p>
+<h3 id="同步屏障"><a class="markdownIt-Anchor" href="#同步屏障"></a> 同步屏障</h3>
+<p>实现功能：所有参与线程都要到达同一个位置。</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token comment">// 使当前线程等待在条件变量cond中，并释放mutex锁</span>
+<span class="token function">pthread_cond_wait</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>cond<span class="token punctuation">,</span> <span class="token operator">&amp;</span>mutex<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">// go to sleep on cond, releasing lock mutex, acquiring upon wake up</span>
+<span class="token comment">// 唤醒所有在条件变量cond中休眠的线程</span>
+<span class="token function">pthread_cond_broadcast</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>cond<span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">// wake up every thread sleeping on cond</span>
+<span class="token comment">// 唤醒在条件变量中等待的第一个线程</span>
+pthread_cond_signal<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>条件变量是一种同步机制，允许线程在某些条件成立之前挂起执行，常用于线程之间的协调和通信。</p>
+<p><strong>条件重检</strong>：即使线程被唤醒，它们通常也需要重新检查条件变量所保护的条件是否仍然有效。这是因为在它们获得锁并检查条件之前，条件可能已经变得不满足。</p>
+<p>实验内容：多个线程，每个线程都有一个循环，希望让所有线程都执行完第 <code>i</code> 轮循环后再执行下一轮循环。</p>
+<ul>
+<li><code>pthread_cond_wait(&amp;cond, &amp;mutex)</code>  语句解析</li>
+</ul>
+<p>该语句执行后，释放锁，然后挂起；当有其他进程唤醒条件变量时，会重新获取锁，然后从该条语句下一句开始执行。</p>
+<pre class="line-numbers language-c" data-language="c"><code class="language-c"><span class="token keyword">static</span> <span class="token keyword">void</span> 
+<span class="token function">barrier</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+  <span class="token function">pthread_mutex_lock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>bstate<span class="token punctuation">.</span>barrier_mutex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">++</span>bstate<span class="token punctuation">.</span>nthread <span class="token operator">&lt;</span> nthread<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token function">pthread_cond_wait</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>bstate<span class="token punctuation">.</span>barrier_cond<span class="token punctuation">,</span> <span class="token operator">&amp;</span>bstate<span class="token punctuation">.</span>barrier_mutex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+    bstate<span class="token punctuation">.</span>nthread <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    bstate<span class="token punctuation">.</span>round<span class="token operator">++</span><span class="token punctuation">;</span>
+    <span class="token function">pthread_cond_broadcast</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>bstate<span class="token punctuation">.</span>barrier_cond<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">pthread_mutex_unlock</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>bstate<span class="token punctuation">.</span>barrier_mutex<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>可以进一步去看看C++线程池实现：<a href="https://github.com/anda522/ThreadPool">https://github.com/anda522/ThreadPool</a></p>
+<p>C++11多线程的用法：<a href="https://wyqz.top/p/2668140628.html">https://wyqz.top/p/2668140628.html</a></p>
+</blockquote>
+<h1 id="7-nethard"><a class="markdownIt-Anchor" href="#7-nethard"></a> 7 Net(Hard)</h1>
+<h2 id="knowledge-7"><a class="markdownIt-Anchor" href="#knowledge-7"></a> Knowledge</h2>
+<h2 id="lab-7"><a class="markdownIt-Anchor" href="#lab-7"></a> Lab</h2>
+<p>任务说明：E1000网络设备位于xv6中，xv6 IP为10.0.2.2，xv6通过E1000向局域网（运行xv6的计算机，IP为10.0.2.2）发送数据包。任务需要完成e1000的发送数据和接受数据的函数，也就是驱动，最终能够发送和接受数据。</p>
+<p>volatile变量：当一个变量被声明为<code>volatile</code>时，编译器会假设这个变量的值可能在任何时候被改变，因此每次使用这个变量时，编译器都会从内存中重新读取它的值，而不是使用寄存器中的值或进行优化。这确保了代码的执行不会由于编译器的优化而忽略变量的潜在变化。（比如中断程序可能会改变这个值）</p>
+<p>static变量：</p>
+<ul>
+<li>文件作用域：声明在函数外部，便具有文件作用域，只在文件内可见，其他文件无法访问。这个和全局变量不同。</li>
+<li>生命周期内，保持值的变量：在程序运行整个期间保持其值，在作用域之外也不会销毁。</li>
+<li>初始化：只在程序启动时初始化一次。</li>
+</ul>
 
             </div>
             <hr />
@@ -1153,7 +1243,7 @@ xv6系统为 RISC-V
                     <div class="card-image">
                         
                         
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/8.jpg" class="responsive-img" alt="折腾长久，终退役-致我的ACM生涯">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/6.jpg" class="responsive-img" alt="折腾长久，终退役-致我的ACM生涯">
                         
                         <span class="card-title">折腾长久，终退役-致我的ACM生涯</span>
                     </div>
@@ -1211,7 +1301,7 @@ xv6系统为 RISC-V
                     <div class="card-image">
                         
                         
-                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/7.jpg" class="responsive-img" alt="代码中的技巧或习惯">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="/medias/featureimages/9.png" class="responsive-img" alt="代码中的技巧或习惯">
                         
                         <span class="card-title">代码中的技巧或习惯</span>
                     </div>
@@ -1424,7 +1514,7 @@ for(int i = 0; i &lt; len; ++i) {
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">110.8k</span>
+            <span class="white-color">112k</span>
             
 
             <br>
