@@ -6,7 +6,7 @@
   <link href="http://wyqz.top/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2024-02-20T13:07:49.661Z</updated>
+  <updated>2024-06-23T10:29:44.740Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>本科那些事儿-致未来且再忆</title>
+    <link href="http://wyqz.top/p/3302355509.html"/>
+    <id>http://wyqz.top/p/3302355509.html</id>
+    <published>2024-06-22T04:30:00.000Z</published>
+    <updated>2024-06-23T10:29:44.740Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;本科那些事儿-致未来且再忆&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#本科那些事儿-致未来且再忆&quot;&gt;&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="哲思" scheme="http://wyqz.top/categories/%E5%93%B2%E6%80%9D/"/>
+    
+    
+    <category term="阶段性总结" scheme="http://wyqz.top/tags/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>CMake命令总结</title>
@@ -532,33 +557,6 @@
     <category term="CPP" scheme="http://wyqz.top/tags/CPP/"/>
     
     <category term="多线程" scheme="http://wyqz.top/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Latex语法</title>
-    <link href="http://wyqz.top/p/917541138.html"/>
-    <id>http://wyqz.top/p/917541138.html</id>
-    <published>2023-03-09T09:48:41.000Z</published>
-    <updated>2024-02-20T13:07:49.665Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;latex语法&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#latex语法&quot;&gt;&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="文档编写" scheme="http://wyqz.top/categories/%E6%96%87%E6%A1%A3%E7%BC%96%E5%86%99/"/>
-    
-    
-    <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
-    
-    <category term="Latex" scheme="http://wyqz.top/tags/Latex/"/>
     
   </entry>
   
