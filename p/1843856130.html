@@ -488,7 +488,7 @@ Git是基于树进行维护的，每一个节点都是一个历史版本，可�
                 <!-- 显示更新日期 -->
                 <div class="post-update-date info-break-policy">
                     <i class="fa fa-history fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-15
+                    2024-07-06
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -502,14 +502,14 @@ Git是基于树进行维护的，每一个节点都是一个历史版本，可�
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.8k
+                    4.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    15 分
+                    16 分
                 </div>
                 
                 
@@ -682,12 +682,45 @@ Git是基于树进行维护的，每一个节点都是一个历史版本，可�
 <p>指定子模块 <code>xxx</code> 进行更新：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> submodule update <span class="token parameter variable">--remote</span> xxx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h1 id="git-rebase"><a class="markdownIt-Anchor" href="#git-rebase"></a> Git rebase</h1>
+<h2 id="应用其他分支的改变"><a class="markdownIt-Anchor" href="#应用其他分支的改变"></a> 应用其他分支的改变</h2>
 <p>在别人的分支基础上提交自己的改变。</p>
 <p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAMAAABOo35HAAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAC9UExURVlZWdPT07KysmRkZIWFhfT09JmZmWZmZm9vb39/fxkZGUxMTDMzM3p6epCQkKamppubm729venp6cjIyN7e3tbW1s/Pz8LCwnx8fLS0tFZWVoiIiI+Pj6GhoeTk5Glpabu7u93d3evr66CgoJSUlKqqqsnJyeDg4Hd3d8PDw+Xl5bi4uNHR0dvb26Ojo6urq+fn51hYWDg4OCgoKHBwcK2traenp0FBQe7u7vHx8U5OTre3t8zMzHV1df///7GrnpQAAAA/dFJOU///////////////////////////////////////////////////////////////////////////////////AI4mfBcAAAUGSURBVHja7NoJb6M4GMZxY0NCD64kve/pMZ2d3Z297+X7f6zFNmBAMUXa6URl/q9UJSWPUPzrizFWRUlNLgEBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYYIEFAVhggQUWWGBBABZYYIEFFlgQgAUWWGCBBRYEYIEFFlhggQUBWGCBBRZYYEEAFlhggQUWWBCABRZYYIEFFgRggQUWWGCBBQFYYIEFFlhgQQAWWGCBBRZYEIAFFlhggQUWBGCBBRZYn6cCIcRXgvX/h9qcIVBqDdbEM8RCxGCB9QqXYRwHYDHBgwXWl8eKZKiESHI3Ba1kWs3fKixcaJUl1YyeBm7Ocq+yLItUiVBGnXxenSHJolIKEcwHq6ikbOX1YGVzQCTN8LPmSLreghUl9sN4Uw7yajMrLC0TZ1ImzqY6FEop0+pIaEN5HaoOxVuwEqFyc4I46uSlzOLqgxlh6UaR9l3VYWl9Fdoxb1Q90KJtu41pwwFW/WHhTtW8i7TafLCqRsk6bsGw63L9qurXRmuIlbT9lDQnlXU+nBFW1Q2qnZbDprWa2tjR90LZFqx1/+Td/HpGWLlrLDvIwTcx6dQ1Vrntbig68cDms3JwbA5Y1azs1ger6sNV/bbIw1jU81MvNAGrl58RVn8ozW+btF08iGFoAlYvP3csfVur1gJBEIA1uBmue5dhZDOyO2epbmgCVi8/I6x0MMHH9pjsTfBhNzQBq5uPZoQlB0uH3DZG4EZqQ26fL3sZq5uf09Ih6qw3i/pm6BZO0qZX7rrUS68Xsbr5ZE4rePMk08pk9aUZugfqppvs6AM1Acvlo/StP+6EbW06z8hJqxbYp2BZPQUnFsLsKuhQdaHqn5ewbF7KXIn0jWO5MqOQ7RaNLPtbNMmmhimj0GUmYLl8Gs0Lq4wyPbTu1l2QKqHSouzs3OlDIslW5SQsnY/NXmFplyNvEuuLV/Tau9BzwiraDUSwXmysztYWWNtL1psXeumgIrDGaqXvBfUuvtqUYI3V2t1wk1e2msFluJJm6zDJXv/fIfjPP7DAAgsssCiwwAILLLDAosACCyywwAKLAgsssMACC6zt9fDz/v75tyOB+98PD2+ORgKffjw4OP1uJPDxl+Xy8v1I4MPF3t7VNyOB4/vF4uzdzrG+39f1kz/w66Guv/yBvw90KX/gZKkr8Qf+2dOV+gNHC12/7RxrabD2/a31bLAO/a11YbAO/K21MFhLf2s9Gqw9f2vdGqzFu11jnVusE2/gxmI9eQOnFuvYG7i0WH7uK4t15w2cWazrXWP9a7H8f/bQYvm/6IPF+sF/pVssf19Ii/WH/0K2WH/uGuvEWC39gSdj9Twy+Rqri5EZx1gt/IE7Y/XoD1wbq9vd3w1PlufnD2OBp+ebm/uxwPHF6emnscDR4vLy41jg7vHq6sNY4Pr27OyYdRaLUrDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssMCiwAILLLDAAosCCyywwAILLAossMACCyywKLDAAgsssL6u+k+AAQCR9eHtLKvLfwAAAABJRU5ErkJggg==" data-original="https://www.becomebetterprogrammer.com/wp-content/uploads/2021/12/git-rebase-768x480.png" alt=""></p>
 <ul>
 <li>首先切换到自己的所在分支 <code>git checkout feature</code> 。</li>
 <li>执行 <code>git rebase master</code> 操作，以 <code>master</code> 分支为基础，拉取最新变动。</li>
 </ul>
+<h2 id="合并commit为一个"><a class="markdownIt-Anchor" href="#合并commit为一个"></a> 合并commit为一个</h2>
+<blockquote>
+<p>参考：<a href="https://juejin.cn/post/6844903600976576519">https://juejin.cn/post/6844903600976576519</a></p>
+</blockquote>
+<ul>
+<li>
+<p>切换到feature分支： <code>git checkout feature</code></p>
+</li>
+<li>
+<p>希望将当前feature分支的最近3个commit合并为一个commit</p>
+<p>先执行： <code>git rebase -i HEAD~3</code></p>
+</li>
+</ul>
+<blockquote>
+<p><code>-i</code> 是交互式操作，会弹出一个编辑框，编辑框中内容有下面的注释</p>
+<p>pick：保留该commit（缩写:p）</p>
+<p>reword：保留该commit，但我需要修改该commit的注释（缩写:r）</p>
+<p>edit：保留该commit, 但我要停下来修改该提交(不仅仅修改注释)（缩写:e）</p>
+<p>squash：将该commit和前一个commit合并（缩写:s）</p>
+<p>fixup：将该commit和前一个commit合并，但我不要保留该提交的注释信息（缩写:f）</p>
+<p>exec：执行shell命令（缩写:x）</p>
+<p>drop：我要丢弃该commit（缩写:d）</p>
+</blockquote>
+<p>弹出的编辑框内容大概为：</p>
+<pre class="line-numbers language-none"><code class="language-none">pick d2cf1f9 fix: 第一次提交
+pick 47971f6 fix: 第二次提交
+pick fb28c8d fix: 第三次提交<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>我们将其修改为下面内容，保存然后退出。</p>
+<pre class="line-numbers language-none"><code class="language-none">pick d2cf1f9 fix: 第一次提交
+s 47971f6 fix: 第二次提交
+s fb28c8d fix: 第三次提交<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>然后是注释编辑框自动弹出，我们修改注释内容保存退出即可。最后就能完成3个commit的合并。</p>
 <h1 id="序列化操作"><a class="markdownIt-Anchor" href="#序列化操作"></a> 序列化操作</h1>
 <h2 id="1-基础上传操作"><a class="markdownIt-Anchor" href="#1-基础上传操作"></a> 1 基础上传操作</h2>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">add</span> <span class="token builtin class-name">.</span>
@@ -1335,12 +1368,12 @@ sudo usermod -aG docker $USER
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Linux/" target="_blank">
-                        <span class="chip bg-color">Linux</span>
-                    </a>
-                    
                     <a href="/tags/docker/" target="_blank">
                         <span class="chip bg-color">docker</span>
+                    </a>
+                    
+                    <a href="/tags/Linux/" target="_blank">
+                        <span class="chip bg-color">Linux</span>
                     </a>
                     
                 </div>
@@ -1570,7 +1603,7 @@ sudo usermod -aG docker $USER
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">114.3k</span>
+            <span class="white-color">114.6k</span>
             
 
             <br>
