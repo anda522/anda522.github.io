@@ -6,7 +6,7 @@
   <link href="http://wyqz.top/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2024-06-23T10:29:44.740Z</updated>
+  <updated>2024-08-06T05:34:09.752Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -17,11 +17,63 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>为什么我突然又开始发文章了</title>
+    <link href="http://wyqz.top/p/1657847439.html"/>
+    <id>http://wyqz.top/p/1657847439.html</id>
+    <published>2024-08-06T05:33:00.000Z</published>
+    <updated>2024-08-06T05:34:09.752Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;感觉有时候得趁着对一件事情有热情的时候抓紧去干去开个头，去把最难的阶段熬过去。万事开头难，因为从不了解到了解基本的一些事实，是一个新知识暴涨的阶段，这个时候的困难是最大的。不然等到热情消退，你会发现还是什么事都不想干。&lt;/p&gt;
+&lt;p&gt;所以不知道怎么的就突然想写点东西了，主要</summary>
+        
+      
+    
+    
+    
+    <category term="哲思" scheme="http://wyqz.top/categories/%E5%93%B2%E6%80%9D/"/>
+    
+    
+    <category term="阶段性总结" scheme="http://wyqz.top/tags/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>本科毕业！哪些事情对现在的我很重要？</title>
+    <link href="http://wyqz.top/p/646635097.html"/>
+    <id>http://wyqz.top/p/646635097.html</id>
+    <published>2024-08-05T15:30:26.000Z</published>
+    <updated>2024-08-06T05:34:09.761Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;本科毕业哪些事情对现在的我很重要&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#本科毕业哪些事情对现在的我很重要&quot;&gt;&lt;/a&gt; 本科毕业！哪些事情对现在的我很重要？&lt;/h1&gt;
+&lt;h1 id=&quot;回望高中毕业那时&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="哲思" scheme="http://wyqz.top/categories/%E5%93%B2%E6%80%9D/"/>
+    
+    
+    <category term="阶段性总结" scheme="http://wyqz.top/tags/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
+  
+  <entry>
     <title>本科那些事儿-致未来且再忆</title>
     <link href="http://wyqz.top/p/3302355509.html"/>
     <id>http://wyqz.top/p/3302355509.html</id>
     <published>2024-06-22T04:30:00.000Z</published>
-    <updated>2024-06-23T10:29:44.740Z</updated>
+    <updated>2024-08-05T15:55:42.876Z</updated>
     
     
       
@@ -497,66 +549,6 @@
     <category term="Python" scheme="http://wyqz.top/tags/Python/"/>
     
     <category term="画图" scheme="http://wyqz.top/tags/%E7%94%BB%E5%9B%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Pandas数据处理</title>
-    <link href="http://wyqz.top/p/2946568862.html"/>
-    <id>http://wyqz.top/p/2946568862.html</id>
-    <published>2023-03-24T08:29:49.000Z</published>
-    <updated>2024-02-20T13:07:49.666Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;pandas&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#pandas&quot;&gt;&lt;/a&gt; Pandas&lt;/h1&gt;
-&lt;h1 id=&quot;读取数据&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#读取数据&quot;&gt;&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="Python" scheme="http://wyqz.top/categories/Python/"/>
-    
-    
-    <category term="Pandas" scheme="http://wyqz.top/tags/Pandas/"/>
-    
-    <category term="数据处理" scheme="http://wyqz.top/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/"/>
-    
-    <category term="Python" scheme="http://wyqz.top/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++11 多线程</title>
-    <link href="http://wyqz.top/p/2668140628.html"/>
-    <id>http://wyqz.top/p/2668140628.html</id>
-    <published>2023-03-18T01:57:44.000Z</published>
-    <updated>2024-02-20T13:07:49.663Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;c11-多线程&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#c11-多线程&quot;&gt;&lt;/a&gt; C++11 多线程&lt;/h1&gt;
-&lt;blockquote&gt;
-&lt;p&gt;参考：&lt;/p&gt;
-&lt;p&gt;C++11 thread多线程：&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="CPP" scheme="http://wyqz.top/categories/CPP/"/>
-    
-    
-    <category term="CPP" scheme="http://wyqz.top/tags/CPP/"/>
-    
-    <category term="多线程" scheme="http://wyqz.top/tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B/"/>
     
   </entry>
   
