@@ -325,7 +325,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -490,7 +490,7 @@
                 <!-- 显示更新日期 -->
                 <div class="post-update-date info-break-policy">
                     <i class="fa fa-history fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-08-15
+                    2024-10-06
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -504,14 +504,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    15.5k
+                    15.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    67 分
+                    68 分
                 </div>
                 
                 
@@ -1469,6 +1469,16 @@ map<span class="token operator">&lt;</span><span class="token keyword">int</span
 <p>还有一种映射：<code>multimap</code></p>
 <p>键可以重复，即一个键对应多个值，如要了解，可以自行搜索。</p>
 </blockquote>
+<h2 id="653-自定义hash函数"><a class="markdownIt-Anchor" href="#653-自定义hash函数"></a> 6.5.3 自定义hash函数</h2>
+<p>由于unordered_map中的元素需要具备hash特性，如果语言没有自带hash特性的话，需要我们自定义hash函数，以下举一个 <code>pair&lt;int, int&gt;</code> 的hash函数定义的例子，hash函数看自己怎么定义了（只要能实现hash功能就行）。</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// 使用 lambda 表达式来定义哈希函数</span>
+<span class="token keyword">auto</span> hash_pair <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> std<span class="token double-colon punctuation">::</span>pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token operator">&amp;</span> p<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> std<span class="token double-colon punctuation">::</span>size_t <span class="token punctuation">{</span>
+    <span class="token keyword">static</span> hash<span class="token operator">&lt;</span><span class="token keyword">long</span> <span class="token keyword">long</span><span class="token operator">&gt;</span> hash_ll<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token function">hash_ll</span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>first <span class="token operator">+</span> <span class="token punctuation">(</span><span class="token generic-function"><span class="token function">static_cast</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token keyword">long</span> <span class="token keyword">long</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>p<span class="token punctuation">.</span>second<span class="token punctuation">)</span> <span class="token operator">&lt;&lt;</span> <span class="token number">32</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 使用 lambda 表达式作为哈希函数定义 unordered_map, 10为桶的数量</span>
+std<span class="token double-colon punctuation">::</span>unordered_map<span class="token operator">&lt;</span>std<span class="token double-colon punctuation">::</span>pair<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token punctuation">,</span> <span class="token keyword">decltype</span><span class="token punctuation">(</span>hash_pair<span class="token punctuation">)</span><span class="token operator">&gt;</span> <span class="token function">my_map</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">,</span> hash_pair<span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="7-set"><a class="markdownIt-Anchor" href="#7-set"></a> 7 set</h1>
 <h2 id="71-介绍"><a class="markdownIt-Anchor" href="#71-介绍"></a> 7.1 介绍</h2>
 <p>set容器中的元素不会重复，当插入集合中已有的元素时，并不会插入进去，而且set容器里的元素自动从小到大排序。</p>
@@ -2849,6 +2859,11 @@ b<span class="token punctuation">.</span><span class="token function">erase</spa
 <blockquote>
 <p><code>x</code>中1的个数的奇偶性， 奇数输出<code>1</code>，偶数输出<code>0</code></p>
 </blockquote>
+<h2 id="c20-ranges"><a class="markdownIt-Anchor" href="#c20-ranges"></a> C++20 ranges</h2>
+<p>ranges主要用来简化迭代器操作，可以少写很多迭代器操作相关的代码。<br>
+ranges集成了很多STL函数</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">ranges<span class="token double-colon punctuation">::</span><span class="token function">sort</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// sort(a.begin(), a.end());</span>
+ranges<span class="token double-colon punctuation">::</span><span class="token function">sort</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> <span class="token generic-function"><span class="token function">greater</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// sort(a.begin(), a.end(), greater&lt;int&gt;());</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <blockquote>
 <p>可参考链接：</p>
 <ol>
@@ -3360,7 +3375,7 @@ b<span class="token punctuation">.</span><span class="token function">erase</spa
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="树上拓扑序计数|树形DP">
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="树上拓扑序计数|树形DP">
                         
                         <span class="card-title">树上拓扑序计数|树形DP</span>
                     </div>
@@ -3421,7 +3436,7 @@ https://ac.nowcoder.com/acm/contest/38630/F
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="【裴蜀定理】CF1055C Lucky Days">
+                        <img src="/medias/featureimages/9.png" class="responsive-img" alt="【裴蜀定理】CF1055C Lucky Days">
                         
                         <span class="card-title">【裴蜀定理】CF1055C Lucky Days</span>
                     </div>
@@ -3632,7 +3647,7 @@ https://ac.nowcoder.com/acm/contest/38630/F
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">117.1k</span>
+            <span class="white-color">117.4k</span>
             
 
             <br>
