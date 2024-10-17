@@ -180,7 +180,7 @@
     <link href="http://wyqz.top/p/3418896117.html"/>
     <id>http://wyqz.top/p/3418896117.html</id>
     <published>2024-01-12T04:39:14.000Z</published>
-    <updated>2024-02-20T13:07:49.664Z</updated>
+    <updated>2024-10-17T02:53:49.549Z</updated>
     
     
       
@@ -385,11 +385,11 @@
   </entry>
   
   <entry>
-    <title>代码中的技巧或习惯</title>
+    <title>C++的代码技巧和习惯</title>
     <link href="http://wyqz.top/p/3703005386.html"/>
     <id>http://wyqz.top/p/3703005386.html</id>
     <published>2023-11-06T08:39:35.000Z</published>
-    <updated>2024-02-20T13:07:49.671Z</updated>
+    <updated>2024-10-17T02:12:29.163Z</updated>
     
     
       
@@ -406,6 +406,8 @@
     
     
     <category term="ACM" scheme="http://wyqz.top/categories/ACM/"/>
+    
+    <category term="CPP" scheme="http://wyqz.top/categories/ACM/CPP/"/>
     
     
     <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>

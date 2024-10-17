@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="代码中的技巧或习惯, ZZU 行码棋">
+    <meta name="keywords" content="C++的代码技巧和习惯, ZZU 行码棋">
     <!-- 百度和谷歌统计验证 -->
     <meta name="baidu-site-verification" content="code-L7AVcsbU14" />
     <meta name="google-site-verification" content="x4QfrBHn9imI1RhTNCB8RD8Q2Rx6rE_zylSBptBgdZY" />
@@ -20,7 +20,7 @@ for(int i = 0; i &amp;lt; len; ++i) {
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>代码中的技巧或习惯 | 行码棋</title>
+    <title>C++的代码技巧和习惯 | 行码棋</title>
     <link rel="icon" type="image/png" href="/medias/logo.png" defer>
 
     <link rel="stylesheey" type="text/css" href="//at.alicdn.com/t/c/font_3948353_97hiukrvyh.css" defer>
@@ -325,13 +325,13 @@ for(int i = 0; i &amp;lt; len; ++i) {
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/27.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        代码中的技巧或习惯
+                        C++的代码技巧和习惯
                     </div>
                 </div>
             </div>
@@ -469,6 +469,10 @@ for(int i = 0; i &amp;lt; len; ++i) {
                             ACM
                         </a>
                         
+                        <a href="/categories/ACM/CPP/" class="post-category" target="_blank">
+                            CPP
+                        </a>
+                        
                     </div>
                     
                 </div>
@@ -482,7 +486,7 @@ for(int i = 0; i &amp;lt; len; ++i) {
                 <!-- 显示更新日期 -->
                 <div class="post-update-date info-break-policy">
                     <i class="fa fa-history fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-02-20
+                    2024-10-17
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -752,6 +756,15 @@ R<span class="token punctuation">[</span>seg<span class="token punctuation">[</s
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> cnt <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
 ll x <span class="token operator">=</span> <span class="token number">114514232</span><span class="token punctuation">;</span>
 <span class="token keyword">while</span> <span class="token punctuation">(</span>x <span class="token operator">&gt;&gt;</span> cnt<span class="token punctuation">)</span> <span class="token operator">++</span>cnt<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<ol start="35">
+<li>使用auto定义lambda表达式递归函数</li>
+</ol>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">auto</span> dfs <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token operator">&amp;</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">auto</span><span class="token operator">&amp;&amp;</span> dfs<span class="token punctuation">,</span> <span class="token keyword">int</span> u<span class="token punctuation">,</span> <span class="token keyword">int</span> p<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+	<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> v<span class="token operator">:</span> g<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>v <span class="token operator">==</span> p<span class="token punctuation">)</span> <span class="token keyword">continue</span><span class="token punctuation">;</span>
+		<span class="token function">dfs</span><span class="token punctuation">(</span>dfs<span class="token punctuation">,</span> v<span class="token punctuation">,</span> u<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="持续更新中"><a class="markdownIt-Anchor" href="#持续更新中"></a> 持续更新中… …</h2>
 
             </div>
@@ -913,7 +926,7 @@ ll x <span class="token operator">=</span> <span class="token number">114514232<
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《代码中的技巧或习惯》
+                    《C++的代码技巧和习惯》
                 </span> 由
             <a xmlns:cc="http://creativecommons.org/ns#" href="/p/3703005386.html" property="cc:attributionName"
                rel="cc:attributionURL">
@@ -1253,7 +1266,7 @@ ll x <span class="token operator">=</span> <span class="token number">114514232<
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="【Mit6.s081】课程记录">
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="【Mit6.s081】课程记录">
                         
                         <span class="card-title">【Mit6.s081】课程记录</span>
                     </div>
@@ -1316,7 +1329,7 @@ xv6系统为 RISC-V
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="个人算法题单整理">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="个人算法题单整理">
                         
                         <span class="card-title">个人算法题单整理</span>
                     </div>
@@ -1540,7 +1553,7 @@ multiset插入删除，异或运算性质：相邻元素值异或小于非相邻
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">117.4k</span>
+            <span class="white-color">117.6k</span>
             
 
             <br>
