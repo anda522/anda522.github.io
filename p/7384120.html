@@ -329,7 +329,7 @@ random.randint(a, b)
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -486,7 +486,7 @@ random.randint(a, b)
                 <!-- 显示更新日期 -->
                 <div class="post-update-date info-break-policy">
                     <i class="fa fa-history fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-02-20
+                    2025-01-01
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -500,14 +500,14 @@ random.randint(a, b)
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.2k
+                    2.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    10 分
+                    11 分
                 </div>
                 
                 
@@ -738,6 +738,10 @@ b<span class="token punctuation">:</span> Tuple<span class="token punctuation">[
 <td>Path.is_symlink()</td>
 <td>判断是否为链接</td>
 </tr>
+<tr>
+<td>Path.open(‘r’)</td>
+<td>打开文件返回文件对象</td>
+</tr>
 </tbody>
 </table>
 <h2 id="2-一些常用的文件属性"><a class="markdownIt-Anchor" href="#2-一些常用的文件属性"></a> 2 一些常用的文件属性</h2>
@@ -782,6 +786,43 @@ p <span class="token operator">=</span> Path<span class="token punctuation">(</s
 <span class="token comment"># 当前文件路径</span>
 p <span class="token operator">=</span> Path<span class="token punctuation">(</span><span class="token string">'./'</span><span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">[</span>i <span class="token keyword">for</span> i <span class="token keyword">in</span> p<span class="token punctuation">.</span>iterdir<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">if</span> i<span class="token punctuation">.</span>is_dir<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="5-打开文件"><a class="markdownIt-Anchor" href="#5-打开文件"></a> 5 打开文件</h2>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> pathlib <span class="token keyword">import</span> Path
+
+<span class="token comment"># 创建一个 Path 对象</span>
+file_path <span class="token operator">=</span> Path<span class="token punctuation">(</span><span class="token string">'example.txt'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 1 使用 open 函数打开文件</span>
+<span class="token keyword">with</span> <span class="token builtin">open</span><span class="token punctuation">(</span>file_path<span class="token punctuation">,</span> <span class="token string">'r'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+    content <span class="token operator">=</span> <span class="token builtin">file</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span>
+
+<span class="token comment"># 2 使用 Path 对象的 open 方法打开文件</span>
+<span class="token keyword">with</span> file_path<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">'r'</span><span class="token punctuation">)</span> <span class="token keyword">as</span> <span class="token builtin">file</span><span class="token punctuation">:</span>
+    content <span class="token operator">=</span> <span class="token builtin">file</span><span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>content<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="imageio"><a class="markdownIt-Anchor" href="#imageio"></a> imageio</h1>
+<p>用于读取和写入图像数据的Python库。</p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 读取图像：存储在numpy中，默认为高宽通道数</span>
+<span class="token comment"># 图像是 PNG 且包含透明度信息（Alpha 通道），imageio 默认读取为四通道（RGBA）</span>
+<span class="token comment"># 没有透明度信息的图像（如 JPEG 格式），它通常会读取为三通道（RGB）</span>
+img <span class="token operator">=</span> imageio<span class="token punctuation">.</span>imread<span class="token punctuation">(</span><span class="token string">'image.jpg'</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 显示图像：使用matplotlib库</span>
+<span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+plt<span class="token punctuation">.</span>imshow<span class="token punctuation">(</span>img<span class="token punctuation">)</span>
+plt<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token comment"># 写入图像：使用imageio.imwrite()函数将图像写入到指定路径的文件中</span>
+imageio<span class="token punctuation">.</span>imwrite<span class="token punctuation">(</span><span class="token string">'path/image.jpg'</span><span class="token punctuation">,</span> image<span class="token punctuation">)</span>
+<span class="token comment"># 读取视频</span>
+reader <span class="token operator">=</span> imageio<span class="token punctuation">.</span>get_reader<span class="token punctuation">(</span><span class="token string">'video.mp4'</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> frame <span class="token keyword">in</span> reader<span class="token punctuation">.</span>iter_data<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># do something</span>
+
+<span class="token comment"># 写入视频</span>
+writer <span class="token operator">=</span> imageio<span class="token punctuation">.</span>get_writer<span class="token punctuation">(</span><span class="token string">'video.mp4'</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> frame <span class="token keyword">in</span> frames<span class="token punctuation">:</span>
+    writer<span class="token punctuation">.</span>append_data<span class="token punctuation">(</span>frame<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h1 id="多线程"><a class="markdownIt-Anchor" href="#多线程"></a> 多线程</h1>
 <p>推荐使用 <code>concurent.futures.ProcessPoolExecutor</code> 替代 <code>multiprocessing.Pool</code> ，前者更容易使用，有更友好的报错提示。</p>
 <h1 id="streamlit快速开发可视化界面"><a class="markdownIt-Anchor" href="#streamlit快速开发可视化界面"></a> streamlit:快速开发可视化界面</h1>
@@ -1285,7 +1326,7 @@ p <span class="token operator">=</span> Path<span class="token punctuation">(</s
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="Linux知识收集">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="Linux知识收集">
                         
                         <span class="card-title">Linux知识收集</span>
                     </div>
@@ -1343,7 +1384,7 @@ p <span class="token operator">=</span> Path<span class="token punctuation">(</s
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="Hexo踩坑实记">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="Hexo踩坑实记">
                         
                         <span class="card-title">Hexo踩坑实记</span>
                     </div>
@@ -1556,7 +1597,7 @@ p <span class="token operator">=</span> Path<span class="token punctuation">(</s
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">117.6k</span>
+            <span class="white-color">120.6k</span>
             
 
             <br>

@@ -6,7 +6,7 @@
   <link href="http://wyqz.top/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2024-08-06T05:34:09.752Z</updated>
+  <updated>2025-01-01T15:12:57.387Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2024年度总结</title>
+    <link href="http://wyqz.top/p/3268380856.html"/>
+    <id>http://wyqz.top/p/3268380856.html</id>
+    <published>2025-01-01T15:07:35.000Z</published>
+    <updated>2025-01-01T15:12:57.387Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;转眼2024也马上结束了，曾经期待的2024马上落下尾声。回想过往，些许记忆涌上心头。今年的总结我期望是文艺的样子，既然无法在表达上面有所精进，那就寄望于在写这方面愈发向上。&lt;/p&gt;
+&lt;h1 id=&quot;school&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="哲思" scheme="http://wyqz.top/categories/%E5%93%B2%E6%80%9D/"/>
+    
+    
+    <category term="阶段性总结" scheme="http://wyqz.top/tags/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>为什么我突然又开始发文章了</title>
@@ -152,7 +178,7 @@
     <link href="http://wyqz.top/p/7384120.html"/>
     <id>http://wyqz.top/p/7384120.html</id>
     <published>2024-01-29T08:08:30.000Z</published>
-    <updated>2024-02-20T13:07:49.666Z</updated>
+    <updated>2025-01-01T15:06:18.143Z</updated>
     
     
       
@@ -522,35 +548,6 @@
     
     
     <category term="资源" scheme="http://wyqz.top/tags/%E8%B5%84%E6%BA%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>matplotlib画图</title>
-    <link href="http://wyqz.top/p/3804173379.html"/>
-    <id>http://wyqz.top/p/3804173379.html</id>
-    <published>2023-03-26T02:51:42.000Z</published>
-    <updated>2024-02-20T13:07:49.669Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;相关设置：&lt;/p&gt;
-&lt;p&gt;如果是在notebook中想使用&lt;strong&gt;嵌入式绘图&lt;/strong&gt;，需添加&lt;/p&gt;
-&lt;pre class=&quot;line-numbers language-python&quot; data-language=&quot;python&quot;&gt;&lt;code</summary>
-        
-      
-    
-    
-    
-    <category term="Python" scheme="http://wyqz.top/categories/Python/"/>
-    
-    
-    <category term="Python" scheme="http://wyqz.top/tags/Python/"/>
-    
-    <category term="画图" scheme="http://wyqz.top/tags/%E7%94%BB%E5%9B%BE/"/>
     
   </entry>
   
