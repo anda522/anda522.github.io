@@ -330,7 +330,7 @@ xv6系统为 RISC-V
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -625,7 +625,7 @@ xv6系统为 RISC-V
 <h1 id="3-page-tables"><a class="markdownIt-Anchor" href="#3-page-tables"></a> 3 Page tables</h1>
 <h2 id="knowledge-3"><a class="markdownIt-Anchor" href="#knowledge-3"></a> Knowledge</h2>
 <p>Xv6为每个进程维护一个单独的页表，定义了该进程的地址空间。一个进程的虚拟地址空间分布如下。首先是指令，然后是全局变量，然后是栈区，最后是一个堆区域。有许多因素限制了进程地址空间的最大范围： RISC-V上的指针有64位宽；硬件在页表中查找虚拟地址时只使用低39位；xv6只使用这39位中的38位。因此，最大地址是 <code>2^38-1=0x3fffffffff</code> ，即<code>MAXVA</code>（定义在kernel/riscv.h:348）在地址空间的顶部，xv6为<code>trampoline</code>（用于在用户和内核之间切换）和映射进程切换到内核的<code>trapframe</code>分别保留了一个页面。</p>
-<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://xv6.dgs.zone/tranlate_books/book-riscv-rev1/images/c2/p2.png" alt=""></p>
+<p><img src="https://xv6.dgs.zone/tranlate_books/book-riscv-rev1/images/c2/p2.png" alt=""></p>
 <h2 id="lab-3"><a class="markdownIt-Anchor" href="#lab-3"></a> Lab</h2>
 <p><code>argaddr()</code> 和 <code>argint()</code> 函数都是从用户栈空间中提取参数。当用户调用系统调用时，需要将参数传给内核。参数通常会放到用户的栈中。</p>
 <p><code>walk</code> 函数在操作系统中通常用于页表的遍历和访问。在虚拟内存管理中，页表是一种数据结构，用于将虚拟地址映射到物理地址。<code>walk</code> 函数的主要作用是在给定的页表中查找特定虚拟地址对应的页表项。</p>
@@ -655,7 +655,7 @@ xv6系统为 RISC-V
 <ul>
 <li>我们很有可能需要标记当前的 PTE 为 COW 内存页映射，因此我们可以使用 RSW（reserved for software）标识位来实现：</li>
 </ul>
-<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://blog.rayzhang.top/2022/10/01/mit-6.s081-lab-cow/rsw-bits.png" alt=""></p>
+<p><img src="https://blog.rayzhang.top/2022/10/01/mit-6.s081-lab-cow/rsw-bits.png" alt=""></p>
 <ul>
 <li>
 <p>如果 COW 下的缺页中断产生了，但是也没有足够的物理内存空间，那么进程应当被杀死。</p>
@@ -664,7 +664,7 @@ xv6系统为 RISC-V
 <p>设置引用计数，将物理内容RAM划分成 <code>(PHYSTOP - KERNBASE) / PGSIZE</code> 个页面，对每个页面设置一个引用计数（代表页面被引用的次数，当引用计数变为0时，就要释放对应的空间）。</p>
 </li>
 </ul>
-<p><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgdmlld0JveD0iMCAwIDI0IDI0Ij48Y2lyY2xlIGN4PSI0IiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgaWQ9InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAiIGF0dHJpYnV0ZU5hbWU9InIiIGJlZ2luPSIwO3N2Z1NwaW5uZXJzM0RvdHNTY2FsZTEuZW5kLTAuMjVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjxjaXJjbGUgY3g9IjEyIiBjeT0iMTIiIHI9IjMiIGZpbGw9ImN1cnJlbnRDb2xvciI+PGFuaW1hdGUgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNnMiIGR1cj0iMC43NXMiIHZhbHVlcz0iMzsuMjszIi8+PC9jaXJjbGU+PGNpcmNsZSBjeD0iMjAiIGN5PSIxMiIgcj0iMyIgZmlsbD0iY3VycmVudENvbG9yIj48YW5pbWF0ZSBpZD0ic3ZnU3Bpbm5lcnMzRG90c1NjYWxlMSIgYXR0cmlidXRlTmFtZT0iciIgYmVnaW49InN2Z1NwaW5uZXJzM0RvdHNTY2FsZTAuZW5kLTAuNDVzIiBkdXI9IjAuNzVzIiB2YWx1ZXM9IjM7LjI7MyIvPjwvY2lyY2xlPjwvc3ZnPg==" data-original="https://blog.rayzhang.top/2022/10/01/mit-6.s081-lab-cow/mem.png" alt=""></p>
+<p><img src="https://blog.rayzhang.top/2022/10/01/mit-6.s081-lab-cow/mem.png" alt=""></p>
 <h1 id="6-multithreading"><a class="markdownIt-Anchor" href="#6-multithreading"></a> 6 Multithreading</h1>
 <h2 id="knowledge-6"><a class="markdownIt-Anchor" href="#knowledge-6"></a> Knowledge</h2>
 <p>Xv6有两种类型的锁：自旋锁（spinlocks）和睡眠锁（sleep-locks）。</p>
@@ -1243,7 +1243,7 @@ pthread_cond_signal<span aria-hidden="true" class="line-numbers-rows"><span></sp
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="折腾长久，终退役-致我的ACM生涯">
+                        <img src="/medias/featureimages/6.jpg" class="responsive-img" alt="折腾长久，终退役-致我的ACM生涯">
                         
                         <span class="card-title">折腾长久，终退役-致我的ACM生涯</span>
                     </div>
@@ -1301,7 +1301,7 @@ pthread_cond_signal<span aria-hidden="true" class="line-numbers-rows"><span></sp
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="C++的代码技巧和习惯">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="C++的代码技巧和习惯">
                         
                         <span class="card-title">C++的代码技巧和习惯</span>
                     </div>
@@ -1329,11 +1329,7 @@ for(int i = 0; i &lt; len; ++i) {
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/ACM/" class="post-category" target="_blank">
-                                    ACM
-                                </a>
-                            
-                            <a href="/categories/ACM/CPP/" class="post-category" target="_blank">
+                            <a href="/categories/CPP/" class="post-category" target="_blank">
                                     CPP
                                 </a>
                             
@@ -1707,25 +1703,12 @@ $(function () {
     <!-- 不蒜子统计修改网页请求头 -->
     
     <script async src="https://lib.baomitu.com/busuanzi/latest/bsz.pure.mini.js"></script>
-    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="referrer" content="no-referrer-when-downgrade"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
     
     
     
 
-
-        <style>
-            [bg-lazy] {
-                background-image: none !important;
-                background-color: #eee !important;
-            }
-        </style>
-        <script>
-            window.imageLazyLoadSetting = {
-                isSPA: false,
-                preloadRatio: 3,
-                processImages: null,
-            };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z\d\-\.\+]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(t.test(e.href)||r.test(e.href))&&(e.href=a.dataset.original)})});</script><script>(r=>{r.imageLazyLoadSetting.processImages=t;var a=r.imageLazyLoadSetting.isSPA,o=r.imageLazyLoadSetting.preloadRatio||1,d=i();function i(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(t){(a||t)&&(d=i());for(var e,n=0;n<d.length;n++)0<=(e=(e=d[n]).getBoundingClientRect()).bottom&&0<=e.left&&e.top<=(r.innerHeight*o||document.documentElement.clientHeight*o)&&(()=>{var t,e,a,o,i=d[n];e=function(){d=d.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).dataset.loaded||(t.hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(a=new Image,o=t.getAttribute("data-original"),a.onload=function(){t.src=o,t.removeAttribute("data-original"),t.setAttribute("data-loaded",!0),e&&e()},a.onerror=function(){t.removeAttribute("data-original"),t.setAttribute("data-loaded",!1),t.src=o},t.src!==o&&(a.src=o)))})()}function e(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",e),r.addEventListener("resize",e),r.addEventListener("orientationchange",e)})(this);</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+</body>
 
 </html>

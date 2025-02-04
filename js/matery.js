@@ -103,7 +103,8 @@ $(function () {
         $('#articleContent, #myGallery').lightGallery({
             selector: '.img-item',
             // 启用字幕
-            subHtmlSelectorRelative: true
+            subHtmlSelectorRelative: true,
+            lazyLoad: true // 启用懒加载
         });
 
         // progress bar init
