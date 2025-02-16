@@ -1,0 +1,1811 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="ZZU2020物联期末回顾, 行码棋">
+    <!-- 百度和谷歌统计验证 -->
+    <meta name="baidu-site-verification" content="code-L7AVcsbU14" />
+    <meta name="google-site-verification" content="x4QfrBHn9imI1RhTNCB8RD8Q2Rx6rE_zylSBptBgdZY" />
+    <meta name="description" content="本文知识点均为从网络或其他地方搜集整理而来，提到的习题均无答案，完全不具备权威性质，作者不对看本文造成的后果负责，请合理参考。
+
+本人为ZZU2020级网安学院物联考生，以下是我对实际考试的考后记录，仅供复习参考。
+2023-12-30 U">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>ZZU2020物联期末回顾 | 行码棋</title>
+    <link rel="icon" type="image/png" href="/medias/logo.png" defer>
+
+    <link rel="stylesheey" type="text/css" href="//at.alicdn.com/t/c/font_3948353_97hiukrvyh.css" defer>
+    <!-- fa图标css文件引入 -->
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css" defer>
+    <link rel="stylesheet" type="text/css" href="https://lib.baomitu.com/materialize/1.0.0/css/materialize.min.css" defer>
+    <link rel="stylesheet" type="text/css" href="https://lib.baomitu.com/aos/2.3.4/aos.css" defer>
+    <link rel="stylesheet" type="text/css" href="https://lib.baomitu.com/animate.css/3.5.1/animate.min.css" defer>
+    <link rel="stylesheet" type="text/css" href="https://lib.baomitu.com/lightgallery/1.6.11/css/lightgallery.min.css" defer>
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+    <link rel="stylesheet" type="text/css" href="/libs/prism/prism.css" defer>
+    <link rel="stylesheet" type="text/css" href="https://cdn.bootcdn.net/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.css" defer>
+
+    <script src="https://lib.baomitu.com/jquery/2.2.0/jquery.min.js"></script>
+    <!-- 调用今日诗词API -->
+    <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8" defer></script>
+    <!-- wyqz.top 百度统计-->
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?7e24aec910e98687980f650c88fc0424";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5396110595574182"
+     crossorigin="anonymous">
+    </script>
+            
+    <!-- 百度推送 -->
+    
+    
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="行码棋" type="application/atom+xml"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</head>
+
+<body>
+
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">行码棋</span>
+                </a>
+            </div>
+            <!-- PC端菜单栏文字显示 -->
+
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fa fa-navicon"></i></a>
+<ul class="right">
+    
+    <li class="hide-on-med-and-down">
+        <a href="/" class="waves-effect waves-light">
+            
+            <i class="fa fa-home"></i>
+            
+            <span>首页</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/tags" class="waves-effect waves-light">
+            
+            <i class="fa fa-tags"></i>
+            
+            <span>标签</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/categories" class="waves-effect waves-light">
+            
+            <i class="fa fa-bookmark"></i>
+            
+            <span>分类</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/archives" class="waves-effect waves-light">
+            
+            <i class="fa fa-archive"></i>
+            
+            <span>历程</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/friends" class="waves-effect waves-light">
+            
+            <i class="fa fa-address-book"></i>
+            
+            <span>友链</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/about" class="waves-effect waves-light">
+            
+            <i class="fa fa-user-circle-o"></i>
+            
+            <span>知悉</span>
+        </a>
+    </li>
+    
+    <li class="hide-on-med-and-down">
+        <a href="/contact" class="waves-effect waves-light">
+            
+            <i class="fa fa-comments"></i>
+            
+            <span>微语</span>
+        </a>
+    </li>
+    
+    <li>
+        <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+            <i id="searchIcon" class="fa fa-search" title="搜索"></i>
+        </a>
+    </li>
+</ul>
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">行码棋</div>
+        <div class="logo-desc">
+            
+            金牌选手不会从天而降，你必须用热爱、刻苦和投入来浇灌他们。
+            
+        </div>
+    </div>
+    <!-- 手机端导航栏 -->
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li>
+            <a href="/" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-home"></i>
+                
+                首页
+            </a>
+        </li>
+        
+        <li>
+            <a href="/tags" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-tags"></i>
+                
+                标签
+            </a>
+        </li>
+        
+        <li>
+            <a href="/categories" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-bookmark"></i>
+                
+                分类
+            </a>
+        </li>
+        
+        <li>
+            <a href="/archives" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-archive"></i>
+                
+                历程
+            </a>
+        </li>
+        
+        <li>
+            <a href="/friends" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-address-book"></i>
+                
+                友链
+            </a>
+        </li>
+        
+        <li>
+            <a href="/about" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-user-circle-o"></i>
+                
+                知悉
+            </a>
+        </li>
+        
+        <li>
+            <a href="/contact" class="waves-effect waves-light">
+                
+                <i class="fa fa-fw fa-comments"></i>
+                
+                微语
+            </a>
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/anda522/anda522.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fa fa-github-square fa-fw"></i>Github Page
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/anda522/anda522.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Github Page" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="https://lib.baomitu.com/crypto-js/4.1.1/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <div class="description center-align post-title">
+                        ZZU2020物联期末回顾
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="https://lib.baomitu.com/tocbot/latest/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed !important;
+        top: 64px;
+    }
+
+    /* 目录背景白框 */
+    .toc-widget {
+        width: 340px;
+        padding-left: 20px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        background-color: rgb(255, 255, 255, 0.9);
+        border-radius: 10px;
+        max-height: 70vh;
+        overflow-y: auto;
+        box-shadow: 0 10px 35px 2px rgba(0, 0, 0, .15), 0 5px 15px rgba(0, 0, 0, .07), 0 2px 5px -5px rgba(0, 0, 0, .1) !important;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content ol {
+        position: relative;
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 20px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                        <a href="/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" target="_blank">
+                            <span class="chip bg-color">学习总结</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                        <a href="/categories/%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/" class="post-category" target="_blank">
+                            课程记录
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            <!-- 文章发布信息 -->
+            <div class="post-info">
+                <div class="post-date info-break-policy">
+                    <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2022-06-29
+                </div>
+                <!-- 显示更新日期 -->
+                <div class="post-update-date info-break-policy">
+                    <i class="fa fa-history fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2024-01-24
+                </div>
+
+                <div class="post-author info-break-policy">
+                    <i class="fa fa-user-o fa-fw"></i>作者:&nbsp;&nbsp;
+                    
+                    行码棋
+                    
+                </div>
+
+                
+                
+                <div class="info-break-policy">
+                    <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.9k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    10 分
+                </div>
+                
+                
+                <!-- 文章访问次数统计 -->
+                
+                <div id="busuanzi_container_page_pv" class="info-break-policy">
+                    <i class="fa fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                    <span id="busuanzi_value_page_pv"></span>
+                </div>
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>本文知识点均为从网络或其他地方搜集整理而来，提到的习题均无答案，完全不具备权威性质，作者不对看本文造成的后果负责，请合理参考。</p>
+<blockquote>
+<p>本人为ZZU2020级网安学院物联考生，以下是我对实际考试的考后记录，仅供复习参考。</p>
+<p>2023-12-30 Update：对复习资料进行了简要整理</p>
+</blockquote>
+<h1 id="大一总结"><a class="markdownIt-Anchor" href="#大一总结"></a> 大一总结</h1>
+<p>高数、线代、概率论可以完全写白皮书，白皮书上的题基本就是真的，甚至可能出现同类型题目，质量比较高。</p>
+<h1 id="2021-大二上期末回顾"><a class="markdownIt-Anchor" href="#2021-大二上期末回顾"></a> 2021 大二上期末回顾</h1>
+<h2 id="1-linux"><a class="markdownIt-Anchor" href="#1-linux"></a> 1 Linux</h2>
+<p>指令基本都是基本指令，输入输出流，统计行数，复制，文件权限修改等等</p>
+<p>大题会考swap分区构建的具体步骤</p>
+<p>考软硬链接文件复制文件和源文件的区别</p>
+<p>脚本题是对两个文件判存在不存在，不存在询问建文件不建，只有当两个文件时都存在合并并排序</p>
+<h2 id="2-计算机组成原理"><a class="markdownIt-Anchor" href="#2-计算机组成原理"></a> 2 计算机组成原理</h2>
+<p>大题考的主要是课后习题和课本例题</p>
+<p>选择填空：</p>
+<p>微指令内容感觉有点多，占了两三道选择<br>
+填空：带宽计算，速度计算</p>
+<p>计算：</p>
+<ul>
+<li>
+<p>补码加减法以及判溢出</p>
+</li>
+<li>
+<p>时钟周期机器周期计算带宽</p>
+</li>
+<li>
+<p>命中率，效率，平均访存时间</p>
+</li>
+<li>
+<p>计算cache映射主存地址位数计算，四路组相连计算</p>
+</li>
+<li>
+<p>一地址指令格式设计，操作方式种类数给了，寻址特征几种有了，设计地址，计算直接寻址范围和间接寻址范围</p>
+</li>
+</ul>
+<p>综合：</p>
+<ul>
+<li>屏蔽字设计，画多级中断图</li>
+<li>CPU和存储器连接画图</li>
+</ul>
+<h2 id="3-毛概"><a class="markdownIt-Anchor" href="#3-毛概"></a> 3 毛概</h2>
+<h3 id="简答题"><a class="markdownIt-Anchor" href="#简答题"></a> 简答题</h3>
+<ul>
+<li>为什么说中国共产党领导的整个中国革命运动，包括新民主主义革命和社会主义革命两个阶段？</li>
+<li>谈谈你对毛泽东思想活的灵魂的理解？</li>
+</ul>
+<h3 id="材料分析题"><a class="markdownIt-Anchor" href="#材料分析题"></a> 材料分析题</h3>
+<ul>
+<li>对建党精神的理解</li>
+<li>新民主主义革命和社会主义革命时期党是如何建设发展的</li>
+</ul>
+<h2 id="4-近代史"><a class="markdownIt-Anchor" href="#4-近代史"></a> 4 近代史</h2>
+<p>材料题：</p>
+<ul>
+<li>问法：材料提到的事件是什么：辛亥革命，本事件的性质是什么</li>
+<li>该事件的意义</li>
+<li>失败原因及教训</li>
+<li>为什么中国共产党是孙中山革命事业的继承者</li>
+</ul>
+<p>论述题：</p>
+<ul>
+<li>1.为什么中国共产党应运而生</li>
+<li>2.以毛泽东为代表的中国共产党如何探索开辟中国革命道路</li>
+<li>3.建党百年的取得成就</li>
+</ul>
+<h2 id="5-数据结构"><a class="markdownIt-Anchor" href="#5-数据结构"></a> 5 数据结构</h2>
+<p>填空：有一个联通分量计算</p>
+<p>填空选择涉及了二叉树节点个数性质，一些基础知识涉及的比较多，涉及了一个地址计算（二维数组相关）</p>
+<p>其他的已经忘记了。</p>
+<h3 id="综合题1"><a class="markdownIt-Anchor" href="#综合题1"></a> 综合题1</h3>
+<p>第一个给了一个程序（如下），进行复杂度分析</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">cal</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">,</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+	<span class="token keyword">while</span><span class="token punctuation">(</span>x <span class="token operator">&lt;</span> n <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+		x <span class="token operator">*=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+		count <span class="token operator">++</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">return</span> count<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>求count的值（用n表示），求时间复杂度和空间复杂度</p>
+<h3 id="综合题2"><a class="markdownIt-Anchor" href="#综合题2"></a> 综合题2</h3>
+<p>给出一个队列的描述，让你画描述队列的图，指出队首队尾，队列如何判满和判空</p>
+<p>一个队列，给了在其中的元素个数及内容和头指针的位置，让画出队列图，又进行出队和入队操作，再让画一次队列图（哪个位置存的什么元素）</p>
+<h3 id="综合题3"><a class="markdownIt-Anchor" href="#综合题3"></a> 综合题3</h3>
+<p>第三个给了一个图，画出临接矩阵，然后是dfs序列，最小生成树</p>
+<h3 id="综合题4"><a class="markdownIt-Anchor" href="#综合题4"></a> 综合题4</h3>
+<p>一个序列，建立哈夫曼树，求WPL和叶子节点编码</p>
+<h3 id="综合题5"><a class="markdownIt-Anchor" href="#综合题5"></a> 综合题5</h3>
+<p>哈希查找画哈希表，求asl</p>
+<h3 id="综合题6"><a class="markdownIt-Anchor" href="#综合题6"></a> 综合题6</h3>
+<p>一个序列，快排第一趟之后是啥，堆排初始化建立的大根堆是啥</p>
+<h3 id="编程题"><a class="markdownIt-Anchor" href="#编程题"></a> 编程题</h3>
+<p>编程是第一问编写初始化带头节点的单链表，第二问编写在单链表查找 <code>x</code> 的程序</p>
+<h2 id="6-数电"><a class="markdownIt-Anchor" href="#6-数电"></a> 6 数电</h2>
+<h3 id="选择填空"><a class="markdownIt-Anchor" href="#选择填空"></a> 选择填空</h3>
+<p>选择触发器涉及的不多，都是些逻辑表达式分析之类的，最小项分析，触发器涉及的都是基础知识，什么存在约束项，什么可以避免空翻，什么抗干扰不抗之类的</p>
+<h3 id="综合计算"><a class="markdownIt-Anchor" href="#综合计算"></a> 综合计算</h3>
+<p>计算题：</p>
+<ul>
+<li>
+<p>补码加减法</p>
+</li>
+<li>
+<p>写TTL电路逻辑表达式</p>
+</li>
+<li>
+<p>写cmos电路逻辑表达式</p>
+<p>上面写表达式的课本出现过原题，请复习课后题</p>
+</li>
+<li>
+<p>用卡诺图化简最简式子</p>
+</li>
+<li>
+<p>用74l138实现某个逻辑表达式</p>
+</li>
+<li>
+<p>画主从rs触发器波形图</p>
+</li>
+</ul>
+<p>综合题：</p>
+<ul>
+<li>
+<p>数码管设计，真值表</p>
+</li>
+<li>
+<p>8421bcd码，实现相关功能，画真值表，设计电路</p>
+</li>
+</ul>
+<blockquote>
+<p>另外给出 <a href="https://wwm.lanzouv.com/iJoc40h3kqfc">2020年数电试卷</a> <a href="https://wwm.lanzouv.com/iJoc40h3kqfc">https://wwm.lanzouv.com/iJoc40h3kqfc</a> 请认真对待进行复习，仅供参考。</p>
+</blockquote>
+<h1 id="大二下"><a class="markdownIt-Anchor" href="#大二下"></a> 大二下</h1>
+<p>因为疫情，线上考试，没有记录，题型和线下也大不一样</p>
+<h1 id="2022-2023大三上"><a class="markdownIt-Anchor" href="#2022-2023大三上"></a> 2022-2023大三上</h1>
+<h2 id="1-人工智能"><a class="markdownIt-Anchor" href="#1-人工智能"></a> 1 人工智能</h2>
+<p>我总结了知识点（复习笔记），请跳转查看：<a href="https://blog.csdn.net/qq_50285142/article/details/129283243">https://blog.csdn.net/qq_50285142/article/details/129283243</a></p>
+<blockquote>
+<p>注意：其中标 ⭐ 的都是重点，选择填空大题都可能考到，具体靠的类型可能是什么，自己把握。</p>
+</blockquote>
+<h3 id="11-2023年初物联"><a class="markdownIt-Anchor" href="#11-2023年初物联"></a> 1.1 2023年初物联</h3>
+<p>我那年大题考的内容有：</p>
+<ul>
+<li>人工智能研究方法，及其与三学派关系</li>
+<li>人工智能，机器学习，深度学习的关系</li>
+<li>A*算法，启发式搜索</li>
+<li>状态空间表示法概念</li>
+<li>确定性推理和不确定推理的关系</li>
+</ul>
+<p>下面是两道计算题：</p>
+<ul>
+<li>可信度计算</li>
+<li>决策树计算</li>
+</ul>
+<h3 id="12-2022信安考题"><a class="markdownIt-Anchor" href="#12-2022信安考题"></a> 1.2 2022信安考题</h3>
+<p>当时询问得知的 <strong>2022年信安期末大题</strong> （那时是线上考试）：</p>
+<ul>
+<li>遗传算法概念和主要流程
+<ul>
+<li>是一种模仿生物遗传学和自然选择机理的优化搜索算法，是进化计算的一种重要的形式。有选择算子，交叉算子，变异算子。</li>
+<li>流程
+<ul>
+<li>初始化群体，群体中的每一个个体都是染色体，由二进制串组成，所以算法中会牵扯到编码和解码操作</li>
+<li>计算所有个体的适应度（适应度函数由用户自定义，保证适应度大的个体质量更好）</li>
+<li>选择：选择方法一般有赌轮选择和联赛选择。赌轮选择：每个个体有一个选择的概率，可以定为个体的适应度除以群体总的适应度，产生随机数选择一个个体。联赛选择：随机选择m个个体，选择适应度最大的个体。选择之后要进行解码操作。</li>
+<li>以某一概率进行交叉。（交叉分为一点交叉和两点交叉）</li>
+<li>以某一概率进行突变</li>
+<li>直至满足某种停止条件，否则一直进行适应度计算往下的操作</li>
+<li>输出适应度最优的染色体作为最优解</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>知识表示的几种方法，并解释主要概念
+<ul>
+<li>状态空间表示法</li>
+<li>问题归约表示法</li>
+<li>谓词逻辑表示法</li>
+<li>语义网络表示法</li>
+<li>框架表示</li>
+<li>过程表示</li>
+</ul>
+</li>
+<li>人工智能的应用</li>
+<li>解释
+<ul>
+<li>人工神经网络三要素</li>
+<li>神经元</li>
+<li>网络拓扑结构</li>
+<li>学习算法</li>
+</ul>
+</li>
+<li>启发式搜索的解释，A*算法的解释，相关步骤</li>
+<li>决策树的计算，通过信息熵和信息增益计算最终打不打网球</li>
+<li>梵塔问题四圆盘状态表示图画法</li>
+<li>不确定性推理的计算</li>
+</ul>
+<blockquote>
+<p>对应文件可查看：<a href="https://github.com/anda522/CourseReview/tree/main/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E5%8F%8A%E5%85%B6%E5%BA%94%E7%94%A8-%E8%94%A1%E8%87%AA%E5%85%B4">2022年信安人工智能期末重点和期末大题</a></p>
+</blockquote>
+<h3 id="13-2024年初物联"><a class="markdownIt-Anchor" href="#13-2024年初物联"></a> 1.3 2024年初物联</h3>
+<p>2024年1月物联人工智能期末大题</p>
+<p>简答题：</p>
+<ul>
+<li>计算智能、生物智能、人工智能的关系</li>
+<li>状态空间的概念、步骤</li>
+<li>子句集的九个求解步骤</li>
+<li>启发式搜索是什么？和盲目搜索有什么区别？</li>
+<li>人工智能是什么？它的远期目标和近期目标是什么？</li>
+</ul>
+<p>计算题：</p>
+<ul>
+<li>消解推理类问题</li>
+<li>主观贝叶斯计算</li>
+<li>决策树计算</li>
+</ul>
+<blockquote>
+<p>我们那年考了可信度计算，是因为课件上有，今年课件上并没有可信度计算，可见每年考题要看所教老师的课件是什么。</p>
+</blockquote>
+<h2 id="2-传感器"><a class="markdownIt-Anchor" href="#2-传感器"></a> 2 传感器</h2>
+<p>主要是课后题，记得并没有考特别麻烦的式子。</p>
+<blockquote>
+<p>附上 <a href="https://wwwi.lanzouy.com/i7X8r1jeti2j">传感器课后题汇总</a> 密码:9jon</p>
+</blockquote>
+<h2 id="3-数据库"><a class="markdownIt-Anchor" href="#3-数据库"></a> 3 数据库</h2>
+<blockquote>
+<p>附上我当时做的数据库xmind思维导图：<a href="https://wwwi.lanzouy.com/iPM3F1jett9c%EF%BC%8C%E5%AF%86%E7%A0%81:cxb6">https://wwwi.lanzouy.com/iPM3F1jett9c，密码:cxb6</a></p>
+<p>思维导图PDF文件格式：<a href="https://wwwi.lanzouy.com/i5kuN1jeu62d">数据库复习思维导图</a></p>
+</blockquote>
+<h1 id="2023大三下"><a class="markdownIt-Anchor" href="#2023大三下"></a> 2023大三下</h1>
+<h2 id="1-rfid"><a class="markdownIt-Anchor" href="#1-rfid"></a> 1 RFID</h2>
+<p>两个大题：</p>
+<ul>
+<li>画不同编码方式的编码图</li>
+<li>EPC系统的介绍（解释）</li>
+</ul>
+<p>看的是给出的雨课堂习题</p>
+<blockquote>
+<p>在此附上汇总的雨课堂和课后题 <a href="https://wwwi.lanzouy.com/icgAu1jesakd">RFID雨课堂和课后习题汇总</a></p>
+</blockquote>
+<h2 id="2-无线通信"><a class="markdownIt-Anchor" href="#2-无线通信"></a> 2 无线通信</h2>
+<p>主要看PPT，以及PPT上面的习题</p>
+<blockquote>
+<p>另外附上我的复习笔记，非常全面： <a href="https://wwwi.lanzouy.com/iCmZw1jeszle">无线通信复习笔记</a></p>
+</blockquote>
+<h2 id="3-软件工程"><a class="markdownIt-Anchor" href="#3-软件工程"></a> 3 软件工程</h2>
+<ul>
+<li>软件工程不太好说，内容太多，基本都是要记的内容</li>
+<li>记得大题考了一个需求分析的特点</li>
+</ul>
+<blockquote>
+<p>麻了，软件工程 <a href="https://blog.csdn.net/weixin_46232841/article/details/111387192">https://blog.csdn.net/weixin_46232841/article/details/111387192</a> 这文里出现很多选择原题，我写错好几个，考后有人发链接。</p>
+<p>另外附上我整理的复习笔记：<a href="https://wwwi.lanzouy.com/i8k9H1jerhqf">软件工程复习笔记</a></p>
+</blockquote>
+<h2 id="4-物联网安全"><a class="markdownIt-Anchor" href="#4-物联网安全"></a> 4 物联网安全</h2>
+<p>物联网安全复习的内容太多了</p>
+<p>简答题考了：</p>
+<ul>
+<li>简述物联网秘钥管理</li>
+<li>数字签名和消息认证的区别</li>
+<li>无线个域网和无线局域网的区别</li>
+<li>简述使用数字证书认证的过程（存在CA认证中心）</li>
+<li>简述AES算法的过程</li>
+<li>物联网安全和互联网安全的关系</li>
+</ul>
+<h2 id="5-数据挖掘"><a class="markdownIt-Anchor" href="#5-数据挖掘"></a> 5 数据挖掘</h2>
+<p>选择：</p>
+<p>有个皮尔逊相关系数，选择那个数是最不相关的，应该选0</p>
+<p>简答：</p>
+<ul>
+<li>简述数据仓库与数据挖掘的关系</li>
+<li>说明数据清理的任务</li>
+<li>什么是粒度，数据仓库数据组织的四种形式</li>
+<li>给两个对象数据，计算曼哈顿距离和切比雪夫距离</li>
+<li>什么是聚类，和分类有何不同，列举常见聚类算法</li>
+<li>说出DBSCAN的优缺点</li>
+</ul>
+<p>综合：</p>
+<ul>
+<li>根据事务表构建FP树</li>
+<li>根据几个二维点，用K-means算法进行聚类</li>
+<li>【开放类型题】有一个系统，从数据预处理，模型选择，模型训练，评估等步骤说明如何构建一个预测系统（题目有对该系统的相关介绍）</li>
+</ul>
+<blockquote>
+<p>另外附上我当时整理的考试笔记：<a href="https://wwwi.lanzoup.com/ixr6V0znp1di">数据挖掘复习笔记</a></p>
+</blockquote>
+<h1 id="2024大四上"><a class="markdownIt-Anchor" href="#2024大四上"></a> 2024大四上</h1>
+<h2 id="机器学习"><a class="markdownIt-Anchor" href="#机器学习"></a> 机器学习</h2>
+<p>20分选择，10分判断，35简答题，35大题</p>
+<p>判断出现前向传播（推理过程）和反向传播（训练过程）的判断</p>
+<h3 id="简答题-2"><a class="markdownIt-Anchor" href="#简答题-2"></a> 简答题</h3>
+<ul>
+<li>简述深度学习和CNN卷积神经网络</li>
+<li>机器学习和传统编程的区别</li>
+<li>监督学习和无监督学习的定义和区别</li>
+<li>k均值聚类、层次聚类、密度聚类的定义、特征，并举例</li>
+<li>简述增强学习定义和强化学习</li>
+</ul>
+<h3 id="大题"><a class="markdownIt-Anchor" href="#大题"></a> 大题</h3>
+<p>第一题：</p>
+<ul>
+<li>常用的深度学习开发框架</li>
+<li>常用的深度学习开发工具</li>
+<li>深度学习的应用过程</li>
+</ul>
+<p>第二题：</p>
+<p>互联网有海量的文本、图像、视频数据，以自身学科背景，说一下机器学习方法如何应用到大数据的分析、处理场景中</p>
+<p>第三题：</p>
+<p>如何用二元逻辑回归分析金融风向管理，请说明过程</p>
+
+            </div>
+            <hr />
+
+            
+            <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.88rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fa fa-close"></i></a>
+            <h4 class="reward-title">写作不易，客官能否打赏一杯奶茶？</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.png" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+            
+
+            <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+
+<div id="article-share">
+    
+    <div class="social-share" data-disabled="qzone" data-wechat-qrcode-helper="<p>微信里点“发现”->“扫一扫”二维码便可查看分享。</p>"></div>
+    
+</div>
+
+<!-- <script src="/libs/share/js/social-share.min.js"></script> -->
+<script src="https://lib.baomitu.com/social-share.js/latest/js/social-share.min.js"></script>
+
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        <p class="reprint-tip">
+            <i class="fa fa-exclamation-triangle"></i>&nbsp;&nbsp;
+            <span>转载规则</span>
+        </p>
+        
+            <div class="center-align">
+                <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                    <img alt=""
+                         style="border-width:0"
+                         src="https://i.creativecommons.org/l/by/4.0/88x31.png"/>
+                </a>
+            </div>
+            <br/>
+            <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
+                  property="dct:title" rel="dct:type">
+                    《ZZU2020物联期末回顾》
+                </span> 由
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/p/454636061.html" property="cc:attributionName"
+               rel="cc:attributionURL">
+                行码棋
+            </a> 采用
+            <a rel="license" href="https://creativecommons.org/licenses/by/4.0/deed.zh">
+                知识共享署名 4.0 国际许可协议
+            </a>进行许可。
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+        </div>
+    </div>
+
+    
+    <link rel="stylesheet" href="https://lib.baomitu.com/gitalk/latest/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+
+<script src="https://lib.baomitu.com/gitalk/latest/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '132746b84c5638134a72',
+        clientSecret: '9026078c86f550ac2f804f817046f2f02aa1bf46',
+        repo: 'anda522.github.io',
+        owner: 'anda522',
+        admin: "anda522",
+        id: 'p/454636061.html',  // 使用页面路径生成gitalk id
+        
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+    
+
+    
+
+    
+
+    
+
+    
+    <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments input[type=text],
+    #vcomments input[type=email],
+    #vcomments input[type=url],
+    #vcomments textarea {
+        box-sizing: border-box;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #42b983;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div id="vcomments" class="card-content"></div>
+</div>
+
+<!-- <script src="/libs/valine/av-min.js"></script> -->
+<!-- 需要必填某些选项，所以不能换源 -->
+<script src="/libs/valine/Valine.min.js"></script>
+<!-- <script src="//code.bdstatic.com/npm/leancloud-storage@4.12.0/dist/av-min.js"></script> -->
+<!-- <script src="//unpkg.com/valine@latest/dist/Valine.min.js"></script> -->
+
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'IxO06LubS0JP1nbtF4umMRp6-gzGzoHsz',
+        appKey: 'OSn1n1ptwfxMcUAw2D0bbLXU',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'wavatar',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: '欢迎提问与质疑，你可以在这里评论啦！',
+        serverURLs: '',
+        requiredFields: ['mail']
+    });
+</script>
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/p/1843856130.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="Git|详解|命令">
+                        
+                        <span class="card-title">Git|详解|命令</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                             Git命令 | 详解
+ 概念
+Git是基于树进行维护的，每一个节点都是一个历史版本，可以进行代码管理。
+
+
+工作区（Workspace） ：就是会出现工作目录，即自己要编写的代码
+暂存区（Index / Stage）  ：通过 git a
+                        
+                    </div>
+                    <div class="publish-info">
+                        <div class="time-section">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-30
+                            </span>
+                            <span class="update-date">
+                                <i class="fa fa-history fa-fw icon-date"></i>2024-08-06
+                            </span>
+                        </div>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/" class="post-category" target="_blank">
+                                    开发知识
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Linux/" target="_blank">
+                        <span class="chip bg-color">Linux</span>
+                    </a>
+                    
+                    <a href="/tags/git/" target="_blank">
+                        <span class="chip bg-color">git</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/p/2396599521.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/25.png" class="responsive-img" alt="CF1181C Flag-子矩阵数量统计">
+                        
+                        <span class="card-title">CF1181C Flag-子矩阵数量统计</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                             CF1181C Flag子矩阵数量统计
+ 题目介绍
+题目链接：
+https://codeforces.com/problemset/problem/1181/C
+
+大意：有个人想要卖国旗。
+一面国旗可以抽象为一个 n×mn \times 
+                        
+                    </div>
+                    <div class="publish-info">
+                        <div class="time-section">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2022-06-29
+                            </span>
+                            <span class="update-date">
+                                <i class="fa fa-history fa-fw icon-date"></i>2022-06-29
+                            </span>
+                        </div>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/DP/" class="post-category" target="_blank">
+                                    DP
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/CF/" target="_blank">
+                        <span class="chip bg-color">CF</span>
+                    </a>
+                    
+                    <a href="/tags/DP/" target="_blank">
+                        <span class="chip bg-color">DP</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: 行码棋<br />'
+            + '作者: 行码棋<br />'
+            + '链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () { bodyElement.removeChild(newdiv); }, 200);
+    });
+</script>
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="fa fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fa fa-list"></i>
+    </a>
+</div>
+
+
+<script src="https://lib.baomitu.com/tocbot/latest/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            // headingsOffset: -205,
+            headingSelector: 'h1, h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h1, h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).slideUp(500);
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).slideDown(500);
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+    
+
+</main>
+
+
+
+
+
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js" defer></script>
+<!-- 代码语言 -->
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js" defer></script>
+<!-- 代码块复制 -->
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js" defer></script>
+<script type="text/javascript" src="/libs/codeBlock/clipboard.min.js" defer></script>
+<!-- 代码块收缩 -->
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js" defer></script> 
+<!-- 代码块折行 -->
+<style type="text/css">code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }</style>
+
+<script src="/libs/prism/prism.js" defer></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/prism/1.9.0/plugins/line-numbers/prism-line-numbers.js" defer></script>
+
+    <footer class="page-footer bg-color">
+    <div class="container row center-align">
+        <div class="col s12 m8 l8 copy-right">
+            &copy; 2020-<span id="CurrentYear"></span> 行码棋 版权所有
+
+            
+            &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
+            <span class="white-color">123.9k</span>
+            
+
+            <br>
+            <span id="sitetime"></span>
+            <br>
+            <!-- 备案号添加 -->
+            <img src="/medias/img/beian.png">
+            <a href="http://beian.miit.gov.cn/" style="color:#f72b07" target="_blank">豫ICP备2021035313号-2</a>
+
+            
+            
+            <br>
+
+            
+            <span id="busuanzi_container_site_pv" style='display:none'>
+                <i class="fa fa-heart-o"></i>
+                本站总访问量 <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv" style='display:none'>
+                人次,&nbsp;访客数 <span id="busuanzi_value_site_uv" class="white-color"></span> 人.
+            </span>
+            
+            
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/anda522" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fa fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:wyq522208@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fa fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+    <a href="http://wpa.qq.com/msgrd?v=3&uin=2579272746&site=qq&menu=yes" class="tooltipped" target="_blank" data-tooltip="访问我的知乎" data-position="top" data-delay="50">
+        <i class="fa fa-qq"></i>
+    </a>
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fa fa-rss"></i>
+    </a>
+</div>
+    </div>
+</footer>
+
+
+<div class="progress-bar"></div>
+
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+    $(document).ready(function () {
+
+        var int = setInterval(fixCount, 50);
+        var pvcountOffset = 0;
+        var uvcountOffset = 0;
+
+        function fixCount() {
+            if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
+                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
+                clearInterval(int);
+            }
+            if ($("#busuanzi_container_site_pv").css("display") != "none") {
+                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
+                clearInterval(int);
+            }
+        }
+    });
+</script>
+
+<script language=javascript>
+    function siteTime() {
+        window.setTimeout("siteTime()", 1000);
+        var seconds = 1000;
+        var minutes = seconds * 60;
+        var hours = minutes * 60;
+        var days = hours * 24;
+        var years = days * 365;
+        var today = new Date();
+        var todayYear = today.getFullYear();
+        var todayMonth = today.getMonth() + 1;
+        var todayDate = today.getDate();
+        var todayHour = today.getHours();
+        var todayMinute = today.getMinutes();
+        var todaySecond = today.getSeconds();
+        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+        year - 作为date对象的年份，为4位年份值
+        month - 0-11之间的整数，做为date对象的月份
+        day - 1-31之间的整数，做为date对象的天数
+        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+        minutes - 0-59之间的整数，做为date对象的分钟数
+        seconds - 0-59之间的整数，做为date对象的秒数
+        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+        var t1 = Date.UTC(2022, 06, 23, 00, 00, 00); //北京时间2018-2-13 00:00:00
+        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+        var diff = t2 - t1;
+        var diffYears = Math.floor(diff / years);
+        var diffDays = Math.floor((diff / days) - diffYears * 365);
+        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+        document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+        document.getElementById("CurrentYear").innerHTML = todayYear;
+    }
+    siteTime();
+</script>
+
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fa fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js" defer></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/" + "search.xml", 'searchInput', 'searchResult');
+});
+</script>
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fa fa-angle-up"></i>
+    </a>
+</div>
+
+
+    <script src="https://lib.baomitu.com/materialize/1.0.0/js/materialize.min.js" defer></script>
+    <script src="https://lib.baomitu.com/masonry/4.0.0/masonry.pkgd.min.js" defer></script>
+    <script src="https://lib.baomitu.com/aos/2.3.4/aos.js" defer></script>
+    <script src="https://lib.baomitu.com/scrollprogress/3.0.2/scrollProgress.min.js" defer></script>
+    <script src="https://lib.baomitu.com/lightgallery/1.6.11/js/lightgallery-all.min.js" defer></script>
+    
+    <script src="/js/matery.js" defer></script>
+    <script src="/js/click_show_text.js" defer></script>
+    
+    <!-- 根据是否在当前页面设置页面标题 -->
+    <!-- <script type="text/javascript"> 
+        var OriginTitile = document.title, st;
+        document.addEventListener("visibilitychange", function () {
+            document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) 
+        })
+    </script> -->
+    
+    <!-- 动态线条背景 -->
+    <!-- <script type="text/javascript" color="56,152,252" opacity="0.9" zindex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>
+    <canvas id="c_n4" width="602" height="852" style="position: fixed; top: 0px; left: 0px; z-index: -2; opacity: 0.9;"></canvas> -->
+    
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JPXWHNDBQ5"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-JPXWHNDBQ5');
+</script>
+
+
+
+    
+
+    <!-- 不蒜子统计修改网页请求头 -->
+    
+    <script async src="https://lib.baomitu.com/busuanzi/latest/bsz.pure.mini.js"></script>
+    <meta name="referrer" content="no-referrer-when-downgrade"><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    
+    
+    
+    
+
+</body>
+
+</html>
