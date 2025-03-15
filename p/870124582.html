@@ -1159,17 +1159,17 @@ priority_queue<span class="token operator">&lt;</span>Point<span class="token pu
 </blockquote>
 <p>结构体内部有两种方式：</p>
 <p><strong>方式一</strong> ：</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">struct</span> <span class="token class-name">node</span> <span class="token punctuation">{</span>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">struct</span> <span class="token class-name">Point</span> <span class="token punctuation">{</span>
 	<span class="token keyword">int</span> x<span class="token punctuation">,</span> y<span class="token punctuation">;</span>
 	<span class="token keyword">friend</span> <span class="token keyword">bool</span> <span class="token keyword">operator</span> <span class="token operator">&lt;</span> <span class="token punctuation">(</span>Point a<span class="token punctuation">,</span> Point b<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">//为两个结构体参数，结构体调用一定要写上friend</span>
-		<span class="token keyword">return</span> a<span class="token punctuation">.</span>x <span class="token operator">&lt;</span> b<span class="token punctuation">.</span>x<span class="token punctuation">;</span><span class="token comment">//按x从小到大排，x大的在堆顶</span>
+		<span class="token keyword">return</span> a<span class="token punctuation">.</span>x <span class="token operator">&lt;</span> b<span class="token punctuation">.</span>x<span class="token punctuation">;</span><span class="token comment">//大根堆，x大的优先</span>
 	<span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><strong>方式二</strong> ：（推荐此种）</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">struct</span> <span class="token class-name">node</span> <span class="token punctuation">{</span>
+<p><strong>方式二</strong> ：重载运算符（推荐此种）</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">struct</span> <span class="token class-name">Point</span> <span class="token punctuation">{</span>
     <span class="token keyword">int</span> x<span class="token punctuation">,</span> y<span class="token punctuation">;</span>
     <span class="token keyword">bool</span> <span class="token keyword">operator</span> <span class="token operator">&lt;</span> <span class="token punctuation">(</span><span class="token keyword">const</span> Point <span class="token operator">&amp;</span>a<span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">{</span><span class="token comment">//直接传入一个参数，不必要写friend</span>
-        <span class="token keyword">return</span> x <span class="token operator">&lt;</span> a<span class="token punctuation">.</span>x<span class="token punctuation">;</span><span class="token comment">//按x升序排列，x大的在堆顶</span>
+        <span class="token keyword">return</span> x <span class="token operator">&lt;</span> a<span class="token punctuation">.</span>x<span class="token punctuation">;</span><span class="token comment">//大根堆，x大的优先</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>优先队列的定义</p>
