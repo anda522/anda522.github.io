@@ -6,7 +6,7 @@
   <link href="http://wyqz.top/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2025-02-17T06:54:08.000Z</updated>
+  <updated>2025-07-12T04:09:06.000Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《人性的优点》阅读笔记</title>
+    <link href="http://wyqz.top/p/3727252244.html"/>
+    <id>http://wyqz.top/p/3727252244.html</id>
+    <published>2025-07-12T04:09:06.000Z</published>
+    <updated>2025-07-12T04:09:06.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;我想如果想让阅读达到净化内心的目的，就要让读到的东西内化到心里，但对于初入阅读的我来说，未免有点难度，所以接下来制定多步走的计划，前期摘抄能够触动自己的句子，后期慢慢多以思考来转型。其实就是肚子里的货多了，才能说出来自己的东西。&lt;/p&gt;
+&lt;/blo</summary>
+        
+      
+    
+    
+    
+    <category term="读书笔记" scheme="http://wyqz.top/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="读书笔记" scheme="http://wyqz.top/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>事后诸葛-那些后悔的选择</title>
@@ -512,33 +539,6 @@
     
     
     <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Google搜索语法</title>
-    <link href="http://wyqz.top/p/2127276366.html"/>
-    <id>http://wyqz.top/p/2127276366.html</id>
-    <published>2023-10-26T11:14:19.000Z</published>
-    <updated>2023-10-25T16:00:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;希望能够使用Google搜索进行精准搜索。&lt;/p&gt;
-&lt;h1 id=&quot;google搜索语法&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#google搜索语法&quot;&gt;&lt;/a&gt; Google搜索语法&lt;/h1&gt;
-&lt;h1 id=&quot;1-内容搜索&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="开发知识" scheme="http://wyqz.top/categories/%E5%BC%80%E5%8F%91%E7%9F%A5%E8%AF%86/"/>
-    
-    
-    <category term="Google搜索" scheme="http://wyqz.top/tags/Google%E6%90%9C%E7%B4%A2/"/>
     
   </entry>
   
