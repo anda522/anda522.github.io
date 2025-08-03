@@ -6,7 +6,7 @@
   <link href="http://wyqz.top/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2025-07-12T04:09:06.000Z</updated>
+  <updated>2025-08-03T07:56:56.000Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>赶论文真的难</title>
+    <link href="http://wyqz.top/p/891154694.html"/>
+    <id>http://wyqz.top/p/891154694.html</id>
+    <published>2025-08-03T07:56:56.000Z</published>
+    <updated>2025-08-03T07:56:56.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;暑假协助实验室的师兄做论文工作，大概干了两周，DDL8月2日，属实感受到了要做出一篇像样的工作的难度。过程中出现了很多重复劳动的地方，也有很多值得反思之处，我也深刻体会到了各种繁杂的事情扑面而来时内心的压力和紧张。&lt;/p&gt;
+&lt;p&gt;我在其中主要负责复现3篇文章，一篇21年单模</summary>
+        
+      
+    
+    
+    
+    <category term="哲思" scheme="http://wyqz.top/categories/%E5%93%B2%E6%80%9D/"/>
+    
+    
+    <category term="阶段性总结" scheme="http://wyqz.top/tags/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>《人性的优点》阅读笔记</title>
@@ -509,33 +535,6 @@
     
     
     <category term="CPP" scheme="http://wyqz.top/categories/CPP/"/>
-    
-    
-    <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>个人算法题单整理</title>
-    <link href="http://wyqz.top/p/542231525.html"/>
-    <id>http://wyqz.top/p/542231525.html</id>
-    <published>2023-11-06T06:04:56.000Z</published>
-    <updated>2024-05-12T16:00:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;记录个人刷过的算法经典题目（好题），以备复习回顾。&lt;/p&gt;
-&lt;p&gt;一级目录参考 &lt;a href=&quot;https://oi-wiki.org/&quot;&gt;OI Wiki&lt;/a&gt; 进行设置。&lt;/p&gt;
-&lt;h1 id=&quot;语言基础&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="ACM" scheme="http://wyqz.top/categories/ACM/"/>
     
     
     <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
