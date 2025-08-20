@@ -6,7 +6,7 @@
   <link href="http://wyqz.top/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2025-08-03T07:56:56.000Z</updated>
+  <updated>2025-08-20T03:13:29.000Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>读研的前半生</title>
+    <link href="http://wyqz.top/p/4167456470.html"/>
+    <id>http://wyqz.top/p/4167456470.html</id>
+    <published>2025-08-20T03:13:29.000Z</published>
+    <updated>2025-08-20T03:13:29.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;不知不觉已经做了一年多的科研，来到了研二上的这个时期。某个时刻突然静下来，想起之前做科研的种种经历，不免心生感慨，也难免有所惋惜。感觉总体来看，我短暂的科研时间可以分为三个阶段：&lt;br&gt;
+（1）寻方向：确定自己要做的方向，大概一直到研一下的上半段才确定，大概2月中旬&lt;br&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="哲思" scheme="http://wyqz.top/categories/%E5%93%B2%E6%80%9D/"/>
+    
+    
+    <category term="阶段性总结" scheme="http://wyqz.top/tags/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>赶论文真的难</title>
@@ -507,34 +533,6 @@
     
     
     <category term="课程记录" scheme="http://wyqz.top/categories/%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/"/>
-    
-    
-    <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C++的代码技巧和习惯</title>
-    <link href="http://wyqz.top/p/3703005386.html"/>
-    <id>http://wyqz.top/p/3703005386.html</id>
-    <published>2023-11-06T08:39:35.000Z</published>
-    <updated>2024-10-16T16:00:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;hr&gt;
-&lt;p&gt;1.需要一个数组或者字符串的目前的元素和前一个元素做相关运算时:&lt;br&gt;
-&lt;strong&gt;直接遍历这个序列，当 i 等于0时不满足条件，只有i 等于 1时才会执行if语句&lt;/strong&gt;&lt;/p&gt;
-&lt;pre class=&quot;line-numbers</summary>
-        
-      
-    
-    
-    
-    <category term="CPP" scheme="http://wyqz.top/categories/CPP/"/>
     
     
     <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
