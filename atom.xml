@@ -6,7 +6,7 @@
   <link href="http://wyqz.top/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2025-08-20T03:13:29.000Z</updated>
+  <updated>2025-08-25T08:08:56.000Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《原子习惯》读书笔记</title>
+    <link href="http://wyqz.top/p/942301159.html"/>
+    <id>http://wyqz.top/p/942301159.html</id>
+    <published>2025-08-25T08:08:56.000Z</published>
+    <updated>2025-08-25T08:08:56.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;近期看完了《原子习惯》这本书，内容量比较少，断断续续花了一个月读完了，其实集中读大概一个下午就可以看完。这本书让我们重新认识生活中的习惯，讲述习惯能给生活带来的种种好处，最后提出了比较好的培养习惯的方法和策略。有一些观点让我感触比较深，所以我把一些想法记录在这里。&lt;/p&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="读书笔记" scheme="http://wyqz.top/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="读书笔记" scheme="http://wyqz.top/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>读研的前半生</title>
@@ -510,32 +536,6 @@
     
     
     <category term="阶段性总结" scheme="http://wyqz.top/tags/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【Mit6.s081】课程记录</title>
-    <link href="http://wyqz.top/p/2589851505.html"/>
-    <id>http://wyqz.top/p/2589851505.html</id>
-    <published>2023-11-14T12:28:19.000Z</published>
-    <updated>2024-06-05T16:00:00.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;实验代码记录：&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="课程记录" scheme="http://wyqz.top/categories/%E8%AF%BE%E7%A8%8B%E8%AE%B0%E5%BD%95/"/>
-    
-    
-    <category term="学习总结" scheme="http://wyqz.top/tags/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
