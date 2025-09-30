@@ -6,7 +6,7 @@
   <link href="http://wyqz.top/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2025-08-25T08:08:56.000Z</updated>
+  <updated>2025-09-30T13:18:19.000Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我的MBTI转变史</title>
+    <link href="http://wyqz.top/p/271051881.html"/>
+    <id>http://wyqz.top/p/271051881.html</id>
+    <published>2025-09-30T13:18:19.000Z</published>
+    <updated>2025-09-30T13:18:19.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;最近某个时刻我突然意识到我已经不是之前那个活跃的人了，不由得思考起了自己为什么会发生这样的变化。我认为MBTI也可以成为解释的一个角度，它可以从大方面简单涵盖一个人的类型，所以我希望从MBTI出发去分析这种变化发生的原因。从我接触MBTI开始，我一共经历了3种类型，从最开始</summary>
+        
+      
+    
+    
+    
+    <category term="哲思" scheme="http://wyqz.top/categories/%E5%93%B2%E6%80%9D/"/>
+    
+    
+    <category term="阶段性总结" scheme="http://wyqz.top/tags/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%93/"/>
+    
+  </entry>
   
   <entry>
     <title>《原子习惯》读书笔记</title>
@@ -509,33 +534,6 @@
     
     
     <category term="CPP" scheme="http://wyqz.top/tags/CPP/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>折腾长久，终退役-致我的ACM生涯</title>
-    <link href="http://wyqz.top/p/2569313091.html"/>
-    <id>http://wyqz.top/p/2569313091.html</id>
-    <published>2023-11-22T13:41:06.000Z</published>
-    <updated>2023-11-22T13:41:06.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;先留坑，打完终幕场便填上，静候。&lt;/p&gt;
-&lt;p&gt;从2023-11-20建文件，打完最后一场济南就算正式退了，打完比赛还要立马交一个实训课的证明，还需搞一下，所以先起个草稿，打算写一篇正式的退役记来记录和纪念我这跌跌撞撞、无所成绩的ACM生涯。&lt;/p</summary>
-        
-      
-    
-    
-    
-    <category term="哲思" scheme="http://wyqz.top/categories/%E5%93%B2%E6%80%9D/"/>
-    
-    
-    <category term="阶段性总结" scheme="http://wyqz.top/tags/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%93/"/>
     
   </entry>
   
