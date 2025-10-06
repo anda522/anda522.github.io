@@ -6,7 +6,7 @@
   <link href="http://wyqz.top/atom.xml" rel="self"/>
   
   <link href="http://wyqz.top/"/>
-  <updated>2025-09-30T13:18:19.000Z</updated>
+  <updated>2025-10-06T12:18:14.000Z</updated>
   <id>http://wyqz.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>外脑心法-构建个人知识库</title>
+    <link href="http://wyqz.top/p/36306237.html"/>
+    <id>http://wyqz.top/p/36306237.html</id>
+    <published>2025-10-06T12:18:14.000Z</published>
+    <updated>2025-10-06T12:18:14.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-信息爆炸时代为什么我们需要外脑&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#1-信息爆炸时代为什么我们需要外脑&quot;&gt;&lt;/a&gt; 1 信息爆炸时代：为什么我们需要外脑&lt;/h2&gt;
+&lt;h3 id=&quot;11-大脑的局限性&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="哲思" scheme="http://wyqz.top/categories/%E5%93%B2%E6%80%9D/"/>
+    
+    
+    <category term="方法论" scheme="http://wyqz.top/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+  </entry>
   
   <entry>
     <title>我的MBTI转变史</title>
@@ -509,31 +535,6 @@
     
     
     <category term="阶段性总结" scheme="http://wyqz.top/tags/%E9%98%B6%E6%AE%B5%E6%80%A7%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C/C++指针操作详细整理</title>
-    <link href="http://wyqz.top/p/360366309.html"/>
-    <id>http://wyqz.top/p/360366309.html</id>
-    <published>2023-12-08T10:42:58.000Z</published>
-    <updated>2023-12-08T10:42:58.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;cc指针操作整理&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#cc指针操作整理&quot;&gt;&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="CPP" scheme="http://wyqz.top/categories/CPP/"/>
-    
-    
-    <category term="CPP" scheme="http://wyqz.top/tags/CPP/"/>
     
   </entry>
   
