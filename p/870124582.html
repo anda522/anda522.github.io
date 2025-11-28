@@ -325,7 +325,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/20.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -594,7 +594,7 @@ v<span class="token punctuation">.</span><span class="token function">push_back<
 <p>行列长度均固定 <code>n + 1</code>行 <code>m + 1</code>列初始值为0</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">vector<span class="token operator">&lt;</span>vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;&gt;</span> <span class="token function">a</span><span class="token punctuation">(</span>n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token generic-function"><span class="token function">vector</span><span class="token generic class-name"><span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">(</span>m <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>c++17及以上支持的形式（定义模板类的对象时，可以不指定模板参数，但必须要在构造函数中能推导出模板参数）</p>
-  <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">vector a<span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment">// 声明一个int类型动态数组，初识元素自己指定</span>
+  <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">vector a<span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token comment">// 声明一个int类型动态数组，初始元素自己指定</span>
 vector <span class="token function">b</span><span class="token punctuation">(</span>n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token function">vector</span><span class="token punctuation">(</span>m <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 </li>
 </ul>
@@ -1149,8 +1149,8 @@ priority_queue<span class="token operator">&lt;</span><span class="token keyword
 	<span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span>
 
-<span class="token comment">//初始化定义， </span>
-priority_queue<span class="token operator">&lt;</span>Point<span class="token punctuation">,</span> vector<span class="token operator">&lt;</span>Point<span class="token operator">&gt;</span><span class="token punctuation">,</span> cmp<span class="token operator">&gt;</span> q<span class="token punctuation">;</span> <span class="token comment">// x大的在堆顶</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span class="token comment">//初始化定义，x大的在堆顶</span>
+priority_queue<span class="token operator">&lt;</span>Point<span class="token punctuation">,</span> vector<span class="token operator">&lt;</span>Point<span class="token operator">&gt;</span><span class="token punctuation">,</span> cmp<span class="token operator">&gt;</span> q<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li><strong>版本二：直接在结构体里面写</strong></li>
 </ul>
@@ -1159,17 +1159,17 @@ priority_queue<span class="token operator">&lt;</span>Point<span class="token pu
 </blockquote>
 <p>结构体内部有两种方式：</p>
 <p><strong>方式一</strong> ：</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">struct</span> <span class="token class-name">node</span> <span class="token punctuation">{</span>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">struct</span> <span class="token class-name">Point</span> <span class="token punctuation">{</span>
 	<span class="token keyword">int</span> x<span class="token punctuation">,</span> y<span class="token punctuation">;</span>
 	<span class="token keyword">friend</span> <span class="token keyword">bool</span> <span class="token keyword">operator</span> <span class="token operator">&lt;</span> <span class="token punctuation">(</span>Point a<span class="token punctuation">,</span> Point b<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment">//为两个结构体参数，结构体调用一定要写上friend</span>
-		<span class="token keyword">return</span> a<span class="token punctuation">.</span>x <span class="token operator">&lt;</span> b<span class="token punctuation">.</span>x<span class="token punctuation">;</span><span class="token comment">//按x从小到大排，x大的在堆顶</span>
+		<span class="token keyword">return</span> a<span class="token punctuation">.</span>x <span class="token operator">&lt;</span> b<span class="token punctuation">.</span>x<span class="token punctuation">;</span> <span class="token comment">//大根堆，按x从小到大排，x大的在堆顶</span>
 	<span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>方式二</strong> ：（推荐此种）</p>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">struct</span> <span class="token class-name">node</span> <span class="token punctuation">{</span>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">struct</span> <span class="token class-name">Point</span> <span class="token punctuation">{</span>
     <span class="token keyword">int</span> x<span class="token punctuation">,</span> y<span class="token punctuation">;</span>
     <span class="token keyword">bool</span> <span class="token keyword">operator</span> <span class="token operator">&lt;</span> <span class="token punctuation">(</span><span class="token keyword">const</span> Point <span class="token operator">&amp;</span>a<span class="token punctuation">)</span> <span class="token keyword">const</span> <span class="token punctuation">{</span><span class="token comment">//直接传入一个参数，不必要写friend</span>
-        <span class="token keyword">return</span> x <span class="token operator">&lt;</span> a<span class="token punctuation">.</span>x<span class="token punctuation">;</span><span class="token comment">//按x升序排列，x大的在堆顶</span>
+        <span class="token keyword">return</span> x <span class="token operator">&lt;</span> a<span class="token punctuation">.</span>x<span class="token punctuation">;</span> <span class="token comment">//大根堆，按x升序排列，x大的在堆顶</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>优先队列的定义</p>
@@ -3065,7 +3065,7 @@ ranges<span class="token double-colon punctuation">::</span><span class="token f
         </div>
     </div>
 
-    
+    <!-- 
     <link rel="stylesheet" href="https://lib.baomitu.com/gitalk/latest/gitalk.css">
 <link rel="stylesheet" href="/css/my-gitalk.css">
 
@@ -3089,6 +3089,33 @@ ranges<span class="token double-colon punctuation">::</span><span class="token f
 
     gitalk.render('gitalk-container');
 </script>
+     -->
+    <!-- 启用giscus -->
+    
+    <link rel="stylesheet" href="/css/my-gitalk.css">
+
+<!-- Giscus 评论容器，使用 Gitalk 样式结构 -->
+<div class="card giscus-card" data-aos="fade-up">
+  <div id="giscus-container" class="card-content">
+    <!-- Giscus 组件脚本 -->
+    <script src="https://giscus.app/client.js"
+        data-repo="anda522/anda522.github.io"
+        data-repo-id="R_kgDOHipDvg"
+        data-category="General"
+        data-category-id="DIC_kwDOHipDvs4Cts1a"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-loading="lazy"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+</div>
     
 
     
@@ -3378,7 +3405,7 @@ ranges<span class="token double-colon punctuation">::</span><span class="token f
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="树上拓扑序计数|树形DP">
+                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="树上拓扑序计数|树形DP">
                         
                         <span class="card-title">树上拓扑序计数|树形DP</span>
                     </div>
@@ -3398,7 +3425,7 @@ https://ac.nowcoder.com/acm/contest/38630/F
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2022-08-20
                             </span>
                             <span class="update-date">
-                                <i class="fa fa-history fa-fw icon-date"></i>2024-02-20
+                                <i class="fa fa-history fa-fw icon-date"></i>2022-08-20
                             </span>
                         </div>
                         <span class="publish-author">
@@ -3439,7 +3466,7 @@ https://ac.nowcoder.com/acm/contest/38630/F
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="【裴蜀定理】CF1055C Lucky Days">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="【裴蜀定理】CF1055C Lucky Days">
                         
                         <span class="card-title">【裴蜀定理】CF1055C Lucky Days</span>
                     </div>
@@ -3458,7 +3485,7 @@ https://ac.nowcoder.com/acm/contest/38630/F
                                 <i class="fa fa-clock-o fa-fw icon-date"></i>2022-08-08
                             </span>
                             <span class="update-date">
-                                <i class="fa fa-history fa-fw icon-date"></i>2024-02-20
+                                <i class="fa fa-history fa-fw icon-date"></i>2022-08-08
                             </span>
                         </div>
                         <span class="publish-author">
@@ -3650,7 +3677,7 @@ https://ac.nowcoder.com/acm/contest/38630/F
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">123.9k</span>
+            <span class="white-color">138.6k</span>
             
 
             <br>
@@ -3806,12 +3833,13 @@ $(function () {
     <script src="/js/matery.js" defer></script>
     <script src="/js/click_show_text.js" defer></script>
     
-    <script type="text/javascript"> 
+    <!-- 根据是否在当前页面设置页面标题 -->
+    <!-- <script type="text/javascript"> 
         var OriginTitile = document.title, st;
         document.addEventListener("visibilitychange", function () {
             document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) 
         })
-    </script>
+    </script> -->
     
     <!-- 动态线条背景 -->
     <!-- <script type="text/javascript" color="56,152,252" opacity="0.9" zindex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">

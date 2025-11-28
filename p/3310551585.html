@@ -323,7 +323,7 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -746,7 +746,7 @@
         </div>
     </div>
 
-    
+    <!-- 
     <link rel="stylesheet" href="https://lib.baomitu.com/gitalk/latest/gitalk.css">
 <link rel="stylesheet" href="/css/my-gitalk.css">
 
@@ -770,6 +770,33 @@
 
     gitalk.render('gitalk-container');
 </script>
+     -->
+    <!-- 启用giscus -->
+    
+    <link rel="stylesheet" href="/css/my-gitalk.css">
+
+<!-- Giscus 评论容器，使用 Gitalk 样式结构 -->
+<div class="card giscus-card" data-aos="fade-up">
+  <div id="giscus-container" class="card-content">
+    <!-- Giscus 组件脚本 -->
+    <script src="https://giscus.app/client.js"
+        data-repo="anda522/anda522.github.io"
+        data-repo-id="R_kgDOHipDvg"
+        data-category="General"
+        data-category-id="DIC_kwDOHipDvs4Cts1a"
+        data-mapping="title"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-loading="lazy"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+    </script>
+  </div>
+</div>
     
 
     
@@ -1051,35 +1078,33 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
-            </div>
+                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/p/3310551585.html">
+                <a href="/p/864790321.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="2025思变而变">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="事后诸葛-那些后悔的选择">
                         
-                        <span class="card-title">2025思变而变</span>
+                        <span class="card-title">事后诸葛-那些后悔的选择</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                             2025思变而变
-本文的目的在于回顾之前做出的改变，思考迷茫的现状，并希望2025年有所改变。
-每个人都想自己过得更好，不管是从何种方面吧，可能是心理上、情感上、成就上、学习上等等，可是有些人只是想一想，在行动上就无动于衷。我不想延续这种
+                             事后诸葛-那些做过的后悔选择
+有时候总会想起来之前做过的选择，后悔当时要是怎么怎么样就该好了，可是事实上永远回不到当初，过去已经是确定的，不确定的只有现在到未来。所以就想进行回顾，以此来警示自己，不要为了一部分的利益而做出了长远看来很差的
                         
                     </div>
                     <div class="publish-info">
                         <div class="time-section">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2025-02-02
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2025-02-17
                             </span>
                             <span class="update-date">
-                                <i class="fa fa-history fa-fw icon-date"></i>2025-02-03
+                                <i class="fa fa-history fa-fw icon-date"></i>2025-02-17
                             </span>
                         </div>
                         <span class="publish-author">
@@ -1094,7 +1119,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1117,7 +1141,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="2024年度总结">
+                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="2024年度总结">
                         
                         <span class="card-title">2024年度总结</span>
                     </div>
@@ -1329,7 +1353,7 @@
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">123.9k</span>
+            <span class="white-color">138.6k</span>
             
 
             <br>
@@ -1485,12 +1509,13 @@ $(function () {
     <script src="/js/matery.js" defer></script>
     <script src="/js/click_show_text.js" defer></script>
     
-    <script type="text/javascript"> 
+    <!-- 根据是否在当前页面设置页面标题 -->
+    <!-- <script type="text/javascript"> 
         var OriginTitile = document.title, st;
         document.addEventListener("visibilitychange", function () {
             document.hidden ? (document.title = "Σ(っ °Д °;)っ喔哟，崩溃啦！", clearTimeout(st)) : (document.title = "φ(゜▽゜*)♪咦，又好了！", st = setTimeout(function () { document.title = OriginTitile }, 3e3)) 
         })
-    </script>
+    </script> -->
     
     <!-- 动态线条背景 -->
     <!-- <script type="text/javascript" color="56,152,252" opacity="0.9" zindex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
